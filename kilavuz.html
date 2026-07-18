@@ -345,6 +345,15 @@
         ': '+p(d.getDate())+'/'+p(d.getMonth()+1)+'/'+d.getFullYear()+' '+p(d.getHours())+':'+p(d.getMinutes())+':'+p(d.getSeconds());
     }catch(e){}
 
+    // Hangi denemeye gidileceği: ?sinav=2 → sinav-2.html (varsayılan: sinav.html)
+    try{
+      var sinavNo=new URLSearchParams(location.search).get('sinav');
+      if(sinavNo && /^[2-9]$/.test(sinavNo)){
+        var cb=document.querySelector('.confirm-btn');
+        if(cb) cb.setAttribute('href','sinav-'+sinavNo+'.html');
+      }
+    }catch(e){}
+
     // Modaldan çıkış: arka plana tıklama + Esc → ana sayfa
     var overlay=document.querySelector('.modal-overlay');
     if(overlay){
