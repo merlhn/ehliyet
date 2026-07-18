@@ -25,13 +25,17 @@ service cloud.firestore {
     match /users/{uid} {
       allow read: if sahibi(uid);
 
+      // E-posta yalnızca oluşturmada ve Google'dan gelen değerle yazılabilir;
+      // güncellemede beyaz listede yok, yani kullanıcı kendi kimliğini
+      // değiştiremez. Profildeki e-posta ile giriş yapılan hesap hep aynı kalır.
       allow create: if sahibi(uid)
-        && request.resource.data.keys().hasOnly(['email', 'ad', 'fotoUrl', 'olusturulmaAt', 'sonGirisAt'])
+        && request.resource.data.keys().hasOnly(
+             ['email', 'ad', 'soyad', 'telefon', 'ehliyetTuru', 'fotoUrl', 'olusturulmaAt', 'sonGirisAt'])
         && request.resource.data.email == request.auth.token.email;
 
       allow update: if sahibi(uid)
         && request.resource.data.diff(resource.data).affectedKeys()
-             .hasOnly(['ad', 'fotoUrl', 'sonGirisAt']);
+             .hasOnly(['ad', 'soyad', 'telefon', 'ehliyetTuru', 'fotoUrl', 'sonGirisAt']);
 
       allow delete: if false;
 

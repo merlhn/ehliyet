@@ -80,6 +80,14 @@ export function kullaniciDinle(cb) {
   });
 }
 
+/** Google'dan gelen tek parça adı ad ve soyad olarak ayırır. */
+function adiAyir(tamAd) {
+  const parcalar = String(tamAd || '').trim().split(/\s+/).filter(Boolean);
+  if (!parcalar.length) return { ad: '', soyad: '' };
+  // Son kelime soyad, kalanı ad — çok adlı isimlerde doğru sonuç verir.
+  return { ad: parcalar.slice(0, -1).join(' ') || parcalar[0], soyad: parcalar.length > 1 ? parcalar.at(-1) : '' };
+}
+
 /** Giriş sonrası profil dokümanını oluşturur ya da son giriş zamanını günceller. */
 export async function profiliHazirla(user) {
   const ref = doc(db, 'users', user.uid);
@@ -87,9 +95,13 @@ export async function profiliHazirla(user) {
 
   if (!mevcut.exists()) {
     // Alanlar güvenlik kurallarındaki beyaz listeyle birebir aynı olmalı.
+    const { ad, soyad } = adiAyir(user.displayName);
     await setDoc(ref, {
       email: user.email,
-      ad: user.displayName || '',
+      ad,
+      soyad,
+      telefon: '',
+      ehliyetTuru: '',
       fotoUrl: user.photoURL || '',
       olusturulmaAt: serverTimestamp(),
       sonGirisAt: serverTimestamp(),
@@ -98,6 +110,26 @@ export async function profiliHazirla(user) {
     await setDoc(ref, { sonGirisAt: serverTimestamp() }, { merge: true });
   }
   return ref;
+}
+
+/** Profil verisini okur; doküman yoksa null döner. */
+export async function profiliGetir(uid) {
+  const snap = await getDoc(doc(db, 'users', uid));
+  return snap.exists() ? snap.data() : null;
+}
+
+/**
+ * Profilin düzenlenebilir alanlarını kaydeder.
+ * E-posta bilerek dışarıda: kullanıcının kimliği Google hesabıdır ve
+ * güvenlik kuralları da güncellemede e-posta yazılmasına izin vermez.
+ */
+export async function profiliKaydet(uid, { ad, soyad, telefon, ehliyetTuru }) {
+  return setDoc(doc(db, 'users', uid), {
+    ad: ad ?? '',
+    soyad: soyad ?? '',
+    telefon: telefon ?? '',
+    ehliyetTuru: ehliyetTuru ?? '',
+  }, { merge: true });
 }
 
 /** Bitmiş bir sınav denemesini kaydeder. */

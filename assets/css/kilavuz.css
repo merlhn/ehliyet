@@ -1,7 +1,7 @@
 /* Yan menünün yeri ilk boyamada ayrılır. panel-kabuk.js ertelenmiş bir modül
    olduğu için burası olmazsa sayfa önce tam genişlikte çizilip sonra sağa kayar.
    Bu dosya yalnızca /panel/ altındaki kılavuz sayfalarında kullanılıyor. */
-  body{margin-left:248px}
+  body{margin-left:186px}
   @media(max-width:820px){body{margin-left:0}}
 
   :root{--navy:#000000;--navy-d:#333333;--navy-l:#f5f5f5;--ink:#08090a;--muted:#6a6f76;--line:#ececec}

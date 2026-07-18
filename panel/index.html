@@ -9,32 +9,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{--fg:#08090a;--muted:#6a6f76;--line:#ececec;--yan:248px}
+  :root{--fg:#08090a;--muted:#6a6f76;--line:#ececec;--pk-yan:186px}
   *{box-sizing:border-box}
   body{margin:0;font-family:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
     color:var(--fg);background:#fff;-webkit-font-smoothing:antialiased;letter-spacing:-.011em}
   a{color:inherit;text-decoration:none}
 
-  /* ---- Yan menü ---- */
-  .yan{position:fixed;inset:0 auto 0 0;width:var(--yan);border-right:1px solid var(--line);
-    display:flex;flex-direction:column;background:#fff;z-index:30}
-  /* Marka bloğu, üst bardaki başlık ayracıyla aynı hizada bir çizgiyle ayrılır. */
-  .marka{display:flex;align-items:center;gap:10px;height:60px;padding:0 18px;
-    border-bottom:1px solid var(--line);flex-shrink:0}
-  .marka img{width:26px;height:26px;object-fit:contain;flex-shrink:0}
-  .marka span{font-size:15.5px;font-weight:600;letter-spacing:-.02em}
-
-  .menu{display:flex;flex-direction:column;gap:2px;padding:14px 12px 0}
-  .menu-alt{margin-top:auto;display:flex;flex-direction:column;gap:2px;padding:0 12px 18px}
-  .oge{display:flex;align-items:center;gap:11px;padding:10px 12px;border-radius:9px;
-    font-size:14px;font-weight:450;color:#3a3d42;cursor:pointer;background:none;border:none;
-    font-family:inherit;width:100%;text-align:left;transition:.12s}
-  .oge:hover{background:#f5f5f5;color:var(--fg)}
-  .oge.aktif{background:#f2f2f2;color:var(--fg);font-weight:500}
-  .oge svg{flex-shrink:0;color:currentColor}
 
   /* ---- Üst bar ---- */
-  .ust{position:fixed;top:0;left:var(--yan);right:0;height:60px;border-bottom:1px solid var(--line);
+  .ust{position:fixed;top:0;left:var(--pk-yan);right:0;height:60px;border-bottom:1px solid var(--line);
     display:flex;align-items:center;gap:14px;padding:0 24px;background:rgba(255,255,255,.85);
     backdrop-filter:saturate(180%) blur(10px);z-index:20}
   .baslik{font-size:15px;font-weight:500;letter-spacing:-.015em}
@@ -67,7 +50,7 @@
   .profil-menu .ayrac{height:1px;background:var(--line);margin:5px 2px}
 
   /* ---- İçerik ---- */
-  main{margin-left:var(--yan);padding-top:60px}
+  main{margin-left:var(--pk-yan);padding-top:60px}
   .icerik{padding:36px 24px 72px;max-width:1080px}
   .sec-basi{margin:0 0 6px;font-size:24px;font-weight:600;letter-spacing:-.025em}
   .sec-alt{margin:0 0 30px;color:var(--muted);font-size:15px;line-height:1.55}
@@ -100,15 +83,43 @@
 
   .yukleniyor{display:flex;align-items:center;justify-content:center;min-height:100vh;color:var(--muted);font-size:15px}
 
+  /* ---- Profil formu ---- */
+  .kart{border:1px solid var(--line);border-radius:14px;padding:26px;max-width:640px}
+  .kisi-ust{display:flex;align-items:center;gap:16px;margin-bottom:26px;padding-bottom:22px;
+    border-bottom:1px solid var(--line)}
+  .kisi-ust .foto{width:56px;height:56px;border-radius:50%;background:#ececec;object-fit:cover;flex-shrink:0;
+    display:inline-flex;align-items:center;justify-content:center;font-size:20px;font-weight:600;overflow:hidden}
+  .kisi-ust .foto img{width:100%;height:100%;object-fit:cover;display:block}
+  .kisi-ust .isim{font-size:16.5px;font-weight:600;letter-spacing:-.015em}
+  .kisi-ust .alt{color:var(--muted);font-size:13.5px;margin-top:2px}
+
+  .alan-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .alan{display:flex;flex-direction:column;gap:6px}
+  .alan.genis{grid-column:1 / -1}
+  .alan label{font-size:13px;font-weight:500;color:#3a3d42}
+  .alan .ipucu{color:var(--muted);font-weight:400}
+  .alan input,.alan select{font-family:inherit;font-size:14.5px;color:var(--fg);background:#fff;
+    border:1px solid var(--line);border-radius:10px;padding:10px 12px;outline:none;transition:.15s;width:100%}
+  .alan input:focus,.alan select:focus{border-color:var(--fg);box-shadow:0 0 0 3px rgba(8,9,10,.06)}
+  .alan input:disabled{background:#fafafa;color:var(--muted);cursor:not-allowed}
+  .alan .hata{color:#b3261e;font-size:12.5px;display:none}
+  .alan.hatali input{border-color:#b3261e}
+  .alan.hatali .hata{display:block}
+
+  .form-alt{display:flex;align-items:center;gap:14px;margin-top:24px}
+  .kaydet-btn{display:inline-flex;align-items:center;justify-content:center;font-family:inherit;font-weight:500;
+    font-size:14px;line-height:1;padding:11px 22px;border-radius:999px;background:#08090a;color:#fff;
+    border:1px solid #08090a;cursor:pointer;transition:.15s}
+  .kaydet-btn:hover{background:#26282c}
+  .kaydet-btn:disabled{opacity:.5;cursor:default}
+  .form-durum{font-size:13.5px;color:var(--muted)}
+  .form-durum.ok{color:#1a7f37}
+  .form-durum.hata{color:#b3261e}
+  @media(max-width:560px){.alan-grid{grid-template-columns:1fr}.kart{padding:20px}}
+
   /* ---- Dar ekran ---- */
   @media(max-width:820px){
-    :root{--yan:0px}
-    .yan{position:static;width:100%;height:auto;flex-direction:row;align-items:center;
-      border-right:none;border-bottom:1px solid var(--line);padding:0 14px;gap:6px;overflow-x:auto}
-    .marka{height:auto;padding:12px 10px 12px 0;border-bottom:none}
-    .marka span{font-size:14.5px}
-    .menu,.menu-alt{flex-direction:row;padding:0;margin-top:0}
-    .oge{padding:8px 11px;font-size:13.5px;white-space:nowrap}
+    :root{--pk-yan:0px}
     .ust{position:static;left:0;height:54px;padding:0 14px}
     main{margin-left:0;padding-top:0}
     .icerik{padding:26px 16px 56px}
@@ -123,44 +134,6 @@
 <div id="kabuk" class="yukleniyor">Yükleniyor…</div>
 
 <template id="sablon">
-  <aside class="yan">
-    <div class="marka">
-      <img src="/assets/img/marka/logo.png" alt="">
-      <span>ehliyet.digital</span>
-    </div>
-
-    <nav class="menu">
-      <button class="oge" type="button" data-gorunum="anasayfa">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/>
-        </svg>
-        Ana Sayfa
-      </button>
-      <button class="oge aktif" type="button" data-gorunum="sinavlar">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-        </svg>
-        Deneme Sınavları
-      </button>
-    </nav>
-
-    <nav class="menu-alt">
-      <button class="oge" type="button" data-gorunum="odeme">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/>
-        </svg>
-        Ödeme Geçmişi
-      </button>
-      <button class="oge" type="button" data-gorunum="ayarlar">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="3"/>
-          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-        </svg>
-        Ayarlar
-      </button>
-    </nav>
-  </aside>
-
   <div class="ust">
     <span class="baslik" data-baslik>Deneme Sınavları</span>
     <div class="ust-sag">
@@ -255,19 +228,81 @@
     </section>
 
     <!-- Profilim -->
-    <section data-gorunum-icerik="profil" hidden>
-      <div class="yakinda-ekran">
-        <div class="halka"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-        <h2>Yakında geliştirilecek</h2>
-        <p>Bu alan üzerinde çalışıyoruz. Kısa süre içinde tekrar göz atın.</p>
-      </div>
+    <section class="icerik" data-gorunum-icerik="profil" hidden>
+      <h1 class="sec-basi">Profilim</h1>
+      <p class="sec-alt">Hesap bilgilerini buradan güncelleyebilirsin.</p>
+
+      <form class="kart" id="profilForm" novalidate>
+        <div class="kisi-ust">
+          <span class="foto" data-profil-foto></span>
+          <div>
+            <div class="isim" data-profil-isim></div>
+            <div class="alt" data-profil-alt></div>
+          </div>
+        </div>
+
+        <div class="alan-grid">
+          <div class="alan">
+            <label for="pf-ad">Ad</label>
+            <input id="pf-ad" name="ad" type="text" autocomplete="given-name" maxlength="60">
+          </div>
+
+          <div class="alan">
+            <label for="pf-soyad">Soyad</label>
+            <input id="pf-soyad" name="soyad" type="text" autocomplete="family-name" maxlength="60">
+          </div>
+
+          <div class="alan genis">
+            <label for="pf-email">E-posta <span class="ipucu">— Google hesabından gelir, değiştirilemez</span></label>
+            <input id="pf-email" name="email" type="email" disabled>
+          </div>
+
+          <div class="alan">
+            <label for="pf-telefon">Telefon</label>
+            <input id="pf-telefon" name="telefon" type="tel" inputmode="tel"
+                   placeholder="0532 123 45 67" autocomplete="tel" maxlength="20">
+            <span class="hata" data-hata-telefon>Telefon 10 haneli olmalı (örn. 0532 123 45 67).</span>
+          </div>
+
+          <div class="alan">
+            <label for="pf-tur">Almak istediğin ehliyet türü</label>
+            <select id="pf-tur" name="ehliyetTuru">
+              <option value="">Seçiniz</option>
+              <option value="B">B — Otomobil ve kamyonet</option>
+              <option value="A1">A1 — Motosiklet (125 cm³'e kadar)</option>
+              <option value="A2">A2 — Motosiklet (35 kW'a kadar)</option>
+              <option value="A">A — Motosiklet</option>
+              <option value="M">M — Moped</option>
+              <option value="B1">B1 — Dört tekerlekli motosiklet</option>
+              <option value="BE">BE — Otomobil ve römork</option>
+              <option value="C1">C1 — Kamyon (7,5 tona kadar)</option>
+              <option value="C1E">C1E — C1 ve römork</option>
+              <option value="C">C — Kamyon</option>
+              <option value="CE">CE — Kamyon ve römork</option>
+              <option value="D1">D1 — Minibüs</option>
+              <option value="D1E">D1E — D1 ve römork</option>
+              <option value="D">D — Otobüs</option>
+              <option value="DE">DE — Otobüs ve römork</option>
+              <option value="F">F — Traktör</option>
+              <option value="G">G — İş makinesi</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-alt">
+          <button class="kaydet-btn" type="submit">Kaydet</button>
+          <span class="form-durum" data-profil-durum></span>
+        </div>
+      </form>
     </section>
   </main>
 </template>
 
 <script src="/assets/js/feedback.js" defer></script>
 <script type="module">
-import { kullaniciDinle, profiliHazirla, cikisYap, oturumBekleniyorMu } from '/assets/js/firebase.js';
+import { MENU_CSS, menuHTML } from '/assets/js/panel-menu.js';
+import { kullaniciDinle, profiliHazirla, cikisYap, oturumBekleniyorMu,
+         profiliGetir, profiliKaydet } from '/assets/js/firebase.js';
 
 const kabuk = document.getElementById('kabuk');
 const BASLIKLAR = {
@@ -275,14 +310,23 @@ const BASLIKLAR = {
   odeme: 'Ödeme Geçmişi', ayarlar: 'Ayarlar', profil: 'Profilim',
 };
 
+// Yan menü CSS'i ortak modülden gelir; panel ve alt sayfalar aynı görünümü paylaşır.
+const menuStil = document.createElement('style');
+menuStil.textContent = MENU_CSS;
+document.head.appendChild(menuStil);
+
 function kabuguKur() {
   kabuk.classList.remove('yukleniyor');
   kabuk.textContent = '';
   kabuk.appendChild(document.getElementById('sablon').content.cloneNode(true));
 
+  // Yan menü ortak modülden kurulur. Panelde öğeler <button>: sayfayı yeniden
+  // yüklemek yerine görünüm değiştirir.
+  kabuk.insertAdjacentHTML('afterbegin', menuHTML({ aktif: 'sinavlar', baglantiOlarak: false }));
+
   const baslik = kabuk.querySelector('[data-baslik]');
-  const ogeler = [...kabuk.querySelectorAll('.oge[data-gorunum]')];
   const bolumler = [...kabuk.querySelectorAll('[data-gorunum-icerik]')];
+  const ogeler = [...kabuk.querySelectorAll('.pk-oge[data-gorunum]')];
 
   function goster(ad) {
     bolumler.forEach(b => { b.hidden = b.dataset.gorunumIcerik !== ad; });
@@ -317,6 +361,99 @@ function kabuguKur() {
   kabuk.querySelector('[data-cikis]').addEventListener('click', async () => {
     await cikisYap();
     location.href = '/';
+  });
+}
+
+/* ---- Profil formu ---- */
+
+/** Rakamları 0532 123 45 67 biçiminde gösterir. */
+function telefonBicimle(ham) {
+  const r = String(ham || '').replace(/\D/g, '').slice(0, 11);
+  if (!r) return '';
+  const p = [r.slice(0, 4), r.slice(4, 7), r.slice(7, 9), r.slice(9, 11)];
+  return p.filter(Boolean).join(' ');
+}
+
+/** Boş kabul edilir; doluysa 11 hane ve 0 ile başlamalı. */
+function telefonGecerli(ham) {
+  const r = String(ham || '').replace(/\D/g, '');
+  return r === '' || (r.length === 11 && r.startsWith('0'));
+}
+
+function profilFormunuKur(user) {
+  const form = kabuk.querySelector('#profilForm');
+  if (!form) return;
+
+  const telefonAlan = form.querySelector('#pf-telefon');
+  const durum = kabuk.querySelector('[data-profil-durum]');
+  const btn = form.querySelector('.kaydet-btn');
+
+  // Kimlik kartı bölümü
+  const foto = kabuk.querySelector('[data-profil-foto]');
+  const ad = user.displayName || user.email || 'Hesabım';
+  if (user.photoURL) {
+    const img = document.createElement('img');
+    img.src = user.photoURL; img.alt = ''; img.referrerPolicy = 'no-referrer';
+    foto.appendChild(img);
+  } else {
+    foto.textContent = ad.trim().charAt(0).toUpperCase();
+  }
+  kabuk.querySelector('[data-profil-isim]').textContent = ad;
+  kabuk.querySelector('[data-profil-alt]').textContent = user.email || '';
+  form.querySelector('#pf-email').value = user.email || '';
+
+  // Yazarken biçimlendir
+  telefonAlan.addEventListener('input', () => {
+    const konum = telefonAlan.selectionStart === telefonAlan.value.length;
+    telefonAlan.value = telefonBicimle(telefonAlan.value);
+    if (konum) telefonAlan.setSelectionRange(telefonAlan.value.length, telefonAlan.value.length);
+    telefonAlan.closest('.alan').classList.remove('hatali');
+  });
+
+  // Kayıtlı veriyi yükle
+  profiliGetir(user.uid).then(veri => {
+    if (!veri) return;
+    form.querySelector('#pf-ad').value = veri.ad || '';
+    form.querySelector('#pf-soyad').value = veri.soyad || '';
+    telefonAlan.value = telefonBicimle(veri.telefon || '');
+    form.querySelector('#pf-tur').value = veri.ehliyetTuru || '';
+  }).catch(err => {
+    console.error('Profil okunamadı:', err);
+    durum.textContent = 'Bilgiler yüklenemedi.';
+    durum.className = 'form-durum hata';
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    durum.textContent = ''; durum.className = 'form-durum';
+
+    if (!telefonGecerli(telefonAlan.value)) {
+      telefonAlan.closest('.alan').classList.add('hatali');
+      telefonAlan.focus();
+      return;
+    }
+
+    btn.disabled = true;
+    const eskiMetin = btn.textContent;
+    btn.textContent = 'Kaydediliyor…';
+    try {
+      await profiliKaydet(user.uid, {
+        ad: form.querySelector('#pf-ad').value.trim(),
+        soyad: form.querySelector('#pf-soyad').value.trim(),
+        // Rakam olarak saklanır; biçimlendirme yalnızca görüntüde
+        telefon: telefonAlan.value.replace(/\D/g, ''),
+        ehliyetTuru: form.querySelector('#pf-tur').value,
+      });
+      durum.textContent = 'Kaydedildi.';
+      durum.className = 'form-durum ok';
+    } catch (err) {
+      console.error('Profil kaydedilemedi:', err);
+      durum.textContent = 'Kaydedilemedi, tekrar deneyin.';
+      durum.className = 'form-durum hata';
+    } finally {
+      btn.disabled = false;
+      btn.textContent = eskiMetin;
+    }
   });
 }
 
@@ -355,11 +492,15 @@ kullaniciDinle(async (user) => {
   if (!user) { location.replace('/'); return; }
   kurBirKez();
   kullaniciyiYaz(user);
+
+  // Profil dokümanı formdan ÖNCE hazırlanmalı: ilk girişte doküman henüz yokken
+  // form okuma yaparsa boş kalır ve kullanıcı bilgilerini silinmiş sanır.
   try {
     await profiliHazirla(user);
   } catch (err) {
-    console.error('Profil kaydedilemedi:', err);
+    console.error('Profil hazırlanamadı:', err);
   }
+  profilFormunuKur(user);
 });
 </script>
 </body>

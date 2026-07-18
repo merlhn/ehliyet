@@ -120,12 +120,21 @@
     .cta-inner{padding:44px 22px}
     .foot-wrap{gap:16px}.foot-feedback{margin-left:0}
   }
+
+  /* ---- Marka ---- */
+  .marka{display:flex;align-items:center;flex-shrink:0;text-decoration:none}
+  .marka img{width:26px;height:26px;object-fit:contain;display:block}
+  .foot-marka{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--fg);
+    font-size:14.5px;font-weight:600;letter-spacing:-.02em;flex-shrink:0}
+  .foot-marka img{width:22px;height:22px;object-fit:contain;display:block}
+  @media(max-width:640px){.marka img{width:22px;height:22px}}
 </style>
 </head>
 <body>
 
   <!-- HEADER -->
   <header>
+    <a class="marka" href="/" aria-label="ehliyet.digital"><img src="/assets/img/marka/logo.png" alt=""></a>
     <nav class="nav">
       <a href="/">Ana Sayfa</a>
       <a href="/dersler/">Dersler</a>
@@ -226,6 +235,10 @@
 
   <footer class="site-footer">
     <div class="foot-wrap">
+      <a class="foot-marka" href="/">
+        <img src="/assets/img/marka/logo.png" alt="">
+        ehliyet.digital
+      </a>
       <nav class="foot-links">
         <a href="/gizlilik/">Gizlilik Politikası</a>
         <a href="/kullanim-sartlari/">Kullanım Şartları</a>
