@@ -16,15 +16,16 @@ import {
 
 const firebaseConfig = {
   apiKey: 'AIzaSyDmyoZ-Wa-zqzimqaIV--9tN2TFdvhRcmo',
-  // Google giriş ekranında bu adres görünür. 'ehliyet.digital' yapmak için
-  // ÜÇ şey birden gerekiyor; üçüncüsü eksikken denendi ve giriş kırıldı
+  // Google giriş ekranında bu adres görünür. Kendi alan adımızı kullanmak
+  // ÜÇ parçanın birlikte durmasına bağlı; biri eksikse giriş tamamen kırılır
   // (Error 400: redirect_uri_mismatch):
   //   1. buradaki authDomain
-  //   2. vercel.json içindeki /__/auth/* yönlendirmesi  (hazır)
-  //   3. Google Cloud OAuth istemcisine kayıtlı yönlendirme adresi:
-  //      https://ehliyet.digital/__/auth/handler        (EKSİK)
-  // 3. adım eklenmeden burası değiştirilmemeli.
-  authDomain: 'ehliyet-52d4d.firebaseapp.com',
+  //   2. vercel.json içindeki /__/auth/* yönlendirmesi
+  //   3. Google Cloud OAuth istemcisinde kayıtlı olması gerekenler:
+  //      - Authorized JavaScript origins:  https://ehliyet.digital
+  //      - Authorized redirect URIs:       https://ehliyet.digital/__/auth/handler
+  // Bunlardan birini değiştirmeden önce diğer ikisini doğrula.
+  authDomain: 'ehliyet.digital',
   projectId: 'ehliyet-52d4d',
   storageBucket: 'ehliyet-52d4d.firebasestorage.app',
   messagingSenderId: '40944921621',
