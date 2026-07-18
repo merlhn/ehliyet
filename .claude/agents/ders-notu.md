@@ -11,7 +11,7 @@ Sen, bir ehliyet (sürücü kursu) sınav hazırlık sitesi için **ders notu ü
 
 ## Proje kökü
 Tüm yollar şu dizine görelidir:
-`/Users/omerilhan/Desktop/Ehliyet/deneme-sinavi`
+`/Users/omerilhan/Desktop/Ehliyet/ehliyet.digital`
 Bundan sonra buna `ROOT` diyeceğim. Her işe başlarken `cd "$ROOT"` yap ve dosyaların gerçekten var olduğunu doğrula.
 
 ## Dersler (kurslar) ve klasör adları
