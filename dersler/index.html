@@ -16,10 +16,10 @@
   a{color:inherit}
 
   /* Header */
-  header{display:flex;align-items:center;gap:26px;height:64px;padding:0 28px;border-bottom:1px solid var(--line);
+  header{display:flex;align-items:center;gap:26px;height:64px;padding:0 max(28px, calc((100% - 1100px) / 2));border-bottom:1px solid var(--line);
     position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(10px);z-index:20}
   .nav{display:flex;gap:24px}
-  .nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:450}
+  .nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:450;white-space:nowrap}
   .nav a:hover{color:var(--fg)}
   .actions{margin-left:auto;display:flex;align-items:center;gap:16px}
   .divider{width:1px;height:22px;background:var(--line)}

@@ -37,10 +37,13 @@
   a{color:inherit}
 
   /* Header */
-  header{display:flex;align-items:center;gap:26px;height:64px;padding:0 28px;border-bottom:1px solid var(--line);
+  /* Yatay boşluk, sayfa içeriğinin 1100px'lik kutusuyla hizalanır: nav ve giriş
+     butonu bölüm ayraç çizgilerinin tam başladığı/bittiği yere denk gelir. */
+  header{display:flex;align-items:center;gap:26px;height:64px;
+    padding:0 max(28px, calc((100% - 1100px) / 2));border-bottom:1px solid var(--line);
     position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(10px);z-index:20}
   .nav{display:flex;gap:24px}
-  .nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:450}
+  .nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:450;white-space:nowrap}
   .nav a:hover{color:var(--fg)}
 
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:inherit;font-weight:500;
@@ -110,7 +113,8 @@
   @media(max-width:820px){.two-col{grid-template-columns:1fr;gap:22px}.section{padding:60px 22px}}
   @media(max-width:640px){
     header{padding:0 16px;gap:12px;height:58px}
-    .nav{gap:14px;font-size:13px}
+    .nav{gap:14px}
+    .nav a{font-size:11px}
     .hero{padding:64px 20px 52px}
     .hero p{font-size:17px}
     .cta-inner{padding:44px 22px}

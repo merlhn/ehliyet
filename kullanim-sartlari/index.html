@@ -16,10 +16,10 @@
   body{margin:0;font-family:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
     color:var(--fg);background:#fff;-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;min-height:100vh;letter-spacing:-.011em}
   a{color:inherit}
-  header{display:flex;align-items:center;gap:26px;height:64px;padding:0 28px;border-bottom:1px solid var(--line);
+  header{display:flex;align-items:center;gap:26px;height:64px;padding:0 max(28px, calc((100% - 1100px) / 2));border-bottom:1px solid var(--line);
     position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(10px);z-index:20}
   .nav{display:flex;gap:24px}
-  .nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:450}
+  .nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:450;white-space:nowrap}
   .nav a:hover{color:var(--fg)}
   main{flex:1}
   .doc{max-width:760px;margin:0 auto;padding:72px 28px 96px}
@@ -44,7 +44,7 @@
   .foot-feedback svg{color:var(--muted)}
   @media(max-width:640px){
     header{padding:0 16px;gap:12px;height:58px}
-    .nav{gap:14px;font-size:13px}
+    .nav{gap:14px}.nav a{font-size:11px}
     .doc{padding:52px 20px 72px}
     .foot-wrap{gap:16px}.foot-feedback{margin-left:0}
   }

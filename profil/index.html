@@ -15,10 +15,10 @@
     color:var(--fg);background:#fff;-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;
     min-height:100vh;letter-spacing:-.011em}
   a{color:inherit}
-  header{display:flex;align-items:center;gap:26px;height:64px;padding:0 28px;border-bottom:1px solid var(--line);
+  header{display:flex;align-items:center;gap:26px;height:64px;padding:0 max(28px, calc((100% - 1100px) / 2));border-bottom:1px solid var(--line);
     position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(10px);z-index:20}
   .nav{display:flex;gap:24px}
-  .nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:450}
+  .nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:450;white-space:nowrap}
   .nav a:hover{color:var(--fg)}
   main{flex:1;max-width:900px;margin:0 auto;width:100%;padding:56px 28px 80px}
 
@@ -54,7 +54,7 @@
   footer{border-top:1px solid var(--line);background:#fafafa;padding:22px 28px;color:var(--muted);font-size:13.5px}
   .foot-wrap{max-width:900px;margin:0 auto;display:flex;gap:24px;flex-wrap:wrap}
   .foot-wrap a{color:var(--fg);text-decoration:underline;text-underline-offset:3px;text-decoration-color:#c9ccd1}
-  @media(max-width:640px){header{padding:0 18px;gap:14px}.nav{gap:14px;font-size:13px}main{padding:40px 20px 60px}}
+  @media(max-width:640px){header{padding:0 18px;gap:14px}.nav{gap:14px}.nav a{font-size:11px}main{padding:40px 20px 60px}}
 </style>
 </head>
 <body>
