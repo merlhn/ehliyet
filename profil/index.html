@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Profilim — ehliyet.digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--fg:#08090a;--muted:#6a6f76;--line:#ececec;--ok:#1a7f37;--ok-l:#eaf6ed}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    color:var(--fg);background:#fff;-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;
+    min-height:100vh;letter-spacing:-.011em}
+  a{color:inherit}
+  header{display:flex;align-items:center;gap:26px;height:64px;padding:0 28px;border-bottom:1px solid var(--line);
+    position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(10px);z-index:20}
+  .nav{display:flex;gap:24px}
+  .nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:450}
+  .nav a:hover{color:var(--fg)}
+  main{flex:1;max-width:900px;margin:0 auto;width:100%;padding:56px 28px 80px}
+
+  .eyebrow{font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+  h1{margin:0 0 34px;font-size:clamp(30px,5vw,44px);font-weight:600;letter-spacing:-.03em}
+  h2{margin:0 0 18px;font-size:20px;font-weight:600;letter-spacing:-.02em}
+
+  .kart{border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:32px}
+  .kisi{display:flex;align-items:center;gap:16px}
+  .kisi img{width:52px;height:52px;border-radius:50%;background:var(--line);object-fit:cover}
+  .kisi .ad{font-size:17px;font-weight:600;letter-spacing:-.015em}
+  .kisi .mail{color:var(--muted);font-size:14px;margin-top:2px}
+
+  table{width:100%;border-collapse:collapse;font-size:14.5px}
+  th{text-align:left;font-weight:600;font-size:12px;letter-spacing:.05em;text-transform:uppercase;
+    color:var(--muted);padding:0 12px 12px;border-bottom:1px solid var(--line)}
+  td{padding:14px 12px;border-bottom:1px solid var(--line)}
+  tr:last-child td{border-bottom:none}
+  .puan{font-weight:600}
+  .rozet{display:inline-block;font-size:12.5px;font-weight:500;padding:3px 10px;border-radius:999px}
+  .gecti{background:var(--ok-l);color:var(--ok)}
+  .kaldi{background:#fdeceb;color:#b3261e}
+
+  .bos{color:var(--muted);font-size:15px;line-height:1.6}
+  .bos a{font-weight:500}
+  .durum{color:var(--muted);font-size:15px}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:inherit;font-weight:500;
+    font-size:14px;line-height:1;text-decoration:none;cursor:pointer;border-radius:999px;padding:11px 20px;
+    background:#08090a;color:#fff;border:1px solid #08090a;transition:.15s;margin-top:18px}
+  .btn:hover{background:#26282c}
+
+  footer{border-top:1px solid var(--line);background:#fafafa;padding:22px 28px;color:var(--muted);font-size:13.5px}
+  .foot-wrap{max-width:900px;margin:0 auto;display:flex;gap:24px;flex-wrap:wrap}
+  .foot-wrap a{color:var(--fg);text-decoration:underline;text-underline-offset:3px;text-decoration-color:#c9ccd1}
+  @media(max-width:640px){header{padding:0 18px;gap:14px}.nav{gap:14px;font-size:13px}main{padding:40px 20px 60px}}
+</style>
+</head>
+<body>
+
+  <header>
+    <nav class="nav">
+      <a href="/">Ana Sayfa</a>
+      <a href="/dersler/">Dersler</a>
+      <a href="/deneme-sinavlari/">Deneme Sınavları</a>
+    </nav>
+  </header>
+
+  <main>
+    <p class="eyebrow">Hesabım</p>
+    <h1>Profilim</h1>
+
+    <div id="icerik">
+      <p class="durum">Yükleniyor…</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="foot-wrap">
+      <a href="/gizlilik/">Gizlilik Politikası</a>
+      <a href="/kullanim-sartlari/">Kullanım Şartları</a>
+      <a href="/hakkinda/">Hakkında</a>
+      <a href="/iletisim/">İletişim</a>
+    </div>
+  </footer>
+
+<script type="module" src="/assets/js/auth-ui.js"></script>
+<script type="module">
+import { kullaniciDinle, denemeleriGetir, girisYap } from '/assets/js/firebase.js';
+
+const icerik = document.getElementById('icerik');
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function tarihYaz(ts) {
+  if (!ts?.toDate) return '—';
+  const d = ts.toDate();
+  const p = n => String(n).padStart(2, '0');
+  return `${p(d.getDate())}.${p(d.getMonth() + 1)}.${d.getFullYear()} ${p(d.getHours())}:${p(d.getMinutes())}`;
+}
+
+function girisEkrani() {
+  icerik.innerHTML = `
+    <div class="kart">
+      <h2>Giriş yapmanız gerekiyor</h2>
+      <p class="bos">Sınav geçmişinizi ve sonuçlarınızı görmek için Google hesabınızla giriş yapın.</p>
+      <button class="btn" type="button" id="girisBtn">Google ile giriş yap</button>
+    </div>`;
+  document.getElementById('girisBtn').addEventListener('click', () => girisYap().catch(() => {}));
+}
+
+function denemeSatiri(d) {
+  const gecti = (d.dogru ?? 0) >= 35;
+  const sinavAdi = d.sinavId ? `Sınav ${esc(String(d.sinavId).replace(/\D/g, '')) || esc(d.sinavId)}` : '—';
+  return `
+    <tr>
+      <td>${sinavAdi}</td>
+      <td>${tarihYaz(d.kaydedilmeAt)}</td>
+      <td class="puan">${d.puan ?? (d.dogru ?? 0) * 2}</td>
+      <td>${d.dogru ?? 0} / ${d.yanlis ?? 0} / ${d.bos ?? 0}</td>
+      <td><span class="rozet ${gecti ? 'gecti' : 'kaldi'}">${gecti ? 'Geçti' : 'Kaldı'}</span></td>
+    </tr>`;
+}
+
+async function profilEkrani(user) {
+  const foto = user.photoURL
+    ? `<img src="${esc(user.photoURL)}" alt="" referrerpolicy="no-referrer">`
+    : `<img alt="">`;
+
+  icerik.innerHTML = `
+    <div class="kart kisi">
+      ${foto}
+      <div>
+        <div class="ad">${esc(user.displayName || 'İsimsiz kullanıcı')}</div>
+        <div class="mail">${esc(user.email || '')}</div>
+      </div>
+    </div>
+    <h2>Sınav geçmişim</h2>
+    <div class="kart" id="gecmis"><p class="durum">Yükleniyor…</p></div>`;
+
+  const gecmis = document.getElementById('gecmis');
+  try {
+    const denemeler = await denemeleriGetir(user.uid);
+    if (!denemeler.length) {
+      gecmis.innerHTML = `<p class="bos">Henüz bir deneme sınavı çözmediniz.
+        <a href="/deneme-sinavlari/">Deneme sınavlarına göz atın →</a></p>`;
+      return;
+    }
+    gecmis.innerHTML = `
+      <table>
+        <thead><tr>
+          <th>Sınav</th><th>Tarih</th><th>Puan</th><th>D / Y / B</th><th>Sonuç</th>
+        </tr></thead>
+        <tbody>${denemeler.map(denemeSatiri).join('')}</tbody>
+      </table>`;
+  } catch (err) {
+    console.error(err);
+    gecmis.innerHTML = `<p class="bos">Geçmiş yüklenemedi. Sayfayı yenileyip tekrar deneyin.</p>`;
+  }
+}
+
+kullaniciDinle(user => {
+  if (user) profilEkrani(user);
+  else girisEkrani();
+});
+</script>
+</body>
+</html>

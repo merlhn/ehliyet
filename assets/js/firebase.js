@@ -1,0 +1,78 @@
+// Firebase başlatma — tüm sayfalar bu modülü kullanır.
+//
+// Buradaki değerler GİZLİ DEĞİLDİR; istemcide zaten görünürler ve Google'ın
+// dokümantasyonu da repoda tutulmalarını normal karşılar. Erişimi koruyan şey
+// bu anahtarlar değil, Firestore güvenlik kuralları ve sunucu tarafındaki
+// yetki kontrolüdür.
+
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js';
+import {
+  getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged
+} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js';
+import {
+  getFirestore, doc, getDoc, setDoc, addDoc, collection,
+  query, orderBy, getDocs, serverTimestamp
+} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js';
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyDmyoZ-Wa-zqzimqaIV--9tN2TFdvhRcmo',
+  authDomain: 'ehliyet-52d4d.firebaseapp.com',
+  projectId: 'ehliyet-52d4d',
+  storageBucket: 'ehliyet-52d4d.firebasestorage.app',
+  messagingSenderId: '40944921621',
+  appId: '1:40944921621:web:66cc2e67bb8cb45464f21c',
+};
+
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export const db = getFirestore(app);
+
+const provider = new GoogleAuthProvider();
+provider.setCustomParameters({ prompt: 'select_account' });
+
+export function girisYap() {
+  return signInWithPopup(auth, provider);
+}
+
+export function cikisYap() {
+  return signOut(auth);
+}
+
+export function kullaniciDinle(cb) {
+  return onAuthStateChanged(auth, cb);
+}
+
+/** Giriş sonrası profil dokümanını oluşturur ya da son giriş zamanını günceller. */
+export async function profiliHazirla(user) {
+  const ref = doc(db, 'users', user.uid);
+  const mevcut = await getDoc(ref);
+
+  if (!mevcut.exists()) {
+    // Alanlar güvenlik kurallarındaki beyaz listeyle birebir aynı olmalı.
+    await setDoc(ref, {
+      email: user.email,
+      ad: user.displayName || '',
+      fotoUrl: user.photoURL || '',
+      olusturulmaAt: serverTimestamp(),
+      sonGirisAt: serverTimestamp(),
+    });
+  } else {
+    await setDoc(ref, { sonGirisAt: serverTimestamp() }, { merge: true });
+  }
+  return ref;
+}
+
+/** Bitmiş bir sınav denemesini kaydeder. */
+export async function denemeKaydet(uid, sonuc) {
+  return addDoc(collection(db, 'users', uid, 'denemeler'), {
+    ...sonuc,
+    kaydedilmeAt: serverTimestamp(),
+  });
+}
+
+/** Kullanıcının geçmiş denemelerini yeniden eskiye döner. */
+export async function denemeleriGetir(uid) {
+  const q = query(collection(db, 'users', uid, 'denemeler'), orderBy('kaydedilmeAt', 'desc'));
+  const snap = await getDocs(q);
+  return snap.docs.map(d => ({ id: d.id, ...d.data() }));
+}

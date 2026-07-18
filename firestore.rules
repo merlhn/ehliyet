@@ -1,0 +1,69 @@
+rules_version = '2';
+
+// ehliyet.digital — Firestore güvenlik kuralları
+//
+// Temel ilke: kullanıcı yalnızca kendi verisine erişir ve YETKİ kayıtlarına
+// hiçbir koşulda yazamaz. Yetki yazımı sadece sunucu tarafında (Vercel
+// fonksiyonu + Firebase Admin SDK) yapılır; Admin SDK bu kuralları baypas eder.
+// Bu ayrım olmazsa kullanıcı kendine ücretsiz sınav yetkisi yazabilir.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function girisYapmis() {
+      return request.auth != null;
+    }
+
+    function sahibi(uid) {
+      return girisYapmis() && request.auth.uid == uid;
+    }
+
+    // ---- Profil ----
+    // Kullanıcı kendi profilini okur ve günceller. Yalnızca beyaz listedeki
+    // alanlar yazılabilir; ileride 'rol' veya 'premium' gibi bir alan eklenirse
+    // istemcinin onu kendi kendine set etmesi engellenmiş olur.
+    match /users/{uid} {
+      allow read: if sahibi(uid);
+
+      allow create: if sahibi(uid)
+        && request.resource.data.keys().hasOnly(['email', 'ad', 'fotoUrl', 'olusturulmaAt', 'sonGirisAt'])
+        && request.resource.data.email == request.auth.token.email;
+
+      allow update: if sahibi(uid)
+        && request.resource.data.diff(resource.data).affectedKeys()
+             .hasOnly(['ad', 'fotoUrl', 'sonGirisAt']);
+
+      allow delete: if false;
+
+      // ---- Sınav denemeleri (sonuçlar) ----
+      // Kullanıcı kendi denemesini oluşturur ve okur. Değiştiremez, silemez —
+      // geçmiş kayıt sonradan düzeltilebilir olmamalı.
+      //
+      // NOT: puan istemcide hesaplanıp yazıldığı için teorik olarak sahte sonuç
+      // yazılabilir. Bu veri kişisel ilerleme takibi olduğundan kabul edilebilir.
+      // İleride sıralama/rozet gibi rekabetçi bir özellik gelirse puanlama
+      // sunucuya taşınmalıdır.
+      match /denemeler/{denemeId} {
+        allow read:   if sahibi(uid);
+        allow create: if sahibi(uid)
+          && request.resource.data.sinavId is string
+          && request.resource.data.dogru is int
+          && request.resource.data.yanlis is int
+          && request.resource.data.bos is int;
+        allow update, delete: if false;
+      }
+
+      // ---- Sınav yetkileri ----
+      // Sadece okunur. Yazma yalnızca sunucu tarafında (Admin SDK) yapılır.
+      match /yetkiler/{sinavId} {
+        allow read: if sahibi(uid);
+        allow write: if false;
+      }
+    }
+
+    // Geri kalan her şey kapalı.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
