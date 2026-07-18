@@ -95,6 +95,15 @@ veya sertifika gibi rekabetçi bir özellik eklenirse puanlama sunucuya taşınm
 **Gizli sayfa ≠ erişim kontrolü.** `noindex` ve link vermemek sayfayı aramadan ve
 gezinmeden çıkarır, ama linke sahip olan herkes açar.
 
+**Panel çok sayfalı kalıyor, SPA'ya geçilmeyecek.** Her tıklama tam sayfa geçişi
+olduğu için belge, CSS, font ve Firebase yeniden kuruluyor; ölçümde ~172ms ana
+iş parçacığı bloklaması görünüyor. Sayfa kendisi hafif (21KB HTML, 121 DOM
+düğümü, render 0.6ms), yani yük bizim kodumuzdan değil gezinmenin kendisinden
+geliyor. SPA bunu bitirirdi ama URL yönetimini (geri tuşu, paylaşma, yenileme)
+elle kurmayı gerektirir; kazanç şu aşamada bu maliyeti karşılamıyor.
+Değerlendirildi ve bilinçli olarak reddedildi. Sınav sonucunu panelde gösterme
+gibi bir akış geldiğinde yeniden bakılabilir.
+
 ---
 
 ## Tamamlananlar

@@ -5,7 +5,16 @@
  *
  * Ayrıca oturum kontrolü yapar: giriş yoksa ana sayfaya yönlendirir.
  */
-import { kullaniciDinle } from './firebase.js';
+/*
+ * Firebase BİLEREK statik import edilmiyor.
+ *
+ * Statik import edildiğinde SDK sayfa açılışının kritik yolunda yer alıyor,
+ * ana iş parçacığını yaklaşık 130ms bloklıyor ve sınav ekranı çizilirken
+ * kare düşmesine yol açıyordu. Sayfa etkileşime hazır olduktan sonra dinamik
+ * olarak yükleniyor; oturum kontrolü birkaç yüz milisaniye gecikse de kullanıcı
+ * deneyimi bozulmuyor, güvenlik açısından da bir fark yok çünkü asıl koruma
+ * Firestore kuralları ve sunucu tarafındaki yetki kontrolü.
+ */
 
 const CSS = `
 :root{--pk-yan:248px;--pk-line:#ececec}
@@ -86,7 +95,12 @@ function menuyuKur() {
 if (document.body) menuyuKur();
 else document.addEventListener('DOMContentLoaded', menuyuKur, { once: true });
 
-// Oturum kontrolü ayrı yürür; yalnızca yönlendirmeden sorumlu.
-kullaniciDinle((user) => {
-  if (!user) location.replace('/');
-});
+// Oturum kontrolü ayrı ve GECİKMELİ yürür; yalnızca yönlendirmeden sorumlu.
+function oturumuDogrula() {
+  import('./firebase.js')
+    .then(({ kullaniciDinle }) => kullaniciDinle((user) => { if (!user) location.replace('/'); }))
+    .catch(err => console.error('Oturum kontrolü yüklenemedi:', err));
+}
+
+if ('requestIdleCallback' in window) requestIdleCallback(oturumuDogrula, { timeout: 2000 });
+else setTimeout(oturumuDogrula, 300);

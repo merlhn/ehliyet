@@ -267,7 +267,7 @@
 
 <script src="/assets/js/feedback.js" defer></script>
 <script type="module">
-import { kullaniciDinle, profiliHazirla, cikisYap } from '/assets/js/firebase.js';
+import { kullaniciDinle, profiliHazirla, cikisYap, oturumBekleniyorMu } from '/assets/js/firebase.js';
 
 const kabuk = document.getElementById('kabuk');
 const BASLIKLAR = {
@@ -275,7 +275,7 @@ const BASLIKLAR = {
   odeme: 'Ödeme Geçmişi', ayarlar: 'Ayarlar', profil: 'Profilim',
 };
 
-function kabuguKur(user) {
+function kabuguKur() {
   kabuk.classList.remove('yukleniyor');
   kabuk.textContent = '';
   kabuk.appendChild(document.getElementById('sablon').content.cloneNode(true));
@@ -298,19 +298,6 @@ function kabuguKur(user) {
   // ---- Profil ----
   const btn = kabuk.querySelector('[data-profil]');
   const menu = kabuk.querySelector('.profil-menu');
-  const avatar = kabuk.querySelector('[data-avatar]');
-  const ad = user.displayName || user.email || 'Hesabım';
-
-  kabuk.querySelector('[data-ad]').textContent = ad;
-  kabuk.querySelector('[data-mail]').textContent = user.email || '';
-
-  if (user.photoURL) {
-    const img = document.createElement('img');
-    img.src = user.photoURL; img.alt = ''; img.referrerPolicy = 'no-referrer';
-    avatar.appendChild(img);
-  } else {
-    avatar.textContent = ad.trim().charAt(0).toUpperCase();
-  }
 
   btn.addEventListener('click', (e) => {
     e.stopPropagation();
@@ -333,9 +320,41 @@ function kabuguKur(user) {
   });
 }
 
+/** Kullanıcıya özel alanlar; oturum çözülünce doldurulur. */
+function kullaniciyiYaz(user) {
+  const avatar = kabuk.querySelector('[data-avatar]');
+  if (!avatar || avatar.dataset.dolu) return;
+  avatar.dataset.dolu = '1';
+
+  const ad = user.displayName || user.email || 'Hesabım';
+  kabuk.querySelector('[data-ad]').textContent = ad;
+  kabuk.querySelector('[data-mail]').textContent = user.email || '';
+
+  if (user.photoURL) {
+    const img = document.createElement('img');
+    img.src = user.photoURL; img.alt = ''; img.referrerPolicy = 'no-referrer';
+    avatar.appendChild(img);
+  } else {
+    avatar.textContent = ad.trim().charAt(0).toUpperCase();
+  }
+}
+
+// Önceki oturum biliniyorsa kabuğu Firebase'i beklemeden kur; aksi halde
+// "Yükleniyor…" ekranı SDK inip oturum çözülene kadar ekranda kalıyor ve
+// sınavdan panele dönüşte her seferinde görünüyor.
+let kuruldu = false;
+function kurBirKez() {
+  if (kuruldu) return;
+  kuruldu = true;
+  kabuguKur();
+}
+
+if (oturumBekleniyorMu()) kurBirKez();
+
 kullaniciDinle(async (user) => {
   if (!user) { location.replace('/'); return; }
-  kabuguKur(user);
+  kurBirKez();
+  kullaniciyiYaz(user);
   try {
     await profiliHazirla(user);
   } catch (err) {

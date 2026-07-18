@@ -38,8 +38,37 @@ export function cikisYap() {
   return signOut(auth);
 }
 
+/*
+ * Oturum ipucu.
+ *
+ * Firebase'in oturum durumunu çözmesi SDK'nın CDN'den inmesini gerektiriyor;
+ * bu süre boyunca sayfa "Yükleniyor…" göstermek zorunda kalıyordu. Daha önce
+ * giriş yapıldığını yerelde işaretleyip, kabuğu Firebase'i beklemeden kurmak
+ * için kullanıyoruz.
+ *
+ * Bu bir yetkilendirme aracı DEĞİLDİR — kullanıcı bu değeri kendi elleriyle
+ * yazabilir. Yalnızca "muhtemelen giriş yapmış, ekranı şimdiden çizebiliriz"
+ * anlamına gelir. Gerçek karar her zaman onAuthStateChanged'den gelir ve
+ * oturum yoksa yönlendirme yine yapılır.
+ */
+const OTURUM_IPUCU = 'ehliyet-oturum';
+
+export function oturumBekleniyorMu() {
+  try {
+    return localStorage.getItem(OTURUM_IPUCU) === '1';
+  } catch {
+    return false;
+  }
+}
+
 export function kullaniciDinle(cb) {
-  return onAuthStateChanged(auth, cb);
+  return onAuthStateChanged(auth, (user) => {
+    try {
+      if (user) localStorage.setItem(OTURUM_IPUCU, '1');
+      else localStorage.removeItem(OTURUM_IPUCU);
+    } catch { /* localStorage kapalıysa ipucu olmadan devam ederiz */ }
+    cb(user);
+  });
 }
 
 /** Giriş sonrası profil dokümanını oluşturur ya da son giriş zamanını günceller. */
