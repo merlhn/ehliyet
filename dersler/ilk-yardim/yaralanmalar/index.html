@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İlk Yardım — Konu 7: Yaralanmalar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--fg:#08090a;--muted:#6a6f76;--line:#ececec}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--fg);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.75;letter-spacing:-.011em}
+  a{color:inherit}
+  header{display:flex;align-items:center;gap:26px;height:64px;padding:0 28px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(10px);z-index:20}
+  .nav{display:flex;gap:24px}
+  .nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:450}
+  .nav a:hover{color:#08090a}
+  main{max-width:960px;margin:0 auto;padding:52px 24px 96px}
+  .ders-meta{margin:0 0 24px;font-size:15.5px;line-height:1.7;color:var(--muted)}
+  .ders-meta .k{display:inline-block;min-width:104px;font-family:'Geist Mono',monospace;font-size:13.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);vertical-align:top}
+  .ders-meta b{color:#08090a;font-weight:600}
+  .lead{font-size:14px;color:var(--muted);line-height:1.6;margin:0 0 8px}
+  h2{font-size:19px;font-weight:600;letter-spacing:-.025em;line-height:1.2;margin:42px 0 10px}
+  p{margin:16px 0;font-size:12.5px}
+  b{font-weight:600}
+  .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#08090a;color:#fff;border:1px solid #08090a;font-family:inherit;font-weight:500;font-size:15px;border-radius:999px;padding:13px 24px;cursor:pointer;text-decoration:none;letter-spacing:-.01em}
+  .btn-primary:hover{background:#26282c;border-color:#26282c}
+  .quiz-cta{margin-top:48px}
+  .quiz-cta .btn-primary{font-size:10.5px;padding:9px 17px}
+  .q-overlay{position:fixed;inset:0;background:rgba(8,9,10,.5);display:none;align-items:center;justify-content:center;padding:16px;z-index:60}
+  .q-overlay.show{display:flex}
+  .q-modal{background:#fff;border-radius:16px;width:min(900px,100%);max-height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.28)}
+  .q-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line);font-weight:600;font-size:16px;letter-spacing:-.02em;flex-shrink:0}
+  .q-close{width:32px;height:32px;border:none;background:none;font-size:19px;color:var(--muted);cursor:pointer;border-radius:8px}
+  .q-close:hover{background:#f2f2f2;color:#08090a}
+  .q-body{overflow-y:auto;-webkit-overflow-scrolling:touch;padding:4px 24px 10px}
+  .q-item{display:grid;grid-template-columns:0.9fr 1.1fr;gap:28px;align-items:start;padding:20px 0}
+  .q-q{font-weight:500;font-size:15.5px;line-height:1.5;margin:0}
+  .q-q .qn{font-family:'Geist Mono',monospace;color:var(--muted);margin-right:8px;font-size:13px}
+  .q-opts{display:flex;flex-direction:column;gap:7px}
+  .q-opt{display:flex;align-items:center;gap:11px;border:1px solid var(--line);border-radius:10px;padding:10px 13px;font-size:14px;cursor:pointer;transition:.12s;background:#fff;user-select:none}
+  .q-opt:hover{border-color:#08090a}
+  .q-opt .l{font-family:'Geist Mono',monospace;font-weight:500;color:#08090a}
+  .q-opt.sel{background:#08090a;color:#fff;border-color:#08090a}
+  .q-opt.sel .l{color:#fff}
+  .q-done .q-opt{cursor:default}
+  .q-opt.correct{background:#effaf3;border-color:#0a7f3f;color:#0a7f3f}
+  .q-opt.correct .l{color:#0a7f3f}
+  .q-opt.wrong{background:#fdf1f1;border-color:#c72c2c;color:#c72c2c}
+  .q-opt.wrong .l{color:#c72c2c}
+  .q-foot{display:flex;align-items:center;gap:12px;padding:14px 20px;border-top:1px solid var(--line);flex-shrink:0}
+  .q-score{font-weight:600;font-size:15px}
+  .q-foot .btn-primary{margin-left:auto;font-size:14px;padding:11px 20px}
+  @media(max-width:640px){.q-item{grid-template-columns:1fr;gap:12px;padding:16px 0}header{height:58px;padding:0 18px;gap:14px}}
+</style>
+</head>
+<body>
+  <header>
+    <nav class="nav"><a href="/">Ana Sayfa</a><a href="/dersler/">Dersler</a><a href="/deneme-sinavlari/">Deneme Sınavları</a></nav>
+  </header>
+
+  <main>
+    <div class="ders-meta">
+      <div><span class="k">Ders</span> : <b>İlk Yardım</b></div>
+      <div><span class="k">Konu - 7</span> : <b>Yaralanmalar</b></div>
+    </div>
+    <p class="lead">Yaralanmalar konusundan sınavda genellikle bir, hatta iki soru gelir. Bu bölümde yara tanımını, yara çeşitlerini ve genel ilk yardım kurallarını; ayrıca en çok sorulan delici göğüs, karın ve kafatası-omurga yaralanmalarını işleyeceğiz.</p>
+
+    <h2>Yara nedir ve çeşitleri</h2>
+    <p><b>Yara</b>, bir travma sonucu deri veya mukoza bütünlüğünün bozulmasıdır. Yaralar önce kapalı ve açık olarak ikiye ayrılır. <b>Kapalı yaralarda</b> (ezik, morarma) deri bütünlüğü bozulmaz; <b>açık yaralarda</b> ise deri açılır. Açık yaraların başlıca türleri şunlardır: <b>kesik yara</b> bıçak, cam, çakı gibi kesici cisimlerle; <b>ezik yara</b> taş, yumruk, sopa gibi künt (sert) cisimlerle oluşur ve trafik kazalarında en sık görülen yara türüdür; <b>delici yara</b> çivi, bıçak ucu gibi sivri cisimlerle oluşur ve tetanoz riski yüksektir; <b>parçalı yara</b> ise çekme etkisiyle oluşur. Isırma, sokma, 6 saatten geç müdahale edilen ve çok kirli-derin yaralar <b>enfekte (kirli) yara</b> sayılır. Unutmayın: <b>tüm yaralar tetanoz açısından önemlidir</b>.</p>
+
+    <h2>Yaralanmalarda genel ilk yardım</h2>
+    <p>Yaralanmada önce yaşam bulguları ve yaranın durumu değerlendirilir. Varsa kanama durdurulur, yaranın üzeri temiz ve nemli bir bezle örtülür, tetanoz konusunda uyarı yapılır ve 112 aranır. Çok önemli bir kural: <b>yaraya saplanan (batan) yabancı cisim çıkarılmaz</b>, aksine etrafı desteklenerek sabitlenir; çünkü cismin çıkarılması daha büyük bir kanamaya yol açabilir. Yara içi de kurcalanmaz. Kesik yaralarda ise yara uçları birbirine yaklaştırılıp üzeri kapatılarak sarılır. Ayrıca yaranın üzerine <b>tentürdiyot gibi maddeler dökülmez</b>; bazı eski sorularda “yaraya tentürdiyot dökülür” şıkkı çeldirici olarak konabilir, buna dikkat edin.</p>
+
+    <h2>Delici göğüs ve karın yaralanmaları</h2>
+    <p><b>Delici göğüs yaralanmasında</b> yoğun ağrı, solunum sıkıntısı, morarma, kan tükürme ve yarada hava giriş-çıkışı (nefes görüntüsü) görülür. Batan cisim çıkarılmaz, etrafı sabitlenir; yara temiz bir bez ya da plastikle kapatılır ve kişiye <b>oturur pozisyon</b> verilir (nefes alması rahatlar). <b>Karın yaralanmasında</b> dışarı çıkan bağırsak veya organlar <b>içeri konmaya çalışılmaz</b>; üzeri temiz nemli bir bezle örtülür, kişi bacakları bükülü şekilde yatırılır ve ısı kaybını önlemek için üzeri örtülür. Her iki durumda da kazazedeye <b>yiyecek ve içecek verilmez</b>.</p>
+
+    <h2>Kafatası ve omurga yaralanmaları</h2>
+    <p>Trafik kazalarındaki ölümlerin büyük kısmı kafatası ve omurga yaralanmalarından kaynaklanır. <b>Kafatası yaralanması</b> beyin kanaması, <b>omurga yaralanması</b> ise felç riski taşır. Belirtileri arasında bilinç ve hafıza kaybı; baş, boyun ve sırtta ağrı; kulak, burun veya ağızdan kan gelmesi; his ve hareket kaybı; denge kaybı ve morluk sayılır. Bu tür yaralanmalarda en kritik kural, kişinin <b>baş-boyun-gövde ekseni bozulmadan, sarsmadan</b> taşınmasıdır; bunun nedeni omurga zedelenirse kişinin <b>felç geçirme ihtimalidir</b>. Kazazede 12-24 saat doktor gözetiminde tutulmalı ve yalnız bırakılmamalıdır. Ayrıca kulaktan kan geliyorsa kişi kanın geldiği tarafa (aynı yöne) yatırılır ki kan içeri akmasın.</p>
+
+    <h2>Kısaca</h2>
+    <p>Yara, travma sonucu deri veya mukoza bütünlüğünün bozulmasıdır; kesik (kesici cisim), ezik (künt cisim, en sık), delici (sivri cisim, tetanoz riski) ve parçalı (çekme) gibi türleri vardır ve hepsi tetanoz açısından önemlidir. Genel ilk yardımda kanama durdurulur, üzeri örtülür ve saplanan cisim çıkarılmaz. Delici göğüs yaralanmasında oturur pozisyon, karın yaralanmasında dışarı çıkan organlar içeri konmaz; ikisinde de yiyecek-içecek verilmez. Kafatası-omurga yaralanmalarında baş-boyun-gövde ekseni bozulmadan taşınır; çünkü omurga zedelenmesi felce yol açabilir.</p>
+
+    <div class="quiz-cta"><button class="btn-primary" onclick="openQuiz()">Kısa Testi Çöz — 5 Soru →</button></div>
+  </main>
+
+  <div class="q-overlay" id="quizModal" aria-hidden="true">
+    <div class="q-modal">
+      <div class="q-head"><span>Kısa Test — Yaralanmalar</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
+      <div class="q-body" id="quizBody"></div>
+      <div class="q-foot"><span class="q-score" id="quizScore"></span><button class="btn-primary" id="quizBtn" onclick="submitQuiz()">Sonucu Gör</button></div>
+    </div>
+  </div>
+
+  <script>
+    const QUIZ=[
+      {q:"Bir travma sonucu deri veya mukoza bütünlüğünün bozulmasına ne denir?",
+       o:["Çıkık","Yara","Burkulma","Kırık"],c:1},
+      {q:"Taş, yumruk, sopa gibi künt (sert) cisimlerle oluşan ve trafik kazalarında en sık görülen yara türü hangisidir?",
+       o:["Kesik yara","Delici yara","Ezik yara","Parçalı yara"],c:2},
+      {q:"Yaraya saplanmış (batmış) bir cisim varsa ne yapılır?",
+       o:["Hemen çıkarılır","Çıkarılmaz, etrafı desteklenerek sabitlenir","Su ile itilir","Üzerine bastırılır"],c:1},
+      {q:"Kafatası ve omurga yaralanmalarında baş-boyun-gövde ekseni bozulmadan taşımanın sebebi nedir?",
+       o:["Kanamayı durdurmak","Kişinin felç geçirme ihtimali","Ağrıyı azaltmak","Solunumu kolaylaştırmak"],c:1},
+      {q:"Delici göğüs yaralanması olan kazazedeye aşağıdakilerden hangisi yapılmaz?",
+       o:["Batan cismin etrafını sabitlemek","Oturur pozisyon vermek","Yiyecek ve içecek vermek","Yarayı temiz bezle kapatmak"],c:2}
+    ];
+    const L=["A","B","C","D"];
+    let qAns=[null,null,null,null,null], qDone=false;
+    function qBodyHTML(){return QUIZ.map((it,i)=>{const opts=it.o.map((o,j)=>{let cls="q-opt";if(qDone){if(j===it.c)cls+=" correct";else if(j===qAns[i])cls+=" wrong";}else if(qAns[i]===j)cls+=" sel";const click=qDone?"":`onclick="pickQ(${i},${j})"`;return `<div class="${cls}" ${click}><span class="l">${L[j]}</span><span>${o}</span></div>`;}).join("");return `<div class="q-item"><p class="q-q"><span class="qn">${i+1}.</span>${it.q}</p><div class="q-opts">${opts}</div></div>`;}).join("");}
+    function renderQuiz(){const body=document.getElementById("quizBody");body.className="q-body"+(qDone?" q-done":"");body.innerHTML=qBodyHTML();const btn=document.getElementById("quizBtn"),sc=document.getElementById("quizScore");if(qDone){const s=QUIZ.filter((it,i)=>qAns[i]===it.c).length;sc.textContent=s+" / 5 doğru";btn.textContent="Tekrar Çöz";}else{sc.textContent="";btn.textContent="Sonucu Gör";}}
+    function openQuiz(){qAns=[null,null,null,null,null];qDone=false;renderQuiz();document.getElementById("quizModal").classList.add("show");document.body.style.overflow="hidden";document.getElementById("quizBody").scrollTop=0;}
+    function closeQuiz(){document.getElementById("quizModal").classList.remove("show");document.body.style.overflow="";}
+    function pickQ(i,j){if(qDone)return;qAns[i]=j;renderQuiz();}
+    function submitQuiz(){if(qDone){openQuiz();return;}qDone=true;renderQuiz();document.getElementById("quizBody").scrollTop=0;}
+    document.getElementById("quizModal").addEventListener("click",e=>{if(e.target.id==="quizModal")closeQuiz();});
+    document.addEventListener("keydown",e=>{if(e.key==="Escape")closeQuiz();});
+  </script>
+  <script src="/assets/js/lessons-nav.js"></script>
+</body>
+</html>

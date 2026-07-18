@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Araç Tekniği (Motor) — Konu 6: Lastikler</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--fg:#08090a;--muted:#6a6f76;--line:#ececec}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--fg);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.75;letter-spacing:-.011em}
+  a{color:inherit}
+  header{display:flex;align-items:center;gap:26px;height:64px;padding:0 28px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(10px);z-index:20}
+  .nav{display:flex;gap:24px}
+  .nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:450}
+  .nav a:hover{color:#08090a}
+  main{max-width:960px;margin:0 auto;padding:52px 24px 96px}
+  .ders-meta{margin:0 0 24px;font-size:15.5px;line-height:1.7;color:var(--muted)}
+  .ders-meta .k{display:inline-block;min-width:104px;font-family:'Geist Mono',monospace;font-size:13.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);vertical-align:top}
+  .ders-meta b{color:#08090a;font-weight:600}
+  .lead{font-size:14px;color:var(--muted);line-height:1.6;margin:0 0 8px}
+  h2{font-size:19px;font-weight:600;letter-spacing:-.025em;line-height:1.2;margin:42px 0 10px}
+  p{margin:16px 0;font-size:12.5px}
+  b{font-weight:600}
+  .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#08090a;color:#fff;border:1px solid #08090a;font-family:inherit;font-weight:500;font-size:15px;border-radius:999px;padding:13px 24px;cursor:pointer;text-decoration:none;letter-spacing:-.01em}
+  .btn-primary:hover{background:#26282c;border-color:#26282c}
+  .quiz-cta{margin-top:48px}
+  .quiz-cta .btn-primary{font-size:10.5px;padding:9px 17px}
+  .q-overlay{position:fixed;inset:0;background:rgba(8,9,10,.5);display:none;align-items:center;justify-content:center;padding:16px;z-index:60}
+  .q-overlay.show{display:flex}
+  .q-modal{background:#fff;border-radius:16px;width:min(900px,100%);max-height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.28)}
+  .q-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line);font-weight:600;font-size:16px;letter-spacing:-.02em;flex-shrink:0}
+  .q-close{width:32px;height:32px;border:none;background:none;font-size:19px;color:var(--muted);cursor:pointer;border-radius:8px}
+  .q-close:hover{background:#f2f2f2;color:#08090a}
+  .q-body{overflow-y:auto;-webkit-overflow-scrolling:touch;padding:4px 24px 10px}
+  .q-item{display:grid;grid-template-columns:0.9fr 1.1fr;gap:28px;align-items:start;padding:20px 0}
+  .q-q{font-weight:500;font-size:15.5px;line-height:1.5;margin:0}
+  .q-q .qn{font-family:'Geist Mono',monospace;color:var(--muted);margin-right:8px;font-size:13px}
+  .q-opts{display:flex;flex-direction:column;gap:7px}
+  .q-opt{display:flex;align-items:center;gap:11px;border:1px solid var(--line);border-radius:10px;padding:10px 13px;font-size:14px;cursor:pointer;transition:.12s;background:#fff;user-select:none}
+  .q-opt:hover{border-color:#08090a}
+  .q-opt .l{font-family:'Geist Mono',monospace;font-weight:500;color:#08090a}
+  .q-opt.sel{background:#08090a;color:#fff;border-color:#08090a}
+  .q-opt.sel .l{color:#fff}
+  .q-done .q-opt{cursor:default}
+  .q-opt.correct{background:#effaf3;border-color:#0a7f3f;color:#0a7f3f}
+  .q-opt.correct .l{color:#0a7f3f}
+  .q-opt.wrong{background:#fdf1f1;border-color:#c72c2c;color:#c72c2c}
+  .q-opt.wrong .l{color:#c72c2c}
+  .q-foot{display:flex;align-items:center;gap:12px;padding:14px 20px;border-top:1px solid var(--line);flex-shrink:0}
+  .q-score{font-weight:600;font-size:15px}
+  .q-foot .btn-primary{margin-left:auto;font-size:14px;padding:11px 20px}
+  @media(max-width:640px){.q-item{grid-template-columns:1fr;gap:12px;padding:16px 0}header{height:58px;padding:0 18px;gap:14px}}
+</style>
+</head>
+<body>
+  <header>
+    <nav class="nav"><a href="/">Ana Sayfa</a><a href="/dersler/">Dersler</a><a href="/deneme-sinavlari/">Deneme Sınavları</a></nav>
+  </header>
+
+  <main>
+    <div class="ders-meta">
+      <div><span class="k">Ders</span> : <b>Araç Tekniği (Motor)</b></div>
+      <div><span class="k">Konu - 6</span> : <b>Lastikler</b></div>
+    </div>
+    <p class="lead">Lastikler, aracı yolda tutan tek unsur olduğu için hem güvenlik hem de araç muayenesi açısından sınavda sıkça sorulur. Bu bölümde diş derinliğinin yasal sınırını, hava basıncının doğru ölçümünü, rot-balans ile aşınma ilişkisini, mevsim lastiklerini ve lastik bakımına dair sınav-kritik ayrıntıları düz bir anlatımla öğreneceğiz.</p>
+
+<!-- BODY_START -->
+    <h2>Lastik neden bu kadar önemli?</h2>
+    <p><b>Lastik, aracın yol ile temas eden tek noktasıdır.</b> Motor ne kadar güçlü, fren ne kadar iyi olursa olsun, bu gücün ve frenlemenin yola aktarılması yalnızca lastik üzerinden gerçekleşir. Bu yüzden <b>yol tutuşu, frenleme performansı ve direksiyon hâkimiyeti doğrudan lastiğin durumuna bağlıdır.</b> Sınavda “aracın yolla temas eden tek parçası hangisidir?” ya da “yol tutuşunu doğrudan etkileyen unsur hangisidir?” diye sorulduğunda cevap her zaman lastiktir. Lastik yapı olarak <b>kauçuk</b> ile bunun içine gömülü <b>çelik teller (kord bezi)</b> katmanlarından oluşur; kauçuk yol tutuşunu sağlarken çelik kord lastiğe dayanıklılık ve şeklini koruma özelliği verir.</p>
+
+    <h2>Diş derinliği ve yasal sınır</h2>
+    <p>Lastiğin üzerindeki oluklara <b>diş</b> denir ve bu dişlerin görevi, özellikle ıslak zeminde <b>lastikle yol arasındaki suyu tahliye ederek</b> lastiğin yola tutunmasını sağlamaktır. Zamanla dişler aşınır ve derinlikleri azalır. <b>Otomobillerde diş derinliği yasal olarak en az 1,6 mm olmalıdır.</b> Bu değerin altına düşen bir lastikle araç <b>muayeneden geçemez</b>; bu durum ağır kusur sayılır. <b>Otobüs, kamyon gibi büyük araçlarda</b> ise asgari diş derinliği genellikle <b>4 mm</b> olarak istenir. Diş derinliği azaldıkça iki büyük tehlike ortaya çıkar: birincisi <b>frenleme mesafesi uzar</b>, ikincisi ıslak zeminde lastik suyu atamaz hâle gelir ve araç su üzerinde kaymaya, yani <b>kızaklanmaya (aquaplaning)</b> başlar. Sınavda “otomobil lastiğinde diş derinliği en az kaç mm olmalıdır?” sorusunun cevabı 1,6 mm’dir ve bu en çok sorulan rakamlardan biridir.</p>
+
+    <h2>Lastik hava basıncı</h2>
+    <p>Lastik hava basıncı, <b>üreticinin (aracın kullanma kılavuzunun) belirttiği değerde</b> olmalıdır ve çok kritik bir kural vardır: <b>basınç lastik soğukken ölçülmelidir.</b> Çünkü araç bir süre gittikten sonra lastik ısınır, içindeki hava genleşir ve gerçek değerden daha yüksek bir basınç okunur; bu da yanlış ayara yol açar. <b>Basınç düşükse</b> lastik gerektiğinden fazla yol ile temas eder, <b>yanaklarından (kenarlarından) aşınır</b>, aşırı ısınır, <b>yakıt tüketimi artar</b> ve en tehlikelisi ısınmaya bağlı <b>patlama riski</b> doğar. <b>Basınç fazlaysa</b> lastik yalnızca <b>ortasından (sırt kısmının merkezinden) aşınır</b>, sürüş sertleşir ve yol ile temas alanı azaldığı için <b>yol tutuşu düşer.</b> Yani hem düşük hem yüksek basınç zararlıdır; ideal olan üreticinin verdiği değerdir. Sınavda basıncın “soğukken” ölçülmesi ve düşük/yüksek basıncın hangi bölgede aşınmaya yol açtığı sıkça sorulur.</p>
+
+    <h2>Rot ve balans ayarı</h2>
+    <p>Lastiklerin düzgün ve dengeli aşınması için ön düzen ayarlarının doğru olması gerekir. <b>Rot ayarı bozuksa</b> lastiklerde <b>düzensiz ve tek taraflı aşınma</b> görülür. <b>Balans ayarı bozuksa</b> tekerlek dengesiz döner ve bu durum kendini en belirgin biçimde <b>direksiyonda titreme</b> olarak gösterir. Sınavda “belirli bir hızda direksiyon titriyorsa sebebi ne olabilir?” sorusunun cevabı balans ayarının bozukluğudur; “lastikler düzensiz aşınıyorsa” denince ise rot/balans ayarına ve basınç hatasına bakılır.</p>
+
+    <h2>Mevsim lastikleri</h2>
+    <p>Lastikler kullanıldıkları mevsime göre üçe ayrılır: <b>yaz lastiği, kış lastiği ve dört mevsim lastiği.</b> <b>Kış lastiği</b>, kar ve buzlu zeminler ile yaklaşık <b>7°C’nin altındaki soğuk havalar</b> için tasarlanmıştır; soğukta sertleşmeyen özel karışımı ve derin dişleri sayesinde daha iyi tutunma sağlar. <b>Yaz lastiği</b> sıcak ve kuru/ıslak asfaltta en iyi performansı verirken düşük sıcaklıkta sertleşir ve tutunması azalır. <b>Dört mevsim lastiği</b> ise ikisinin arasında, yıl boyu makul performans veren bir çözümdür. Ülkemizde <b>kış lastiği belirli tarihler arasında bazı yollarda ve bazı araç türlerinde zorunludur;</b> bu zorunluluk ve kış lastiğinin yaklaşık 7°C sınırı sınavda karşınıza çıkabilir.</p>
+
+    <h2>Lastik bakımı ve kullanımı</h2>
+    <p>Güvenli sürüş için birkaç temel kurala dikkat edilmelidir. <b>Aynı akstaki (aynı dingildeki) lastikler aynı özellikte olmalıdır;</b> bir tarafta yaz, diğer tarafta kış ya da farklı diş derinliğinde lastik kullanmak yol tutuşunu bozar ve tehlikelidir. <b>Yedek lastik (stepne) daima kontrol edilmeli</b> ve basıncı yeterli tutulmalıdır, çünkü ihtiyaç anında sönük bir stepne işe yaramaz. Lastikler eşit aşınsın diye belirli aralıklarla <b>yer değiştirilerek, yani rotasyonla (dönüşümlü) kullanılabilir.</b> Ayrıca lastik yıllar içinde hiç kullanılmasa bile yaşlanır; <b>çatlamış, sertleşmiş ya da üretim tarihi çok eski lastikler diş derinliği yeterli görünse bile değiştirilmelidir.</b> Bu yüzden lastik alırken diş derinliği kadar üretim tarihine de bakmak gerekir.</p>
+
+    <h2>Kısaca</h2>
+    <p>Lastik, aracın yolla temas eden tek noktasıdır; yol tutuşu, frenleme ve direksiyon hâkimiyeti ona bağlıdır ve kauçuk ile çelik korddan oluşur. Otomobilde diş derinliği en az 1,6 mm, büyük araçlarda genellikle 4 mm olmalı; altına düşerse araç muayeneden geçmez ve ıslak zeminde kızaklanma riski artar, frenleme mesafesi uzar. Hava basıncı üreticinin değerinde ve lastik soğukken ölçülmeli; düşük basınç kenarlardan aşındırıp patlamaya, fazla basınç ortadan aşındırıp yol tutuşunun azalmasına yol açar. Rot bozukluğu düzensiz aşınma, balans bozukluğu direksiyon titremesi yapar. Kış lastiği kar, buz ve yaklaşık 7°C altı için olup belirli tarihlerde zorunlu olabilir. Aynı akstaki lastikler aynı olmalı, stepne kontrol edilmeli ve çatlamış/yaşlı lastik değiştirilmelidir.</p>
+<!-- BODY_END -->
+
+    <div class="quiz-cta"><button class="btn-primary" onclick="openQuiz()">Kısa Testi Çöz — 5 Soru →</button></div>
+  </main>
+
+  <div class="q-overlay" id="quizModal" aria-hidden="true">
+    <div class="q-modal">
+      <div class="q-head"><span>Kısa Test — Lastikler</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
+      <div class="q-body" id="quizBody"></div>
+      <div class="q-foot"><span class="q-score" id="quizScore"></span><button class="btn-primary" id="quizBtn" onclick="submitQuiz()">Sonucu Gör</button></div>
+    </div>
+  </div>
+
+  <script>
+    const QUIZ=[
+      {q:"Otomobil lastiklerinde diş derinliği yasal olarak en az kaç mm olmalıdır?",o:["0,8 mm","1,6 mm","3 mm","5 mm"],c:1},
+      {q:"Lastik hava basıncı ne zaman ölçülmelidir?",o:["Lastik soğukken","Uzun yolun sonunda lastik iyice ısınınca","Fren yaptıktan hemen sonra","Yalnızca yağmurlu havada"],c:0},
+      {q:"Lastik hava basıncı gereğinden düşük olursa aşağıdakilerden hangisi görülür?",o:["Lastik yalnızca ortasından aşınır","Yakıt tüketimi azalır","Yanaklardan (kenarlardan) aşınma, aşırı ısınma ve patlama riski oluşur","Yol tutuşu belirgin biçimde artar"],c:2},
+      {q:"Belirli bir hızda direksiyonda titreme oluyorsa bunun en olası sebebi hangisidir?",o:["Balans ayarının bozuk olması","Diş derinliğinin fazla olması","Kış lastiği kullanılması","Stepnenin bagajda olması"],c:0},
+      {q:"Lastiklerle ilgili aşağıdakilerden hangisi yanlıştır?",o:["Aynı akstaki lastikler aynı özellikte olmalıdır","Diş derinliği azaldıkça ıslak zeminde kızaklanma riski artar","Çatlamış ve üretim tarihi çok eski lastikler değiştirilmelidir","Hava basıncı fazla olan lastik kenarlarından aşınır ve yol tutuşu artar"],c:3}
+    ];
+    const L=["A","B","C","D"];
+    let qAns=[null,null,null,null,null], qDone=false;
+    function qBodyHTML(){return QUIZ.map((it,i)=>{const opts=it.o.map((o,j)=>{let cls="q-opt";if(qDone){if(j===it.c)cls+=" correct";else if(j===qAns[i])cls+=" wrong";}else if(qAns[i]===j)cls+=" sel";const click=qDone?"":`onclick="pickQ(${i},${j})"`;return `<div class="${cls}" ${click}><span class="l">${L[j]}</span><span>${o}</span></div>`;}).join("");return `<div class="q-item"><p class="q-q"><span class="qn">${i+1}.</span>${it.q}</p><div class="q-opts">${opts}</div></div>`;}).join("");}
+    function renderQuiz(){const body=document.getElementById("quizBody");body.className="q-body"+(qDone?" q-done":"");body.innerHTML=qBodyHTML();const btn=document.getElementById("quizBtn"),sc=document.getElementById("quizScore");if(qDone){const s=QUIZ.filter((it,i)=>qAns[i]===it.c).length;sc.textContent=s+" / 5 doğru";btn.textContent="Tekrar Çöz";}else{sc.textContent="";btn.textContent="Sonucu Gör";}}
+    function openQuiz(){qAns=[null,null,null,null,null];qDone=false;renderQuiz();document.getElementById("quizModal").classList.add("show");document.body.style.overflow="hidden";document.getElementById("quizBody").scrollTop=0;}
+    function closeQuiz(){document.getElementById("quizModal").classList.remove("show");document.body.style.overflow="";}
+    function pickQ(i,j){if(qDone)return;qAns[i]=j;renderQuiz();}
+    function submitQuiz(){if(qDone){openQuiz();return;}qDone=true;renderQuiz();document.getElementById("quizBody").scrollTop=0;}
+    document.getElementById("quizModal").addEventListener("click",e=>{if(e.target.id==="quizModal")closeQuiz();});
+    document.addEventListener("keydown",e=>{if(e.key==="Escape")closeQuiz();});
+  </script>
+  <script src="/assets/js/lessons-nav.js"></script>
+</body>
+</html>

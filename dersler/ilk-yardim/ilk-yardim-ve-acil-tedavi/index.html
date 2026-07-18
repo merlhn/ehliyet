@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İlk Yardım — Konu 1: İlk Yardım ve Acil Tedavi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--fg:#08090a;--muted:#6a6f76;--line:#ececec}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--fg);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.75;letter-spacing:-.011em}
+  a{color:inherit}
+  header{display:flex;align-items:center;gap:26px;height:64px;padding:0 28px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(10px);z-index:20}
+  .nav{display:flex;gap:24px}
+  .nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:450}
+  .nav a:hover{color:#08090a}
+  main{max-width:960px;margin:0 auto;padding:52px 24px 96px}
+  .ders-meta{margin:0 0 24px;font-size:15.5px;line-height:1.7;color:var(--muted)}
+  .ders-meta .k{display:inline-block;min-width:104px;font-family:'Geist Mono',monospace;font-size:13.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);vertical-align:top}
+  .ders-meta b{color:#08090a;font-weight:600}
+  .lead{font-size:14px;color:var(--muted);line-height:1.6;margin:0 0 8px}
+  h2{font-size:19px;font-weight:600;letter-spacing:-.025em;line-height:1.2;margin:42px 0 10px}
+  p{margin:16px 0;font-size:12.5px}
+  b{font-weight:600}
+  .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#08090a;color:#fff;border:1px solid #08090a;font-family:inherit;font-weight:500;font-size:15px;border-radius:999px;padding:13px 24px;cursor:pointer;text-decoration:none;letter-spacing:-.01em}
+  .btn-primary:hover{background:#26282c;border-color:#26282c}
+  .quiz-cta{margin-top:48px}
+  .quiz-cta .btn-primary{font-size:10.5px;padding:9px 17px}
+  .q-overlay{position:fixed;inset:0;background:rgba(8,9,10,.5);display:none;align-items:center;justify-content:center;padding:16px;z-index:60}
+  .q-overlay.show{display:flex}
+  .q-modal{background:#fff;border-radius:16px;width:min(900px,100%);max-height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.28)}
+  .q-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line);font-weight:600;font-size:16px;letter-spacing:-.02em;flex-shrink:0}
+  .q-close{width:32px;height:32px;border:none;background:none;font-size:19px;color:var(--muted);cursor:pointer;border-radius:8px}
+  .q-close:hover{background:#f2f2f2;color:#08090a}
+  .q-body{overflow-y:auto;-webkit-overflow-scrolling:touch;padding:4px 24px 10px}
+  .q-item{display:grid;grid-template-columns:0.9fr 1.1fr;gap:28px;align-items:start;padding:20px 0}
+  .q-q{font-weight:500;font-size:15.5px;line-height:1.5;margin:0}
+  .q-q .qn{font-family:'Geist Mono',monospace;color:var(--muted);margin-right:8px;font-size:13px}
+  .q-opts{display:flex;flex-direction:column;gap:7px}
+  .q-opt{display:flex;align-items:center;gap:11px;border:1px solid var(--line);border-radius:10px;padding:10px 13px;font-size:14px;cursor:pointer;transition:.12s;background:#fff;user-select:none}
+  .q-opt:hover{border-color:#08090a}
+  .q-opt .l{font-family:'Geist Mono',monospace;font-weight:500;color:#08090a}
+  .q-opt.sel{background:#08090a;color:#fff;border-color:#08090a}
+  .q-opt.sel .l{color:#fff}
+  .q-done .q-opt{cursor:default}
+  .q-opt.correct{background:#effaf3;border-color:#0a7f3f;color:#0a7f3f}
+  .q-opt.correct .l{color:#0a7f3f}
+  .q-opt.wrong{background:#fdf1f1;border-color:#c72c2c;color:#c72c2c}
+  .q-opt.wrong .l{color:#c72c2c}
+  .q-foot{display:flex;align-items:center;gap:12px;padding:14px 20px;border-top:1px solid var(--line);flex-shrink:0}
+  .q-score{font-weight:600;font-size:15px}
+  .q-foot .btn-primary{margin-left:auto;font-size:14px;padding:11px 20px}
+  @media(max-width:640px){.q-item{grid-template-columns:1fr;gap:12px;padding:16px 0}header{height:58px;padding:0 18px;gap:14px}}
+</style>
+</head>
+<body>
+  <header>
+    <nav class="nav"><a href="/">Ana Sayfa</a><a href="/dersler/">Dersler</a><a href="/deneme-sinavlari/">Deneme Sınavları</a></nav>
+  </header>
+
+  <main>
+    <div class="ders-meta">
+      <div><span class="k">Ders</span> : <b>İlk Yardım</b></div>
+      <div><span class="k">Konu - 1</span> : <b>İlk Yardım ve Acil Tedavi</b></div>
+    </div>
+    <p class="lead">İlk yardım ve acil tedavi kavramları sınavda düzenli olarak, çoğu zaman aralarındaki fark üzerinden sorulur. Bu bölümde iki kavramın tanımını, ilk yardımın amaçlarını ve ilk yardımcının kim olduğunu ile özelliklerini öğreneceğiz.</p>
+
+    <h2>İlk yardım nedir?</h2>
+    <p><b>İlk yardım</b>; ani olarak ortaya çıkan hastalık veya yaralanma durumunda, kişinin hayatını korumak, sağlık durumunun kötüleşmesini önlemek ve iyileşmesine destek olmak amacıyla, olay yerindeki mevcut imkânlarla yapılan hızlı, etkili ve <b>ilaçsız</b> müdahalelerin tümüdür. Tanımdaki üç anahtar noktaya dikkat edin: müdahale <b>olay yerinde</b>, <b>eldeki (mevcut) malzemeyle</b> ve <b>ilaçsız</b> yapılır.</p>
+
+    <h2>Acil tedavi nedir?</h2>
+    <p><b>Acil tedavi</b>; hasta veya yaralının acil tedavi ünitelerinde doktor ve diğer sağlık personeli tarafından yapılan tıbbi müdahaledir. Ambulansta ya da hastanede, işin uzmanı profesyonel bir ekip tarafından, tıbbi teknikler ve ilaç kullanılarak yapılır.</p>
+
+    <h2>İlk yardım ile acil tedavi farkı</h2>
+    <p>İki kavramı ayıran temel nokta; işlemi <b>kimin, nerede ve nasıl</b> yaptığıdır. İlk yardım olay yerinde, eğitim almış herhangi bir kişi tarafından, eldeki malzemeyle ve ilaçsız yapılır; amaç kişinin hayatını kurtarmaktır. Acil tedavi ise acil tedavi ünitelerinde veya ambulansta, işin uzmanları tarafından tıbbi teknik ve ilaç kullanılarak yapılır. Kısacası bir işlem <b>hastanede veya ambulansta, sağlık personeli</b> tarafından yapılıyorsa acil tedavi; <b>kaza yerinde, eğitim almış sıradan biri</b> tarafından yapılıyorsa ilk yardımdır. En önemli ayrım şudur: ilk yardımda <b>tedavi etmek ve ilaçla müdahale yoktur</b>.</p>
+
+    <h2>İlk yardımın öncelikli amaçları</h2>
+    <p>İlk yardımın öncelikli amaçları; kişinin <b>hayatını korumak</b> (yaşamsal fonksiyonların sürdürülmesini sağlamak, hayati tehlikeyi ortadan kaldırmak), sağlık durumunun daha da <b>kötüleşmesini önlemek</b> ve <b>iyileşmeyi kolaylaştırmaktır</b>. Örneğin bir kan kaybını durdurup kişinin yaşamını sürdürmesini sağlamak ilk yardımın amacıdır. Buna karşılık “tedavi etmek” ve “ilaçla müdahale etmek” ilk yardımın amacı değildir; bunlar acil tedavinin işidir. Sınavda “hangisi ilk yardımın amacı değildir?” sorusunun cevabı genellikle tedavi ya da ilaç içeren şıktır.</p>
+
+    <h2>İlk yardımcı kimdir?</h2>
+    <p><b>İlk yardımcı</b>; ilk yardımın tanımındaki amaç doğrultusunda hasta ve yaralıya tıbbi araç gereç aranmaksızın, mevcut araç gereçlerle ve ilaçsız uygulamaları yapan, eğitim almış kişi ya da kişilerdir. Sürücü kursunda ilk yardım eğitimi aldığınız için siz de bir ilk yardımcısınız. Bu nedenle bir kazaya duyarsız kalıp “görmezden geleyim” deme lüksünüz yoktur; ilk yardım yapmak bir yükümlülüktür ve bunu yapmamanın yaptırımı vardır.</p>
+
+    <h2>İlk yardımcının özellikleri</h2>
+    <p>İyi bir ilk yardımcı, insan vücuduyla ilgili temel bilgilere sahiptir. En önemlisi, müdahaleden önce <b>öncelikle kendi can güvenliğini sağlar</b>; “önce can, sonra canan” ilkesi gereği kendi güvenliğini almadan başkasına yardım etmeye çalışmak, kendisinin de zarar görmesine yol açar. Bunun yanında ilk yardımcı sakin ve kendine güvenlidir, olay yerine hâkimdir, eldeki olanakları iyi değerlendirir, pratik ve doğru karar verir, iyi iletişim kurar (112’yi doğru bilgilendirir) ve çevresindeki kişileri organize edebilir.</p>
+
+    <h2>Güvenli ortam ve 112</h2>
+    <p>Kaza yerinde önce güvenli bir ortam oluşturulur: meraklı kişiler olay yerinden uzaklaştırılır, aracın patlama veya devrilme riski varsa bu risk giderilir, aracın hareket etme riski varsa el freni çekilir. Güvenlik sağlandıktan sonra <b>112 Acil Yardım</b> aranır. 112 sakin bir kişi tarafından aranmalı ve olay net biçimde tanımlanmalıdır: kaza nasıl olmuş, kaç kişi var, durum nedir. Trafik kazasında ilk yardıma her zaman <b>olay yerinde</b> başlanır.</p>
+
+    <h2>Kısaca</h2>
+    <p>İlk yardım; olay yerinde, eğitim almış kişilerce, eldeki malzemeyle ve ilaçsız yapılan hayat kurtarıcı müdahaledir. Acil tedavi ise ünitede veya ambulansta, sağlık personelince ilaç ve teknikle yapılır. İlk yardımın amaçları hayatı korumak, kötüleşmeyi önlemek ve iyileşmeyi kolaylaştırmaktır; tedavi ve ilaç ilk yardımın işi değildir. İlk yardımcı önce kendi güvenliğini sağlar, sakin ve doğru karar verir, 112’yi doğru bilgilendirir ve ilk yardıma olay yerinde başlar.</p>
+
+    <div class="quiz-cta"><button class="btn-primary" onclick="openQuiz()">Kısa Testi Çöz — 5 Soru →</button></div>
+  </main>
+
+  <div class="q-overlay" id="quizModal" aria-hidden="true">
+    <div class="q-modal">
+      <div class="q-head"><span>Kısa Test — İlk Yardım ve Acil Tedavi</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
+      <div class="q-body" id="quizBody"></div>
+      <div class="q-foot"><span class="q-score" id="quizScore"></span><button class="btn-primary" id="quizBtn" onclick="submitQuiz()">Sonucu Gör</button></div>
+    </div>
+  </div>
+
+  <script>
+    const QUIZ=[
+      {q:"Aşağıdakilerden hangisi ilk yardımın öncelikli amaçlarından biri değildir?",
+       o:["Yaşamsal fonksiyonların sürdürülmesini sağlamak","Durumun kötüleşmesini önlemek","İlaçla müdahale ederek tedavi etmek","İyileşmeyi kolaylaştırmak"],c:2},
+      {q:"İlk yardım ile acil tedavi arasındaki temel fark nedir?",
+       o:["Aralarında fark yoktur","İlk yardım hastanede, acil tedavi olay yerinde yapılır","Acil tedavi sağlık personelince ilaç ve teknikle; ilk yardım olay yerinde ilaçsız yapılır","İkisi de ilaçla yapılır"],c:2},
+      {q:"İlk yardımcı bir kazada müdahaleye başlamadan önce öncelikle ne yapmalıdır?",
+       o:["Hemen kazazedeye müdahale etmeli","Önce kendi can güvenliğini sağlamalı","Kazazedeyi hareket ettirmeli","İlaç aramalı"],c:1},
+      {q:"Trafik kazasında ilk yardım uygulamalarına ilk olarak nerede başlanır?",
+       o:["Hastanede","Ambulans içinde","Olay yerinde","Sağlık merkezinde"],c:2},
+      {q:"İlk yardımcı kimdir?",
+       o:["Hastanede tedavi yapan doktor","Ambulanstaki sağlık personeli","Olay yerinde, mevcut araç gereçlerle ilaçsız uygulama yapan eğitim almış kişi","Sadece hemşireler"],c:2}
+    ];
+    const L=["A","B","C","D"];
+    let qAns=[null,null,null,null,null], qDone=false;
+    function qBodyHTML(){return QUIZ.map((it,i)=>{const opts=it.o.map((o,j)=>{let cls="q-opt";if(qDone){if(j===it.c)cls+=" correct";else if(j===qAns[i])cls+=" wrong";}else if(qAns[i]===j)cls+=" sel";const click=qDone?"":`onclick="pickQ(${i},${j})"`;return `<div class="${cls}" ${click}><span class="l">${L[j]}</span><span>${o}</span></div>`;}).join("");return `<div class="q-item"><p class="q-q"><span class="qn">${i+1}.</span>${it.q}</p><div class="q-opts">${opts}</div></div>`;}).join("");}
+    function renderQuiz(){const body=document.getElementById("quizBody");body.className="q-body"+(qDone?" q-done":"");body.innerHTML=qBodyHTML();const btn=document.getElementById("quizBtn"),sc=document.getElementById("quizScore");if(qDone){const s=QUIZ.filter((it,i)=>qAns[i]===it.c).length;sc.textContent=s+" / 5 doğru";btn.textContent="Tekrar Çöz";}else{sc.textContent="";btn.textContent="Sonucu Gör";}}
+    function openQuiz(){qAns=[null,null,null,null,null];qDone=false;renderQuiz();document.getElementById("quizModal").classList.add("show");document.body.style.overflow="hidden";document.getElementById("quizBody").scrollTop=0;}
+    function closeQuiz(){document.getElementById("quizModal").classList.remove("show");document.body.style.overflow="";}
+    function pickQ(i,j){if(qDone)return;qAns[i]=j;renderQuiz();}
+    function submitQuiz(){if(qDone){openQuiz();return;}qDone=true;renderQuiz();document.getElementById("quizBody").scrollTop=0;}
+    document.getElementById("quizModal").addEventListener("click",e=>{if(e.target.id==="quizModal")closeQuiz();});
+    document.addEventListener("keydown",e=>{if(e.key==="Escape")closeQuiz();});
+  </script>
+  <script src="/assets/js/lessons-nav.js"></script>
+</body>
+</html>
