@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Araç Tekniği (Motor) — Konu 4: Aydınlatma ve İkaz Sistemi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--fg:#08090a;--muted:#6a6f76;--line:#ececec}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--fg);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.75;letter-spacing:-.011em}
+  a{color:inherit}
+  header{display:flex;align-items:center;gap:26px;height:64px;padding:0 28px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(10px);z-index:20}
+  .nav{display:flex;gap:24px}
+  .nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:450}
+  .nav a:hover{color:#08090a}
+  main{max-width:960px;margin:0 auto;padding:52px 24px 96px}
+  .ders-meta{margin:0 0 24px;font-size:15.5px;line-height:1.7;color:var(--muted)}
+  .ders-meta .k{display:inline-block;min-width:104px;font-family:'Geist Mono',monospace;font-size:13.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);vertical-align:top}
+  .ders-meta b{color:#08090a;font-weight:600}
+  .lead{font-size:14px;color:var(--muted);line-height:1.6;margin:0 0 8px}
+  h2{font-size:19px;font-weight:600;letter-spacing:-.025em;line-height:1.2;margin:42px 0 10px}
+  p{margin:16px 0;font-size:12.5px}
+  b{font-weight:600}
+  .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#08090a;color:#fff;border:1px solid #08090a;font-family:inherit;font-weight:500;font-size:15px;border-radius:999px;padding:13px 24px;cursor:pointer;text-decoration:none;letter-spacing:-.01em}
+  .btn-primary:hover{background:#26282c;border-color:#26282c}
+  .quiz-cta{margin-top:48px}
+  .quiz-cta .btn-primary{font-size:10.5px;padding:9px 17px}
+  .q-overlay{position:fixed;inset:0;background:rgba(8,9,10,.5);display:none;align-items:center;justify-content:center;padding:16px;z-index:60}
+  .q-overlay.show{display:flex}
+  .q-modal{background:#fff;border-radius:16px;width:min(900px,100%);max-height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.28)}
+  .q-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line);font-weight:600;font-size:16px;letter-spacing:-.02em;flex-shrink:0}
+  .q-close{width:32px;height:32px;border:none;background:none;font-size:19px;color:var(--muted);cursor:pointer;border-radius:8px}
+  .q-close:hover{background:#f2f2f2;color:#08090a}
+  .q-body{overflow-y:auto;-webkit-overflow-scrolling:touch;padding:4px 24px 10px}
+  .q-item{display:grid;grid-template-columns:0.9fr 1.1fr;gap:28px;align-items:start;padding:20px 0}
+  .q-q{font-weight:500;font-size:15.5px;line-height:1.5;margin:0}
+  .q-q .qn{font-family:'Geist Mono',monospace;color:var(--muted);margin-right:8px;font-size:13px}
+  .q-opts{display:flex;flex-direction:column;gap:7px}
+  .q-opt{display:flex;align-items:center;gap:11px;border:1px solid var(--line);border-radius:10px;padding:10px 13px;font-size:14px;cursor:pointer;transition:.12s;background:#fff;user-select:none}
+  .q-opt:hover{border-color:#08090a}
+  .q-opt .l{font-family:'Geist Mono',monospace;font-weight:500;color:#08090a}
+  .q-opt.sel{background:#08090a;color:#fff;border-color:#08090a}
+  .q-opt.sel .l{color:#fff}
+  .q-done .q-opt{cursor:default}
+  .q-opt.correct{background:#effaf3;border-color:#0a7f3f;color:#0a7f3f}
+  .q-opt.correct .l{color:#0a7f3f}
+  .q-opt.wrong{background:#fdf1f1;border-color:#c72c2c;color:#c72c2c}
+  .q-opt.wrong .l{color:#c72c2c}
+  .q-foot{display:flex;align-items:center;gap:12px;padding:14px 20px;border-top:1px solid var(--line);flex-shrink:0}
+  .q-score{font-weight:600;font-size:15px}
+  .q-foot .btn-primary{margin-left:auto;font-size:14px;padding:11px 20px}
+  @media(max-width:640px){.q-item{grid-template-columns:1fr;gap:12px;padding:16px 0}header{height:58px;padding:0 18px;gap:14px}}
+</style>
+</head>
+<body>
+  <header>
+    <nav class="nav"><a href="/">Ana Sayfa</a><a href="/dersler/">Dersler</a><a href="/deneme-sinavlari/">Deneme Sınavları</a></nav>
+  </header>
+
+  <main>
+    <div class="ders-meta">
+      <div><span class="k">Ders</span> : <b>Araç Tekniği (Motor)</b></div>
+      <div><span class="k">Konu - 4</span> : <b>Aydınlatma ve İkaz Sistemi</b></div>
+    </div>
+    <p class="lead">Aydınlatma ve ikaz sistemi, hem farlarla ilgili renk ve mesafe değerleri hem de sigorta, far müşürü, flaşör gibi parçaların arıza mantığıyla neredeyse her sınavda soru getiren bir konudur. Bu bölümde göstergelerin görevini, selektörün nerede yapılıp nerede yapılmayacağını, geri ve fren ışıklarının renklerini, sigortanın önemini, far mesafelerini ve gösterge panelindeki renkleri, ayrıca hangi arızanın hangi parçadan kaynaklandığını sınav odaklı biçimde öğreneceğiz.</p>
+
+<!-- BODY_START -->
+    <h2>Aydınlatma, ikaz ve gösterge sisteminin görevi</h2>
+    <p>Aracın ön panelinde, sürücünün kolayca görebileceği bir yere yerleştirilen göstergeler, <b>motor ve araç üzerindeki sistemlerin çalışması hakkında sürücüye bilgi verir</b>. Yani bu sistemin temel görevi bilgilendirmedir: panelde bir ışık yandığında ilgili sistemde bir durum olduğunu anlarsınız. Örneğin <b>yağ lambası</b> yanıyorsa yağ tarafında bir sıkıntı, <b>akü (şarj) lambası</b> yanıyorsa aküyle ilgili bir sorun olduğu anlaşılır. Sınavda “gösterge panelindeki lambaların görevi nedir?” diye sorulduğunda cevap, sürücüye motor ve araç sistemleri hakkında bilgi vermeleridir.</p>
+
+    <h2>Selektör nedir, nerede kullanılır?</h2>
+    <p>Selektör, <b>bir uzun bir kısa far yakıp söndürerek karşıdaki veya diğer sürücüleri uyarma</b> hareketidir. Amaç, tehlike oluşabilecek durumlarda diğer sürücüyle iletişim kurup onu uyarmaktır. Selektör özellikle görüşün kısıtlı ve karşılaşma riskinin yüksek olduğu yerlerde kullanılır: <b>dönemeç ve virajlara yaklaşırken</b>, <b>tepe üstlerinde</b>, <b>kavşağa girerken</b> ve kör noktalarda karşıdan gelebilecek aracı uyarmak için yapılır. Sollamaya girerken karşıdan bir araç geliyorsa, kafa kafaya gelmemek için selektörle karşıdakini uyarırsınız; aynı şekilde <b>yol size öncelikliyken tali yoldan çıkabilecek bir aracı</b> selektörle uyarabilirsiniz. Bir başka klasik kullanım da, karşıdan <b>uzun farla gelip kısaya geçmeyi unutan sürücüyü</b> selektör yaparak uyarmaktır.</p>
+
+    <h2>Selektör nerede yapılmaz?</h2>
+    <p>Selektörle ilgili sınavda çok sevilen bir çeldirici vardır: <b>radar ve trafik çevirmesi (kontrol) olan bir yerde, diğer sürücüleri uyarmak için selektör yapılmaz</b>. Görünürde masum bir uyarı gibi dursa da, uyardığınız araç emniyetten kaçan ya da aranan birini taşıyor olabilir; sizin uyarınızla haberdar olup tedbir alır ve kaçabilir. Bu yüzden bu hareket <b>suça yardım</b> sayılabilir ve fark edilirse ceza alırsınız. Sınavda “aşağıdaki durumların hangisinde selektör yapılmaz?” sorusunun cevabı, kontrol veya radar noktasında diğer aracı uyarmaktır.</p>
+
+    <h2>Geri ve fren ışıklarının renkleri</h2>
+    <p>Bu bölümdeki renkler doğrudan sınav sorusudur ve karıştırılmaması gerekir. Aracı <b>geri vitese</b> taktığınızda, arkanızdaki sürücülere geri geleceğinizi bildirmek için aracın arkasında <b>beyaz ışık</b> yanar. <b>Frene bastığınızda</b> ise arkada <b>kırmızı ışık</b>, yani stop (fren) lambası yanar. Kısacası geri vites beyaz, fren kırmızıdır; sınavda “geri vitese takıldığında arkada hangi renk ışık yanar?” ya da “fren yapıldığında hangi renk yanar?” diye sorulduğunda bu ayrımı hatırlayın.</p>
+
+    <h2>Sigortanın görevi ve değiştirilmesi</h2>
+    <p>Sigorta, aydınlatma sisteminin parçasıdır ve görevi <b>araçtaki elektrik tesisatını kısa devreye karşı korumaktır</b>. Kısa devre durumunda sigorta atarak akımı keser ve böylece elektrik kaynaklı bir <b>yangın tehlikesinin önüne geçer</b>. Sınavda “aracı kısa devreden doğacak tehlikelere karşı koruyan parça hangisidir?” sorusunun cevabı sigortadır; vantilatör, buji, alternatör gibi şıklar çeldiricidir. Çok önemli bir kural da şudur: <b>atan bir sigorta, mutlaka aynı amper değerinde bir sigortayla değiştirilir</b>. Daha yüksek amperli bir sigorta takılırsa sistem gerektiğinde akımı kesemez ve <b>yangın çıkabilir</b>. Yani “sigortalardan biri yanmışsa yerine nasıl bir sigorta takılır?” sorusunun cevabı her zaman “aynı amperde” olur.</p>
+
+    <h2>Far ayarı, far mesafeleri ve gösterge panelindeki renkler</h2>
+    <p>Far ayarı, farlara yapılan yükseklik ve yön ayarıdır. Sınavda ezberlenmesi gereken iki mesafe değeri vardır: <b>kısa farlar önü 25 metre</b>, <b>uzun farlar ise 100 metre</b> aydınlatır. Bir başka kritik ayrım da gösterge panelindeki ikaz renkleridir: <b>kısa far açıkken panelde yeşil</b>, <b>uzun far açıkken panelde mavi</b> ışık yanar. Burada dikkat edilmesi gereken bir çeldirici vardır; aracın farlarından çıkan ışığın rengi ayrı bir şeydir, buradaki yeşil ve mavi renkler <b>gösterge panelinde yanan ikaz ışıklarının rengidir</b>. Sınavda en sık “uzun farlar yakıldığında gösterge panelinde hangi renk yanar?” diye sorulur, cevabı mavidir.</p>
+
+    <h2>Kısa far ve uzun far simgelerinin ayrımı</h2>
+    <p>Kısa farla uzun far simgesini birbirine karıştırmamak sınavda işinize yarar. <b>Kısa far simgesinde ışınlar aşağı doğru eğiktir</b>; çünkü kısa far önü, yani yakını aydınlatır ve 25 metrelik alanı gösterir. <b>Uzun far simgesinde ise ışınlar düz, yatay biçimde ileri gider</b>; çünkü uzun far uzağı, yani 100 metrelik alanı aydınlatır. Simgeye bakıp ışınların aşağı eğik mi yoksa düz mü olduğuna göre kısa mı uzun mu far olduğunu ayırt edebilirsiniz.</p>
+
+    <h2>Arıza mantığı: hangi belirti hangi parçadan?</h2>
+    <p>Bu konunun en çok soru getiren kısmı, bir belirtiden yola çıkıp arızanın kaynağını bulmaktır ve bunlar şık eleme mantığıyla çözülür. <b>Farlardan yalnızca biri yanmıyorsa</b> o farın <b>ampulü patlamış</b> olabilir. <b>Farların ikisi birden ya da bir kısmı yanmıyorsa</b> büyük ihtimalle <b>sigorta atmıştır</b>. <b>Bir far sönük yanıyorsa</b> bağlantı noktalarında <b>oksitlenme, paslanma veya gevşek kablo bağlantısı</b> vardır. <b>Sinyal ya da dörtlü flaşör yanmıyorsa flaşör arızalıdır</b>. <b>Fren lambalarının hepsi yanmıyorsa fren müşürü (fren anahtarı) arızalıdır</b>; ancak fren pedalına basıldığında <b>fren lambalarından yalnızca biri yanmıyorsa</b> o lambanın <b>ampulü patlaktır</b>. <b>Kilometre (hız) göstergesi değer göstermiyorsa</b> teli kopmuş olabilir; benzer şekilde ısı göstergesi çalışmıyorsa ısı göstergesinin müşürü arızalıdır. Bu ayrımlarda anahtar mantık şudur: tek bir ışık sönükse ampul, hepsi birden sönükse ortak besleme yani sigorta ya da müşür arızalıdır.</p>
+
+    <h2>Sigorta, fren müşürü, flaşör ve römork bağlantısı</h2>
+    <p>Sistemin parçalarını doğru derse yerleştirmek de sınavda sorulur: <b>sigorta aydınlatma sisteminin parçasıdır</b>, <b>fren müşürü ise ikaz sisteminin parçasıdır</b>. Fren müşürü, frene bastığınızda arkadaki fren lambalarının yanmasını sağlayan parçadır. <b>Dörtlü flaşör</b>, acil ve tehlike durumlarında (araç arızalanınca, hasta taşırken vb.) dört sinyalin birden yakılmasını sağlar. Bir de römork ya da çeki takılan araçlar için önemli bir kural vardır: <b>römork takıldığında elektrik kablo bağlantısı mutlaka yapılmalıdır</b>, çünkü arkadaki sinyallerin ve fren lambalarının görünmesi, arkadan gelen sürücünün gerekli tedbiri alabilmesi için şarttır.</p>
+
+    <h2>Kısaca</h2>
+    <p>Gösterge sistemi sürücüye motor ve araç sistemleri hakkında bilgi verir; yağ ve akü lambaları buna örnektir. Selektör bir uzun bir kısa far yakarak diğer sürücüyü uyarmaktır ve viraj, tepe üstü, kavşak, sollama gibi yerlerde kullanılır; ancak radar veya kontrol noktasında diğer aracı uyarmak için yapılmaz. Geri viteste arkada beyaz, frende kırmızı ışık yanar. Sigorta tesisatı kısa devreye karşı korur ve mutlaka aynı amperle değiştirilir, aksi halde yangın çıkar. Kısa farlar 25, uzun farlar 100 metreyi aydınlatır; panelde kısa far yeşil, uzun far mavi yanar. Arıza mantığında tek ışık sönükse ampul, hepsi sönükse sigorta; sinyaller yanmıyorsa flaşör, fren lambaları yanmıyorsa fren müşürü arızalıdır. Sigorta aydınlatma sisteminin, fren müşürü ise ikaz sisteminin parçasıdır ve römorkta elektrik bağlantısı mutlaka yapılır.</p>
+<!-- BODY_END -->
+
+    <div class="quiz-cta"><button class="btn-primary" onclick="openQuiz()">Kısa Testi Çöz — 5 Soru →</button></div>
+  </main>
+
+  <div class="q-overlay" id="quizModal" aria-hidden="true">
+    <div class="q-modal">
+      <div class="q-head"><span>Kısa Test — Aydınlatma ve İkaz Sistemi</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
+      <div class="q-body" id="quizBody"></div>
+      <div class="q-foot"><span class="q-score" id="quizScore"></span><button class="btn-primary" id="quizBtn" onclick="submitQuiz()">Sonucu Gör</button></div>
+    </div>
+  </div>
+
+  <script>
+    const QUIZ=[
+      {q:"Aracı geri vitese taktığınızda arkasında hangi renk ışık yanar?",o:["Kırmızı","Beyaz","Sarı","Mavi"],c:1},
+      {q:"Atan bir sigorta yerine nasıl bir sigorta takılmalıdır?",o:["Daha yüksek amperli bir sigorta","Daha düşük amperli bir sigorta","Aynı amper değerinde bir sigorta","Herhangi bir amperde sigorta"],c:2},
+      {q:"Uzun farlar yakıldığında gösterge panelinde hangi renk ikaz ışığı yanar?",o:["Yeşil","Kırmızı","Sarı","Mavi"],c:3},
+      {q:"Kısa ve uzun farların aydınlattığı mesafeler aşağıdakilerden hangisinde doğru verilmiştir?",o:["Kısa far 25 metre, uzun far 100 metre","Kısa far 100 metre, uzun far 25 metre","Kısa far 50 metre, uzun far 150 metre","Kısa far 10 metre, uzun far 40 metre"],c:0},
+      {q:"Aşağıdakilerden hangisi selektör yapılması sakıncalı olan bir durumdur?",o:["Tepe üstüne yaklaşırken karşıdan gelebilecek aracı uyarmak","Radar ve trafik kontrolü olan yerde diğer sürücüleri uyarmak","Sollama yaparken karşıdan gelen aracı uyarmak","Karşıdan uzun farla gelen sürücüyü kısaya geçmesi için uyarmak"],c:1}
+    ];
+    const L=["A","B","C","D"];
+    let qAns=[null,null,null,null,null], qDone=false;
+    function qBodyHTML(){return QUIZ.map((it,i)=>{const opts=it.o.map((o,j)=>{let cls="q-opt";if(qDone){if(j===it.c)cls+=" correct";else if(j===qAns[i])cls+=" wrong";}else if(qAns[i]===j)cls+=" sel";const click=qDone?"":`onclick="pickQ(${i},${j})"`;return `<div class="${cls}" ${click}><span class="l">${L[j]}</span><span>${o}</span></div>`;}).join("");return `<div class="q-item"><p class="q-q"><span class="qn">${i+1}.</span>${it.q}</p><div class="q-opts">${opts}</div></div>`;}).join("");}
+    function renderQuiz(){const body=document.getElementById("quizBody");body.className="q-body"+(qDone?" q-done":"");body.innerHTML=qBodyHTML();const btn=document.getElementById("quizBtn"),sc=document.getElementById("quizScore");if(qDone){const s=QUIZ.filter((it,i)=>qAns[i]===it.c).length;sc.textContent=s+" / 5 doğru";btn.textContent="Tekrar Çöz";}else{sc.textContent="";btn.textContent="Sonucu Gör";}}
+    function openQuiz(){qAns=[null,null,null,null,null];qDone=false;renderQuiz();document.getElementById("quizModal").classList.add("show");document.body.style.overflow="hidden";document.getElementById("quizBody").scrollTop=0;}
+    function closeQuiz(){document.getElementById("quizModal").classList.remove("show");document.body.style.overflow="";}
+    function pickQ(i,j){if(qDone)return;qAns[i]=j;renderQuiz();}
+    function submitQuiz(){if(qDone){openQuiz();return;}qDone=true;renderQuiz();document.getElementById("quizBody").scrollTop=0;}
+    document.getElementById("quizModal").addEventListener("click",e=>{if(e.target.id==="quizModal")closeQuiz();});
+    document.addEventListener("keydown",e=>{if(e.key==="Escape")closeQuiz();});
+  </script>
+  <script src="/lessons-nav.js"></script>
+</body>
+</html>

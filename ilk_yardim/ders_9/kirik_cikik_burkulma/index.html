@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İlk Yardım — Konu 9: Kırık, Çıkık, Burkulma</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--fg:#08090a;--muted:#6a6f76;--line:#ececec}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--fg);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.75;letter-spacing:-.011em}
+  a{color:inherit}
+  header{display:flex;align-items:center;gap:26px;height:64px;padding:0 28px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(10px);z-index:20}
+  .nav{display:flex;gap:24px}
+  .nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:450}
+  .nav a:hover{color:#08090a}
+  main{max-width:960px;margin:0 auto;padding:52px 24px 96px}
+  .ders-meta{margin:0 0 24px;font-size:15.5px;line-height:1.7;color:var(--muted)}
+  .ders-meta .k{display:inline-block;min-width:104px;font-family:'Geist Mono',monospace;font-size:13.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);vertical-align:top}
+  .ders-meta b{color:#08090a;font-weight:600}
+  .lead{font-size:14px;color:var(--muted);line-height:1.6;margin:0 0 8px}
+  h2{font-size:19px;font-weight:600;letter-spacing:-.025em;line-height:1.2;margin:42px 0 10px}
+  p{margin:16px 0;font-size:12.5px}
+  b{font-weight:600}
+  .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#08090a;color:#fff;border:1px solid #08090a;font-family:inherit;font-weight:500;font-size:15px;border-radius:999px;padding:13px 24px;cursor:pointer;text-decoration:none;letter-spacing:-.01em}
+  .btn-primary:hover{background:#26282c;border-color:#26282c}
+  .quiz-cta{margin-top:48px}
+  .quiz-cta .btn-primary{font-size:10.5px;padding:9px 17px}
+  .q-overlay{position:fixed;inset:0;background:rgba(8,9,10,.5);display:none;align-items:center;justify-content:center;padding:16px;z-index:60}
+  .q-overlay.show{display:flex}
+  .q-modal{background:#fff;border-radius:16px;width:min(900px,100%);max-height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.28)}
+  .q-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line);font-weight:600;font-size:16px;letter-spacing:-.02em;flex-shrink:0}
+  .q-close{width:32px;height:32px;border:none;background:none;font-size:19px;color:var(--muted);cursor:pointer;border-radius:8px}
+  .q-close:hover{background:#f2f2f2;color:#08090a}
+  .q-body{overflow-y:auto;-webkit-overflow-scrolling:touch;padding:4px 24px 10px}
+  .q-item{display:grid;grid-template-columns:0.9fr 1.1fr;gap:28px;align-items:start;padding:20px 0}
+  .q-q{font-weight:500;font-size:15.5px;line-height:1.5;margin:0}
+  .q-q .qn{font-family:'Geist Mono',monospace;color:var(--muted);margin-right:8px;font-size:13px}
+  .q-opts{display:flex;flex-direction:column;gap:7px}
+  .q-opt{display:flex;align-items:center;gap:11px;border:1px solid var(--line);border-radius:10px;padding:10px 13px;font-size:14px;cursor:pointer;transition:.12s;background:#fff;user-select:none}
+  .q-opt:hover{border-color:#08090a}
+  .q-opt .l{font-family:'Geist Mono',monospace;font-weight:500;color:#08090a}
+  .q-opt.sel{background:#08090a;color:#fff;border-color:#08090a}
+  .q-opt.sel .l{color:#fff}
+  .q-done .q-opt{cursor:default}
+  .q-opt.correct{background:#effaf3;border-color:#0a7f3f;color:#0a7f3f}
+  .q-opt.correct .l{color:#0a7f3f}
+  .q-opt.wrong{background:#fdf1f1;border-color:#c72c2c;color:#c72c2c}
+  .q-opt.wrong .l{color:#c72c2c}
+  .q-foot{display:flex;align-items:center;gap:12px;padding:14px 20px;border-top:1px solid var(--line);flex-shrink:0}
+  .q-score{font-weight:600;font-size:15px}
+  .q-foot .btn-primary{margin-left:auto;font-size:14px;padding:11px 20px}
+  @media(max-width:640px){.q-item{grid-template-columns:1fr;gap:12px;padding:16px 0}header{height:58px;padding:0 18px;gap:14px}}
+</style>
+</head>
+<body>
+  <header>
+    <nav class="nav"><a href="/">Ana Sayfa</a><a href="/dersler/">Dersler</a><a href="/deneme-sinavlari/">Deneme Sınavları</a></nav>
+  </header>
+
+  <main>
+    <div class="ders-meta">
+      <div><span class="k">Ders</span> : <b>İlk Yardım</b></div>
+      <div><span class="k">Konu - 9</span> : <b>Kırık, Çıkık, Burkulma</b></div>
+    </div>
+    <p class="lead">Kırık, çıkık ve burkulma sınavda neredeyse her defa soru gelen bir konudur. Bu üç durumun nerede oluştuğunu, birbirinden farkını, ilk yardımını, atel kullanımını ve kırıklarda verilecek pozisyonları bu bölümde öğreneceğiz.</p>
+
+    <h2>Kırık, çıkık ve burkulma nerede olur?</h2>
+    <p>Bu üç kavramı ayırmanın en kolay yolu, nerede oluştuklarını bilmektir. <b>Kırık kemikte</b>, <b>çıkık eklemde</b>, <b>burkulma da eklemde</b> oluşur. Yani çıkık ve burkulma eklemi ilgilendirir, kırık ise kemiği. Sınavda “kırık” denince aklınıza <b>kemik</b>, “çıkık” ve “burkulma” denince <b>eklem</b> gelmelidir. Çıkık ile burkulmayı ayırmak için basit bir ipucu: <b>çıkık</b>, eklem yüzeylerinin <b>kalıcı</b> ayrılmasıdır (çıkıK – kalıcı, ikisi de K ile başlar/biter); <b>burkulma</b> ise eklem yüzeylerinin <b>anlık</b>, yani geçici ayrılmasıdır (burkulmA – anlık, ikisi de A ile). Ağırlık sırasına göre kırık en ağır, çıkık ondan hafif, burkulma ise en hafif durumdur.</p>
+
+    <h2>Kırık</h2>
+    <p><b>Kırık</b>, kemik bütünlüğünün bozulmasıdır. Darbe sonucu oluşabileceği gibi, kemik hastalıklarında kendiliğinden de oluşabilir. İki türü vardır: <b>kapalı kırıkta</b> kemik dışarı çıkmamış, deri bütünlüğü sağlamdır. <b>Açık kırıkta</b> ise deri bütünlüğü bozulmuş, kemik ucu dışarı çıkmıştır; bu en tehlikeli kırık türüdür çünkü keskin kemik ucu deriye, sinirlere ve damarlara zarar verir, ayrıca dışarıyla temas ettiği için <b>enfeksiyon riski</b> yüksektir. Kırık belirtileri; hareketle artan <b>ağrı</b>, <b>şekil bozukluğu</b>, hareket kaybı, şişlik ve kanamaya bağlı morarmadır.</p>
+
+    <h2>Kırıkta ilk yardım</h2>
+    <p>Önce <b>hayati tehlike oluşturan durumlara</b> öncelik verilir; örneğin bir kişinin ayağı kırıkken bir başkası nefes alamıyorsa önce nefes alamayana müdahale edilir, çünkü kırığın hayati tehlikesi görece azdır. Kırık olan bölge <b>hareket ettirilmez</b> ve kırık <b>düzeltilmeye çalışılmaz</b>. Kolda kırık varsa şişlik olabileceği için yüzük ve saat çıkarılır. Kırık bölge; sopa, karton, tahta gibi sert malzemelerle (bunların genel adı <b>atel</b>) sabitlenir. <b>Açık kırıkta</b> tespitten önce yara üzeri temiz bir bezle kapatılır. Tespit yapılırken parmaklar görünecek şekilde açıkta bırakılır; böylece parmaklardan morarma ve nabız takip edilebilir. Kırık kol ve bacaklar yukarıda tutulur.</p>
+
+    <h2>Çıkık ve burkulma</h2>
+    <p><b>Çıkıkta</b> eklem yüzeyleri kalıcı olarak ayrılmıştır; yoğun ağrı, kızarıklık, şişlik, işlev kaybı ve eklemde şekil bozukluğu görülür. İlk yardımda eklem <b>bulunduğu şekilde tespit edilir</b>, asla yerine oturtulmaya çalışılmaz, yiyecek-içecek verilmez ve tıbbi yardım istenir. <b>Burkulmada</b> ise eklem yüzeyleri anlık ayrılmıştır; ağrı, kızarıklık, şişlik ve işlev kaybı olabilir. Burkulan eklem <b>bandajla tespit edilir</b>, şişliği azaltmak için bölge yukarı kaldırılır ve soğuk uygulanır. Üçünde de ortak kural şudur: bölge hareket ettirilmez ve düzeltilmeye çalışılmaz.</p>
+
+    <h2>Atel ve tespit</h2>
+    <p><b>Atel</b>, kırık kemiğin dokulara zarar vermemesi için kırık bölgeyi hareketsiz hâle getirmeye yarayan düz nesnedir; ahşap, plastik ya da karton olabilir. Tespit yapılırken atel doğrudan kemiğe konmaz; önce ince bir yumuşak malzemeyle sarılır, sonra atel uygulanır. Çok önemli bir kural: <b>köprücük kemiği, kaburga ve kafatası kırıklarına atel uygulanmaz</b>; atel uzun kemiklere uygulanır. Atelin boyu kırığın iki ucundaki eklemleri de içine alacak kadar uzun olmalıdır: diz ile ayak arasındaki kırıkta topuktan kalçaya, diz ile kalça arasındaki kırıkta topuktan koltuk altına kadar uzanır. Bacak kırığında atel bulunamazsa iki bacak arasına yumuşak malzeme konarak bacaklar birbirine bağlanabilir.</p>
+
+    <h2>Kırıklarda verilecek pozisyonlar</h2>
+    <p>Kırığın yerine göre verilecek pozisyon değişir. <b>Göğüs, kaburga, köprücük ve kol kırıklarında yarı oturuş</b> pozisyonu verilir; özellikle kaburga kırıklarında bu pozisyon, kaburgaların akciğer ve kalp gibi organlara batmasını önler ve kişinin daha rahat nefes almasını sağlar. <b>Diğer tüm kırıklarda sırtüstü yatış</b> pozisyonu verilir. <b>Köprücük kemiği kırığı</b> omuz bölgesinden üçgen sargı beziyle tespit edilir. <b>Omurga ve omurilik kırıklarında</b> ise felç riski olduğu için <b>baş-boyun-gövde hizası kesinlikle bozulmaz</b>; kişi sert bir zemine sırtüstü yatırılır ve mümkünse sedye kullanılır. Bu tür yaralıya dik ya da oturur pozisyon verirseniz kişiyi felç edebilirsiniz.</p>
+
+    <h2>Kısaca</h2>
+    <p>Kırık kemikte, çıkık ve burkulma eklemde olur; çıkık kalıcı, burkulma anlık ayrılmadır. Açık kırık en tehlikelisidir. Kırık ve çıkıkta bölge hareket ettirilmez, düzeltilmez ve atelle/sargıyla olduğu gibi tespit edilir; köprücük, kaburga ve kafatası kırıklarına atel uygulanmaz. Göğüs-kaburga-köprücük-kol kırıklarında yarı oturuş, diğerlerinde sırtüstü yatış pozisyonu verilir; omurga kırığında baş-boyun-gövde ekseni bozulmaz.</p>
+
+    <div class="quiz-cta"><button class="btn-primary" onclick="openQuiz()">Kısa Testi Çöz — 5 Soru →</button></div>
+  </main>
+
+  <div class="q-overlay" id="quizModal" aria-hidden="true">
+    <div class="q-modal">
+      <div class="q-head"><span>Kısa Test — Kırık, Çıkık, Burkulma</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
+      <div class="q-body" id="quizBody"></div>
+      <div class="q-foot"><span class="q-score" id="quizScore"></span><button class="btn-primary" id="quizBtn" onclick="submitQuiz()">Sonucu Gör</button></div>
+    </div>
+  </div>
+
+  <script>
+    const QUIZ=[
+      {q:"Kemik bütünlüğünün bozulmasına ne ad verilir?",
+       o:["Çıkık","Burkulma","Kırık","Ezik"],c:2},
+      {q:"Eklem yüzeylerinin anlık (geçici) olarak ayrılması olan ve en hafif durum hangisidir?",
+       o:["Kırık","Çıkık","Açık kırık","Burkulma"],c:3},
+      {q:"Aşağıdaki kemiklerin hangisinin kırığında atel uygulanmaz?",
+       o:["Köprücük kemiği","Ön kol kemiği","Uyluk (bacak) kemiği","Kaval kemiği"],c:0},
+      {q:"Kaburga kemiği kırığı olan yaralıya hangi pozisyon verilir?",
+       o:["Yüzüstü yatış","Yarı oturuş","Dik oturuş","Yan yatış"],c:1},
+      {q:"Omurga kırığı olan yaralıya aşağıdakilerden hangisi yapılmaz?",
+       o:["Baş, boyun ve gövdeyi aynı hizada tutmak","Sert zemine sırtüstü yatırmak","Dik oturur pozisyon vermek","Sedye ile taşımak"],c:2}
+    ];
+    const L=["A","B","C","D"];
+    let qAns=[null,null,null,null,null], qDone=false;
+    function qBodyHTML(){return QUIZ.map((it,i)=>{const opts=it.o.map((o,j)=>{let cls="q-opt";if(qDone){if(j===it.c)cls+=" correct";else if(j===qAns[i])cls+=" wrong";}else if(qAns[i]===j)cls+=" sel";const click=qDone?"":`onclick="pickQ(${i},${j})"`;return `<div class="${cls}" ${click}><span class="l">${L[j]}</span><span>${o}</span></div>`;}).join("");return `<div class="q-item"><p class="q-q"><span class="qn">${i+1}.</span>${it.q}</p><div class="q-opts">${opts}</div></div>`;}).join("");}
+    function renderQuiz(){const body=document.getElementById("quizBody");body.className="q-body"+(qDone?" q-done":"");body.innerHTML=qBodyHTML();const btn=document.getElementById("quizBtn"),sc=document.getElementById("quizScore");if(qDone){const s=QUIZ.filter((it,i)=>qAns[i]===it.c).length;sc.textContent=s+" / 5 doğru";btn.textContent="Tekrar Çöz";}else{sc.textContent="";btn.textContent="Sonucu Gör";}}
+    function openQuiz(){qAns=[null,null,null,null,null];qDone=false;renderQuiz();document.getElementById("quizModal").classList.add("show");document.body.style.overflow="hidden";document.getElementById("quizBody").scrollTop=0;}
+    function closeQuiz(){document.getElementById("quizModal").classList.remove("show");document.body.style.overflow="";}
+    function pickQ(i,j){if(qDone)return;qAns[i]=j;renderQuiz();}
+    function submitQuiz(){if(qDone){openQuiz();return;}qDone=true;renderQuiz();document.getElementById("quizBody").scrollTop=0;}
+    document.getElementById("quizModal").addEventListener("click",e=>{if(e.target.id==="quizModal")closeQuiz();});
+    document.addEventListener("keydown",e=>{if(e.key==="Escape")closeQuiz();});
+  </script>
+  <script src="/lessons-nav.js"></script>
+</body>
+</html>

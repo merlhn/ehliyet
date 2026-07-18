@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Araç Tekniği (Motor) — Konu 13: Şarj Sistemi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--fg:#08090a;--muted:#6a6f76;--line:#ececec}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--fg);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.75;letter-spacing:-.011em}
+  a{color:inherit}
+  header{display:flex;align-items:center;gap:26px;height:64px;padding:0 28px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(10px);z-index:20}
+  .nav{display:flex;gap:24px}
+  .nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:450}
+  .nav a:hover{color:#08090a}
+  main{max-width:960px;margin:0 auto;padding:52px 24px 96px}
+  .ders-meta{margin:0 0 24px;font-size:15.5px;line-height:1.7;color:var(--muted)}
+  .ders-meta .k{display:inline-block;min-width:104px;font-family:'Geist Mono',monospace;font-size:13.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);vertical-align:top}
+  .ders-meta b{color:#08090a;font-weight:600}
+  .lead{font-size:14px;color:var(--muted);line-height:1.6;margin:0 0 8px}
+  h2{font-size:19px;font-weight:600;letter-spacing:-.025em;line-height:1.2;margin:42px 0 10px}
+  p{margin:16px 0;font-size:12.5px}
+  b{font-weight:600}
+  .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#08090a;color:#fff;border:1px solid #08090a;font-family:inherit;font-weight:500;font-size:15px;border-radius:999px;padding:13px 24px;cursor:pointer;text-decoration:none;letter-spacing:-.01em}
+  .btn-primary:hover{background:#26282c;border-color:#26282c}
+  .quiz-cta{margin-top:48px}
+  .quiz-cta .btn-primary{font-size:10.5px;padding:9px 17px}
+  .q-overlay{position:fixed;inset:0;background:rgba(8,9,10,.5);display:none;align-items:center;justify-content:center;padding:16px;z-index:60}
+  .q-overlay.show{display:flex}
+  .q-modal{background:#fff;border-radius:16px;width:min(900px,100%);max-height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.28)}
+  .q-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line);font-weight:600;font-size:16px;letter-spacing:-.02em;flex-shrink:0}
+  .q-close{width:32px;height:32px;border:none;background:none;font-size:19px;color:var(--muted);cursor:pointer;border-radius:8px}
+  .q-close:hover{background:#f2f2f2;color:#08090a}
+  .q-body{overflow-y:auto;-webkit-overflow-scrolling:touch;padding:4px 24px 10px}
+  .q-item{display:grid;grid-template-columns:0.9fr 1.1fr;gap:28px;align-items:start;padding:20px 0}
+  .q-q{font-weight:500;font-size:15.5px;line-height:1.5;margin:0}
+  .q-q .qn{font-family:'Geist Mono',monospace;color:var(--muted);margin-right:8px;font-size:13px}
+  .q-opts{display:flex;flex-direction:column;gap:7px}
+  .q-opt{display:flex;align-items:center;gap:11px;border:1px solid var(--line);border-radius:10px;padding:10px 13px;font-size:14px;cursor:pointer;transition:.12s;background:#fff;user-select:none}
+  .q-opt:hover{border-color:#08090a}
+  .q-opt .l{font-family:'Geist Mono',monospace;font-weight:500;color:#08090a}
+  .q-opt.sel{background:#08090a;color:#fff;border-color:#08090a}
+  .q-opt.sel .l{color:#fff}
+  .q-done .q-opt{cursor:default}
+  .q-opt.correct{background:#effaf3;border-color:#0a7f3f;color:#0a7f3f}
+  .q-opt.correct .l{color:#0a7f3f}
+  .q-opt.wrong{background:#fdf1f1;border-color:#c72c2c;color:#c72c2c}
+  .q-opt.wrong .l{color:#c72c2c}
+  .q-foot{display:flex;align-items:center;gap:12px;padding:14px 20px;border-top:1px solid var(--line);flex-shrink:0}
+  .q-score{font-weight:600;font-size:15px}
+  .q-foot .btn-primary{margin-left:auto;font-size:14px;padding:11px 20px}
+  @media(max-width:640px){.q-item{grid-template-columns:1fr;gap:12px;padding:16px 0}header{height:58px;padding:0 18px;gap:14px}}
+</style>
+</head>
+<body>
+  <header>
+    <nav class="nav"><a href="/">Ana Sayfa</a><a href="/dersler/">Dersler</a><a href="/deneme-sinavlari/">Deneme Sınavları</a></nav>
+  </header>
+
+  <main>
+    <div class="ders-meta">
+      <div><span class="k">Ders</span> : <b>Araç Tekniği (Motor)</b></div>
+      <div><span class="k">Konu - 13</span> : <b>Şarj Sistemi</b></div>
+    </div>
+    <p class="lead">Şarj sistemi, araç tekniği dersinde neredeyse her sınavda soru gelen sistemlerden biridir. Bu bölümde şarj sisteminin görevini, alternatör ile regülatörün ne işe yaradığını, şarj göstergesinin kırmızı yanmasının ne anlama geldiğini ve marş motoru, akü, sigorta gibi elemanların rolünü sınav odaklı biçimde öğreneceğiz.</p>
+
+<!-- BODY_START -->
+    <h2>Şarj sisteminin görevi</h2>
+    <p>Şarj sisteminin görevi, <b>motor çalışırken araç için gerekli elektrik enerjisini üretmek ve aynı zamanda aküyü şarj etmektir</b>. Çalışma prensibi ise <b>hareket enerjisini elektrik enerjisine çevirmektir</b>. Bu tanım sınavda sıkça çevrilerek sorulur: “hareket enerjisini elektrik enerjisine çeviren sistem hangisidir?” diye sorulduğunda doğru cevap her zaman <b>şarj sistemidir</b>. Yani araç hareket ederken üretilen elektrik hem aracın anlık ihtiyacını karşılar hem de akünün yeniden dolmasını sağlar.</p>
+
+    <h2>Şarj sisteminin parçaları</h2>
+    <p>Şarj sistemini oluşturan başlıca parçalar şunlardır: <b>alternatör (şarj dinamosu), regülatör (konjektör), şarj müşürü, şarj göstergesi, akü, sigorta ve marş motoru</b>. Sınavda “aşağıdakilerden hangisi şarj sisteminin elemanıdır / değildir?” tarzı sorular çokça gelir. Burada en sık kullanılan çeldirici <b>distribütördür</b>; distribütör şarj sisteminin değil <b>ateşleme sisteminin</b> bir parçasıdır, bu yüzden “hangisi şarj sistemine ait değildir?” sorusunda cevap genellikle distribütör olur.</p>
+
+    <h2>Alternatör (şarj dinamosu)</h2>
+    <p>Alternatör, şarj sisteminin en çok sorulan parçasıdır. Araç çalışıp harekete geçtiğinde alternatör, motordan <b>V kayışı</b> aracılığıyla güç alır ve bu <b>hareketi elektrik enerjisine çevirir</b>. Ürettiği elektrikle hem <b>aracın elektrik ihtiyacını karşılar</b> hem de <b>aküyü şarj eder</b>. Buradaki kritik ayrım şudur: <b>araç çalışmıyorken aracın elektriğini akü verir</b>, ancak <b>araç çalışınca bu görevi alternatör devralır</b> ve aynı anda aküyü de doldurur. Dolayısıyla “aracın elektriğini üreten parça hangisidir?” sorusunun cevabı alternatördür.</p>
+
+    <h2>Regülatör (konjektör)</h2>
+    <p>Regülatör, alternatörün ürettiği elektriğin <b>voltajını ayarlayarak (yaklaşık 12 volt)</b> aküye gönderen parçadır. Görevi voltajı dengede tutmaktır. Regülatör bozulursa aküye <b>fazla voltaj</b> gider ve bunun iki tipik sonucu vardır: <b>ampuller sık sık patlar</b> ve <b>akü suyu sık sık azalır</b>. Sınavda “ampuller neden sık patlar?” ya da “akü suyu neden çabuk azalır?” diye sorulduğunda cevap regülatörün arızalı olmasıdır.</p>
+
+    <h2>Şarj göstergesi (akü ikaz ışığı)</h2>
+    <p>Şarj göstergesi, gösterge panelindeki <b>akü ikaz ışığıdır</b>. Kontak açıldığında yanan bu ışık, <b>motor çalışınca söner</b>; çünkü artık elektriği alternatör üretmektedir. Asıl kritik nokta şudur: araç <b>hareket halindeyken bu ışık kırmızı yanarsa şarj sisteminde bir arıza var demektir</b> ve bu durumda araç <b>derhal durdurulup kontak kapatılmalıdır</b>. Işık kırmızı yanmasına rağmen araç sürülmeye devam edilirse alternatör şarj etmediği için <b>akü boşalır</b>. Kırmızı yanmanın başlıca sebepleri şunlardır: <b>şarj müşürünün kısa devre yapması, V kayışının kopması veya gevşemesi, alternatör ya da regülatör arızası ve alternatör kablolarının gevşemesi</b>. Ayrıca sınavda çok sevilen bir ayrıntı vardır: <b>V kayışının koptuğu ilk önce şarj göstergesinden anlaşılır</b>.</p>
+
+    <h2>Marş motoru</h2>
+    <p>Marş motoru, motora <b>ilk hareketi veren</b> parçadır; motorun dönmeye başlaması bu sayede olur. Marş motoruyla ilgili önemli bir uyarı vardır: <b>uzun süreli, yani 15 saniyeyi geçen marşlar hem aküye hem de marş motoruna zarar verir</b>. Bir başka sınavlık nokta ise şudur: <b>marş motoru dönmüyorsa akü boşalmış olabilir</b>, çünkü marş motorunu döndürecek elektriği akü sağlar.</p>
+
+    <h2>Akü ve sigorta</h2>
+    <p>Akü, araç çalışmadığında aracın elektriğini sağlayan ve marş anında marş motorunu döndüren enerji deposudur; araç çalışınca alternatör tarafından yeniden şarj edilir. Sigorta ise elektrik devresinde bir güvenlik elemanıdır: <b>devreden geçen akım yükseldiğinde eriyerek devreyi keser</b> ve böylece sistemin zarar görmesini önler. “Akım yükselince eriyerek güvenliği sağlayan parça hangisidir?” sorusunun cevabı sigortadır.</p>
+
+    <h2>Kısaca</h2>
+    <p>Şarj sistemi, motor çalışırken aracın elektriğini üretip aynı anda aküyü şarj eden sistemdir ve hareket enerjisini elektrik enerjisine çevirir. Alternatör V kayışından güç alıp elektrik üretir; araç çalışmazken elektriği akü verir. Regülatör voltajı yaklaşık 12 volta ayarlar, bozulursa ampuller patlar ve akü suyu azalır. Şarj göstergesi motor çalışınca söner; hareket halinde kırmızı yanarsa araç hemen durdurulmalıdır ve V kayışının koptuğu ilk önce buradan anlaşılır. Marş motoru ilk hareketi verir, 15 saniyeyi geçen marş zarar verir. Sigorta akım yükselince eriyerek korur. Distribütörün ise şarj sistemiyle ilgisi yoktur; o ateşleme sisteminin parçasıdır.</p>
+<!-- BODY_END -->
+
+    <div class="quiz-cta"><button class="btn-primary" onclick="openQuiz()">Kısa Testi Çöz — 5 Soru →</button></div>
+  </main>
+
+  <div class="q-overlay" id="quizModal" aria-hidden="true">
+    <div class="q-modal">
+      <div class="q-head"><span>Kısa Test — Şarj Sistemi</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
+      <div class="q-body" id="quizBody"></div>
+      <div class="q-foot"><span class="q-score" id="quizScore"></span><button class="btn-primary" id="quizBtn" onclick="submitQuiz()">Sonucu Gör</button></div>
+    </div>
+  </div>
+
+  <script>
+    const QUIZ=[
+      {q:"Hareket enerjisini elektrik enerjisine çeviren sistem aşağıdakilerden hangisidir?",o:["Ateşleme sistemi","Şarj sistemi","Soğutma sistemi","Yakıt sistemi"],c:1},
+      {q:"Araç çalışıp harekete geçince V kayışından güç alıp elektrik üreten ve aküyü şarj eden parça hangisidir?",o:["Regülatör","Sigorta","Alternatör","Marş motoru"],c:2},
+      {q:"Regülatörün bozulması durumunda aşağıdakilerden hangisi görülür?",o:["Ampullerin sık sık patlaması ve akü suyunun azalması","Motorun hiç çalışmaması","Lastik basıncının düşmesi","Fren balatalarının aşınması"],c:0},
+      {q:"Aşağıdakilerden hangisi şarj sisteminin bir elemanı değildir?",o:["Alternatör","Regülatör","Distribütör","Akü"],c:2},
+      {q:"Araç hareket halindeyken şarj (akü ikaz) göstergesinin kırmızı yanması ile ilgili aşağıdakilerden hangisi yanlıştır?",o:["Şarj sisteminde arıza olduğunu gösterir","Araç derhal durdurulup kontak kapatılmalıdır","Sürüşe devam edilirse akü boşalır","Herhangi bir sorun yoktur, sürüşe devam edilebilir"],c:3}
+    ];
+    const L=["A","B","C","D"];
+    let qAns=[null,null,null,null,null], qDone=false;
+    function qBodyHTML(){return QUIZ.map((it,i)=>{const opts=it.o.map((o,j)=>{let cls="q-opt";if(qDone){if(j===it.c)cls+=" correct";else if(j===qAns[i])cls+=" wrong";}else if(qAns[i]===j)cls+=" sel";const click=qDone?"":`onclick="pickQ(${i},${j})"`;return `<div class="${cls}" ${click}><span class="l">${L[j]}</span><span>${o}</span></div>`;}).join("");return `<div class="q-item"><p class="q-q"><span class="qn">${i+1}.</span>${it.q}</p><div class="q-opts">${opts}</div></div>`;}).join("");}
+    function renderQuiz(){const body=document.getElementById("quizBody");body.className="q-body"+(qDone?" q-done":"");body.innerHTML=qBodyHTML();const btn=document.getElementById("quizBtn"),sc=document.getElementById("quizScore");if(qDone){const s=QUIZ.filter((it,i)=>qAns[i]===it.c).length;sc.textContent=s+" / 5 doğru";btn.textContent="Tekrar Çöz";}else{sc.textContent="";btn.textContent="Sonucu Gör";}}
+    function openQuiz(){qAns=[null,null,null,null,null];qDone=false;renderQuiz();document.getElementById("quizModal").classList.add("show");document.body.style.overflow="hidden";document.getElementById("quizBody").scrollTop=0;}
+    function closeQuiz(){document.getElementById("quizModal").classList.remove("show");document.body.style.overflow="";}
+    function pickQ(i,j){if(qDone)return;qAns[i]=j;renderQuiz();}
+    function submitQuiz(){if(qDone){openQuiz();return;}qDone=true;renderQuiz();document.getElementById("quizBody").scrollTop=0;}
+    document.getElementById("quizModal").addEventListener("click",e=>{if(e.target.id==="quizModal")closeQuiz();});
+    document.addEventListener("keydown",e=>{if(e.key==="Escape")closeQuiz();});
+  </script>
+  <script src="/lessons-nav.js"></script>
+</body>
+</html>

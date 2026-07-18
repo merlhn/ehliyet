@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İlk Yardım — Konu 8: Yanıklar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--fg:#08090a;--muted:#6a6f76;--line:#ececec}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--fg);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.75;letter-spacing:-.011em}
+  a{color:inherit}
+  header{display:flex;align-items:center;gap:26px;height:64px;padding:0 28px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(10px);z-index:20}
+  .nav{display:flex;gap:24px}
+  .nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:450}
+  .nav a:hover{color:#08090a}
+  main{max-width:960px;margin:0 auto;padding:52px 24px 96px}
+  .ders-meta{margin:0 0 24px;font-size:15.5px;line-height:1.7;color:var(--muted)}
+  .ders-meta .k{display:inline-block;min-width:104px;font-family:'Geist Mono',monospace;font-size:13.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);vertical-align:top}
+  .ders-meta b{color:#08090a;font-weight:600}
+  .lead{font-size:14px;color:var(--muted);line-height:1.6;margin:0 0 8px}
+  h2{font-size:19px;font-weight:600;letter-spacing:-.025em;line-height:1.2;margin:42px 0 10px}
+  p{margin:16px 0;font-size:12.5px}
+  b{font-weight:600}
+  .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#08090a;color:#fff;border:1px solid #08090a;font-family:inherit;font-weight:500;font-size:15px;border-radius:999px;padding:13px 24px;cursor:pointer;text-decoration:none;letter-spacing:-.01em}
+  .btn-primary:hover{background:#26282c;border-color:#26282c}
+  .quiz-cta{margin-top:48px}
+  .quiz-cta .btn-primary{font-size:10.5px;padding:9px 17px}
+  .q-overlay{position:fixed;inset:0;background:rgba(8,9,10,.5);display:none;align-items:center;justify-content:center;padding:16px;z-index:60}
+  .q-overlay.show{display:flex}
+  .q-modal{background:#fff;border-radius:16px;width:min(900px,100%);max-height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.28)}
+  .q-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line);font-weight:600;font-size:16px;letter-spacing:-.02em;flex-shrink:0}
+  .q-close{width:32px;height:32px;border:none;background:none;font-size:19px;color:var(--muted);cursor:pointer;border-radius:8px}
+  .q-close:hover{background:#f2f2f2;color:#08090a}
+  .q-body{overflow-y:auto;-webkit-overflow-scrolling:touch;padding:4px 24px 10px}
+  .q-item{display:grid;grid-template-columns:0.9fr 1.1fr;gap:28px;align-items:start;padding:20px 0}
+  .q-q{font-weight:500;font-size:15.5px;line-height:1.5;margin:0}
+  .q-q .qn{font-family:'Geist Mono',monospace;color:var(--muted);margin-right:8px;font-size:13px}
+  .q-opts{display:flex;flex-direction:column;gap:7px}
+  .q-opt{display:flex;align-items:center;gap:11px;border:1px solid var(--line);border-radius:10px;padding:10px 13px;font-size:14px;cursor:pointer;transition:.12s;background:#fff;user-select:none}
+  .q-opt:hover{border-color:#08090a}
+  .q-opt .l{font-family:'Geist Mono',monospace;font-weight:500;color:#08090a}
+  .q-opt.sel{background:#08090a;color:#fff;border-color:#08090a}
+  .q-opt.sel .l{color:#fff}
+  .q-done .q-opt{cursor:default}
+  .q-opt.correct{background:#effaf3;border-color:#0a7f3f;color:#0a7f3f}
+  .q-opt.correct .l{color:#0a7f3f}
+  .q-opt.wrong{background:#fdf1f1;border-color:#c72c2c;color:#c72c2c}
+  .q-opt.wrong .l{color:#c72c2c}
+  .q-foot{display:flex;align-items:center;gap:12px;padding:14px 20px;border-top:1px solid var(--line);flex-shrink:0}
+  .q-score{font-weight:600;font-size:15px}
+  .q-foot .btn-primary{margin-left:auto;font-size:14px;padding:11px 20px}
+  @media(max-width:640px){.q-item{grid-template-columns:1fr;gap:12px;padding:16px 0}header{height:58px;padding:0 18px;gap:14px}}
+</style>
+</head>
+<body>
+  <header>
+    <nav class="nav"><a href="/">Ana Sayfa</a><a href="/dersler/">Dersler</a><a href="/deneme-sinavlari/">Deneme Sınavları</a></nav>
+  </header>
+
+  <main>
+    <div class="ders-meta">
+      <div><span class="k">Ders</span> : <b>İlk Yardım</b></div>
+      <div><span class="k">Konu - 8</span> : <b>Yanıklar</b></div>
+    </div>
+    <p class="lead">Yanıklar sınavda hem yanık dereceleri hem de yapılması gereken ilk yardım üzerinden düzenli olarak sorulur. Bu bölümde yanığın tanımını, çeşitlerini, üç yanık derecesini ve yanıkta doğru ilk yardım basamaklarını öğreneceğiz.</p>
+
+    <h2>Yanık nedir?</h2>
+    <p><b>Yanık</b>; derinin, herhangi bir <b>fiziksel ya da kimyasal</b> yakıcıya maruz kalması sonucu doku bütünlüğünün bozulmasıdır. Sınavda bu tanım doğrudan sorulabildiği için “fiziksel veya kimyasal yakıcı” ifadesini aklınızda tutun. Yani her yanık ateşle olmak zorunda değildir; bir asit ya da çamaşır suyu da yanık oluşturabilir.</p>
+
+    <h2>Yanık çeşitleri</h2>
+    <p>Yanıklar oluşma biçimine göre ikiye ayrılır. <b>Fiziksel yanıklar</b>; ateş, elektrik, ışın, sürtünme ve donma sonucu oluşan yanıklardır; kibrit ya da ateş yanığı buna örnektir. <b>Kimyasal yanıklar</b> ise bir kimyasal maddenin, özellikle asitlerin yol açtığı yanıklardır; çamaşır suyu, tuz ruhu ya da akü suyu (elektrolit) ile oluşan yanıklar en sık verilen örneklerdir. Sınavda “akü suyunun yaktığı” ya da “çamaşır suyunun yaktığı” ifadesini görürseniz bunun bir kimyasal yanık olduğunu hatırlayın.</p>
+
+    <h2>Yanığın ciddiyetini ne belirler?</h2>
+    <p>Bir yanığın tehlikeli olup olmadığını tek bir şey belirlemez. Yanığın <b>derinliği</b> (yani derecesi), yanan <b>bölge</b> (yüz, organ gibi kritik bir yer mi), etkilediği <b>alanın genişliği</b>, <b>enfeksiyon riski</b>, kişinin <b>yaşı</b> (çocuklarda daha tehlikelidir) ve <b>solunum yolunda</b> yanık olup olmaması ciddiyeti belirler. Bunlar içinde en belirleyici olan yanığın <b>derinliği ve genişliğidir</b>. Ayrıca çok kritik bir bilgi: vücut yüzeyinin <b>%20’sinden fazlasının</b> yanması yaşamsal risk oluşturur; bu oran <b>bebeklerde %10’dur</b>.</p>
+
+    <h2>Yanık dereceleri</h2>
+    <p>Yanıklar derinliklerine göre üçe ayrılır. <b>1. derece yanıklar</b> en basit yanıklardır; deride yalnızca kızarıklık, ağrı ve hafif şişlik görülür, deri bütünlüğü bozulmaz. Güneş yanığı buna örnektir ve genellikle iz bırakmaz. <b>2. derece yanıklarda</b> deri su toplar, yani kabarcıklar (su dolu kesecikler) oluşur ve ağrı vardır; orta düzey yanıklardır. <b>3. derece yanıklar</b> en ağır ve en tehlikeli yanıklardır; burada <b>deri bütünlüğü bozulmuştur</b> ve derinleşerek damarlara ve <b>sinirlere zarar vermiştir</b> (sinir harabiyeti). Sınavda “deri bütünlüğü bozulmuş ve sinir harabiyeti oluşmuş” ifadesini görürseniz cevap 3. derece yanıktır. Ağırlık sırası basitten ağıra doğru şöyledir: 1. derece en hafif, 2. derece orta, 3. derece en ağır.</p>
+
+    <h2>Isı (ateş) yanığında ilk yardım</h2>
+    <p>Bir kişinin üzeri tutuşmuşsa öncelikle <b>koşması önlenir</b>; çünkü koşan kişinin çevresindeki oksijen artacağı için alev daha da büyür. Kişinin üzeri battaniye ya da nemli bir örtüyle kapatılır ve <b>yuvarlanması sağlanarak</b> alev söndürülür. Alev söndürüldükten sonra kişinin solunumunun etkilenip etkilenmediği kontrol edilir.</p>
+
+    <h2>Yanıkta genel ilk yardım</h2>
+    <p>Yanık bölgedeki giysiler yanığa <b>yapışmadıysa</b> çıkarılır; ancak giysi yanığa yapışmışsa çekip çıkarılmaya çalışılmaz, gerekirse makasla kesilerek yanık ortaya çıkarılır — aksi hâlde giysiyle birlikte deri de soyulabilir. Yanan bölge, tazyikli değil <b>yumuşak akan soğuk su</b> altında <b>en az 20 dakika</b> tutulur; ancak yanık yüzeyi çok genişse ısı kaybına yol açacağı için bu önerilmez. Buz doğrudan yanığa temas ettirilmez. Şişlik olabileceği düşünülerek yüzük, bilezik gibi eşyalar çıkarılır.</p>
+    <p>Su toplamış yerlerdeki <b>kabarcıklar patlatılmaz</b>, hijyene dikkat edilir. Yanık üzerine yanık merhemi, diş macunu ya da benzeri <b>hiçbir madde sürülmez</b> ve <b>tentürdiyot dökülmez</b>. Kişinin üzeri, ısı kaybını önlemek için battaniye ile örtülür; yanık bölgeye <b>bandaj yapılmaz</b> (sarılmaz). Yanık yüzeyi geniş ve sağlık kuruluşu uzaksa, kişinin <b>kusması yoksa</b> ağızdan sıvı verilerek sıvı kaybı önlenir. Normalde ilk yardımda yiyecek-içecek verilmez, ancak geniş yanıklarda bu bir istisnadır. Son olarak tıbbi yardım (112) istenir.</p>
+
+    <h2>Kimyasal yanıkta ilk yardım</h2>
+    <p>Çamaşır suyu, tuz ruhu ya da akü suyu gibi bir kimyasalın yol açtığı yanıklarda önce maddenin <b>deriyle teması kesilir</b>. Ardından bölge <b>bol ve tazyiksiz suyla</b> yıkanarak kimyasal seyreltilir. Üzerindeki giysiler çıkarılır, kişinin üzeri örtülür ve tıbbi yardım istenir. Buradaki anahtar uygulama bol suyla yıkamaktır.</p>
+
+    <h2>Kısaca</h2>
+    <p>Yanık, derinin fiziksel veya kimyasal bir yakıcıya maruz kalmasıdır; fiziksel (ateş, elektrik, donma) ve kimyasal (asit, çamaşır suyu, akü suyu) olmak üzere ikiye ayrılır. Derinliğe göre 1. (kızarıklık), 2. (su toplama) ve 3. derece (deri bütünlüğü bozulması + sinir harabiyeti) olarak sınıflanır; 3. derece en ağırdır. İlk yardımda yanık tazyiksiz soğuk suyla soğutulur, kabarcıklar patlatılmaz, üzerine hiçbir madde sürülmez ve tentürdiyot dökülmez. Kimyasal yanıkta ise bol suyla yıkama esastır.</p>
+
+    <div class="quiz-cta"><button class="btn-primary" onclick="openQuiz()">Kısa Testi Çöz — 5 Soru →</button></div>
+  </main>
+
+  <div class="q-overlay" id="quizModal" aria-hidden="true">
+    <div class="q-modal">
+      <div class="q-head"><span>Kısa Test — Yanıklar</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
+      <div class="q-body" id="quizBody"></div>
+      <div class="q-foot"><span class="q-score" id="quizScore"></span><button class="btn-primary" id="quizBtn" onclick="submitQuiz()">Sonucu Gör</button></div>
+    </div>
+  </div>
+
+  <script>
+    const QUIZ=[
+      {q:"En hafif olan ve genellikle iz bırakmayan yanıklar hangi derece yanıklardır?",
+       o:["1. derece yanıklar","2. derece yanıklar","3. derece yanıklar","Kimyasal yanıklar"],c:0},
+      {q:"Deri bütünlüğünün bozulduğu ve sinir harabiyetinin oluştuğu en ağır yanık hangisidir?",
+       o:["1. derece yanık","2. derece yanık","3. derece yanık","Güneş yanığı"],c:2},
+      {q:"Yanık vakalarında yapılan ilk yardımda aşağıdakilerden hangisi yanlıştır?",
+       o:["Kimyasal yanıkta bölgeyi bol suyla yıkamak","Su kabarcıklarını (kesecikleri) patlatmak","Yanan yeri tazyiksiz soğuk suyla soğutmak","Kişinin üzerini battaniye ile örtmek"],c:1},
+      {q:"Isı (ateş) yanıklarında aşağıdakilerden hangisinin uygulanması doğrudur?",
+       o:["Yanık bölgeye diş macunu sürmek","Tentürdiyotlu pamukla kapatmak","Temiz, soğuk ve tazyiksiz suyla soğutmak","Oksijenli su ile yıkamak"],c:2},
+      {q:"Yetişkinlerde vücut yüzeyinin yaklaşık yüzde kaçından fazlasının yanması yaşamsal risk oluşturur?",
+       o:["%5","%20","%50","%80"],c:1}
+    ];
+    const L=["A","B","C","D"];
+    let qAns=[null,null,null,null,null], qDone=false;
+    function qBodyHTML(){return QUIZ.map((it,i)=>{const opts=it.o.map((o,j)=>{let cls="q-opt";if(qDone){if(j===it.c)cls+=" correct";else if(j===qAns[i])cls+=" wrong";}else if(qAns[i]===j)cls+=" sel";const click=qDone?"":`onclick="pickQ(${i},${j})"`;return `<div class="${cls}" ${click}><span class="l">${L[j]}</span><span>${o}</span></div>`;}).join("");return `<div class="q-item"><p class="q-q"><span class="qn">${i+1}.</span>${it.q}</p><div class="q-opts">${opts}</div></div>`;}).join("");}
+    function renderQuiz(){const body=document.getElementById("quizBody");body.className="q-body"+(qDone?" q-done":"");body.innerHTML=qBodyHTML();const btn=document.getElementById("quizBtn"),sc=document.getElementById("quizScore");if(qDone){const s=QUIZ.filter((it,i)=>qAns[i]===it.c).length;sc.textContent=s+" / 5 doğru";btn.textContent="Tekrar Çöz";}else{sc.textContent="";btn.textContent="Sonucu Gör";}}
+    function openQuiz(){qAns=[null,null,null,null,null];qDone=false;renderQuiz();document.getElementById("quizModal").classList.add("show");document.body.style.overflow="hidden";document.getElementById("quizBody").scrollTop=0;}
+    function closeQuiz(){document.getElementById("quizModal").classList.remove("show");document.body.style.overflow="";}
+    function pickQ(i,j){if(qDone)return;qAns[i]=j;renderQuiz();}
+    function submitQuiz(){if(qDone){openQuiz();return;}qDone=true;renderQuiz();document.getElementById("quizBody").scrollTop=0;}
+    document.getElementById("quizModal").addEventListener("click",e=>{if(e.target.id==="quizModal")closeQuiz();});
+    document.addEventListener("keydown",e=>{if(e.key==="Escape")closeQuiz();});
+  </script>
+  <script src="/lessons-nav.js"></script>
+</body>
+</html>

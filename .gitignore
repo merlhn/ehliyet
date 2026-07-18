@@ -1,0 +1,4 @@
+# macOS / editor junk
+.DS_Store
+.vscode
+*.log

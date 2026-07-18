@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Araç Tekniği (Motor) — Konu 3: Araç Kullanmaya Hazırlık</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--fg:#08090a;--muted:#6a6f76;--line:#ececec}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--fg);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.75;letter-spacing:-.011em}
+  a{color:inherit}
+  header{display:flex;align-items:center;gap:26px;height:64px;padding:0 28px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(10px);z-index:20}
+  .nav{display:flex;gap:24px}
+  .nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:450}
+  .nav a:hover{color:#08090a}
+  main{max-width:960px;margin:0 auto;padding:52px 24px 96px}
+  .ders-meta{margin:0 0 24px;font-size:15.5px;line-height:1.7;color:var(--muted)}
+  .ders-meta .k{display:inline-block;min-width:104px;font-family:'Geist Mono',monospace;font-size:13.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);vertical-align:top}
+  .ders-meta b{color:#08090a;font-weight:600}
+  .lead{font-size:14px;color:var(--muted);line-height:1.6;margin:0 0 8px}
+  h2{font-size:19px;font-weight:600;letter-spacing:-.025em;line-height:1.2;margin:42px 0 10px}
+  p{margin:16px 0;font-size:12.5px}
+  b{font-weight:600}
+  .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#08090a;color:#fff;border:1px solid #08090a;font-family:inherit;font-weight:500;font-size:15px;border-radius:999px;padding:13px 24px;cursor:pointer;text-decoration:none;letter-spacing:-.01em}
+  .btn-primary:hover{background:#26282c;border-color:#26282c}
+  .quiz-cta{margin-top:48px}
+  .quiz-cta .btn-primary{font-size:10.5px;padding:9px 17px}
+  .q-overlay{position:fixed;inset:0;background:rgba(8,9,10,.5);display:none;align-items:center;justify-content:center;padding:16px;z-index:60}
+  .q-overlay.show{display:flex}
+  .q-modal{background:#fff;border-radius:16px;width:min(900px,100%);max-height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.28)}
+  .q-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line);font-weight:600;font-size:16px;letter-spacing:-.02em;flex-shrink:0}
+  .q-close{width:32px;height:32px;border:none;background:none;font-size:19px;color:var(--muted);cursor:pointer;border-radius:8px}
+  .q-close:hover{background:#f2f2f2;color:#08090a}
+  .q-body{overflow-y:auto;-webkit-overflow-scrolling:touch;padding:4px 24px 10px}
+  .q-item{display:grid;grid-template-columns:0.9fr 1.1fr;gap:28px;align-items:start;padding:20px 0}
+  .q-q{font-weight:500;font-size:15.5px;line-height:1.5;margin:0}
+  .q-q .qn{font-family:'Geist Mono',monospace;color:var(--muted);margin-right:8px;font-size:13px}
+  .q-opts{display:flex;flex-direction:column;gap:7px}
+  .q-opt{display:flex;align-items:center;gap:11px;border:1px solid var(--line);border-radius:10px;padding:10px 13px;font-size:14px;cursor:pointer;transition:.12s;background:#fff;user-select:none}
+  .q-opt:hover{border-color:#08090a}
+  .q-opt .l{font-family:'Geist Mono',monospace;font-weight:500;color:#08090a}
+  .q-opt.sel{background:#08090a;color:#fff;border-color:#08090a}
+  .q-opt.sel .l{color:#fff}
+  .q-done .q-opt{cursor:default}
+  .q-opt.correct{background:#effaf3;border-color:#0a7f3f;color:#0a7f3f}
+  .q-opt.correct .l{color:#0a7f3f}
+  .q-opt.wrong{background:#fdf1f1;border-color:#c72c2c;color:#c72c2c}
+  .q-opt.wrong .l{color:#c72c2c}
+  .q-foot{display:flex;align-items:center;gap:12px;padding:14px 20px;border-top:1px solid var(--line);flex-shrink:0}
+  .q-score{font-weight:600;font-size:15px}
+  .q-foot .btn-primary{margin-left:auto;font-size:14px;padding:11px 20px}
+  @media(max-width:640px){.q-item{grid-template-columns:1fr;gap:12px;padding:16px 0}header{height:58px;padding:0 18px;gap:14px}}
+</style>
+</head>
+<body>
+  <header>
+    <nav class="nav"><a href="/">Ana Sayfa</a><a href="/dersler/">Dersler</a><a href="/deneme-sinavlari/">Deneme Sınavları</a></nav>
+  </header>
+
+  <main>
+    <div class="ders-meta">
+      <div><span class="k">Ders</span> : <b>Araç Tekniği (Motor)</b></div>
+      <div><span class="k">Konu - 3</span> : <b>Araç Kullanmaya Hazırlık</b></div>
+    </div>
+    <p class="lead">Araç kullanmaya başlamadan önce yapılması gereken kontroller ve doğru sürüş pozisyonu, sınavda düzenli soru gelen bir konudur. Bu bölümde araca binmeden yapılan dış kontrolleri, araç içi ayarları, emniyet ekipmanlarını ve aracı doğru çalıştırma sırasını sınav odaklı biçimde öğreneceğiz.</p>
+
+<!-- BODY_START -->
+    <h2>Sürüşe hazırlık neden önemli?</h2>
+    <p>Direksiyona geçmeden önce sürücünün <b>ruhen, bedenen ve zihnen hazır</b> olması gerekir. Yorgun, uykusuz ya da dikkati dağınık bir sürücü kaza riskini büyütür. Hazırlık yalnızca sürücünün kendi durumuyla sınırlı değildir; belirli bir sıra izlenerek önce <b>araca binmeden yapılacak dış kontroller</b>, ardından <b>araca binince yapılacak iç kontroller</b> ve en sonda <b>aracın doğru sırayla çalıştırılması</b> tamamlanmalıdır. Sınav bu sırayı ve her aşamada nelere bakıldığını ölçer.</p>
+
+    <h2>Araca binmeden yapılan dış kontroller</h2>
+    <p>Araca binmeden önce aracın <b>etrafında bir tur atılır</b> ve gözle kontrol yapılır. İlk bakılacak yer <b>lastiklerdir</b>: patlak ya da inik olup olmadığına, havasına ve her tekerleği araca tutturan <b>bijon (vida) eksikliği</b> olup olmadığına bakılır. Ardından <b>aracın altına bakılır</b>; yerde <b>yakıt (benzin) sızıntısı ya da yağ akıntısı</b> olup olmadığı ve <b>aracın altında hayvan ya da çocuk</b> bulunup bulunmadığı kontrol edilir. Özellikle kışın hayvanların soğuktan korunmak için aracın altına veya motor bölmesine girmesi sık görülür, bu yüzden bu kontrol önemlidir. Aynı turda <b>dış lambalar</b> (kırık ya da çarpma var mı), <b>camlar ve aynalar</b> ile <b>cam sileceklerinin lastikleri ve su seviyesi</b> gözden geçirilir. Dış kontrollerin bir parçası olarak <b>kaput açılıp motor yağı, soğutma suyu ve hidrolik yağ</b> seviyeleri de kontrol edilir; ancak bu sıvı kontrolleri her gün yapılmak zorunda değildir.</p>
+
+    <h2>Lastikler ne zaman kontrol edilir?</h2>
+    <p>Sınavın klasik sorularından biri lastiklerin ne sıklıkta kontrol edileceğidir. Doğru cevap “günlük” değil, <b>araca her binildiğinde</b> lastiklerin kontrol edilmesidir. Aynı şekilde “araca binmeden önce yapılması gereken kontrol hangisidir?” sorusunun cevabı da <b>lastik kontrolüdür</b>. Bu iki bilgiyi net biçimde ayırt edin.</p>
+
+    <h2>Araca bindikten sonra yapılan iç kontroller</h2>
+    <p>Araca bindiğinizde ilk dikkat etmeniz gereken şey, araç içinde bir <b>yakıt, LPG veya benzin kokusu</b> olup olmadığıdır. Böyle bir koku varsa <b>kesinlikle kontağı çevirmeyin</b>; çünkü kontaktaki elektrik, ortama sızmış LPG ile birleşince kıvılcım oluşturur ve <b>patlama riski</b> doğurur. Koku sorunu yoksa sırasıyla <b>camlar, aynalar, koltuk ve koltuk başlığı ayarları ile emniyet kemeri</b> kontrol edilir. Bu iç kontroller, sürüş boyunca hem konforu hem de güvenliği doğrudan etkiler.</p>
+
+    <h2>Koltuk ve koltuk başlığı ayarı</h2>
+    <p>Güvenli sürüşün olmazsa olmazı <b>dik oturmaktır</b>. Koltuk kendinize göre ayarlanmalı, sırtınız koltuğa tam olarak <b>yaslı</b> olmalıdır; çünkü sırt koltuğa yapışık değilse virajlarda araç sizi kavrayamaz ve <b>denge kaybı</b> yaşanır. Ayaklar pedallara zorlanmadan rahatça ulaşabilmelidir. <b>Koltuk başlığı</b> ise ayrı bir öneme sahiptir: arkadan çarpma biçimindeki kazalarda <b>boynun zedelenmesini, incinmesini önler</b>. “Arkadan çarpmalarda boyun zedelenmesini hangisi önler?” sorusunun cevabı doğrudan <b>koltuk başlığıdır</b>.</p>
+
+    <h2>Direksiyon ve ayna ayarı</h2>
+    <p>Direksiyonu en iyi hakimiyetle ve rahatlıkla tutabileceğiniz pozisyon, ellerin bir saat kadranındaki <b>9 ve 15 (saat 9 ve saat 3) konumunda</b> olmasıdır; kısaca <b>9-15 pozisyonu</b> en güvenli ve en rahat sürüş pozisyonudur. Aynalar ise arkadan gelen araçları en geniş açıyla görebilmek ve <b>kör noktaları en aza indirmek</b> için <b>90 derece</b> açıyla ayarlanır. “Kör noktaları en aza indirmek için aynalar kaç derece ile ayarlanır?” sorusunun cevabı <b>90 derecedir</b>.</p>
+
+    <h2>Emniyet kemeri ve hava yastığı</h2>
+    <p>Emniyet kemeri bir <b>ikincil güvenlik ekipmanıdır</b>; yani kazanın olmasını engellemez, ancak <b>kaza olduktan sonra ölüm ve yaralanma oranını azaltır</b>. Kullanımı zorunludur ve araçta <b>herkesin</b> takması gerekir. <b>Hava yastıkları (airbag)</b> de tıpkı emniyet kemeri gibi çalışır: kazayı önlemez, fakat kaza anında ölüm ve yaralanmaları azaltır. Sınavda bu ekipmanların “kazayı önlediği” yönündeki ifadeler <b>yanlıştır</b>; doğru ifade, ölüm ve yaralanmayı azalttıklarıdır.</p>
+
+    <h2>Aracı doğru sırayla çalıştırma</h2>
+    <p>Aracı çalıştırmadan önce <b>el freninin çekili olduğundan emin olun</b> ve aracı <b>boşa alın</b>; otomatik vitesli araçlarda vites <b>P (park) konumunda</b> olmalıdır. Ardından kontak anahtarı <b>bir tık çevrilerek</b> gösterge paneli aydınlatılır. Dizel araçlarda bu aşamada gösterge panelinde <b>ön ısıtma bujisi ikaz ışığı</b> yanar; bu ışığın <b>sönmesi beklenir</b>. Ön ısıtma bujisi yalnızca <b>dizel araçlarda</b> bulunur, benzinli araçlarda yoktur. Sonra <b>debriyaja sonuna kadar basılır</b> ve kontak anahtarı bir tık daha çevrilerek <b>marş yapılır</b>. İdeal marş süresi <b>10-15 saniyedir</b>. Araç ilk marşta çalışmazsa hemen arka arkaya marş yapılmaz; <b>biraz beklenip yeniden marş yapılır</b>. Motor çalışırken ya da araç hareket halindeyken marş yapılırsa <b>marş dişlisi zarar görür</b>; bu yüzden marş yalnızca motor durmuşken kullanılır.</p>
+
+    <h2>Kısaca</h2>
+    <p>Sürüşe başlamadan sürücü ruhen, bedenen ve zihnen hazır olmalıdır. Araca binmeden dış kontrolde lastikler (hava, patlak, bijon), aracın altı (sızıntı, hayvan ya da çocuk), lambalar, camlar, aynalar, silecekler ve kaput altındaki yağ, soğutma suyu, hidrolik yağ kontrol edilir; lastikler her binişte kontrol edilir. Araca binince önce yakıt/LPG kokusuna bakılır, koku varsa kontak çevrilmez. Dik oturulur, sırt koltuğa yaslanır, koltuk başlığı arkadan çarpmalarda boynu korur, direksiyon 9-15 pozisyonunda tutulur, aynalar 90 derece ile ayarlanır. Emniyet kemeri ve hava yastığı kazayı önlemez ama ölüm ve yaralanmayı azaltır. Araç çalıştırılırken el freni çekili, vites boşta ya da P konumunda olmalı; dizelde ön ısıtma bujisinin sönmesi beklenmeli, debriyaja basılıp 10-15 saniye marş yapılmalı ve motor çalışırken asla marşa basılmamalıdır.</p>
+<!-- BODY_END -->
+
+    <div class="quiz-cta"><button class="btn-primary" onclick="openQuiz()">Kısa Testi Çöz — 5 Soru →</button></div>
+  </main>
+
+  <div class="q-overlay" id="quizModal" aria-hidden="true">
+    <div class="q-modal">
+      <div class="q-head"><span>Kısa Test — Araç Kullanmaya Hazırlık</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
+      <div class="q-body" id="quizBody"></div>
+      <div class="q-foot"><span class="q-score" id="quizScore"></span><button class="btn-primary" id="quizBtn" onclick="submitQuiz()">Sonucu Gör</button></div>
+    </div>
+  </div>
+
+  <script>
+    const QUIZ=[
+      {q:"Arkadan gelen araçları daha geniş görebilmek ve kör noktaları en aza indirmek için aynalar kaç derece ile ayarlanmalıdır?",o:["45 derece","60 derece","90 derece","120 derece"],c:2},
+      {q:"Lastikler ne zaman kontrol edilmelidir?",o:["Ayda bir","Araca her binildiğinde","Yılda bir","Sadece uzun yolda"],c:1},
+      {q:"Arkadan çarpma şeklindeki kazalarda boyun zedelenmesini aşağıdakilerden hangisi önler?",o:["Emniyet kemeri","Koltuk başlığı","Hava yastığı","Direksiyon"],c:1},
+      {q:"Direksiyon hakimiyeti için en güvenli ve rahat tutuş pozisyonu saat rakamlarına göre hangisidir?",o:["12-6","9-15","10-14","8-16"],c:1},
+      {q:"Aracı çalıştırma ve hazırlık ile ilgili aşağıdakilerden hangisi yanlıştır?",o:["Emniyet kemeri ve hava yastığı kazayı önler","Araç içinde LPG kokusu varsa kontak çevrilmez","Ön ısıtma bujisi yalnızca dizel araçlarda bulunur","Motor çalışırken marş yapılırsa marş dişlisi zarar görür"],c:0}
+    ];
+    const L=["A","B","C","D"];
+    let qAns=[null,null,null,null,null], qDone=false;
+    function qBodyHTML(){return QUIZ.map((it,i)=>{const opts=it.o.map((o,j)=>{let cls="q-opt";if(qDone){if(j===it.c)cls+=" correct";else if(j===qAns[i])cls+=" wrong";}else if(qAns[i]===j)cls+=" sel";const click=qDone?"":`onclick="pickQ(${i},${j})"`;return `<div class="${cls}" ${click}><span class="l">${L[j]}</span><span>${o}</span></div>`;}).join("");return `<div class="q-item"><p class="q-q"><span class="qn">${i+1}.</span>${it.q}</p><div class="q-opts">${opts}</div></div>`;}).join("");}
+    function renderQuiz(){const body=document.getElementById("quizBody");body.className="q-body"+(qDone?" q-done":"");body.innerHTML=qBodyHTML();const btn=document.getElementById("quizBtn"),sc=document.getElementById("quizScore");if(qDone){const s=QUIZ.filter((it,i)=>qAns[i]===it.c).length;sc.textContent=s+" / 5 doğru";btn.textContent="Tekrar Çöz";}else{sc.textContent="";btn.textContent="Sonucu Gör";}}
+    function openQuiz(){qAns=[null,null,null,null,null];qDone=false;renderQuiz();document.getElementById("quizModal").classList.add("show");document.body.style.overflow="hidden";document.getElementById("quizBody").scrollTop=0;}
+    function closeQuiz(){document.getElementById("quizModal").classList.remove("show");document.body.style.overflow="";}
+    function pickQ(i,j){if(qDone)return;qAns[i]=j;renderQuiz();}
+    function submitQuiz(){if(qDone){openQuiz();return;}qDone=true;renderQuiz();document.getElementById("quizBody").scrollTop=0;}
+    document.getElementById("quizModal").addEventListener("click",e=>{if(e.target.id==="quizModal")closeQuiz();});
+    document.addEventListener("keydown",e=>{if(e.key==="Escape")closeQuiz();});
+  </script>
+  <script src="/lessons-nav.js"></script>
+</body>
+</html>
