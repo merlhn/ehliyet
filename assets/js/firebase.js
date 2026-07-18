@@ -25,7 +25,7 @@ const firebaseConfig = {
   //      - Authorized JavaScript origins:  https://ehliyet.digital
   //      - Authorized redirect URIs:       https://ehliyet.digital/__/auth/handler
   // Bunlardan birini değiştirmeden önce diğer ikisini doğrula.
-  authDomain: 'ehliyet.digital',
+  authDomain: 'ehliyet-52d4d.firebaseapp.com',
   projectId: 'ehliyet-52d4d',
   storageBucket: 'ehliyet-52d4d.firebasestorage.app',
   messagingSenderId: '40944921621',
