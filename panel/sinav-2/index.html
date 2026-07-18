@@ -17,7 +17,7 @@
   *{box-sizing:border-box}
   body{margin:0;font-family:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fafafa;-webkit-font-smoothing:antialiased;letter-spacing:-.011em}
   header{left:var(--pk-yan,248px);background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--line);
-    padding:12px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;position:sticky;top:0;z-index:20}
+    height:60px;padding:0 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;position:sticky;top:0;z-index:20}
   .logo{font-weight:600;color:#000;letter-spacing:-.01em;font-size:16px}
   .logo span{background:#000;color:#fff;padding:2px 6px;border-radius:5px;margin-left:2px}
   .h-title{color:#000;font-weight:600;letter-spacing:-.01em;position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap}
@@ -114,7 +114,7 @@
 
   /* ---------- Mobil (tablet ve altı) ---------- */
   @media(max-width:600px){
-    header{gap:8px 6px;padding:8px 12px}
+    header{height:auto;gap:8px 6px;padding:8px 12px}
     .h-title{font-size:13px;flex-basis:100%;order:-1;line-height:1.25;position:static;transform:none;left:auto;white-space:normal;text-align:center}
     .h-meta{display:contents}
     .exit-btn{order:1;padding:5px 12px;font-size:13px;line-height:18px}
