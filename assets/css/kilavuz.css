@@ -1,3 +1,9 @@
+/* Yan menünün yeri ilk boyamada ayrılır. panel-kabuk.js ertelenmiş bir modül
+   olduğu için burası olmazsa sayfa önce tam genişlikte çizilip sonra sağa kayar.
+   Bu dosya yalnızca /panel/ altındaki kılavuz sayfalarında kullanılıyor. */
+  body{margin-left:248px}
+  @media(max-width:820px){body{margin-left:0}}
+
   :root{--navy:#000000;--navy-d:#333333;--navy-l:#f5f5f5;--ink:#08090a;--muted:#6a6f76;--line:#ececec}
   *{box-sizing:border-box}
   body{margin:0;font-family:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fafafa;line-height:1.55;-webkit-font-smoothing:antialiased;letter-spacing:-.011em}
@@ -39,8 +45,7 @@
   .confirm-btn span{display:block;padding-right:30px;line-height:1.35}
 
   /* Modal */
-  /* Panel içinde açıldığında yan menünün üstüne binmemeli; --pk-yan panel kabuğu tarafından tanımlanır, panel dışında 0 kalır. */
-  .modal-overlay{position:fixed;inset:0 0 0 var(--pk-yan,0px);background:rgba(15,20,40,.6);display:flex;align-items:center;justify-content:center;padding:20px;z-index:50}
+  .modal-overlay{position:fixed;inset:0;background:rgba(15,20,40,.6);display:flex;align-items:center;justify-content:center;padding:20px;z-index:100}
   .modal{background:#fff;border-radius:14px;width:min(940px,100%);max-height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.28)}
   .modal-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px 14px 24px;border-bottom:1px solid var(--line);font-weight:600;color:var(--navy);font-size:18px;letter-spacing:-.02em;flex-shrink:0;background:#fff}
   .modal-close{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;color:var(--muted);text-decoration:none;font-size:22px;line-height:1;flex-shrink:0}

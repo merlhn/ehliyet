@@ -11,7 +11,7 @@ const CSS = `
 :root{--pk-yan:248px;--pk-line:#ececec}
 body{margin-left:var(--pk-yan)}
 .pk-yan{position:fixed;inset:0 auto 0 0;width:var(--pk-yan);border-right:1px solid var(--pk-line);
-  display:flex;flex-direction:column;background:#fff;z-index:60;
+  display:flex;flex-direction:column;background:#fff;z-index:30;
   font-family:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;letter-spacing:-.011em}
 .pk-marka{display:flex;align-items:center;gap:10px;height:60px;padding:0 18px;
   border-bottom:1px solid var(--pk-line);flex-shrink:0;text-decoration:none;color:#08090a}
@@ -69,13 +69,24 @@ function cikisOnayi(e) {
   if (!devam) e.preventDefault();
 }
 
+// Menü, oturum kontrolünden BAĞIMSIZ olarak hemen kurulur.
+// Firebase'i beklersek sayfa önce menüsüz çizilir, oturum çözülünce body'ye
+// 248px kenar boşluğu gelir ve içerik sağa kayar — kullanıcı bunu "sayfa yeniden
+// render ediliyor" olarak görüyor. Menü anında basılınca kayma olmuyor.
 const stil = document.createElement('style');
 stil.textContent = CSS;
 document.head.appendChild(stil);
 
-kullaniciDinle((user) => {
-  if (!user) { location.replace('/'); return; }
+function menuyuKur() {
   if (document.querySelector('.pk-yan')) return;
   document.body.insertAdjacentHTML('afterbegin', menuHTML());
   document.querySelectorAll('.pk-yan a').forEach(a => a.addEventListener('click', cikisOnayi));
+}
+
+if (document.body) menuyuKur();
+else document.addEventListener('DOMContentLoaded', menuyuKur, { once: true });
+
+// Oturum kontrolü ayrı yürür; yalnızca yönlendirmeden sorumlu.
+kullaniciDinle((user) => {
+  if (!user) location.replace('/');
 });
