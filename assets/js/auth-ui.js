@@ -93,6 +93,9 @@ function girisGoster(slot) {
     etiket.textContent = 'Açılıyor…';
     try {
       await girisYap();
+      // Giriş yapan kullanıcı panele iner; public site giriş yapmamışlar için vitrindir.
+      location.href = '/panel/';
+      return;
     } catch (err) {
       // Kullanıcı pencereyi kapattıysa bu bir hata değil, sessizce eski hale dön.
       if (err?.code !== 'auth/popup-closed-by-user' && err?.code !== 'auth/cancelled-popup-request') {
@@ -117,7 +120,7 @@ function kullaniciGoster(slot, user) {
     </button>
     <div class="auth-menu" role="menu">
       <div class="mail">${esc(user.email || '')}</div>
-      <a href="/profil/">Profilim</a>
+      <a href="/panel/">Panelim</a>
       <div class="ayrac"></div>
       <button type="button" data-cikis>Çıkış yap</button>
     </div>`;

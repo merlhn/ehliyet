@@ -4,14 +4,6 @@ Açık işler ve bekleyen kararlar. Tamamlananlar en alta taşınır.
 
 ---
 
-## Devam eden
-
-### `ehliyet.digital` DNS yayılması
-GoDaddy'de A kaydı Vercel'in IP'sine (`216.198.79.1`) çevrildi, yayılma bekleniyor.
-Domain canlıya çıkana kadar aşağıdaki iki iş bloke.
-
----
-
 ## Sıradaki
 
 ### 1. Google giriş ekranında kendi domainimiz görünsün
@@ -21,7 +13,7 @@ Domain canlıya çıkana kadar aşağıdaki iki iş bloke.
 - `vercel.json` içindeki `/__/auth/*` rewrite'ı zaten hazır
 
 **İkisi birlikte değiştirilmeli.** Tek başına `authDomain`'i değiştirmek girişi tamamen kırar.
-**Bloke:** DNS yayılması.
+`/__/auth/handler` canlıda test edildi, proxy çalışıyor — değişiklik yapılabilir durumda.
 
 ### 2. OAuth onay ekranı kimliği
 Google Cloud Console → APIs & Services → OAuth consent screen → Branding
@@ -33,7 +25,6 @@ Google Cloud Console → APIs & Services → OAuth consent screen → Branding
 - Terms of service: `https://ehliyet.digital/kullanim-sartlari/`
 
 Son ikisi Google'ın doğrulama sürecinde de isteniyor.
-**Bloke:** DNS yayılması (URL'ler canlı olmalı).
 
 ### 3. Gizlilik metnini KVKK'ya göre güncelle
 Artık kişisel veri işliyoruz; mevcut metin bunu kapsamıyor.
@@ -43,16 +34,30 @@ Artık kişisel veri işliyoruz; mevcut metin bunu kapsamıyor.
 - Verinin nerede tutulduğu (Firebase / Google Cloud, `eur3` Avrupa)
 - Silme talebi nasıl yapılır
 
-### 4. Sınav sonucunu profile kaydet
-Sınav bitince `users/{uid}/denemeler` altına yaz. Profil sayfasındaki geçmiş tablosu
-bu veriyi okumaya hazır, şu an boş dönüyor.
+### 4. Panelde profil ekranı
+`/panel/` içinde profil şu an "yakında geliştirilecek" yer tutucusu. Eski `/profil/`
+sayfası silindi, yeniden tasarlanacak. Sınav geçmişi tablosu da buraya taşınacak.
 
-### 5. Sınav sayfalarına giriş zorunluluğu
+### 5. Panelde Settings ekranı
+Yer tutucu durumda. İçeriği belirlenmedi.
+
+### 6. Sınav sonucunu kaydet
+Sınav bitince `users/{uid}/denemeler` altına yaz. Okuma tarafı (`denemeleriGetir`)
+hazır, panelde gösterilecek yer profil ekranı olacak.
+
+### 7. Logo entegrasyonu
+`assets/img/marka/logo.png` panelde kullanılıyor. Eksikler:
+- Favicon seti — logo ince çizgili ve detaylı, 16-32px'te okunmuyor; sadeleştirilmiş
+  varyant gerekiyor
+- Public site header'ında marka görünmüyor, sadece nav var
+- OAuth onay ekranı için kare logo yüklenmesi
+
+### 8. Sınav sayfalarına giriş zorunluluğu
 `deneme-sinavlari/sinav-N/` ve kılavuz sayfalarına `auth-ui` bilerek eklenmedi
 (header'ları farklı: sayaç, "Sınavı Bitir"). Giriş yapmamış kullanıcı sınava
 başlayamamalı.
 
-### 6. Ücretli içeriğin korunması — **kritik**
+### 9. Ücretli içeriğin korunması — **kritik**
 Şu an soru bankaları herkese açık: `https://ehliyet.digital/assets/js/questions-2.js`
 adresini açan 50 soruyu cevaplarıyla görür. Ödeme eklenmeden önce mutlaka çözülmeli,
 yoksa satılan şey zaten bedava indirilebilir durumda.
@@ -99,7 +104,10 @@ gezinmeden çıkarır, ama linke sahip olan herkes açar.
   varlıklar `/assets/` altında, URL'ler kebab-case ve ASCII
 - Proje `ehliyet.digital` olarak adlandırıldı, Vercel'e deploy edildi
 - Firebase kuruldu: Google girişi, Firestore (`eur3`), güvenlik kuralları
-- Header'a giriş/profil menüsü, `/profil/` sayfası (sınav geçmişi tablosu dahil)
+- Header'a Google ile giriş butonu ve profil menüsü
+- `ehliyet.digital` alan adı bağlandı; www kalıcı olarak apex'e yönleniyor
+- Header düzeni içerik kutusuyla hizalandı, mobil sıkışma giderildi
+- Giriş sonrası panel (`/panel/`): yan menü, üst bar, deneme sınavları listesi
 
 ---
 
