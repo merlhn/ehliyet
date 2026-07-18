@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{COURSE}} — Konu {{KONU_NO}}: {{KONU_AD}}</title>
+<title>Trafik Adabı — Konu 2: Trafikte İletişim</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -62,28 +62,50 @@
 
   <main>
     <div class="ders-meta">
-      <div><span class="k">Ders</span> : <b>{{COURSE}}</b></div>
-      <div><span class="k">Konu - {{KONU_NO}}</span> : <b>{{KONU_AD}}</b></div>
+      <div><span class="k">Ders</span> : <b>Trafik Adabı</b></div>
+      <div><span class="k">Konu - 2</span> : <b>Trafikte İletişim</b></div>
     </div>
-    <p class="lead">{{LEAD}}</p>
+    <p class="lead">Trafik, sürücülerin ve yayaların sürekli birbiriyle iletişim kurduğu bir ortamdır. Bu iletişim çoğunlukla sözsüzdür; sinyaller, farlar, korna, beden dili ve göz teması yoluyla gerçekleşir. Sağlıklı bir iletişim, kazaların önlenmesinde ve trafiğin akıcılığında büyük rol oynar.</p>
 
-<!-- BODY_START -->
-{{BODY}}
-<!-- BODY_END -->
+    <h2>Trafikte iletişim araçları</h2>
+    <p>Sürücüler niyetlerini karşı tarafa çeşitli araçlarla bildirir. <b>Dönüş sinyali (sinyal lambası)</b>, döneceğinizi veya şerit değiştireceğinizi önceden haber verir ve en temel iletişim aracıdır. <b>Korna</b>, yalnızca gerekli durumlarda uyarı amacıyla kullanılmalıdır; öfke veya sabırsızlık aracı olarak kullanılması yanlıştır. <b>Farlar</b> (özellikle selektör), gece görüşü sağlamanın yanında karşı tarafı uyarmaya da yarar; ancak uzun farla karşı sürücünün gözünü almak hatalı bir davranıştır. <b>El-kol işaretleri</b> ve <b>göz teması</b> ise doğrudan, kişisel iletişim biçimleridir.</p>
+
+    <h2>Beden dili ve göz teması</h2>
+    <p>Trafikte özellikle yayalarla kurulan iletişimde <b>göz teması</b> çok etkilidir. Bir yayanın karşıya geçmek isteyip istemediğini, bir sürücünün size yol verip vermeyeceğini çoğu zaman göz teması ve beden dilinden anlarız. Karşımızdaki kişinin niyetini doğru okumak, ani ve tehlikeli durumların önüne geçer. Bu yüzden iyi bir sürücü, çevresindeki insanların beden dilini dikkatle izler ve kendi niyetini de açık biçimde belli eder.</p>
+
+    <h2>Empati ile iletişim</h2>
+    <p><b>Empati</b>, kendini karşıdaki sürücünün ya da yayanın yerine koyabilmektir. Trafikte empati kuran bir sürücü, acele eden birine yol verir, hata yapan birini hoşgörüyle karşılar ve çevresindekilerin de kendisi gibi bir an önce hedefine ulaşmak istediğini unutmaz. Empati, gerginliği azaltır ve iletişimi olumlu hâle getirir.</p>
+
+    <h2>Başarılı iletişim için</h2>
+    <p>Trafik adabı açısından başarılı iletişim kurmak isteyen bir sürücü; <b>insanların değişebileceğine inanmalı</b>, karşısındakini önyargısız biçimde dinlemeli ve tek bir olaya bakarak kişiyi tümüyle yargılamaktan kaçınmalıdır. Buna karşılık dinlerken sürekli değerlendirme eğiliminde olmak, karşısındakini sevmediğinde iletişime kapanmak ya da birini anlamak için tek bir olayı yeterli görmek iletişimi engelleyen tutumlardır. Ayrıca kornayı öfkeyle çalmak, el-kol hareketleriyle saldırganlık göstermek ve uzun farla göz almak yanlış iletişim biçimleridir.</p>
+
+    <h2>Kısaca</h2>
+    <p>Trafikte iletişim büyük ölçüde sözsüzdür; sinyal, korna, far, beden dili ve göz teması yoluyla kurulur. Sinyal niyetimizi bildirir, korna yalnızca uyarı için kullanılır, göz teması özellikle yayalarla iletişimde etkilidir. Empati kurmak gerginliği azaltır; başarılı iletişim için insanların değişebileceğine inanmak ve önyargısız dinlemek gerekir. Kornayı öfkeyle çalmak ve saldırgan işaretler yapmak ise yanlış iletişimdir.</p>
 
     <div class="quiz-cta"><button class="btn-primary" onclick="openQuiz()">Kısa Testi Çöz — 5 Soru →</button></div>
   </main>
 
   <div class="q-overlay" id="quizModal" aria-hidden="true">
     <div class="q-modal">
-      <div class="q-head"><span>Kısa Test — {{KONU_AD}}</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
+      <div class="q-head"><span>Kısa Test — Trafikte İletişim</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
       <div class="q-body" id="quizBody"></div>
       <div class="q-foot"><span class="q-score" id="quizScore"></span><button class="btn-primary" id="quizBtn" onclick="submitQuiz()">Sonucu Gör</button></div>
     </div>
   </div>
 
   <script>
-    const QUIZ={{QUIZ_JSON}};
+    const QUIZ=[
+      {q:"Döneceğini veya şerit değiştireceğini diğer sürücülere bildirmek için ne kullanılır?",
+       o:["Korna","Dönüş sinyali","Uzun far","El sallamak"],c:1},
+      {q:"Korna trafikte nasıl kullanılmalıdır?",
+       o:["Öfkeyi belli etmek için","Sadece gerekli uyarı amacıyla","Selamlaşmak için sürekli","Şerit açtırmak için"],c:1},
+      {q:"Trafik adabı açısından başarılı iletişim kurmak isteyen sürücü hangisini yapmalıdır?",
+       o:["İnsanların değişebileceğine inanmalı","Sevmediğinde iletişime kapanmalı","Tek bir olaya bakıp yargılamalı","Dinlerken sürekli değerlendirmeli"],c:0},
+      {q:"Özellikle yayalarla iletişimde en etkili yöntem hangisidir?",
+       o:["Korna çalmak","Göz teması kurmak","Farları yakmak","Hızlanmak"],c:1},
+      {q:"Trafikte empati kurmak ne anlama gelir?",
+       o:["Kendini diğer sürücü ve yayanın yerine koymak","Herkesten hızlı gitmek","Kurallara uymamak","Kimseye yol vermemek"],c:0}
+    ];
     const L=["A","B","C","D"];
     let qAns=[null,null,null,null,null], qDone=false;
     function qBodyHTML(){return QUIZ.map((it,i)=>{const opts=it.o.map((o,j)=>{let cls="q-opt";if(qDone){if(j===it.c)cls+=" correct";else if(j===qAns[i])cls+=" wrong";}else if(qAns[i]===j)cls+=" sel";const click=qDone?"":`onclick="pickQ(${i},${j})"`;return `<div class="${cls}" ${click}><span class="l">${L[j]}</span><span>${o}</span></div>`;}).join("");return `<div class="q-item"><p class="q-q"><span class="qn">${i+1}.</span>${it.q}</p><div class="q-opts">${opts}</div></div>`;}).join("");}

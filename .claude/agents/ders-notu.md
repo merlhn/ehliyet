@@ -19,20 +19,21 @@ Sitede 4 ana ders var. Her birinin sabit bir klasör slug'ı ve ana sayfada bir 
 
 | Ders (görünen ad) | Klasör slug'ı | Akordeon durumu |
 |---|---|---|
-| Araç Tekniği (Motor) | `arac_teknigi` | henüz boş olabilir |
-| Trafik ve Çevre | `trafik_ve_cevre` | dolu |
-| İlk Yardım | `ilk_yardim` | dolu |
-| Trafik Adabı | `trafik_adabi` | dolu |
+| Araç Tekniği (Motor) | `arac-teknigi` | dolu |
+| Trafik ve Çevre | `trafik-ve-cevre` | dolu |
+| İlk Yardım | `ilk-yardim` | dolu |
+| Trafik Adabı | `trafik-adabi` | dolu |
 
 Kullanıcı hangi derse ekleneceğini söyler ("İlk Yardım'a", "Trafik Adabı 6. konu" gibi). Emin değilsen, transkriptin içeriğine bakarak en uygun dersi seç ve seçimini çıktı özetinde belirt.
 
 ## URL / klasör yapısı
 Her ders notu şu yapıda **ayrı bir index.html** olur (temiz URL için):
 ```
-/[ders_slug]/ders_[N]/[konu_slug]/index.html
+/dersler/[ders_slug]/[konu_slug]/index.html
 ```
-- `N` = konu numarası (kullanıcı verir; vermezse o dersteki mevcut en büyük `ders_N`'in bir fazlası).
-- `konu_slug` = konu adının sadeleştirilmiş hâli: küçük harf, boşluklar `_`, Türkçe karakterler korunabilir ama tercihen ASCII'ye yakın tut (ç→c, ş→s, ğ→g, ı→i, ö→o, ü→u, İ→i). Kısa ve okunur olsun. Örn. "Kırık, Çıkık, Burkulma" → `kirik_cikik_burkulma`.
+- Konu numarası **URL'de yer almaz**. Sıralama tek kaynaktan, `assets/js/lessons-nav.js` içindeki `COURSES` dizisinden gelir. Böylece araya ders eklendiğinde ya da sıra değiştiğinde URL'ler yalan söylemez.
+- `N` = konu numarası (kullanıcı verir; vermezse o dersin `COURSES` içindeki en büyük `n` değerinin bir fazlası). Sadece görüntüleme ve sıralama için kullanılır.
+- `konu_slug` = konu adının sadeleştirilmiş hâli: küçük harf, boşluklar `-`, **Türkçe karakterler mutlaka ASCII'ye çevrilir** (ç→c, ş→s, ğ→g, ı→i, ö→o, ü→u, İ→i). URL'de Türkçe karakter bırakma; tarayıcı bunları yüzde-kodlar ve paylaşımda/aramada sorun çıkarır. Örn. "Kırık, Çıkık, Burkulma" → `kirik-cikik-burkulma`.
 
 ## Şablon
 Hazır HTML şablonu: `$ROOT/.claude/agents/ders-notu-template.html`
@@ -45,7 +46,7 @@ Bu şablonda `{{...}}` yer tutucuları vardır. **CSS ve JS'e asla dokunma** —
 - `{{BODY}}` — asıl ders notu (aşağıdaki kurallara göre `<h2>` + `<p>` blokları).
 - `{{QUIZ_JSON}}` — 5 soruluk quiz dizisi (aşağıdaki format).
 
-Doğrulama şablonu istersen mevcut örnek: `$ROOT/ilk_yardim/ders_1/ilk_yardim_ve_acil_tedavi/index.html`.
+Doğrulama şablonu istersen mevcut örnek: `$ROOT/dersler/ilk-yardim/ilk-yardim-ve-acil-tedavi/index.html`.
 
 ## Ders notu (BODY) yazım kuralları — ÇOK ÖNEMLİ
 Kullanıcının kesin ve tekrarlanan talebi:
@@ -66,20 +67,23 @@ JS dizisi olarak yaz; string içindeki çift tırnakları kaçır ya da tek tır
 
 ## Adım adım iş akışı
 1. `cd "$ROOT"`. Girdiyi çöz: ders, konu adı, konu no, transkript var mı?
-2. Konu no verilmemişse: `ls -d $ROOT/[ders_slug]/ders_*/ 2>/dev/null | sort -V` ile mevcut en büyük numarayı bul, +1 yap.
-3. `konu_slug` üret. Hedef klasörü oluştur: `mkdir -p "$ROOT/[ders_slug]/ders_[N]/[konu_slug]"`.
+2. Konu no verilmemişse: `assets/js/lessons-nav.js` içindeki ilgili dersin `lessons` dizisinde en büyük `n`'i bul, +1 yap.
+3. `konu_slug` üret (ASCII, kebab-case). Hedef klasörü oluştur: `mkdir -p "$ROOT/dersler/[ders_slug]/[konu_slug]"`.
 4. Şablonu oku, yer tutucuları doldur, `index.html` olarak yaz. **CSS/JS'i değiştirme.**
-5. Ana sayfa akordeonuna bağlantı ekle (aşağıya bak).
-6. Doğrula: dosya oluştu mu, akordeonda link göründü mü (grep), quiz'de tam 5 soru var mı.
+5. Üç yere kayıt ekle — üçü de gerekli, biri eksik kalırsa ders yarım görünür:
+   - `index.html` ana sayfa akordeonu (aşağıya bak)
+   - `assets/js/lessons-nav.js` → ilgili dersin `lessons` dizisine `{"n":N,"title":"...","url":"/dersler/[ders_slug]/[konu_slug]/"}` (her ders sayfasındaki soldaki içindekiler bu dosyadan gelir)
+   - `assets/js/search-index.js` → `{"course":"...","num":N,"title":"...","url":"...","lead":"..."}` (site içi arama bu dosyadan beslenir)
+6. Doğrula: dosya oluştu mu, üç kayıt da eklendi mi (grep), quiz'de tam 5 soru var mı. Mümkünse yeni URL'e HTTP isteği atıp 200 döndüğünü gör.
 7. Çıktı özetini ver (aşağıdaki format).
 
 ## Ana sayfaya (akordeon) ekleme
 Ana sayfa: `$ROOT/index.html`. Her dersin akordeon panelinde şu formatta `<a>` satırları var:
 ```html
-<a href="/[ders_slug]/ders_[N]/[konu_slug]/"><span class="acc-n">NN</span> Konu Görünen Adı</a>
+<a href="/dersler/[ders_slug]/[konu_slug]/"><span class="acc-n">NN</span> Konu Görünen Adı</a>
 ```
 - `NN` = iki haneli konu numarası (`08`, `11` gibi — tek haneliyse başına 0).
-- İlgili dersin son `<a>` satırını bul (`grep -n "[ders_slug]/ders_" index.html`), yeni satırı onun hemen ardına, kapanış `</div></div>`'den ÖNCE ekle.
+- İlgili dersin son `<a>` satırını bul (`grep -n "/dersler/[ders_slug]/" index.html`), yeni satırı onun hemen ardına, kapanış `</div></div>`'den ÖNCE ekle.
 - `Edit` yapmadan önce dosyayı `Read` et (harness gereği). Sıralamayı numaraya göre koru.
 - Eğer o ders akordeonu boşsa (ör. "Konular çok yakında eklenecek." placeholder'ı varsa), o placeholder'ı kaldırıp ilk gerçek linki koy.
 
@@ -89,8 +93,8 @@ Site `python3 -m http.server 8000 --bind 127.0.0.1` ile `$ROOT`'tan servis edili
 ## Çıktı özeti formatı
 İşin sonunda kısa bir özet dön:
 - Eklenen ders / konu no / konu adı
-- Oluşturulan dosya yolu ve public URL (`/[ders_slug]/ders_[N]/[konu_slug]/`)
-- Ana sayfaya link eklendi mi
+- Oluşturulan dosya yolu ve public URL (`/dersler/[ders_slug]/[konu_slug]/`)
+- Üç kayıt da eklendi mi (ana sayfa akordeonu, lessons-nav.js, search-index.js)
 - Kaynak transkriptten mi yoksa standart müfredattan mı üretildi
 - Kısaca hangi sınav-kritik noktaların işlendiği (2-3 madde)
 

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{COURSE}} — Konu {{KONU_NO}}: {{KONU_AD}}</title>
+<title>Trafik Adabı — Konu 4: Öfke, Stres ve Dikkat Yönetimi</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -62,28 +62,50 @@
 
   <main>
     <div class="ders-meta">
-      <div><span class="k">Ders</span> : <b>{{COURSE}}</b></div>
-      <div><span class="k">Konu - {{KONU_NO}}</span> : <b>{{KONU_AD}}</b></div>
+      <div><span class="k">Ders</span> : <b>Trafik Adabı</b></div>
+      <div><span class="k">Konu - 4</span> : <b>Öfke, Stres ve Dikkat Yönetimi</b></div>
     </div>
-    <p class="lead">{{LEAD}}</p>
+    <p class="lead">Sürücünün ruh hâli, trafik güvenliğini doğrudan etkiler. Öfke, stres ve dikkat dağınıklığı; karar verme yeteneğini bozarak kaza riskini büyük ölçüde artırır. Bu bölümde bu olumsuz durumların trafikteki etkilerini ve nasıl yönetileceğini öğreneceğiz.</p>
 
-<!-- BODY_START -->
-{{BODY}}
-<!-- BODY_END -->
+    <h2>Trafikte öfke</h2>
+    <p>Trafikte öfke, en tehlikeli sürücü davranışlarından birine, yani <b>saldırgan sürücülüğe</b> yol açar. Öfkeli bir sürücü sağlıklı düşünemez; karar verme süreci bozulur, gereksiz risklere girer ve çevresindeki herkesi tehlikeye atar. Sürekli korna çalmak, çok yakından takip etmek (sıkı takip), ani ve gereksiz şerit değiştirmek, öfkeli el-kol hareketleri yapmak öfkenin trafikteki dışa vurumudur. Bu davranışlar diğer sürücülerin de <b>dikkatinin dağılmasına ve paniğe kapılmalarına</b> sebep olur.</p>
+
+    <h2>Öfke yönetimi</h2>
+    <p>Öfke, kontrol edilebilen bir duygudur. Öfkelendiğinizi hissettiğinizde yapılması gereken ilk şey <b>sakinleşmektir</b>: birkaç derin nefes almak, olayı büyütmemek ve öfkeyi araca yansıtmamak gerekir. Karşı tarafın hatasını kişisel bir saldırı olarak algılamamak, empati kurmak ve “herkes hata yapabilir” diye düşünmek öfkeyi yatıştırır. Öfkesini yönetebilen sürücü hem kendini hem de çevresindekileri korur.</p>
+
+    <h2>Stres ve acelecilik</h2>
+    <p>Trafikte yaşanan yoğunluk, gecikme korkusu ve acele etme isteği <b>stres</b> oluşturur. Stresli ve aceleci bir sürücü daha çok hata yapar; kırmızı ışığı zorlar, güvenli takip mesafesini ihmal eder, hız sınırlarını aşar. Bu yüzden yola çıkmadan önce yeterli zaman ayırmak, planlı olmak ve “geç kalmaktansa güvenli varmak daha önemlidir” anlayışını benimsemek stresin olumsuz etkilerini azaltır.</p>
+
+    <h2>Dikkat ve dikkat dağınıklığı</h2>
+    <p>Güvenli sürüş, sürekli ve yüksek bir <b>dikkat</b> ister. Dikkati dağıtan en önemli etkenler <b>telefon kullanımı, yorgunluk ve uykusuzluktur</b>. Direksiyon başında telefonla ilgilenmek, gözü ve zihni yoldan uzaklaştırır; yorgun ve uykusuz sürüş ise refleksleri zayıflatır ve tepki süresini uzatır. Bu nedenle dinlenmiş olarak yola çıkmak, dikkati sürekli trafiğe vermek ve dikkat dağıtan davranışlardan kaçınmak hayati önemdedir.</p>
+
+    <h2>Kısaca</h2>
+    <p>Öfke, karar vermeyi bozarak saldırgan sürücülüğe yol açar; sürekli korna, sıkı takip ve ani şerit değiştirme gibi davranışlar diğer sürücüleri paniğe düşürür. Öfke anında sakinleşmek, derin nefes almak ve empati kurmak gerekir. Stres ve acelecilik hata oranını artırır; planlı olmak bunu azaltır. Telefon, yorgunluk ve uykusuzluk dikkati dağıtır; güvenli sürüş için dinlenmiş olmak ve dikkati sürekli trafiğe vermek şarttır.</p>
 
     <div class="quiz-cta"><button class="btn-primary" onclick="openQuiz()">Kısa Testi Çöz — 5 Soru →</button></div>
   </main>
 
   <div class="q-overlay" id="quizModal" aria-hidden="true">
     <div class="q-modal">
-      <div class="q-head"><span>Kısa Test — {{KONU_AD}}</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
+      <div class="q-head"><span>Kısa Test — Öfke, Stres ve Dikkat</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
       <div class="q-body" id="quizBody"></div>
       <div class="q-foot"><span class="q-score" id="quizScore"></span><button class="btn-primary" id="quizBtn" onclick="submitQuiz()">Sonucu Gör</button></div>
     </div>
   </div>
 
   <script>
-    const QUIZ={{QUIZ_JSON}};
+    const QUIZ=[
+      {q:"Trafikte öfke sürücüyü nasıl etkiler?",
+       o:["Dikkatini artırır","Karar vermeyi bozar ve kaza riskini artırır","Refleksleri güçlendirir","Hiçbir etkisi yoktur"],c:1},
+      {q:"Sürekli korna çalmak, çok yakından takip etmek ve ani şerit değiştirmek diğer sürücülerde ne yaratır?",
+       o:["Güven duygusu","Dikkat dağınıklığı ve panik","Rahatlık","Hız kazandırır"],c:1},
+      {q:"Aşağıdakilerden hangisi dikkati en çok dağıtan etkenlerdendir?",
+       o:["Dinlenmiş olmak","Telefon kullanımı ve yorgunluk","Yavaş gitmek","Sinyal vermek"],c:1},
+      {q:"Trafikte öfkelenen bir sürücünün öncelikle yapması gereken nedir?",
+       o:["Kornaya asılmak","Sakinleşmek ve öfkeyi araca yansıtmamak","Hızlanmak","Sıkı takip yapmak"],c:1},
+      {q:"Uykusuz ve yorgun araç kullanmak neyi olumsuz etkiler?",
+       o:["Yakıt tüketimini","Dikkat ve refleksleri","Aracın hızını","Lastik ömrünü"],c:1}
+    ];
     const L=["A","B","C","D"];
     let qAns=[null,null,null,null,null], qDone=false;
     function qBodyHTML(){return QUIZ.map((it,i)=>{const opts=it.o.map((o,j)=>{let cls="q-opt";if(qDone){if(j===it.c)cls+=" correct";else if(j===qAns[i])cls+=" wrong";}else if(qAns[i]===j)cls+=" sel";const click=qDone?"":`onclick="pickQ(${i},${j})"`;return `<div class="${cls}" ${click}><span class="l">${L[j]}</span><span>${o}</span></div>`;}).join("");return `<div class="q-item"><p class="q-q"><span class="qn">${i+1}.</span>${it.q}</p><div class="q-opts">${opts}</div></div>`;}).join("");}

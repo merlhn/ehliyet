@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Araç Tekniği (Motor) — Konu 1: Motor Nedir?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--fg:#08090a;--muted:#6a6f76;--line:#ececec}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--fg);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.75;letter-spacing:-.011em}
+  a{color:inherit}
+  header{display:flex;align-items:center;gap:26px;height:64px;padding:0 28px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(10px);z-index:20}
+  .nav{display:flex;gap:24px}
+  .nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:450}
+  .nav a:hover{color:#08090a}
+  main{max-width:960px;margin:0 auto;padding:52px 24px 96px}
+  .ders-meta{margin:0 0 24px;font-size:15.5px;line-height:1.7;color:var(--muted)}
+  .ders-meta .k{display:inline-block;min-width:104px;font-family:'Geist Mono',monospace;font-size:13.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);vertical-align:top}
+  .ders-meta b{color:#08090a;font-weight:600}
+  .lead{font-size:14px;color:var(--muted);line-height:1.6;margin:0 0 8px}
+  h2{font-size:19px;font-weight:600;letter-spacing:-.025em;line-height:1.2;margin:42px 0 10px}
+  p{margin:16px 0;font-size:12.5px}
+  b{font-weight:600}
+  .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#08090a;color:#fff;border:1px solid #08090a;font-family:inherit;font-weight:500;font-size:15px;border-radius:999px;padding:13px 24px;cursor:pointer;text-decoration:none;letter-spacing:-.01em}
+  .btn-primary:hover{background:#26282c;border-color:#26282c}
+  .quiz-cta{margin-top:48px}
+  .quiz-cta .btn-primary{font-size:10.5px;padding:9px 17px}
+  .q-overlay{position:fixed;inset:0;background:rgba(8,9,10,.5);display:none;align-items:center;justify-content:center;padding:16px;z-index:60}
+  .q-overlay.show{display:flex}
+  .q-modal{background:#fff;border-radius:16px;width:min(900px,100%);max-height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.28)}
+  .q-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line);font-weight:600;font-size:16px;letter-spacing:-.02em;flex-shrink:0}
+  .q-close{width:32px;height:32px;border:none;background:none;font-size:19px;color:var(--muted);cursor:pointer;border-radius:8px}
+  .q-close:hover{background:#f2f2f2;color:#08090a}
+  .q-body{overflow-y:auto;-webkit-overflow-scrolling:touch;padding:4px 24px 10px}
+  .q-item{display:grid;grid-template-columns:0.9fr 1.1fr;gap:28px;align-items:start;padding:20px 0}
+  .q-q{font-weight:500;font-size:15.5px;line-height:1.5;margin:0}
+  .q-q .qn{font-family:'Geist Mono',monospace;color:var(--muted);margin-right:8px;font-size:13px}
+  .q-opts{display:flex;flex-direction:column;gap:7px}
+  .q-opt{display:flex;align-items:center;gap:11px;border:1px solid var(--line);border-radius:10px;padding:10px 13px;font-size:14px;cursor:pointer;transition:.12s;background:#fff;user-select:none}
+  .q-opt:hover{border-color:#08090a}
+  .q-opt .l{font-family:'Geist Mono',monospace;font-weight:500;color:#08090a}
+  .q-opt.sel{background:#08090a;color:#fff;border-color:#08090a}
+  .q-opt.sel .l{color:#fff}
+  .q-done .q-opt{cursor:default}
+  .q-opt.correct{background:#effaf3;border-color:#0a7f3f;color:#0a7f3f}
+  .q-opt.correct .l{color:#0a7f3f}
+  .q-opt.wrong{background:#fdf1f1;border-color:#c72c2c;color:#c72c2c}
+  .q-opt.wrong .l{color:#c72c2c}
+  .q-foot{display:flex;align-items:center;gap:12px;padding:14px 20px;border-top:1px solid var(--line);flex-shrink:0}
+  .q-score{font-weight:600;font-size:15px}
+  .q-foot .btn-primary{margin-left:auto;font-size:14px;padding:11px 20px}
+  @media(max-width:640px){.q-item{grid-template-columns:1fr;gap:12px;padding:16px 0}header{height:58px;padding:0 18px;gap:14px}}
+</style>
+</head>
+<body>
+  <header>
+    <nav class="nav"><a href="/">Ana Sayfa</a><a href="/dersler/">Dersler</a><a href="/deneme-sinavlari/">Deneme Sınavları</a></nav>
+  </header>
+
+  <main>
+    <div class="ders-meta">
+      <div><span class="k">Ders</span> : <b>Araç Tekniği (Motor)</b></div>
+      <div><span class="k">Konu - 1</span> : <b>Motor Nedir?</b></div>
+    </div>
+    <p class="lead">Motor, araç tekniği dersinin en temel ve en çok soru gelen konusudur. Bu ilk bölümde motorun tanımını, enerji türüne, zamanına ve soğutma tipine göre çeşitlerini, dört zamanın sırasını ve benzinli ile dizel motor arasındaki kritik farkları sınav odaklı biçimde öğreneceğiz.</p>
+
+<!-- BODY_START -->
+    <h2>Motor nedir?</h2>
+    <p><b>Motor; yakıttan elde ettiği ısı enerjisini ve elektrik enerjisini mekanik enerjiye çeviren makinedir.</b> Kısacası motor, araçlarda <b>gücün kaynağıdır</b>; aracı hareket ettiren güç buradan gelir. Bu tanım neredeyse her sınavda karşınıza çıkar ve genellikle çevrilerek sorulur: bazen “ısı ve elektrik enerjisini mekanik enerjiye çeviren alet nedir?” diye, bazen de “araçlarda gücün kaynağı hangisidir?” biçiminde sorarlar. Şıklarda tekerlek, dinamo veya şaft gibi çeldiriciler olsa da doğru cevap her zaman <b>motordur</b>. Otomobillerde kullanılan motor, yanmanın silindir içinde gerçekleştiği <b>içten yanmalı</b> motordur.</p>
+
+    <h2>Enerji türüne göre motorlar</h2>
+    <p>Motorlar kullandıkları enerji kaynağına göre dörde ayrılır: <b>benzinli, dizel, hibrit ve elektrikli</b> motorlar. Bu ayrım ve her birinin çalışma mantığı, ünitenin can alıcı kısmıdır.</p>
+
+    <h2>Benzinli ve LPG'li motorlar</h2>
+    <p>Benzinli motorlarda ateşlemeyi <b>buji</b> sağlar; yani “buji” dendiğinde aklınıza doğrudan <b>benzin</b> gelmelidir. Şıklarda LPG varsa o da doğru sayılır, çünkü <b>LPG yalnızca benzinli araçlara takılır</b> ve o da buji ile ateşlenir. Bujinin fotoğrafını koyup “bu parça hangi motorda kullanılır?” diye de sorabilirler, bu yüzden bujiyi benzinle özdeşleştirin. LPG'li araçlarla ilgili unutulmaması gereken bir güvenlik kuralı vardır: <b>LPG'li araçlar kapalı otoparklara alınmaz</b>, çünkü herhangi bir kaza durumunda <b>patlama riski</b> taşırlar; LPG tehlikeli bir yakıt türüdür.</p>
+
+    <h2>Dizel motorlar</h2>
+    <p>Dizel araçlar <b>mazotlu (motorinli)</b> araçlardır. Bu motorlarda buji yoktur; ateşleme <b>enjektörle püskürtme ve sıkıştırma yoluyla</b> gerçekleşir. Emme zamanında silindire <b>sadece hava</b> alınır, bu hava sıkıştırılır ve <b>sıkışan sıcak havanın üzerine enjektörle motorin püskürtülünce</b> yanma kendiliğinden başlar. İşte sınavın en sevdiği ayrım budur: benzinlide yakıt ve hava birlikte emilip buji ile ateşlenirken, dizelde önce yalnız hava emilir, ateşleme ise sıkıştırılmış havaya motorin püskürterek olur. Bir başka klasik soru da şudur: <b>dizel araçta depodaki yakıt biterse araç “hava yapar” ve motor çalışmaz</b>; bu ifade doğrudan sınav sorusudur.</p>
+
+    <h2>Elektrikli motorlar</h2>
+    <p>Elektrikli motorlar, <b>bataryalarında depolanan elektrikle</b> çalışır; batarya bitince şarj edilir. Bu araçlarda <b>sıvı yakıt yoktur</b>. En büyük avantajı <b>doğa dostu</b> olmasıdır ve günümüzde yavaş yavaş bu motor türüne geçilmektedir. Elektrikli araçta sıvı yakıt bulunmaması, hibritten ayıran en kritik noktadır.</p>
+
+    <h2>Hibrit motorlar</h2>
+    <p>Hibrit araçlar duruma göre <b>bazen elektrik bazen sıvı yakıt</b> kullanır; yani hem sıvı yakıtlı bir motor hem de bir elektrikli sistem birlikte bulunur. Buradaki en kritik ayrım şudur: <b>elektrikli araçta sıvı yakıt yokken, hibrit araçta sıvı yakıt vardır</b>. Hibrit sistemdeki pil, ayrıca şarj gerektirmeden <b>araç hareket ettikçe kendiliğinden dolar</b> ve özellikle kalkışlarda motora destek verir.</p>
+
+    <h2>Zamanına göre motorlar ve dört zamanın sırası</h2>
+    <p>Motorlar zamanına göre <b>iki zamanlı</b> ve <b>dört zamanlı</b> olmak üzere ikiye ayrılır. İki zamanlıya <b>motosiklet</b>, dört zamanlıya <b>otomobil</b> örnek verilir. Burada “zaman” denen şey motorun çalışma evreleridir ve dört zamanın sırası ezber gerektirir: <b>1-Emme, 2-Sıkıştırma, 3-Ateşleme, 4-Egzoz</b>. Sınavda bu sıralamadaki bir aşamayı boş bırakıp “buraya ne gelir?” diye sorarlar; çoğunlukla sıkıştırma ya da ateşleme sorulur, bu yüzden sırayı kesinlikle karıştırmayın.</p>
+
+    <h2>Benzinli ve dizel dört zamanın karşılaştırması</h2>
+    <p>Dört zamanın sırası her iki motorda da aynıdır, ancak evrelerde ne olduğu farklıdır ve sınav tam olarak bu farkı ölçer. <b>Benzinli dört zamanda</b>: emmede <b>yakıt ve hava birlikte emilir</b>, sıkıştırmada bu karışım sıkıştırılır, ateşlemede <b>buji ile ateşlenir</b>, egzozda ise yanan gazlar dışarı atılır. <b>Dizel dört zamanda</b>: emmede <b>yalnızca hava emilir</b>, sıkıştırmada hava sıkıştırılır, ateşlemede <b>sıkıştırılmış havanın üzerine enjektörle motorin püskürtülerek</b> yanma sağlanır, egzozda yine yanan gazlar dışarı çıkar. Yani “emme zamanında ne emilir?” sorusunun cevabı benzinlide yakıt+hava, dizelde sadece havadır; “yanma sonucu oluşan gazlar hangi zamanda atılır?” sorusunun cevabı ise her ikisinde de <b>egzoz</b> zamanıdır.</p>
+
+    <h2>Motorun parçaları</h2>
+    <p>Motorun temel parçaları arasında <b>silindir bloğu, piston, kol, buji, karbüratör, emme ve egzoz sibopları, krank mili, segmanlar ve kam mili</b> yer alır. Bunların büyük kısmı ilerleyen ünitelerde tek tek işlenecek; şimdilik parçaların isimlerini tanımanız yeterli. Ateşleme sistemi konusunda ayrıca değinileceği gibi, buji aracın kullanma kılavuzunda belirtilen belirli kilometrede değiştirilmesi gereken bir parçadır; “belirli kilometre dolunca hangisi değiştirilir?” sorusunun cevabı bujidir.</p>
+
+    <h2>Soğutma tipine göre motorlar</h2>
+    <p>Motorlar soğutma tipine göre <b>hava soğutmalı</b> ve <b>su soğutmalı</b> olmak üzere ikiye ayrılır. Hava soğutmalıya <b>motosiklet</b>, su soğutmalıya <b>otomobil</b> örnek gösterilir. Su soğutmalı sistemde <b>silindirlerin etrafındaki kanallarda su dolaştırılarak ısının suya geçmesi sağlanır</b>; bu sistemde ayrıca <b>radyatör ve pervane</b> bulunur. “Hava soğutmalıya örnek hangisidir?” diye sorup şıklara motosiklet koyabilirler; su ve hava dışındaki (yağ, benzin, motorin gibi) seçenekler çeldiricidir.</p>
+
+    <h2>Sık çıkan çeldirici bilgiler</h2>
+    <p>Ünitede geçen iki küçük ama sınavlık ayrıntı vardır. Benzinli motorda <b>normal yanmanın olmamasının sebeplerinden biri bujilerin kurum bağlamasıdır</b>; bu soruda frenlerin ayarsızlığı, yakıt seviyesinin azlığı ya da lastik basıncı gibi şıklar çeldiricidir, doğru cevap buji ile ilgilidir. İkincisi, <b>hava filtresi kirliyse motor zengin karışımla çalışır</b>; yani içeri yeterli hava giremediği için karışım yakıt bakımından zenginleşir.</p>
+
+    <h2>Kısaca</h2>
+    <p>Motor, ısı ve elektrik enerjisini mekanik enerjiye çeviren, araçta gücün kaynağı olan makinedir. Enerji türüne göre benzinli (buji ile ateşleme, LPG dahil), dizel (sadece hava emilir, enjektörle motorin püskürtülüp sıkıştırmayla ateşlenir, yakıt biterse araç hava yapar), elektrikli (sıvı yakıtsız, doğa dostu) ve hibrit (sıvı yakıt vardır, pil hareketle dolar) olarak ayrılır. Dört zamanın sırası emme, sıkıştırma, ateşleme, egzozdur; benzinlide emmede yakıt+hava, dizelde sadece hava emilir. Soğutmaya göre hava soğutmalı (motosiklet) ve su soğutmalı (otomobil) motorlar vardır. LPG'li araçlar kapalı otoparka alınmaz ve buji benzinle özdeştir; bunları bilirseniz soru nasıl değişirse değişsin yaparsınız.</p>
+<!-- BODY_END -->
+
+    <div class="quiz-cta"><button class="btn-primary" onclick="openQuiz()">Kısa Testi Çöz — 5 Soru →</button></div>
+  </main>
+
+  <div class="q-overlay" id="quizModal" aria-hidden="true">
+    <div class="q-modal">
+      <div class="q-head"><span>Kısa Test — Motor Nedir?</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
+      <div class="q-body" id="quizBody"></div>
+      <div class="q-foot"><span class="q-score" id="quizScore"></span><button class="btn-primary" id="quizBtn" onclick="submitQuiz()">Sonucu Gör</button></div>
+    </div>
+  </div>
+
+  <script>
+    const QUIZ=[
+      {q:"Aşağıdakilerden hangisi araçlarda gücün kaynağıdır?",o:["Tekerlek","Motor","Dinamo","Şaft"],c:1},
+      {q:"Dört zamanlı bir motorda zamanların oluşum sırası hangisindeki gibidir?",o:["Sıkıştırma - Emme - Ateşleme - Egzoz","Emme - Ateşleme - Sıkıştırma - Egzoz","Emme - Sıkıştırma - Ateşleme - Egzoz","Egzoz - Emme - Sıkıştırma - Ateşleme"],c:2},
+      {q:"Benzinli motorlarda emme zamanında silindire ne alınır?",o:["Sadece hava","Sadece motorin","Yakıt ve hava","Sadece egzoz gazı"],c:2},
+      {q:"Dizel (motorinli) motorlarda ateşleme ne ile yapılır?",o:["Buji","Enjektörle püskürtme ve sıkıştırma","Akü","Marş motoru"],c:1},
+      {q:"Aşağıdakilerden hangisi motorlarla ilgili olarak yanlıştır?",o:["Elektrikli araçlarda sıvı yakıt yoktur","Hibrit araçlarda sıvı yakıt vardır","LPG yalnızca benzinli araçlara takılır","Dizel motorda ateşlemeyi buji sağlar"],c:3}
+    ];
+    const L=["A","B","C","D"];
+    let qAns=[null,null,null,null,null], qDone=false;
+    function qBodyHTML(){return QUIZ.map((it,i)=>{const opts=it.o.map((o,j)=>{let cls="q-opt";if(qDone){if(j===it.c)cls+=" correct";else if(j===qAns[i])cls+=" wrong";}else if(qAns[i]===j)cls+=" sel";const click=qDone?"":`onclick="pickQ(${i},${j})"`;return `<div class="${cls}" ${click}><span class="l">${L[j]}</span><span>${o}</span></div>`;}).join("");return `<div class="q-item"><p class="q-q"><span class="qn">${i+1}.</span>${it.q}</p><div class="q-opts">${opts}</div></div>`;}).join("");}
+    function renderQuiz(){const body=document.getElementById("quizBody");body.className="q-body"+(qDone?" q-done":"");body.innerHTML=qBodyHTML();const btn=document.getElementById("quizBtn"),sc=document.getElementById("quizScore");if(qDone){const s=QUIZ.filter((it,i)=>qAns[i]===it.c).length;sc.textContent=s+" / 5 doğru";btn.textContent="Tekrar Çöz";}else{sc.textContent="";btn.textContent="Sonucu Gör";}}
+    function openQuiz(){qAns=[null,null,null,null,null];qDone=false;renderQuiz();document.getElementById("quizModal").classList.add("show");document.body.style.overflow="hidden";document.getElementById("quizBody").scrollTop=0;}
+    function closeQuiz(){document.getElementById("quizModal").classList.remove("show");document.body.style.overflow="";}
+    function pickQ(i,j){if(qDone)return;qAns[i]=j;renderQuiz();}
+    function submitQuiz(){if(qDone){openQuiz();return;}qDone=true;renderQuiz();document.getElementById("quizBody").scrollTop=0;}
+    document.getElementById("quizModal").addEventListener("click",e=>{if(e.target.id==="quizModal")closeQuiz();});
+    document.addEventListener("keydown",e=>{if(e.key==="Escape")closeQuiz();});
+  </script>
+  <script src="/assets/js/lessons-nav.js"></script>
+</body>
+</html>

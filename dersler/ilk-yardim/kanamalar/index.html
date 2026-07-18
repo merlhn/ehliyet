@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{COURSE}} — Konu {{KONU_NO}}: {{KONU_AD}}</title>
+<title>İlk Yardım — Konu 4: Kanamalar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -62,28 +62,53 @@
 
   <main>
     <div class="ders-meta">
-      <div><span class="k">Ders</span> : <b>{{COURSE}}</b></div>
-      <div><span class="k">Konu - {{KONU_NO}}</span> : <b>{{KONU_AD}}</b></div>
+      <div><span class="k">Ders</span> : <b>İlk Yardım</b></div>
+      <div><span class="k">Konu - 4</span> : <b>Kanamalar</b></div>
     </div>
-    <p class="lead">{{LEAD}}</p>
+    <p class="lead">Kanama, damar bütünlüğünün bozulması sonucu kanın damar dışına çıkmasıdır. Kontrol altına alınamayan kanamalar kısa sürede şoka ve ölüme yol açabildiğinden, kanama türlerini ve durdurma yöntemlerini bilmek hayati önemdedir.</p>
 
-<!-- BODY_START -->
-{{BODY}}
-<!-- BODY_END -->
+    <h2>Kanama nedir?</h2>
+    <p><b>Kanama</b>, herhangi bir nedenle damar bütünlüğünün bozulması sonucu kanın damar dışına, doku içine veya vücut dışına çıkmasıdır. Kanamalar önce görünürlüğüne göre ikiye ayrılır: kanın vücut dışına aktığı <b>dış kanamalar</b> ve kanın vücut boşluklarına dolduğu, gözle görülemeyen <b>iç kanamalar</b>. İç kanamalar dışarıdan fark edilmediği için, şok belirtileriyle (soluk-soğuk cilt, hızlı-zayıf nabız, huzursuzluk) tanınır.</p>
+
+    <h2>Damara göre kanama türleri</h2>
+    <p>Kanamalar hangi damardan olduğuna göre de üçe ayrılır. <b>Atardamar kanamasında</b> kan açık kırmızı renktedir ve kalp atımıyla uyumlu olarak <b>fışkırır tarzda</b> akar; en tehlikeli kanama türüdür ve hızlıca durdurulmalıdır. <b>Toplardamar kanamasında</b> kan koyu kırmızı renktedir ve <b>sızıntı şeklinde, sürekli</b> akar. <b>Kılcal damar kanaması</b> ise azdır ve çoğunlukla kendiliğinden durur.</p>
+
+    <h2>Kanamada ilk yardım</h2>
+    <p>Kanamayı durdurmanın temel adımları sırasıyla uygulanır. Önce ilk yardımcı kendi güvenliğini alır (mümkünse eldiven kullanır). Ardından <b>kanayan bölgeye temiz bir bezle doğrudan baskı</b> uygulanır. Baskıyla birlikte <b>kanayan bölge kalp seviyesinin üzerine kaldırılır</b>; böylece bölgeye giden kan azalır. Baskı yeterli gelmezse, kanayan yere en yakın ve <b>yara ile kalp arasında bulunan basınç noktasına</b> baskı yapılır. Baskı uygulanan bez kanla dolarsa <b>çıkarılmaz</b>, üzerine yeni bez eklenerek baskı sürdürülür. Bu yöntemlerle durmayan hayati kanamalarda son çare olarak <b>turnike</b> uygulanır. Her kanamada şoka karşı önlem alınır ve 112 aranır.</p>
+
+    <h2>İç kanama ve belirtileri</h2>
+    <p>İç kanamalar dışarıdan görülmez ancak kişiyi hızla şoka ve ölüme götürebilir. Bu nedenle şok belirtileri iç kanamanın habercisidir: ciltte solukluk, soğukluk ve nemlilik, <b>hızlı ve zayıf nabız</b>, hızlı-yüzeysel solunum, huzursuzluk ve baş dönmesi. İç kanama şüphesi olan kişiye <b>yiyecek ve içecek verilmez</b>, şok pozisyonu verilir, üzeri örtülerek sıcak tutulur ve derhal 112 aranır.</p>
+
+    <h2>Burun kanaması</h2>
+    <p>Burun kanamasında kişi oturtulur ve <b>baş hafifçe öne eğilir</b>; burun kanatları parmakla birkaç dakika sıkılır. Başın geriye atılması yanlıştır; çünkü bu durumda kan mideye ya da soluk yoluna kaçabilir.</p>
+
+    <h2>Kısaca</h2>
+    <p>Kanama, kanın damar dışına çıkmasıdır; dış ve iç kanama olarak ikiye, damara göre atardamar (açık kırmızı, fışkırır), toplardamar (koyu kırmızı, sızıntı) ve kılcal kanama olarak üçe ayrılır. İlk yardımda önce doğrudan baskı, sonra bölgeyi kalp üstüne kaldırma, gerekirse basınç noktasına baskı uygulanır; kanla dolan bez çıkarılmaz, üzerine eklenir. Durmayan hayati kanamada son çare turnikedir. İç kanamada şok belirtileri görülür; yiyecek-içecek verilmez. Burun kanamasında baş öne eğilir.</p>
 
     <div class="quiz-cta"><button class="btn-primary" onclick="openQuiz()">Kısa Testi Çöz — 5 Soru →</button></div>
   </main>
 
   <div class="q-overlay" id="quizModal" aria-hidden="true">
     <div class="q-modal">
-      <div class="q-head"><span>Kısa Test — {{KONU_AD}}</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
+      <div class="q-head"><span>Kısa Test — Kanamalar</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
       <div class="q-body" id="quizBody"></div>
       <div class="q-foot"><span class="q-score" id="quizScore"></span><button class="btn-primary" id="quizBtn" onclick="submitQuiz()">Sonucu Gör</button></div>
     </div>
   </div>
 
   <script>
-    const QUIZ={{QUIZ_JSON}};
+    const QUIZ=[
+      {q:"Açık kırmızı renkte ve kalp atımıyla uyumlu, fışkırır tarzda olan kanama hangi damardandır?",
+       o:["Toplardamar","Atardamar","Kılcal damar","Lenf damarı"],c:1},
+      {q:"Kanamayı durdurmada ilk uygulanan yöntem hangisidir?",
+       o:["Turnike uygulamak","Kanayan yere temiz bezle doğrudan baskı yapmak","Yarayı kurcalamak","Su ile yıkamak"],c:1},
+      {q:"Kanayan bölge, kanamayı azaltmak için nasıl tutulmalıdır?",
+       o:["Kalp seviyesinin altına indirilmeli","Kalp seviyesinin üzerine kaldırılmalı","Sabit tutulmalı","Aşağı sarkıtılmalı"],c:1},
+      {q:"Baskı uygulanan bez kanla dolarsa ne yapılır?",
+       o:["Çıkarılıp yenisi konur","Çıkarılmaz, üzerine yeni bez eklenir","Yara açık bırakılır","Turnike hemen uygulanır"],c:1},
+      {q:"Burun kanamasında baş nasıl tutulmalıdır?",
+       o:["Geriye atılır","Hafifçe öne eğilir","Yana yatırılır","Dik ve hareketsiz tutulur"],c:1}
+    ];
     const L=["A","B","C","D"];
     let qAns=[null,null,null,null,null], qDone=false;
     function qBodyHTML(){return QUIZ.map((it,i)=>{const opts=it.o.map((o,j)=>{let cls="q-opt";if(qDone){if(j===it.c)cls+=" correct";else if(j===qAns[i])cls+=" wrong";}else if(qAns[i]===j)cls+=" sel";const click=qDone?"":`onclick="pickQ(${i},${j})"`;return `<div class="${cls}" ${click}><span class="l">${L[j]}</span><span>${o}</span></div>`;}).join("");return `<div class="q-item"><p class="q-q"><span class="qn">${i+1}.</span>${it.q}</p><div class="q-opts">${opts}</div></div>`;}).join("");}

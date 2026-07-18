@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{COURSE}} — Konu {{KONU_NO}}: {{KONU_AD}}</title>
+<title>Trafik Adabı — Konu 5: Bireysel ve Toplumsal Sorumluluk</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -62,28 +62,50 @@
 
   <main>
     <div class="ders-meta">
-      <div><span class="k">Ders</span> : <b>{{COURSE}}</b></div>
-      <div><span class="k">Konu - {{KONU_NO}}</span> : <b>{{KONU_AD}}</b></div>
+      <div><span class="k">Ders</span> : <b>Trafik Adabı</b></div>
+      <div><span class="k">Konu - 5</span> : <b>Bireysel ve Toplumsal Sorumluluk</b></div>
     </div>
-    <p class="lead">{{LEAD}}</p>
+    <p class="lead">Trafik, yalnızca bireysel bir eylem değil, toplumsal bir alandır. Her sürücünün davranışı yalnızca kendisini değil, çevresindeki herkesi etkiler. Bu bölümde kural bilincinin gerçek anlamını, kazaların sonuçlarını ve trafikte topluma karşı sorumluluğumuzu ele alacağız.</p>
 
-<!-- BODY_START -->
-{{BODY}}
-<!-- BODY_END -->
+    <h2>Kural bilinci ve gerçek sorumluluk</h2>
+    <p>Trafik adabına sahip bir sürücü, kuralları yalnızca ceza korkusuyla değil, gerçek anlamını kavrayarak uygular. Böyle bir sürücü, yapacağı bir kural ihlalinin sonucunun <b>yalnızca maddi bir ceza olmadığını</b>, aynı zamanda <b>kendisinin ya da sevdiklerinin canını tehlikeye attığının farkındadır</b>. Ayrıca trafikteki bütün kuralların bir nedeni olduğunu bilir ve bu nedenleri öğrenmeye çalışır. “Nasılsa görülmem” anlayışıyla değil, sorumluluk bilinciyle hareket eder.</p>
+
+    <h2>Kazaların sonuçları</h2>
+    <p>Trafik kazaları; ölüm, yaralanma ve maddi zararla sonuçlanabilen ağır olaylardır. Bir kazanın etkisi yalnızca o an ve o kişiyle sınırlı kalmaz; geride kalan ailelere, topluma ve ekonomiye <b>psikolojik ve ekonomik yük</b> bırakır. Kaybedilen bir can, sakat kalan bir birey ya da yıkılan bir aile, kazanın uzun süren sonuçlarıdır. Bu ağır tabloyu bilmek, sürücüyü daha dikkatli ve sorumlu olmaya yöneltir.</p>
+
+    <h2>Korunması gereken yol kullanıcıları</h2>
+    <p>Trafikte en korunmasız kişiler yayalar; özellikle de <b>çocuklar, yaşlılar ve engellilerdir</b>. Bir sürücünün öncelikli sorumluluğu bu bireylerin güvenliğini gözetmektir. Yaya geçidinde yayaya öncelik vermek, okul çevresinde ve yerleşim yerlerinde hızı düşürmek, görme engellilerin ve tekerlekli sandalye kullananların hareketine dikkat etmek bu sorumluluğun gereğidir.</p>
+
+    <h2>Çevreye ve topluma saygı</h2>
+    <p>Sorumlu bir sürücü çevreye de saygı gösterir; gereksiz korna çalarak gürültü kirliliğine, bakımsız araç kullanarak egzoz kirliliğine yol açmaktan kaçınır. Toplumsal sorumluluk, kurallara uyarak çevresine <b>iyi bir örnek olmak</b>, yardımlaşmak ve trafik kültürünün gelişmesine katkı sağlamaktır. Her bireyin sorumlu davranışı, toplumun genelinde daha güvenli bir trafik ortamı oluşturur.</p>
+
+    <h2>Kısaca</h2>
+    <p>Trafik adabına sahip sürücü, kural ihlalinin sadece maddi ceza değil, can güvenliği tehlikesi olduğunun farkındadır ve kuralların nedenini öğrenir. Kazaların sonuçları ölüm, yaralanma ve maddi zararın yanı sıra ailelere ve topluma ağır psikolojik ve ekonomik yük bırakır. Yayalar, özellikle çocuk, yaşlı ve engelliler korunmalı; yaya geçidinde önceliğe uyulmalıdır. Çevreye saygı göstermek ve iyi örnek olmak da trafikte toplumsal sorumluluğun bir parçasıdır.</p>
 
     <div class="quiz-cta"><button class="btn-primary" onclick="openQuiz()">Kısa Testi Çöz — 5 Soru →</button></div>
   </main>
 
   <div class="q-overlay" id="quizModal" aria-hidden="true">
     <div class="q-modal">
-      <div class="q-head"><span>Kısa Test — {{KONU_AD}}</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
+      <div class="q-head"><span>Kısa Test — Bireysel ve Toplumsal Sorumluluk</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
       <div class="q-body" id="quizBody"></div>
       <div class="q-foot"><span class="q-score" id="quizScore"></span><button class="btn-primary" id="quizBtn" onclick="submitQuiz()">Sonucu Gör</button></div>
     </div>
   </div>
 
   <script>
-    const QUIZ={{QUIZ_JSON}};
+    const QUIZ=[
+      {q:"Trafik adabına sahip bir sürücü, yapacağı bir kural ihlali hakkında ne düşünür?",
+       o:["Sadece maddi ceza olduğunu","Kendisinin ya da sevdiklerinin canını tehlikeye attığını","Hiçbir sonucu olmadığını","Nasılsa görülmeyeceğini"],c:1},
+      {q:"Aşağıdakilerden hangisi trafik kazalarının sonuçlarından biri değildir?",
+       o:["Ölüm ve yaralanma","Maddi zarar","Ailelere psikolojik yük","Trafiğin daha akıcı hâle gelmesi"],c:3},
+      {q:"Bir sürücünün trafikte öncelikli olarak korumakla sorumlu olduğu yol kullanıcıları kimlerdir?",
+       o:["Yalnızca diğer sürücüler","Çocuk, yaşlı ve engelli yayalar","Yalnızca ticari araçlar","Motosikletliler"],c:1},
+      {q:"İyi bir trafik ortamı için birey ne yapmalıdır?",
+       o:["Kurallara uyup çevresine iyi örnek olmalı","Sadece denetim varken uymalı","Hızlı gitmeli","Kimseye yol vermemeli"],c:0},
+      {q:"Çevreye saygı açısından sorumlu bir sürücü neye dikkat etmelidir?",
+       o:["Sürekli korna çalmaya","Gereksiz gürültü ve egzoz kirliliğinden kaçınmaya","Farları sürekli açık tutmaya","Hızlı sürmeye"],c:1}
+    ];
     const L=["A","B","C","D"];
     let qAns=[null,null,null,null,null], qDone=false;
     function qBodyHTML(){return QUIZ.map((it,i)=>{const opts=it.o.map((o,j)=>{let cls="q-opt";if(qDone){if(j===it.c)cls+=" correct";else if(j===qAns[i])cls+=" wrong";}else if(qAns[i]===j)cls+=" sel";const click=qDone?"":`onclick="pickQ(${i},${j})"`;return `<div class="${cls}" ${click}><span class="l">${L[j]}</span><span>${o}</span></div>`;}).join("");return `<div class="q-item"><p class="q-q"><span class="qn">${i+1}.</span>${it.q}</p><div class="q-opts">${opts}</div></div>`;}).join("");}

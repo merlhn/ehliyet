@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{COURSE}} — Konu {{KONU_NO}}: {{KONU_AD}}</title>
+<title>Trafik ve Çevre — Konu 9: Karayolunun Kullanılması</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -62,28 +62,50 @@
 
   <main>
     <div class="ders-meta">
-      <div><span class="k">Ders</span> : <b>{{COURSE}}</b></div>
-      <div><span class="k">Konu - {{KONU_NO}}</span> : <b>{{KONU_AD}}</b></div>
+      <div><span class="k">Ders</span> : <b>Trafik ve Çevre</b></div>
+      <div><span class="k">Konu - 9</span> : <b>Karayolunun Kullanılması</b></div>
     </div>
-    <p class="lead">{{LEAD}}</p>
+    <p class="lead">Bu bölümde kara yolunu araç olarak nasıl kullanacağımızı, hangi şeritten gitmemiz gerektiğini, şerit değiştirme kurallarını ve yasak olan davranışları öğreneceğiz. Sınavda özellikle şerit kullanımıyla ilgili görselli sorular sıkça sorulur.</p>
 
-<!-- BODY_START -->
-{{BODY}}
-<!-- BODY_END -->
+    <h2>Şeritlerin kullanımı</h2>
+    <p>Ülkemizde trafik sağdan işler; mümkün olduğunca <b>sağ şerit</b> kullanılır. <b>Sol şerit sollama şerididir</b> ve sürekli işgal edilmez. Çok şeritli yollarda hızınıza uygun şeritten gitmeniz gerekir; çok hızlı gidiyorsanız sağ şeritte kalamazsınız, çok yavaş gidiyorsanız da sol şeridi tutamazsınız. Çok şeritli bazı yollarda sağ şerit genellikle kamyonlar ve ağır vasıtalar içindir; bu durum yolun girişinde levhayla bildirilir. İki şeritli yollarda ise motosiklet, otomobil, kamyonet, minibüs ve otobüs dışındaki araçlar (kamyon gibi ağır vasıtalar) yolun en sağından gitmek zorundadır.</p>
+
+    <h2>Şerit değiştirme</h2>
+    <p>Şerit değiştirmeden önce, gireceğiniz şeritteki araçların geçmesini beklemeli, mutlaka <b>sinyal (işaret) vermeli</b> ve yol çizgilerinin kesik olduğundan emin olmalısınız; çizgi kesikse şerit değiştirebilir veya sollama yapabilirsiniz. <b>İşaret vermeden şerit değiştirmek yasaktır.</b> Ayrıca trafiği aksatacak şekilde şerit değiştirmek de hatalıdır. Bir sağ bir sol yaparak kavis çizerek gitmek (salınım yapmak) yasaktır; şerit değiştirmek yalnızca geçme, dönme, duraklama ve park etme gibi gerekli hâllerde yapılır.</p>
+
+    <h2>Yasak olan davranışlar</h2>
+    <p>Geçme, dönme, duraklama ve park etme gibi hâller dışında şerit değiştirmek ve <b>iki şeridi birlikte kullanmak (çizginin üzerinde gitmek)</b> yasaktır. <b>En sol şeridi sürekli işgal etmek</b> yasaktır; çünkü sol şerit sollama şerididir, sollamanızı yapıp tekrar kendi şeridinize dönmeniz gerekir. Aracın cinsine ve hızına uygun olmayan şeritten gitmek de yasaktır. <b>Emniyet şeritleri ve banketler</b>, trafik kazası ve arıza hâlleri dışında (ambulans gibi zorunlu durumlar hariç) kullanılamaz. <b>Ters yöne (ters istikamete) girmek</b> ise asli kusurdur; doğrudan başkalarının canını tehlikeye attığı için cezası ağırdır.</p>
+
+    <h2>Kavşak ve dönüşlerde mesafe</h2>
+    <p>Bir kavşağa yaklaşırken ya da dönüş yapacağınız zaman uygun şeride önceden geçmeniz gerekir. Bu mesafe <b>yerleşim yeri (şehir) içinde 30 metre</b>, <b>şehirler arası yollarda ise 150 metredir</b>. Son anda şerit değiştirerek dönüş yapmaya çalışmak hem kendinizi hem çevredeki araçları tehlikeye atar.</p>
+
+    <h2>Kısaca</h2>
+    <p>Trafik sağdan akar; araçlar gidiş yönüne göre uygun şeritten gider ve sol şerit yalnızca sollama için kullanılır. İki şeridi birlikte kullanmak (çizgi üzerinde gitmek) ve en sol şeridi sürekli işgal etmek yasaktır. İşaret (sinyal) vermeden şerit değiştirmek, ters yöne girmek ve zorunlu hâller dışında emniyet şeridi ile banketi kullanmak yasaktır. Dönüş için uygun şeride şehir içinde 30 metre, şehirler arasında 150 metre önceden geçilmelidir.</p>
 
     <div class="quiz-cta"><button class="btn-primary" onclick="openQuiz()">Kısa Testi Çöz — 5 Soru →</button></div>
   </main>
 
   <div class="q-overlay" id="quizModal" aria-hidden="true">
     <div class="q-modal">
-      <div class="q-head"><span>Kısa Test — {{KONU_AD}}</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
+      <div class="q-head"><span>Kısa Test — Karayolunun Kullanılması</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
       <div class="q-body" id="quizBody"></div>
       <div class="q-foot"><span class="q-score" id="quizScore"></span><button class="btn-primary" id="quizBtn" onclick="submitQuiz()">Sonucu Gör</button></div>
     </div>
   </div>
 
   <script>
-    const QUIZ={{QUIZ_JSON}};
+    const QUIZ=[
+      {q:"Şehirler arası yolda dönüş yapacak sürücü, uygun şeride en az kaç metre önceden geçmelidir?",
+       o:["30 metre","60 metre","100 metre","150 metre"],c:3},
+      {q:"En sol şeridin sürekli işgal edilmesi neden yasaktır?",
+       o:["Sol şerit sollama şerididir","En hızlı şerittir","Sadece kamyonlara aittir","Yavaş araçlar içindir"],c:0},
+      {q:"Aşağıdakilerden hangisi kara yolunda yasak bir davranıştır?",
+       o:["En sağ şeritten gitmek","Hızına uygun şeritten gitmek","İki şeridi birlikte (çizgi üzerinde) kullanmak","Sinyal verip şerit değiştirmek"],c:2},
+      {q:"Emniyet şeridi ve banketler hangi durumda kullanılabilir?",
+       o:["İstenildiği zaman","Trafik yoğunken","Zorunlu durumlarda (kaza, arıza, ambulans vb.)","Sollama yaparken"],c:2},
+      {q:"Şerit değiştirmeden önce sürücü ne yapmalıdır?",
+       o:["Doğrudan geçmeli","Sinyal verip gireceği şeritteki araçların geçmesini beklemeli","Kornaya basmalı","Hızlanmalı"],c:1}
+    ];
     const L=["A","B","C","D"];
     let qAns=[null,null,null,null,null], qDone=false;
     function qBodyHTML(){return QUIZ.map((it,i)=>{const opts=it.o.map((o,j)=>{let cls="q-opt";if(qDone){if(j===it.c)cls+=" correct";else if(j===qAns[i])cls+=" wrong";}else if(qAns[i]===j)cls+=" sel";const click=qDone?"":`onclick="pickQ(${i},${j})"`;return `<div class="${cls}" ${click}><span class="l">${L[j]}</span><span>${o}</span></div>`;}).join("");return `<div class="q-item"><p class="q-q"><span class="qn">${i+1}.</span>${it.q}</p><div class="q-opts">${opts}</div></div>`;}).join("");}

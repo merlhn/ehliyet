@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trafik ve Çevre — Konu 1: Temel Kavramlar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--fg:#08090a;--muted:#6a6f76;--line:#ececec}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--fg);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.75;letter-spacing:-.011em}
+  a{color:inherit}
+
+  header{display:flex;align-items:center;gap:26px;height:64px;padding:0 28px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(10px);z-index:20}
+  .back{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-size:14px;font-weight:500;color:#08090a;border:1px solid var(--line);border-radius:999px;padding:8px 15px}
+  .back:hover{border-color:#c8c8c8;background:#fafafa}
+  .nav{display:flex;gap:22px;margin-left:6px}
+  .nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:450}
+  .nav a:hover{color:#08090a}
+  .h-crumb{font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.05em;color:var(--muted);text-transform:uppercase}
+
+  main{max-width:960px;margin:0 auto;padding:52px 24px 96px}
+  .eyebrow{font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+  .ders-meta{margin:0 0 24px;font-size:15.5px;line-height:1.7;color:var(--muted)}
+  .ders-meta .k{display:inline-block;min-width:104px;font-family:'Geist Mono',monospace;font-size:13.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+  .ders-meta b{color:#08090a;font-weight:600}
+  h1{font-size:clamp(30px,5vw,46px);font-weight:600;letter-spacing:-.03em;line-height:1.08;margin:0 0 18px}
+  .lead{font-size:14px;color:var(--muted);line-height:1.6;margin:0 0 8px}
+  .meta{font-family:'Geist Mono',monospace;font-size:12.5px;color:#9a9a9a;margin:0 0 12px}
+
+  h2{font-size:19px;font-weight:600;letter-spacing:-.025em;line-height:1.2;margin:42px 0 10px}
+  p{margin:16px 0;font-size:12.5px}
+  b{font-weight:600}
+
+  /* Quiz */
+  .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#08090a;color:#fff;
+    border:1px solid #08090a;font-family:inherit;font-weight:500;font-size:15px;border-radius:999px;padding:13px 24px;
+    cursor:pointer;text-decoration:none;letter-spacing:-.01em}
+  .btn-primary:hover{background:#26282c;border-color:#26282c}
+  .quiz-cta{margin-top:48px}
+  .quiz-cta .btn-primary{font-size:10.5px;padding:9px 17px}
+
+  .q-overlay{position:fixed;inset:0;background:rgba(8,9,10,.5);display:none;align-items:center;justify-content:center;padding:16px;z-index:60}
+  .q-overlay.show{display:flex}
+  .q-modal{background:#fff;border-radius:16px;width:min(900px,100%);max-height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.28)}
+  .q-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line);font-weight:600;font-size:16px;letter-spacing:-.02em;flex-shrink:0}
+  .q-close{width:32px;height:32px;border:none;background:none;font-size:19px;color:var(--muted);cursor:pointer;border-radius:8px}
+  .q-close:hover{background:#f2f2f2;color:#08090a}
+  .q-body{overflow-y:auto;-webkit-overflow-scrolling:touch;padding:4px 24px 10px}
+  .q-item{display:grid;grid-template-columns:0.9fr 1.1fr;gap:28px;align-items:start;padding:20px 0}
+  .q-q{font-weight:500;font-size:15.5px;line-height:1.5;margin:0}
+  .q-q .qn{font-family:'Geist Mono',monospace;color:var(--muted);margin-right:8px;font-size:13px}
+  .q-opts{display:flex;flex-direction:column;gap:7px}
+  .q-opt{display:flex;align-items:center;gap:11px;border:1px solid var(--line);border-radius:10px;padding:10px 13px;font-size:14px;cursor:pointer;transition:.12s;background:#fff;user-select:none}
+  @media(max-width:640px){.q-item{grid-template-columns:1fr;gap:12px;padding:16px 0}header{height:58px;padding:0 18px;gap:14px}}
+  .q-opt:hover{border-color:#08090a}
+  .q-opt .l{font-family:'Geist Mono',monospace;font-weight:500;color:#08090a}
+  .q-opt.sel{background:#08090a;color:#fff;border-color:#08090a}
+  .q-opt.sel .l{color:#fff}
+  .q-done .q-opt{cursor:default}
+  .q-opt.correct{background:#effaf3;border-color:#0a7f3f;color:#0a7f3f}
+  .q-opt.correct .l{color:#0a7f3f}
+  .q-opt.wrong{background:#fdf1f1;border-color:#c72c2c;color:#c72c2c}
+  .q-opt.wrong .l{color:#c72c2c}
+  .q-foot{display:flex;align-items:center;gap:12px;padding:14px 20px;border-top:1px solid var(--line);flex-shrink:0}
+  .q-score{font-weight:600;font-size:15px}
+  .q-foot .btn-primary{margin-left:auto;font-size:14px;padding:11px 20px}
+</style>
+</head>
+<body>
+  <header>
+    <nav class="nav"><a href="/">Ana Sayfa</a><a href="/dersler/">Dersler</a><a href="/deneme-sinavlari/">Deneme Sınavları</a></nav>
+  </header>
+
+  <main>
+    <div class="ders-meta">
+      <div><span class="k">Ders</span> : <b>Trafik ve Çevre</b></div>
+      <div><span class="k">Konu - 1</span> : <b>Temel Kavramlar</b></div>
+    </div>
+    <p class="lead">Sınavda hem doğrudan hem de soruların içinde sıkça karşınıza çıkan temel trafik tanımları. Bu tanımları ezberlemek yerine mantığını kavramanız gerekir; aksi hâlde soru biraz farklı sorulduğunda yanılırsınız.</p>
+
+    <h2>Trafik nedir?</h2>
+    <p><b>Trafik</b>, yayaların, hayvanların ve araçların kara yolu üzerindeki hâl ve hareketleridir. Bu tanımda üç noktaya dikkat edin. Birincisi, trafiğin öznesi yalnızca araçlar değildir; yayalar, yani insanlar ve hayvanlar da trafiğin bir parçasıdır. İkincisi, tanım “hâl ve hareket” der; dolayısıyla sadece hareket etmek değil, durmak da trafiğe dâhildir. Üçüncüsü ise bütün bunların <b>kara yolu üzerinde</b> gerçekleşmesi gerektiğidir. Bu tanım sınavda doğrudan sorulmasa bile, başka soruların çözümünde ipucu olarak işinize yarar.</p>
+
+    <h2>Kara yolu nedir?</h2>
+    <p><b>Kara yolu</b>, trafik için kamunun yararlanmasına açık olan arazi şeridi, köprüler ve alanlardır. Yani kara yolu denince akla yalnızca asfalt döşeli yollar gelmemeli; arazi şeritleri, köprüler ve meydan gibi alanlar da kara yolu sayılır. Bu tanım sınavda “Aşağıdakilerden hangisi kara yolunun tanımıdır?” biçiminde doğrudan sorulabildiği için olduğu gibi hatırlamakta fayda vardır.</p>
+
+    <h2>Sürücü ve şoför farkı</h2>
+    <p>Bu iki kavram sıkça karıştırılır ve sınavda aralarındaki fark sorulur. Oysa ikisini ayıran tek şey <b>ticari faaliyet</b>tir. <b>Şoför</b>, kara yolunda ticari amaçla araç kullanan kişidir; taksi, dolmuş, otobüs, kamyon ya da tır süren kişiler şofördür. <b>Sürücü</b> ise kara yolunda motorlu veya motorsuz bir aracı, ticari bir amaç gütmeden idare eden kişidir. Bunu bir örnekle netleştirelim: kendi otomobilinizi kullandığınızda sürücüsünüzdür; ama gidip bir sarı takside çalışıp o taksiyi kullandığınızda şoför olursunuz.</p>
+
+    <h2>Durma, duraklama ve park etme</h2>
+    <p>Bu üç kavramı birbirinden ayıran iki ölçüt vardır: beklemenin <b>zorunlu mu yoksa isteğe bağlı mı</b> olduğu ve ne kadar <b>sürdüğü</b>. <b>Durma</b>, adının çağrıştırdığının aksine, tamamen zorunlu hâllerdeki beklemedir; kırmızı ışıkta beklemek, bir trafik kazası ya da engel nedeniyle yolun kapanması veya görevlinin “dur” işareti gibi durumlarda istesek de gidemeyiz, işte bu durmadır.</p>
+    <p><b>Duraklama</b> ise kendi isteğimizle yaptığımız, <b>beş dakikayı geçmeyen</b> kısa beklemedir; birini indirip bindirmek ya da marketten hızlıca bir şey almak için beklemek buna örnektir. Bekleme süresi beş dakikayı aşarsa artık duraklamadan değil <b>park etmeden</b> söz ederiz; yani park etme, durma ve duraklama dışında kalan, aracı daha uzun süre bir yerde bırakmaktır.</p>
+    <p>Sınavda bu konudan genellikle “duraklama en fazla kaç dakikadır?” (cevap: beş dakika) veya “aşağıdakilerden hangisi durmaya örnektir?” gibi sorular gelir. Ayrıca “park etmek yasaktır” ile “duraklamak ve park etmek yasaktır” levhalarını birbirinden ayırt edebilmeniz beklenir.</p>
+
+    <h2>Trafik kazası nedir?</h2>
+    <p><b>Trafik kazası</b>, kara yolu üzerinde hareket hâlinde olan bir veya birden fazla aracın karıştığı; ölüm, yaralanma veya zararla sonuçlanan olaydır. Bir olayın trafik kazası sayılabilmesi için bu şartların bir arada bulunması gerekir: olay kara yolu üzerinde olmalı, araç hareket hâlinde olmalı ve ortada bir ölüm, yaralanma ya da maddi zarar bulunmalıdır.</p>
+    <p>Bu yüzden bir sitenin bahçesinde park hâlindeki aracın üstüne yukarıdan bir oyuncak düşmesi trafik kazası değildir; çünkü araç hareket hâlinde değildir ve orası kara yolu sayılmaz. Aynı şekilde tarlada çalışan bir çiftçinin traktörüyle çukura düşmesi de trafik kazası olmaz; olsa olsa iş kazasıdır, zira olay kara yolu üzerinde gerçekleşmemiştir. İş kazası ve ev kazası da birer kaza çeşididir, ancak trafik kazası kapsamına girmezler.</p>
+
+    <h2>Trafikten men (alıkonulma)</h2>
+    <p><b>Trafikten men</b>, trafik zabıtası veya yetkililerce kanunda belirtilen hâllerde araca ait belgelerin alınması ve aracın belirli bir yere çekilerek trafikten alıkonulmasıdır. Buradaki anahtar kelime <b>alıkonulma</b>dır; bu durumda araç bir otoparka çekilir ve oradan çıkamaz. Günlük hayatta en sık karşılaşılan men sebebi, <b>zorunlu trafik sigortasının</b> yaptırılmamış olmasıdır. Buna karşılık ehliyetsiz araç kullanmak veya kırmızı ışıkta geçmek gibi durumlar çoğunlukla para cezasıyla sonuçlanır ve aracın men edilmesini gerektirmez.</p>
+
+    <h2>Kısaca</h2>
+    <p>Trafik; yaya, hayvan ve araçların kara yolu üzerindeki hâl ve hareketleridir. Kara yolu, kamuya açık arazi şeritleri, köprüler ve alanları kapsar. Ticari araç kullanan kişi şoför, ticari amaç gütmeden araç idare eden kişi ise sürücüdür. Durma zorunludur, duraklama isteğe bağlı ve en fazla beş dakikadır, beş dakikayı aşan bekleme ise park etmedir. Trafik kazası; kara yolunda, hareket hâlinde ve zararla sonuçlanan bir olaydır. Trafikten men ise aracın alıkonulmasıdır ve en yaygın sebebi sigortasızlıktır. Bu tanımları kavradığınızda, sınavda ters köşe yapan sorulara karşı hazırlıklı olursunuz.</p>
+
+    <div class="quiz-cta">
+      <button class="btn-primary" onclick="openQuiz()">Kısa Testi Çöz — 5 Soru →</button>
+    </div>
+  </main>
+
+  <!-- QUIZ MODAL -->
+  <div class="q-overlay" id="quizModal" aria-hidden="true">
+    <div class="q-modal">
+      <div class="q-head"><span>Kısa Test — Temel Kavramlar</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
+      <div class="q-body" id="quizBody"></div>
+      <div class="q-foot"><span class="q-score" id="quizScore"></span><button class="btn-primary" id="quizBtn" onclick="submitQuiz()">Sonucu Gör</button></div>
+    </div>
+  </div>
+
+  <script>
+    const QUIZ=[
+      {q:"Aşağıdakilerden hangisi trafiğin tanımına dâhil değildir?",
+       o:["Yayaların kara yolundaki hareketleri","Hayvanların kara yolundaki hareketleri","Araçların kara yolundaki durma hâli","Deniz taşıtlarının hareketleri"],c:3},
+      {q:"Kara yolunun tanımı aşağıdakilerden hangisidir?",
+       o:["Yalnızca asfalt döşeli yollar","Kamunun yararlanmasına açık arazi şeridi, köprüler ve alanlar","Yalnızca şehir içi caddeler","Özel mülk sınırları içindeki yollar"],c:1},
+      {q:"Sürücü ile şoförü birbirinden ayıran temel unsur nedir?",
+       o:["Aracın motorlu olması","Ticari faaliyet","Sürücünün yaşı","Aracın büyüklüğü"],c:1},
+      {q:"İsteğe bağlı bekleme (duraklama) en fazla kaç dakikadır?",
+       o:["3 dakika","5 dakika","10 dakika","15 dakika"],c:1},
+      {q:"Bir aracın trafikten men edilmesinin en yaygın sebebi nedir?",
+       o:["Kırmızı ışıkta geçmek","Hız sınırını aşmak","Zorunlu trafik sigortasının yaptırılmamış olması","Ehliyeti yanında bulundurmamak"],c:2}
+    ];
+    const L=["A","B","C","D"];
+    let qAns=[null,null,null,null,null], qDone=false;
+
+    function qBodyHTML(){
+      return QUIZ.map((it,i)=>{
+        const opts=it.o.map((o,j)=>{
+          let cls="q-opt";
+          if(qDone){ if(j===it.c)cls+=" correct"; else if(j===qAns[i])cls+=" wrong"; }
+          else if(qAns[i]===j) cls+=" sel";
+          const click = qDone ? "" : `onclick="pickQ(${i},${j})"`;
+          return `<div class="${cls}" ${click}><span class="l">${L[j]}</span><span>${o}</span></div>`;
+        }).join("");
+        return `<div class="q-item"><p class="q-q"><span class="qn">${i+1}.</span>${it.q}</p><div class="q-opts">${opts}</div></div>`;
+      }).join("");
+    }
+    function renderQuiz(){
+      const body=document.getElementById("quizBody");
+      body.className = "q-body" + (qDone?" q-done":"");
+      body.innerHTML=qBodyHTML();
+      const btn=document.getElementById("quizBtn"), sc=document.getElementById("quizScore");
+      if(qDone){ const s=QUIZ.filter((it,i)=>qAns[i]===it.c).length; sc.textContent=s+" / 5 doğru"; btn.textContent="Tekrar Çöz"; }
+      else { sc.textContent=""; btn.textContent="Sonucu Gör"; }
+    }
+    function openQuiz(){ qAns=[null,null,null,null,null]; qDone=false; renderQuiz();
+      document.getElementById("quizModal").classList.add("show"); document.body.style.overflow="hidden";
+      document.getElementById("quizBody").scrollTop=0; }
+    function closeQuiz(){ document.getElementById("quizModal").classList.remove("show"); document.body.style.overflow=""; }
+    function pickQ(i,j){ if(qDone)return; qAns[i]=j; renderQuiz(); }
+    function submitQuiz(){ if(qDone){ openQuiz(); return; } qDone=true; renderQuiz(); document.getElementById("quizBody").scrollTop=0; }
+
+    document.getElementById("quizModal").addEventListener("click",e=>{ if(e.target.id==="quizModal") closeQuiz(); });
+    document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeQuiz(); });
+  </script>
+  <script src="/assets/js/lessons-nav.js"></script>
+</body>
+</html>

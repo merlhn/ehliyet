@@ -1,0 +1,80 @@
+  :root{--navy:#000000;--navy-d:#333333;--navy-l:#f5f5f5;--ink:#08090a;--muted:#6a6f76;--line:#ececec}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fafafa;line-height:1.55;-webkit-font-smoothing:antialiased;letter-spacing:-.011em}
+  header{background:#fff;border-bottom:1px solid var(--line);padding:14px 24px}
+  header .brand{font-weight:600;color:var(--navy);font-size:15px;letter-spacing:-.01em}
+
+  .wrap{max-width:960px;margin:22px auto;padding:0 16px}
+
+  /* üst bilgi panelleri */
+  .panels{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+  .panel{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+  .panel h3{margin:0 0 12px;font-size:14px;color:var(--navy);text-transform:uppercase;letter-spacing:.4px}
+  .panel .row{display:flex;font-size:14px;padding:3px 0}
+  .panel .row .k{width:130px;color:var(--muted)}
+  .panel .row .v{font-weight:600}
+
+  h2.kt{color:var(--navy);font-size:20px;margin:0 0 12px}
+  /* kılavuz gövdesi */
+  .guide{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px 28px;box-shadow:0 2px 8px rgba(0,0,0,.04);font-size:12.5px;color:#2b2f3a}
+  .guide h3{color:var(--navy);font-size:14.5px;margin:26px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--navy-l)}
+  .guide h4{color:var(--navy-d);font-size:12.5px;margin:16px 0 6px}
+  .guide h3:first-child{margin-top:0}
+  .guide p{margin:8px 0}
+  .guide ul,.guide ol{margin:8px 0;padding-left:22px}
+  .guide li{margin:4px 0}
+  .guide table{border-collapse:collapse;width:100%;margin:12px 0;font-size:12px}
+  .guide th,.guide td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+  .guide th{background:var(--navy-l);color:var(--navy)}
+  .guide caption{font-weight:600;color:var(--navy);margin-bottom:6px;text-align:left}
+  .dl b{color:var(--navy-d)}
+
+  .warn{color:#ff0000;font-weight:600;text-align:center;margin:24px auto;max-width:680px}
+
+  .confirm-btn{display:block;width:100%;background:var(--navy);color:#fff;border:1px solid var(--navy);text-decoration:none;
+    text-align:left;padding:18px 24px;border-radius:12px;font-weight:500;font-size:16px;cursor:pointer;
+    position:relative;font-family:inherit;letter-spacing:-.01em}
+  .confirm-btn:hover{background:#26282c;border-color:#26282c}
+  .confirm-btn::after{content:"›";position:absolute;right:24px;top:50%;transform:translateY(-50%);font-size:30px}
+  .confirm-btn span{display:block;padding-right:30px;line-height:1.35}
+
+  /* Modal */
+  .modal-overlay{position:fixed;inset:0;background:rgba(15,20,40,.6);display:flex;align-items:center;justify-content:center;padding:20px;z-index:50}
+  .modal{background:#fff;border-radius:14px;width:min(940px,100%);max-height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.28)}
+  .modal-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px 14px 24px;border-bottom:1px solid var(--line);font-weight:600;color:var(--navy);font-size:18px;letter-spacing:-.02em;flex-shrink:0;background:#fff}
+  .modal-close{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;color:var(--muted);text-decoration:none;font-size:22px;line-height:1;flex-shrink:0}
+  .modal-close:hover{background:#f0f0f0;color:var(--navy)}
+  .btn-back{background:#fff;border:1px solid var(--line);color:#000;text-decoration:none;padding:12px 18px;border-radius:999px;font-weight:500;font-size:14px;white-space:nowrap;display:inline-flex;align-items:center;font-family:inherit}
+  .btn-back:hover{border-color:#000}
+  .foot-row{display:flex;gap:12px;align-items:stretch}
+  .foot-row .confirm-btn{flex:1}
+  .modal-body{overflow-y:auto;-webkit-overflow-scrolling:touch;padding:22px 24px;flex:1 1 auto;background:#f4f4f5}
+  .modal-body .guide{border:1px solid var(--line);border-radius:12px;box-shadow:0 1px 6px rgba(0,0,0,.04);padding:20px 24px}
+  .modal-body .guide table{background:#fff}
+  .modal-foot{border-top:1px solid var(--line);padding:16px 24px;flex-shrink:0;background:#fff}
+  .modal-foot .warn{margin:0 auto 14px}
+
+  @media(max-width:700px){
+    .modal-overlay{padding:8px}
+    .modal{max-height:96vh;width:100%}
+    .modal-head{padding:12px 10px 12px 16px;font-size:16px}
+    .modal-body{padding:14px}
+    .panels{grid-template-columns:1fr;gap:10px;margin-bottom:14px}
+    .panel{padding:10px 12px}
+    .panel h3{font-size:12px;margin-bottom:7px}
+    .panel .row{font-size:12.5px;padding:2px 0}
+    .panel .row .k{width:92px}
+    .guide{padding:14px 16px}
+    .guide h3{font-size:13.5px;margin:18px 0 8px}
+    /* geniş tablolar yatay kayabilsin */
+    .guide table{display:block;overflow-x:auto;white-space:nowrap;font-size:11px}
+    .guide td,.guide th{white-space:normal}
+
+    .modal-foot{padding:12px 14px}
+    .modal-foot .warn{font-size:12px;line-height:1.4;margin:0 0 10px}
+    .foot-row{flex-direction:column-reverse;gap:7px}
+    .foot-row .confirm-btn{flex:none;width:100%;font-size:11.5px;padding:9px 30px 9px 13px;box-shadow:none}
+    .confirm-btn span{padding-right:20px;line-height:1.3}
+    .confirm-btn::after{right:13px;font-size:19px}
+    .foot-row .btn-back{width:100%;justify-content:center;padding:8px;font-size:12.5px}
+  }

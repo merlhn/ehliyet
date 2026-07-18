@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{COURSE}} — Konu {{KONU_NO}}: {{KONU_AD}}</title>
+<title>İlk Yardım — Konu 2: İlk Yardımın ABC'si</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -62,28 +62,50 @@
 
   <main>
     <div class="ders-meta">
-      <div><span class="k">Ders</span> : <b>{{COURSE}}</b></div>
-      <div><span class="k">Konu - {{KONU_NO}}</span> : <b>{{KONU_AD}}</b></div>
+      <div><span class="k">Ders</span> : <b>İlk Yardım</b></div>
+      <div><span class="k">Konu - 2</span> : <b>İlk Yardımın ABC'si</b></div>
     </div>
-    <p class="lead">{{LEAD}}</p>
+    <p class="lead">İlk yardımın ABC’si, temel yaşam desteğinin üç aşamasını ifade eder: A hava yolu açıklığı, B solunumun değerlendirilmesi, C dolaşımın değerlendirilmesi. Sınavda bu üç harfin ne anlama geldiği ve her aşamada yapılan işlem sıkça sorulur.</p>
 
-<!-- BODY_START -->
-{{BODY}}
-<!-- BODY_END -->
+    <h2>ABC nedir?</h2>
+    <p>İlk yardımın ABC’si üç aşamadan oluşur. <b>A (Airway)</b>, hava yolu açıklığının değerlendirilmesidir. <b>B (Breathing)</b>, solunumun değerlendirilmesidir. <b>C (Circulation)</b> ise dolaşımın değerlendirilmesidir. Sınavda “ilk yardımın A’sı nedir?”, “B’de ne yapılır?”, “C neyi ifade eder?” biçiminde doğrudan sorulur; bu üç harfin karşılığını ezberlemeniz gerekir. Uygulamaya geçmeden önce ise ilk iş, kişinin <b>bilincini kontrol etmektir</b>: omzuna hafifçe dokunulur ve “iyi misiniz?” diye seslenilerek yanıt verip vermediğine bakılır.</p>
+
+    <h2>A — Hava yolu açıklığı</h2>
+    <p>Hava yolunu değerlendirmek için hasta ya da yaralı, <b>baş-boyun-gövde ekseni düz</b> olacak şekilde sırtüstü yatırılır. Ağız içinde bir yabancı cisim varsa işaret parmağıyla ağız içine girilerek çıkarılmaya çalışılır. Ardından hava yolunu açmak için <b>baş geri, çene yukarı</b> pozisyonu verilir: bir el hasta/yaralının alnına, diğer elin iki parmağı çene kemiğinin üzerine konur; alından bastırılıp çeneden kaldırılarak baş geriye doğru itilir. Bu pozisyonun amacı hava yolu açıklığını sağlamaktır. Solunum yolunu; dilin geriye kayması, takma diş ya da bir yabancı cisim tıkayabilir. Önemli bir uyarı: kişide <b>boyun (omurga) yaralanması varsa</b> bu pozisyon verilmez ya da çok dikkatli davranılır, aksi hâlde boyun daha fazla zarar görebilir. Ayrıca uygulama sırasında sert hareketlerden kaçınılır.</p>
+
+    <h2>B — Solunumun değerlendirilmesi</h2>
+    <p>Kişinin soluk alıp vermediği <b>bak-dinle-hisset</b> yöntemiyle anlaşılır. <b>Bak</b>: göğüs kafesinin inip kalkmasına bakılır. <b>Dinle</b>: kulak ağza yaklaştırılarak nefes sesi dinlenir. <b>Hisset</b>: nefesin yanağa çarpıp çarpmadığı hissedilir. Bu değerlendirme <b>10 saniye</b> süreyle yapılır. Solunum çok az olduğunda yüzle hissetmek zor olabilir; bu durumda bir cam, ayna, gözlük ya da telefon camı ağza yaklaştırılarak buğulanıp buğulanmadığına bakılabilir.</p>
+
+    <h2>C — Dolaşımın değerlendirilmesi</h2>
+    <p>Dolaşım, kanın vücutta dolaşmasıdır; bunun için kalbin çalışması ve damarlar gerekir. Kalbi duran kişinin dolaşımı olmaz. Dolaşım <b>nabız kontrolü</b> ile değerlendirilir. Nabız; <b>çocuk ve yetişkinlerde şah (boyun) damarından</b>, <b>bebeklerde ise kol atardamarından</b> kontrol edilir. Nabzın tanımı da sınavda çıkar: <b>kalp atımlarının atardamar üzerine yaptığı basınca nabız denir</b>.</p>
+
+    <h2>Kısaca</h2>
+    <p>İlk yardımın ABC’si; A hava yolu açıklığı, B solunumun değerlendirilmesi, C dolaşımın değerlendirilmesidir. Uygulamadan önce bilinç kontrol edilir. Hava yolu için baş geri-çene yukarı pozisyonu verilir (boyun yaralanmasında verilmez). Solunum bak-dinle-hisset ile 10 saniye kontrol edilir. Dolaşım nabızdan değerlendirilir; yetişkin ve çocukta şah damarından, bebekte kol atardamarından. Nabız, kalp atımlarının atardamar üzerine yaptığı basınçtır.</p>
 
     <div class="quiz-cta"><button class="btn-primary" onclick="openQuiz()">Kısa Testi Çöz — 5 Soru →</button></div>
   </main>
 
   <div class="q-overlay" id="quizModal" aria-hidden="true">
     <div class="q-modal">
-      <div class="q-head"><span>Kısa Test — {{KONU_AD}}</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
+      <div class="q-head"><span>Kısa Test — İlk Yardımın ABC'si</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
       <div class="q-body" id="quizBody"></div>
       <div class="q-foot"><span class="q-score" id="quizScore"></span><button class="btn-primary" id="quizBtn" onclick="submitQuiz()">Sonucu Gör</button></div>
     </div>
   </div>
 
   <script>
-    const QUIZ={{QUIZ_JSON}};
+    const QUIZ=[
+      {q:"İlk yardımın ABC'sinde “A” neyi ifade eder?",
+       o:["Dolaşımın değerlendirilmesi","Solunumun değerlendirilmesi","Hava yolu açıklığının değerlendirilmesi","Kanama kontrolü"],c:2},
+      {q:"“Bir el alına, diğer elin iki parmağı çene kemiğine konularak alından bastırılıp çene yukarı kaldırılır.” Anlatılan pozisyon hangisidir?",
+       o:["Şok pozisyonu","Baş geri-çene yukarı","Koma (yan yatış) pozisyonu","Yarı oturuş"],c:1},
+      {q:"Solunum, bak-dinle-hisset yöntemiyle kaç saniye süreyle kontrol edilir?",
+       o:["5 saniye","10 saniye","30 saniye","60 saniye"],c:1},
+      {q:"Bebeklerde nabız (dolaşım) nereden kontrol edilir?",
+       o:["Şah (boyun) damarından","Kol atardamarından","Bilekten","Ayak bileğinden"],c:1},
+      {q:"Kalp atımlarının atardamar üzerine yaptığı basınca ne denir?",
+       o:["Tansiyon","Nabız","Refleks","Solunum"],c:1}
+    ];
     const L=["A","B","C","D"];
     let qAns=[null,null,null,null,null], qDone=false;
     function qBodyHTML(){return QUIZ.map((it,i)=>{const opts=it.o.map((o,j)=>{let cls="q-opt";if(qDone){if(j===it.c)cls+=" correct";else if(j===qAns[i])cls+=" wrong";}else if(qAns[i]===j)cls+=" sel";const click=qDone?"":`onclick="pickQ(${i},${j})"`;return `<div class="${cls}" ${click}><span class="l">${L[j]}</span><span>${o}</span></div>`;}).join("");return `<div class="q-item"><p class="q-q"><span class="qn">${i+1}.</span>${it.q}</p><div class="q-opts">${opts}</div></div>`;}).join("");}

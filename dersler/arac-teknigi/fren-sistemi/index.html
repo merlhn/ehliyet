@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Araç Tekniği (Motor) — Konu 5: Fren Sistemi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--fg:#08090a;--muted:#6a6f76;--line:#ececec}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--fg);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.75;letter-spacing:-.011em}
+  a{color:inherit}
+  header{display:flex;align-items:center;gap:26px;height:64px;padding:0 28px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(10px);z-index:20}
+  .nav{display:flex;gap:24px}
+  .nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:450}
+  .nav a:hover{color:#08090a}
+  main{max-width:960px;margin:0 auto;padding:52px 24px 96px}
+  .ders-meta{margin:0 0 24px;font-size:15.5px;line-height:1.7;color:var(--muted)}
+  .ders-meta .k{display:inline-block;min-width:104px;font-family:'Geist Mono',monospace;font-size:13.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);vertical-align:top}
+  .ders-meta b{color:#08090a;font-weight:600}
+  .lead{font-size:14px;color:var(--muted);line-height:1.6;margin:0 0 8px}
+  h2{font-size:19px;font-weight:600;letter-spacing:-.025em;line-height:1.2;margin:42px 0 10px}
+  p{margin:16px 0;font-size:12.5px}
+  b{font-weight:600}
+  .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#08090a;color:#fff;border:1px solid #08090a;font-family:inherit;font-weight:500;font-size:15px;border-radius:999px;padding:13px 24px;cursor:pointer;text-decoration:none;letter-spacing:-.01em}
+  .btn-primary:hover{background:#26282c;border-color:#26282c}
+  .quiz-cta{margin-top:48px}
+  .quiz-cta .btn-primary{font-size:10.5px;padding:9px 17px}
+  .q-overlay{position:fixed;inset:0;background:rgba(8,9,10,.5);display:none;align-items:center;justify-content:center;padding:16px;z-index:60}
+  .q-overlay.show{display:flex}
+  .q-modal{background:#fff;border-radius:16px;width:min(900px,100%);max-height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.28)}
+  .q-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line);font-weight:600;font-size:16px;letter-spacing:-.02em;flex-shrink:0}
+  .q-close{width:32px;height:32px;border:none;background:none;font-size:19px;color:var(--muted);cursor:pointer;border-radius:8px}
+  .q-close:hover{background:#f2f2f2;color:#08090a}
+  .q-body{overflow-y:auto;-webkit-overflow-scrolling:touch;padding:4px 24px 10px}
+  .q-item{display:grid;grid-template-columns:0.9fr 1.1fr;gap:28px;align-items:start;padding:20px 0}
+  .q-q{font-weight:500;font-size:15.5px;line-height:1.5;margin:0}
+  .q-q .qn{font-family:'Geist Mono',monospace;color:var(--muted);margin-right:8px;font-size:13px}
+  .q-opts{display:flex;flex-direction:column;gap:7px}
+  .q-opt{display:flex;align-items:center;gap:11px;border:1px solid var(--line);border-radius:10px;padding:10px 13px;font-size:14px;cursor:pointer;transition:.12s;background:#fff;user-select:none}
+  .q-opt:hover{border-color:#08090a}
+  .q-opt .l{font-family:'Geist Mono',monospace;font-weight:500;color:#08090a}
+  .q-opt.sel{background:#08090a;color:#fff;border-color:#08090a}
+  .q-opt.sel .l{color:#fff}
+  .q-done .q-opt{cursor:default}
+  .q-opt.correct{background:#effaf3;border-color:#0a7f3f;color:#0a7f3f}
+  .q-opt.correct .l{color:#0a7f3f}
+  .q-opt.wrong{background:#fdf1f1;border-color:#c72c2c;color:#c72c2c}
+  .q-opt.wrong .l{color:#c72c2c}
+  .q-foot{display:flex;align-items:center;gap:12px;padding:14px 20px;border-top:1px solid var(--line);flex-shrink:0}
+  .q-score{font-weight:600;font-size:15px}
+  .q-foot .btn-primary{margin-left:auto;font-size:14px;padding:11px 20px}
+  @media(max-width:640px){.q-item{grid-template-columns:1fr;gap:12px;padding:16px 0}header{height:58px;padding:0 18px;gap:14px}}
+</style>
+</head>
+<body>
+  <header>
+    <nav class="nav"><a href="/">Ana Sayfa</a><a href="/dersler/">Dersler</a><a href="/deneme-sinavlari/">Deneme Sınavları</a></nav>
+  </header>
+
+  <main>
+    <div class="ders-meta">
+      <div><span class="k">Ders</span> : <b>Araç Tekniği (Motor)</b></div>
+      <div><span class="k">Konu - 5</span> : <b>Fren Sistemi</b></div>
+    </div>
+    <p class="lead">Fren sistemi, araç tekniği dersinin en çok soru gelen ve en çok çeldirici barındıran konularından biridir. Bu bölümde frenin görevini, ayak ve el freni farkını, hidrolik çalışma mantığını, ABS ile ASR sistemlerini, büyük araçlardaki özel fren tiplerini ve en çok sorulan fren arızalarını sınav odaklı biçimde öğreneceğiz.</p>
+
+<!-- BODY_START -->
+    <h2>Fren sisteminin görevi</h2>
+    <p><b>Fren sistemi, hareket halindeki aracı yavaşlatmaya; yavaşlayan aracı ise en kısa mesafede ve en kısa zamanda durdurmaya yarar.</b> Sınavda frenin görevi neredeyse hep bu ifadeyle sorulur, bu yüzden “en kısa mesafede ve en kısa zamanda durdurmak” kalıbını aklınızda tutun. Frenleme aracın hem güvenle yavaşlamasını hem de gerektiğinde tam olarak durmasını sağladığı için, sistemin sağlıklı çalışması sürüş güvenliğinin temelidir.</p>
+
+    <h2>Ayak freni ve el freni</h2>
+    <p>Araçta iki tür fren bulunur ve bunların görevleri sınavda sürekli birbirine karıştırılmaya çalışılır. <b>Ayak freni, hareket halindeki aracı yavaşlatır ve durdurur;</b> ayak frenine basıldığında <b>ön ve arka tekerlekler birlikte durur</b>. <b>El freni ise duran aracı olduğu yerde sabit tutar</b>, yani hareketi durdurmak için değil, durmuş aracın kaymasını engellemek için kullanılır. “Hareket halindeki aracı hangi fren yavaşlatır?” sorusunun cevabı ayak freni, “duran aracı sabitleyen fren hangisidir?” sorusunun cevabı ise el frenidir.</p>
+
+    <h2>Hidrolik çalışma prensibi</h2>
+    <p>Fren sistemi <b>hidrolik yağ</b> ile çalışır ve temelinde <b>“sıvılar sıkıştırılamaz”</b> ilkesi yatar. Fren pedalına basıldığında oluşan basınç, sıkıştırılamayan hidrolik yağ aracılığıyla tekerleklere iletilir ve fren gerçekleşir. Bu nedenle <b>hidrolik yağ biter ya da ömrünü doldurursa fren tutmaz veya fren performansı düşer</b>. Sistemde yağ seviyesinin korunması, frenin güvenle çalışması için şarttır; hidrolik kaçağı ya da yağın azalması doğrudan frenleme kaybına yol açar.</p>
+
+    <h2>Fren sisteminin parçaları</h2>
+    <p>Fren sistemini oluşturan temel parçalar <b>fren pedalı, merkez pompası, fren balataları, tekerlek silindirleri, kampana ve disktir</b>. Fren pedalına basıldığında merkez pompası hidrolik basıncı oluşturur, bu basınç tekerlek silindirlerine iletilir ve balatalar disk ya da kampana yüzeyine bastırılarak sürtünme yoluyla aracı yavaşlatır. Bu parçaların isimlerini tanımanız, arıza sorularını çözerken hangi parçanın neden sorumlu olduğunu ayırt etmenizi sağlar.</p>
+
+    <h2>ABS ve ASR sistemleri</h2>
+    <p><b>ABS, frenleme sırasında tekerleklerin kilitlenmesini önleyen sistemdir.</b> Ani ya da sert frenlemede tekerlek kilitlenip kayarsa direksiyon hakimiyeti kaybolur; ABS, freni <b>saniyede yaklaşık 20 kez tutup bırakarak</b> tekerleğin kilitlenmesini engeller ve böylece <b>frenleme sırasında direksiyon hakimiyetini artırır</b>. <b>ASR ise patinaj önleme sistemidir;</b> kalkışta ve hızlanmada tekerleğin boşa dönerek patinaj yapmasını engeller. Sınavda ABS “kilitlenmeyi önler, direksiyon hakimiyetini artırır”, ASR ise “patinajı önler” ifadesiyle ayırt edilir; bu ikisini karıştırmayın.</p>
+
+    <h2>Büyük araçlardaki fren tipleri</h2>
+    <p>Kamyon, çekici ve otobüs gibi <b>büyük tonajlı araçlarda</b>, ağırlıkları nedeniyle sıradan fren yetmez ve ek fren sistemleri bulunur. Bu araçlarda <b>havalı fren, motor freni ve retarder fren</b> yer alır. Bunlar aracın uzun inişlerde ve yüksek yükte güvenle yavaşlamasını sağlayan yardımcı fren sistemleridir; “büyük araçlarda hangi fren bulunur?” sorusunda bu üçünü hatırlamanız yeterlidir.</p>
+
+    <h2>Fren arızaları</h2>
+    <p>Fren arızaları sınavda en çok soru gelen başlıktır. <b>El freni çekili unutulursa</b> balatalar sürekli sürttüğü için <b>ısınır ve aşınır, bir süre sonra fren tutmaz ve yakıt sarfiyatı artar</b>. <b>Hidrolik sisteme hava girerse (hava yaparsa) fren tutmaz</b>. <b>Fren ayarı yanlışsa araç frenlemede bir tarafa çeker; ayar çok sıkı yapılmışsa fren sürekli temas ettiğinden fazla yakıt tükettirir</b>. Soğuk havalarda el freni çekili bırakılırsa balatalar donarak yüzeye yapışabilir, bu yüzden kışın park ederken el freni yerine vites bırakmak önerilir. <b>El freni tutmuyorsa el freni teli kopmuştur; hidrolik yağ akıyorsa fren patlamıştır.</b> Disk ya da kampana yüzeyi bozulmuş, çarpılmışsa <b>fren pedalına basıldığında titreşim</b> hissedilir.</p>
+
+    <h2>Frenlemeyi ve uyarıları etkileyen etkenler</h2>
+    <p>Frenleme mesafesini artıran önemli bir etken <b>lastik diş derinliğinin azalmasıdır</b>; lastiğin yolu kavraması zayıfladıkça araç daha uzun mesafede durur ve <b>yasal asgari diş derinliği 1,6 mm'dir</b>. Gösterge panelinde <b>ABS uyarı ışığının yanması, fren sisteminde bir arıza olduğunu</b> gösterir. <b>Fren pedalına basıldığında arkadaki fren lambaları yanmıyorsa fren müşürü (fren lamba müşürü) arızalıdır.</b> Burada çok bilinen bir çeldiriciye dikkat edin: <b>“akslar arızalıdır” bir fren arızası değildir</b>, çünkü aks fren sistemine değil <b>güç aktarma organlarına</b> aittir; fren arızaları sorulduğunda aks seçeneği doğru cevap olmaz.</p>
+
+    <h2>Kısaca</h2>
+    <p>Fren sistemi hareket halindeki aracı yavaşlatır, yavaşlayan aracı en kısa mesafede ve en kısa zamanda durdurur. Ayak freni aracı yavaşlatıp durdurur ve ön-arka tekerlekleri birlikte durdurur; el freni duran aracı sabitler. Sistem hidrolik yağ ile ve “sıvılar sıkıştırılamaz” ilkesiyle çalışır, yağ biterse fren tutmaz. ABS tekerleklerin kilitlenmesini önleyip direksiyon hakimiyetini artırır, ASR patinajı önler; büyük araçlarda havalı, motor ve retarder frenleri bulunur. El freni çekili unutulursa balatalar ısınır ve yakıt artar, hidrolik hava yaparsa fren tutmaz, lastik dişi azalınca frenleme mesafesi uzar. Unutmayın: aks arızası bir fren arızası değildir.</p>
+<!-- BODY_END -->
+
+    <div class="quiz-cta"><button class="btn-primary" onclick="openQuiz()">Kısa Testi Çöz — 5 Soru →</button></div>
+  </main>
+
+  <div class="q-overlay" id="quizModal" aria-hidden="true">
+    <div class="q-modal">
+      <div class="q-head"><span>Kısa Test — Fren Sistemi</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
+      <div class="q-body" id="quizBody"></div>
+      <div class="q-foot"><span class="q-score" id="quizScore"></span><button class="btn-primary" id="quizBtn" onclick="submitQuiz()">Sonucu Gör</button></div>
+    </div>
+  </div>
+
+  <script>
+    const QUIZ=[
+      {q:"Fren sisteminin görevi aşağıdakilerden hangisidir?",o:["Duran aracı hareket ettirmek","Hareket halindeki aracı yavaşlatmak, yavaşlayan aracı en kısa mesafede ve en kısa zamanda durdurmak","Motorun gücünü artırmak","Aracın patinaj yapmasını sağlamak"],c:1},
+      {q:"El freni ile ayak freni hakkında aşağıdakilerden hangisi doğrudur?",o:["Ayak freni duran aracı sabitler","El freni hareket halindeki aracı durdurur","Ayak freni hareket halindeki aracı yavaşlatır, el freni duran aracı sabitler","Her ikisi de yalnızca duran aracı sabitler"],c:2},
+      {q:"Fren sistemi hangi prensiple çalışır?",o:["Gazların genleşmesiyle","Sıvıların sıkıştırılamaması prensibiyle","Manyetik alan etkisiyle","Havanın sıkıştırılmasıyla"],c:1},
+      {q:"ABS sisteminin görevi aşağıdakilerden hangisidir?",o:["Kalkışta patinajı önlemek","Frenlemede tekerleklerin kilitlenmesini önleyerek direksiyon hakimiyetini artırmak","Motoru soğutmak","Yakıt tüketimini artırmak"],c:1},
+      {q:"Aşağıdakilerden hangisi bir fren arızası değildir?",o:["Hidrolik sisteme hava girmesi","El freni telinin kopması","Akslarda arıza olması","Fren balatalarının aşınması"],c:2}
+    ];
+    const L=["A","B","C","D"];
+    let qAns=[null,null,null,null,null], qDone=false;
+    function qBodyHTML(){return QUIZ.map((it,i)=>{const opts=it.o.map((o,j)=>{let cls="q-opt";if(qDone){if(j===it.c)cls+=" correct";else if(j===qAns[i])cls+=" wrong";}else if(qAns[i]===j)cls+=" sel";const click=qDone?"":`onclick="pickQ(${i},${j})"`;return `<div class="${cls}" ${click}><span class="l">${L[j]}</span><span>${o}</span></div>`;}).join("");return `<div class="q-item"><p class="q-q"><span class="qn">${i+1}.</span>${it.q}</p><div class="q-opts">${opts}</div></div>`;}).join("");}
+    function renderQuiz(){const body=document.getElementById("quizBody");body.className="q-body"+(qDone?" q-done":"");body.innerHTML=qBodyHTML();const btn=document.getElementById("quizBtn"),sc=document.getElementById("quizScore");if(qDone){const s=QUIZ.filter((it,i)=>qAns[i]===it.c).length;sc.textContent=s+" / 5 doğru";btn.textContent="Tekrar Çöz";}else{sc.textContent="";btn.textContent="Sonucu Gör";}}
+    function openQuiz(){qAns=[null,null,null,null,null];qDone=false;renderQuiz();document.getElementById("quizModal").classList.add("show");document.body.style.overflow="hidden";document.getElementById("quizBody").scrollTop=0;}
+    function closeQuiz(){document.getElementById("quizModal").classList.remove("show");document.body.style.overflow="";}
+    function pickQ(i,j){if(qDone)return;qAns[i]=j;renderQuiz();}
+    function submitQuiz(){if(qDone){openQuiz();return;}qDone=true;renderQuiz();document.getElementById("quizBody").scrollTop=0;}
+    document.getElementById("quizModal").addEventListener("click",e=>{if(e.target.id==="quizModal")closeQuiz();});
+    document.addEventListener("keydown",e=>{if(e.key==="Escape")closeQuiz();});
+  </script>
+  <script src="/assets/js/lessons-nav.js"></script>
+</body>
+</html>

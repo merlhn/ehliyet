@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trafik ve Çevre — Konu 7: Araç Kullanma Süreleri ve Yasakları</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--fg:#08090a;--muted:#6a6f76;--line:#ececec}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--fg);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.75;letter-spacing:-.011em}
+  a{color:inherit}
+  header{display:flex;align-items:center;gap:26px;height:64px;padding:0 28px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(10px);z-index:20}
+  .nav{display:flex;gap:24px}
+  .nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:450}
+  .nav a:hover{color:#08090a}
+  main{max-width:960px;margin:0 auto;padding:52px 24px 96px}
+  .ders-meta{margin:0 0 24px;font-size:15.5px;line-height:1.7;color:var(--muted)}
+  .ders-meta .k{display:inline-block;min-width:104px;font-family:'Geist Mono',monospace;font-size:13.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);vertical-align:top}
+  .ders-meta b{color:#08090a;font-weight:600}
+  .lead{font-size:14px;color:var(--muted);line-height:1.6;margin:0 0 8px}
+  h2{font-size:19px;font-weight:600;letter-spacing:-.025em;line-height:1.2;margin:42px 0 10px}
+  p{margin:16px 0;font-size:12.5px}
+  b{font-weight:600}
+  .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#08090a;color:#fff;border:1px solid #08090a;font-family:inherit;font-weight:500;font-size:15px;border-radius:999px;padding:13px 24px;cursor:pointer;text-decoration:none;letter-spacing:-.01em}
+  .btn-primary:hover{background:#26282c;border-color:#26282c}
+  .quiz-cta{margin-top:48px}
+  .quiz-cta .btn-primary{font-size:10.5px;padding:9px 17px}
+  .q-overlay{position:fixed;inset:0;background:rgba(8,9,10,.5);display:none;align-items:center;justify-content:center;padding:16px;z-index:60}
+  .q-overlay.show{display:flex}
+  .q-modal{background:#fff;border-radius:16px;width:min(900px,100%);max-height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.28)}
+  .q-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line);font-weight:600;font-size:16px;letter-spacing:-.02em;flex-shrink:0}
+  .q-close{width:32px;height:32px;border:none;background:none;font-size:19px;color:var(--muted);cursor:pointer;border-radius:8px}
+  .q-close:hover{background:#f2f2f2;color:#08090a}
+  .q-body{overflow-y:auto;-webkit-overflow-scrolling:touch;padding:4px 24px 10px}
+  .q-item{display:grid;grid-template-columns:0.9fr 1.1fr;gap:28px;align-items:start;padding:20px 0}
+  .q-q{font-weight:500;font-size:15.5px;line-height:1.5;margin:0}
+  .q-q .qn{font-family:'Geist Mono',monospace;color:var(--muted);margin-right:8px;font-size:13px}
+  .q-opts{display:flex;flex-direction:column;gap:7px}
+  .q-opt{display:flex;align-items:center;gap:11px;border:1px solid var(--line);border-radius:10px;padding:10px 13px;font-size:14px;cursor:pointer;transition:.12s;background:#fff;user-select:none}
+  .q-opt:hover{border-color:#08090a}
+  .q-opt .l{font-family:'Geist Mono',monospace;font-weight:500;color:#08090a}
+  .q-opt.sel{background:#08090a;color:#fff;border-color:#08090a}
+  .q-opt.sel .l{color:#fff}
+  .q-done .q-opt{cursor:default}
+  .q-opt.correct{background:#effaf3;border-color:#0a7f3f;color:#0a7f3f}
+  .q-opt.correct .l{color:#0a7f3f}
+  .q-opt.wrong{background:#fdf1f1;border-color:#c72c2c;color:#c72c2c}
+  .q-opt.wrong .l{color:#c72c2c}
+  .q-foot{display:flex;align-items:center;gap:12px;padding:14px 20px;border-top:1px solid var(--line);flex-shrink:0}
+  .q-score{font-weight:600;font-size:15px}
+  .q-foot .btn-primary{margin-left:auto;font-size:14px;padding:11px 20px}
+  @media(max-width:640px){.q-item{grid-template-columns:1fr;gap:12px;padding:16px 0}header{height:58px;padding:0 18px;gap:14px}}
+</style>
+</head>
+<body>
+  <header>
+    <nav class="nav"><a href="/">Ana Sayfa</a><a href="/dersler/">Dersler</a><a href="/deneme-sinavlari/">Deneme Sınavları</a></nav>
+  </header>
+
+  <main>
+    <div class="ders-meta">
+      <div><span class="k">Ders</span> : <b>Trafik ve Çevre</b></div>
+      <div><span class="k">Konu - 7</span> : <b>Araç Kullanma Süreleri ve Yasakları</b></div>
+    </div>
+    <p class="lead">Bu bölümde kara yollarında araç sürme yasaklarını, alkol sınırlarını, ceza sürelerini ve ticari araçların kullanım-dinlenme sürelerini işleyeceğiz. Buradaki rakamlar (alkol promilleri, 625 kuralı, 4,5 ve 9 saat, takograf saklama süreleri) sınavda doğrudan sorulur; bu yüzden hepsini net biçimde bilmeniz gerekir.</p>
+
+    <h2>Araç sürme yasakları</h2>
+    <p>Sürücü belgesi olmadan araç kullanmak yasaktır; kara yolunda belgesiz araç kullanılırsa hem aracı süren kişiye hem de aracı kullandıran kişiye ceza uygulanır. Bunun yanında sürücü belgenizin sınıfı dışında bir araç kullanmak da yasaktır; örneğin <b>B sınıfı sürücü belgesiyle tır sürülemez</b>. Ehliyetinizin kapsamadığı sınıftaki araçları kullanmak yasaktır.</p>
+    <p>Uyuşturucu veya uyarıcı madde etkisi altında araç kullanmak <b>kesinlikle yasaktır</b> ve bunun affı yoktur. Bu ihlalde kişi derhal araç kullanmaktan men edilir, sürücü belgesi iptal edilir ve belge <b>5 yıl</b> süreyle geri alınır; hatta hapis cezası bile gündeme gelebilir. Sınavda bu konu genellikle “uyuşturucu/uyarıcı madde aldığı tespit edilen sürücünün sürücü belgesi kaç yıl süreyle geri alınır?” biçiminde sorulur ve cevap her zaman <b>5 yıldır</b>.</p>
+
+    <h2>Alkol sınırları</h2>
+    <p>Kandaki alkol sınırı, <b>hususi (ticari olmayan) araçlarda 0,50 promil</b>, <b>ticari araçlarda ise 0,20 promildir</b>. Bu sınırların üzerinde araç kullanmak yasaktır. Ek olarak, alkol aç karnına çok daha etkilidir; refleksleri azaltır, kişinin karar verme ve zihinsel sürecini yavaşlatır, sinir sistemini etkiler. Bu ayrıntılar da yorum sorularında karşınıza çıkabilir.</p>
+
+    <h2>625 kuralı (alkol ceza süreleri)</h2>
+    <p>Alkollü araç kullanma ihlalinde sürücü belgesinin geri alınma süreleri kademelidir. Bu süreleri <b>625 kuralı</b> olarak hatırlayabilirsiniz: ihlalin <b>birincisinde 6 ay</b>, <b>ikincisinde 2 yıl</b>, <b>üçüncüsünde 5 yıl</b> süreyle sürücü belgesi geri alınır. Sınavda “geriye dönük 5 yıl içinde ikinci defa” denirse cevap 2 yıl, “üçüncü defa” denirse cevap 5 yıldır.</p>
+
+    <h2>Ticari araçlarda kullanım ve dinlenme süreleri</h2>
+    <p>Ticari araçların (tır, minibüs, otobüs ve benzeri) 24 saatlik süre içindeki kullanımı sınırlıdır. Bir ticari araç sürücüsü <b>devamlı olarak en fazla 4,5 saat</b> araç kullanabilir; bu sürenin sonunda <b>en az 45 dakika mola</b> vermek zorundadır. Molanın ardından bir 4,5 saat daha kullanılabilir; böylece bir günde <b>toplamda en fazla 9 saat</b> araç kullanılır.</p>
+    <p>Molanın mutlaka tek seferde verilmesi gerekmez; en az 15’er dakikalık dilimlere bölünerek toplam 45 dakika tamamlanabilir. Sınavda “toplamda” ifadesi geçiyorsa cevap 9 saat, “en fazla / devamlı” ifadesi geçiyorsa cevap 4,5 saattir. Bu konuda bir tuzağa dikkat edin: molaya kişinin kendi isteğiyle ek süre eklemesi (örneğin 45 dakikaya 30 dakika daha ekleyip toplam 1 saat 15 dakika mola vermesi) yasak değildir; zorunlu olan, en az 45 dakika mola vermektir, fazlası sürücünün inisiyatifindedir.</p>
+
+    <h2>Takograf cihazı</h2>
+    <p><b>Takograf</b>, aracın kullanım süresini, hızını ve hız ihlallerini kayıt altına alan cihazdır; adeta aracın kara kutusudur. Bu cihaz <b>ticari araçlarda</b> bulunur ve sürme ile dinlenme sürelerinin tespiti bu cihazla yapılır. Takograf kayıtları <b>araçta 1 ay</b>, <b>iş yerinde ise 5 yıl</b> süreyle saklanır; bu iki süreyi birbirine karıştırmamak gerekir. Ayrıca takograf veya taksimetre bulundurmayan araçlar hakkında uygulanan yaptırım, <b>aracın trafikten men edilmesidir</b>.</p>
+
+    <h2>Kısaca</h2>
+    <p>Belgesiz araç kullanmak ve ehliyet sınıfı dışında araç sürmek yasaktır; uyuşturucu/uyarıcı madde etkisinde araç kullananın belgesi 5 yıl geri alınır. Alkol sınırı hususi araçlarda 0,50, ticari araçlarda 0,20 promildir. Alkollü araç kullanmada 625 kuralı işler: birincisinde 6 ay, ikincisinde 2 yıl, üçüncüsünde 5 yıl. Ticari araçlar devamlı en fazla 4,5 saat, molalarla birlikte günde toplam 9 saat kullanılabilir ve 4,5 saatten sonra en az 45 dakika mola verilir. Bu süreleri kaydeden takograf ticari araçlarda bulunur; kayıtları araçta 1 ay, iş yerinde 5 yıl saklanır. Takograf veya taksimetre bulundurmamak aracın trafikten men edilmesine yol açar.</p>
+
+    <div class="quiz-cta">
+      <button class="btn-primary" onclick="openQuiz()">Kısa Testi Çöz — 5 Soru →</button>
+    </div>
+  </main>
+
+  <div class="q-overlay" id="quizModal" aria-hidden="true">
+    <div class="q-modal">
+      <div class="q-head"><span>Kısa Test — Araç Kullanma Süreleri</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
+      <div class="q-body" id="quizBody"></div>
+      <div class="q-foot"><span class="q-score" id="quizScore"></span><button class="btn-primary" id="quizBtn" onclick="submitQuiz()">Sonucu Gör</button></div>
+    </div>
+  </div>
+
+  <script>
+    const QUIZ=[
+      {q:"Uyuşturucu veya uyarıcı madde etkisinde araç kullandığı tespit edilen sürücünün sürücü belgesi kaç yıl süreyle geri alınır?",
+       o:["2 yıl","3 yıl","5 yıl","6 ay"],c:2},
+      {q:"Hususi (ticari olmayan) araçlarda kandaki alkol sınırı kaç promildir?",
+       o:["0,20","0,50","0,80","1,00"],c:1},
+      {q:"Ticari araç sürücüleri 24 saatlik sürede toplamda en fazla kaç saat araç kullanabilir?",
+       o:["4,5 saat","6 saat","9 saat","11 saat"],c:2},
+      {q:"Ticari araçta devamlı en fazla 4,5 saat kullanımın ardından en az kaç dakika mola verilmelidir?",
+       o:["15 dakika","30 dakika","45 dakika","60 dakika"],c:2},
+      {q:"Takograf kayıtları araçta ne kadar süre saklanır?",
+       o:["1 ay","1 yıl","5 yıl","Saklama zorunluluğu yoktur"],c:0}
+    ];
+    const L=["A","B","C","D"];
+    let qAns=[null,null,null,null,null], qDone=false;
+    function qBodyHTML(){
+      return QUIZ.map((it,i)=>{
+        const opts=it.o.map((o,j)=>{
+          let cls="q-opt";
+          if(qDone){ if(j===it.c)cls+=" correct"; else if(j===qAns[i])cls+=" wrong"; }
+          else if(qAns[i]===j) cls+=" sel";
+          const click = qDone ? "" : `onclick="pickQ(${i},${j})"`;
+          return `<div class="${cls}" ${click}><span class="l">${L[j]}</span><span>${o}</span></div>`;
+        }).join("");
+        return `<div class="q-item"><p class="q-q"><span class="qn">${i+1}.</span>${it.q}</p><div class="q-opts">${opts}</div></div>`;
+      }).join("");
+    }
+    function renderQuiz(){
+      const body=document.getElementById("quizBody");
+      body.className = "q-body" + (qDone?" q-done":"");
+      body.innerHTML=qBodyHTML();
+      const btn=document.getElementById("quizBtn"), sc=document.getElementById("quizScore");
+      if(qDone){ const s=QUIZ.filter((it,i)=>qAns[i]===it.c).length; sc.textContent=s+" / 5 doğru"; btn.textContent="Tekrar Çöz"; }
+      else { sc.textContent=""; btn.textContent="Sonucu Gör"; }
+    }
+    function openQuiz(){ qAns=[null,null,null,null,null]; qDone=false; renderQuiz(); document.getElementById("quizModal").classList.add("show"); document.body.style.overflow="hidden"; document.getElementById("quizBody").scrollTop=0; }
+    function closeQuiz(){ document.getElementById("quizModal").classList.remove("show"); document.body.style.overflow=""; }
+    function pickQ(i,j){ if(qDone)return; qAns[i]=j; renderQuiz(); }
+    function submitQuiz(){ if(qDone){ openQuiz(); return; } qDone=true; renderQuiz(); document.getElementById("quizBody").scrollTop=0; }
+    document.getElementById("quizModal").addEventListener("click",e=>{ if(e.target.id==="quizModal") closeQuiz(); });
+    document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeQuiz(); });
+  </script>
+  <script src="/assets/js/lessons-nav.js"></script>
+</body>
+</html>

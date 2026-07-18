@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{COURSE}} — Konu {{KONU_NO}}: {{KONU_AD}}</title>
+<title>Trafik ve Çevre — Konu 11: Kontrollü Kavşaklar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -62,28 +62,50 @@
 
   <main>
     <div class="ders-meta">
-      <div><span class="k">Ders</span> : <b>{{COURSE}}</b></div>
-      <div><span class="k">Konu - {{KONU_NO}}</span> : <b>{{KONU_AD}}</b></div>
+      <div><span class="k">Ders</span> : <b>Trafik ve Çevre</b></div>
+      <div><span class="k">Konu - 11</span> : <b>Kontrollü Kavşaklar</b></div>
     </div>
-    <p class="lead">{{LEAD}}</p>
+    <p class="lead">Kontrollü kavşaklar, bir levha, ışık ya da trafik görevlisi tarafından düzenlenen kavşaklardır. Bu bölümde levhaların anlamlarını, ana yol-tali yol ayrımını, dönüş kurallarını ve sık sorulan kaza senaryolarını işleyeceğiz. Bir kavşağın kontrollü olduğunu, orada levha veya ışık bulunmasından anlarsınız.</p>
 
-<!-- BODY_START -->
-{{BODY}}
-<!-- BODY_END -->
+    <h2>Levhaların ışık karşılıkları</h2>
+    <p>Kontrollü kavşaklarda iki levha çok önemlidir. Altıgen biçimli <b>“DUR” levhası, kırmızı ışıkla aynı anlama gelir</b>; bulunduğu yer tali yoldur ve burada mutlaka durmak zorunludur. Ters üçgen biçimli <b>“YOL VER” levhası ise sarı ışıkla aynı anlama gelir</b>; yine bulunduğu yer tali yoldur ancak burada mutlaka durma zorunluluğu yoktur, yavaşlarsınız ve yol müsaitse dikkatlice geçersiniz, araç varsa durursunuz. Bir yolda ana yol levhası varsa o yol ana yoldur ve yol hakkı ana yoldaki araca aittir.</p>
+
+    <h2>Ana yolda bile hız azaltma</h2>
+    <p>Ana yolda bulunuyor ve hatta size yeşil ışık yanıyor olsa dahi, kavşağa girerken <b>hızınızı azaltmanız zorunludur</b>. Çünkü diğer koldan geçiş üstünlüğüne sahip bir araç (örneğin ambulans) gelebilir; siz hızla geçerken çarpışma yaşanabilir. Bu yüzden herkesin kavşağa girerken yavaşlaması beklenir. “Yeşil yanıyor, hızla geçebilirim” yaklaşımı doğru değildir.</p>
+
+    <h2>Kaza ve kusur</h2>
+    <p>Bir kavşakta yol hakkı, ana yoldaki (dur veya yol ver levhası karşı tarafta olan) araca aittir. <b>Tali yoldan gelip durması gerekirken durmayan ve kazaya karışan sürücü %100 suçlu, yani asli kusurlu kabul edilir.</b> Bu yüzden bir kavşak kazasında öncelikle levhalara bakılır: sizin bulunduğunuz yolda “ana yol” levhası varsa büyük olasılıkla haklısınız; “dur” ya da “yol ver” levhası varsa geçiş hakkı karşı taraftaydı.</p>
+
+    <h2>Dönüş ve yön kuralları</h2>
+    <p>Kontrollü kavşaklarda dönüşler belirli kurallara göre yapılır. Dönüş yapacak araçlar önce <b>hızlarını azaltır</b>. <b>Sağa dönüşler dar bir kavisle</b> ve bulunulan şeritte en sağa yaklaşılarak yapılır; dönüş sağ şeritte tamamlanır. <b>Sola dönüşler ise geniş bir kavisle</b> yapılır. Ayrıca “girişi olmayan yol / taşıt giremez” levhasının bulunduğu (tek yön karşıdan gelen) bir yola girmek yasaktır; “U dönüşü yasağı” levhası varsa o noktada U dönüşü yapmak da yasaktır.</p>
+
+    <h2>Kısaca</h2>
+    <p>Kontrollü kavşak, levha, ışık veya görevliyle düzenlenen kavşaktır. Altıgen “DUR” levhası kırmızı ışıkla (mutlaka dur), ters üçgen “YOL VER” levhası sarı ışıkla (yavaşla, müsaitse geç) aynı anlama gelir; ikisi de tali yolda bulunur. Ana yolda ve yeşil ışıkta bile kavşağa girerken hız azaltılır. Tali yoldan gelip durmayan ve kazaya karışan sürücü asli kusurludur. Sağa dönüşler dar kavisle en sağdan, sola dönüşler geniş kavisle yapılır; girilmez levhalı yola girmek ve yasak yerde U dönüşü yapmak yasaktır.</p>
 
     <div class="quiz-cta"><button class="btn-primary" onclick="openQuiz()">Kısa Testi Çöz — 5 Soru →</button></div>
   </main>
 
   <div class="q-overlay" id="quizModal" aria-hidden="true">
     <div class="q-modal">
-      <div class="q-head"><span>Kısa Test — {{KONU_AD}}</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
+      <div class="q-head"><span>Kısa Test — Kontrollü Kavşaklar</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
       <div class="q-body" id="quizBody"></div>
       <div class="q-foot"><span class="q-score" id="quizScore"></span><button class="btn-primary" id="quizBtn" onclick="submitQuiz()">Sonucu Gör</button></div>
     </div>
   </div>
 
   <script>
-    const QUIZ={{QUIZ_JSON}};
+    const QUIZ=[
+      {q:"Altıgen biçimli “DUR” levhası hangi ışıkla aynı anlama gelir?",
+       o:["Yeşil ışık","Sarı ışık","Kırmızı ışık","Yanıp sönen sarı"],c:2},
+      {q:"Ters üçgen biçimli “YOL VER” levhası hangi ışıkla aynı anlama gelir?",
+       o:["Kırmızı ışık","Sarı ışık","Yeşil ışık","Kırmızı oklu ışık"],c:1},
+      {q:"Tali yoldan gelip durması gerekirken durmayan ve kazaya karışan sürücünün kusuru nedir?",
+       o:["Kusursuzdur","%100 asli kusurludur","Yarı kusurludur","Karşı taraf kusurludur"],c:1},
+      {q:"Ana yolda seyreden bir sürücü, yeşil ışık yansa bile kavşağa girerken ne yapmalıdır?",
+       o:["Hızını artırmalı","Hızını azaltmalı","Sabit hızla geçmeli","Korna çalmalı"],c:1},
+      {q:"Kontrollü kavşakta sağa dönüş nasıl yapılır?",
+       o:["Geniş kavisle, en sol şeritten","Dar kavisle, en sağ şeritten","Hızlanarak","Durmadan orta şeritten"],c:1}
+    ];
     const L=["A","B","C","D"];
     let qAns=[null,null,null,null,null], qDone=false;
     function qBodyHTML(){return QUIZ.map((it,i)=>{const opts=it.o.map((o,j)=>{let cls="q-opt";if(qDone){if(j===it.c)cls+=" correct";else if(j===qAns[i])cls+=" wrong";}else if(qAns[i]===j)cls+=" sel";const click=qDone?"":`onclick="pickQ(${i},${j})"`;return `<div class="${cls}" ${click}><span class="l">${L[j]}</span><span>${o}</span></div>`;}).join("");return `<div class="q-item"><p class="q-q"><span class="qn">${i+1}.</span>${it.q}</p><div class="q-opts">${opts}</div></div>`;}).join("");}

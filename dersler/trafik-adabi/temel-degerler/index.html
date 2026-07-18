@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{COURSE}} — Konu {{KONU_NO}}: {{KONU_AD}}</title>
+<title>Trafik Adabı — Konu 3: Trafikte Temel Değerler</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -62,28 +62,50 @@
 
   <main>
     <div class="ders-meta">
-      <div><span class="k">Ders</span> : <b>{{COURSE}}</b></div>
-      <div><span class="k">Konu - {{KONU_NO}}</span> : <b>{{KONU_AD}}</b></div>
+      <div><span class="k">Ders</span> : <b>Trafik Adabı</b></div>
+      <div><span class="k">Konu - 3</span> : <b>Trafikte Temel Değerler</b></div>
     </div>
-    <p class="lead">{{LEAD}}</p>
+    <p class="lead">Trafik adabının temelinde bir dizi değer yatar. Sabır, hoşgörü, saygı, nezaket, feragat, diğerkâmlık, yardımlaşma ve sorumluluk gibi değerler, sürücünün trafikteki davranışlarını belirler. Sınavda bu değerlerin tanımları ve örnekleri sıkça sorulur.</p>
 
-<!-- BODY_START -->
-{{BODY}}
-<!-- BODY_END -->
+    <h2>Sabır ve hoşgörü</h2>
+    <p><b>Sabır</b>, yoğun trafikte, kırmızı ışıkta beklerken ya da beklenmedik gecikmelerde soğukkanlılığı koruyabilmektir. Sabırlı sürücü acele etmez, öfkeye kapılmaz. <b>Hoşgörü</b> ise başkalarının hatalarını affedebilmek, herkesin zaman zaman yanılabileceğini kabul etmektir. Trafikte küçük bir hatayı büyütmeden, anlayışla karşılamak hoşgörünün göstergesidir.</p>
+
+    <h2>Saygı ve nezaket</h2>
+    <p><b>Saygı</b>, yayaların, diğer sürücülerin ve trafik kurallarının haklarını gözetmektir; yaya geçidinde yayaya öncelik vermek bir saygı davranışıdır. <b>Nezaket</b> ise trafikte inceliği elden bırakmamaktır: kendisine yol veren birine teşekkür etmek, sıkışan bir araca yol vermek, gereksiz korna çalmamak nezaket örnekleridir.</p>
+
+    <h2>Feragat ve diğerkâmlık</h2>
+    <p><b>Feragat</b>, kendi hakkından ya da önceliğinden vazgeçerek başkasına kolaylık sağlamaktır. Örneğin kendini geçmekte olan bir araca yavaşlayarak kolaylık sağlamak trafikte feragat değeriyle ifade edilir. <b>Diğerkâmlık (özgecilik)</b> ise kendi çıkarından önce başkalarının iyiliğini düşünmektir. Bu iki değer, benmerkezciliğin (bencilliğin) karşıtıdır ve trafiği herkes için daha güvenli kılar.</p>
+
+    <h2>Yardımlaşma ve sorumluluk</h2>
+    <p><b>Yardımlaşma</b>, bir kaza ya da arıza durumunda başkalarına yardım elini uzatmaktır; ilk yardım yapmak, yol kenarında kalan bir aracın güvenliğini sağlamak yardımlaşmadır. <b>Sorumluluk</b> ise davranışlarının sonuçlarını önceden düşünerek hareket etmek ve bu sonuçları üstlenmektir. Sorumluluk sahibi bir sürücü, yaptığı her hareketin kendisini ve çevresindekileri etkileyebileceğinin farkındadır.</p>
+
+    <h2>Kısaca</h2>
+    <p>Trafik adabı; sabır, hoşgörü, saygı, nezaket, feragat, diğerkâmlık, yardımlaşma ve sorumluluk gibi değerler üzerine kuruludur. Sabır acele etmemek, hoşgörü hataları affetmek, saygı hakları gözetmek, nezaket incelik göstermektir. Feragat kendi hakkından vazgeçip başkasına kolaylık sağlamak, diğerkâmlık ise başkalarının iyiliğini önce düşünmektir. Bu değerleri davranışa döken sürücü, trafiği herkes için daha güvenli ve huzurlu hâle getirir.</p>
 
     <div class="quiz-cta"><button class="btn-primary" onclick="openQuiz()">Kısa Testi Çöz — 5 Soru →</button></div>
   </main>
 
   <div class="q-overlay" id="quizModal" aria-hidden="true">
     <div class="q-modal">
-      <div class="q-head"><span>Kısa Test — {{KONU_AD}}</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
+      <div class="q-head"><span>Kısa Test — Trafikte Temel Değerler</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
       <div class="q-body" id="quizBody"></div>
       <div class="q-foot"><span class="q-score" id="quizScore"></span><button class="btn-primary" id="quizBtn" onclick="submitQuiz()">Sonucu Gör</button></div>
     </div>
   </div>
 
   <script>
-    const QUIZ={{QUIZ_JSON}};
+    const QUIZ=[
+      {q:"Bir sürücünün kendini geçmekte olan araca yavaşlayarak kolaylık sağlaması hangi değerle ifade edilir?",
+       o:["Bencillik","Feragat","Sabırsızlık","Sorumsuzluk"],c:1},
+      {q:"Başkalarının hatalarını affedebilmek hangi değerin göstergesidir?",
+       o:["Hoşgörü","Öfke","Acelecilik","Kayıtsızlık"],c:0},
+      {q:"Yoğun trafikte ve kırmızı ışıkta beklerken gösterilmesi gereken değer hangisidir?",
+       o:["Öfke","Sabır","Acelecilik","Saldırganlık"],c:1},
+      {q:"Kendisine yol veren birine teşekkür etmek ve sıkışan araca yol vermek hangi değerin örneğidir?",
+       o:["Nezaket","Bencillik","Kayıtsızlık","Rekabet"],c:0},
+      {q:"Kendi çıkarından önce başkalarının iyiliğini düşünmek hangi kavramla ifade edilir?",
+       o:["Bencillik","Diğerkâmlık (özgecilik)","Sorumsuzluk","Kıskançlık"],c:1}
+    ];
     const L=["A","B","C","D"];
     let qAns=[null,null,null,null,null], qDone=false;
     function qBodyHTML(){return QUIZ.map((it,i)=>{const opts=it.o.map((o,j)=>{let cls="q-opt";if(qDone){if(j===it.c)cls+=" correct";else if(j===qAns[i])cls+=" wrong";}else if(qAns[i]===j)cls+=" sel";const click=qDone?"":`onclick="pickQ(${i},${j})"`;return `<div class="${cls}" ${click}><span class="l">${L[j]}</span><span>${o}</span></div>`;}).join("");return `<div class="q-item"><p class="q-q"><span class="qn">${i+1}.</span>${it.q}</p><div class="q-opts">${opts}</div></div>`;}).join("");}

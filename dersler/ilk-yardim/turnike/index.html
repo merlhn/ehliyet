@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{COURSE}} — Konu {{KONU_NO}}: {{KONU_AD}}</title>
+<title>İlk Yardım — Konu 5: Turnike Yöntemi</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -62,28 +62,50 @@
 
   <main>
     <div class="ders-meta">
-      <div><span class="k">Ders</span> : <b>{{COURSE}}</b></div>
-      <div><span class="k">Konu - {{KONU_NO}}</span> : <b>{{KONU_AD}}</b></div>
+      <div><span class="k">Ders</span> : <b>İlk Yardım</b></div>
+      <div><span class="k">Konu - 5</span> : <b>Turnike Yöntemi</b></div>
     </div>
-    <p class="lead">{{LEAD}}</p>
+    <p class="lead">Turnike (boğucu sargı), kanama durdurmanın en son başvurulan yöntemidir. Yanlış uygulandığında dokuya zarar verebildiği için ne zaman, nereye ve nasıl uygulanacağını doğru bilmek gerekir. Bu bölümde turnikenin uygulama kurallarını öğreneceğiz.</p>
 
-<!-- BODY_START -->
-{{BODY}}
-<!-- BODY_END -->
+    <h2>Turnike ne zaman uygulanır?</h2>
+    <p><b>Turnike</b>, doğrudan baskı ve basınç noktasına baskı gibi yöntemlere rağmen durdurulamayan, hayatı tehdit eden şiddetli kanamalarda ve uzuv (kol/bacak) kopmalarında <b>son çare olarak</b> uygulanır. Yani her kanamada değil, yalnızca diğer yöntemlerin işe yaramadığı, kişinin hayatını tehlikeye sokan büyük kanamalarda başvurulur.</p>
+
+    <h2>Nereye uygulanır?</h2>
+    <p>Turnike, kanamanın olduğu uzuvda <b>yara ile kalp arasına</b> uygulanır. Uygulama, uzvun <b>tek kemikli üst bölümünde</b> daha etkilidir; yani kolda üst kola, bacakta uyluğa uygulanır. Bunun nedeni, çift kemikli bölgelerde (ön kol, bacak alt kısmı) damarların kemikler arasında kalıp yeterince sıkıştırılamamasıdır.</p>
+
+    <h2>Nasıl uygulanır?</h2>
+    <p>Turnike için <b>geniş ve yassı</b> bir malzeme (en az yaklaşık 5 cm genişliğinde bir bez) kullanılır. <b>İp, tel, misina gibi ince ve kesici malzemeler kullanılmaz</b>; çünkü bunlar dar bir alana baskı yaparak dokuyu keser ve zarar verir. Turnike, yalnızca kanama duracak kadar sıkılır; gereğinden fazla sıkmak dokuya zarar verir.</p>
+
+    <h2>Uygulama sonrası kurallar</h2>
+    <p>Turnike uygulandıktan sonra iki kural asla unutulmamalıdır. Birincisi, <b>turnikenin uygulandığı saat mutlaka bir kâğıda yazılır</b> ve kazazedenin görünür bir yerine (örneğin alnına) iğnelenir; böylece sağlık ekibi turnikenin ne kadar süredir bağlı olduğunu bilir. İkincisi, turnike <b>sağlık ekibi devralana kadar gevşetilmez ve açılmaz</b>. Ayrıca turnikenin üzeri örtülüp gizlenmez; her zaman görünür durumda kalmalıdır.</p>
+
+    <h2>Kısaca</h2>
+    <p>Turnike, baskı ve basınç noktası yöntemleriyle durmayan hayati kanamalarda ve uzuv kopmalarında son çare olarak uygulanır. Yara ile kalp arasına, uzvun tek kemikli üst bölümüne uygulanır. Geniş ve yassı bir malzeme kullanılır; ip veya tel gibi ince, kesici malzemeler kullanılmaz. Uygulama saati mutlaka not edilip kazazedenin görünür bir yerine yazılır ve turnike, sağlık ekibi gelene kadar gevşetilmez.</p>
 
     <div class="quiz-cta"><button class="btn-primary" onclick="openQuiz()">Kısa Testi Çöz — 5 Soru →</button></div>
   </main>
 
   <div class="q-overlay" id="quizModal" aria-hidden="true">
     <div class="q-modal">
-      <div class="q-head"><span>Kısa Test — {{KONU_AD}}</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
+      <div class="q-head"><span>Kısa Test — Turnike Yöntemi</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
       <div class="q-body" id="quizBody"></div>
       <div class="q-foot"><span class="q-score" id="quizScore"></span><button class="btn-primary" id="quizBtn" onclick="submitQuiz()">Sonucu Gör</button></div>
     </div>
   </div>
 
   <script>
-    const QUIZ={{QUIZ_JSON}};
+    const QUIZ=[
+      {q:"Turnike hangi durumda uygulanır?",
+       o:["Her kanamada ilk yöntem olarak","Baskı ve basınç noktasıyla durmayan şiddetli kanama veya uzuv kopmasında","Küçük sıyrıklarda","Burun kanamasında"],c:1},
+      {q:"Turnike, kanayan uzuvda nereye uygulanır?",
+       o:["Yaranın tam üzerine","Yara ile kalp arasına, uzvun üst bölümüne","Kalbe en uzak noktaya","Parmak uçlarına"],c:1},
+      {q:"Turnikede kullanılacak malzeme nasıl olmalıdır?",
+       o:["İnce ip veya tel","Geniş ve yassı bir bez","Kesici bir malzeme","Naylon poşet"],c:1},
+      {q:"Turnike uygulandıktan sonra mutlaka ne yapılmalıdır?",
+       o:["Uygulama saati not edilip görünür yere yazılmalı","Üzeri kapatılıp gizlenmeli","Hemen gevşetilmeli","Su ile ıslatılmalı"],c:0},
+      {q:"Uygulanan turnike, sağlık ekibi gelene kadar ne yapılmalıdır?",
+       o:["Belirli aralıklarla açılmalı","Gevşetilmemeli / açılmamalı","Sık sık yeri değiştirilmeli","Çıkarılmalı"],c:1}
+    ];
     const L=["A","B","C","D"];
     let qAns=[null,null,null,null,null], qDone=false;
     function qBodyHTML(){return QUIZ.map((it,i)=>{const opts=it.o.map((o,j)=>{let cls="q-opt";if(qDone){if(j===it.c)cls+=" correct";else if(j===qAns[i])cls+=" wrong";}else if(qAns[i]===j)cls+=" sel";const click=qDone?"":`onclick="pickQ(${i},${j})"`;return `<div class="${cls}" ${click}><span class="l">${L[j]}</span><span>${o}</span></div>`;}).join("");return `<div class="q-item"><p class="q-q"><span class="qn">${i+1}.</span>${it.q}</p><div class="q-opts">${opts}</div></div>`;}).join("");}

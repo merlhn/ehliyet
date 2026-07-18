@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kullanım Kılavuzu — Sınav 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/kilavuz.css">
+</head>
+<body>
+  <header><div class="brand">Motorlu Taşıt Sürücü Kursiyerleri için e-Sınav</div></header>
+
+  <div class="modal-overlay">
+   <div class="modal">
+    <div class="modal-head">
+      <span>Kullanım Kılavuzu</span>
+      <a class="modal-close" href="/deneme-sinavlari/" title="Geri dön (Esc)" aria-label="Kapat">✕</a>
+    </div>
+
+    <!-- Kılavuz metni tüm sınavlarda ortaktır: /assets/kilavuz-govde.html -->
+    <div class="modal-body" id="kilavuzGovde"></div>
+
+    <div class="modal-foot">
+      <p class="warn">Bu sınava başlamakla salondaki kayıt sisteminden haberdar olduğumu ve sınav sonucunda cevaplarımı imzalayacağımı kabul ederim.</p>
+      <div class="foot-row">
+        <a class="btn-back" href="/deneme-sinavlari/">‹ Geri</a>
+        <a class="confirm-btn" href="/deneme-sinavlari/sinav-2/">
+          <span>Kullanım Kılavuzunu Okudum ve Kimlik Bilgilerimin Doğruluğunu Onaylıyorum</span>
+        </a>
+      </div>
+    </div>
+
+   </div><!-- /modal -->
+  </div><!-- /modal-overlay -->
+
+  <script>
+    var GERI = '/deneme-sinavlari/';
+
+    // Kılavuz gövdesi tek kaynaktan gelir; sınav sayısı arttıkça metin çoğalmaz.
+    fetch('/assets/kilavuz-govde.html')
+      .then(function(r){ if(!r.ok) throw new Error(r.status); return r.text(); })
+      .then(function(html){
+        document.getElementById('kilavuzGovde').innerHTML = html;
+        try{
+          var d=new Date(), p=function(x){return String(x).padStart(2,'0');};
+          var el=document.getElementById('tarih');
+          if(el) el.textContent = ': '+p(d.getDate())+'/'+p(d.getMonth()+1)+'/'+d.getFullYear()+' '+p(d.getHours())+':'+p(d.getMinutes())+':'+p(d.getSeconds());
+        }catch(e){}
+      })
+      .catch(function(){
+        document.getElementById('kilavuzGovde').innerHTML =
+          '<div class="guide"><p>Kılavuz yüklenemedi. Sayfayı yenileyip tekrar deneyin.</p></div>';
+      });
+
+    var overlay=document.querySelector('.modal-overlay');
+    if(overlay){ overlay.addEventListener('click',function(e){ if(e.target===overlay) location.href=GERI; }); }
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') location.href=GERI; });
+  </script>
+</body>
+</html>
