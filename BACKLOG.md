@@ -38,8 +38,8 @@ Artık kişisel veri işliyoruz; mevcut metin bunu kapsamıyor.
 `/panel/` içinde profil şu an "yakında geliştirilecek" yer tutucusu. Eski `/profil/`
 sayfası silindi, yeniden tasarlanacak. Sınav geçmişi tablosu da buraya taşınacak.
 
-### 5. Panelde Settings ekranı
-Yer tutucu durumda. İçeriği belirlenmedi.
+### 5. Panelde Ayarlar ve Ödeme Geçmişi ekranları
+İkisi de "yakında geliştirilecek" yer tutucusu. İçerikleri belirlenmedi.
 
 ### 6. Sınav sonucunu kaydet
 Sınav bitince `users/{uid}/denemeler` altına yaz. Okuma tarafı (`denemeleriGetir`)
@@ -52,10 +52,10 @@ hazır, panelde gösterilecek yer profil ekranı olacak.
 - Public site header'ında marka görünmüyor, sadece nav var
 - OAuth onay ekranı için kare logo yüklenmesi
 
-### 8. Sınav sayfalarına giriş zorunluluğu
-`deneme-sinavlari/sinav-N/` ve kılavuz sayfalarına `auth-ui` bilerek eklenmedi
-(header'ları farklı: sayaç, "Sınavı Bitir"). Giriş yapmamış kullanıcı sınava
-başlayamamalı.
+### 8. Geri bildirim gerçekten gönderilsin
+`assets/js/feedback.js` gönderimi **simüle ediyor** — kullanıcı "gönderildi" ekranı
+görüyor ama mesaj hiçbir yere ulaşmıyor. Panelde de aynı modal kullanılıyor.
+Bir uç (`/api/feedback`) ya da EmailJS/Formspree gibi bir servis bağlanmalı.
 
 ### 9. Ücretli içeriğin korunması — **kritik**
 Şu an soru bankaları herkese açık: `https://ehliyet.digital/assets/js/questions-2.js`
@@ -108,6 +108,8 @@ gezinmeden çıkarır, ama linke sahip olan herkes açar.
 - `ehliyet.digital` alan adı bağlandı; www kalıcı olarak apex'e yönleniyor
 - Header düzeni içerik kutusuyla hizalandı, mobil sıkışma giderildi
 - Giriş sonrası panel (`/panel/`): yan menü, üst bar, deneme sınavları listesi
+- Sınav ve kılavuz sayfaları panelin içine taşındı (`/panel/sinav-N/`); giriş zorunlu,
+  sınav sürerken menüden ayrılmak onay istiyor
 
 ---
 

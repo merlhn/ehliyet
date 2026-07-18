@@ -16,7 +16,7 @@
    <div class="modal">
     <div class="modal-head">
       <span>Kullanım Kılavuzu</span>
-      <a class="modal-close" href="/deneme-sinavlari/" title="Geri dön (Esc)" aria-label="Kapat">✕</a>
+      <a class="modal-close" href="/panel/?g=sinavlar" title="Geri dön (Esc)" aria-label="Kapat">✕</a>
     </div>
 
     <!-- Kılavuz metni tüm sınavlarda ortaktır: /assets/kilavuz-govde.html -->
@@ -25,8 +25,8 @@
     <div class="modal-foot">
       <p class="warn">Bu sınava başlamakla salondaki kayıt sisteminden haberdar olduğumu ve sınav sonucunda cevaplarımı imzalayacağımı kabul ederim.</p>
       <div class="foot-row">
-        <a class="btn-back" href="/deneme-sinavlari/">‹ Geri</a>
-        <a class="confirm-btn" href="/deneme-sinavlari/sinav-2/">
+        <a class="btn-back" href="/panel/?g=sinavlar">‹ Geri</a>
+        <a class="confirm-btn" href="/panel/sinav-2/">
           <span>Kullanım Kılavuzunu Okudum ve Kimlik Bilgilerimin Doğruluğunu Onaylıyorum</span>
         </a>
       </div>
@@ -36,7 +36,7 @@
   </div><!-- /modal-overlay -->
 
   <script>
-    var GERI = '/deneme-sinavlari/';
+    var GERI = '/panel/?g=sinavlar';
 
     // Kılavuz gövdesi tek kaynaktan gelir; sınav sayısı arttıkça metin çoğalmaz.
     fetch('/assets/kilavuz-govde.html')
@@ -58,5 +58,6 @@
     if(overlay){ overlay.addEventListener('click',function(e){ if(e.target===overlay) location.href=GERI; }); }
     document.addEventListener('keydown',function(e){ if(e.key==='Escape') location.href=GERI; });
   </script>
+  <script type="module" src="/assets/js/panel-kabuk.js"></script>
 </body>
 </html>

@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{--fg:#08090a;--muted:#6a6f76;--line:#ececec;--bg:#fff;--yan:248px}
+  :root{--fg:#08090a;--muted:#6a6f76;--line:#ececec;--yan:248px}
   *{box-sizing:border-box}
   body{margin:0;font-family:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
     color:var(--fg);background:#fff;-webkit-font-smoothing:antialiased;letter-spacing:-.011em}
@@ -18,12 +18,14 @@
   /* ---- Yan menü ---- */
   .yan{position:fixed;inset:0 auto 0 0;width:var(--yan);border-right:1px solid var(--line);
     display:flex;flex-direction:column;background:#fff;z-index:30}
-  .marka{display:flex;align-items:center;gap:10px;padding:20px 18px 22px}
+  /* Marka bloğu, üst bardaki başlık ayracıyla aynı hizada bir çizgiyle ayrılır. */
+  .marka{display:flex;align-items:center;gap:10px;height:60px;padding:0 18px;
+    border-bottom:1px solid var(--line);flex-shrink:0}
   .marka img{width:26px;height:26px;object-fit:contain;flex-shrink:0}
   .marka span{font-size:15.5px;font-weight:600;letter-spacing:-.02em}
 
-  .menu{display:flex;flex-direction:column;gap:2px;padding:0 12px}
-  .menu-alt{margin-top:auto;padding:0 12px 18px}
+  .menu{display:flex;flex-direction:column;gap:2px;padding:14px 12px 0}
+  .menu-alt{margin-top:auto;display:flex;flex-direction:column;gap:2px;padding:0 12px 18px}
   .oge{display:flex;align-items:center;gap:11px;padding:10px 12px;border-radius:9px;
     font-size:14px;font-weight:450;color:#3a3d42;cursor:pointer;background:none;border:none;
     font-family:inherit;width:100%;text-align:left;transition:.12s}
@@ -36,21 +38,37 @@
     display:flex;align-items:center;gap:14px;padding:0 24px;background:rgba(255,255,255,.85);
     backdrop-filter:saturate(180%) blur(10px);z-index:20}
   .baslik{font-size:15px;font-weight:500;letter-spacing:-.015em}
-  .ust-sag{margin-left:auto;display:flex;align-items:center;gap:10px}
+  .ust-sag{margin-left:auto;display:flex;align-items:center;gap:10px;position:relative}
   .kucuk-btn{display:inline-flex;align-items:center;justify-content:center;font-family:inherit;
     font-size:13.5px;font-weight:450;line-height:1;padding:9px 15px;border-radius:9px;
     border:1px solid var(--line);background:#fff;color:var(--fg);cursor:pointer;transition:.12s}
   .kucuk-btn:hover{border-color:#c8c8c8;background:#fafafa}
-  .profil-btn{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:#f5f5f5;
-    padding:0;cursor:pointer;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;
-    font-family:inherit;font-size:13.5px;font-weight:600;color:var(--fg);transition:.12s}
-  .profil-btn:hover{border-color:#c8c8c8}
-  .profil-btn img{width:100%;height:100%;object-fit:cover;display:block}
+
+  /* Profil: avatar + ad, hap biçiminde */
+  .profil-btn{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);
+    border-radius:999px;padding:4px 14px 4px 4px;cursor:pointer;font:inherit;font-size:13.5px;
+    color:var(--fg);transition:.12s}
+  .profil-btn:hover{border-color:#c8c8c8;background:#fafafa}
+  .profil-avatar{width:28px;height:28px;border-radius:50%;flex-shrink:0;background:#ececec;
+    object-fit:cover;display:inline-flex;align-items:center;justify-content:center;
+    font-size:12.5px;font-weight:600;color:var(--fg);overflow:hidden}
+  .profil-avatar img{width:100%;height:100%;object-fit:cover;display:block}
+  .profil-ad{max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+  .profil-menu{position:absolute;top:calc(100% + 8px);right:0;min-width:210px;background:#fff;
+    border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 34px rgba(0,0,0,.10);
+    padding:6px;display:none;z-index:60}
+  .profil-menu.acik{display:block}
+  .profil-menu .mail{padding:9px 12px 7px;font-size:12.5px;color:var(--muted);
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .profil-menu button{display:block;width:100%;text-align:left;background:none;border:none;
+    font:inherit;font-size:14px;color:var(--fg);padding:9px 12px;border-radius:8px;cursor:pointer}
+  .profil-menu button:hover{background:#f5f5f5}
+  .profil-menu .ayrac{height:1px;background:var(--line);margin:5px 2px}
 
   /* ---- İçerik ---- */
-  main{margin-left:var(--yan);padding:60px 0 0}
+  main{margin-left:var(--yan);padding-top:60px}
   .icerik{padding:36px 24px 72px;max-width:1080px}
-
   .sec-basi{margin:0 0 6px;font-size:24px;font-weight:600;letter-spacing:-.025em}
   .sec-alt{margin:0 0 30px;color:var(--muted);font-size:15px;line-height:1.55}
 
@@ -87,13 +105,15 @@
     :root{--yan:0px}
     .yan{position:static;width:100%;height:auto;flex-direction:row;align-items:center;
       border-right:none;border-bottom:1px solid var(--line);padding:0 14px;gap:6px;overflow-x:auto}
-    .marka{padding:12px 8px 12px 0}
+    .marka{height:auto;padding:12px 10px 12px 0;border-bottom:none}
     .marka span{font-size:14.5px}
     .menu,.menu-alt{flex-direction:row;padding:0;margin-top:0}
     .oge{padding:8px 11px;font-size:13.5px;white-space:nowrap}
     .ust{position:static;left:0;height:54px;padding:0 14px}
     main{margin-left:0;padding-top:0}
     .icerik{padding:26px 16px 56px}
+    .profil-ad{display:none}
+    .profil-btn{padding:4px}
     .yakinda-ekran{min-height:52vh}
   }
 </style>
@@ -110,6 +130,12 @@
     </div>
 
     <nav class="menu">
+      <button class="oge" type="button" data-gorunum="anasayfa">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/>
+        </svg>
+        Ana Sayfa
+      </button>
       <button class="oge aktif" type="button" data-gorunum="sinavlar">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
@@ -119,12 +145,18 @@
     </nav>
 
     <nav class="menu-alt">
+      <button class="oge" type="button" data-gorunum="odeme">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/>
+        </svg>
+        Ödeme Geçmişi
+      </button>
       <button class="oge" type="button" data-gorunum="ayarlar">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="3"/>
           <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
         </svg>
-        Settings
+        Ayarlar
       </button>
     </nav>
   </aside>
@@ -132,19 +164,39 @@
   <div class="ust">
     <span class="baslik" data-baslik>Deneme Sınavları</span>
     <div class="ust-sag">
-      <a class="kucuk-btn" href="mailto:omerlhn@gmail.com?subject=ehliyet.digital%20—%20Geri%20Bildirim">Feedback</a>
-      <button class="profil-btn" type="button" data-profil aria-label="Profil"></button>
+      <button class="kucuk-btn" type="button" data-feedback>Geri Bildirim</button>
+
+      <button class="profil-btn" type="button" data-profil aria-haspopup="true" aria-expanded="false">
+        <span class="profil-avatar" data-avatar></span>
+        <span class="profil-ad" data-ad></span>
+      </button>
+
+      <div class="profil-menu" role="menu">
+        <div class="mail" data-mail></div>
+        <button type="button" data-profilim>Profilim</button>
+        <div class="ayrac"></div>
+        <button type="button" data-cikis>Çıkış yap</button>
+      </div>
     </div>
   </div>
 
   <main>
+    <!-- Ana Sayfa -->
+    <section data-gorunum-icerik="anasayfa" hidden>
+      <div class="yakinda-ekran">
+        <div class="halka"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h2>Yakında geliştirilecek</h2>
+        <p>Bu alan üzerinde çalışıyoruz. Kısa süre içinde tekrar göz atın.</p>
+      </div>
+    </section>
+
     <!-- Deneme sınavları -->
     <section class="icerik" data-gorunum-icerik="sinavlar">
       <h1 class="sec-basi">Deneme Sınavları</h1>
       <p class="sec-alt">Gerçek MTSK e-sınav formatında, 50 soruluk tam deneme sınavları.</p>
 
       <div class="sinav-grid">
-        <a class="sinav-kart" href="/deneme-sinavlari/sinav-1/kilavuz/">
+        <a class="sinav-kart" href="/panel/sinav-1/kilavuz/">
           <h3>Sınav 1<span class="rozet">Ücretsiz</span></h3>
           <p class="aciklama">Tüm bölümleri kapsayan tam deneme sınavı.</p>
           <ul>
@@ -157,7 +209,7 @@
           <span class="kart-btn">Sınavı Başlat</span>
         </a>
 
-        <a class="sinav-kart" href="/deneme-sinavlari/sinav-2/kilavuz/">
+        <a class="sinav-kart" href="/panel/sinav-2/kilavuz/">
           <h3>Sınav 2</h3>
           <p class="aciklama">Tüm bölümleri kapsayan tam deneme sınavı.</p>
           <ul>
@@ -184,23 +236,28 @@
       </div>
     </section>
 
-    <!-- Settings -->
-    <section data-gorunum-icerik="ayarlar" hidden>
+    <!-- Ödeme geçmişi -->
+    <section data-gorunum-icerik="odeme" hidden>
       <div class="yakinda-ekran">
-        <div class="halka">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-        </div>
+        <div class="halka"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
         <h2>Yakında geliştirilecek</h2>
         <p>Bu alan üzerinde çalışıyoruz. Kısa süre içinde tekrar göz atın.</p>
       </div>
     </section>
 
-    <!-- Profil -->
+    <!-- Ayarlar -->
+    <section data-gorunum-icerik="ayarlar" hidden>
+      <div class="yakinda-ekran">
+        <div class="halka"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h2>Yakında geliştirilecek</h2>
+        <p>Bu alan üzerinde çalışıyoruz. Kısa süre içinde tekrar göz atın.</p>
+      </div>
+    </section>
+
+    <!-- Profilim -->
     <section data-gorunum-icerik="profil" hidden>
       <div class="yakinda-ekran">
-        <div class="halka">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-        </div>
+        <div class="halka"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
         <h2>Yakında geliştirilecek</h2>
         <p>Bu alan üzerinde çalışıyoruz. Kısa süre içinde tekrar göz atın.</p>
       </div>
@@ -208,11 +265,15 @@
   </main>
 </template>
 
+<script src="/assets/js/feedback.js" defer></script>
 <script type="module">
-import { kullaniciDinle, profiliHazirla } from '/assets/js/firebase.js';
+import { kullaniciDinle, profiliHazirla, cikisYap } from '/assets/js/firebase.js';
 
 const kabuk = document.getElementById('kabuk');
-const BASLIKLAR = { sinavlar: 'Deneme Sınavları', ayarlar: 'Settings', profil: 'Profil' };
+const BASLIKLAR = {
+  anasayfa: 'Ana Sayfa', sinavlar: 'Deneme Sınavları',
+  odeme: 'Ödeme Geçmişi', ayarlar: 'Ayarlar', profil: 'Profilim',
+};
 
 function kabuguKur(user) {
   kabuk.classList.remove('yukleniyor');
@@ -228,30 +289,52 @@ function kabuguKur(user) {
     ogeler.forEach(o => o.classList.toggle('aktif', o.dataset.gorunum === ad));
     baslik.textContent = BASLIKLAR[ad] || '';
   }
-
   ogeler.forEach(o => o.addEventListener('click', () => goster(o.dataset.gorunum)));
 
-  // Profil butonu: şimdilik "yakında" ekranını açar, menüdeki hiçbir öğe seçili kalmaz.
-  const profilBtn = kabuk.querySelector('[data-profil]');
-  profilBtn.addEventListener('click', () => goster('profil'));
+  // Alt sayfalardaki yan menü /panel/?g=<görünüm> ile geri döner.
+  const istenen = new URLSearchParams(location.search).get('g');
+  if (istenen && BASLIKLAR[istenen]) goster(istenen);
+
+  // ---- Profil ----
+  const btn = kabuk.querySelector('[data-profil]');
+  const menu = kabuk.querySelector('.profil-menu');
+  const avatar = kabuk.querySelector('[data-avatar]');
+  const ad = user.displayName || user.email || 'Hesabım';
+
+  kabuk.querySelector('[data-ad]').textContent = ad;
+  kabuk.querySelector('[data-mail]').textContent = user.email || '';
 
   if (user.photoURL) {
     const img = document.createElement('img');
-    img.src = user.photoURL;
-    img.alt = '';
-    img.referrerPolicy = 'no-referrer';
-    profilBtn.appendChild(img);
+    img.src = user.photoURL; img.alt = ''; img.referrerPolicy = 'no-referrer';
+    avatar.appendChild(img);
   } else {
-    profilBtn.textContent = (user.displayName || user.email || '?').trim().charAt(0).toUpperCase();
+    avatar.textContent = ad.trim().charAt(0).toUpperCase();
   }
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const acik = menu.classList.toggle('acik');
+    btn.setAttribute('aria-expanded', String(acik));
+  });
+  document.addEventListener('click', () => {
+    menu.classList.remove('acik');
+    btn.setAttribute('aria-expanded', 'false');
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') menu.classList.remove('acik'); });
+
+  kabuk.querySelector('[data-profilim]').addEventListener('click', () => {
+    menu.classList.remove('acik');
+    goster('profil');
+  });
+  kabuk.querySelector('[data-cikis]').addEventListener('click', async () => {
+    await cikisYap();
+    location.href = '/';
+  });
 }
 
 kullaniciDinle(async (user) => {
-  if (!user) {
-    // Panel yalnızca giriş yapmış kullanıcılar içindir.
-    location.replace('/');
-    return;
-  }
+  if (!user) { location.replace('/'); return; }
   kabuguKur(user);
   try {
     await profiliHazirla(user);
