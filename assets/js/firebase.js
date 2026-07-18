@@ -16,7 +16,11 @@ import {
 
 const firebaseConfig = {
   apiKey: 'AIzaSyDmyoZ-Wa-zqzimqaIV--9tN2TFdvhRcmo',
-  authDomain: 'ehliyet-52d4d.firebaseapp.com',
+  // Google giriş ekranında bu adres görünür; bu yüzden Firebase'in verdiği
+  // ehliyet-52d4d.firebaseapp.com yerine kendi alan adımız kullanılıyor.
+  // ZORUNLU EŞLİK: vercel.json içindeki /__/auth/* yönlendirmesi. İkisi
+  // birlikte çalışır; biri değişip diğeri kalırsa giriş tamamen kırılır.
+  authDomain: 'ehliyet.digital',
   projectId: 'ehliyet-52d4d',
   storageBucket: 'ehliyet-52d4d.firebasestorage.app',
   messagingSenderId: '40944921621',
