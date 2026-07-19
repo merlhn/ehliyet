@@ -84,3 +84,21 @@ oturtuluyor — kontrastı döşemenin kendisi sağlıyor.
 İnce çizgili kart detayı 16px'te okunmuyor; bu logonun doğasından ve kabul
 edilmiş bir sınır. 32px ve üstünde sorun yok. Keskinlik istenirse çözüm
 favicon'a özel sadeleştirilmiş bir işaret çizmek olur.
+
+## Kural: giriş sonrası hiçbir sayfa indekslenmez
+
+Kullanıcı giriş yaptıktan sonra gördüğü hiçbir sayfa arama sonuçlarında yer
+almaz. Üç katman birden gerekir:
+
+1. sayfada `<meta name="robots" content="noindex">`
+2. `robots.txt` içinde dizin `Disallow`
+3. `sitemap.xml` içinde adres bulunmaması
+
+Üçü de gerekli. **robots.txt tek başına yetmez** — o yalnızca taramayı
+engeller, indekslemeyi değil; sayfaya dışarıdan link verilirse Google adresi
+yine listeleyebilir. İndekslemeyi durduran şey `noindex` etiketidir.
+
+`python3 tools/index-kontrol.py` bu üç katmanı doğrular ve ihlal varsa 1 ile
+çıkar. Yeni kapılı sayfa eklendikten sonra çalıştırılır. Yeni bir yetki
+mekanizması gelirse script içindeki `KAPI_ISARETLERI` listesine eklenmeli,
+yoksa kontrol o sayfayı gözden kaçırır.
