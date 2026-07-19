@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Panel giriş yapan kullanıcıya özeldir, arama sonuçlarında yeri yok.
+Disallow: /panel/
+
+Sitemap: https://ehliyet.digital/sitemap.xml

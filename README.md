@@ -54,3 +54,19 @@ Veritabanında **içerik tutulmaz** — sadece profil, sınav sonuçları ve sı
 ## Yeni deneme sınavı ekleme
 
 Kaynaklar `../Sınav_N/` altında toplanır (soru ekran görüntüleri, soru materyalleri, cevap anahtarı PDF'i); bunlardan `assets/js/questions-N.js` ve `deneme-sinavlari/sinav-N/` üretilir. Cevaplar yayına alınmadan önce anahtarla programatik olarak karşılaştırılmalıdır.
+
+## SEO ve ölçümleme
+
+- `robots.txt` — `/panel/` hariç her şey taranabilir, sitemap'i işaret eder.
+- `sitemap.xml` — **elle düzenlenmez.** Ders ya da sınav eklendikten sonra
+  `python3 tools/sitemap-uret.py` çalıştırılır; script `index.html` dosyalarını
+  tarar, `panel/` ve `noindex` işaretli sayfaları atlar, `lastmod` değerini son
+  commit tarihinden alır.
+- **GA4 etiketi her sayfanın `<head>`'inde inline durur**, ayrı bir js dosyasında
+  değil. Sebebi: Search Console'un Analytics ile doğrulama yöntemi sayfanın ham
+  HTML'ine bakar, JavaScript çalıştırmaz — etiket dinamik yüklenirse doğrulama
+  başarısız olur. Ölçüm kimliği değişirse 55 dosyada birden değiştirilir:
+
+  ```bash
+  grep -rl 'G-34HL041XN0' --include='*.html' . | xargs sed -i '' 's/G-34HL041XN0/G-YENIID/g'
+  ```
