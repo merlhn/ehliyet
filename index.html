@@ -68,11 +68,18 @@
   main{flex:1}
 
   /* Hero */
-  .hero{text-align:center;max-width:1000px;margin:0 auto;padding:104px 28px 84px}
+  /* Koyu hero — /hap-bilgiler/ landing'iyle aynı dil. Butonlar koyu zeminde
+     ters çevrilir: birincil buton beyaza döner, ikincil buton saydamlaşır. */
+  .hero{background:#08090a;color:#fff;text-align:center}
+  .hero-ic{max-width:1000px;margin:0 auto;padding:104px 28px 84px}
   .hero h1{margin:0 0 22px;font-size:clamp(44px,8vw,84px);font-weight:600;letter-spacing:-.032em;line-height:1.02}
-  .hero p{margin:0 auto;font-size:19px;line-height:1.55;color:var(--muted);max-width:600px}
-  .hero p b{color:var(--fg);font-weight:600}
+  .hero p{margin:0 auto;font-size:19px;line-height:1.55;color:#b7bcc3;max-width:600px}
+  .hero p b{color:#fff;font-weight:600}
   .hero-actions{margin-top:34px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .hero .btn-primary{background:#fff;color:#08090a;border-color:#fff}
+  .hero .btn-primary:hover{background:#e4e6e9;border-color:#e4e6e9}
+  .hero .btn-outline{background:transparent;color:#fff;border-color:#3a3d42}
+  .hero .btn-outline:hover{background:#131417;border-color:#565a60}
 
   /* Section base */
   .section{max-width:1100px;margin:0 auto;padding:88px 28px;border-top:1px solid var(--line)}
@@ -147,7 +154,7 @@
     header{padding:0 16px;gap:12px;height:58px}
     .nav{gap:14px}
     .nav a{font-size:11px}
-    .hero{padding:64px 20px 52px}
+    .hero-ic{padding:64px 20px 52px}
     .hero p{font-size:17px}
     .cta-inner{padding:44px 22px}
     .foot-wrap{gap:26px}
@@ -205,23 +212,26 @@
     <nav class="nav">
       <a href="/">Ana Sayfa</a>
       <a href="/dersler/">Ders Notları</a>
-      
+      <a href="/hap-bilgiler/">Hap Bilgiler</a>
     </nav>
   </header>
 
   <main>
     <!-- HERO -->
     <section class="hero">
-      <h1>Ehliyet sınavını<br>ilk denemede geç.</h1>
-      <p>Sınavdan önce <b>ders notlarını</b> incele, <b>hap bilgileri</b> al ve <b>deneme sınavları</b> ile kendini test et. Ehliyet sınavına kolaylıkla hazırlan.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary btn-lg" href="/panel/?g=sinavlar" data-korumali>Giriş Yap ve Sınava Başla</a>
-        <a class="btn btn-outline btn-lg" href="/dersler/">Ders Notları</a>
+      <div class="hero-ic">
+        <h1>Ehliyet sınavını<br>ilk denemede geç.</h1>
+        <p>Sınavdan önce <b>ders notlarını</b> incele, <b>hap bilgileri</b> al ve <b>deneme sınavları</b> ile kendini test et. Ehliyet sınavına kolaylıkla hazırlan.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="/panel/?g=sinavlar" data-korumali>Giriş Yap ve Sınava Başla</a>
+          <a class="btn btn-outline btn-lg" href="/dersler/">Ders Notları</a>
+        </div>
       </div>
     </section>
 
     <!-- KONULAR -->
-    <section class="section">
+    <!-- Üst çizgi yok: koyu hero zaten güçlü bir ayraç, hemen altında hairline fazlalık. -->
+    <section class="section" style="border-top:none">
       <p class="eyebrow">Konular</p>
       <h2 class="sec-title">Ehliyet sınavının dört konusu</h2>
       <p class="sec-sub">Sınav bu dört bölümden oluşur. Her konunun ders notlarıyla eksiklerini kapat, sonra deneme sınavında kendini test et.</p>

@@ -390,8 +390,11 @@ function kabuguKur() {
     goster('profil');
   });
   kabuk.querySelector('[data-cikis]').addEventListener('click', async () => {
-    await cikisYap();
-    location.href = '/';
+    const { cikisOnayiAc } = await import('/assets/js/cikis-onay.js');
+    cikisOnayiAc(async () => {
+      await cikisYap();
+      location.href = '/';
+    });
   });
 }
 

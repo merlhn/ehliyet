@@ -14,6 +14,12 @@ DERSLER = [
     "ders_link": "/dersler/ilk-yardim/ilk-yardim-ve-acil-tedavi/",
     "kart": "Temel yaşam desteği, kanamalar, kırıklar, pozisyonlar ve taşıma teknikleri.",
     "ozet": "Deneme sınavlarındaki İlk Yardım sorularını çözdüren bilgiler: sayılar, sıralamalar ve müdahale kuralları.",
+    # Landing kartında gösterilen örnekler: gruplardaki bilgilerin kısaltılmış hâli.
+    # Hero'daki HERO_ORNEKLER ile çakışmasın diye farklı bilgiler seçildi.
+    "on_izleme": [
+      "Fışkırır tarzda kanama, atardamar kanamasıdır.",
+      "Köprücük kemiği kırığı, çapraz (sekiz) bandajla tespit edilir.",
+    ],
     "ikon": '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',
     "gruplar": [
       ("Temel yaşam desteği", [
@@ -55,6 +61,10 @@ DERSLER = [
     "ders_link": "/dersler/trafik-ve-cevre/temel-tanimlar/",
     "kart": "İşaretler, şerit ve geçme kuralları, duraklama mesafeleri, geçiş üstünlüğü ve cezalar.",
     "ozet": "Deneme sınavlarındaki Trafik ve Çevre sorularını çözdüren bilgiler: mesafeler, süreler, sıralamalar ve kurallar.",
+    "on_izleme": [
+      "Yangın musluklarına 5 metre mesafede duraklamak yasaktır.",
+      "100 ceza puanını ilk kez aşan sürücünün belgesi 2 ay geri alınır.",
+    ],
     "ikon": '<path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>',
     "gruplar": [
       ("Kurumlar ve yetkiler", [
@@ -110,6 +120,10 @@ DERSLER = [
     "ders_link": "/dersler/arac-teknigi/motor-nedir/",
     "kart": "Gösterge paneli ikazları, motor sistemleri, bakım kuralları ve ekonomik sürüş.",
     "ozet": "Deneme sınavlarındaki Araç Tekniği sorularını çözdüren bilgiler: ikaz ışıkları, arıza sebepleri ve bakım kuralları.",
+    "on_izleme": [
+      "ABS uyarı ışığı, fren sisteminde arıza olduğunu bildirir.",
+      "Motorun hararet yapma sebeplerinden biri termostat arızasıdır.",
+    ],
     "ikon": '<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>',
     "gruplar": [
       ("Gösterge paneli ikazları", [
@@ -143,6 +157,10 @@ DERSLER = [
     "ders_link": "/dersler/trafik-adabi/temel-kavramlar/",
     "kart": "Trafikteki değerler, hak ihlalleri, stres yönetimi ve iletişim kuralları.",
     "ozet": "Deneme sınavlarındaki Trafik Adabı sorularını çözdüren bilgiler: değer kavramları, davranış örnekleri ve hak ihlalleri.",
+    "on_izleme": [
+      "Feragat, kendi hakkından başkası yararına vazgeçebilmektir.",
+      "Trafikte yaşanan stres kaygıyı artırır, kalp atışını hızlandırır.",
+    ],
     "ikon": '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
     "gruplar": [
       ("Değerler", [
@@ -335,14 +353,28 @@ KUYRUK = f"""
 # ------------------------------------------------------- landing sayfası ----
 
 LANDING_CSS = """
-  .hero{text-align:center;max-width:1000px;margin:0 auto;padding:104px 28px 84px}
+  /* Koyu hero — landing'in kimliği. Ana sayfa beyaz "vitrin", burası ürünün
+     kendisi: renk dili ana sayfadaki yatay Hap Bilgiler kartından geliyor,
+     ziyaretçi koyu karttan koyu sayfaya iner ve daha kaydırmadan
+     örnek bilgileri görür. */
+  .hero{background:#08090a;color:#fff;text-align:center}
+  .hero-ic{max-width:1060px;margin:0 auto;padding:84px 28px 68px}
+  .hero .eyebrow{color:#8a9097}
   .hero h1{margin:0 0 22px;font-size:clamp(44px,8vw,84px);font-weight:600;letter-spacing:-.032em;line-height:1.02}
-  .hero p{margin:0 auto;font-size:19px;line-height:1.55;color:var(--muted);max-width:620px}
-  .hero p b{color:var(--fg);font-weight:600}
+  .hero .tanitim{margin:0 auto;font-size:19px;line-height:1.55;color:#b7bcc3;max-width:620px}
+  .hero .tanitim b{color:#fff;font-weight:600}
+  .stats{display:flex;justify-content:center;align-items:baseline;gap:16px;flex-wrap:wrap;margin:32px 0 0}
+  .stat{font-family:'Geist Mono',monospace;font-size:13px;color:#8a9097;white-space:nowrap}
+  .stat b{font-size:20px;font-weight:500;color:#fff;margin-right:7px}
+  .stat-ayrac{color:#3a3d42}
+  .ornekler{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:48px 0 0;text-align:left}
+  .ornek{background:#131417;border:1px solid #26282c;border-radius:14px;padding:18px 20px}
+  .ornek .kim{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#8a9097;margin:0 0 9px}
+  .ornek p{margin:0;font-size:14px;line-height:1.55;color:#e6e8ea}
 
-  .section{max-width:1100px;margin:0 auto;padding:88px 28px;border-top:1px solid var(--line)}
+  .section{max-width:1100px;margin:0 auto;padding:88px 28px}
   .sec-title{margin:0 0 8px;font-size:clamp(28px,4vw,42px);font-weight:600;letter-spacing:-.03em;line-height:1.08}
-  .sec-sub{margin:0 0 38px;font-size:16px;color:var(--muted);max-width:560px;line-height:1.55}
+  .sec-sub{margin:0 0 38px;font-size:16px;color:var(--muted);max-width:660px;line-height:1.6}
 
   .cat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
   .cat-card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:16px;padding:24px;text-decoration:none;color:inherit;background:#fff;transition:.15s}
@@ -351,7 +383,9 @@ LANDING_CSS = """
   .cat-ico{width:44px;height:44px;flex-shrink:0;border:1px solid var(--line);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--fg);background:#fafafa}
   .cat-card h3{margin:0;font-size:20px;font-weight:600;letter-spacing:-.02em}
   .cat-count{font-family:'Geist Mono',monospace;font-size:12px;color:var(--muted);margin-top:2px}
-  .cat-card p{margin:0 0 18px;color:var(--muted);font-size:14.5px;line-height:1.5}
+  .cat-on{list-style:none;margin:0 0 20px;padding:0;display:flex;flex-direction:column;gap:9px}
+  .cat-on li{position:relative;padding-left:16px;font-size:14px;line-height:1.5;color:#3a3d42}
+  .cat-on li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:2px;border-radius:2px;background:#d0d4da}
   .cat-go{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;color:var(--fg)}
   a.cat-card:hover .cat-go{gap:9px}
 
@@ -360,21 +394,36 @@ LANDING_CSS = """
   .cta-inner h2{margin:0 0 14px;font-size:clamp(28px,4vw,44px);font-weight:600;letter-spacing:-.03em;line-height:1.06}
   .cta-inner p{margin:0 auto 30px;font-size:17px;color:var(--muted);max-width:460px;line-height:1.5}
 
-  @media(max-width:860px){.cat-grid{grid-template-columns:1fr}}
-  @media(max-width:640px){.hero{padding:64px 20px 52px}.hero p{font-size:17px}.section{padding:60px 22px}.cta-inner{padding:44px 22px}}"""
+  @media(max-width:860px){.cat-grid{grid-template-columns:1fr}.ornekler{grid-template-columns:1fr}}
+  @media(max-width:640px){.hero-ic{padding:56px 20px 44px}.hero .tanitim{font-size:17px}.stats{gap:12px}.ornekler{margin-top:38px}.section{padding:60px 22px}.cta-inner{padding:44px 22px}}"""
+
+# Koyu hero'da gösterilen örnek bilgiler: sayfanın değeri daha kaydırmadan
+# görünsün diye. Kartlardaki on_izleme'lerden farklı bilgiler seçildi.
+HERO_ORNEKLER = [
+  ("Trafik ve Çevre", "Gece kısa farla net görüş mesafesi ortalama 25 metredir."),
+  ("İlk Yardım", "Temel yaşam desteği 30 kalp masajı + 2 yapay solunumdur ve kalp masajıyla başlanır."),
+  ("Araç Tekniği", "Şarj ve yağ basıncı lambaları yanarsa araç derhal durdurulur, kontak kapatılır."),
+]
 
 def landing():
     toplam = sum(len(f) for d in DERSLER for _, f in d["gruplar"])
+    ornekler_html = "\n".join(
+        f"""          <div class="ornek"><p class="kim">{ders}</p><p>{bilgi}</p></div>"""
+        for ders, bilgi in HERO_ORNEKLER)
     kartlar = []
     for d in DERSLER:
         adet = sum(len(f) for _, f in d["gruplar"])
+        kalan = adet - len(d["on_izleme"])
+        onizleme = "\n".join(f"            <li>{b}</li>" for b in d["on_izleme"])
         kartlar.append(f"""        <a class="cat-card" href="/hap-bilgiler/{d['slug']}/">
           <div class="cat-top">
             <span class="cat-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{d['ikon']}</svg></span>
             <div><h3>{d['ad']}</h3><div class="cat-count">{adet} hap bilgi</div></div>
           </div>
-          <p>{d['kart']}</p>
-          <span class="cat-go">Bilgilere göz at →</span>
+          <ul class="cat-on">
+{onizleme}
+          </ul>
+          <span class="cat-go">+{kalan} bilgi daha →</span>
         </a>""")
     kartlar_html = "\n\n".join(kartlar)
 
@@ -382,15 +431,28 @@ def landing():
   <main>
     <!-- HERO -->
     <section class="hero">
-      <h1>Hap Bilgiler</h1>
-      <p>Uzun anlatım yok. Deneme sınavlarındaki soruları çözdüren <b>{toplam} bilgi</b>, dört ders altında tek tek damıtıldı — oku, aklında tut, sınavda uygula.</p>
+      <div class="hero-ic">
+        <p class="eyebrow">Sınavdan önce son tekrar</p>
+        <h1>Hap Bilgiler</h1>
+        <p class="tanitim">Uzun anlatım yok. Deneme sınavlarındaki soruları çözdüren <b>{toplam} bilgi</b>, dört ders altında tek tek damıtıldı — oku, aklında tut, sınavda uygula.</p>
+        <div class="stats">
+          <span class="stat"><b>{toplam}</b>hap bilgi</span>
+          <span class="stat-ayrac">·</span>
+          <span class="stat"><b>{len(DERSLER)}</b>ders</span>
+          <span class="stat-ayrac">·</span>
+          <span class="stat"><b>~15 dk</b>tekrar</span>
+        </div>
+        <div class="ornekler">
+{ornekler_html}
+        </div>
+      </div>
     </section>
 
     <!-- DERSLER -->
     <section class="section">
       <p class="eyebrow">Dersler</p>
-      <h2 class="sec-title">Dört ders, sınavlık bilgiler</h2>
-      <p class="sec-sub">Her ders sayfasında bilgiler konuya göre gruplandı. Sınavdan hemen önce hızlı bir tekrar için birebir.</p>
+      <h2 class="sec-title">Sınavlık bilgiler</h2>
+      <p class="sec-sub">Hap bilgi, bir sınav sorusunu çözmeye yeten tek cümledir: bir mesafe, bir süre, bir sıralama ya da bir kural. Buradaki {toplam} bilginin her biri deneme sınavlarındaki sorulardan damıtıldı ve ders sayfalarında konuya göre gruplandı — sınavdan hemen önce hızlı tekrar için birebir.</p>
       <div class="cat-grid">
 
 {kartlar_html}

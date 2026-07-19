@@ -240,7 +240,11 @@ function kullaniciGoster(slot, user) {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') menu.classList.remove('acik');
   });
-  slot.querySelector('[data-cikis]').addEventListener('click', () => cikisYap());
+  // Onay ekranı ihtiyaç anında iner: çoğu ziyaret çıkışla bitmiyor.
+  slot.querySelector('[data-cikis]').addEventListener('click', async () => {
+    const { cikisOnayiAc } = await import('./cikis-onay.js');
+    cikisOnayiAc(() => cikisYap());
+  });
 }
 
 /*
