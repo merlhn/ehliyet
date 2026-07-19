@@ -6,6 +6,20 @@
       "destination": "https://ehliyet-52d4d.firebaseapp.com/__/auth/:path*"
     }
   ],
+  "headers": [
+    {
+      "source": "/assets/fonts/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }
+      ]
+    }
+  ],
   "redirects": [
     {
       "source": "/deneme-sinavlari",
