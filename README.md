@@ -70,3 +70,17 @@ Kaynaklar `../Sınav_N/` altında toplanır (soru ekran görüntüleri, soru mat
   ```bash
   grep -rl 'G-34HL041XN0' --include='*.html' . | xargs sed -i '' 's/G-34HL041XN0/G-YENIID/g'
   ```
+
+## Favicon
+
+Kaynak `assets/img/marka/logo.png`. Üretilen dosyalar (`favicon.ico`,
+`apple-touch-icon.png`, `icon-192.png`, `icon-512.png`) **elle düzenlenmez**;
+logo değişirse `python3 tools/favicon-uret.py` tekrar çalıştırılır.
+
+Logo şeffaf zeminde ve neredeyse siyah; olduğu gibi kullanılsaydı tarayıcının
+koyu tema sekme şeridinde kaybolurdu. Bu yüzden beyaz yuvarlatılmış bir zemine
+oturtuluyor — kontrastı döşemenin kendisi sağlıyor.
+
+İnce çizgili kart detayı 16px'te okunmuyor; bu logonun doğasından ve kabul
+edilmiş bir sınır. 32px ve üstünde sorun yok. Keskinlik istenirse çözüm
+favicon'a özel sadeleştirilmiş bir işaret çizmek olur.
