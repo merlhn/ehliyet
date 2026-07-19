@@ -57,6 +57,9 @@
   .ders-meta{margin:0 0 24px;font-size:15.5px;line-height:1.7;color:var(--muted)}
   .ders-meta .k{display:inline-block;min-width:104px;font-family:'Geist Mono',monospace;font-size:13.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
   .ders-meta b{color:#08090a;font-weight:600}
+  /* Konu adi sayfanin H1'i. Gorsel olarak .ders-meta b ile ayni gorunmesi
+     icin tarayicinin varsayilan h1 stilleri sifirlaniyor. */
+  .ders-meta h1{display:inline;margin:0;font-size:inherit;line-height:inherit;font-weight:600;color:#08090a;letter-spacing:inherit}
   h1{font-size:clamp(30px,5vw,46px);font-weight:600;letter-spacing:-.03em;line-height:1.08;margin:0 0 18px}
   .lead{font-size:14px;color:var(--muted);line-height:1.6;margin:0 0 8px}
   .meta{font-family:'Geist Mono',monospace;font-size:12.5px;color:#9a9a9a;margin:0 0 12px}
@@ -107,6 +110,71 @@
   .foot-marka img{width:22px;height:22px;object-fit:contain;display:block}
   @media(max-width:640px){.marka img{width:22px;height:22px}}
 </style>
+<!-- schema.org — tools/schema-uret.py tarafından üretilir, elle düzenlenmez -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Temel Kavramlar",
+      "description": "Temel trafik kavramları: sınavda hem doğrudan hem soru içinde çıkan tanımlar ve bunları ezberlemeden mantığıyla kavrama yolu.",
+      "url": "https://ehliyet.digital/dersler/trafik-ve-cevre/temel-tanimlar/",
+      "image": "https://ehliyet.digital/og-image.png",
+      "inLanguage": "tr-TR",
+      "articleSection": "Trafik ve Çevre",
+      "dateModified": "2026-07-19T14:12:20+03:00",
+      "author": {
+        "@type": "Organization",
+        "name": "ehliyet.digital",
+        "url": "https://ehliyet.digital/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ehliyet.digital/icon-512.png"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ehliyet.digital",
+        "url": "https://ehliyet.digital/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ehliyet.digital/icon-512.png"
+        }
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Ehliyet Sınavı",
+        "url": "https://ehliyet.digital/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://ehliyet.digital/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Dersler",
+          "item": "https://ehliyet.digital/dersler/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Temel Kavramlar",
+          "item": "https://ehliyet.digital/dersler/trafik-ve-cevre/temel-tanimlar/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- /schema.org -->
 </head>
 <body>
   <header>
@@ -117,7 +185,7 @@
   <main>
     <div class="ders-meta">
       <div><span class="k">Ders</span> : <b>Trafik ve Çevre</b></div>
-      <div><span class="k">Konu - 1</span> : <b>Temel Kavramlar</b></div>
+      <div><span class="k">Konu - 1</span> : <h1>Temel Kavramlar</h1></div>
     </div>
     <p class="lead">Sınavda hem doğrudan hem de soruların içinde sıkça karşınıza çıkan temel trafik tanımları. Bu tanımları ezberlemek yerine mantığını kavramanız gerekir; aksi hâlde soru biraz farklı sorulduğunda yanılırsınız.</p>
 

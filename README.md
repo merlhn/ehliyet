@@ -119,3 +119,26 @@ doğrulanabilir olmalı — örneğin "üyelik gerekmez" **yazılamaz**, deneme 
 
 Panel sayfalarına OG etiketi eklenmez; kapalı içeriğin paylaşım önizlemesi
 olmaz.
+
+## H1, yapısal veri ve başlık uzunluğu
+
+**H1.** Her sayfada tam olarak bir H1 bulunur. Ders notlarında bu, `.ders-meta`
+içindeki konu adıdır — görsel olarak `.ders-meta b` ile aynı görünmesi için
+tarayıcının varsayılan h1 stilleri sıfırlanır. Yani H1 eklemek tasarımı
+değiştirmez; zaten başlık gibi görünen öğenin etiketi doğru olur.
+
+**Yapısal veri.** `python3 tools/schema-uret.py` ile üretilir, elle
+düzenlenmez; işaretçiler arasındaki blok silinip yeniden yazıldığı için tekrar
+tekrar çalıştırılabilir. Veriler sayfanın kendisinden (h1, description,
+canonical) okunur, ikinci bir kaynak tutulmaz.
+
+Bilinçli olarak kapsam dışı bırakılanlar script'in başında gerekçesiyle yazılı:
+FAQPage (Google 2023'te dar bir otorite grubuna kısıtladı, yanlış işaretleme
+manuel eylem riski), SearchAction (site içi arama istemci tarafında, sonuç
+URL'i üretmiyor), ders seviyesi kırıntı (`/dersler/ilk-yardim/` diye bir sayfa
+yok, 404 döner — ders adı `articleSection` olarak işaretlenir).
+
+**Başlık uzunluğu.** `<title>` 60 karakteri aşmamalı, aşarsa arama sonucunda
+ortadan kesilir. Aşan başlıklarda `Konu N:` kısmı atılır — arama değeri yok,
+numara sayfada ve yan menüde zaten görünür. `og:title` ve `twitter:title`
+`<title>` ile birebir aynı kalmalı.
