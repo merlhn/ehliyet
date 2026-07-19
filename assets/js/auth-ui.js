@@ -80,6 +80,23 @@ const GOOGLE_LOGO = `
   <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
 </svg></span>`;
 
+/**
+ * Google girişini dener. Başarılıysa true döner.
+ * Kullanıcı pencereyi kapattıysa bu bir hata değildir; sessizce false döner.
+ */
+async function girisDene() {
+  try {
+    await girisYap();
+    return true;
+  } catch (err) {
+    if (err?.code !== 'auth/popup-closed-by-user' && err?.code !== 'auth/cancelled-popup-request') {
+      console.error('Giriş başarısız:', err);
+      alert('Giriş yapılamadı. Lütfen tekrar deneyin.');
+    }
+    return false;
+  }
+}
+
 function girisGoster(slot) {
   // Etiket ayrı bir span'de: yükleniyor durumunda metni değiştirirken logo silinmesin.
   slot.innerHTML = `<button class="auth-btn" type="button" aria-label="Google ile giriş yap">
@@ -91,20 +108,13 @@ function girisGoster(slot) {
     const etiket = btn.querySelector('[data-etiket]');
     btn.disabled = true;
     etiket.textContent = 'Açılıyor…';
-    try {
-      await girisYap();
-      // Giriş yapan kullanıcı panele iner; public site giriş yapmamışlar için vitrindir.
+    // Giriş yapan kullanıcı panele iner; public site giriş yapmamışlar için vitrindir.
+    if (await girisDene()) {
       location.href = '/panel/';
       return;
-    } catch (err) {
-      // Kullanıcı pencereyi kapattıysa bu bir hata değil, sessizce eski hale dön.
-      if (err?.code !== 'auth/popup-closed-by-user' && err?.code !== 'auth/cancelled-popup-request') {
-        console.error('Giriş başarısız:', err);
-        alert('Giriş yapılamadı. Lütfen tekrar deneyin.');
-      }
-      btn.disabled = false;
-      etiket.textContent = 'Giriş yap';
     }
+    btn.disabled = false;
+    etiket.textContent = 'Giriş yap';
   });
 }
 
@@ -143,9 +153,56 @@ function kullaniciGoster(slot, user) {
   slot.querySelector('[data-cikis]').addEventListener('click', () => cikisYap());
 }
 
+/*
+ * Girişe zorlayan bağlantılar.
+ *
+ * [data-korumali] taşıyan bir bağlantıya tıklandığında:
+ *   giriş yapılmışsa -> href'e gidilir
+ *   yapılmamışsa     -> Google girişi açılır, başarılıysa yine href'e gidilir
+ *
+ * href gerçek bir adres olarak bırakılır. JavaScript çalışmazsa bağlantı yine
+ * panele gider ve panel kabuğu oturum yoksa ana sayfaya atar; yani korumayı
+ * sağlayan şey bu kod değil, bu kod yalnızca akışı düzeltiyor.
+ */
+let sonKullanici = null;
+let ilkDurumHazir;
+const ilkDurum = new Promise(cozul => { ilkDurumHazir = cozul; });
+
+function korumaliBaglantilar() {
+  document.querySelectorAll('a[data-korumali]').forEach(bag => {
+    bag.addEventListener('click', async (e) => {
+      e.preventDefault();
+      const hedef = bag.getAttribute('href') || '/panel/';
+
+      // Oturum durumu netleşmeden karar verme: sayfa yeni açıldıysa Firebase
+      // henüz cevap vermemiş olabilir ve giriş yapmış kullanıcıya boşuna
+      // giriş penceresi açılır.
+      await ilkDurum;
+      if (sonKullanici) { location.href = hedef; return; }
+
+      const eskiMetin = bag.textContent;
+      bag.textContent = 'Açılıyor…';
+      bag.setAttribute('aria-disabled', 'true');
+      bag.style.pointerEvents = 'none';
+
+      if (await girisDene()) { location.href = hedef; return; }
+
+      bag.textContent = eskiMetin;
+      bag.removeAttribute('aria-disabled');
+      bag.style.pointerEvents = '';
+    });
+  });
+}
+
 stilEkle();
 
+if (document.readyState !== 'loading') korumaliBaglantilar();
+else document.addEventListener('DOMContentLoaded', korumaliBaglantilar, { once: true });
+
 kullaniciDinle(async (user) => {
+  sonKullanici = user;
+  ilkDurumHazir();
+
   const slot = slotBul();
   if (!slot) return;
 

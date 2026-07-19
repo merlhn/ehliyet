@@ -160,3 +160,23 @@ unutma; eksik isim ancak kullanıcı giriş yaptığında patlar.
 
 Aynı gerekçe `panel-kabuk.js` için de geçerli, o da firebase.js'i dinamik
 import ediyor.
+
+## Deneme sınavlarına erişim
+
+Deneme sınavlarına **yalnızca panelden** erişilir (`/panel/?g=sinavlar`).
+Public sitede sınav vitrini yoktur; header bağlantısı ve `/deneme-sinavlari/`
+sayfası kaldırıldı. Sayfa ileride yeniden yapılacak.
+
+`vercel.json` içindeki `/deneme-sinavlari/*` yönlendirmesi **bilerek geçici**
+(`permanent: false` → 307). Kalıcı olsaydı tarayıcılar ve Google adresi
+önbelleğe alır, sayfa aynı adreste geri geldiğinde eski yönlendirme takılı
+kalırdı.
+
+**Girişe zorlayan bağlantılar.** `auth-ui.js` içindeki `[data-korumali]`
+kancası: bağlantıya tıklanınca giriş yapılmışsa `href`'e gidilir, yapılmamışsa
+önce Google girişi açılır. Karar vermeden önce oturum durumunun netleşmesi
+beklenir; yoksa giriş yapmış kullanıcıya boşuna giriş penceresi açılır.
+
+`href` gerçek bir adres olarak bırakılır. JavaScript çalışmazsa bağlantı yine
+panele gider ve panel kabuğu oturum yoksa ana sayfaya atar — korumayı sağlayan
+şey bu kanca değil, panel kabuğu ve Firestore kuralları.
