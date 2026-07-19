@@ -117,9 +117,20 @@ for p in sorted(ROOT.rglob("index.html")):
         ]
         tur = "ders notu"
 
+    elif re.match(r"^hap-bilgiler/[^/]+$", dizin):
+        graf = [
+            {"@type": "WebPage",
+             "name": h1, "description": aciklama, "url": kanon,
+             "inLanguage": "tr-TR", "isPartOf": SITE, "publisher": YAYINCI},
+            kirinti([("Ana Sayfa", f"{BASE}/"),
+                     ("Hap Bilgiler", f"{BASE}/hap-bilgiler/"),
+                     (h1, kanon)]),
+        ]
+        tur = "hap bilgi"
+
     else:
         graf = [
-            {"@type": "CollectionPage" if dizin in ("dersler", "deneme-sinavlari") else "WebPage",
+            {"@type": "CollectionPage" if dizin in ("dersler", "deneme-sinavlari", "hap-bilgiler") else "WebPage",
              "name": h1, "description": aciklama, "url": kanon,
              "inLanguage": "tr-TR", "isPartOf": SITE, "publisher": YAYINCI},
             kirinti([("Ana Sayfa", f"{BASE}/"), (h1, kanon)]),

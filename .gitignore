@@ -2,3 +2,6 @@
 .DS_Store
 .vscode
 *.log
+
+# Python
+__pycache__/

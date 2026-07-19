@@ -16,14 +16,14 @@
   gtag('config', 'G-34HL041XN0');
 </script>
 <title>Ehliyet Sınavı Deneme Testi ve Ders Notları</title>
-<meta name="description" content="Gerçek MTSK e-sınav formatında ücretsiz ehliyet sınavı deneme testi. 50 soru, çözümlü cevaplar ve 4 konuda 43 ders notu.">
+<meta name="description" content="Sınavdan önce ders notlarını incele, hap bilgileri al ve deneme sınavları ile kendini test et. Ehliyet sınavına kolaylıkla hazırlan.">
 <link rel="canonical" href="https://ehliyet.digital/">
 
 <!-- Open Graph (WhatsApp / Facebook / LinkedIn) -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ehliyet Sınavı">
 <meta property="og:title" content="Ehliyet Sınavı Deneme Testi ve Ders Notları">
-<meta property="og:description" content="Gerçek MTSK e-sınav formatında ücretsiz ehliyet sınavı deneme testi. 50 soru, çözümlü cevaplar ve 4 konuda 43 ders notu.">
+<meta property="og:description" content="Sınavdan önce ders notlarını incele, hap bilgileri al ve deneme sınavları ile kendini test et. Ehliyet sınavına kolaylıkla hazırlan.">
 <meta property="og:url" content="https://ehliyet.digital/">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:image" content="https://ehliyet.digital/og-image.png">
@@ -33,7 +33,7 @@
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Ehliyet Sınavı Deneme Testi ve Ders Notları">
-<meta name="twitter:description" content="Gerçek MTSK e-sınav formatında ücretsiz ehliyet sınavı deneme testi. 50 soru, çözümlü cevaplar ve 4 konuda 43 ders notu.">
+<meta name="twitter:description" content="Sınavdan önce ders notlarını incele, hap bilgileri al ve deneme sınavları ile kendini test et. Ehliyet sınavına kolaylıkla hazırlan.">
 <meta name="twitter:image" content="https://ehliyet.digital/og-image.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -93,6 +93,19 @@
   .cat-go{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;color:var(--fg)}
   a.cat-card:hover .cat-go{gap:9px}
 
+  /* Konu kartlarının altındaki tam genişlik hap bilgi kartı.
+     Sayfadaki tek koyu kart: monokrom dili bozmadan öne çıkar. */
+  .cat-yatay{grid-column:1/-1;flex-direction:row;align-items:center;gap:18px;
+    background:#08090a;border-color:#08090a;color:#fff}
+  a.cat-yatay:hover{background:#1a1c1f;border-color:#1a1c1f;box-shadow:0 12px 30px rgba(0,0,0,.22);transform:translateY(-3px)}
+  .cat-yatay .cat-ico{background:#fff;border-color:#fff;color:#08090a}
+  .cat-yatay .cat-govde{flex:1;min-width:0}
+  .cat-yatay h3{margin:0 0 4px;font-size:20px;font-weight:600;letter-spacing:-.02em;color:#fff}
+  .cat-yatay p{margin:0;color:#b7bcc3}
+  .cat-yatay p b{color:#fff;font-weight:600}
+  .cat-yatay .cat-go{margin:0 0 0 auto;white-space:nowrap;color:#fff}
+  @media(max-width:640px){.cat-yatay{flex-direction:column;align-items:flex-start}.cat-yatay .cat-go{margin-left:0}}
+
   /* Two-column feature */
   .two-col{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
   .two-col h2{margin:0;font-size:clamp(30px,4vw,46px);font-weight:600;letter-spacing:-.028em;line-height:1.07}
@@ -101,6 +114,10 @@
   .two-col .body b{color:var(--fg);font-weight:600}
   .link-arrow{display:inline-flex;align-items:center;gap:6px;color:var(--fg);text-decoration:none;font-size:15px;font-weight:500;margin-top:6px}
   .link-arrow:hover{opacity:.6}
+  /* Dört ders butonu tek satırda; buton genişliği metne değil sütuna göre. */
+  .hap-secenekler{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0 20px}
+  .hap-secenekler .btn{padding:11px 8px;font-size:13.5px}
+  @media(max-width:640px){.hap-secenekler{grid-template-columns:repeat(2,1fr)}}
 
   /* CTA band */
   .cta{max-width:1100px;margin:0 auto;padding:0 28px 96px}
@@ -110,11 +127,15 @@
 
   /* Site footer */
   .site-footer{border-top:1px solid var(--line);background:#fafafa;margin-top:auto;padding:0}
-  .foot-wrap{max-width:1100px;margin:0 auto;padding:22px 28px;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
-  .foot-links{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
-  .foot-links a{color:var(--fg);font-size:14px;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#c9ccd1}
-  .foot-links a:hover{text-decoration-color:var(--fg)}
-  .foot-feedback{margin-left:auto;display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);background:#fff;border-radius:10px;padding:11px 18px;font-size:14px;font-weight:500;color:var(--fg);text-decoration:none;transition:.15s;white-space:nowrap}
+  .foot-wrap{max-width:1100px;margin:0 auto;padding:44px 28px 40px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;align-items:start}
+  .foot-hakkinda{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+  .foot-hakkinda p{margin:0;font-size:14px;color:var(--muted);line-height:1.55;max-width:270px}
+  .foot-col{display:flex;flex-direction:column;gap:10px}
+  .foot-col h4{margin:0 0 4px;font-family:'Geist Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .foot-col a{color:var(--fg);font-size:14px;text-decoration:none}
+  .foot-col a:hover{text-decoration:underline;text-underline-offset:3px}
+  @media(max-width:860px){.foot-wrap{grid-template-columns:1fr 1fr;gap:30px}.foot-hakkinda{grid-column:1/-1}}
+  .foot-feedback{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);background:#fff;border-radius:10px;padding:11px 18px;font-size:14px;font-weight:500;color:var(--fg);text-decoration:none;transition:.15s;white-space:nowrap}
   .foot-feedback:hover{border-color:#c8c8c8}
   .foot-feedback svg{color:var(--muted)}
 
@@ -129,7 +150,7 @@
     .hero{padding:64px 20px 52px}
     .hero p{font-size:17px}
     .cta-inner{padding:44px 22px}
-    .foot-wrap{gap:16px}.foot-feedback{margin-left:0}
+    .foot-wrap{gap:26px}
   }
 
   /* ---- Marka ---- */
@@ -149,7 +170,7 @@
       "@type": "WebSite",
       "name": "Ehliyet Sınavı",
       "url": "https://ehliyet.digital/",
-      "description": "Gerçek MTSK e-sınav formatında ücretsiz ehliyet sınavı deneme testi. 50 soru, çözümlü cevaplar ve 4 konuda 43 ders notu.",
+      "description": "Sınavdan önce ders notlarını incele, hap bilgileri al ve deneme sınavları ile kendini test et. Ehliyet sınavına kolaylıkla hazırlan.",
       "inLanguage": "tr-TR",
       "publisher": {
         "@type": "Organization",
@@ -169,7 +190,7 @@
         "@type": "ImageObject",
         "url": "https://ehliyet.digital/icon-512.png"
       },
-      "description": "Gerçek MTSK e-sınav formatında ücretsiz ehliyet sınavı deneme testi. 50 soru, çözümlü cevaplar ve 4 konuda 43 ders notu."
+      "description": "Sınavdan önce ders notlarını incele, hap bilgileri al ve deneme sınavları ile kendini test et. Ehliyet sınavına kolaylıkla hazırlan."
     }
   ]
 }
@@ -183,7 +204,7 @@
     <a class="marka" href="/" aria-label="ehliyet.digital"><img src="/assets/img/marka/logo.png" alt=""></a>
     <nav class="nav">
       <a href="/">Ana Sayfa</a>
-      <a href="/dersler/">Dersler</a>
+      <a href="/dersler/">Ders Notları</a>
       
     </nav>
   </header>
@@ -192,9 +213,9 @@
     <!-- HERO -->
     <section class="hero">
       <h1>Ehliyet sınavını<br>ilk denemede geç.</h1>
-      <p>Gerçek MTSK e-sınav formatında <b>50 soruluk</b> deneme sınavı, çözümlü cevaplar ve 4 konuda <b>43 ders notu</b> — hepsi tek yerde.</p>
+      <p>Sınavdan önce <b>ders notlarını</b> incele, <b>hap bilgileri</b> al ve <b>deneme sınavları</b> ile kendini test et. Ehliyet sınavına kolaylıkla hazırlan.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary btn-lg" href="/panel/?g=sinavlar" data-korumali>Deneme Sınavına Başla</a>
+        <a class="btn btn-primary btn-lg" href="/panel/?g=sinavlar" data-korumali>Giriş Yap ve Sınava Başla</a>
         <a class="btn btn-outline btn-lg" href="/dersler/">Ders Notları</a>
       </div>
     </section>
@@ -242,28 +263,56 @@
           <span class="cat-go">Konuya başla →</span>
         </a>
 
+        <a class="cat-card cat-yatay" href="/hap-bilgiler/">
+          <span class="cat-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+          <div class="cat-govde">
+            <h3>Hap Bilgiler</h3>
+            <p>Bu dört dersin sınavda soru çözdüren <b>76 hap bilgisi</b> tek yerde — sınavdan hemen önce hızlı tekrar için.</p>
+          </div>
+          <span class="cat-go">Bilgilere göz at →</span>
+        </a>
+
       </div>
     </section>
 
-    <!-- FEATURE A -->
+    <!-- ZAYIF KONU -->
     <section class="section">
       <div class="two-col">
-        <h2>Gerçek Ehliyet sınavı deneyimi</h2>
-        <div class="body">
-          <p>Sorular, arayüz ve süre MTSK e-sınavının birebir aynısı. <b>50 soru, 45 dakika</b> ve dört bölüm: İlk Yardım, Trafik ve Çevre, Araç Tekniği, Trafik Adabı.</p>
-          <p>Sınavı bitirdiğinde anında puanını, doğru cevapları ve her sorunun çözümünü görürsün — tıpkı gerçek sınavdaki gibi işaretleme, geri-ileri ve soru haritasıyla.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FEATURE B -->
-    <section class="section">
-      <div class="two-col">
-        <h2>Zayıf konunu gör,<br>eksiğini kapat</h2>
+        <h2>Ders notları ile<br>hazırlanmaya başla</h2>
         <div class="body">
           <p>Ehliyet sınavında her doğru <b>2 puan</b> değerinde ve geçmek için <b>70 puan</b> yeterli. Yanlışlar net sayını düşürmez; emin olmadığın soruda şansını dene.</p>
           <p>Sonuç ekranındaki <b>konu bazlı performansla</b> hangi bölümde zayıf olduğunu net gör, ilgili ders notlarıyla eksiğini tamamla.</p>
           <a class="link-arrow" href="/dersler/">Ders notlarına göz at →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HAP BİLGİLER -->
+    <section class="section">
+      <div class="two-col">
+        <h2>Hap bilgilerle<br>son tekrar</h2>
+        <div class="body">
+          <p>Deneme sınavlarındaki soruları çözdüren <b>76 hap bilgiyi</b> ders ders derledik: mesafeler, süreler, sıralamalar ve kurallar — her biri tek cümlede, ezberlemesi kolay.</p>
+          <p>Sınavdan hemen önceki hızlı tekrar için birebir. Dersini seç, bilgileri tazele:</p>
+          <div class="hap-secenekler">
+            <a class="btn btn-outline" href="/hap-bilgiler/ilk-yardim/">İlk Yardım</a>
+            <a class="btn btn-outline" href="/hap-bilgiler/trafik-ve-cevre/">Trafik ve Çevre</a>
+            <a class="btn btn-outline" href="/hap-bilgiler/arac-teknigi/">Araç Tekniği</a>
+            <a class="btn btn-outline" href="/hap-bilgiler/trafik-adabi/">Trafik Adabı</a>
+          </div>
+          <a class="link-arrow" href="/hap-bilgiler/">Tüm hap bilgilere göz at →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GERÇEK SINAV DENEYİMİ -->
+    <section class="section">
+      <div class="two-col">
+        <h2>Deneme sınavı ile<br>performansını gör</h2>
+        <div class="body">
+          <p>Sorular, arayüz ve süre MTSK e-sınavının birebir aynısı. <b>50 soru, 45 dakika</b> ve dört bölüm: İlk Yardım, Trafik ve Çevre, Araç Tekniği, Trafik Adabı.</p>
+          <p>Sınavı bitirdiğinde anında puanını, doğru cevapları ve her sorunun çözümünü görürsün — tıpkı gerçek sınavdaki gibi işaretleme, geri-ileri ve soru haritasıyla.</p>
+          <a class="link-arrow" href="/panel/?g=sinavlar" data-korumali>Giriş yap ve deneme sınavına başla →</a>
         </div>
       </div>
     </section>
@@ -273,7 +322,7 @@
       <div class="cta-inner">
         <h2>Ehliyet sınavına hazır mısın?</h2>
         <p>Hemen ücretsiz deneme sınavına başla, seviyeni gör ve eksik konularını kapat.</p>
-        <a class="btn btn-primary btn-lg" href="/panel/?g=sinavlar" data-korumali>Deneme Sınavına Başla</a>
+        <a class="btn btn-primary btn-lg" href="/panel/?g=sinavlar" data-korumali>Giriş Yap ve Sınava Başla</a>
       </div>
     </section>
 
@@ -281,20 +330,38 @@
 
   <footer class="site-footer">
     <div class="foot-wrap">
-      <a class="foot-marka" href="/">
-        <img src="/assets/img/marka/logo.png" alt="">
-        ehliyet.digital
-      </a>
-      <nav class="foot-links">
-        <a href="/gizlilik/">Gizlilik Politikası</a>
-        <a href="/kullanim-sartlari/">Kullanım Şartları</a>
+      <div class="foot-hakkinda">
+        <a class="foot-marka" href="/">
+          <img src="/assets/img/marka/logo.png" alt="">
+          ehliyet.digital
+        </a>
+        <p>Sınavdan önce ders notlarını incele, hap bilgileri al ve deneme sınavları ile kendini test et. Ehliyet sınavına kolaylıkla hazırlan.</p>
+        <a class="foot-feedback" href="mailto:omerlhn@gmail.com?subject=Ehliyet%20Deneme%20—%20Geri%20Bildirim">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Geri bildirim gönder
+        </a>
+      </div>
+      <nav class="foot-col" aria-label="Hap Bilgiler">
+        <h4>Hap Bilgiler</h4>
+        <a href="/hap-bilgiler/ilk-yardim/">İlk Yardım</a>
+        <a href="/hap-bilgiler/trafik-ve-cevre/">Trafik ve Çevre</a>
+        <a href="/hap-bilgiler/arac-teknigi/">Araç Tekniği</a>
+        <a href="/hap-bilgiler/trafik-adabi/">Trafik Adabı</a>
+      </nav>
+      <nav class="foot-col" aria-label="Ders Notları">
+        <h4>Ders Notları</h4>
+        <a href="/dersler/ilk-yardim/ilk-yardim-ve-acil-tedavi/">İlk Yardım</a>
+        <a href="/dersler/trafik-ve-cevre/temel-tanimlar/">Trafik ve Çevre</a>
+        <a href="/dersler/arac-teknigi/motor-nedir/">Araç Tekniği</a>
+        <a href="/dersler/trafik-adabi/temel-kavramlar/">Trafik Adabı</a>
+      </nav>
+      <nav class="foot-col" aria-label="Sayfalar">
+        <h4>Sayfalar</h4>
         <a href="/hakkinda/">Hakkında</a>
         <a href="/iletisim/">İletişim</a>
+        <a href="/gizlilik/">Gizlilik Politikası</a>
+        <a href="/kullanim-sartlari/">Kullanım Şartları</a>
       </nav>
-      <a class="foot-feedback" href="mailto:omerlhn@gmail.com?subject=Ehliyet%20Deneme%20—%20Geri%20Bildirim">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        Geri bildirim gönder
-      </a>
     </div>
   </footer>
 

@@ -231,6 +231,31 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://ehliyet.digital/hap-bilgiler/arac-teknigi/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ehliyet.digital/hap-bilgiler/ilk-yardim/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ehliyet.digital/hap-bilgiler/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ehliyet.digital/hap-bilgiler/trafik-adabi/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ehliyet.digital/hap-bilgiler/trafik-ve-cevre/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://ehliyet.digital/iletisim/</loc>
     <lastmod>2026-07-19</lastmod>
     <priority>0.5</priority>

@@ -46,6 +46,29 @@ const CSS = `
   .auth-user{padding:4px}
   .auth-ad{display:none}
 }
+
+/* Giriş ekranı — sayfanın içinde açılır, kullanıcı sekme değiştirmez. */
+.auth-ort{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;
+  padding:20px;background:rgba(8,9,10,.45);opacity:0;transition:opacity .16s ease}
+.auth-ort.acik{opacity:1}
+.auth-kutu{background:#fff;border-radius:18px;padding:32px 30px 26px;width:100%;max-width:392px;
+  box-shadow:0 24px 64px rgba(0,0,0,.22);text-align:center;
+  transform:translateY(8px) scale(.98);transition:transform .16s ease}
+.auth-ort.acik .auth-kutu{transform:none}
+.auth-kutu h2{font-family:inherit;font-size:22px;line-height:1.25;letter-spacing:-.02em;
+  font-weight:650;color:#08090a;margin:0 0 10px}
+.auth-kutu p{font-size:14.5px;line-height:1.55;color:#6a6f76;margin:0 0 22px}
+.auth-kutu .auth-btn{width:100%;padding:13px 18px;font-size:15px;border-radius:12px}
+.auth-vazgec{margin-top:14px;background:none;border:none;font:inherit;font-size:13.5px;
+  color:#6a6f76;cursor:pointer;padding:6px 10px;border-radius:8px}
+.auth-vazgec:hover{color:#08090a;background:#f5f5f5}
+.auth-hata{margin:14px 0 0;font-size:13.5px;color:#c0392b;display:none}
+.auth-hata.acik{display:block}
+/* Hareketi azalt tercihi açıksa geçişler kapanır; ekran anında görünür. */
+@media(prefers-reduced-motion:reduce){
+  .auth-ort,.auth-kutu{transition:none}
+  .auth-kutu{transform:none}
+}
 `;
 
 function stilEkle() {
@@ -80,22 +103,100 @@ const GOOGLE_LOGO = `
   <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
 </svg></span>`;
 
-/**
- * Google girişini dener. Başarılıysa true döner.
- * Kullanıcı pencereyi kapattıysa bu bir hata değildir; sessizce false döner.
+/*
+ * Giriş ekranı.
+ *
+ * Google'ın kendi onay ekranı bizim kutumuzun içine gömülemez — Google
+ * çerçevelenmeyi engelliyor. O yüzden buradaki kutu girişi kendisi yapmıyor;
+ * ne olacağını anlatıp kullanıcıdan onay alıyor. Onaydan sonra Google küçük bir
+ * pencerede açılıyor, sayfa yerinde kalıyor ve arkada ürün görünmeye devam
+ * ediyor. Giriş bitince kullanıcı tıkladığı hedefe götürülüyor.
  */
-async function girisDene() {
-  try {
-    await girisYap();
-    return true;
-  } catch (err) {
-    if (err?.code !== 'auth/popup-closed-by-user' && err?.code !== 'auth/cancelled-popup-request') {
-      console.error('Giriş başarısız:', err);
-      alert('Giriş yapılamadı. Lütfen tekrar deneyin.');
-    }
-    return false;
-  }
+let acikModal = null;
+
+function modalKapat() {
+  if (!acikModal) return;
+  const { ort, odak } = acikModal;
+  acikModal = null;
+  ort.classList.remove('acik');
+  // Geçiş bitmeden kaldırırsak kapanış animasyonu görünmez.
+  setTimeout(() => ort.remove(), 160);
+  // Klavyeyle gezen kullanıcı ekranı açtığı yere geri dönmeli.
+  if (odak?.isConnected) odak.focus();
 }
+
+/**
+ * Giriş ekranını açar. Kullanıcı onaylarsa Google küçük bir pencerede açılır;
+ * giriş tamamlanınca `hedef` adresine gidilir. Vazgeçerse ekran kapanır ve
+ * sayfa olduğu gibi kalır.
+ */
+function girisModaliAc(hedef) {
+  if (acikModal) return;
+
+  const ort = document.createElement('div');
+  ort.className = 'auth-ort';
+  ort.setAttribute('role', 'dialog');
+  ort.setAttribute('aria-modal', 'true');
+  ort.setAttribute('aria-labelledby', 'auth-modal-baslik');
+  ort.innerHTML = `
+    <div class="auth-kutu">
+      <h2 id="auth-modal-baslik">Sınava başlamak için giriş yap</h2>
+      <p>Deneme sınavların ve sonuçların hesabına kaydedilir, kaldığın yerden devam edersin.</p>
+      <button class="auth-btn" type="button" data-onay>
+        ${GOOGLE_LOGO}<span data-etiket>Google ile devam et</span>
+      </button>
+      <p class="auth-hata" data-hata role="alert">Giriş başlatılamadı. Lütfen tekrar deneyin.</p>
+      <button class="auth-vazgec" type="button" data-vazgec>Vazgeç</button>
+    </div>`;
+
+  document.body.appendChild(ort);
+  acikModal = { ort, odak: document.activeElement };
+  // Tarayıcıyı başlangıç durumunu hesaplamaya zorluyoruz; sınıf hemen ardından
+  // eklenince geçiş çalışır. requestAnimationFrame kullanılmıyor: sekme ön
+  // planda değilken kısıtlanıyor ve geri çağrı hiç çalışmayabiliyor — o durumda
+  // ekran DOM'a girip görünmez kalırdı.
+  void ort.offsetHeight;
+  ort.classList.add('acik');
+
+  const onay = ort.querySelector('[data-onay]');
+  const etiket = onay.querySelector('[data-etiket]');
+  const hata = ort.querySelector('[data-hata]');
+  onay.focus();
+
+  onay.addEventListener('click', () => {
+    hata.classList.remove('acik');
+
+    // girisYap() ARADA await olmadan çağrılıyor: tıklamayla pencere açılışı
+    // arasına bekleme girerse Chrome bunu kullanıcı hareketi saymayıp küçük
+    // pencere yerine sekme açıyor. Bu yüzden düğme durumu da sonradan,
+    // promise'in üstünden güncelleniyor.
+    const sonuc = girisYap();
+
+    onay.disabled = true;
+    etiket.textContent = 'Bekleniyor…';
+
+    sonuc.then(() => {
+      // Oturum kuruldu; kullanıcıyı baştan gitmek istediği yere götürüyoruz.
+      etiket.textContent = 'Giriş yapıldı';
+      location.href = hedef;
+    }).catch((err) => {
+      onay.disabled = false;
+      etiket.textContent = 'Google ile devam et';
+      // Pencereyi kapatmak vazgeçmektir, hata değil: ekranı olduğu gibi bırak.
+      if (err?.code === 'auth/popup-closed-by-user' || err?.code === 'auth/cancelled-popup-request') return;
+      console.error('Giriş başarısız:', err);
+      hata.classList.add('acik');
+    });
+  });
+
+  ort.querySelector('[data-vazgec]').addEventListener('click', modalKapat);
+  // Kutunun dışına tıklamak kapatır; kutunun içi kapatmaz.
+  ort.addEventListener('click', (e) => { if (e.target === ort) modalKapat(); });
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') modalKapat();
+});
 
 function girisGoster(slot) {
   // Etiket ayrı bir span'de: yükleniyor durumunda metni değiştirirken logo silinmesin.
@@ -103,19 +204,8 @@ function girisGoster(slot) {
       ${GOOGLE_LOGO}<span data-etiket>Giriş yap</span>
     </button>`;
 
-  slot.querySelector('button').addEventListener('click', async (e) => {
-    const btn = e.currentTarget;
-    const etiket = btn.querySelector('[data-etiket]');
-    btn.disabled = true;
-    etiket.textContent = 'Açılıyor…';
-    // Giriş yapan kullanıcı panele iner; public site giriş yapmamışlar için vitrindir.
-    if (await girisDene()) {
-      location.href = '/panel/';
-      return;
-    }
-    btn.disabled = false;
-    etiket.textContent = 'Giriş yap';
-  });
+  // Giriş yapan kullanıcı panele iner; public site giriş yapmamışlar için vitrindir.
+  slot.querySelector('button').addEventListener('click', () => girisModaliAc('/panel/'));
 }
 
 function kullaniciGoster(slot, user) {
@@ -158,7 +248,7 @@ function kullaniciGoster(slot, user) {
  *
  * [data-korumali] taşıyan bir bağlantıya tıklandığında:
  *   giriş yapılmışsa -> href'e gidilir
- *   yapılmamışsa     -> Google girişi açılır, başarılıysa yine href'e gidilir
+ *   yapılmamışsa     -> giriş ekranı açılır, Google dönüşünde yine href'e gidilir
  *
  * href gerçek bir adres olarak bırakılır. JavaScript çalışmazsa bağlantı yine
  * panele gider ve panel kabuğu oturum yoksa ana sayfaya atar; yani korumayı
@@ -180,16 +270,7 @@ function korumaliBaglantilar() {
       await ilkDurum;
       if (sonKullanici) { location.href = hedef; return; }
 
-      const eskiMetin = bag.textContent;
-      bag.textContent = 'Açılıyor…';
-      bag.setAttribute('aria-disabled', 'true');
-      bag.style.pointerEvents = 'none';
-
-      if (await girisDene()) { location.href = hedef; return; }
-
-      bag.textContent = eskiMetin;
-      bag.removeAttribute('aria-disabled');
-      bag.style.pointerEvents = '';
+      girisModaliAc(hedef);
     });
   });
 }

@@ -18,7 +18,9 @@ Ardından http://localhost:8000
 index.html                          açılış sayfası
 dersler/                            ders listesi (hub)
   <konu>/<slug>/index.html          43 ders notu
-deneme-sinavlari/                   sınav listesi (hub)
+hap-bilgiler/                       hap bilgiler (hub) — tools/hap-uret.py üretir; kaynak: soru bankaları
+  <konu>/index.html                 ders başına sınav odaklı kısa bilgiler
+panel/                              giriş gerektiren alan (indekslenmez)
   sinav-N/index.html                testin kendisi
   sinav-N/kilavuz/index.html        sınavın giriş kapısı
 assets/

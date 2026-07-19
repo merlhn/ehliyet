@@ -65,6 +65,34 @@ service cloud.firestore {
       }
     }
 
+    // ---- Geri bildirim ----
+    // Herkes (girişsiz ziyaretçi dahil) geri bildirim BIRAKABİLİR ama kimse
+    // okuyamaz; kayıtlar yalnızca Firebase konsolundan / Admin SDK ile okunur.
+    // Girişsiz yazıma izin vermek spam riski taşır; alan beyaz listesi ve boyut
+    // sınırları bu yüzden sıkı tutuluyor. Sorun olursa create girişe bağlanır.
+    //
+    // uid ya boştur (girişsiz ziyaretçi) ya da gönderenin kendisidir; başkasının
+    // kimliğiyle geri bildirim yazılamaz. NOT: yorum satırı çok satırlı ifadenin
+    // ortasına giremez — kural derleyicisi "Unexpected 'allow'" hatası verir.
+    match /feedback/{id} {
+      allow create: if request.resource.data.keys().hasOnly(
+             ['mesaj', 'email', 'puan', 'sayfa', 'uid', 'olusturulmaAt'])
+        && request.resource.data.mesaj is string
+        && request.resource.data.mesaj.size() >= 1
+        && request.resource.data.mesaj.size() <= 2000
+        && request.resource.data.email is string
+        && request.resource.data.email.size() <= 200
+        && (request.resource.data.puan == null
+            || (request.resource.data.puan is int
+                && request.resource.data.puan >= 1
+                && request.resource.data.puan <= 5))
+        && request.resource.data.sayfa is string
+        && request.resource.data.sayfa.size() <= 300
+        && (request.resource.data.uid == null
+            || (girisYapmis() && request.resource.data.uid == request.auth.uid));
+      allow read, update, delete: if false;
+    }
+
     // Geri kalan her şey kapalı.
     match /{document=**} {
       allow read, write: if false;

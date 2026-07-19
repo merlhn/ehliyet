@@ -56,6 +56,16 @@ function fs() {
 const provider = new GoogleAuthProvider();
 provider.setCustomParameters({ prompt: 'select_account' });
 
+/*
+ * Google girişi küçük bir açılır PENCEREDE yapılır; arkada ürün görünür kalır.
+ * Yönlendirme (signInWithRedirect) bilerek kullanılmıyor: sayfayı tamamen
+ * Google ekranına çeviriyor ve kullanıcı ürünle bağını kaybediyor.
+ *
+ * DİKKAT — bu fonksiyon kullanıcının tıklamasıyla ARADA await olmadan
+ * çağrılmalı. Araya bir bekleme girerse Chrome pencereyi tıklamaya bağlı
+ * saymıyor ve küçük pencere yerine yeni sekme açıyor (ya da hiç açmıyor).
+ * Çağıran taraf oturum durumunu önceden çözmüş olmalı.
+ */
 export function girisYap() {
   return signInWithPopup(auth, provider);
 }
@@ -158,6 +168,26 @@ export async function denemeKaydet(uid, sonuc) {
   return addDoc(collection(db, 'users', uid, 'denemeler'), {
     ...sonuc,
     kaydedilmeAt: serverTimestamp(),
+  });
+}
+
+/**
+ * Geri bildirimi `feedback` koleksiyonuna kaydeder. Giriş şart değildir:
+ * public sitedeki ziyaretçi de gönderebilir, o durumda uid null yazılır.
+ * Koleksiyon istemciden okunamaz (güvenlik kuralları); kayıtlar Firebase
+ * konsolundan ya da Admin SDK ile okunur.
+ */
+export async function geriBildirimKaydet({ mesaj, email, puan }) {
+  const { db, addDoc, collection, serverTimestamp } = await fs();
+  return addDoc(collection(db, 'feedback'), {
+    mesaj: String(mesaj).slice(0, 2000),
+    // Girişli kullanıcıda form e-posta sormaz; adres hesabından alınır.
+    email: String(email || auth.currentUser?.email || '').slice(0, 200),
+    // Puan isteğe bağlı: 1-5 arası tam sayı, verilmediyse null.
+    puan: Number.isInteger(puan) && puan >= 1 && puan <= 5 ? puan : null,
+    sayfa: location.pathname,
+    uid: auth.currentUser?.uid ?? null,
+    olusturulmaAt: serverTimestamp(),
   });
 }
 

@@ -95,6 +95,27 @@
     font-size:14.5px;font-weight:600;letter-spacing:-.02em;flex-shrink:0}
   .foot-marka img{width:22px;height:22px;object-fit:contain;display:block}
   @media(max-width:640px){.marka img{width:22px;height:22px}}
+
+  /* Site footer — public sayfalardaki sütunlu footer'ın aynısı.
+     body flex'e çevrilir ki kısa sayfada footer en alta otursun;
+     .lesson-layout (lessons-nav.js kurar) kalan yüksekliği doldurur. */
+  body{display:flex;flex-direction:column;min-height:100vh}
+  .lesson-layout{width:100%;flex:1 0 auto}
+  .site-footer{border-top:1px solid var(--line);background:#fafafa;margin-top:auto;padding:0}
+  .foot-wrap{max-width:1100px;margin:0 auto;padding:44px 28px 40px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;align-items:start}
+  .foot-hakkinda{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+  .foot-hakkinda p{margin:0;font-size:14px;color:var(--muted);line-height:1.55;max-width:270px}
+  .foot-col{display:flex;flex-direction:column;gap:10px}
+  .foot-col h4{margin:0 0 4px;font-family:'Geist Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .foot-col a{color:var(--fg);font-size:14px;text-decoration:none}
+  .foot-col a:hover{text-decoration:underline;text-underline-offset:3px}
+  @media(max-width:860px){.foot-wrap{grid-template-columns:1fr 1fr;gap:30px}.foot-hakkinda{grid-column:1/-1}}
+  .foot-feedback{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);background:#fff;border-radius:10px;padding:11px 18px;font-size:14px;font-weight:500;color:var(--fg);text-decoration:none;transition:.15s;white-space:nowrap;line-height:1}
+  .foot-feedback:hover{border-color:#c8c8c8}
+  .foot-feedback svg{color:var(--muted)}
+  .foot-marka{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--fg);font-size:14.5px;font-weight:600;letter-spacing:-.02em;flex-shrink:0}
+  .foot-marka img{width:22px;height:22px;object-fit:contain;display:block}
+  @media(max-width:640px){.foot-wrap{gap:26px}}
 </style>
 <!-- schema.org — tools/schema-uret.py tarafından üretilir, elle düzenlenmez -->
 <script type="application/ld+json">
@@ -109,7 +130,7 @@
       "image": "https://ehliyet.digital/og-image.png",
       "inLanguage": "tr-TR",
       "articleSection": "Trafik Adabı",
-      "dateModified": "2026-07-19T14:12:20+03:00",
+      "dateModified": "2026-07-19T14:54:43+03:00",
       "author": {
         "@type": "Organization",
         "name": "ehliyet.digital",
@@ -165,7 +186,7 @@
 <body>
   <header>
     <a class="marka" href="/" aria-label="ehliyet.digital"><img src="/assets/img/marka/logo.png" alt=""></a>
-    <nav class="nav"><a href="/">Ana Sayfa</a><a href="/dersler/">Dersler</a></nav>
+    <nav class="nav"><a href="/">Ana Sayfa</a><a href="/dersler/">Ders Notları</a></nav>
   </header>
 
   <main>
@@ -225,6 +246,45 @@
     document.getElementById("quizModal").addEventListener("click",e=>{if(e.target.id==="quizModal")closeQuiz();});
     document.addEventListener("keydown",e=>{if(e.key==="Escape")closeQuiz();});
   </script>
+  <footer class="site-footer">
+    <div class="foot-wrap">
+      <div class="foot-hakkinda">
+        <a class="foot-marka" href="/">
+          <img src="/assets/img/marka/logo.png" alt="">
+          ehliyet.digital
+        </a>
+        <p>Sınavdan önce ders notlarını incele, hap bilgileri al ve deneme sınavları ile kendini test et. Ehliyet sınavına kolaylıkla hazırlan.</p>
+        <a class="foot-feedback" href="mailto:omerlhn@gmail.com?subject=Ehliyet%20Deneme%20—%20Geri%20Bildirim">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Geri bildirim gönder
+        </a>
+      </div>
+      <nav class="foot-col" aria-label="Hap Bilgiler">
+        <h4>Hap Bilgiler</h4>
+        <a href="/hap-bilgiler/ilk-yardim/">İlk Yardım</a>
+        <a href="/hap-bilgiler/trafik-ve-cevre/">Trafik ve Çevre</a>
+        <a href="/hap-bilgiler/arac-teknigi/">Araç Tekniği</a>
+        <a href="/hap-bilgiler/trafik-adabi/">Trafik Adabı</a>
+      </nav>
+      <nav class="foot-col" aria-label="Ders Notları">
+        <h4>Ders Notları</h4>
+        <a href="/dersler/ilk-yardim/ilk-yardim-ve-acil-tedavi/">İlk Yardım</a>
+        <a href="/dersler/trafik-ve-cevre/temel-tanimlar/">Trafik ve Çevre</a>
+        <a href="/dersler/arac-teknigi/motor-nedir/">Araç Tekniği</a>
+        <a href="/dersler/trafik-adabi/temel-kavramlar/">Trafik Adabı</a>
+      </nav>
+      <nav class="foot-col" aria-label="Sayfalar">
+        <h4>Sayfalar</h4>
+        <a href="/hakkinda/">Hakkında</a>
+        <a href="/iletisim/">İletişim</a>
+        <a href="/gizlilik/">Gizlilik Politikası</a>
+        <a href="/kullanim-sartlari/">Kullanım Şartları</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="/assets/js/feedback.js" defer></script>
+
   <script src="/assets/js/lessons-nav.js"></script>
   <script type="module" src="/assets/js/auth-ui.js"></script>
 </body>
