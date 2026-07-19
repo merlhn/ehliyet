@@ -142,3 +142,21 @@ yok, 404 döner — ders adı `articleSection` olarak işaretlenir).
 ortadan kesilir. Aşan başlıklarda `Konu N:` kısmı atılır — arama değeri yok,
 numara sayfada ve yan menüde zaten görünür. `og:title` ve `twitter:title`
 `<title>` ile birebir aynı kalmalı.
+
+## Firestore tembel yüklenir
+
+`firebase.js` Firestore'u **statik import etmez**, ilk ihtiyaç anında dinamik
+indirir (`fs()`). Sebep: SDK 117 KB ve yalnızca profil ile deneme işlemlerinde
+gerekiyor — bunların hepsi kullanıcı giriş yaptıktan sonra çalışıyor. Statikken
+43 ders notu dahil her genel sayfa açılışta bu yükü boşuna indiriyordu.
+
+Auth statik kalır: başlıktaki giriş durumu sayfa açılır açılmaz doğru
+çizilmeli, geciktirilirse görünür titreme olur.
+
+`db` dışarı verilmez — SDK henüz inmemiş olabileceği için eş zamanlı okunamaz.
+Firestore'a ihtiyaç duyan her fonksiyon `await fs()` ile başlar. Yeni bir
+Firestore fonksiyonu eklerken destructure listesine gerekli isimleri yazmayı
+unutma; eksik isim ancak kullanıcı giriş yaptığında patlar.
+
+Aynı gerekçe `panel-kabuk.js` için de geçerli, o da firebase.js'i dinamik
+import ediyor.

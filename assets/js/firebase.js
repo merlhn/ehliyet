@@ -9,10 +9,13 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.10.0/fireba
 import {
   getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged
 } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js';
-import {
-  getFirestore, doc, getDoc, setDoc, addDoc, collection,
-  query, orderBy, getDocs, serverTimestamp
-} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js';
+// Firestore BİLEREK statik import edilmiyor — panel-kabuk.js'teki gerekçenin
+// aynısı. Bu SDK 117 KB ve yalnızca profil ile deneme işlemlerinde gerekiyor;
+// bu işlemlerin hepsi kullanıcı giriş yaptıktan sonra çalışıyor. Statikken her
+// genel sayfa (43 ders notu dahil) açılışta bu 117 KB'ı boşuna indiriyordu.
+//
+// Auth statik kalıyor: başlıktaki giriş durumu sayfa açılır açılmaz doğru
+// çizilmeli, onu geciktirmek görünür bir titremeye yol açar.
 
 const firebaseConfig = {
   apiKey: 'AIzaSyDmyoZ-Wa-zqzimqaIV--9tN2TFdvhRcmo',
@@ -34,7 +37,21 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
-export const db = getFirestore(app);
+
+/*
+ * Firestore'u ilk ihtiyaç anında indirir ve önbelleğe alır; sonraki çağrılar
+ * aynı promise'i döner, SDK bir kez iner.
+ *
+ * `db` artık dışarı verilmiyor: modülün dışında kimse kullanmıyordu ve dışarı
+ * verilse eş zamanlı okunamazdı — SDK henüz inmemiş olabilir. Firestore'a
+ * ihtiyaç duyan her fonksiyon aşağıda `await fs()` ile başlıyor.
+ */
+let _fs;
+function fs() {
+  _fs ??= import('https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js')
+    .then(m => ({ ...m, db: m.getFirestore(app) }));
+  return _fs;
+}
 
 const provider = new GoogleAuthProvider();
 provider.setCustomParameters({ prompt: 'select_account' });
@@ -90,6 +107,7 @@ function adiAyir(tamAd) {
 
 /** Giriş sonrası profil dokümanını oluşturur ya da son giriş zamanını günceller. */
 export async function profiliHazirla(user) {
+  const { db, doc, getDoc, setDoc, serverTimestamp } = await fs();
   const ref = doc(db, 'users', user.uid);
   const mevcut = await getDoc(ref);
 
@@ -114,6 +132,7 @@ export async function profiliHazirla(user) {
 
 /** Profil verisini okur; doküman yoksa null döner. */
 export async function profiliGetir(uid) {
+  const { db, doc, getDoc } = await fs();
   const snap = await getDoc(doc(db, 'users', uid));
   return snap.exists() ? snap.data() : null;
 }
@@ -124,6 +143,7 @@ export async function profiliGetir(uid) {
  * güvenlik kuralları da güncellemede e-posta yazılmasına izin vermez.
  */
 export async function profiliKaydet(uid, { ad, soyad, telefon, ehliyetTuru }) {
+  const { db, doc, setDoc } = await fs();
   return setDoc(doc(db, 'users', uid), {
     ad: ad ?? '',
     soyad: soyad ?? '',
@@ -134,6 +154,7 @@ export async function profiliKaydet(uid, { ad, soyad, telefon, ehliyetTuru }) {
 
 /** Bitmiş bir sınav denemesini kaydeder. */
 export async function denemeKaydet(uid, sonuc) {
+  const { db, addDoc, collection, serverTimestamp } = await fs();
   return addDoc(collection(db, 'users', uid, 'denemeler'), {
     ...sonuc,
     kaydedilmeAt: serverTimestamp(),
@@ -142,6 +163,7 @@ export async function denemeKaydet(uid, sonuc) {
 
 /** Kullanıcının geçmiş denemelerini yeniden eskiye döner. */
 export async function denemeleriGetir(uid) {
+  const { db, collection, query, orderBy, getDocs } = await fs();
   const q = query(collection(db, 'users', uid, 'denemeler'), orderBy('kaydedilmeAt', 'desc'));
   const snap = await getDocs(q);
   return snap.docs.map(d => ({ id: d.id, ...d.data() }));
