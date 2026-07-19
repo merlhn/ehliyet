@@ -102,3 +102,20 @@ yine listeleyebilir. İndekslemeyi durduran şey `noindex` etiketidir.
 çıkar. Yeni kapılı sayfa eklendikten sonra çalıştırılır. Yeni bir yetki
 mekanizması gelirse script içindeki `KAPI_ISARETLERI` listesine eklenmeli,
 yoksa kontrol o sayfayı gözden kaçırır.
+
+## Meta açıklama ve paylaşım önizlemesi
+
+Her genel sayfada `<title>` → `meta description` → `canonical` → Open Graph
+bloğu sırası korunur. OG alanları açıklama ve canonical'dan türetilir; `og:url`
+ile `canonical` **birebir aynı olmalıdır**, ayrışırsa Google yinelenen sayfa
+uyarısı verir.
+
+`og:type` ders notlarında `article`, hub ve kurumsal sayfalarda `website`.
+
+Paylaşım görseli `og-image.png` (1200×630), `python3 tools/og-gorsel-uret.py`
+ile üretilir, elle düzenlenmez. Görseldeki iddialar sitenin kendi metinlerinden
+doğrulanabilir olmalı — örneğin "üyelik gerekmez" **yazılamaz**, deneme sınavı
+`/panel/` altında ve giriş istiyor.
+
+Panel sayfalarına OG etiketi eklenmez; kapalı içeriğin paylaşım önizlemesi
+olmaz.
