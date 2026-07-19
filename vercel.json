@@ -13,7 +13,12 @@
       "permanent": false
     },
     {
-      "source": "/deneme-sinavlari/:path*",
+      "source": "/deneme-sinavlari/",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/deneme-sinavlari/:path+",
       "destination": "/",
       "permanent": false
     }
