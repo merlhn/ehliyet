@@ -23,18 +23,38 @@
   "redirects": [
     {
       "source": "/deneme-sinavlari",
-      "destination": "/",
-      "permanent": false
+      "destination": "/ehliyet-sinav-sorulari/",
+      "permanent": true
     },
     {
       "source": "/deneme-sinavlari/",
-      "destination": "/",
-      "permanent": false
+      "destination": "/ehliyet-sinav-sorulari/",
+      "permanent": true
     },
     {
       "source": "/deneme-sinavlari/:path+",
-      "destination": "/",
-      "permanent": false
+      "destination": "/ehliyet-sinav-sorulari/",
+      "permanent": true
+    },
+    {
+      "source": "/cikmis-sorular",
+      "destination": "/ehliyet-sinav-sorulari/",
+      "permanent": true
+    },
+    {
+      "source": "/cikmis-sorular/",
+      "destination": "/ehliyet-sinav-sorulari/",
+      "permanent": true
+    },
+    {
+      "source": "/ehliyet-sorulari",
+      "destination": "/ehliyet-sinav-sorulari/",
+      "permanent": true
+    },
+    {
+      "source": "/ehliyet-sorulari/",
+      "destination": "/ehliyet-sinav-sorulari/",
+      "permanent": true
     }
   ]
 }

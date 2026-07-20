@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{COURSE}} — Konu {{KONU_NO}}: {{KONU_AD}}</title>
+<title>{{COURSE}} — Konu {{KONU_NO}}: {{KONU_AD}} | ehliyet.digital</title>
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/fonts.css">
@@ -22,37 +22,24 @@
   .ders-meta b{color:#08090a;font-weight:600}
   .lead{font-size:14px;color:var(--muted);line-height:1.6;margin:0 0 8px}
   h2{font-size:19px;font-weight:600;letter-spacing:-.025em;line-height:1.2;margin:42px 0 10px}
-  p{margin:16px 0;font-size:12.5px}
+  p{margin:16px 0;font-size:16px}
   b{font-weight:600}
-  .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#08090a;color:#fff;border:1px solid #08090a;font-family:inherit;font-weight:500;font-size:15px;border-radius:999px;padding:13px 24px;cursor:pointer;text-decoration:none;letter-spacing:-.01em}
-  .btn-primary:hover{background:#26282c;border-color:#26282c}
-  .quiz-cta{margin-top:48px}
-  .quiz-cta .btn-primary{font-size:10.5px;padding:9px 17px}
-  .q-overlay{position:fixed;inset:0;background:rgba(8,9,10,.5);display:none;align-items:center;justify-content:center;padding:16px;z-index:60}
-  .q-overlay.show{display:flex}
-  .q-modal{background:#fff;border-radius:16px;width:min(900px,100%);max-height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.28)}
-  .q-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line);font-weight:600;font-size:16px;letter-spacing:-.02em;flex-shrink:0}
-  .q-close{width:32px;height:32px;border:none;background:none;font-size:19px;color:var(--muted);cursor:pointer;border-radius:8px}
-  .q-close:hover{background:#f2f2f2;color:#08090a}
-  .q-body{overflow-y:auto;-webkit-overflow-scrolling:touch;padding:4px 24px 10px}
-  .q-item{display:grid;grid-template-columns:0.9fr 1.1fr;gap:28px;align-items:start;padding:20px 0}
-  .q-q{font-weight:500;font-size:15.5px;line-height:1.5;margin:0}
-  .q-q .qn{font-family:'Geist Mono',monospace;color:var(--muted);margin-right:8px;font-size:13px}
-  .q-opts{display:flex;flex-direction:column;gap:7px}
-  .q-opt{display:flex;align-items:center;gap:11px;border:1px solid var(--line);border-radius:10px;padding:10px 13px;font-size:14px;cursor:pointer;transition:.12s;background:#fff;user-select:none}
-  .q-opt:hover{border-color:#08090a}
-  .q-opt .l{font-family:'Geist Mono',monospace;font-weight:500;color:#08090a}
-  .q-opt.sel{background:#08090a;color:#fff;border-color:#08090a}
-  .q-opt.sel .l{color:#fff}
-  .q-done .q-opt{cursor:default}
-  .q-opt.correct{background:#effaf3;border-color:#0a7f3f;color:#0a7f3f}
-  .q-opt.correct .l{color:#0a7f3f}
-  .q-opt.wrong{background:#fdf1f1;border-color:#c72c2c;color:#c72c2c}
-  .q-opt.wrong .l{color:#c72c2c}
-  .q-foot{display:flex;align-items:center;gap:12px;padding:14px 20px;border-top:1px solid var(--line);flex-shrink:0}
-  .q-score{font-weight:600;font-size:15px}
-  .q-foot .btn-primary{margin-left:auto;font-size:14px;padding:11px 20px}
-  @media(max-width:640px){.q-item{grid-template-columns:1fr;gap:12px;padding:16px 0}header{height:58px;padding:0 18px;gap:14px}}
+  /* Quiz kart */
+  .quiz-card{margin-top:48px;border:1px solid var(--line);border-radius:16px;padding:24px 28px}
+  .quiz-card h2{margin:0 0 20px;font-size:17px}
+  .quiz-card ol{list-style:none;padding:0;margin:0;counter-reset:q}
+  .quiz-card li{counter-increment:q;padding:18px 0;border-top:1px solid var(--line)}
+  .quiz-card li:first-child{border-top:none;padding-top:0}
+  .quiz-card .qq{font-weight:500;font-size:15px;line-height:1.5;margin:0 0 10px}
+  .quiz-card .qq::before{content:counter(q) ". ";font-family:'Geist Mono',monospace;color:var(--muted);font-size:13px;font-weight:400}
+  .quiz-card .qo{font-size:14px;line-height:1.6;color:#444;padding:2px 0}
+  .quiz-card .qo .lbl{font-family:'Geist Mono',monospace;color:var(--muted);margin-right:6px}
+  .quiz-card .qo.correct{color:#0a7f3f;font-weight:500}
+  .quiz-card:not(.revealed) .qo.correct{color:#444;font-weight:400}
+  .quiz-card .reveal-btn{margin-top:20px;display:inline-flex;align-items:center;gap:8px;background:#08090a;color:#fff;border:1px solid #08090a;font-family:inherit;font-weight:500;font-size:14px;border-radius:999px;padding:11px 22px;cursor:pointer;letter-spacing:-.01em}
+  .quiz-card .reveal-btn:hover{background:#26282c;border-color:#26282c}
+  .quiz-card.revealed .reveal-btn{display:none}
+  @media(max-width:640px){header{height:58px;padding:0 18px;gap:14px}}
 
   /* Site footer — public sayfalardaki sütunlu footer'ın aynısı.
      body flex'e çevrilir ki kısa sayfada footer en alta otursun;
@@ -92,30 +79,8 @@
 {{BODY}}
 <!-- BODY_END -->
 
-    <div class="quiz-cta"><button class="btn-primary" onclick="openQuiz()">Kısa Testi Çöz — 5 Soru →</button></div>
+    {{QUIZ_CARD}}
   </main>
-
-  <div class="q-overlay" id="quizModal" aria-hidden="true">
-    <div class="q-modal">
-      <div class="q-head"><span>Kısa Test — {{KONU_AD}}</span><button class="q-close" onclick="closeQuiz()" aria-label="Kapat">✕</button></div>
-      <div class="q-body" id="quizBody"></div>
-      <div class="q-foot"><span class="q-score" id="quizScore"></span><button class="btn-primary" id="quizBtn" onclick="submitQuiz()">Sonucu Gör</button></div>
-    </div>
-  </div>
-
-  <script>
-    const QUIZ={{QUIZ_JSON}};
-    const L=["A","B","C","D"];
-    let qAns=[null,null,null,null,null], qDone=false;
-    function qBodyHTML(){return QUIZ.map((it,i)=>{const opts=it.o.map((o,j)=>{let cls="q-opt";if(qDone){if(j===it.c)cls+=" correct";else if(j===qAns[i])cls+=" wrong";}else if(qAns[i]===j)cls+=" sel";const click=qDone?"":`onclick="pickQ(${i},${j})"`;return `<div class="${cls}" ${click}><span class="l">${L[j]}</span><span>${o}</span></div>`;}).join("");return `<div class="q-item"><p class="q-q"><span class="qn">${i+1}.</span>${it.q}</p><div class="q-opts">${opts}</div></div>`;}).join("");}
-    function renderQuiz(){const body=document.getElementById("quizBody");body.className="q-body"+(qDone?" q-done":"");body.innerHTML=qBodyHTML();const btn=document.getElementById("quizBtn"),sc=document.getElementById("quizScore");if(qDone){const s=QUIZ.filter((it,i)=>qAns[i]===it.c).length;sc.textContent=s+" / 5 doğru";btn.textContent="Tekrar Çöz";}else{sc.textContent="";btn.textContent="Sonucu Gör";}}
-    function openQuiz(){qAns=[null,null,null,null,null];qDone=false;renderQuiz();document.getElementById("quizModal").classList.add("show");document.body.style.overflow="hidden";document.getElementById("quizBody").scrollTop=0;}
-    function closeQuiz(){document.getElementById("quizModal").classList.remove("show");document.body.style.overflow="";}
-    function pickQ(i,j){if(qDone)return;qAns[i]=j;renderQuiz();}
-    function submitQuiz(){if(qDone){openQuiz();return;}qDone=true;renderQuiz();document.getElementById("quizBody").scrollTop=0;}
-    document.getElementById("quizModal").addEventListener("click",e=>{if(e.target.id==="quizModal")closeQuiz();});
-    document.addEventListener("keydown",e=>{if(e.key==="Escape")closeQuiz();});
-  </script>
   <footer class="site-footer">
     <div class="foot-wrap">
       <div class="foot-hakkinda">

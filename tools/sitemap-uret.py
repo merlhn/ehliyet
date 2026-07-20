@@ -23,6 +23,14 @@ ONCELIK = [
 ]
 VARSAYILAN_ONCELIK = "0.5"
 
+DEGISIM_SIKLIGI = [
+    (re.compile(r"^/$"), "weekly"),
+    (re.compile(r"^/(dersler|hap-bilgiler)/$"), "weekly"),
+    (re.compile(r"^/dersler/"), "monthly"),
+    (re.compile(r"^/hap-bilgiler/"), "monthly"),
+]
+VARSAYILAN_SIKLIK = "monthly"
+
 
 def son_degisiklik(yol: pathlib.Path) -> str:
     """Dosyanın son commit tarihi; git yoksa dosya sistemi zamanına düşer."""
@@ -46,6 +54,13 @@ def oncelik(url_yolu: str) -> str:
     return VARSAYILAN_ONCELIK
 
 
+def degisim_sikligi(url_yolu: str) -> str:
+    for kalip, deger in DEGISIM_SIKLIGI:
+        if kalip.search(url_yolu):
+            return deger
+    return VARSAYILAN_SIKLIK
+
+
 def sayfalar():
     for p in sorted(ROOT.rglob("index.html")):
         parcalar = p.relative_to(ROOT).parts
@@ -66,6 +81,7 @@ for dosya, yol in sayfalar():
     url = ET.SubElement(kok, f"{{{NS}}}url")
     ET.SubElement(url, f"{{{NS}}}loc").text = BASE + yol
     ET.SubElement(url, f"{{{NS}}}lastmod").text = son_degisiklik(dosya)
+    ET.SubElement(url, f"{{{NS}}}changefreq").text = degisim_sikligi(yol)
     ET.SubElement(url, f"{{{NS}}}priority").text = oncelik(yol)
     sayac += 1
 
