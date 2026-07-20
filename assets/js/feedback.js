@@ -185,10 +185,11 @@
     btn.textContent = 'Gönderiliyor...';
     sendFeedback({ message: msg, email: emailEl ? (emailEl.value || '').trim() : '', rating: puan || null })
       .then(function () { renderSuccess(); })
-      .catch(function () {
+      .catch(function (err) {
+        console.error('Geri bildirim hatası:', err);
         btn.disabled = false;
         btn.textContent = 'Gönder';
-        alert('Bir sorun oluştu, lütfen tekrar dene.');
+        alert('Bir sorun oluştu, lütfen tekrar dene.\n\n' + (err && err.message ? err.message : String(err)));
       });
   }
 
