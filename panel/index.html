@@ -1045,10 +1045,13 @@ function kullaniciyiYaz(user) {
     } else {
       pkAvatar.textContent = ad.trim().charAt(0).toUpperCase();
     }
-    kabuk.querySelector('[data-pk-cikis]').addEventListener('click', async () => {
-      const { cikisOnayiAc } = await import('/assets/js/cikis-onay.js');
-      cikisOnayiAc(async () => { await cikisYap(); location.href = '/'; });
-    });
+    const pkCikis = kabuk.querySelector('[data-pk-cikis]');
+    if (pkCikis) {
+      pkCikis.addEventListener('click', async () => {
+        const { cikisOnayiAc } = await import('/assets/js/cikis-onay.js');
+        cikisOnayiAc(async () => { await cikisYap(); location.href = '/'; });
+      });
+    }
   }
 
   // Ayarlar bölümünü doldur

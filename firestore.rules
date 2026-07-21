@@ -50,10 +50,13 @@ service cloud.firestore {
       match /denemeler/{denemeId} {
         allow read:   if sahibi(uid);
         allow create: if sahibi(uid)
-          && request.resource.data.sinavId is string
+          && request.resource.data.sinav is string
           && request.resource.data.dogru is int
           && request.resource.data.yanlis is int
-          && request.resource.data.bos is int;
+          && request.resource.data.bos is int
+          && request.resource.data.puan is int
+          && request.resource.data.gecti is bool
+          && request.resource.data.bolumler is map;
         allow update, delete: if false;
       }
 
