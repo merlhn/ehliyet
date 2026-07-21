@@ -995,6 +995,9 @@ function kabuguKur() {
     bolumler.forEach(b => { b.hidden = b.dataset.gorunumIcerik !== ad; });
     ogeler.forEach(o => o.classList.toggle('aktif', o.dataset.gorunum === ad));
     baslik.textContent = BASLIKLAR[ad] || '';
+    // URL'yi güncelle ki sayfa yenilenince aynı bölüm açılsın
+    const url = ad === 'anasayfa' ? '/panel/' : '/panel/?g=' + ad;
+    history.replaceState(null, '', url);
     if (ad === 'anasayfa') anasayfaGoster();
     if (ad === 'dersler') derslerAnasayfa();
     if (ad === 'hapbilgiler') hapAnasayfa();
