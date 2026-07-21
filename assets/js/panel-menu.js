@@ -81,9 +81,6 @@ export function menuHTML({ aktif = '', baglantiOlarak = true } = {}) {
       ${oge('sinavlar', IKON.sinav, 'Deneme Sınavları')}
       ${oge('dersler', IKON.kitap, 'Ders Notları')}
       ${oge('hapbilgiler', IKON.simsek, 'Hap Bilgiler')}
-    </nav>
-
-    <nav class="pk-alt">
       ${oge('ayarlar', IKON.ayar, 'Ayarlar')}
     </nav>
 
