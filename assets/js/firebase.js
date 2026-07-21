@@ -191,10 +191,12 @@ export async function geriBildirimKaydet({ mesaj, email, puan }) {
   });
 }
 
-/** Kullanıcının geçmiş denemelerini yeniden eskiye döner. */
-export async function denemeleriGetir(uid) {
-  const { db, collection, query, orderBy, getDocs } = await fs();
-  const q = query(collection(db, 'users', uid, 'denemeler'), orderBy('kaydedilmeAt', 'desc'));
+/** Kullanıcının geçmiş denemelerini yeniden eskiye döner. @param {number} [sinir] opsiyonel limit */
+export async function denemeleriGetir(uid, sinir) {
+  const { db, collection, query, orderBy, getDocs, limit } = await fs();
+  const kisitlar = [orderBy('kaydedilmeAt', 'desc')];
+  if (sinir) kisitlar.push(limit(sinir));
+  const q = query(collection(db, 'users', uid, 'denemeler'), ...kisitlar);
   const snap = await getDocs(q);
   return snap.docs.map(d => ({ id: d.id, ...d.data() }));
 }

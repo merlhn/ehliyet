@@ -658,23 +658,30 @@ function kabuguKur() {
     ]
   };
 
+  let _anasayfaCache = null; // {html, ts} — cache, yeni sınav bitmedikçe tekrar çekme
+  window._anasayfaInvalidate = () => { _anasayfaCache = null; }; // sınav bitince çağrılır
+
   window._anasayfaGoster = anasayfaGoster;
   async function anasayfaGoster() {
     if (!anasayfaRoot) return;
 
-    // Skeleton göster (veri yüklenirken)
-    anasayfaRoot.innerHTML = `
-      <div class="skel skel-title"></div>
-      <div class="skel skel-sub"></div>
-      <div class="skel-cards"><div class="skel skel-card"></div><div class="skel skel-card"></div><div class="skel skel-card"></div></div>
-      <div class="skel skel-section-title"></div>
-      <div class="skel skel-table"></div>
-      <div class="skel skel-chart"></div>
-      <div class="skel skel-section-title"></div>
-      <div class="skel skel-bars"></div>`;
-
     const user = (await import('/assets/js/firebase.js')).auth.currentUser;
-    const ad = user?.displayName?.split(' ')[0] || 'Merhaba';
+
+    // Auth henüz çözülmediyse skeleton göster, çözülünce tekrar çağrılacak
+    if (!user) {
+      anasayfaRoot.innerHTML = `
+        <div class="skel skel-title"></div>
+        <div class="skel skel-sub"></div>
+        <div class="skel-cards"><div class="skel skel-card"></div><div class="skel skel-card"></div><div class="skel skel-card"></div></div>
+        <div class="skel skel-section-title"></div>
+        <div class="skel skel-table"></div>
+        <div class="skel skel-chart"></div>
+        <div class="skel skel-section-title"></div>
+        <div class="skel skel-bars"></div>`;
+      return;
+    }
+
+    const ad = user.displayName?.split(' ')[0] || user.email?.split('@')[0] || 'Merhaba';
 
     let html = `
       <h1 class="hos-geldin">Hoş geldin, ${ad} 👋</h1>
@@ -697,10 +704,24 @@ function kabuguKur() {
         </div>
       </div>`;
 
-    // Sınav sonuçlarını çek
+    // Sınav sonuçlarını çek (cache varsa kullan)
     try {
-      const { denemeleriGetir } = await import('/assets/js/firebase.js');
-      const denemeler = await denemeleriGetir(user.uid);
+      let denemeler;
+      if (_anasayfaCache) {
+        denemeler = _anasayfaCache;
+      } else {
+        // Skeleton sadece cache yokken göster (ilk yükleme veya invalidate sonrası)
+        if (!anasayfaRoot.querySelector('.hos-geldin')) {
+          anasayfaRoot.innerHTML = `
+            <div class="skel skel-title"></div><div class="skel skel-sub"></div>
+            <div class="skel-cards"><div class="skel skel-card"></div><div class="skel skel-card"></div><div class="skel skel-card"></div></div>
+            <div class="skel skel-section-title"></div><div class="skel skel-table"></div>
+            <div class="skel skel-chart"></div><div class="skel skel-section-title"></div><div class="skel skel-bars"></div>`;
+        }
+        const { denemeleriGetir } = await import('/assets/js/firebase.js');
+        denemeler = await denemeleriGetir(user.uid, 20);
+        _anasayfaCache = denemeler;
+      }
 
       if (denemeler.length > 0) {
         // Tüm sınav sonuçları tablosu
