@@ -15,6 +15,8 @@ const CSS = `
   transition:.15s;white-space:nowrap;letter-spacing:-.01em}
 .auth-btn:hover{background:#26282c;border-color:#26282c}
 .auth-btn[disabled]{opacity:.5;cursor:default}
+.auth-cta{background:#e8722a;border-color:#e8722a}
+.auth-cta:hover{background:#d4641f;border-color:#d4641f}
 /* Google logosu koyu buton üzerinde okunmadığı için beyaz bir daireye oturtuluyor. */
 .auth-g{width:18px;height:18px;border-radius:50%;background:#fff;flex-shrink:0;
   display:inline-flex;align-items:center;justify-content:center}
@@ -41,6 +43,7 @@ const CSS = `
    Giriş yapılmış hâlde kullanıcı adı gizlenir; avatar zaten anlaşılan bir işaret. */
 @media(max-width:640px){
   .auth-btn{padding:7px 10px;font-size:10.5px;gap:5px}
+  .auth-cta{padding:7px 12px}
   .auth-g{width:13px;height:13px}
   .auth-g svg{width:9px;height:9px}
   .auth-user{padding:4px}
@@ -199,13 +202,14 @@ document.addEventListener('keydown', (e) => {
 });
 
 function girisGoster(slot) {
-  // Etiket ayrı bir span'de: yükleniyor durumunda metni değiştirirken logo silinmesin.
-  slot.innerHTML = `<button class="auth-btn" type="button" aria-label="Google ile giriş yap">
+  slot.innerHTML = `
+    <button class="auth-btn auth-giris" type="button" aria-label="Google ile giriş yap">
       ${GOOGLE_LOGO}<span data-etiket>Giriş yap</span>
-    </button>`;
+    </button>
+    <button class="auth-btn auth-cta" type="button">Ücretsiz Başla →</button>`;
 
-  // Giriş yapan kullanıcı panele iner; public site giriş yapmamışlar için vitrindir.
-  slot.querySelector('button').addEventListener('click', () => girisModaliAc('/panel/'));
+  slot.querySelector('.auth-giris').addEventListener('click', () => girisModaliAc('/panel/'));
+  slot.querySelector('.auth-cta').addEventListener('click', () => girisModaliAc('/panel/?g=sinavlar'));
 }
 
 function kullaniciGoster(slot, user) {
