@@ -695,40 +695,30 @@ function kabuguKur() {
         // Puan line chart (eskiden yeniye)
         const chartData = [...denemeler].reverse();
         if (chartData.length >= 2) {
-          const W = 600, H = 220, PX = 40, PY = 28, PB = 32;
-          const iW = W - PX - 20, iH = H - PY - PB;
-          const maxP = 100, minP = 0;
-          // X etiketleri: sınav adı kısaltması + deneme numarası
-          const sayac = {};
+          const W = 620, H = 240, PX = 12, PY = 30, PB = 44;
+          const iW = W - PX * 2, iH = H - PY - PB;
           const points = chartData.map((d, i) => {
-            const ad = d.sinav || 'Sınav';
-            sayac[ad] = (sayac[ad] || 0) + 1;
-            const kisa = ad.replace('Sınav ', 'S') + ' #' + sayac[ad];
-            const x = PX + (i / (chartData.length - 1)) * iW;
-            const y = PY + iH - ((d.puan - minP) / (maxP - minP)) * iH;
-            return { x, y, puan: d.puan, etiket: kisa, gecti: d.gecti };
+            const x = PX + 30 + (i / (chartData.length - 1)) * (iW - 60);
+            const y = PY + iH - (d.puan / 100) * iH;
+            const tarih = d.kaydedilmeAt?.toDate ? d.kaydedilmeAt.toDate().toLocaleDateString('tr-TR', { day:'numeric', month:'short' }) : '';
+            const sinav = (d.sinav || '').replace('Sınav ', 'S');
+            return { x, y, puan: d.puan, gecti: d.gecti, alt: tarih ? `${sinav} · ${tarih}` : sinav };
           });
           const line = points.map((p, i) => `${i === 0 ? 'M' : 'L'}${p.x},${p.y}`).join(' ');
-          const gecmeY = PY + iH - ((70 - minP) / (maxP - minP)) * iH;
+          const gecmeY = PY + iH - (70 / 100) * iH;
 
           let svg = '';
-          // Yatay grid çizgileri
-          for (const val of [0, 25, 50, 75, 100]) {
-            const yy = PY + iH - ((val - minP) / (maxP - minP)) * iH;
-            svg += `<line x1="${PX}" y1="${yy}" x2="${PX + iW}" y2="${yy}" stroke="#f2f2f2" stroke-width="1"/>`;
-            svg += `<text x="${PX - 8}" y="${yy + 4}" text-anchor="end" fill="#ccc" font-size="10" font-family="'Geist Mono',monospace">${val}</text>`;
-          }
-          // Geçme çizgisi
-          svg += `<line x1="${PX}" y1="${gecmeY}" x2="${PX + iW}" y2="${gecmeY}" stroke="#b3261e" stroke-width="1" stroke-dasharray="5,4" opacity=".4"/>`;
-          svg += `<text x="${PX + iW + 6}" y="${gecmeY + 4}" fill="#b3261e" font-size="9" font-family="Inter,sans-serif" font-weight="500">70</text>`;
+          // Geçme çizgisi + etiketi (sol)
+          svg += `<line x1="${PX}" y1="${gecmeY}" x2="${W - PX}" y2="${gecmeY}" stroke="#b3261e" stroke-width="1" stroke-dasharray="5,4" opacity=".3"/>`;
+          svg += `<text x="${PX + 2}" y="${gecmeY - 6}" fill="#b3261e" font-size="9" font-family="Inter,sans-serif" font-weight="500" opacity=".6">Geçme: 70</text>`;
           // Çizgi
           svg += `<path d="${line}" fill="none" stroke="#08090a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`;
-          // Noktalar + etiketler
+          // Noktalar + puan üstte + etiket altta
           for (const p of points) {
             const c = p.gecti ? '#1a7f37' : '#b3261e';
-            svg += `<circle cx="${p.x}" cy="${p.y}" r="4.5" fill="${c}" stroke="#fff" stroke-width="2"/>`;
-            svg += `<text x="${p.x}" y="${p.y - 10}" text-anchor="middle" fill="${c}" font-size="11" font-weight="600" font-family="'Geist Mono',monospace">${p.puan}</text>`;
-            svg += `<text x="${p.x}" y="${H - 8}" text-anchor="middle" fill="#6a6f76" font-size="10" font-family="Inter,sans-serif">${p.etiket}</text>`;
+            svg += `<circle cx="${p.x}" cy="${p.y}" r="5" fill="${c}" stroke="#fff" stroke-width="2"/>`;
+            svg += `<text x="${p.x}" y="${p.y - 12}" text-anchor="middle" fill="${c}" font-size="12" font-weight="600" font-family="'Geist Mono',monospace">${p.puan}</text>`;
+            svg += `<text x="${p.x}" y="${H - PB + 16}" text-anchor="middle" fill="#6a6f76" font-size="9.5" font-family="Inter,sans-serif">${p.alt}</text>`;
           }
           html += `<div class="grafik-wrap"><svg class="puan-grafik" viewBox="0 0 ${W} ${H}">${svg}</svg></div>`;
         }
