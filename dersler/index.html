@@ -66,10 +66,15 @@
 
   main{flex:1}
 
-  /* Hero — centered */
-  .hero{text-align:center;max-width:1000px;margin:0 auto;padding:120px 28px 96px}
-  .hero h1{margin:0 0 22px;font-size:clamp(44px,8vw,82px);font-weight:600;letter-spacing:-.03em;line-height:1.03}
-  .hero p{margin:0 auto;font-size:19px;line-height:1.55;color:var(--muted);max-width:560px}
+  /* Hero — koyu */
+  .hero{background:#08090a;color:#fff;text-align:center}
+  .hero-ic{max-width:1000px;margin:0 auto;padding:88px 28px 72px}
+  .hero h1{margin:0 0 18px;font-size:clamp(36px,6vw,62px);font-weight:600;letter-spacing:-.032em;line-height:1.05}
+  .hero p{margin:0 auto 32px;font-size:18px;line-height:1.55;color:#b7bcc3;max-width:560px}
+  .hero p b{color:#fff;font-weight:600}
+
+  /* Arama bölümü */
+  .search-section{margin-top:64px;padding-top:48px;border-top:1px solid var(--line)}
 
   /* Two-column sections (Linear signature) */
   .section{max-width:1100px;margin:0 auto;padding:88px 28px;border-top:1px solid var(--line)}
@@ -112,20 +117,20 @@
   .lesson-arrow{font-size:22px;color:var(--muted);flex-shrink:0}
   .lesson:hover .lesson-arrow{color:var(--fg)}
 
-  /* Dersler accordion */
-  .accordion{border:1px solid var(--line);border-radius:16px;overflow:hidden;max-width:989px}
-  .acc-item + .acc-item{border-top:1px solid var(--line)}
-  .acc-head{width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px;background:#fff;border:none;cursor:pointer;padding:20px 24px;font-family:inherit;font-size:16.5px;font-weight:600;color:var(--fg);text-align:left;letter-spacing:-.015em}
-  .acc-head:hover{background:#fafafa}
-  .acc-head .chev{transition:transform .25s;color:var(--muted);flex-shrink:0}
-  .acc-item.open>.acc-head .chev{transform:rotate(180deg);color:var(--fg)}
-  .acc-panel{max-height:0;overflow:hidden;transition:max-height .3s ease;background:#fafafa;border-top:1px solid transparent}
-  .acc-item.open>.acc-panel{max-height:900px;border-top-color:var(--line)}
-  .acc-inner{padding:8px 24px 16px;display:flex;flex-direction:column}
-  .acc-inner a{display:flex;align-items:baseline;gap:12px;color:#3a3d42;text-decoration:none;font-size:13px;padding:9px 0;font-weight:450}
-  .acc-inner a:hover{color:#08090a}
-  .acc-inner a .acc-n{font-family:'Geist Mono',monospace;font-size:10.5px;color:var(--muted);min-width:22px}
-  .acc-empty{color:var(--muted);font-size:14.5px;padding:8px 0}
+  /* Kategori blokları */
+  .cat-blocks{display:flex;flex-direction:column;max-width:989px}
+  .cat-block{display:flex;align-items:center;gap:32px;padding:36px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;transition:.15s}
+  .cat-block:first-child{padding-top:0}
+  .cat-block:last-child{border-bottom:none}
+  .cat-block:hover{opacity:.75}
+  .cat-block .cat-left{flex:1;min-width:0}
+  .cat-block h2{margin:0 0 8px;font-size:clamp(22px,3vw,30px);font-weight:600;letter-spacing:-.025em;line-height:1.15}
+  .cat-block p{color:var(--muted);font-size:15px;line-height:1.55;margin:0;max-width:520px}
+  .cat-block .cat-right{display:flex;align-items:center;gap:20px;flex-shrink:0}
+  .cat-block .cat-count{font-family:'Geist Mono',monospace;font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--muted);white-space:nowrap}
+  .cat-block .cat-arrow{color:var(--muted);transition:transform .15s}
+  .cat-block:hover .cat-arrow{transform:translateX(4px);color:var(--fg)}
+  @media(max-width:640px){.cat-block{flex-direction:column;align-items:flex-start;gap:14px}.cat-block .cat-right{align-self:flex-start}}
 
   /* Arama */
   .search-hero{max-width:760px;margin:0 auto 40px;text-align:center}
@@ -178,8 +183,8 @@
   @media(max-width:640px){
     header{padding:0 18px;gap:14px;height:58px}
     .nav{display:flex;gap:14px;font-size:13px}
-    .hero{padding:72px 20px 60px}
-    .hero p{font-size:17px}
+    .hero-ic{padding:64px 20px 52px}
+    .hero p{font-size:16px}
     .foot-grid{grid-template-columns:1fr 1fr}
   }
 
@@ -253,106 +258,86 @@
   </header>
 
   <main>
-    <!-- DERSLER -->
-    <section class="section" id="dersler" style="border-top:none;padding-top:64px">
-      <div class="search-hero">
-        <h2 class="search-title">Hangi konuyu çalışmak istersin?</h2>
-        <div class="search-box">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-          <input id="searchInput" type="text" placeholder="Bir konu ya da anahtar kelime ara — örn. yanık, kavşak, öfke" autocomplete="off" aria-label="Ders içinde ara">
-          <button class="search-clear" id="searchClear" aria-label="Temizle">✕</button>
-        </div>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-ic">
+        <h1>Ehliyet Sınavının<br>Tüm Konuları Tek Yerde</h1>
+        <p>Ehliyet sınavına hazırlanırken ihtiyacın olan <b>43 ders notunu</b> dört ana başlıkta topladık. Trafik kurallarından ilk yardıma, araç tekniğinden trafik adabına kadar tüm konular sınavda çıkan bilgilere odaklı ve anlaşılır bir dille yazıldı. Aşağıdan dersini seç, hemen çalışmaya başla.</p>
       </div>
+    </section>
 
-      <div id="searchResults" class="search-results" hidden></div>
-
+    <!-- DERSLER -->
+    <section class="section" id="dersler" style="border-top:none;padding-top:56px">
       <div id="lessonBrowse">
-      <p class="eyebrow">Ders Notları</p>
-      <h1 class="sec-title">Tüm Dersler</h1>
-      <div class="accordion">
+      <p class="eyebrow">Konular</p>
+      <h2 class="sec-title">Dersler</h2>
+      <div class="cat-blocks">
 
-        <div class="acc-item">
-          <button class="acc-head" onclick="toggleAcc(this)"><span>Araç Tekniği (Motor)</span><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="acc-panel"><div class="acc-inner">
-            <a href="/dersler/arac-teknigi/motor-nedir/"><span class="acc-n">01</span> Motor Nedir?</a>
-            <a href="/dersler/arac-teknigi/otomatik-vites/"><span class="acc-n">02</span> Otomatik Vites</a>
-            <a href="/dersler/arac-teknigi/arac-kullanmaya-hazirlik/"><span class="acc-n">03</span> Araç Kullanmaya Hazırlık</a>
-            <a href="/dersler/arac-teknigi/aydinlatma-ve-ikaz-sistemi/"><span class="acc-n">04</span> Aydınlatma ve İkaz Sistemi</a>
-            <a href="/dersler/arac-teknigi/fren-sistemi/"><span class="acc-n">05</span> Fren Sistemi</a>
-            <a href="/dersler/arac-teknigi/lastikler/"><span class="acc-n">06</span> Lastikler</a>
-            <a href="/dersler/arac-teknigi/on-duzen-direksiyon/"><span class="acc-n">07</span> Ön Düzen ve Direksiyon Sistemi</a>
-            <a href="/dersler/arac-teknigi/aktif-pasif-guvenlik/"><span class="acc-n">08</span> Aktif ve Pasif Güvenlik Sistemleri</a>
-            <a href="/dersler/arac-teknigi/derhal-durulmasi-gereken-haller/"><span class="acc-n">09</span> Derhal Durulması Gereken Haller</a>
-            <a href="/dersler/arac-teknigi/sogutma-sistemi/"><span class="acc-n">10</span> Soğutma Sistemleri</a>
-            <a href="/dersler/arac-teknigi/atesleme-sistemi/"><span class="acc-n">11</span> Ateşleme Sistemi</a>
-            <a href="/dersler/arac-teknigi/yaglama-sistemi/"><span class="acc-n">12</span> Yağlama Sistemi</a>
-            <a href="/dersler/arac-teknigi/sarj-sistemi/"><span class="acc-n">13</span> Şarj Sistemi</a>
-            <a href="/dersler/arac-teknigi/guc-aktarma-organlari/"><span class="acc-n">14</span> Güç Aktarma Organları</a>
-            <a href="/dersler/arac-teknigi/suspansiyon-sistemi/"><span class="acc-n">15</span> Süspansiyon Sistemi</a>
-          </div></div>
-        </div>
+        <a class="cat-block" href="/dersler/arac-teknigi/">
+          <div class="cat-left">
+            <h2>Araç Tekniği (Motor)</h2>
+            <p>Motor, fren, lastik, aydınlatma ve güvenlik sistemleri. Aracın teknik yapısını sınav odaklı öğren.</p>
+          </div>
+          <div class="cat-right">
+            <span class="cat-count">15 Konu</span>
+            <svg class="cat-arrow" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
 
-        <div class="acc-item">
-          <button class="acc-head" onclick="toggleAcc(this)"><span>Trafik ve Çevre</span><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="acc-panel"><div class="acc-inner">
-            <a href="/dersler/trafik-ve-cevre/temel-tanimlar/"><span class="acc-n">01</span> Temel Kavramlar</a>
-            <a href="/dersler/trafik-ve-cevre/kurum-ve-kuruluslar/"><span class="acc-n">02</span> Kurum ve Kuruluşlar</a>
-            <a href="/dersler/trafik-ve-cevre/genel-tanimlar/"><span class="acc-n">03</span> Genel Tanımlar</a>
-            <a href="/dersler/trafik-ve-cevre/araclarla-ilgili-tanimlar/"><span class="acc-n">04</span> Araçlarla İlgili Tanımlar</a>
-            <a href="/dersler/trafik-ve-cevre/oncelik-sirasi/"><span class="acc-n">05</span> Trafik İşaretlerine Uymada Öncelik Sırası</a>
-            <a href="/dersler/trafik-ve-cevre/trafik-isiklari/"><span class="acc-n">06</span> Trafik Işıkları</a>
-            <a href="/dersler/trafik-ve-cevre/arac-kullanma-sureleri/"><span class="acc-n">07</span> Araç Kullanma Süreleri ve Yasakları</a>
-            <a href="/dersler/trafik-ve-cevre/hiz-sinirlari/"><span class="acc-n">08</span> Hız Sınırları</a>
-            <a href="/dersler/trafik-ve-cevre/karayolunun-kullanilmasi/"><span class="acc-n">09</span> Karayolunun Kullanılması</a>
-            <a href="/dersler/trafik-ve-cevre/kavsaklarda-gecis-hakki/"><span class="acc-n">10</span> Kavşaklarda İlk Geçiş Hakkı</a>
-            <a href="/dersler/trafik-ve-cevre/kontrollu-kavsaklar/"><span class="acc-n">11</span> Kontrollü Kavşaklar</a>
-          </div></div>
-        </div>
+        <a class="cat-block" href="/dersler/trafik-ve-cevre/">
+          <div class="cat-left">
+            <h2>Trafik ve Çevre Bilgisi</h2>
+            <p>Trafik kuralları, hız sınırları, kavşak geçişleri ve işaret levhaları. Sınavda en çok soru gelen ders.</p>
+          </div>
+          <div class="cat-right">
+            <span class="cat-count">11 Konu</span>
+            <svg class="cat-arrow" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
 
-        <div class="acc-item">
-          <button class="acc-head" onclick="toggleAcc(this)"><span>İlk Yardım</span><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="acc-panel"><div class="acc-inner">
-            <a href="/dersler/ilk-yardim/ilk-yardim-ve-acil-tedavi/"><span class="acc-n">01</span> İlk Yardım ve Acil Tedavi</a>
-            <a href="/dersler/ilk-yardim/ilk-yardimin-abcsi/"><span class="acc-n">02</span> İlk Yardımın ABC'si</a>
-            <a href="/dersler/ilk-yardim/vucudu-olusturan-sistemler/"><span class="acc-n">03</span> Vücudu Oluşturan Sistemler</a>
-            <a href="/dersler/ilk-yardim/kanamalar/"><span class="acc-n">04</span> Kanamalar</a>
-            <a href="/dersler/ilk-yardim/turnike/"><span class="acc-n">05</span> Turnike Yöntemi</a>
-            <a href="/dersler/ilk-yardim/sok-koma-bayilma/"><span class="acc-n">06</span> Şok, Koma ve Bayılma</a>
-            <a href="/dersler/ilk-yardim/yaralanmalar/"><span class="acc-n">07</span> Yaralanmalar</a>
-            <a href="/dersler/ilk-yardim/yaniklar/"><span class="acc-n">08</span> Yanıklar</a>
-            <a href="/dersler/ilk-yardim/kirik-cikik-burkulma/"><span class="acc-n">09</span> Kırık, Çıkık, Burkulma</a>
-            <a href="/dersler/ilk-yardim/tasima-teknikleri/"><span class="acc-n">10</span> Taşıma Teknikleri</a>
-            <a href="/dersler/ilk-yardim/yasam-bulgulari/"><span class="acc-n">11</span> Yaşam Bulguları</a>
-            <a href="/dersler/ilk-yardim/solunum-yolu-tikanikligi/"><span class="acc-n">12</span> Solunum Yolu Tıkanıkları — Heimlich</a>
-          </div></div>
-        </div>
+        <a class="cat-block" href="/dersler/ilk-yardim/">
+          <div class="cat-left">
+            <h2>İlk Yardım</h2>
+            <p>Kanama, kırık, yanık müdahalesi, Heimlich manevrası ve taşıma teknikleri. Pratik bilgiler ağırlıklı.</p>
+          </div>
+          <div class="cat-right">
+            <span class="cat-count">12 Konu</span>
+            <svg class="cat-arrow" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
 
-        <div class="acc-item">
-          <button class="acc-head" onclick="toggleAcc(this)"><span>Trafik Adabı</span><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="acc-panel"><div class="acc-inner">
-            <a href="/dersler/trafik-adabi/temel-kavramlar/"><span class="acc-n">01</span> Trafik Adabı ve Temel Kavramlar</a>
-            <a href="/dersler/trafik-adabi/trafikte-iletisim/"><span class="acc-n">02</span> Trafikte İletişim</a>
-            <a href="/dersler/trafik-adabi/temel-degerler/"><span class="acc-n">03</span> Trafikte Temel Değerler</a>
-            <a href="/dersler/trafik-adabi/ofke-stres-dikkat/"><span class="acc-n">04</span> Öfke, Stres ve Dikkat Yönetimi</a>
-            <a href="/dersler/trafik-adabi/sorumluluk/"><span class="acc-n">05</span> Bireysel ve Toplumsal Sorumluluk</a>
-          </div></div>
-        </div>
+        <a class="cat-block" href="/dersler/trafik-adabi/">
+          <div class="cat-left">
+            <h2>Trafik Adabı</h2>
+            <p>Trafikte iletişim, öfke kontrolü, sorumluluk bilinci ve temel değerler. En kısa ama kolay puan alınan ders.</p>
+          </div>
+          <div class="cat-right">
+            <span class="cat-count">5 Konu</span>
+            <svg class="cat-arrow" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
 
       </div>
       </div><!-- /lessonBrowse -->
+
+      <!-- ARAMA -->
+      <div class="search-section">
+        <div class="search-hero">
+          <h2 class="search-title">Hangi konuyu çalışmak istersin?</h2>
+          <div class="search-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+            <input id="searchInput" type="text" placeholder="Bir konu ya da anahtar kelime ara — örn. yanık, kavşak, öfke" autocomplete="off" aria-label="Ders içinde ara">
+            <button class="search-clear" id="searchClear" aria-label="Temizle">✕</button>
+          </div>
+        </div>
+        <div id="searchResults" class="search-results" hidden></div>
+      </div>
     </section>
   </main>
 
   <script src="/assets/js/search-index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
   <script>
-    function toggleAcc(btn){
-      const item = btn.closest('.acc-item');
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.acc-item.open').forEach(o=>{ if(o!==item) o.classList.remove('open'); });
-      item.classList.toggle('open', !isOpen);
-    }
-
     // --- Arama (Türkçe-duyarlı + fuzzy) ---
     const idx = (window.SEARCH_INDEX||[]);
     const input = document.getElementById('searchInput');
@@ -430,11 +415,11 @@
       const fq=fold(q).trim();
       if(!fq){
         resultsEl.hidden=true; resultsEl.innerHTML='';
-        browseEl.hidden=false; clearBtn.style.display='none';
+        clearBtn.style.display='none';
         return;
       }
       clearBtn.style.display='block';
-      browseEl.hidden=true; resultsEl.hidden=false;
+      resultsEl.hidden=false;
 
       const tokens=fq.split(/\s+/).filter(Boolean);
       const tokVars=tokens.map(variantsFor);
