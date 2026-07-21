@@ -229,6 +229,10 @@
     border-radius:8px;cursor:pointer;transition:.12s;text-decoration:none}
   .oneri-konu:hover{background:#e8e8e8}
 
+  /* Puan grafiği */
+  .grafik-wrap{border:1px solid var(--line);border-radius:14px;padding:20px 16px 8px;margin-bottom:28px;overflow-x:auto}
+  .puan-grafik{width:100%;max-width:600px;height:auto;display:block;margin:0 auto}
+
   /* Sınav geçmişi tablosu */
   .sonuc-tablo{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:28px}
   .st-baslik,.st-satir{display:grid;grid-template-columns:1.2fr 1fr .7fr .6fr .6fr .5fr .8fr;padding:12px 18px;gap:8px;align-items:center;font-size:13.5px}
@@ -687,6 +691,47 @@ function kabuguKur() {
           </div>`;
         }
         html += `</div>`;
+
+        // Puan line chart (eskiden yeniye)
+        const chartData = [...denemeler].reverse();
+        if (chartData.length >= 2) {
+          const W = 600, H = 200, PX = 50, PY = 20;
+          const iW = W - PX * 2, iH = H - PY * 2;
+          const maxP = 100, minP = 0;
+          const points = chartData.map((d, i) => {
+            const x = PX + (i / (chartData.length - 1)) * iW;
+            const y = PY + iH - ((d.puan - minP) / (maxP - minP)) * iH;
+            return { x, y, puan: d.puan, sinav: d.sinav || '', gecti: d.gecti,
+              tarih: d.kaydedilmeAt?.toDate ? d.kaydedilmeAt.toDate().toLocaleDateString('tr-TR', { day:'numeric', month:'short' }) : '' };
+          });
+          const line = points.map((p, i) => `${i === 0 ? 'M' : 'L'}${p.x},${p.y}`).join(' ');
+          const gecmeCizgi = PY + iH - ((70 - minP) / (maxP - minP)) * iH;
+
+          let svgInner = `
+            <line x1="${PX}" y1="${gecmeCizgi}" x2="${W - PX}" y2="${gecmeCizgi}" stroke="#e8e8e8" stroke-width="1" stroke-dasharray="4,4"/>
+            <text x="${PX - 8}" y="${gecmeCizgi + 4}" text-anchor="end" fill="#6a6f76" font-size="11" font-family="'Geist Mono',monospace">70</text>
+            <text x="${W - PX + 8}" y="${gecmeCizgi + 4}" fill="#b3261e" font-size="10" font-family="Inter,sans-serif" font-weight="500">Geçme</text>`;
+
+          // Y ekseni
+          for (const val of [0, 25, 50, 75, 100]) {
+            const yy = PY + iH - ((val - minP) / (maxP - minP)) * iH;
+            if (val === 70) continue;
+            svgInner += `<text x="${PX - 8}" y="${yy + 4}" text-anchor="end" fill="#ccc" font-size="10" font-family="'Geist Mono',monospace">${val}</text>`;
+          }
+
+          // Çizgi
+          svgInner += `<path d="${line}" fill="none" stroke="#08090a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>`;
+
+          // Noktalar + etiketler
+          for (const p of points) {
+            const renk = p.gecti ? '#1a7f37' : '#b3261e';
+            svgInner += `<circle cx="${p.x}" cy="${p.y}" r="5" fill="${renk}" stroke="#fff" stroke-width="2"/>`;
+            svgInner += `<text x="${p.x}" y="${p.y - 12}" text-anchor="middle" fill="${renk}" font-size="12" font-weight="600" font-family="'Geist Mono',monospace">${p.puan}</text>`;
+            svgInner += `<text x="${p.x}" y="${H - 4}" text-anchor="middle" fill="#6a6f76" font-size="10" font-family="Inter,sans-serif">${p.tarih}</text>`;
+          }
+
+          html += `<div class="grafik-wrap"><svg class="puan-grafik" viewBox="0 0 ${W} ${H}">${svgInner}</svg></div>`;
+        }
 
         // Tüm sınavlardan birleşik performans
         const toplam = {};
