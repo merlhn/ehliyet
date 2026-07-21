@@ -695,23 +695,33 @@ function kabuguKur() {
         // Puan line chart (eskiden yeniye)
         const chartData = [...denemeler].reverse();
         if (chartData.length >= 2) {
-          const W = 620, H = 240, PX = 12, PY = 30, PB = 44;
-          const iW = W - PX * 2, iH = H - PY - PB;
+          const W = 620, H = 240, PL = 38, PR = 12, PY = 30, PB = 44;
+          const iW = W - PL - PR, iH = H - PY - PB;
           const points = chartData.map((d, i) => {
-            const x = PX + 30 + (i / (chartData.length - 1)) * (iW - 60);
+            const x = PL + (i / (chartData.length - 1)) * iW;
             const y = PY + iH - (d.puan / 100) * iH;
             const tarih = d.kaydedilmeAt?.toDate ? d.kaydedilmeAt.toDate().toLocaleDateString('tr-TR', { day:'numeric', month:'short' }) : '';
             const sinav = (d.sinav || '').replace('Sınav ', 'S');
             return { x, y, puan: d.puan, gecti: d.gecti, alt: tarih ? `${sinav} · ${tarih}` : sinav };
           });
           const line = points.map((p, i) => `${i === 0 ? 'M' : 'L'}${p.x},${p.y}`).join(' ');
-          const gecmeY = PY + iH - (70 / 100) * iH;
 
           let svg = '';
-          // Geçme çizgisi + etiketi (sol)
-          svg += `<line x1="${PX}" y1="${gecmeY}" x2="${W - PX}" y2="${gecmeY}" stroke="#b3261e" stroke-width="1" stroke-dasharray="5,4" opacity=".3"/>`;
-          svg += `<text x="${W - PX - 2}" y="${gecmeY - 6}" text-anchor="end" fill="#b3261e" font-size="9" font-family="Inter,sans-serif" font-weight="500" opacity=".6">Geçme: 70</text>`;
-          // Çizgi
+          // Y ekseni çizgisi
+          svg += `<line x1="${PL}" y1="${PY}" x2="${PL}" y2="${PY + iH}" stroke="#e0e0e0" stroke-width="1"/>`;
+          // X ekseni çizgisi
+          svg += `<line x1="${PL}" y1="${PY + iH}" x2="${PL + iW}" y2="${PY + iH}" stroke="#e0e0e0" stroke-width="1"/>`;
+          // Y ekseni etiketleri + yatay grid
+          for (const val of [0, 25, 50, 75, 100]) {
+            const yy = PY + iH - (val / 100) * iH;
+            svg += `<line x1="${PL}" y1="${yy}" x2="${PL + iW}" y2="${yy}" stroke="#f5f5f5" stroke-width="1"/>`;
+            svg += `<text x="${PL - 6}" y="${yy + 4}" text-anchor="end" fill="#aaa" font-size="10" font-family="'Geist Mono',monospace">${val}</text>`;
+          }
+          // Geçme çizgisi
+          const gecmeY = PY + iH - (70 / 100) * iH;
+          svg += `<line x1="${PL}" y1="${gecmeY}" x2="${PL + iW}" y2="${gecmeY}" stroke="#b3261e" stroke-width="1" stroke-dasharray="5,4" opacity=".35"/>`;
+          svg += `<text x="${PL + iW}" y="${gecmeY - 5}" text-anchor="end" fill="#b3261e" font-size="9" font-family="Inter,sans-serif" font-weight="500" opacity=".6">Geçme: 70</text>`;
+          // Veri çizgisi
           svg += `<path d="${line}" fill="none" stroke="#08090a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`;
           // Noktalar + puan üstte + etiket altta
           for (const p of points) {
