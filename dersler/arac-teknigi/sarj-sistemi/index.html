@@ -2,19 +2,12 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
+<link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-34HL041XN0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-34HL041XN0');
-</script>
 <title>Araç Tekniği (Motor) — Konu 13: Şarj Sistemi | ehliyet.digital</title>
 <meta name="description" content="Şarj sistemi: alternatör ve regülatörün görevleri, şarj göstergesinin kırmızı yanmasının anlamı ve akü ile ilgili sık sorulan arızalar.">
 <link rel="canonical" href="https://ehliyet.digital/dersler/arac-teknigi/sarj-sistemi/">
@@ -76,7 +69,7 @@
   body{display:flex;flex-direction:column;min-height:100vh}
   .lesson-layout{width:100%;flex:1 0 auto}
   .site-footer{border-top:1px solid var(--line);background:#fafafa;margin-top:auto;padding:0}
-  .foot-wrap{max-width:1100px;margin:0 auto;padding:44px 28px 40px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;align-items:start}
+  .foot-wrap{max-width:1100px;margin:0 auto;padding:44px 28px 40px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1fr;gap:40px;align-items:start}
   .foot-hakkinda{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
   .foot-hakkinda p{margin:0;font-size:14px;color:var(--muted);line-height:1.55;max-width:270px}
   .foot-col{display:flex;flex-direction:column;gap:10px}
@@ -253,6 +246,10 @@
 
 <link rel="prev" href="https://ehliyet.digital/dersler/arac-teknigi/yaglama-sistemi/">
 <link rel="next" href="https://ehliyet.digital/dersler/arac-teknigi/guc-aktarma-organlari/">
+<link rel="modulepreload" href="/assets/js/auth-ui.js">
+<link rel="modulepreload" href="/assets/js/firebase.js">
+<link rel="modulepreload" href="https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js">
+<link rel="modulepreload" href="https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js">
 </head>
 <body>
   <header>
@@ -374,9 +371,13 @@
         <a href="/dersler/arac-teknigi/motor-nedir/">Araç Tekniği</a>
         <a href="/dersler/trafik-adabi/temel-kavramlar/">Trafik Adabı</a>
       </nav>
+      <nav class="foot-col" aria-label="Faydalı Bilgiler">
+        <h4>Faydalı Bilgiler</h4>
+        <a href="/ehliyet-sinav-sorulari/">Soru Çöz</a>
+        <a href="/ehliyet-nasil-alinir/">Ehliyet Nasıl Alınır?</a>
+      </nav>
       <nav class="foot-col" aria-label="Sayfalar">
         <h4>Sayfalar</h4>
-        <a href="/ehliyet-sinav-sorulari/">Soru Çöz</a>
         <a href="/hakkinda/">Hakkında</a>
         <a href="/iletisim/">İletişim</a>
         <a href="/gizlilik/">Gizlilik Politikası</a>
@@ -391,5 +392,14 @@
   <script type="module" src="/assets/js/auth-ui.js"></script>
   <script>document.addEventListener('click',function(e){var o=e.target.closest('.qo');if(!o)return;var card=o.closest('.quiz-card');if(card.classList.contains('revealed'))return;var li=o.closest('li');li.querySelectorAll('.qo').forEach(function(x){x.classList.remove('picked')});o.classList.add('picked')})</script>
   <script src="/assets/js/mobile-nav.js" defer></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-34HL041XN0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-34HL041XN0');
+</script>
 </body>
 </html>
