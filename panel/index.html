@@ -643,6 +643,7 @@ function kabuguKur() {
     ]
   };
 
+  window._anasayfaGoster = anasayfaGoster;
   async function anasayfaGoster() {
     if (!anasayfaRoot) return;
 
@@ -1233,6 +1234,11 @@ kullaniciDinle(async (user) => {
   if (!user) { location.replace('/'); return; }
   kurBirKez();
   kullaniciyiYaz(user);
+  // Auth çözüldükten sonra ana sayfayı yeniden yükle (isim + veriler)
+  if (window._anasayfaGoster) {
+    const aktif = document.querySelector('[data-gorunum-icerik="anasayfa"]:not([hidden])');
+    if (aktif) window._anasayfaGoster();
+  }
 
   // Profil dokümanı formdan ÖNCE hazırlanmalı: ilk girişte doküman henüz yokken
   // form okuma yaparsa boş kalır ve kullanıcı bilgilerini silinmiş sanır.
