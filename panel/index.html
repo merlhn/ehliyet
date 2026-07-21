@@ -458,7 +458,7 @@
 <script type="module">
 import { MENU_CSS, menuHTML } from '/assets/js/panel-menu.js';
 import { kullaniciDinle, profiliHazirla, cikisYap, oturumBekleniyorMu,
-         profiliGetir, profiliKaydet, hesabiSil } from '/assets/js/firebase.js';
+         profiliGetir, profiliKaydet } from '/assets/js/firebase.js';
 
 const kabuk = document.getElementById('kabuk');
 const BASLIKLAR = {
@@ -912,6 +912,7 @@ function kullaniciyiYaz(user) {
       silOnayla.textContent = 'Siliniyor…';
       silDurum.textContent = '';
       try {
+        const { hesabiSil } = await import('/assets/js/firebase.js');
         await hesabiSil(user);
         location.replace('/');
       } catch (err) {
