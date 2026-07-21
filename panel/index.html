@@ -311,12 +311,12 @@
 
   <main>
     <!-- Ana Sayfa -->
-    <section class="icerik" data-gorunum-icerik="anasayfa" hidden>
+    <section class="icerik" data-gorunum-icerik="anasayfa">
       <div id="anasayfa-root"></div>
     </section>
 
     <!-- Deneme sınavları -->
-    <section class="icerik" data-gorunum-icerik="sinavlar">
+    <section class="icerik" data-gorunum-icerik="sinavlar" hidden>
       <h1 class="sec-basi">Deneme Sınavları</h1>
       <p class="sec-alt">Gerçek MTSK e-sınav formatında, 50 soruluk tam deneme sınavları.</p>
 
@@ -506,7 +506,7 @@ function kabuguKur() {
 
   // Yan menü ortak modülden kurulur. Panelde öğeler <button>: sayfayı yeniden
   // yüklemek yerine görünüm değiştirir.
-  kabuk.insertAdjacentHTML('afterbegin', menuHTML({ aktif: 'sinavlar', baglantiOlarak: false }));
+  kabuk.insertAdjacentHTML('afterbegin', menuHTML({ aktif: 'anasayfa', baglantiOlarak: false }));
 
   const baslik = kabuk.querySelector('[data-baslik]');
   const bolumler = [...kabuk.querySelectorAll('[data-gorunum-icerik]')];
@@ -599,7 +599,7 @@ function kabuguKur() {
     // Hızlı erişim kartları (her zaman göster)
     let html = `
       <h1 class="hos-geldin">Hoş geldin, ${ad} 👋</h1>
-      <p class="hos-alt">Ehliyet sınavına hazırlanmaya devam et.</p>
+      <p class="hos-alt">Ehliyet sınavına hazırlanmaya başla.</p>
       <div class="hizli-erisim">
         <div class="he-kart" data-he="sinavlar">
           <h3>Deneme Sınavı</h3>
