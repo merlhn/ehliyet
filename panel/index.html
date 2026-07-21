@@ -223,6 +223,28 @@
   .oneri-body b{display:block;font-size:14px;margin-bottom:2px}
   .oneri-body span{font-size:12.5px;color:var(--muted)}
   .oneri-ok{color:var(--muted);flex-shrink:0}
+  .oneri-grup{margin-bottom:6px}
+  .oneri-konular{display:flex;flex-wrap:wrap;gap:6px;padding:8px 0 0 52px}
+  .oneri-konu{font-size:12.5px;font-weight:500;color:var(--fg);background:#f5f5f5;padding:5px 12px;
+    border-radius:8px;cursor:pointer;transition:.12s;text-decoration:none}
+  .oneri-konu:hover{background:#e8e8e8}
+
+  /* Sınav geçmişi tablosu */
+  .sonuc-tablo{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:28px}
+  .st-baslik,.st-satir{display:grid;grid-template-columns:1.2fr 1fr .7fr .6fr .6fr .5fr .8fr;padding:12px 18px;gap:8px;align-items:center;font-size:13.5px}
+  .st-baslik{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;background:#fafafa;border-bottom:1px solid var(--line)}
+  .st-satir{border-bottom:1px solid var(--line)}
+  .st-satir:last-child{border-bottom:none}
+  .st-sinav{font-weight:600}
+  .st-tarih{color:var(--muted)}
+  .st-puan{font-weight:600;font-family:'Geist Mono',monospace}
+  .st-puan.gecti{color:#1a7f37}
+  .st-puan.kaldi{color:#b3261e}
+  .st-sonuc{font-weight:500;font-size:12.5px;padding:3px 10px;border-radius:6px;text-align:center;width:fit-content}
+  .st-sonuc.gecti{background:#eef7f0;color:#1a7f37}
+  .st-sonuc.kaldi{background:#fdf1f1;color:#b3261e}
+  @media(max-width:640px){.st-baslik,.st-satir{grid-template-columns:1fr 1fr 1fr;font-size:12px;padding:10px 14px}
+    .st-baslik span:nth-child(n+4),.st-satir span:nth-child(n+4){display:none}}
 
   /* ---- Ayarlar — tehlike kartı & silme modalı ---- */
   .tehlike-kart{border-color:#fecdd3}
@@ -590,6 +612,33 @@ function kabuguKur() {
     'Trafik Adabı': { link: 'trafik-adabi', aciklama: 'İletişim, öfke yönetimi ve sorumluluk' }
   };
 
+  // Ders bazında önerilen konular
+  const BOLUM_ONERILEN = {
+    'İlk Yardım': [
+      { slug: 'ilk-yardimin-abcsi', baslik: 'İlk Yardımın ABC\'si' },
+      { slug: 'kanamalar', baslik: 'Kanamalar' },
+      { slug: 'sok-koma-bayilma', baslik: 'Şok, Koma ve Bayılma' },
+      { slug: 'solunum-yolu-tikanikligi', baslik: 'Heimlich Manevrası' },
+    ],
+    'Trafik ve Çevre': [
+      { slug: 'hiz-sinirlari', baslik: 'Hız Sınırları' },
+      { slug: 'kavsaklarda-gecis-hakki', baslik: 'Kavşaklarda Geçiş Hakkı' },
+      { slug: 'trafik-isiklari', baslik: 'Trafik Işıkları' },
+      { slug: 'karayolunun-kullanilmasi', baslik: 'Karayolunun Kullanılması' },
+    ],
+    'Araç Tekniği': [
+      { slug: 'motor-nedir', baslik: 'Motor Nedir?' },
+      { slug: 'fren-sistemi', baslik: 'Fren Sistemi' },
+      { slug: 'aydinlatma-ve-ikaz-sistemi', baslik: 'Aydınlatma ve İkaz' },
+      { slug: 'aktif-pasif-guvenlik', baslik: 'Aktif ve Pasif Güvenlik' },
+    ],
+    'Trafik Adabı': [
+      { slug: 'temel-kavramlar', baslik: 'Temel Kavramlar' },
+      { slug: 'ofke-stres-dikkat', baslik: 'Öfke ve Stres Yönetimi' },
+      { slug: 'sorumluluk', baslik: 'Sorumluluk' },
+    ]
+  };
+
   async function anasayfaGoster() {
     if (!anasayfaRoot) return;
 
@@ -624,28 +673,35 @@ function kabuguKur() {
       const denemeler = await denemeleriGetir(user.uid);
 
       if (denemeler.length > 0) {
-        const son = denemeler[0];
-        const tarih = son.kaydedilmeAt?.toDate ? son.kaydedilmeAt.toDate().toLocaleDateString('tr-TR', {
-          year: 'numeric', month: 'long', day: 'numeric'
-        }) : '';
-
-        html += `<div class="sonuc-kart">
-          <h2>${son.sinav || 'Deneme Sınavı'} Sonucun</h2>
-          <p class="sonuc-tarih">${tarih}</p>
-          <div class="sonuc-ust">
-            <div class="sonuc-stat ${son.gecti ? 'gecti' : 'kaldi'}"><b>${son.puan}</b><span>Puan</span></div>
-            <div class="sonuc-stat"><b>${son.dogru}</b><span>Doğru</span></div>
-            <div class="sonuc-stat"><b>${son.yanlis}</b><span>Yanlış</span></div>
-            <div class="sonuc-stat"><b>${son.bos}</b><span>Boş</span></div>
+        // Tüm sınav sonuçları tablosu
+        html += `<h2 class="oneri-baslik">Sınav Geçmişin</h2>
+          <div class="sonuc-tablo">
+            <div class="st-baslik"><span>Sınav</span><span>Tarih</span><span>Puan</span><span>Doğru</span><span>Yanlış</span><span>Boş</span><span>Sonuç</span></div>`;
+        for (const d of denemeler) {
+          const tarih = d.kaydedilmeAt?.toDate ? d.kaydedilmeAt.toDate().toLocaleDateString('tr-TR', { day:'numeric', month:'short' }) : '—';
+          html += `<div class="st-satir">
+            <span class="st-sinav">${d.sinav || '—'}</span><span class="st-tarih">${tarih}</span>
+            <span class="st-puan ${d.gecti?'gecti':'kaldi'}">${d.puan}</span>
+            <span>${d.dogru}</span><span>${d.yanlis}</span><span>${d.bos}</span>
+            <span class="st-sonuc ${d.gecti?'gecti':'kaldi'}">${d.gecti?'Geçti':'Kaldı'}</span>
           </div>`;
+        }
+        html += `</div>`;
 
-        // Bölüm bazlı performans barları
-        if (son.bolumler) {
-          const siralanmis = Object.entries(son.bolumler).sort((a,b) => {
-            const pa = a[1].dogru / a[1].toplam;
-            const pb = b[1].dogru / b[1].toplam;
-            return pa - pb;
-          });
+        // Tüm sınavlardan birleşik performans
+        const toplam = {};
+        for (const d of denemeler) {
+          if (!d.bolumler) continue;
+          for (const [bol, v] of Object.entries(d.bolumler)) {
+            if (!toplam[bol]) toplam[bol] = { dogru:0, toplam:0 };
+            toplam[bol].dogru += v.dogru;
+            toplam[bol].toplam += v.toplam;
+          }
+        }
+        const siralanmis = Object.entries(toplam).sort((a,b) => (a[1].dogru/a[1].toplam) - (b[1].dogru/b[1].toplam));
+
+        if (siralanmis.length > 0) {
+          html += `<h2 class="oneri-baslik">Genel Performansın</h2><div class="sonuc-kart">`;
           for (const [bol, v] of siralanmis) {
             const pct = Math.round(v.dogru / v.toplam * 100);
             const renk = pct >= 80 ? 'iyi' : pct >= 60 ? 'orta' : 'zayif';
@@ -654,28 +710,31 @@ function kabuguKur() {
               <div class="sonuc-bar"><div class="sonuc-bar-fill ${renk}" style="width:${pct}%"></div></div>
             </div>`;
           }
+          html += `</div>`;
 
-          // Öneriler (%80 altı bölümler)
+          // Çalışman gereken konular — ders + konu bazında
           const zayiflar = siralanmis.filter(([,v]) => (v.dogru / v.toplam) < 0.8);
           if (zayiflar.length > 0) {
-            html += `</div><h2 class="oneri-baslik">Çalışman Gereken Konular</h2><div class="oneri-liste">`;
+            html += `<h2 class="oneri-baslik">Çalışman Gereken Konular</h2><div class="oneri-liste">`;
             for (const [bol, v] of zayiflar) {
               const pct = Math.round(v.dogru / v.toplam * 100);
               const renk = pct >= 60 ? 'orta' : 'zayif';
               const info = BOLUM_DERS_LINK[bol];
               if (!info) continue;
-              html += `<div class="oneri-kart" data-oneri-kat="${info.link}">
-                <div class="oneri-ikon ${renk}">📚</div>
-                <div class="oneri-body"><b>${bol} · %${pct}</b><span>${info.aciklama}</span></div>
-                <svg class="oneri-ok" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              const konular = BOLUM_ONERILEN[bol] || [];
+              html += `<div class="oneri-grup">
+                <div class="oneri-kart" data-oneri-kat="${info.link}">
+                  <div class="oneri-ikon ${renk}">📚</div>
+                  <div class="oneri-body"><b>${bol} · %${pct}</b><span>${info.aciklama}</span></div>
+                  <svg class="oneri-ok" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                </div>
+                ${konular.length ? `<div class="oneri-konular">${konular.map(k =>
+                  `<a class="oneri-konu" data-oneri-konu="${info.link}/${k.slug}">${k.baslik} →</a>`
+                ).join('')}</div>` : ''}
               </div>`;
             }
             html += `</div>`;
-          } else {
-            html += `</div>`;
           }
-        } else {
-          html += `</div>`;
         }
       }
     } catch (e) {
@@ -694,6 +753,14 @@ function kabuguKur() {
       k.addEventListener('click', () => {
         goster('dersler');
         setTimeout(() => derslerKategori(k.dataset.oneriKat), 50);
+      });
+    });
+    anasayfaRoot.querySelectorAll('[data-oneri-konu]').forEach(k => {
+      k.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const [katId, slug] = k.dataset.oneriKonu.split('/');
+        goster('dersler');
+        setTimeout(() => derslerKonu(katId, slug), 50);
       });
     });
   }
