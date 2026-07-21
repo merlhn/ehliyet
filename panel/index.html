@@ -877,6 +877,26 @@ function kullaniciyiYaz(user) {
     avatar.textContent = ad.trim().charAt(0).toUpperCase();
   }
 
+  // Sidebar profil bloğu
+  const pkProfil = kabuk.querySelector('[data-pk-profil]');
+  if (pkProfil) {
+    pkProfil.hidden = false;
+    kabuk.querySelector('[data-pk-ad]').textContent = ad;
+    kabuk.querySelector('[data-pk-mail]').textContent = user.email || '';
+    const pkAvatar = kabuk.querySelector('[data-pk-avatar]');
+    if (user.photoURL) {
+      const img2 = document.createElement('img');
+      img2.src = user.photoURL; img2.alt = ''; img2.referrerPolicy = 'no-referrer';
+      pkAvatar.appendChild(img2);
+    } else {
+      pkAvatar.textContent = ad.trim().charAt(0).toUpperCase();
+    }
+    kabuk.querySelector('[data-pk-cikis]').addEventListener('click', async () => {
+      const { cikisOnayiAc } = await import('/assets/js/cikis-onay.js');
+      cikisOnayiAc(async () => { await cikisYap(); location.href = '/'; });
+    });
+  }
+
   // Ayarlar bölümünü doldur
   const ayarEmail = kabuk.querySelector('[data-ayar-email]');
   const ayarTarih = kabuk.querySelector('[data-ayar-tarih]');

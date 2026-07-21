@@ -30,6 +30,16 @@ export const MENU_CSS = `
 .pk-oge.aktif{background:#f2f2f2;color:#08090a;font-weight:500}
 .pk-oge svg{flex-shrink:0}
 
+.pk-profil{display:flex;align-items:center;gap:10px;padding:14px 14px;border-top:1px solid #ececec;margin-top:8px;flex-shrink:0}
+.pk-profil-avatar{width:32px;height:32px;border-radius:50%;flex-shrink:0;background:#ececec;object-fit:cover;
+  display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#08090a;overflow:hidden}
+.pk-profil-avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.pk-profil-info{flex:1;min-width:0}
+.pk-profil-ad{font-size:13px;font-weight:600;color:#08090a;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pk-profil-mail{font-size:11.5px;color:#6a6f76;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pk-cikis{background:none;border:none;cursor:pointer;color:#6a6f76;padding:4px;border-radius:6px;flex-shrink:0;transition:.12s}
+.pk-cikis:hover{color:#08090a;background:#f5f5f5}
+
 @media(max-width:820px){
   .pk-yan{position:static;width:100%;height:auto;flex-direction:row;align-items:center;
     border-right:none;border-bottom:1px solid #ececec;padding:0 14px;gap:6px;overflow-x:auto}
@@ -76,5 +86,14 @@ export function menuHTML({ aktif = '', baglantiOlarak = true } = {}) {
     <nav class="pk-alt">
       ${oge('ayarlar', IKON.ayar, 'Ayarlar')}
     </nav>
+
+    <div class="pk-profil" data-pk-profil hidden>
+      <span class="pk-profil-avatar" data-pk-avatar></span>
+      <div class="pk-profil-info">
+        <div class="pk-profil-ad" data-pk-ad></div>
+        <div class="pk-profil-mail" data-pk-mail></div>
+      </div>
+      <button class="pk-cikis" type="button" data-pk-cikis title="Çıkış yap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></button>
+    </div>
   </aside>`;
 }
