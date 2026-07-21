@@ -182,6 +182,48 @@
   .hap-icerik .hap-num{font-family:'Geist Mono',monospace;font-size:12px;color:var(--muted);flex-shrink:0;min-width:22px}
   .hap-icerik .hap b{color:var(--fg);font-weight:600}
 
+  /* ---- Ana sayfa dashboard ---- */
+  .hos-geldin{margin:0 0 6px;font-size:24px;font-weight:600;letter-spacing:-.025em}
+  .hos-alt{margin:0 0 28px;color:var(--muted);font-size:15px}
+
+  .hizli-erisim{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px}
+  .he-kart{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:14px;padding:20px;background:#fff;transition:.15s;cursor:pointer;text-decoration:none;color:inherit}
+  .he-kart:hover{border-color:#d4d4d4;box-shadow:0 10px 28px rgba(0,0,0,.06);transform:translateY(-2px)}
+  .he-kart h3{margin:0 0 6px;font-size:16px;font-weight:600;letter-spacing:-.02em}
+  .he-kart p{margin:0 0 14px;color:var(--muted);font-size:13px;line-height:1.5;flex:1}
+  .he-kart .he-link{font-size:13px;font-weight:500;color:var(--fg)}
+  @media(max-width:720px){.hizli-erisim{grid-template-columns:1fr}}
+
+  .sonuc-kart{border:1px solid var(--line);border-radius:14px;padding:24px;margin-bottom:28px}
+  .sonuc-kart h2{margin:0 0 4px;font-size:18px;font-weight:600;letter-spacing:-.02em}
+  .sonuc-kart .sonuc-tarih{font-size:13px;color:var(--muted);margin:0 0 18px}
+  .sonuc-ust{display:flex;gap:24px;margin-bottom:20px;flex-wrap:wrap}
+  .sonuc-stat{text-align:center}
+  .sonuc-stat b{display:block;font-size:28px;font-weight:600;letter-spacing:-.02em}
+  .sonuc-stat span{font-size:12px;color:var(--muted)}
+  .sonuc-stat.gecti b{color:#1a7f37}
+  .sonuc-stat.kaldi b{color:#b3261e}
+  .sonuc-bar-wrap{margin-bottom:8px}
+  .sonuc-bar-label{display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px}
+  .sonuc-bar-label span:last-child{color:var(--muted);font-family:'Geist Mono',monospace;font-size:12px}
+  .sonuc-bar{height:6px;background:#f2f2f2;border-radius:3px;overflow:hidden}
+  .sonuc-bar-fill{height:100%;border-radius:3px;transition:width .3s}
+  .sonuc-bar-fill.iyi{background:#1a7f37}
+  .sonuc-bar-fill.orta{background:#e8722a}
+  .sonuc-bar-fill.zayif{background:#b3261e}
+
+  .oneri-baslik{margin:32px 0 14px;font-size:17px;font-weight:600;letter-spacing:-.02em}
+  .oneri-liste{display:flex;flex-direction:column;gap:10px}
+  .oneri-kart{display:flex;align-items:center;gap:16px;border:1px solid var(--line);border-radius:12px;padding:16px 18px;cursor:pointer;transition:.12s}
+  .oneri-kart:hover{border-color:#d4d4d4;background:#fafafa}
+  .oneri-ikon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
+  .oneri-ikon.zayif{background:#fdf1f1;color:#b3261e}
+  .oneri-ikon.orta{background:#fff7ed;color:#e8722a}
+  .oneri-body{flex:1;min-width:0}
+  .oneri-body b{display:block;font-size:14px;margin-bottom:2px}
+  .oneri-body span{font-size:12.5px;color:var(--muted)}
+  .oneri-ok{color:var(--muted);flex-shrink:0}
+
   /* ---- Ayarlar — tehlike kartı & silme modalı ---- */
   .tehlike-kart{border-color:#fecdd3}
   .sil-btn{font-family:inherit;font-size:13.5px;font-weight:500;padding:9px 18px;border-radius:9px;
@@ -269,12 +311,8 @@
 
   <main>
     <!-- Ana Sayfa -->
-    <section data-gorunum-icerik="anasayfa" hidden>
-      <div class="yakinda-ekran">
-        <div class="halka"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-        <h2>Yakında geliştirilecek</h2>
-        <p>Bu alan üzerinde çalışıyoruz. Kısa süre içinde tekrar göz atın.</p>
-      </div>
+    <section class="icerik" data-gorunum-icerik="anasayfa" hidden>
+      <div id="anasayfa-root"></div>
     </section>
 
     <!-- Deneme sınavları -->
@@ -451,7 +489,7 @@ import { kullaniciDinle, profiliHazirla, cikisYap, oturumBekleniyorMu,
 
 const kabuk = document.getElementById('kabuk');
 const BASLIKLAR = {
-  anasayfa: 'Ana Sayfa', sinavlar: 'Deneme Sınavları',
+  anasayfa: '', sinavlar: 'Deneme Sınavları',
   dersler: 'Ders Notları', hapbilgiler: 'Hap Bilgiler',
   ayarlar: 'Ayarlar', profil: 'Profilim',
 };
@@ -540,6 +578,125 @@ function kabuguKur() {
       ]
     }
   };
+
+  // ---- Ana Sayfa Dashboard ----
+  const anasayfaRoot = kabuk.querySelector('#anasayfa-root');
+  let anasayfaYuklendi = false;
+
+  const BOLUM_DERS_LINK = {
+    'İlk Yardım': { link: 'ilk-yardim', aciklama: 'Kanama, kırık, yanık ve temel yaşam desteği' },
+    'Trafik ve Çevre': { link: 'trafik-ve-cevre', aciklama: 'Hız sınırları, kavşak kuralları ve trafik işaretleri' },
+    'Araç Tekniği': { link: 'arac-teknigi', aciklama: 'Motor, fren, lastik ve güvenlik sistemleri' },
+    'Trafik Adabı': { link: 'trafik-adabi', aciklama: 'İletişim, öfke yönetimi ve sorumluluk' }
+  };
+
+  async function anasayfaGoster() {
+    if (!anasayfaRoot) return;
+
+    const user = (await import('/assets/js/firebase.js')).auth.currentUser;
+    const ad = user?.displayName?.split(' ')[0] || 'Merhaba';
+
+    // Hızlı erişim kartları (her zaman göster)
+    let html = `
+      <h1 class="hos-geldin">Hoş geldin, ${ad} 👋</h1>
+      <p class="hos-alt">Ehliyet sınavına hazırlanmaya devam et.</p>
+      <div class="hizli-erisim">
+        <div class="he-kart" data-he="sinavlar">
+          <h3>Deneme Sınavı</h3>
+          <p>50 soru, 45 dakika. Gerçek sınav formatında kendini test et.</p>
+          <span class="he-link">Sınava Git →</span>
+        </div>
+        <div class="he-kart" data-he="dersler">
+          <h3>Ders Notları</h3>
+          <p>4 ders, 43 konu. Sınavda çıkan bilgilere odaklı.</p>
+          <span class="he-link">Derslere Git →</span>
+        </div>
+        <div class="he-kart" data-he="hapbilgiler">
+          <h3>Hap Bilgiler</h3>
+          <p>76 bilgi, ~15 dakika. Sınavdan önce son tekrar.</p>
+          <span class="he-link">Bilgilere Git →</span>
+        </div>
+      </div>`;
+
+    // Sınav sonuçlarını çek
+    try {
+      const { denemeleriGetir } = await import('/assets/js/firebase.js');
+      const denemeler = await denemeleriGetir(user.uid);
+
+      if (denemeler.length > 0) {
+        const son = denemeler[0];
+        const tarih = son.kaydedilmeAt?.toDate ? son.kaydedilmeAt.toDate().toLocaleDateString('tr-TR', {
+          year: 'numeric', month: 'long', day: 'numeric'
+        }) : '';
+
+        html += `<div class="sonuc-kart">
+          <h2>${son.sinav || 'Deneme Sınavı'} Sonucun</h2>
+          <p class="sonuc-tarih">${tarih}</p>
+          <div class="sonuc-ust">
+            <div class="sonuc-stat ${son.gecti ? 'gecti' : 'kaldi'}"><b>${son.puan}</b><span>Puan</span></div>
+            <div class="sonuc-stat"><b>${son.dogru}</b><span>Doğru</span></div>
+            <div class="sonuc-stat"><b>${son.yanlis}</b><span>Yanlış</span></div>
+            <div class="sonuc-stat"><b>${son.bos}</b><span>Boş</span></div>
+          </div>`;
+
+        // Bölüm bazlı performans barları
+        if (son.bolumler) {
+          const siralanmis = Object.entries(son.bolumler).sort((a,b) => {
+            const pa = a[1].dogru / a[1].toplam;
+            const pb = b[1].dogru / b[1].toplam;
+            return pa - pb;
+          });
+          for (const [bol, v] of siralanmis) {
+            const pct = Math.round(v.dogru / v.toplam * 100);
+            const renk = pct >= 80 ? 'iyi' : pct >= 60 ? 'orta' : 'zayif';
+            html += `<div class="sonuc-bar-wrap">
+              <div class="sonuc-bar-label"><span>${bol}</span><span>${v.dogru}/${v.toplam} · %${pct}</span></div>
+              <div class="sonuc-bar"><div class="sonuc-bar-fill ${renk}" style="width:${pct}%"></div></div>
+            </div>`;
+          }
+
+          // Öneriler (%80 altı bölümler)
+          const zayiflar = siralanmis.filter(([,v]) => (v.dogru / v.toplam) < 0.8);
+          if (zayiflar.length > 0) {
+            html += `</div><h2 class="oneri-baslik">Çalışman Gereken Konular</h2><div class="oneri-liste">`;
+            for (const [bol, v] of zayiflar) {
+              const pct = Math.round(v.dogru / v.toplam * 100);
+              const renk = pct >= 60 ? 'orta' : 'zayif';
+              const info = BOLUM_DERS_LINK[bol];
+              if (!info) continue;
+              html += `<div class="oneri-kart" data-oneri-kat="${info.link}">
+                <div class="oneri-ikon ${renk}">📚</div>
+                <div class="oneri-body"><b>${bol} · %${pct}</b><span>${info.aciklama}</span></div>
+                <svg class="oneri-ok" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </div>`;
+            }
+            html += `</div>`;
+          } else {
+            html += `</div>`;
+          }
+        } else {
+          html += `</div>`;
+        }
+      }
+    } catch (e) {
+      console.error('Sonuçlar yüklenemedi:', e);
+    }
+
+    anasayfaRoot.innerHTML = html;
+
+    // Hızlı erişim kartları tıklama
+    anasayfaRoot.querySelectorAll('[data-he]').forEach(k => {
+      k.addEventListener('click', () => goster(k.dataset.he));
+    });
+
+    // Öneri kartları tıklama — ders notlarına yönlendir
+    anasayfaRoot.querySelectorAll('[data-oneri-kat]').forEach(k => {
+      k.addEventListener('click', () => {
+        goster('dersler');
+        setTimeout(() => derslerKategori(k.dataset.oneriKat), 50);
+      });
+    });
+  }
 
   const dersOnbellek = {};
   const derslerRoot = kabuk.querySelector('#dersler-root');
@@ -726,6 +883,7 @@ function kabuguKur() {
     bolumler.forEach(b => { b.hidden = b.dataset.gorunumIcerik !== ad; });
     ogeler.forEach(o => o.classList.toggle('aktif', o.dataset.gorunum === ad));
     baslik.textContent = BASLIKLAR[ad] || '';
+    if (ad === 'anasayfa') anasayfaGoster();
     if (ad === 'dersler') derslerAnasayfa();
     if (ad === 'hapbilgiler') hapAnasayfa();
   }

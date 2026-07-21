@@ -232,6 +232,7 @@
 const Q = window.QUESTIONS;
 const LETTERS = ["A","B","C","D"];
 const PASS_CORRECT = 35;         // 50 soruda geçme (≈70 puan)
+const SINAV_ADI = 'Sınav 2';
 const DURATION = 45*60;          // 45 dakika
 
 let cur = 0;
@@ -428,6 +429,32 @@ function doFinish(timeUp){
   timerEl.style.display='none';
   if(timeUp) alert('Süre doldu! Sınav otomatik olarak bitirildi.');
   render();
+  // Sonucu Firestore'a kaydet
+  (async () => {
+    try {
+      const { auth } = await import('/assets/js/firebase.js');
+      const user = auth.currentUser;
+      if (!user) return;
+      const { denemeKaydet } = await import('/assets/js/firebase.js');
+      const s = scoreObj();
+      const order = ["İlk Yardım","Trafik ve Çevre","Araç Tekniği","Trafik Adabı"];
+      const bolumler = {};
+      Q.forEach((q,i) => {
+        if (!bolumler[q.section]) bolumler[q.section] = {toplam:0,dogru:0};
+        bolumler[q.section].toplam++;
+        if (answers[i] === q.correct) bolumler[q.section].dogru++;
+      });
+      await denemeKaydet(user.uid, {
+        sinav: SINAV_ADI,
+        dogru: s.correct,
+        yanlis: s.wrong,
+        bos: s.empty,
+        puan: s.points,
+        gecti: s.correct >= PASS_CORRECT,
+        bolumler
+      });
+    } catch(e) { console.error('Sonuç kaydedilemedi:', e); }
+  })();
   window.scrollTo({top:0,behavior:'smooth'});
 }
 function exitExam(){
