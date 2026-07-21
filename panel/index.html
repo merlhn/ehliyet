@@ -806,23 +806,7 @@ function kabuguKur() {
     }
     html += `</div>`;
 
-    if (denemeler.length > 0) {
-        // Tüm sınav sonuçları tablosu
-        html += `<h2 class="oneri-baslik">Sınav Geçmişin</h2>
-          <div class="sonuc-tablo">
-            <div class="st-baslik"><span>Sınav</span><span>Tarih</span><span>Puan</span><span>Doğru</span><span>Yanlış</span><span>Boş</span><span>Sonuç</span></div>`;
-        for (const d of denemeler) {
-          const tarih = d.kaydedilmeAt?.toDate ? d.kaydedilmeAt.toDate().toLocaleDateString('tr-TR', { day:'numeric', month:'short' }) : '—';
-          html += `<div class="st-satir">
-            <span class="st-sinav">${d.sinav || '—'}</span><span class="st-tarih">${tarih}</span>
-            <span class="st-puan ${d.gecti?'gecti':'kaldi'}">${d.puan}</span>
-            <span>${d.dogru}</span><span>${d.yanlis}</span><span>${d.bos}</span>
-            <span class="st-sonuc ${d.gecti?'gecti':'kaldi'}">${d.gecti?'Geçti':'Kaldı'}</span>
-          </div>`;
-        }
-        html += `</div>`;
-
-        // Puan line chart (eskiden yeniye)
+    // Puan line chart (eskiden yeniye)
         const chartData = [...denemeler].reverse();
         if (chartData.length >= 2) {
           const yMin = 0;
@@ -908,8 +892,6 @@ function kabuguKur() {
             html += `</div>`;
           }
         }
-      }
-    }
     return html;
   }
 
