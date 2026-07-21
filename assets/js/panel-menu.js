@@ -74,7 +74,6 @@ export function menuHTML({ aktif = '', baglantiOlarak = true } = {}) {
     </nav>
 
     <nav class="pk-alt">
-      ${oge('odeme', IKON.kart, 'Ödeme Geçmişi')}
       ${oge('ayarlar', IKON.ayar, 'Ayarlar')}
     </nav>
   </aside>`;
