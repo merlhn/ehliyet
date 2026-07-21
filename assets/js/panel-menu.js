@@ -21,7 +21,7 @@ export const MENU_CSS = `
 .pk-marka span{font-size:15.5px;font-weight:600;letter-spacing:-.02em}
 
 .pk-ust{display:flex;flex-direction:column;gap:2px;padding:14px 10px 0}
-.pk-alt{margin-top:auto;display:flex;flex-direction:column;gap:2px;padding:0 10px 18px}
+.pk-alt{margin-top:auto;display:flex;flex-direction:column;gap:2px;padding:0 10px 6px}
 
 .pk-oge{display:flex;align-items:center;gap:10px;padding:10px 10px;border-radius:9px;
   font-size:13px;white-space:nowrap;font-weight:450;color:#3a3d42;text-decoration:none;
@@ -30,7 +30,7 @@ export const MENU_CSS = `
 .pk-oge.aktif{background:#f2f2f2;color:#08090a;font-weight:500}
 .pk-oge svg{flex-shrink:0}
 
-.pk-profil{display:flex;align-items:center;gap:10px;padding:14px 14px;border-top:1px solid #ececec;margin-top:auto;flex-shrink:0}
+.pk-profil{display:flex;align-items:center;gap:10px;padding:14px 14px;border-top:1px solid #ececec;flex-shrink:0}
 .pk-profil-avatar{width:32px;height:32px;border-radius:50%;flex-shrink:0;background:#ececec;object-fit:cover;
   display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#08090a;overflow:hidden}
 .pk-profil-avatar img{width:100%;height:100%;object-fit:cover;display:block}
@@ -54,6 +54,7 @@ const IKON = {
   kitap: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>',
   simsek: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>',
   kart: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>',
+  mesaj: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>',
   ayar: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>',
 };
 
@@ -81,7 +82,11 @@ export function menuHTML({ aktif = '', baglantiOlarak = true } = {}) {
       ${oge('sinavlar', IKON.sinav, 'Deneme Sınavları')}
       ${oge('dersler', IKON.kitap, 'Ders Notları')}
       ${oge('hapbilgiler', IKON.simsek, 'Hap Bilgiler')}
+    </nav>
+
+    <nav class="pk-alt">
       ${oge('ayarlar', IKON.ayar, 'Ayarlar')}
+      <button class="pk-oge" type="button" data-pk-feedback>${IKON.mesaj}Geri Bildirim</button>
     </nav>
 
     <div class="pk-profil" data-pk-profil hidden>
