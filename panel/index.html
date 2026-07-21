@@ -197,6 +197,14 @@
   .skel-bars{border-radius:14px;height:140px}
   @media(max-width:720px){.skel-cards{grid-template-columns:1fr}}
 
+  /* ---- Boş durum ---- */
+  .bos-durum{text-align:center;padding:48px 20px;border:1px solid var(--line);border-radius:14px}
+  .bos-ikon{font-size:36px;margin-bottom:14px}
+  .bos-durum h3{margin:0 0 6px;font-size:18px;font-weight:600}
+  .bos-durum p{margin:0 0 18px;color:var(--muted);font-size:14px}
+  .bos-durum .kart-btn{display:inline-flex;align-items:center;justify-content:center;font-size:13px;
+    font-weight:500;padding:9px 16px;border-radius:999px;background:#08090a;color:#fff;border:1px solid #08090a;cursor:pointer}
+
   /* ---- Ana sayfa dashboard ---- */
   .hos-geldin{margin:0 0 6px;font-size:24px;font-weight:600;letter-spacing:-.025em}
   .hos-alt{margin:0 0 28px;color:var(--muted);font-size:15px}
@@ -658,32 +666,21 @@ function kabuguKur() {
     ]
   };
 
-  let _anasayfaCache = null; // {html, ts} — cache, yeni sınav bitmedikçe tekrar çekme
-  window._anasayfaInvalidate = () => { _anasayfaCache = null; }; // sınav bitince çağrılır
+  let _anasayfaCache = null;
+  window._anasayfaInvalidate = () => { _anasayfaCache = null; };
 
-  window._anasayfaGoster = anasayfaGoster;
-  async function anasayfaGoster() {
-    if (!anasayfaRoot) return;
+  const SKELETON_HTML = `
+    <div class="skel skel-title"></div><div class="skel skel-sub"></div>
+    <div class="skel-cards"><div class="skel skel-card"></div><div class="skel skel-card"></div><div class="skel skel-card"></div></div>
+    <div class="skel skel-section-title"></div><div class="skel skel-table"></div>
+    <div class="skel skel-chart"></div><div class="skel skel-section-title"></div><div class="skel skel-bars"></div>`;
 
-    const user = (await import('/assets/js/firebase.js')).auth.currentUser;
+  const DATA_SKELETON = `
+    <div class="skel skel-section-title"></div><div class="skel skel-table"></div>
+    <div class="skel skel-chart"></div><div class="skel skel-section-title"></div><div class="skel skel-bars"></div>`;
 
-    // Auth henüz çözülmediyse skeleton göster, çözülünce tekrar çağrılacak
-    if (!user) {
-      anasayfaRoot.innerHTML = `
-        <div class="skel skel-title"></div>
-        <div class="skel skel-sub"></div>
-        <div class="skel-cards"><div class="skel skel-card"></div><div class="skel skel-card"></div><div class="skel skel-card"></div></div>
-        <div class="skel skel-section-title"></div>
-        <div class="skel skel-table"></div>
-        <div class="skel skel-chart"></div>
-        <div class="skel skel-section-title"></div>
-        <div class="skel skel-bars"></div>`;
-      return;
-    }
-
-    const ad = user.displayName?.split(' ')[0] || user.email?.split('@')[0] || 'Merhaba';
-
-    let html = `
+  function statikHTML(ad) {
+    return `
       <h1 class="hos-geldin">Hoş geldin, ${ad} 👋</h1>
       <p class="hos-alt">Ehliyet sınavına hazırlanmaya başla.</p>
       <div class="hizli-erisim">
@@ -702,28 +699,114 @@ function kabuguKur() {
           <p>76 bilgi, ~15 dakika. Sınavdan önce son tekrar.</p>
           <span class="he-link">Bilgilere Git →</span>
         </div>
-      </div>`;
+      </div>
+      <div id="anasayfa-veri"></div>`;
+  }
 
-    // Sınav sonuçlarını çek (cache varsa kullan)
+  function veriListenerEkle() {
+    anasayfaRoot.querySelectorAll('[data-he]').forEach(k => {
+      k.addEventListener('click', () => goster(k.dataset.he));
+    });
+    anasayfaRoot.querySelectorAll('[data-oneri-kat]').forEach(k => {
+      k.addEventListener('click', () => {
+        goster('dersler');
+        setTimeout(() => derslerKategori(k.dataset.oneriKat), 50);
+      });
+    });
+    anasayfaRoot.querySelectorAll('[data-oneri-konu]').forEach(k => {
+      k.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const [katId, slug] = k.dataset.oneriKonu.split('/');
+        goster('dersler');
+        setTimeout(() => derslerKonu(katId, slug), 50);
+      });
+    });
+  }
+
+  window._anasayfaGoster = anasayfaGoster;
+  async function anasayfaGoster() {
+    if (!anasayfaRoot) return;
+
+    const user = (await import('/assets/js/firebase.js')).auth.currentUser;
+
+    // 1) Auth henüz çözülmedi → tam skeleton
+    if (!user) {
+      anasayfaRoot.innerHTML = SKELETON_HTML;
+      return;
+    }
+
+    const ad = user.displayName?.split(' ')[0] || user.email?.split('@')[0] || 'Merhaba';
+
+    // 2) Statik kısımları hemen render et
+    if (!anasayfaRoot.querySelector('.hos-geldin')) {
+      anasayfaRoot.innerHTML = statikHTML(ad);
+      veriListenerEkle();
+    }
+    // İsmi güncelle (auth sonrası "Merhaba" → gerçek isim)
+    const baslikEl = anasayfaRoot.querySelector('.hos-geldin');
+    if (baslikEl) baslikEl.textContent = `Hoş geldin, ${ad} 👋`;
+
+    const veriRoot = anasayfaRoot.querySelector('#anasayfa-veri');
+    if (!veriRoot) return;
+
+    // 3) Cache varsa hemen göster (stale-while-revalidate)
+    if (_anasayfaCache) {
+      veriRoot.innerHTML = veriHTMLOlustur(_anasayfaCache);
+      veriListenerEkle();
+      return;
+    }
+
+    // 4) Cache yok → skeleton + fetch
+    veriRoot.innerHTML = DATA_SKELETON;
     try {
-      let denemeler;
-      if (_anasayfaCache) {
-        denemeler = _anasayfaCache;
-      } else {
-        // Skeleton sadece cache yokken göster (ilk yükleme veya invalidate sonrası)
-        if (!anasayfaRoot.querySelector('.hos-geldin')) {
-          anasayfaRoot.innerHTML = `
-            <div class="skel skel-title"></div><div class="skel skel-sub"></div>
-            <div class="skel-cards"><div class="skel skel-card"></div><div class="skel skel-card"></div><div class="skel skel-card"></div></div>
-            <div class="skel skel-section-title"></div><div class="skel skel-table"></div>
-            <div class="skel skel-chart"></div><div class="skel skel-section-title"></div><div class="skel skel-bars"></div>`;
-        }
-        const { denemeleriGetir } = await import('/assets/js/firebase.js');
-        denemeler = await denemeleriGetir(user.uid, 20);
-        _anasayfaCache = denemeler;
-      }
+      const { denemeleriGetir } = await import('/assets/js/firebase.js');
+      const denemeler = await denemeleriGetir(user.uid, 20);
+      _anasayfaCache = denemeler;
+      veriRoot.innerHTML = veriHTMLOlustur(denemeler);
+      veriListenerEkle();
+    } catch (e) {
+      console.error('Sonuçlar yüklenemedi:', e);
+      veriRoot.innerHTML = `
+        <div class="ders-hata">
+          <p>Sınav sonuçları yüklenemedi.</p>
+          <button type="button" data-tekrar-anasayfa>Tekrar Dene</button>
+        </div>`;
+      veriRoot.querySelector('[data-tekrar-anasayfa]')?.addEventListener('click', () => {
+        _anasayfaCache = null;
+        anasayfaGoster();
+      });
+    }
+  }
 
-      if (denemeler.length > 0) {
+  function veriHTMLOlustur(denemeler) {
+    if (!denemeler || denemeler.length === 0) {
+      return `
+        <div class="bos-durum">
+          <div class="bos-ikon">📝</div>
+          <h3>Henüz sınav çözmedin</h3>
+          <p>İlk deneme sınavını çöz, sonuçlarını ve gelişimini burada takip et.</p>
+          <button class="kart-btn" type="button" data-he="sinavlar">Deneme Sınavına Başla</button>
+        </div>`;
+    }
+
+    let html = '';
+
+    // Tüm sınav sonuçları tablosu
+    html += `<h2 class="oneri-baslik">Sınav Geçmişin</h2>
+      <div class="sonuc-tablo">
+        <div class="st-baslik"><span>Sınav</span><span>Tarih</span><span>Puan</span><span>Doğru</span><span>Yanlış</span><span>Boş</span><span>Sonuç</span></div>`;
+    for (const d of denemeler) {
+      const tarih = d.kaydedilmeAt?.toDate ? d.kaydedilmeAt.toDate().toLocaleDateString('tr-TR', { day:'numeric', month:'short' }) : '—';
+      html += `<div class="st-satir">
+        <span class="st-sinav">${d.sinav || '—'}</span><span class="st-tarih">${tarih}</span>
+        <span class="st-puan ${d.gecti?'gecti':'kaldi'}">${d.puan}</span>
+        <span>${d.dogru}</span><span>${d.yanlis}</span><span>${d.bos}</span>
+        <span class="st-sonuc ${d.gecti?'gecti':'kaldi'}">${d.gecti?'Geçti':'Kaldı'}</span>
+      </div>`;
+    }
+    html += `</div>`;
+
+    if (denemeler.length > 0) {
         // Tüm sınav sonuçları tablosu
         html += `<h2 class="oneri-baslik">Sınav Geçmişin</h2>
           <div class="sonuc-tablo">
@@ -826,32 +909,8 @@ function kabuguKur() {
           }
         }
       }
-    } catch (e) {
-      console.error('Sonuçlar yüklenemedi:', e);
     }
-
-    anasayfaRoot.innerHTML = html;
-
-    // Hızlı erişim kartları tıklama
-    anasayfaRoot.querySelectorAll('[data-he]').forEach(k => {
-      k.addEventListener('click', () => goster(k.dataset.he));
-    });
-
-    // Öneri kartları tıklama — ders notlarına yönlendir
-    anasayfaRoot.querySelectorAll('[data-oneri-kat]').forEach(k => {
-      k.addEventListener('click', () => {
-        goster('dersler');
-        setTimeout(() => derslerKategori(k.dataset.oneriKat), 50);
-      });
-    });
-    anasayfaRoot.querySelectorAll('[data-oneri-konu]').forEach(k => {
-      k.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const [katId, slug] = k.dataset.oneriKonu.split('/');
-        goster('dersler');
-        setTimeout(() => derslerKonu(katId, slug), 50);
-      });
-    });
+    return html;
   }
 
   const dersOnbellek = {};
