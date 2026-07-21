@@ -15,8 +15,8 @@ const CSS = `
   transition:.15s;white-space:nowrap;letter-spacing:-.01em}
 .auth-btn:hover{background:#26282c;border-color:#26282c}
 .auth-btn[disabled]{opacity:.5;cursor:default}
-.auth-cta{background:#e8722a;border-color:#e8722a}
-.auth-cta:hover{background:#d4641f;border-color:#d4641f}
+.auth-cta{background:#fff;color:#08090a;border-color:#ececec}
+.auth-cta:hover{background:#fafafa;border-color:#c8c8c8}
 /* Google logosu koyu buton üzerinde okunmadığı için beyaz bir daireye oturtuluyor. */
 .auth-g{width:18px;height:18px;border-radius:50%;background:#fff;flex-shrink:0;
   display:inline-flex;align-items:center;justify-content:center}
@@ -203,13 +203,11 @@ document.addEventListener('keydown', (e) => {
 
 function girisGoster(slot) {
   slot.innerHTML = `
-    <button class="auth-btn auth-giris" type="button" aria-label="Google ile giriş yap">
-      ${GOOGLE_LOGO}<span data-etiket>Giriş yap</span>
-    </button>
-    <button class="auth-btn auth-cta" type="button">Ücretsiz Başla →</button>`;
+    <button class="auth-btn auth-cta" type="button" data-giris>Giriş Yap</button>
+    <button class="auth-btn" type="button" data-cta>Ücretsiz Başla →</button>`;
 
-  slot.querySelector('.auth-giris').addEventListener('click', () => girisModaliAc('/panel/'));
-  slot.querySelector('.auth-cta').addEventListener('click', () => girisModaliAc('/panel/?g=sinavlar'));
+  slot.querySelector('[data-giris]').addEventListener('click', () => girisModaliAc('/panel/'));
+  slot.querySelector('[data-cta]').addEventListener('click', () => girisModaliAc('/panel/?g=sinavlar'));
 }
 
 function kullaniciGoster(slot, user) {
