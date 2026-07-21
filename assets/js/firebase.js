@@ -198,3 +198,24 @@ export async function denemeleriGetir(uid) {
   const snap = await getDocs(q);
   return snap.docs.map(d => ({ id: d.id, ...d.data() }));
 }
+
+/** Kullanıcı hesabını ve tüm Firestore verisini siler. */
+export async function hesabiSil(user) {
+  const { db, doc, deleteDoc, collection, getDocs } = await fs();
+
+  // Alt koleksiyonları sil (denemeler, yetkiler vb.)
+  const altKollar = ['denemeler', 'yetkiler'];
+  for (const kol of altKollar) {
+    try {
+      const snap = await getDocs(collection(db, 'users', user.uid, kol));
+      for (const d of snap.docs) await deleteDoc(d.ref);
+    } catch (_) { /* koleksiyon yoksa sorun değil */ }
+  }
+
+  // Ana profil dokümanını sil
+  await deleteDoc(doc(db, 'users', user.uid));
+
+  // Firebase Auth hesabını sil
+  const { deleteUser } = await import('https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js');
+  await deleteUser(user);
+}

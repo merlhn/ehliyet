@@ -130,6 +130,110 @@
   @media(max-width:560px){.alan-grid{grid-template-columns:1fr}.kart{padding:20px}}
 
   /* ---- Dar ekran ---- */
+  /* ---- Ders notları ---- */
+  .ders-kartlar{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media(max-width:960px){.ders-kartlar{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.ders-kartlar{grid-template-columns:1fr}}
+  .ders-kart{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:14px;
+    padding:22px;background:#fff;transition:.15s;cursor:pointer;min-height:200px}
+  .ders-kart:hover{border-color:#d4d4d4;box-shadow:0 10px 28px rgba(0,0,0,.06);transform:translateY(-2px)}
+  .ders-kart h3{margin:0 0 8px;font-size:18px;font-weight:600;letter-spacing:-.02em}
+  .ders-kart .ders-aciklama{margin:0 0 16px;color:var(--muted);font-size:13.5px;line-height:1.5}
+  .ders-kart .ders-sayi{font-family:'Geist Mono',monospace;font-size:12px;color:var(--muted);
+    letter-spacing:.04em;margin-bottom:16px}
+  .ders-kart .bosluk{flex:1}
+  .ders-kart .kart-btn{display:inline-flex;align-items:center;justify-content:center;font-size:12px;
+    font-weight:500;padding:7px 13px;border-radius:999px;background:#08090a;color:#fff;border:1px solid #08090a;
+    align-self:flex-start}
+
+  .geri-btn{display:inline-flex;align-items:center;gap:6px;background:none;border:none;font:inherit;
+    font-size:14px;font-weight:450;color:var(--muted);cursor:pointer;padding:0;margin-bottom:20px}
+  .geri-btn:hover{color:var(--fg)}
+
+  .konu-liste{display:flex;flex-direction:column}
+  .konu-satir{display:flex;align-items:center;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);
+    cursor:pointer;transition:.12s}
+  .konu-satir:first-child{border-top:1px solid var(--line)}
+  .konu-satir:hover{opacity:.7}
+  .konu-num{font-family:'Geist Mono',monospace;font-size:13px;color:var(--muted);flex-shrink:0;min-width:28px}
+  .konu-body{display:flex;flex-direction:column;gap:2px;flex:1}
+  .konu-baslik{font-weight:600;font-size:15.5px;letter-spacing:-.015em}
+  .konu-alt{color:var(--muted);font-size:13.5px}
+  .konu-ok{color:var(--muted);flex-shrink:0;transition:transform .15s}
+  .konu-satir:hover .konu-ok{transform:translateX(3px);color:var(--fg)}
+
+  .ders-icerik{max-width:800px}
+  .ders-icerik h2{font-size:19px;font-weight:600;letter-spacing:-.025em;line-height:1.2;margin:38px 0 10px}
+  .ders-icerik p{margin:14px 0;font-size:15.5px;line-height:1.75;color:#3a3d42}
+  .ders-icerik b{color:var(--fg);font-weight:600}
+  .ders-icerik ul,.ders-icerik ol{margin:10px 0;padding-left:20px}
+  .ders-icerik li{font-size:15.5px;line-height:1.7;color:#3a3d42;margin-bottom:6px}
+  .ders-yukleniyor{display:flex;align-items:center;justify-content:center;padding:80px 0;color:var(--muted);font-size:14px}
+  .ders-hata{text-align:center;padding:60px 0;color:var(--muted)}
+  .ders-hata button{margin-top:14px;font:inherit;font-size:14px;padding:9px 18px;border-radius:9px;
+    border:1px solid var(--line);background:#fff;color:var(--fg);cursor:pointer}
+  .ders-hata button:hover{border-color:#c8c8c8}
+
+  /* ---- Hap bilgiler panel ---- */
+  .hap-icerik .grup{margin-bottom:32px}
+  .hap-icerik .grup h2{font-size:17px;font-weight:600;letter-spacing:-.02em;margin:0 0 14px;color:var(--fg)}
+  .hap-icerik .hap-list{display:flex;flex-direction:column;gap:10px}
+  .hap-icerik .hap{display:flex;align-items:baseline;gap:14px;font-size:15px;line-height:1.65;color:#3a3d42}
+  .hap-icerik .hap-num{font-family:'Geist Mono',monospace;font-size:12px;color:var(--muted);flex-shrink:0;min-width:22px}
+  .hap-icerik .hap b{color:var(--fg);font-weight:600}
+
+  /* ---- Ayarlar — tehlike kartı & silme modalı ---- */
+  .tehlike-kart{border-color:#fecdd3}
+  .sil-btn{font-family:inherit;font-size:13.5px;font-weight:500;padding:9px 18px;border-radius:9px;
+    background:#fff;color:#b3261e;border:1px solid #fecdd3;cursor:pointer;transition:.12s}
+  .sil-btn:hover{background:#fef2f2;border-color:#f87171}
+  .sil-modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.4);display:flex;align-items:center;
+    justify-content:center;z-index:100;padding:20px}
+  .sil-modal{background:#fff;border-radius:16px;padding:28px;max-width:420px;width:100%;
+    box-shadow:0 20px 60px rgba(0,0,0,.15)}
+  .sil-modal h3{margin:0 0 8px;font-size:18px;font-weight:600;letter-spacing:-.02em}
+  .sil-modal p{margin:0 0 20px;font-size:14px;color:var(--muted);line-height:1.55}
+  .sil-modal-btns{display:flex;gap:10px}
+  .sil-iptal{font-family:inherit;font-size:14px;font-weight:500;padding:10px 20px;border-radius:9px;
+    background:#fff;color:var(--fg);border:1px solid var(--line);cursor:pointer;transition:.12s}
+  .sil-iptal:hover{background:#fafafa;border-color:#c8c8c8}
+  .sil-onayla{font-family:inherit;font-size:14px;font-weight:500;padding:10px 20px;border-radius:9px;
+    background:#b3261e;color:#fff;border:1px solid #b3261e;cursor:pointer;transition:.12s}
+  .sil-onayla:hover{background:#9a2019}
+  .sil-onayla:disabled{opacity:.5;cursor:default}
+  .sil-durum{font-size:13px;margin:12px 0 0 !important;color:#b3261e}
+
+  .ders-icerik .quiz-card{margin-top:40px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .ders-icerik .quiz-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;
+    padding:16px 22px;background:#fafafa;border:none;cursor:pointer;font:inherit;font-size:16px;
+    font-weight:600;letter-spacing:-.02em;color:var(--fg)}
+  .ders-icerik .quiz-toggle:hover{background:#f2f2f2}
+  .ders-icerik .quiz-toggle .chevron{transition:transform .2s;color:var(--muted)}
+  .ders-icerik .quiz-card.open .quiz-toggle .chevron{transform:rotate(180deg)}
+  .ders-icerik .quiz-body{display:none;padding:4px 22px 20px}
+  .ders-icerik .quiz-card.open .quiz-body{display:block}
+  .ders-icerik .quiz-card ol{list-style:none;padding:0;margin:0;counter-reset:q}
+  .ders-icerik .quiz-card li{counter-increment:q;padding:16px 0;border-top:1px solid var(--line);margin:0}
+  .ders-icerik .quiz-card li:first-child{border-top:none;padding-top:0}
+  .ders-icerik .quiz-card .qq{font-weight:500;font-size:14.5px;line-height:1.5;margin:0 0 8px}
+  .ders-icerik .quiz-card .qq::before{content:counter(q) ". ";font-family:'Geist Mono',monospace;color:var(--muted);font-size:13px;font-weight:400}
+  .ders-icerik .quiz-card .qo{font-size:13.5px;line-height:1.6;color:#444;padding:4px 8px;border-radius:8px;cursor:pointer;transition:.12s;user-select:none}
+  .ders-icerik .quiz-card .qo:hover{background:#f5f5f5}
+  .ders-icerik .quiz-card .qo .lbl{font-family:'Geist Mono',monospace;color:var(--muted);margin-right:6px}
+  .ders-icerik .quiz-card .qo.picked{background:#08090a;color:#fff;border-radius:8px}
+  .ders-icerik .quiz-card .qo.picked .lbl{color:#fff}
+  .ders-icerik .quiz-card.revealed .qo{cursor:default}
+  .ders-icerik .quiz-card.revealed .qo:hover{background:transparent}
+  .ders-icerik .quiz-card.revealed .qo.correct{background:#effaf3;color:#0a7f3f;font-weight:500}
+  .ders-icerik .quiz-card.revealed .qo.correct .lbl{color:#0a7f3f}
+  .ders-icerik .quiz-card.revealed .qo.picked:not(.correct){background:#fdf1f1;color:#c72c2c}
+  .ders-icerik .quiz-card.revealed .qo.picked:not(.correct) .lbl{color:#c72c2c}
+  .ders-icerik .quiz-card .reveal-btn{margin-top:16px;display:inline-flex;align-items:center;gap:8px;
+    background:#08090a;color:#fff;border:1px solid #08090a;font:inherit;font-weight:500;font-size:13.5px;
+    border-radius:999px;padding:10px 20px;cursor:pointer;letter-spacing:-.01em}
+  .ders-icerik .quiz-card .reveal-btn:hover{background:#26282c;border-color:#26282c}
+  .ders-icerik .quiz-card.revealed .reveal-btn{display:none}
+
   @media(max-width:820px){
     :root{--pk-yan:0px}
     .ust{position:static;left:0;height:54px;padding:0 14px}
@@ -222,21 +326,13 @@
     </section>
 
     <!-- Ders notları -->
-    <section data-gorunum-icerik="dersler" hidden>
-      <div class="yakinda-ekran">
-        <div class="halka"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-        <h2>Yakında geliştirilecek</h2>
-        <p>Bu alan üzerinde çalışıyoruz. Kısa süre içinde tekrar göz atın.</p>
-      </div>
+    <section class="icerik" data-gorunum-icerik="dersler" hidden>
+      <div id="dersler-root"></div>
     </section>
 
     <!-- Hap bilgiler -->
-    <section data-gorunum-icerik="hapbilgiler" hidden>
-      <div class="yakinda-ekran">
-        <div class="halka"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-        <h2>Yakında geliştirilecek</h2>
-        <p>Bu alan üzerinde çalışıyoruz. Kısa süre içinde tekrar göz atın.</p>
-      </div>
+    <section class="icerik" data-gorunum-icerik="hapbilgiler" hidden>
+      <div id="hapbilgiler-root"></div>
     </section>
 
     <!-- Ödeme geçmişi -->
@@ -249,11 +345,41 @@
     </section>
 
     <!-- Ayarlar -->
-    <section data-gorunum-icerik="ayarlar" hidden>
-      <div class="yakinda-ekran">
-        <div class="halka"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-        <h2>Yakında geliştirilecek</h2>
-        <p>Bu alan üzerinde çalışıyoruz. Kısa süre içinde tekrar göz atın.</p>
+    <section class="icerik" data-gorunum-icerik="ayarlar" hidden>
+      <h1 class="sec-basi">Ayarlar</h1>
+      <p class="sec-alt">Hesap bilgilerini görüntüle ve hesabını yönet.</p>
+
+      <div class="kart" style="max-width:640px">
+        <h2 style="margin:0 0 18px;font-size:17px;font-weight:600;letter-spacing:-.02em">Hesap Bilgileri</h2>
+        <div class="alan-grid">
+          <div class="alan">
+            <label>E-posta</label>
+            <input type="email" data-ayar-email disabled>
+          </div>
+          <div class="alan">
+            <label>Hesap oluşturma tarihi</label>
+            <input type="text" data-ayar-tarih disabled>
+          </div>
+        </div>
+      </div>
+
+      <div class="kart tehlike-kart" style="max-width:640px;margin-top:24px">
+        <h2 style="margin:0 0 8px;font-size:17px;font-weight:600;letter-spacing:-.02em;color:#b3261e">Hesabı Sil</h2>
+        <p style="margin:0 0 18px;font-size:14px;color:var(--muted);line-height:1.55">Hesabını sildiğinde tüm verilerin (profil, sınav sonuçları, yetkiler) kalıcı olarak silinir. Bu işlem geri alınamaz.</p>
+        <button class="sil-btn" type="button" data-hesap-sil>Hesabımı Sil</button>
+      </div>
+
+      <!-- Silme onay modalı -->
+      <div class="sil-modal-bg" data-sil-modal hidden>
+        <div class="sil-modal">
+          <h3>Hesabını silmek istediğine emin misin?</h3>
+          <p>Tüm verilerin kalıcı olarak silinecek. Bu işlem geri alınamaz.</p>
+          <div class="sil-modal-btns">
+            <button class="sil-iptal" type="button" data-sil-iptal>Vazgeç</button>
+            <button class="sil-onayla" type="button" data-sil-onayla>Evet, Hesabımı Sil</button>
+          </div>
+          <p class="sil-durum" data-sil-durum></p>
+        </div>
       </div>
     </section>
 
@@ -332,7 +458,7 @@
 <script type="module">
 import { MENU_CSS, menuHTML } from '/assets/js/panel-menu.js';
 import { kullaniciDinle, profiliHazirla, cikisYap, oturumBekleniyorMu,
-         profiliGetir, profiliKaydet } from '/assets/js/firebase.js';
+         profiliGetir, profiliKaydet, hesabiSil } from '/assets/js/firebase.js';
 
 const kabuk = document.getElementById('kabuk');
 const BASLIKLAR = {
@@ -359,10 +485,260 @@ function kabuguKur() {
   const bolumler = [...kabuk.querySelectorAll('[data-gorunum-icerik]')];
   const ogeler = [...kabuk.querySelectorAll('.pk-oge[data-gorunum]')];
 
+  // ---- Ders notları verisi ve mantığı ----
+  const DERS_KATEGORILER = {
+    'arac-teknigi': {
+      ad: 'Araç Tekniği (Motor)', aciklama: 'Motor, fren, lastik, aydınlatma ve güvenlik sistemleri',
+      konular: [
+        { slug: 'motor-nedir', baslik: 'Motor Nedir?', alt: 'Motor tanımı, enerji türleri ve dört zamanın sırası' },
+        { slug: 'otomatik-vites', baslik: 'Otomatik Vites', alt: 'Otomatik vites vitesleri ve kullanım kuralları' },
+        { slug: 'arac-kullanmaya-hazirlik', baslik: 'Araç Kullanmaya Hazırlık', alt: 'Sürüşe başlamadan önce yapılacak kontroller' },
+        { slug: 'aydinlatma-ve-ikaz-sistemi', baslik: 'Aydınlatma ve İkaz Sistemi', alt: 'Far, sinyal ve ikaz lambalarının kullanımı' },
+        { slug: 'fren-sistemi', baslik: 'Fren Sistemi', alt: 'Fren türleri ve güvenli frenleme teknikleri' },
+        { slug: 'lastikler', baslik: 'Lastikler', alt: 'Lastik yapısı, basınç kontrolü ve değişim zamanı' },
+        { slug: 'on-duzen-direksiyon', baslik: 'Ön Düzen ve Direksiyon Sistemi', alt: 'Rot, balans ve direksiyon arızaları' },
+        { slug: 'aktif-pasif-guvenlik', baslik: 'Aktif ve Pasif Güvenlik Sistemleri', alt: 'ABS, ESP, hava yastığı ve emniyet kemeri' },
+        { slug: 'derhal-durulmasi-gereken-haller', baslik: 'Derhal Durulması Gereken Haller', alt: 'Motorun hemen durdurulması gereken durumlar' },
+        { slug: 'sogutma-sistemi', baslik: 'Soğutma Sistemleri', alt: 'Radyatör, termostat ve soğutma sıvısı' },
+        { slug: 'atesleme-sistemi', baslik: 'Ateşleme Sistemi', alt: 'Buji, bobin ve ateşleme devresi' },
+        { slug: 'yaglama-sistemi', baslik: 'Yağlama Sistemi', alt: 'Motor yağı, yağ basıncı ve filtreleme' },
+        { slug: 'sarj-sistemi', baslik: 'Şarj Sistemi', alt: 'Akü, alternatör ve şarj devresi' },
+        { slug: 'guc-aktarma-organlari', baslik: 'Güç Aktarma Organları', alt: 'Debriyaj, şanzıman ve diferansiyel' },
+        { slug: 'suspansiyon-sistemi', baslik: 'Süspansiyon Sistemi', alt: 'Amortisör, yay ve süspansiyon türleri' },
+      ]
+    },
+    'trafik-ve-cevre': {
+      ad: 'Trafik ve Çevre Bilgisi', aciklama: 'Trafik kuralları, hız sınırları, kavşak geçişleri',
+      konular: [
+        { slug: 'temel-tanimlar', baslik: 'Temel Kavramlar', alt: 'Trafik, yol ve taşıt ile ilgili temel tanımlar' },
+        { slug: 'kurum-ve-kuruluslar', baslik: 'Kurum ve Kuruluşlar', alt: 'Trafik düzeninden sorumlu resmi kurumlar' },
+        { slug: 'genel-tanimlar', baslik: 'Genel Tanımlar', alt: 'Sürücü, yolcu, yaya ve araçla ilgili genel kavramlar' },
+        { slug: 'araclarla-ilgili-tanimlar', baslik: 'Araçlarla İlgili Tanımlar', alt: 'Araç türleri ve sınıflandırmaları' },
+        { slug: 'oncelik-sirasi', baslik: 'Öncelik Sırası', alt: 'Trafik işaretlerine uymada öncelik sırası' },
+        { slug: 'trafik-isiklari', baslik: 'Trafik Işıkları', alt: 'Araç ve yaya trafik ışıklarının anlamları' },
+        { slug: 'arac-kullanma-sureleri', baslik: 'Araç Kullanma Süreleri', alt: 'Sürücüler için dinlenme süreleri ve kısıtlamalar' },
+        { slug: 'hiz-sinirlari', baslik: 'Hız Sınırları', alt: 'Yol türüne ve araç cinsine göre hız limitleri' },
+        { slug: 'karayolunun-kullanilmasi', baslik: 'Karayolunun Kullanılması', alt: 'Şerit kullanımı, sollama ve park kuralları' },
+        { slug: 'kavsaklarda-gecis-hakki', baslik: 'Kavşaklarda Geçiş Hakkı', alt: 'Kontrolsüz kavşaklarda geçiş öncelikleri' },
+        { slug: 'kontrollu-kavsaklar', baslik: 'Kontrollü Kavşaklar', alt: 'Işıklı ve trafik polisli kavşak kuralları' },
+      ]
+    },
+    'ilk-yardim': {
+      ad: 'İlk Yardım', aciklama: 'Kanama, kırık, yanık müdahalesi ve taşıma teknikleri',
+      konular: [
+        { slug: 'ilk-yardim-ve-acil-tedavi', baslik: 'İlk Yardım ve Acil Tedavi', alt: 'İlk yardımın tanımı, amaçları ve temel ilkeleri' },
+        { slug: 'ilk-yardimin-abcsi', baslik: 'İlk Yardımın ABC\'si', alt: 'Havayolu, solunum ve dolaşım kontrolü' },
+        { slug: 'vucudu-olusturan-sistemler', baslik: 'Vücudu Oluşturan Sistemler', alt: 'Sindirim, solunum, dolaşım ve sinir sistemi' },
+        { slug: 'kanamalar', baslik: 'Kanamalar', alt: 'Kanama türleri ve durdurma yöntemleri' },
+        { slug: 'turnike', baslik: 'Turnike Yöntemi', alt: 'Turnike uygulama kuralları ve dikkat edilecekler' },
+        { slug: 'sok-koma-bayilma', baslik: 'Şok, Koma ve Bayılma', alt: 'Şok belirtileri ve müdahale yöntemleri' },
+        { slug: 'yaralanmalar', baslik: 'Yaralanmalar', alt: 'Yara türleri ve ilk müdahale' },
+        { slug: 'yaniklar', baslik: 'Yanıklar', alt: 'Yanık dereceleri ve soğuk su uygulaması' },
+        { slug: 'kirik-cikik-burkulma', baslik: 'Kırık, Çıkık, Burkulma', alt: 'Kırık türleri ve tespit yöntemleri' },
+        { slug: 'tasima-teknikleri', baslik: 'Taşıma Teknikleri', alt: 'Hasta ve yaralı taşıma yöntemleri' },
+        { slug: 'yasam-bulgulari', baslik: 'Yaşam Bulguları', alt: 'Nabız, solunum, tansiyon ve vücut ısısı' },
+        { slug: 'solunum-yolu-tikanikligi', baslik: 'Solunum Yolu Tıkanıkları — Heimlich', alt: 'Heimlich manevrası ve sırt darbesi' },
+      ]
+    },
+    'trafik-adabi': {
+      ad: 'Trafik Adabı', aciklama: 'Trafikte iletişim, öfke kontrolü ve sorumluluk',
+      konular: [
+        { slug: 'temel-kavramlar', baslik: 'Trafik Adabı ve Temel Kavramlar', alt: 'Trafik adabının tanımı ve önemi' },
+        { slug: 'trafikte-iletisim', baslik: 'Trafikte İletişim', alt: 'Sürücüler arası iletişim kuralları' },
+        { slug: 'temel-degerler', baslik: 'Trafikte Temel Değerler', alt: 'Saygı, sabır ve hoşgörü' },
+        { slug: 'ofke-stres-dikkat', baslik: 'Öfke, Stres ve Dikkat Yönetimi', alt: 'Trafikte duygusal kontrol' },
+        { slug: 'sorumluluk', baslik: 'Bireysel ve Toplumsal Sorumluluk', alt: 'Trafik güvenliğinde bireyin rolü' },
+      ]
+    }
+  };
+
+  const dersOnbellek = {};
+  const derslerRoot = kabuk.querySelector('#dersler-root');
+
+  function derslerAnasayfa() {
+    const satirlar = Object.entries(DERS_KATEGORILER).map(([id, kat]) => `
+      <div class="ders-kart" data-kat="${id}">
+        <h3>${kat.ad}</h3>
+        <p class="ders-aciklama">${kat.aciklama}</p>
+        <span class="ders-sayi">${kat.konular.length} KONU</span>
+        <div class="bosluk"></div>
+        <span class="kart-btn">Konulara Git</span>
+      </div>`).join('');
+
+    derslerRoot.innerHTML = `
+      <h1 class="sec-basi">Ders Notları</h1>
+      <p class="sec-alt">Ehliyet sınavına hazırlık için tüm ders notları.</p>
+      <div class="ders-kartlar">${satirlar}</div>`;
+
+    derslerRoot.querySelectorAll('.ders-kart').forEach(k => {
+      k.addEventListener('click', () => derslerKategori(k.dataset.kat));
+    });
+    window.scrollTo({ top: 0 });
+  }
+
+  function derslerKategori(katId) {
+    const kat = DERS_KATEGORILER[katId];
+    if (!kat) return;
+
+    const satirlar = kat.konular.map((k, i) => `
+      <div class="konu-satir" data-slug="${k.slug}">
+        <span class="konu-num">${String(i + 1).padStart(2, '0')}</span>
+        <div class="konu-body">
+          <span class="konu-baslik">${k.baslik}</span>
+          <span class="konu-alt">${k.alt}</span>
+        </div>
+        <svg class="konu-ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </div>`).join('');
+
+    derslerRoot.innerHTML = `
+      <button class="geri-btn" data-geri="anasayfa">← Tüm Dersler</button>
+      <h1 class="sec-basi">${kat.ad}</h1>
+      <p class="sec-alt">${kat.aciklama}</p>
+      <div class="konu-liste">${satirlar}</div>`;
+
+    derslerRoot.querySelector('[data-geri]').addEventListener('click', derslerAnasayfa);
+    derslerRoot.querySelectorAll('.konu-satir').forEach(s => {
+      s.addEventListener('click', () => derslerKonu(katId, s.dataset.slug));
+    });
+    window.scrollTo({ top: 0 });
+  }
+
+  async function derslerKonu(katId, slug) {
+    const kat = DERS_KATEGORILER[katId];
+    if (!kat) return;
+    const konu = kat.konular.find(k => k.slug === slug);
+    if (!konu) return;
+
+    derslerRoot.innerHTML = `
+      <button class="geri-btn" data-geri="kategori">← ${kat.ad}</button>
+      <h1 class="sec-basi">${konu.baslik}</h1>
+      <div class="ders-yukleniyor">Yükleniyor…</div>`;
+
+    derslerRoot.querySelector('[data-geri]').addEventListener('click', () => derslerKategori(katId));
+    window.scrollTo({ top: 0 });
+
+    const onbellekAnahtar = katId + '/' + slug;
+    try {
+      let veri = dersOnbellek[onbellekAnahtar];
+      if (!veri) {
+        const res = await fetch('/dersler/' + katId + '/' + slug + '/');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const html = await res.text();
+
+        let govde = '';
+        const bStart = html.indexOf('<!-- BODY_START -->');
+        const bEnd = html.indexOf('<!-- BODY_END -->');
+        if (bStart !== -1 && bEnd !== -1) {
+          govde = html.slice(bStart + '<!-- BODY_START -->'.length, bEnd).trim();
+        }
+
+        veri = { govde };
+        dersOnbellek[onbellekAnahtar] = veri;
+      }
+
+      const yukEl = derslerRoot.querySelector('.ders-yukleniyor');
+      if (!yukEl) return;
+
+      const icerikDiv = document.createElement('div');
+      icerikDiv.className = 'ders-icerik';
+      icerikDiv.innerHTML = veri.govde;
+      yukEl.replaceWith(icerikDiv);
+    } catch (err) {
+      const yukEl = derslerRoot.querySelector('.ders-yukleniyor');
+      if (!yukEl) return;
+      yukEl.outerHTML = `
+        <div class="ders-hata">
+          <p>İçerik yüklenemedi.</p>
+          <button type="button" data-tekrar>Tekrar Dene</button>
+        </div>`;
+      derslerRoot.querySelector('[data-tekrar]').addEventListener('click', () => derslerKonu(katId, slug));
+    }
+  }
+
+  // ---- Hap Bilgiler ----
+  const HAP_KATEGORILER = {
+    'arac-teknigi': { ad: 'Araç Tekniği', aciklama: 'İkaz ışıkları, arıza sebepleri ve bakım kuralları', sayi: 17 },
+    'trafik-ve-cevre': { ad: 'Trafik ve Çevre', aciklama: 'Hız sınırları, geçiş hakkı ve trafik işaretleri', sayi: 27 },
+    'ilk-yardim': { ad: 'İlk Yardım', aciklama: 'Kanama, kırık, yanık müdahalesi ve yaşam desteği', sayi: 21 },
+    'trafik-adabi': { ad: 'Trafik Adabı', aciklama: 'Trafikte iletişim, saygı ve sorumluluk', sayi: 11 }
+  };
+  const hapOnbellek = {};
+  const hapRoot = kabuk.querySelector('#hapbilgiler-root');
+
+  function hapAnasayfa() {
+    if (!hapRoot) return;
+    hapRoot.innerHTML = `
+      <h1 class="sec-basi">Hap Bilgiler</h1>
+      <p class="sec-alt">Ehliyet sınavında çıkan bilgiler, kısa ve öz.</p>
+      <div class="ders-kartlar">
+        ${Object.entries(HAP_KATEGORILER).map(([id, k]) => `
+          <div class="ders-kart" data-hap-kat="${id}">
+            <h3>${k.ad}</h3>
+            <p class="ders-aciklama">${k.aciklama}</p>
+            <span class="ders-sayi">${k.sayi} BİLGİ</span>
+            <div class="bosluk"></div>
+            <span class="kart-btn">Bilgilere Git</span>
+          </div>`).join('')}
+      </div>`;
+    hapRoot.querySelectorAll('[data-hap-kat]').forEach(k => {
+      k.addEventListener('click', () => hapIcerik(k.dataset.hapKat));
+    });
+  }
+
+  async function hapIcerik(katId) {
+    const kat = HAP_KATEGORILER[katId];
+    if (!kat) return;
+
+    hapRoot.innerHTML = `
+      <button class="geri-btn" data-geri>← Tüm Hap Bilgiler</button>
+      <h1 class="sec-basi">${kat.ad}</h1>
+      <div class="ders-yukleniyor">Yükleniyor…</div>`;
+
+    hapRoot.querySelector('[data-geri]').addEventListener('click', hapAnasayfa);
+    window.scrollTo({ top: 0 });
+
+    try {
+      let govde = hapOnbellek[katId];
+      if (!govde) {
+        const res = await fetch('/hap-bilgiler/' + katId + '/');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const html = await res.text();
+
+        const bStart = html.indexOf('<!-- BODY_START -->');
+        const bEnd = html.indexOf('<!-- BODY_END -->');
+        if (bStart !== -1 && bEnd !== -1) {
+          govde = html.slice(bStart + '<!-- BODY_START -->'.length, bEnd).trim();
+        } else {
+          govde = '<p>İçerik bulunamadı.</p>';
+        }
+        hapOnbellek[katId] = govde;
+      }
+
+      const yukEl = hapRoot.querySelector('.ders-yukleniyor');
+      if (!yukEl) return;
+
+      const icerikDiv = document.createElement('div');
+      icerikDiv.className = 'hap-icerik';
+      icerikDiv.innerHTML = govde;
+      yukEl.replaceWith(icerikDiv);
+    } catch (err) {
+      const yukEl = hapRoot.querySelector('.ders-yukleniyor');
+      if (!yukEl) return;
+      yukEl.outerHTML = `
+        <div class="ders-hata">
+          <p>İçerik yüklenemedi.</p>
+          <button type="button" data-tekrar>Tekrar Dene</button>
+        </div>`;
+      hapRoot.querySelector('[data-tekrar]').addEventListener('click', () => hapIcerik(katId));
+    }
+  }
+
   function goster(ad) {
     bolumler.forEach(b => { b.hidden = b.dataset.gorunumIcerik !== ad; });
     ogeler.forEach(o => o.classList.toggle('aktif', o.dataset.gorunum === ad));
     baslik.textContent = BASLIKLAR[ad] || '';
+    if (ad === 'dersler') derslerAnasayfa();
+    if (ad === 'hapbilgiler') hapAnasayfa();
   }
   ogeler.forEach(o => o.addEventListener('click', () => goster(o.dataset.gorunum)));
 
@@ -507,6 +883,48 @@ function kullaniciyiYaz(user) {
     avatar.appendChild(img);
   } else {
     avatar.textContent = ad.trim().charAt(0).toUpperCase();
+  }
+
+  // Ayarlar bölümünü doldur
+  const ayarEmail = kabuk.querySelector('[data-ayar-email]');
+  const ayarTarih = kabuk.querySelector('[data-ayar-tarih]');
+  if (ayarEmail) ayarEmail.value = user.email || '';
+  if (ayarTarih && user.metadata?.creationTime) {
+    ayarTarih.value = new Date(user.metadata.creationTime).toLocaleDateString('tr-TR', {
+      year: 'numeric', month: 'long', day: 'numeric'
+    });
+  }
+
+  // Hesap silme
+  const silBtn = kabuk.querySelector('[data-hesap-sil]');
+  const silModal = kabuk.querySelector('[data-sil-modal]');
+  const silIptal = kabuk.querySelector('[data-sil-iptal]');
+  const silOnayla = kabuk.querySelector('[data-sil-onayla]');
+  const silDurum = kabuk.querySelector('[data-sil-durum]');
+
+  if (silBtn && silModal) {
+    silBtn.addEventListener('click', () => { silModal.hidden = false; });
+    silIptal.addEventListener('click', () => { silModal.hidden = true; silDurum.textContent = ''; });
+    silModal.addEventListener('click', (e) => { if (e.target === silModal) { silModal.hidden = true; silDurum.textContent = ''; } });
+
+    silOnayla.addEventListener('click', async () => {
+      silOnayla.disabled = true;
+      silOnayla.textContent = 'Siliniyor…';
+      silDurum.textContent = '';
+      try {
+        await hesabiSil(user);
+        location.replace('/');
+      } catch (err) {
+        console.error('Hesap silinemedi:', err);
+        if (err.code === 'auth/requires-recent-login') {
+          silDurum.textContent = 'Güvenlik nedeniyle yeniden giriş yapmanız gerekiyor. Çıkış yapıp tekrar girin.';
+        } else {
+          silDurum.textContent = 'Hesap silinemedi. Lütfen tekrar deneyin.';
+        }
+        silOnayla.disabled = false;
+        silOnayla.textContent = 'Evet, Hesabımı Sil';
+      }
+    });
   }
 }
 
