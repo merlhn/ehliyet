@@ -710,7 +710,7 @@ function kabuguKur() {
           let svg = '';
           // Geçme çizgisi + etiketi (sol)
           svg += `<line x1="${PX}" y1="${gecmeY}" x2="${W - PX}" y2="${gecmeY}" stroke="#b3261e" stroke-width="1" stroke-dasharray="5,4" opacity=".3"/>`;
-          svg += `<text x="${PX + 2}" y="${gecmeY - 6}" fill="#b3261e" font-size="9" font-family="Inter,sans-serif" font-weight="500" opacity=".6">Geçme: 70</text>`;
+          svg += `<text x="${W - PX - 2}" y="${gecmeY - 6}" text-anchor="end" fill="#b3261e" font-size="9" font-family="Inter,sans-serif" font-weight="500" opacity=".6">Geçme: 70</text>`;
           // Çizgi
           svg += `<path d="${line}" fill="none" stroke="#08090a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`;
           // Noktalar + puan üstte + etiket altta
