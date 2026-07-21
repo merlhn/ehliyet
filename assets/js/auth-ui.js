@@ -8,7 +8,7 @@
 import { girisYap, cikisYap, kullaniciDinle, profiliHazirla } from './firebase.js';
 
 const CSS = `
-.auth-slot{margin-left:auto;display:flex;align-items:center;position:relative}
+.auth-slot{margin-left:auto;display:flex;align-items:center;gap:10px;position:relative}
 .auth-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
   font-family:inherit;font-weight:500;font-size:14px;line-height:1;cursor:pointer;
   border-radius:999px;padding:10px 18px;background:#08090a;color:#fff;border:1px solid #08090a;
