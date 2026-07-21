@@ -231,7 +231,7 @@
 
   /* Puan grafiği */
   .grafik-wrap{border:1px solid var(--line);border-radius:14px;padding:20px 16px 8px;margin-bottom:28px;overflow-x:auto}
-  .puan-grafik{width:100%;max-width:600px;height:auto;display:block;margin:0 auto}
+  .puan-grafik{width:100%;height:auto;display:block}
 
   /* Sınav geçmişi tablosu */
   .sonuc-tablo{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:28px}
@@ -712,10 +712,10 @@ function kabuguKur() {
           // X ekseni çizgisi
           svg += `<line x1="${PL}" y1="${PY + iH}" x2="${PL + iW}" y2="${PY + iH}" stroke="#e0e0e0" stroke-width="1"/>`;
           // Y ekseni etiketleri + yatay grid
-          for (const val of [0, 25, 50, 75, 100]) {
+          for (const val of [0, 50, 100]) {
             const yy = PY + iH - (val / 100) * iH;
-            svg += `<line x1="${PL}" y1="${yy}" x2="${PL + iW}" y2="${yy}" stroke="#f5f5f5" stroke-width="1"/>`;
-            svg += `<text x="${PL - 6}" y="${yy + 4}" text-anchor="end" fill="#aaa" font-size="10" font-family="'Geist Mono',monospace">${val}</text>`;
+            svg += `<line x1="${PL}" y1="${yy}" x2="${PL + iW}" y2="${yy}" stroke="#f2f2f2" stroke-width="1"/>`;
+            svg += `<text x="${PL - 6}" y="${yy + 4}" text-anchor="end" fill="#bbb" font-size="10" font-family="'Geist Mono',monospace">${val}</text>`;
           }
           // Geçme çizgisi
           const gecmeY = PY + iH - (70 / 100) * iH;
