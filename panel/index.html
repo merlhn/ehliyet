@@ -864,7 +864,6 @@ function kullaniciyiYaz(user) {
 
   const ad = user.displayName || user.email || 'Hesabım';
   kabuk.querySelector('[data-ad]').textContent = ad;
-  kabuk.querySelector('[data-mail]').textContent = user.email || '';
 
   if (user.photoURL) {
     const img = document.createElement('img');
