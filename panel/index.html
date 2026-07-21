@@ -1003,7 +1003,7 @@ function kabuguKur() {
 
   // Alt sayfalardaki yan menü /panel/?g=<görünüm> ile geri döner.
   const istenen = new URLSearchParams(location.search).get('g');
-  if (istenen && BASLIKLAR[istenen]) goster(istenen);
+  goster((istenen && BASLIKLAR[istenen]) ? istenen : 'anasayfa');
 
   // ---- Profil ----
   const btn = kabuk.querySelector('[data-profil]');
