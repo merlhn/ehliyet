@@ -695,40 +695,44 @@ function kabuguKur() {
         // Puan line chart (eskiden yeniye)
         const chartData = [...denemeler].reverse();
         if (chartData.length >= 2) {
-          const W = 620, H = 240, PL = 38, PR = 12, PY = 30, PB = 44;
-          const iW = W - PL - PR, iH = H - PY - PB;
+          const minPuan = Math.min(...chartData.map(d => d.puan));
+          const yMin = Math.max(0, Math.floor((minPuan - 10) / 10) * 10);
+          const yMax = 100;
+          const W = 700, H = 180, PL = 34, PR = 50, PT = 24, PB = 36;
+          const iW = W - PL - PR, iH = H - PT - PB;
+          const yScale = v => PT + iH - ((v - yMin) / (yMax - yMin)) * iH;
+
           const points = chartData.map((d, i) => {
             const x = PL + (i / (chartData.length - 1)) * iW;
-            const y = PY + iH - (d.puan / 100) * iH;
             const tarih = d.kaydedilmeAt?.toDate ? d.kaydedilmeAt.toDate().toLocaleDateString('tr-TR', { day:'numeric', month:'short' }) : '';
-            const sinav = (d.sinav || '').replace('Sınav ', 'S');
-            return { x, y, puan: d.puan, gecti: d.gecti, alt: tarih ? `${sinav} · ${tarih}` : sinav };
+            return { x, y: yScale(d.puan), puan: d.puan, gecti: d.gecti, alt: tarih || (d.sinav || '') };
           });
           const line = points.map((p, i) => `${i === 0 ? 'M' : 'L'}${p.x},${p.y}`).join(' ');
 
           let svg = '';
-          // Y ekseni çizgisi
-          svg += `<line x1="${PL}" y1="${PY}" x2="${PL}" y2="${PY + iH}" stroke="#e0e0e0" stroke-width="1"/>`;
-          // X ekseni çizgisi
-          svg += `<line x1="${PL}" y1="${PY + iH}" x2="${PL + iW}" y2="${PY + iH}" stroke="#e0e0e0" stroke-width="1"/>`;
-          // Y ekseni etiketleri + yatay grid
-          for (const val of [0, 50, 100]) {
-            const yy = PY + iH - (val / 100) * iH;
+          // Y ekseni + grid
+          svg += `<line x1="${PL}" y1="${PT}" x2="${PL}" y2="${PT + iH}" stroke="#e0e0e0" stroke-width="1"/>`;
+          svg += `<line x1="${PL}" y1="${PT + iH}" x2="${PL + iW}" y2="${PT + iH}" stroke="#e0e0e0" stroke-width="1"/>`;
+          for (const val of [yMin, 70, yMax]) {
+            const yy = yScale(val);
+            if (val === 70) continue;
             svg += `<line x1="${PL}" y1="${yy}" x2="${PL + iW}" y2="${yy}" stroke="#f2f2f2" stroke-width="1"/>`;
             svg += `<text x="${PL - 6}" y="${yy + 4}" text-anchor="end" fill="#bbb" font-size="10" font-family="'Geist Mono',monospace">${val}</text>`;
           }
           // Geçme çizgisi
-          const gecmeY = PY + iH - (70 / 100) * iH;
-          svg += `<line x1="${PL}" y1="${gecmeY}" x2="${PL + iW}" y2="${gecmeY}" stroke="#b3261e" stroke-width="1" stroke-dasharray="5,4" opacity=".35"/>`;
-          svg += `<text x="${PL + iW}" y="${gecmeY - 5}" text-anchor="end" fill="#b3261e" font-size="9" font-family="Inter,sans-serif" font-weight="500" opacity=".6">Geçme: 70</text>`;
+          const gecmeY = yScale(70);
+          svg += `<line x1="${PL}" y1="${gecmeY}" x2="${PL + iW}" y2="${gecmeY}" stroke="#b3261e" stroke-width="1" stroke-dasharray="5,4" opacity=".3"/>`;
+          svg += `<text x="${PL + iW + 6}" y="${gecmeY + 4}" fill="#b3261e" font-size="9" font-family="'Geist Mono',monospace" opacity=".6">70</text>`;
           // Veri çizgisi
           svg += `<path d="${line}" fill="none" stroke="#08090a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`;
-          // Noktalar + puan üstte + etiket altta
+          // Noktalar + etiketler
           for (const p of points) {
             const c = p.gecti ? '#1a7f37' : '#b3261e';
-            svg += `<circle cx="${p.x}" cy="${p.y}" r="5" fill="${c}" stroke="#fff" stroke-width="2"/>`;
-            svg += `<text x="${p.x}" y="${p.y - 12}" text-anchor="middle" fill="${c}" font-size="12" font-weight="600" font-family="'Geist Mono',monospace">${p.puan}</text>`;
-            svg += `<text x="${p.x}" y="${H - PB + 16}" text-anchor="middle" fill="#6a6f76" font-size="9.5" font-family="Inter,sans-serif">${p.alt}</text>`;
+            const above = p.y > yScale(70) + 5;
+            const ty = above ? p.y - 12 : p.y + 18;
+            svg += `<circle cx="${p.x}" cy="${p.y}" r="4" fill="${c}" stroke="#fff" stroke-width="2"/>`;
+            svg += `<text x="${p.x}" y="${ty}" text-anchor="middle" fill="${c}" font-size="11" font-weight="600" font-family="'Geist Mono',monospace">${p.puan}</text>`;
+            svg += `<text x="${p.x}" y="${H - 6}" text-anchor="middle" fill="#999" font-size="9" font-family="Inter,sans-serif">${p.alt}</text>`;
           }
           html += `<div class="grafik-wrap"><svg class="puan-grafik" viewBox="0 0 ${W} ${H}">${svg}</svg></div>`;
         }
