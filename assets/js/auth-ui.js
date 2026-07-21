@@ -136,6 +136,14 @@ function modalKapat() {
 function girisModaliAc(hedef) {
   if (acikModal) return;
 
+  // Modal içeriğini hedefe göre belirle
+  let baslik = 'Giriş yap';
+  let aciklama = 'Hesabınla giriş yap, tüm içeriklere erişmeye başla.';
+  if (hedef.includes('sinav')) {
+    baslik = 'Sınava başlamak için giriş yap';
+    aciklama = 'Deneme sınavların ve sonuçların hesabına kaydedilir, kaldığın yerden devam edersin.';
+  }
+
   const ort = document.createElement('div');
   ort.className = 'auth-ort';
   ort.setAttribute('role', 'dialog');
@@ -143,8 +151,8 @@ function girisModaliAc(hedef) {
   ort.setAttribute('aria-labelledby', 'auth-modal-baslik');
   ort.innerHTML = `
     <div class="auth-kutu">
-      <h2 id="auth-modal-baslik">Sınava başlamak için giriş yap</h2>
-      <p>Deneme sınavların ve sonuçların hesabına kaydedilir, kaldığın yerden devam edersin.</p>
+      <h2 id="auth-modal-baslik">${baslik}</h2>
+      <p>${aciklama}</p>
       <button class="auth-btn" type="button" data-onay>
         ${GOOGLE_LOGO}<span data-etiket>Google ile devam et</span>
       </button>
