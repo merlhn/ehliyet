@@ -721,8 +721,7 @@ function kabuguKur() {
         // Puan line chart (eskiden yeniye)
         const chartData = [...denemeler].reverse();
         if (chartData.length >= 2) {
-          const minPuan = Math.min(...chartData.map(d => d.puan));
-          const yMin = Math.max(0, Math.floor((minPuan - 10) / 10) * 10);
+          const yMin = 0;
           const yMax = 100;
           const W = 700, H = 180, PL = 34, PR = 50, PT = 24, PB = 36;
           const iW = W - PL - PR, iH = H - PT - PB;
@@ -739,23 +738,17 @@ function kabuguKur() {
           // Y ekseni + grid
           svg += `<line x1="${PL}" y1="${PT}" x2="${PL}" y2="${PT + iH}" stroke="#e0e0e0" stroke-width="1"/>`;
           svg += `<line x1="${PL}" y1="${PT + iH}" x2="${PL + iW}" y2="${PT + iH}" stroke="#e0e0e0" stroke-width="1"/>`;
-          for (const val of [yMin, 70, yMax]) {
+          for (const val of [0, 50, 100]) {
             const yy = yScale(val);
-            if (val === 70) continue;
             svg += `<line x1="${PL}" y1="${yy}" x2="${PL + iW}" y2="${yy}" stroke="#f2f2f2" stroke-width="1"/>`;
             svg += `<text x="${PL - 6}" y="${yy + 4}" text-anchor="end" fill="#bbb" font-size="10" font-family="'Geist Mono',monospace">${val}</text>`;
           }
-          // Geçme çizgisi
-          const gecmeY = yScale(70);
-          svg += `<line x1="${PL}" y1="${gecmeY}" x2="${PL + iW}" y2="${gecmeY}" stroke="#b3261e" stroke-width="1" stroke-dasharray="5,4" opacity=".3"/>`;
-          svg += `<text x="${PL + iW + 6}" y="${gecmeY + 4}" fill="#b3261e" font-size="9" font-family="'Geist Mono',monospace" opacity=".6">70</text>`;
           // Veri çizgisi
           svg += `<path d="${line}" fill="none" stroke="#08090a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`;
           // Noktalar + etiketler
           for (const p of points) {
             const c = p.gecti ? '#1a7f37' : '#b3261e';
-            const above = p.y > yScale(70) + 5;
-            const ty = above ? p.y - 12 : p.y + 18;
+            const ty = p.y - 12;
             svg += `<circle cx="${p.x}" cy="${p.y}" r="4" fill="${c}" stroke="#fff" stroke-width="2"/>`;
             svg += `<text x="${p.x}" y="${ty}" text-anchor="middle" fill="${c}" font-size="11" font-weight="600" font-family="'Geist Mono',monospace">${p.puan}</text>`;
             svg += `<text x="${p.x}" y="${H - 6}" text-anchor="middle" fill="#999" font-size="9" font-family="Inter,sans-serif">${p.alt}</text>`;
