@@ -30,7 +30,7 @@ export const MENU_CSS = `
 .pk-oge.aktif{background:#f2f2f2;color:#08090a;font-weight:500}
 .pk-oge svg{flex-shrink:0}
 
-.pk-profil{display:flex;align-items:center;gap:10px;padding:14px 14px;border-top:1px solid #ececec;margin-top:8px;flex-shrink:0}
+.pk-profil{display:flex;align-items:center;gap:10px;padding:14px 14px;border-top:1px solid #ececec;margin-top:auto;flex-shrink:0}
 .pk-profil-avatar{width:32px;height:32px;border-radius:50%;flex-shrink:0;background:#ececec;object-fit:cover;
   display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#08090a;overflow:hidden}
 .pk-profil-avatar img{width:100%;height:100%;object-fit:cover;display:block}
