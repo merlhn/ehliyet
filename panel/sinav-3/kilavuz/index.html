@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="robots" content="noindex">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-34HL041XN0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-34HL041XN0');
+</script>
+<title>Kullanım Kılavuzu — Sınav 3</title>
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/fonts.css">
+<link rel="stylesheet" href="/assets/css/kilavuz.css">
+</head>
+<body>
+  <header><div class="brand">Deneme Sınavları</div></header>
+
+  <div class="modal-overlay">
+   <div class="modal">
+    <div class="modal-head">
+      <span>Kullanım Kılavuzu</span>
+      <a class="modal-close" href="/panel/?g=sinavlar" title="Geri dön (Esc)" aria-label="Kapat">✕</a>
+    </div>
+
+    <!-- Kılavuz metni tüm sınavlarda ortaktır: /assets/kilavuz-govde.html -->
+    <div class="modal-body" id="kilavuzGovde"></div>
+
+    <div class="modal-foot">
+      <p class="warn">Bu sınava başlamakla salondaki kayıt sisteminden haberdar olduğumu ve sınav sonucunda cevaplarımı imzalayacağımı kabul ederim.</p>
+      <div class="foot-row">
+        <a class="btn-back" href="/panel/?g=sinavlar">‹ Geri</a>
+        <a class="confirm-btn" href="/panel/sinav-3/">
+          <span>Kullanım Kılavuzunu Okudum ve Kimlik Bilgilerimin Doğruluğunu Onaylıyorum</span>
+        </a>
+      </div>
+    </div>
+
+   </div><!-- /modal -->
+  </div><!-- /modal-overlay -->
+
+  <script>
+    var GERI = '/panel/?g=sinavlar';
+
+    // Kılavuz gövdesi tek kaynaktan gelir; sınav sayısı arttıkça metin çoğalmaz.
+    fetch('/assets/kilavuz-govde.html')
+      .then(function(r){ if(!r.ok) throw new Error(r.status); return r.text(); })
+      .then(function(html){
+        document.getElementById('kilavuzGovde').innerHTML = html;
+        try{
+          var d=new Date(), p=function(x){return String(x).padStart(2,'0');};
+          var el=document.getElementById('tarih');
+          if(el) el.textContent = ': '+p(d.getDate())+'/'+p(d.getMonth()+1)+'/'+d.getFullYear()+' '+p(d.getHours())+':'+p(d.getMinutes())+':'+p(d.getSeconds());
+        }catch(e){}
+      })
+      .catch(function(){
+        document.getElementById('kilavuzGovde').innerHTML =
+          '<div class="guide"><p>Kılavuz yüklenemedi. Sayfayı yenileyip tekrar deneyin.</p></div>';
+      });
+
+    var overlay=document.querySelector('.modal-overlay');
+    if(overlay){ overlay.addEventListener('click',function(e){ if(e.target===overlay) location.href=GERI; }); }
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') location.href=GERI; });
+  </script>
+  <script type="module" src="/assets/js/panel-kabuk.js"></script>
+</body>
+</html>
