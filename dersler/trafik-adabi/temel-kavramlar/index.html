@@ -13,6 +13,7 @@
 
 <!-- Open Graph (WhatsApp / Facebook / LinkedIn) -->
 <meta property="og:type" content="article">
+<meta property="article:published_time" content="2026-07-19">
 <meta property="og:site_name" content="Ehliyet Sınavı">
 <meta property="og:title" content="Trafik Adabı — Konu 1: Trafik Adabı ve Temel Kavramlar">
 <meta property="og:description" content="Trafik adabı ve temel kavramlar: adabın tanımı, değer-tutum-davranış ilişkisi ve kazaların temelindeki insan faktörü. Konuyu öğrenmek için hemen oku.">
@@ -21,12 +22,14 @@
 <meta property="og:image" content="https://ehliyet.digital/assets/img/og/trafik-adabi.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ehliyet.digital — Ehliyet sınavına hazırlık platformu">
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Trafik Adabı — Konu 1: Trafik Adabı ve Temel Kavramlar">
 <meta name="twitter:description" content="Trafik adabı ve temel kavramlar: adabın tanımı, değer-tutum-davranış ilişkisi ve kazaların temelindeki insan faktörü. Konuyu öğrenmek için hemen oku.">
 <meta name="twitter:image" content="https://ehliyet.digital/assets/img/og/trafik-adabi.png">
+<meta name="twitter:image:alt" content="ehliyet.digital — Ehliyet sınavına hazırlık platformu">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/css/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/assets/css/fonts.css"></noscript>
@@ -127,6 +130,10 @@
   /* E-E-A-T: güncelleme tarihi ve kaynak */
   .ders-kaynak{margin-top:32px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);line-height:1.6}
   .ders-kaynak span{display:block;margin-bottom:4px}
+.ders-nav{display:flex;justify-content:space-between;align-items:center;max-width:760px;margin:48px auto 0;padding:24px 0;border-top:1px solid var(--line)}
+.ders-nav-link{font-size:14px;font-weight:500;text-decoration:none;color:var(--fg);transition:.15s}
+.ders-nav-link:hover{opacity:.6}
+.ders-nav-link.next{margin-left:auto}
 </style>
 <!-- schema.org — tools/schema-uret.py tarafından üretilir, elle düzenlenmez -->
 <script type="application/ld+json">
@@ -185,6 +192,12 @@
         {
           "@type": "ListItem",
           "position": 3,
+          "name": "Trafik Adabı",
+          "item": "https://ehliyet.digital/dersler/trafik-adabi/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
           "name": "Trafik Adabı ve Temel Kavramlar",
           "item": "https://ehliyet.digital/dersler/trafik-adabi/temel-kavramlar/"
         }
@@ -245,8 +258,8 @@
 </head>
 <body>
   <header>
-    <a class="marka" href="/" aria-label="ehliyet.digital"><img src="/assets/img/marka/logo.png" alt="ehliyet.digital"></a>
-    <nav class="nav"><a href="/">Ana Sayfa</a><a href="/ehliyet-sinav-sorulari/">Soru Çöz</a><a href="/dersler/">Ders Notları</a><a href="/hap-bilgiler/">Hap Bilgiler</a></nav>
+    <a class="marka" href="/" aria-label="ehliyet.digital"><img src="/assets/img/marka/logo.png" alt="ehliyet.digital" width="26" height="26"></a>
+    <nav class="nav" aria-label="Ana navigasyon"><a href="/">Ana Sayfa</a><a href="/ehliyet-sinav-sorulari/">Soru Çöz</a><a href="/dersler/">Ders Notları</a><a href="/hap-bilgiler/">Hap Bilgiler</a></nav>
   </header>
 
   <main>
@@ -262,7 +275,7 @@
     <p><b>Trafik adabı</b>, trafikte diğer insanların haklarını gözeten, nezaket ve <a href="/dersler/trafik-adabi/sorumluluk/">sorumluluk</a> çerçevesinde hareket etme biçimidir. Yasal kurallar bize “ne yapmamız gerektiğini” zorunlu olarak söylerken, adap “nasıl davranmamız gerektiğini” gönüllü ve ahlaki olarak belirler. Örneğin kırmızı ışıkta durmak bir kuraldır; ama sıkışan bir sürücüye yol vermek, yayaya gülümseyerek geçit hakkı tanımak trafik adabıdır. İyi bir sürücü <b>hem kurallara hem de trafik adabına</b> uyar.</p>
 
     <h2>Değer, tutum ve davranış</h2>
-    <p>Trafikteki davranışlarımız aslında sahip olduğumuz değerlerin bir yansımasıdır. <b>Değer</b>, neyin doğru ve iyi olduğuna dair inancımızdır; bu değer bizde bir <b>tutum</b> (bir konuya karşı olumlu ya da olumsuz eğilim) oluşturur; tutum da sonunda bir <b>davranışa</b> dönüşür. Yani zincir değerden davranışa doğru işler: saygı değerine sahip bir sürücü, yayaya karşı olumlu bir tutum geliştirir ve trafikte ona yol vererek davranışa döker. Bu yüzden trafik adabı, ezberlenen kurallardan çok içselleştirilen değerlerle ilgilidir.</p>
+    <p>Trafikteki davranışlarımız aslında sahip olduğumuz değerlerin bir yansımasıdır. <b>Değer</b>, neyin doğru ve iyi olduğuna dair inancımızdır; bu değer bizde bir <b>tutum</b> (bir konuya karşı olumlu ya da olumsuz eğilim) oluşturur; tutum da sonunda bir <b>davranışa</b> dönüşür. Yani zincir değerden davranışa doğru işler: saygı değerine sahip bir sürücü, yayaya karşı olumlu bir tutum geliştirir ve trafikte ona yol vererek davranışa döker. Bu yüzden trafik adabı, ezberlenen kurallardan çok içselleştirilen değerlerle ilgilidir. Sabır, hoşgörü, feragat ve diğerkâmlık gibi <a class="inline" href="/dersler/trafik-adabi/temel-degerler/">trafikte temel değerleri</a> ayrıntılı öğrenmek, bu kavramlar arasındaki ince farkları sınavda doğru tespit etmenizi sağlar.</p>
 
     <h2>Trafikte insan faktörü</h2>
     <p>Trafik kazalarının büyük çoğunluğunun sebebi yol, araç ya da hava koşulları değil, <b>insandır</b>. Dikkatsizlik, öfke, acelecilik, kural tanımama ve saygısızlık gibi davranışlar kazaların temelinde yer alır. Bu nedenle güvenli trafik, yalnızca iyi yollar ve sağlam araçlarla değil, öncelikle bilinçli ve adaplı sürücülerle sağlanır. Trafik adabı eğitiminin amacı da tam olarak bu insan faktörünü olumlu yönde geliştirmektir.</p>
@@ -278,6 +291,7 @@
 
     <div class="ders-kaynak">
       <span>Son güncelleme: 24 Temmuz 2026</span>
+      <span>Hazırlayan: <a href="/hakkinda/" style="color:inherit">ehliyet.digital</a></span>
       <span>Kaynak: MEB MTSK Müfredatı</span>
     </div>
 
@@ -334,12 +348,15 @@
       <button class="reveal-btn" onclick="this.closest('.quiz-card').classList.add('revealed');this.remove()">Cevapları Gör</button>
       </div>
     </div>
+      <nav class="ders-nav" aria-label="Ders navigasyonu">
+      <a class="ders-nav-link next" href="/dersler/trafik-adabi/trafikte-iletisim/">Sonraki ders →</a>
+    </nav>
   </main>
   <footer class="site-footer">
     <div class="foot-wrap">
       <div class="foot-hakkinda">
         <a class="foot-marka" href="/">
-          <img src="/assets/img/marka/logo.png" alt="ehliyet.digital">
+          <img src="/assets/img/marka/logo.png" alt="ehliyet.digital" width="22" height="22" loading="lazy">
           ehliyet.digital
         </a>
         <p>Sınavdan önce ders notlarını incele, hap bilgileri al ve deneme sınavları ile kendini test et. Ehliyet sınavına kolaylıkla hazırlan.</p>
@@ -357,10 +374,10 @@
       </nav>
       <nav class="foot-col" aria-label="Ders Notları">
         <span class="foot-label">Ders Notları</span>
-        <a href="/dersler/ilk-yardim/ilk-yardim-ve-acil-tedavi/">İlk Yardım</a>
-        <a href="/dersler/trafik-ve-cevre/temel-tanimlar/">Trafik ve Çevre</a>
-        <a href="/dersler/arac-teknigi/motor-nedir/">Araç Tekniği</a>
-        <a href="/dersler/trafik-adabi/temel-kavramlar/">Trafik Adabı</a>
+        <a href="/dersler/ilk-yardim/">İlk Yardım</a>
+        <a href="/dersler/trafik-ve-cevre/">Trafik ve Çevre</a>
+        <a href="/dersler/arac-teknigi/">Araç Tekniği</a>
+        <a href="/dersler/trafik-adabi/">Trafik Adabı</a>
       </nav>
       <nav class="foot-col" aria-label="Faydalı Bilgiler">
         <span class="foot-label">Faydalı Bilgiler</span>

@@ -3,5 +3,6 @@ Allow: /
 
 # Panel giriş yapan kullanıcıya özeldir, arama sonuçlarında yeri yok.
 Disallow: /panel/
+Disallow: /assets/kilavuz-govde.html
 
 Sitemap: https://ehliyet.digital/sitemap.xml

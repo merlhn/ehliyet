@@ -13,6 +13,7 @@
 
 <!-- Open Graph (WhatsApp / Facebook / LinkedIn) -->
 <meta property="og:type" content="article">
+<meta property="article:published_time" content="2026-07-19">
 <meta property="og:site_name" content="Ehliyet Sınavı">
 <meta property="og:title" content="İlk Yardım — Konu 1: İlk Yardım ve Acil Tedavi">
 <meta property="og:description" content="İlk yardım ile acil tedavi arasındaki fark, ilk yardımın amaçları ve ilk yardımcının taşıması gereken özellikler. Sınavda çıkan soruları bu notla çöz.">
@@ -21,12 +22,14 @@
 <meta property="og:image" content="https://ehliyet.digital/assets/img/og/ilk-yardim.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ehliyet.digital — Ehliyet sınavına hazırlık platformu">
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="İlk Yardım — Konu 1: İlk Yardım ve Acil Tedavi">
 <meta name="twitter:description" content="İlk yardım ile acil tedavi arasındaki fark, ilk yardımın amaçları ve ilk yardımcının taşıması gereken özellikler. Sınavda çıkan soruları bu notla çöz.">
 <meta name="twitter:image" content="https://ehliyet.digital/assets/img/og/ilk-yardim.png">
+<meta name="twitter:image:alt" content="ehliyet.digital — Ehliyet sınavına hazırlık platformu">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/css/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/assets/css/fonts.css"></noscript>
@@ -127,6 +130,10 @@
   /* E-E-A-T: güncelleme tarihi ve kaynak */
   .ders-kaynak{margin-top:32px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);line-height:1.6}
   .ders-kaynak span{display:block;margin-bottom:4px}
+.ders-nav{display:flex;justify-content:space-between;align-items:center;max-width:760px;margin:48px auto 0;padding:24px 0;border-top:1px solid var(--line)}
+.ders-nav-link{font-size:14px;font-weight:500;text-decoration:none;color:var(--fg);transition:.15s}
+.ders-nav-link:hover{opacity:.6}
+.ders-nav-link.next{margin-left:auto}
 </style>
 <!-- schema.org — tools/schema-uret.py tarafından üretilir, elle düzenlenmez -->
 <script type="application/ld+json">
@@ -185,6 +192,12 @@
         {
           "@type": "ListItem",
           "position": 3,
+          "name": "İlk Yardım",
+          "item": "https://ehliyet.digital/dersler/ilk-yardim/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
           "name": "İlk Yardım ve Acil Tedavi",
           "item": "https://ehliyet.digital/dersler/ilk-yardim/ilk-yardim-ve-acil-tedavi/"
         }
@@ -245,8 +258,8 @@
 </head>
 <body>
   <header>
-    <a class="marka" href="/" aria-label="ehliyet.digital"><img src="/assets/img/marka/logo.png" alt="ehliyet.digital"></a>
-    <nav class="nav"><a href="/">Ana Sayfa</a><a href="/ehliyet-sinav-sorulari/">Soru Çöz</a><a href="/dersler/">Ders Notları</a><a href="/hap-bilgiler/">Hap Bilgiler</a></nav>
+    <a class="marka" href="/" aria-label="ehliyet.digital"><img src="/assets/img/marka/logo.png" alt="ehliyet.digital" width="26" height="26"></a>
+    <nav class="nav" aria-label="Ana navigasyon"><a href="/">Ana Sayfa</a><a href="/ehliyet-sinav-sorulari/">Soru Çöz</a><a href="/dersler/">Ders Notları</a><a href="/hap-bilgiler/">Hap Bilgiler</a></nav>
   </header>
 
   <main>
@@ -274,10 +287,10 @@
     <p><b>İlk yardımcı</b>; ilk yardımın tanımındaki amaç doğrultusunda hasta ve yaralıya tıbbi araç gereç aranmaksızın, mevcut araç gereçlerle ve ilaçsız uygulamaları yapan, eğitim almış kişi ya da kişilerdir. Sürücü kursunda ilk yardım eğitimi aldığınız için siz de bir ilk yardımcısınız. Bu nedenle bir kazaya duyarsız kalıp “görmezden geleyim” deme lüksünüz yoktur; ilk yardım yapmak bir yükümlülüktür ve bunu yapmamanın yaptırımı vardır.</p>
 
     <h2>İlk yardımcının özellikleri</h2>
-    <p>İyi bir ilk yardımcı, insan vücuduyla ilgili temel bilgilere sahiptir. En önemlisi, müdahaleden önce <b>öncelikle kendi can güvenliğini sağlar</b>; “önce can, sonra canan” ilkesi gereği kendi güvenliğini almadan başkasına yardım etmeye çalışmak, kendisinin de zarar görmesine yol açar. Bunun yanında ilk yardımcı sakin ve kendine güvenlidir, olay yerine hâkimdir, eldeki olanakları iyi değerlendirir, pratik ve doğru karar verir, iyi iletişim kurar (112’yi doğru bilgilendirir) ve çevresindeki kişileri organize edebilir.</p>
+    <p>İyi bir ilk yardımcı, insan vücuduyla ilgili temel bilgilere sahiptir. En önemlisi, müdahaleden önce <b>öncelikle kendi can güvenliğini sağlar</b>; “önce can, sonra canan” ilkesi gereği kendi güvenliğini almadan başkasına yardım etmeye çalışmak, kendisinin de zarar görmesine yol açar. Kazazedeye müdahale ettikten sonra güvenli bir noktaya taşımak gerekebilir; hangi durumda taşıma yapılacağını ve doğru <a class=”inline” href=”/dersler/ilk-yardim/tasima-teknikleri/”>taşıma tekniklerini</a> bilmek, omurga yaralanmalarını önlemek açısından kritiktir. Bunun yanında ilk yardımcı sakin ve kendine güvenlidir, olay yerine hâkimdir, eldeki olanakları iyi değerlendirir, pratik ve doğru karar verir, iyi iletişim kurar (112’yi doğru bilgilendirir) ve çevresindeki kişileri organize edebilir.</p>
 
     <h2>Güvenli ortam ve 112</h2>
-    <p>Kaza yerinde önce güvenli bir ortam oluşturulur: meraklı kişiler olay yerinden uzaklaştırılır, aracın patlama veya devrilme riski varsa bu risk giderilir, aracın hareket etme riski varsa el freni çekilir. Güvenlik sağlandıktan sonra <b>112 Acil Yardım</b> aranır. 112 sakin bir kişi tarafından aranmalı ve olay net biçimde tanımlanmalıdır: kaza nasıl olmuş, kaç kişi var, durum nedir. Trafik kazasında ilk yardıma her zaman <b>olay yerinde</b> başlanır.</p>
+    <p>Kaza yerinde önce güvenli bir ortam oluşturulur: meraklı kişiler olay yerinden uzaklaştırılır, aracın patlama veya devrilme riski varsa bu risk giderilir, aracın hareket etme riski varsa el freni çekilir. Güvenlik sağlandıktan sonra <b>112 Acil Yardım</b> aranır. Güvenli ortam kurulduktan sonra kazazedenin durumu değerlendirilir; bu değerlendirme <a class="inline" href="/dersler/ilk-yardim/ilk-yardimin-abcsi/">ilk yardımın ABC'si</a> olarak bilinen hava yolu, solunum ve dolaşım kontrolleriyle yapılır. 112 sakin bir kişi tarafından aranmalı ve olay net biçimde tanımlanmalıdır: kaza nasıl olmuş, kaç kişi var, durum nedir. Trafik kazasında ilk yardıma her zaman <b>olay yerinde</b> başlanır.</p>
 
     <h2>Kısaca</h2>
     <p>İlk yardım; olay yerinde, eğitim almış kişilerce, eldeki malzemeyle ve ilaçsız yapılan hayat kurtarıcı müdahaledir. Acil tedavi ise ünitede veya ambulansta, sağlık personelince ilaç ve teknikle yapılır. İlk yardımın amaçları hayatı korumak, kötüleşmeyi önlemek ve iyileşmeyi kolaylaştırmaktır; tedavi ve ilaç ilk yardımın işi değildir. İlk yardımcı önce kendi güvenliğini sağlar, sakin ve doğru karar verir, 112’yi doğru bilgilendirir ve ilk yardıma olay yerinde başlar.</p>
@@ -287,6 +300,7 @@
 
     <div class="ders-kaynak">
       <span>Son güncelleme: 24 Temmuz 2026</span>
+      <span>Hazırlayan: <a href="/hakkinda/" style="color:inherit">ehliyet.digital</a></span>
       <span>Kaynak: İlkyardım Yönetmeliği (Resmî Gazete No. 29429) ve MEB MTSK Müfredatı</span>
     </div>
 
@@ -343,12 +357,15 @@
       <button class="reveal-btn" onclick="this.closest('.quiz-card').classList.add('revealed');this.remove()">Cevapları Gör</button>
       </div>
     </div>
+      <nav class="ders-nav" aria-label="Ders navigasyonu">
+      <a class="ders-nav-link next" href="/dersler/ilk-yardim/ilk-yardimin-abcsi/">Sonraki ders →</a>
+    </nav>
   </main>
   <footer class="site-footer">
     <div class="foot-wrap">
       <div class="foot-hakkinda">
         <a class="foot-marka" href="/">
-          <img src="/assets/img/marka/logo.png" alt="ehliyet.digital">
+          <img src="/assets/img/marka/logo.png" alt="ehliyet.digital" width="22" height="22" loading="lazy">
           ehliyet.digital
         </a>
         <p>Sınavdan önce ders notlarını incele, hap bilgileri al ve deneme sınavları ile kendini test et. Ehliyet sınavına kolaylıkla hazırlan.</p>
@@ -366,10 +383,10 @@
       </nav>
       <nav class="foot-col" aria-label="Ders Notları">
         <span class="foot-label">Ders Notları</span>
-        <a href="/dersler/ilk-yardim/ilk-yardim-ve-acil-tedavi/">İlk Yardım</a>
-        <a href="/dersler/trafik-ve-cevre/temel-tanimlar/">Trafik ve Çevre</a>
-        <a href="/dersler/arac-teknigi/motor-nedir/">Araç Tekniği</a>
-        <a href="/dersler/trafik-adabi/temel-kavramlar/">Trafik Adabı</a>
+        <a href="/dersler/ilk-yardim/">İlk Yardım</a>
+        <a href="/dersler/trafik-ve-cevre/">Trafik ve Çevre</a>
+        <a href="/dersler/arac-teknigi/">Araç Tekniği</a>
+        <a href="/dersler/trafik-adabi/">Trafik Adabı</a>
       </nav>
       <nav class="foot-col" aria-label="Faydalı Bilgiler">
         <span class="foot-label">Faydalı Bilgiler</span>

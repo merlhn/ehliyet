@@ -21,12 +21,14 @@
 <meta property="og:image" content="https://ehliyet.digital/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ehliyet.digital — Ehliyet sınavına hazırlık platformu">
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Ehliyet Dersleri — Sınava Hazırlık Ders Notları">
 <meta name="twitter:description" content="Ehliyet sınavı ders notları: Trafik ve Çevre, İlk Yardım, Araç Tekniği ve Trafik Adabı derslerinde 43 konu, sınavda çıkan bilgilere odaklı.">
 <meta name="twitter:image" content="https://ehliyet.digital/og-image.png">
+<meta name="twitter:image:alt" content="ehliyet.digital — Ehliyet sınavına hazırlık platformu">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/css/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/assets/css/fonts.css"></noscript>
@@ -116,7 +118,7 @@
   .cat-block:last-child{border-bottom:none}
   .cat-block:hover{opacity:.75}
   .cat-block .cat-left{flex:1;min-width:0}
-  .cat-block h2{margin:0 0 8px;font-size:clamp(22px,3vw,30px);font-weight:600;letter-spacing:-.025em;line-height:1.15}
+  .cat-block h3{margin:0 0 8px;font-size:clamp(22px,3vw,30px);font-weight:600;letter-spacing:-.025em;line-height:1.15}
   .cat-block p{color:var(--muted);font-size:15px;line-height:1.55;margin:0;max-width:520px}
   .cat-block .cat-right{display:flex;align-items:center;gap:20px;flex-shrink:0}
   .cat-block .cat-count{font-family:'Geist Mono',monospace;font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--muted);white-space:nowrap}
@@ -240,8 +242,8 @@
 
   <!-- HEADER -->
   <header>
-    <a class="marka" href="/" aria-label="ehliyet.digital"><img src="/assets/img/marka/logo.png" alt="ehliyet.digital"></a>
-    <nav class="nav">
+    <a class="marka" href="/" aria-label="ehliyet.digital"><img src="/assets/img/marka/logo.png" alt="ehliyet.digital" width="26" height="26"></a>
+    <nav class="nav" aria-label="Ana navigasyon">
       <a href="/">Ana Sayfa</a>
       <a href="/ehliyet-sinav-sorulari/">Soru Çöz</a>
       <a href="/dersler/">Ders Notları</a>
@@ -261,13 +263,13 @@
     <!-- DERSLER -->
     <section class="section" id="dersler" style="border-top:none;padding-top:56px">
       <div id="lessonBrowse">
-      <p class="eyebrow">Konular</p>
+      <span class="eyebrow">Konular</span>
       <h2 class="sec-title">Dersler</h2>
       <div class="cat-blocks">
 
         <a class="cat-block" href="/dersler/arac-teknigi/">
           <div class="cat-left">
-            <h2>Araç Tekniği (Motor)</h2>
+            <h3>Araç Tekniği (Motor)</h3>
             <p>Motor, fren, lastik, aydınlatma ve güvenlik sistemleri. Aracın teknik yapısını sınav odaklı öğren.</p>
           </div>
           <div class="cat-right">
@@ -278,7 +280,7 @@
 
         <a class="cat-block" href="/dersler/trafik-ve-cevre/">
           <div class="cat-left">
-            <h2>Trafik ve Çevre Bilgisi</h2>
+            <h3>Trafik ve Çevre Bilgisi</h3>
             <p>Trafik kuralları, hız sınırları, kavşak geçişleri ve işaret levhaları. Sınavda en çok soru gelen ders.</p>
           </div>
           <div class="cat-right">
@@ -289,7 +291,7 @@
 
         <a class="cat-block" href="/dersler/ilk-yardim/">
           <div class="cat-left">
-            <h2>İlk Yardım</h2>
+            <h3>İlk Yardım</h3>
             <p>Kanama, kırık, yanık müdahalesi, Heimlich manevrası ve taşıma teknikleri. Pratik bilgiler ağırlıklı.</p>
           </div>
           <div class="cat-right">
@@ -300,7 +302,7 @@
 
         <a class="cat-block" href="/dersler/trafik-adabi/">
           <div class="cat-left">
-            <h2>Trafik Adabı</h2>
+            <h3>Trafik Adabı</h3>
             <p>Trafikte iletişim, öfke kontrolü, sorumluluk bilinci ve temel değerler. En kısa ama kolay puan alınan ders.</p>
           </div>
           <div class="cat-right">
@@ -328,7 +330,7 @@
   </main>
 
   <script src="/assets/js/search-index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js" integrity="sha384-PCSoOZTpbkikBEtd/+uV3WNdc676i9KUf01KOA8CnJotvlx8rRrETbDuwdjqTYvt" crossorigin="anonymous"></script>
   <script>
     // --- Arama (Türkçe-duyarlı + fuzzy) ---
     const idx = (window.SEARCH_INDEX||[]);
@@ -471,7 +473,7 @@
     <div class="foot-wrap">
       <div class="foot-hakkinda">
         <a class="foot-marka" href="/">
-          <img src="/assets/img/marka/logo.png" alt="ehliyet.digital">
+          <img src="/assets/img/marka/logo.png" alt="ehliyet.digital" width="22" height="22" loading="lazy">
           ehliyet.digital
         </a>
         <p>Sınavdan önce ders notlarını incele, hap bilgileri al ve deneme sınavları ile kendini test et. Ehliyet sınavına kolaylıkla hazırlan.</p>
@@ -489,10 +491,10 @@
       </nav>
       <nav class="foot-col" aria-label="Ders Notları">
         <span class="foot-label">Ders Notları</span>
-        <a href="/dersler/ilk-yardim/ilk-yardim-ve-acil-tedavi/">İlk Yardım</a>
-        <a href="/dersler/trafik-ve-cevre/temel-tanimlar/">Trafik ve Çevre</a>
-        <a href="/dersler/arac-teknigi/motor-nedir/">Araç Tekniği</a>
-        <a href="/dersler/trafik-adabi/temel-kavramlar/">Trafik Adabı</a>
+        <a href="/dersler/ilk-yardim/">İlk Yardım</a>
+        <a href="/dersler/trafik-ve-cevre/">Trafik ve Çevre</a>
+        <a href="/dersler/arac-teknigi/">Araç Tekniği</a>
+        <a href="/dersler/trafik-adabi/">Trafik Adabı</a>
       </nav>
       <nav class="foot-col" aria-label="Faydalı Bilgiler">
         <span class="foot-label">Faydalı Bilgiler</span>
