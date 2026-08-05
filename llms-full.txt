@@ -72,6 +72,7 @@ Alt başlıklar:
 - Kırık
 - Kırıkta ilk yardım
 - Çıkık ve burkulma
+- CIPS kuralı (burkulmada ilk yardım)
 - Atel ve tespit
 - Kırıklarda verilecek pozisyonlar
 - Kısaca
