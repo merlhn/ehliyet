@@ -6,3 +6,7 @@ Disallow: /panel/
 Disallow: /assets/kilavuz-govde.html
 
 Sitemap: https://ehliyet.digital/sitemap.xml
+
+# AI / LLM crawler'lar için site özeti
+# https://llmstxt.org/
+LLMs-Txt: https://ehliyet.digital/llms.txt

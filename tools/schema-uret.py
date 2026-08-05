@@ -30,13 +30,39 @@ GORSEL = f"{BASE}/og-image.png"
 BAS = "<!-- schema.org — tools/schema-uret.py tarafından üretilir, elle düzenlenmez -->"
 SON = "<!-- /schema.org -->"
 
+GORSEL_OBJ = {
+    "@type": "ImageObject",
+    "url": GORSEL,
+    "width": 1200,
+    "height": 630,
+}
+LOGO_OBJ = {
+    "@type": "ImageObject",
+    "url": f"{BASE}/icon-512.png",
+    "width": 512,
+    "height": 512,
+}
 YAYINCI = {
     "@type": "Organization",
     "name": "ehliyet.digital",
     "url": f"{BASE}/",
-    "logo": {"@type": "ImageObject", "url": f"{BASE}/icon-512.png"},
+    "logo": LOGO_OBJ,
+}
+YAYINCI_EGITIM = {
+    "@type": ["Organization", "EducationalOrganization"],
+    "name": "ehliyet.digital",
+    "url": f"{BASE}/",
+    "logo": LOGO_OBJ,
 }
 SITE = {"@type": "WebSite", "name": "Ehliyet Sınavı", "url": f"{BASE}/"}
+
+# Ders kategorileri — Course schema icin
+KATEGORI_ADI = {
+    "ilk-yardim": "İlk Yardım",
+    "trafik-ve-cevre": "Trafik ve Çevre",
+    "arac-teknigi": "Araç Tekniği (Motor)",
+    "trafik-adabi": "Trafik Adabı",
+}
 
 
 def son_degisiklik(yol):
@@ -90,23 +116,29 @@ for p in sorted(ROOT.rglob("index.html")):
     if dizin == ".":
         graf = [
             {**SITE, "description": aciklama, "inLanguage": "tr-TR",
-             "publisher": YAYINCI},
-            {**YAYINCI, "description": aciklama},
+             "publisher": YAYINCI_EGITIM},
+            {**YAYINCI_EGITIM, "description": aciklama},
         ]
         tur = "anasayfa"
 
     elif ders_notu:
         ders = metin(r'<span class="k">Ders</span>\s*:\s*<b>(.*?)</b>', t) or ""
+        tarih_yay = metin(r'<meta property="article:published_time" content="([^"]+)">', t)
+        tarih_mod = son_degisiklik(p)
         graf = [
             {
-                "@type": "Article",
+                "@type": ["Article", "LearningResource"],
                 "headline": h1,
                 "description": aciklama,
                 "url": kanon,
-                "image": GORSEL,
+                "image": GORSEL_OBJ,
                 "inLanguage": "tr-TR",
                 "articleSection": ders,
-                "dateModified": son_degisiklik(p),
+                "learningResourceType": "ders notu",
+                "educationalLevel": "B sınıfı ehliyet",
+                "teaches": h1,
+                **({"datePublished": tarih_yay} if tarih_yay else {}),
+                "dateModified": tarih_mod,
                 "author": YAYINCI,
                 "publisher": YAYINCI,
                 "isPartOf": SITE,
@@ -116,6 +148,34 @@ for p in sorted(ROOT.rglob("index.html")):
                      (h1, kanon)]),
         ]
         tur = "ders notu"
+
+    elif re.match(r"^dersler/[^/]+$", dizin) and dizin.split("/")[1] in KATEGORI_ADI:
+        # Kategorideki ders sayisini sayfa iceriginden cikar
+        ders_sayisi = len(re.findall(r'<a[^>]+class="[^"]*lesson[^"]*"', t))
+        kurs = {
+            "@type": "Course",
+            "name": h1,
+            "description": aciklama,
+            "url": kanon,
+            "inLanguage": "tr-TR",
+            "provider": YAYINCI,
+            "isAccessibleForFree": True,
+            "educationalLevel": "B sınıfı ehliyet",
+            "isPartOf": SITE,
+        }
+        if ders_sayisi:
+            kurs["hasCourseInstance"] = {
+                "@type": "CourseInstance",
+                "courseMode": "online",
+                "courseWorkload": f"{ders_sayisi} konu",
+            }
+        graf = [
+            kurs,
+            kirinti([("Ana Sayfa", f"{BASE}/"),
+                     ("Dersler", f"{BASE}/dersler/"),
+                     (h1, kanon)]),
+        ]
+        tur = "ders kategorisi"
 
     elif re.match(r"^hap-bilgiler/[^/]+$", dizin):
         graf = [

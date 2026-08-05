@@ -85,6 +85,17 @@ for dosya, yol in sayfalar():
     ET.SubElement(url, f"{{{NS}}}priority").text = oncelik(yol)
     sayac += 1
 
+# Statik kesfedilebilirlik dosyalari
+for statik, onc in [("/feed.xml", "0.1"), ("/llms.txt", "0.1"), ("/llms-full.txt", "0.1")]:
+    dosya = ROOT / statik.lstrip("/")
+    if dosya.exists():
+        url = ET.SubElement(kok, f"{{{NS}}}url")
+        ET.SubElement(url, f"{{{NS}}}loc").text = BASE + statik
+        ET.SubElement(url, f"{{{NS}}}lastmod").text = son_degisiklik(dosya)
+        ET.SubElement(url, f"{{{NS}}}changefreq").text = "weekly"
+        ET.SubElement(url, f"{{{NS}}}priority").text = onc
+        sayac += 1
+
 ET.indent(kok, space="  ")
 hedef = ROOT / "sitemap.xml"
 hedef.write_bytes(

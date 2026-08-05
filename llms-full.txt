@@ -1,0 +1,745 @@
+# ehliyet.digital — Tam İçerik Dizini
+
+> Türkiye ehliyet sınavına ücretsiz hazırlık platformu.
+> MEB MTSK müfredatına uygun 43 ders notu, 76 hap bilgi ve deneme sınavları.
+> Dil: Türkçe | Konu: B sınıfı ehliyet teorik sınavı
+
+Bu dosya AI/LLM sistemlerinin site içeriğini hızlıca kavraması için üretilmiştir.
+Kısa versiyon: https://ehliyet.digital/llms.txt
+
+---
+
+## İlk Yardım (12 konu)
+
+Ehliyet sınavı ilk yardım ders notları: temel yaşam desteği, kanamalar, kırıklar ve taşıma teknikleri dahil 12 konu. Sınava hazırlık için tamamı.
+
+Hub: https://ehliyet.digital/dersler/ilk-yardim/
+
+### İlk Yardım ve Acil Tedavi
+URL: https://ehliyet.digital/dersler/ilk-yardim/ilk-yardim-ve-acil-tedavi/
+İlk yardım ile acil tedavi arasındaki fark, ilk yardımın amaçları ve ilk yardımcının taşıması gereken özellikler. Sınavda çıkan soruları bu notla çöz.
+
+İlk yardım ve acil tedavi kavramları sınavda düzenli olarak, çoğu zaman aralarındaki fark üzerinden sorulur. Bu bölümde iki kavramın tanımını, ilk yardımın amaçlarını ve ilk yardımcının kim olduğunu ile özelliklerini öğreneceğiz.
+
+Alt başlıklar:
+- İlk yardım nedir?
+- Acil tedavi nedir?
+- İlk yardım ile acil tedavi farkı
+- İlk yardımın öncelikli amaçları
+- İlk yardımcı kimdir?
+- İlk yardımcının özellikleri
+- Güvenli ortam ve 112
+- Kısaca
+- İlgili Kaynaklar
+
+### İlk Yardımın ABC'si
+URL: https://ehliyet.digital/dersler/ilk-yardim/ilk-yardimin-abcsi/
+İlk yardımın ABC'si: A hava yolu açıklığı, B solunum, C dolaşım. Temel yaşam desteğinin üç aşaması ve her aşamada yapılan işlemler.
+
+İlk yardımın ABC’si, temel yaşam desteğinin üç aşamasını ifade eder: A hava yolu açıklığı, B solunumun değerlendirilmesi, C dolaşımın değerlendirilmesi. Sınavda bu üç harfin ne anlama geldiği ve her aşamada yapılan işlem sıkça sorulur.
+
+Alt başlıklar:
+- ABC nedir?
+- A — Hava yolu açıklığı
+- B — Solunumun değerlendirilmesi
+- C — Dolaşımın değerlendirilmesi
+- Kısaca
+- İlgili Kaynaklar
+
+### Kanamalar
+URL: https://ehliyet.digital/dersler/ilk-yardim/kanamalar/
+Kanamalar: kanama çeşitleri, atardamar-toplardamar farkı, dış kanamayı durdurma yöntemleri ve iç kanama belirtileri. Sınavda çıkan soruları bu notla çöz.
+
+Kanama, damar bütünlüğünün bozulması sonucu kanın damar dışına çıkmasıdır. Kontrol altına alınamayan kanamalar kısa sürede şoka ve ölüme yol açabildiğinden, kanama türlerini ve durdurma yöntemlerini bilmek hayati önemdedir.
+
+Alt başlıklar:
+- Kanama nedir?
+- Damara göre kanama türleri
+- Kanamada ilk yardım
+- İç kanama ve belirtileri
+- Burun kanaması
+- Kısaca
+- İlgili Kaynaklar
+
+### Kırık, Çıkık, Burkulma
+URL: https://ehliyet.digital/dersler/ilk-yardim/kirik-cikik-burkulma/
+Kırık, çıkık ve burkulma: üçünün farkı, nerede oluştukları, ilk yardımı, atel kullanımı ve verilecek pozisyonlar. Sınavda çıkan soruları bu notla çöz.
+
+Kırık, çıkık ve burkulma sınavda neredeyse her defa soru gelen bir konudur. Bu üç durumun nerede oluştuğunu, birbirinden farkını, ilk yardımını, atel kullanımını ve kırıklarda verilecek pozisyonları bu bölümde öğreneceğiz.
+
+Alt başlıklar:
+- Kırık, çıkık ve burkulma nerede olur?
+- Kırık
+- Kırıkta ilk yardım
+- Çıkık ve burkulma
+- Atel ve tespit
+- Kırıklarda verilecek pozisyonlar
+- Kısaca
+- İlgili Kaynaklar
+
+### Şok, Koma ve Bayılma
+URL: https://ehliyet.digital/dersler/ilk-yardim/sok-koma-bayilma/
+Şok, koma ve bayılma: üçünü ayırt etme, belirtileri ve verilecek pozisyonlar. Koma uzun, bayılma kısa süreli bilinç kaybıdır. Sınava bu notla hazırlan.
+
+Bilinç bozuklukları — şok, koma ve bayılma — sınavda kesinlikle soru gelen bir konudur. Bu üçünü birbirinden ayırt etmek ve her birinde verilecek pozisyonu bilmek önemlidir. En kritik ayrım şudur: koma uzun süreli, bayılma kısa süreli bilinç kaybıdır.
+
+Alt başlıklar:
+- Şok nedir?
+- Şokta ilk yardım
+- Koma
+- Bayılma
+- Kısaca
+- İlgili Kaynaklar
+
+### Solunum Yolu Tıkanıkları (Heimlich Manevrası)
+URL: https://ehliyet.digital/dersler/ilk-yardim/solunum-yolu-tikanikligi/
+Solunum yolu tıkanıklığı: tam ve kısmi tıkanma belirtileri, Heimlich manevrasının yetişkin, çocuk ile bebekte uygulanışı. Sınava bu notla hazırlan.
+
+Solunum yolu tıkanıklığından sınavda kesinlikle bir soru gelir. Bu bölümde tam ve kısmi tıkanmanın belirtilerini, hangisinde ne yapılacağını ve Heimlich manevrasının yetişkin, çocuk ve bebekte nasıl uygulandığını sırasıyla öğreneceğiz.
+
+Alt başlıklar:
+- Tıkanma nedir? Türleri
+- Kısmi tıkanma
+- Tam tıkanma
+- Heimlich manevrası — yetişkin ve çocuk
+- Heimlich manevrası — bebek
+- Kısaca
+- İlgili Kaynaklar
+
+### Taşıma Teknikleri
+URL: https://ehliyet.digital/dersler/ilk-yardim/tasima-teknikleri/
+Taşıma teknikleri: kazazede ne zaman taşınır, acil taşıma yöntemleri, Rentek manevrası ve sedye ile taşımanın kuralları. Sınavda çıkan soruları öğren.
+
+Yanlış bir taşıma, mevcut bir yaralanmayı kalıcı sakatlığa çevirebilir. Bu bölümde kazazedeyi ne zaman taşımanın doğru olduğunu, acil taşıma yöntemlerini, Rentek manevrasını ve sedye ile taşımanın kurallarını öğreneceğiz.
+
+Alt başlıklar:
+- Taşımada temel kural
+- Tek ilk yardımcıyla acil taşıma
+- Rentek manevrası
+- Birden fazla ilk yardımcıyla taşıma
+- Sedye ile taşıma
+- İlk yardımcının kendini koruması
+- Kısaca
+- İlgili Kaynaklar
+
+### Turnike Yöntemi
+URL: https://ehliyet.digital/dersler/ilk-yardim/turnike/
+Turnike (boğucu sargı): ne zaman, nereye ve nasıl uygulanır, uygulama kuralları ve neden kanama durdurmada son çare olduğu. Sınava bu notla hazırlan.
+
+Turnike (boğucu sargı), kanama durdurmanın en son başvurulan yöntemidir. Yanlış uygulandığında dokuya zarar verebildiği için ne zaman, nereye ve nasıl uygulanacağını doğru bilmek gerekir. Bu bölümde turnikenin uygulama kurallarını öğreneceğiz.
+
+Alt başlıklar:
+- Turnike ne zaman uygulanır?
+- Nereye uygulanır?
+- Nasıl uygulanır?
+- Uygulama sonrası kurallar
+- Kısaca
+- İlgili Kaynaklar
+
+### Vücudu Oluşturan Sistemler
+URL: https://ehliyet.digital/dersler/ilk-yardim/vucudu-olusturan-sistemler/
+Vücudu oluşturan sistemler: yapıların küçükten büyüğe sıralaması, temel sistemler, görevleri ve hangi organın hangi sisteme ait olduğu.
+
+Ehliyet sınavında vücudu oluşturan yapılar ve sistemler konusundan neredeyse her sınavda bir veya iki soru gelir. Bu bölümde yapıların küçükten büyüğe sıralamasını ve vücuttaki temel sistemleri, her sistemin görevini ve organlarını öğreneceğiz.
+
+Alt başlıklar:
+- Vücudu oluşturan yapılar
+- Vücut bölgeleri
+- Hareket sistemi
+- Dolaşım sistemi
+- Sinir sistemi
+- Solunum sistemi
+- Boşaltım sistemi
+- Sindirim sistemi
+- Kısaca
+- İlgili Kaynaklar
+
+### Yanıklar
+URL: https://ehliyet.digital/dersler/ilk-yardim/yaniklar/
+Yanıklar: tanımı, yanık çeşitleri, birinci-ikinci-üçüncü derece yanıkların ayrımı ve yanıkta doğru ilk yardım basamakları. Sınava bu notla hazırlan.
+
+Yanıklar sınavda hem yanık dereceleri hem de yapılması gereken ilk yardım üzerinden düzenli olarak sorulur. Bu bölümde yanığın tanımını, çeşitlerini, üç yanık derecesini ve yanıkta doğru ilk yardım basamaklarını öğreneceğiz.
+
+Alt başlıklar:
+- Yanık nedir?
+- Yanık çeşitleri
+- Yanığın ciddiyetini ne belirler?
+- Yanık dereceleri
+- Isı (ateş) yanığında ilk yardım
+- Yanıkta genel ilk yardım
+- Kimyasal yanıkta ilk yardım
+- Kısaca
+- İlgili Kaynaklar
+
+### Yaralanmalar
+URL: https://ehliyet.digital/dersler/ilk-yardim/yaralanmalar/
+Yaralanmalar: yara çeşitleri, genel ilk yardım kuralları ve delici göğüs, karın ile kafatası-omurga yaralanmalarında yapılacaklar.
+
+Yaralanmalar konusundan sınavda genellikle bir, hatta iki soru gelir. Bu bölümde yara tanımını, yara çeşitlerini ve genel ilk yardım kurallarını; ayrıca en çok sorulan delici göğüs, karın ve kafatası-omurga yaralanmalarını işleyeceğiz.
+
+Alt başlıklar:
+- Yara nedir ve çeşitleri
+- Yaralanmalarda genel ilk yardım
+- Delici göğüs ve karın yaralanmaları
+- Kafatası ve omurga yaralanmaları
+- Kısaca
+- İlgili Kaynaklar
+
+### Yaşam Bulguları
+URL: https://ehliyet.digital/dersler/ilk-yardim/yasam-bulgulari/
+Yaşam bulguları: bilinç, solunum, nabız ve vücut ısısının nasıl değerlendirildiği ile yetişkin, çocuk ve bebekte normal değerleri.
+
+Yaşam bulguları, bir hasta ya da yaralının durumunu değerlendirirken baktığımız temel göstergelerdir ve sınavda bu konudan neredeyse her defa bir soru gelir. Bu bölümde bilinç, solunum, nabız ve vücut ısısının nasıl değerlendirildiğini öğreneceğiz.
+
+Alt başlıklar:
+- Yaşam bulguları nelerdir?
+- Bilinç
+- Solunum
+- Nabız (dolaşım)
+- Vücut ısısı
+- Kısaca
+- İlgili Kaynaklar
+
+---
+
+## Trafik ve Çevre (11 konu)
+
+Ehliyet sınavı trafik ve çevre ders notları: temel kavramlar, trafik işaretleri, hız sınırları ve kavşak kuralları dahil 11 konu.
+
+Hub: https://ehliyet.digital/dersler/trafik-ve-cevre/
+
+### Araç Kullanma Süreleri ve Yasakları
+URL: https://ehliyet.digital/dersler/trafik-ve-cevre/arac-kullanma-sureleri/
+Araç kullanma süreleri ve yasakları: alkol promilleri, 625 kuralı, ticari araçlarda 4,5 ve 9 saat sınırları ve takograf kuralları.
+
+Bu bölümde kara yollarında araç sürme yasaklarını, alkol sınırlarını, ceza sürelerini ve ticari araçların kullanım-dinlenme sürelerini işleyeceğiz. Buradaki rakamlar (alkol promilleri, 625 kuralı, 4,5 ve 9 saat, takograf saklama süreleri) sınavda doğrudan sorulur; bu yüzden hepsini net biçimde bilmeniz gerekir.
+
+Alt başlıklar:
+- Araç sürme yasakları
+- Alkol sınırları
+- 625 kuralı (alkol ceza süreleri)
+- Ticari araçlarda kullanım ve dinlenme süreleri
+- Takograf cihazı
+- Kısaca
+- İlgili Kaynaklar
+
+### Araçlarla İlgili Tanımlar
+URL: https://ehliyet.digital/dersler/trafik-ve-cevre/araclarla-ilgili-tanimlar/
+Araçlarla ilgili tanımlar: otomobil, kamyon, çekici, römork ve diğer araç türlerinin tanımları ile en çok karıştırılan ayrımlar.
+
+Araç türlerine ait tanımlar, sınavda doğrudan ya da fotoğraflı sorularla sıkça karşınıza çıkar. Özellikle otomobil, çekici ve römork tanımları en çok karıştırılan konulardır; bu tanımları netleştirdiğinizde bu konudan soru kaçırmazsınız.
+
+Alt başlıklar:
+- Otomobil, otobüs ve minibüs
+- Kamyonet ve kamyon
+- Çekici, römork ve yarı römork
+- Traktör ve hafif römork
+- Okul taşıtı
+- Taşıt katarı ve özel amaçlı taşıt
+- B sınıfı ile kullanılabilenler
+- Kısaca
+- İlgili Kaynaklar
+
+### Genel Tanımlar
+URL: https://ehliyet.digital/dersler/trafik-ve-cevre/genel-tanimlar/
+Kara yolu ile ilgili genel tanımlar: yol türleri, yol kesimleri ve işaretlerle ilgili sınavda en çok sorulan tanımlar. Konuyu öğrenmek için hemen oku.
+
+Kara yolu ile ilgili tanımlar, sınavda hem doğrudan hem de fotoğraflı sorularla en çok karşınıza çıkan konulardandır. Bu bölümde yol türleri, yol kesimleri ve işaretlerle ilgili en çok sorulan tanımları öğreneceksiniz.
+
+Alt başlıklar:
+- Tırmanma şeridi
+- Tek yönlü ve iki yönlü kara yolu
+- Bölünmüş kara yolu ve ayırıcı
+- Otoyol (erişme kontrollü kara yolu)
+- Geçiş yolu ve bağlantı yolu
+- Taşıt yolu, bisiklet yolu ve yaya yolu
+- Banket
+- Ana yol ve tali yol
+- Demir yolu hemzemin geçidi
+- Şerit, durak ve muayene istasyonu
+- Kısaca
+- İlgili Kaynaklar
+
+### Hız Sınırları
+URL: https://ehliyet.digital/dersler/trafik-ve-cevre/hiz-sinirlari/
+Hız sınırları: yerleşim yeri içi ve dışı azami hızlar, araç türüne göre değerler, asgari-azami ayrımı ve römorklu araç kuralı.
+
+Hız sınırları büyük ölçüde ezber gerektiren bir konudur; çok sayıda rakam vardır ve hepsini birebir ezberlemek zordur. Bu bölümde en çok sorulan hız değerlerini, asgari-azami ayrımını, römorklu araçların kuralını ve hızın azaltılması gereken yerleri öğreneceksiniz.
+
+Alt başlıklar:
+- Otomobil hız sınırları
+- Otoyola giremeyen araçlar
+- Yasal tolerans (%10)
+- Azami ve asgari hız
+- Römorklu araçlarda hız
+- Hız ihlali ve ceza
+- Hızın azaltılması gereken yerler
+- Kısaca
+- İlgili Kaynaklar
+
+### Karayolunun Kullanılması
+URL: https://ehliyet.digital/dersler/trafik-ve-cevre/karayolunun-kullanilmasi/
+Kara yolunun kullanılması: şerit seçimi, şerit değiştirme ve geçme kuralları, trafikte yasak davranışlar. Sınavda çıkan soruları bu notla çözersin.
+
+Bu bölümde kara yolunu araç olarak nasıl kullanacağımızı, hangi şeritten gitmemiz gerektiğini, şerit değiştirme kurallarını ve yasak olan davranışları öğreneceğiz. Sınavda özellikle şerit kullanımıyla ilgili görselli sorular sıkça sorulur.
+
+Alt başlıklar:
+- Şeritlerin kullanımı
+- Şerit değiştirme
+- Yasak olan davranışlar
+- Kavşak ve dönüşlerde mesafe
+- Kısaca
+- İlgili Kaynaklar
+
+### Kavşaklarda İlk Geçiş Hakkı
+URL: https://ehliyet.digital/dersler/trafik-ve-cevre/kavsaklarda-gecis-hakki/
+Kavşaklarda ilk geçiş hakkı: kontrolsüz kavşaklarda geçiş sırası, ana yol-tali yol ilişkisi ve sınavda çıkan kavşak senaryoları. Hemen öğrenmek için oku.
+
+Kavşaklarda geçiş hakkı, her sınavda kesinlikle en az bir soruyla karşınıza çıkan; ayrıca kazalarda kimin kusurlu olduğunu belirleyen hayati bir konudur. Konu, trafik görevlisi veya ışığın bulunmadığı kontrolsüz kavşaklar ile bunların bulunduğu kontrollü kavşaklar olmak üzere iki başlıkta incelenir; bu bölümde kontrolsüz kavşaklar ve temel öncelik kurallarını işleyeceğiz.
+
+Alt başlıklar:
+- Geçiş üstünlüğü ve CİPS kuralı
+- Yol türüne ve manevraya göre öncelik
+- Kontrolsüz eşdeğer kavşaklar
+- Soru çözme tekniği
+- Kısaca
+- İlgili Kaynaklar
+
+### Kontrollü Kavşaklar
+URL: https://ehliyet.digital/dersler/trafik-ve-cevre/kontrollu-kavsaklar/
+Kontrollü kavşaklar: levha, ışık ve trafik görevlisiyle düzenlenen kavşaklar, ana yol-tali yol ayrımı ve dönüş kuralları. Sınava bu notla hazırlan.
+
+Kontrollü kavşaklar, bir levha, ışık ya da trafik görevlisi tarafından düzenlenen kavşaklardır. Bu bölümde levhaların anlamlarını, ana yol-tali yol ayrımını, dönüş kurallarını ve sık sorulan kaza senaryolarını işleyeceğiz. Bir kavşağın kontrollü olduğunu, orada levha veya ışık bulunmasından anlarsınız.
+
+Alt başlıklar:
+- Levhaların ışık karşılıkları
+- Ana yolda bile hız azaltma
+- Kaza ve kusur
+- Dönüş ve yön kuralları
+- Kısaca
+- İlgili Kaynaklar
+
+### Kurum ve Kuruluşlar
+URL: https://ehliyet.digital/dersler/trafik-ve-cevre/kurum-ve-kuruluslar/
+Trafikle ilgili kurum ve kuruluşlar: hangi kurumun hangi görev ve yetkiye sahip olduğu ve çeldiricili sorularda ayırt etme mantığı.
+
+Trafikle ilgili görev ve yetkiler farklı kurum ve kuruluşlar arasında paylaşılmıştır. Sınavda en çok karıştırılan konulardan biri budur; her kurumun ne yaptığını mantığıyla kavrarsanız, çeldiricili sorularda yanılmazsınız.
+
+Alt başlıklar:
+- Genel mantık
+- Emniyet Genel Müdürlüğü
+- Karayolları Genel Müdürlüğü
+- Sağlık Bakanlığı
+- Belediyeler
+- Millî Eğitim Bakanlığı
+- Ulaştırma ve Altyapı Bakanlığı
+- İçişleri Bakanlığı
+- Kısaca
+- İlgili Kaynaklar
+
+### Trafik İşaretlerine Uymada Öncelik Sırası
+URL: https://ehliyet.digital/dersler/trafik-ve-cevre/oncelik-sirasi/
+Trafik işaretlerine uymada öncelik sırası: birden fazla işaret çeliştiğinde hangisine uyulur ve bu sıralamanın mantığı. Sınava bu notla hazırlan.
+
+Trafikte bazen birden fazla işaret aynı anda ve birbiriyle çelişecek biçimde karşınıza çıkar. Böyle durumlarda hangisine uyacağınızı bilmeniz gerekir. Bu konu, trafik işaretlerine uymadaki öncelik (üstünlük) sırasını ve bu sıranın mantığını anlatır; sınavda sık sorulan, puanı garanti konulardan biridir.
+
+Alt başlıklar:
+- Öncelik sırası neden gerekir?
+- Öncelik sırası nedir?
+- Bu sıra neden böyle? (Mantığı)
+- Örneklerle
+- Sınavda nasıl sorulur?
+- Kısaca
+- İlgili Kaynaklar
+
+### Temel Kavramlar
+URL: https://ehliyet.digital/dersler/trafik-ve-cevre/temel-tanimlar/
+Temel trafik kavramları: sınavda hem doğrudan hem soru içinde çıkan tanımlar ve bunları ezberlemeden mantığıyla kavrama yolu. Konuyu hemen öğren.
+
+Sınavda hem doğrudan hem de soruların içinde sıkça karşınıza çıkan temel trafik tanımları. Bu tanımları ezberlemek yerine mantığını kavramanız gerekir; aksi hâlde soru biraz farklı sorulduğunda yanılırsınız.
+
+Alt başlıklar:
+- Trafik nedir?
+- Kara yolu nedir?
+- Sürücü ve şoför farkı
+- Durma, duraklama ve park etme
+- Trafik kazası nedir?
+- Trafikten men (alıkonulma)
+- Kısaca
+- İlgili Kaynaklar
+
+### Trafik Işıkları
+URL: https://ehliyet.digital/dersler/trafik-ve-cevre/trafik-isiklari/
+Trafik ışıkları: kırmızı, sarı, yeşil ışıkların anlamları, yanıp sönen (fasılalı) ışıklar, oklu ışıklar ve karşılık geldikleri levhalar.
+
+Işıklı trafik işaret cihazları, kırmızı-sarı-yeşil ışıklardan oluşur. Basit gibi görünse de yanıp sönen (fasılalı) ışıklar, oklu ışıklar ve bunların hangi levhalarla aynı anlama geldiği sınavda düzenli olarak sorulur. Işıkların anlamını kavradığınızda hem sınavda hem günlük trafikte doğru kararı verirsiniz.
+
+Alt başlıklar:
+- Kırmızı, sarı ve yeşil ışık
+- Yayalara ait ışıklar
+- Fasılalı (yanıp sönen) ışıklar
+- Oklu ışıklar
+- Işıkların olmadığı yerde levhalar
+- Kısaca
+- İlgili Kaynaklar
+
+---
+
+## Araç Tekniği (Motor) (15 konu)
+
+Ehliyet sınavı araç tekniği ders notları: motor, fren, lastik, aydınlatma ve güvenlik sistemleri dahil 15 konu. Sınava hazırlık için tüm bilgiler.
+
+Hub: https://ehliyet.digital/dersler/arac-teknigi/
+
+### Aktif ve Pasif Güvenlik Sistemleri
+URL: https://ehliyet.digital/dersler/arac-teknigi/aktif-pasif-guvenlik/
+Araçlarda aktif ve pasif güvenlik sistemleri: hangisi kazadan önce, hangisi kaza anında devreye girer ve sınavda sorulan örnekleri.
+
+Araçlardaki güvenlik sistemleri, sınavda hemen her denemede karşınıza çıkan ve mantığı kavrandığında kolayca yapılan bir konudur. Bu bölümde sistemlerin ikiye ayrıldığını, aktif sistemlerin kazadan önce, pasif sistemlerin kazadan sonra devreye girdiğini ve ABS, BAS, ASR, ESP ile emniyet kemeri, hava yastığı, koltuk başlığı gibi parçaların ne işe yaradığını sınav odaklı olarak öğreneceğiz.
+
+Alt başlıklar:
+- Güvenlik sistemleri neden ikiye ayrılır?
+- ABS — Kilitlenmeyi önleyen fren sistemi
+- BAS — Fren destek sistemi
+- ASR — Patinaj (çekiş) önleme sistemi
+- ESP — Elektronik denge programı
+- Pasif güvenlik sistemleri
+- Emniyet kemeri
+- Hava yastığı
+- Koltuk başlığı (baş desteği)
+- Kısaca
+- İlgili Kaynaklar
+
+### Araç Kullanmaya Hazırlık
+URL: https://ehliyet.digital/dersler/arac-teknigi/arac-kullanmaya-hazirlik/
+Araç kullanmaya hazırlık: araca binmeden yapılan dış kontroller, koltuk ve ayna ayarları, emniyet ekipmanları ve doğru sürüş pozisyonu.
+
+Araç kullanmaya başlamadan önce yapılması gereken kontroller ve doğru sürüş pozisyonu, sınavda düzenli soru gelen bir konudur. Bu bölümde araca binmeden yapılan dış kontrolleri, araç içi ayarları, emniyet ekipmanlarını ve aracı doğru çalıştırma sırasını sınav odaklı biçimde öğreneceğiz.
+
+Alt başlıklar:
+- Sürüşe hazırlık neden önemli?
+- Araca binmeden yapılan dış kontroller
+- Lastikler ne zaman kontrol edilir?
+- Araca bindikten sonra yapılan iç kontroller
+- Koltuk ve koltuk başlığı ayarı
+- Direksiyon ve ayna ayarı
+- Emniyet kemeri ve hava yastığı
+- Aracı doğru sırayla çalıştırma
+- Kısaca
+- İlgili Kaynaklar
+
+### Ateşleme Sistemi
+URL: https://ehliyet.digital/dersler/arac-teknigi/atesleme-sistemi/
+Ateşleme sistemi: aküden bujiye giden parçalar, buji ile enjektör farkı ve benzinli motorlarda sınavda sorulan detaylar. Konuyu öğrenmek için oku.
+
+Ateşleme sistemi, benzinli ve LPG'li motorların çalışmasını sağlayan ve sınavda parçaları ile görevleri sık sorulan bir konudur. Bu bölümde ateşleme sisteminin görevini, akünün 12 voltunu bujiye ulaştıran parçaları, buji ile enjektör farkını, akü-alternatör-regülatör ilişkisini ve buji arızalarının belirtilerini sınav odaklı biçimde öğreneceğiz.
+
+Alt başlıklar:
+- Ateşleme sisteminin görevi
+- Ateşleme sisteminin parçaları
+- Buji ve dizel farkı
+- Akü (akümülatör)
+- Regülatör (konjektör)
+- Alternatör (şarj dinamosu)
+- Buji arızaları ve belirtileri
+- Kısaca
+- İlgili Kaynaklar
+
+### Aydınlatma ve İkaz Sistemi
+URL: https://ehliyet.digital/dersler/arac-teknigi/aydinlatma-ve-ikaz-sistemi/
+Aydınlatma ve ikaz sistemi: far çeşitleri, renk ve mesafe değerleri, selektör kullanımı, sigorta, flaşör ve far müşürü arızaları.
+
+Aydınlatma ve ikaz sistemi, hem farlarla ilgili renk ve mesafe değerleri hem de sigorta, far müşürü, flaşör gibi parçaların arıza mantığıyla neredeyse her sınavda soru getiren bir konudur. Bu bölümde göstergelerin görevini, selektörün nerede yapılıp nerede yapılmayacağını, geri ve fren ışıklarının renklerini, sigortanın önemini, far mesafelerini ve gösterge panelindeki renkleri, ayrıca hangi arızanın hangi parçadan kaynaklandığını sınav odaklı biçimde öğreneceğiz.
+
+Alt başlıklar:
+- Aydınlatma, ikaz ve gösterge sisteminin görevi
+- Selektör nedir, nerede kullanılır?
+- Selektör nerede yapılmaz?
+- Geri ve fren ışıklarının renkleri
+- Sigortanın görevi ve değiştirilmesi
+- Far ayarı, far mesafeleri ve gösterge panelindeki renkler
+- Kısa far ve uzun far simgelerinin ayrımı
+- Arıza mantığı: hangi belirti hangi parçadan?
+- Sigorta, fren müşürü, flaşör ve römork bağlantısı
+- Kısaca
+- İlgili Kaynaklar
+
+### Derhal Durulması Gereken Haller
+URL: https://ehliyet.digital/dersler/arac-teknigi/derhal-durulmasi-gereken-haller/
+Motorun derhal durdurulmasını gerektiren beş hâl: hangi uyarı veya belirtide beklemeden durmak gerekir, nedenleri ve yapılması gerekenler. Hemen öğren.
+
+Araç kullanırken bazı arıza belirtileri ortaya çıktığında bir an bile beklemeden aracı durdurmak gerekir; aksi halde motor ciddi ve pahalı zararlar görür. Bu bölümde motorun derhal durdurulmasını gerektiren beş durumu, her birinde ne yapılacağını ve sınavda en çok çeldirici olarak sorulan “kontak kapatılır mı kapatılmaz mı?” ayrımını sınav odaklı biçimde öğreneceğiz.
+
+Alt başlıklar:
+- Derhal durmayı gerektiren durumlar nelerdir?
+- Yağ lambasının yanması
+- Şarj (akü) lambasının yanması
+- Hararet göstergesinin kırmızı yanması
+- Motordan duman çıkması ve yanık kokusu
+- Motordan anormal ses gelmesi
+- Kısaca
+- İlgili Kaynaklar
+
+### Fren Sistemi
+URL: https://ehliyet.digital/dersler/arac-teknigi/fren-sistemi/
+Fren sistemi: ayak ve el freni farkı, hidrolik fren mantığı, ABS ve ASR sistemleri, fren arızaları ve sınavda çıkan çeldiriciler.
+
+Fren sistemi, araç tekniği dersinin en çok soru gelen ve en çok çeldirici barındıran konularından biridir. Bu bölümde frenin görevini, ayak ve el freni farkını, hidrolik çalışma mantığını, ABS ile ASR sistemlerini, büyük araçlardaki özel fren tiplerini ve en çok sorulan fren arızalarını sınav odaklı biçimde öğreneceğiz.
+
+Alt başlıklar:
+- Fren sisteminin görevi
+- Ayak freni ve el freni
+- Hidrolik çalışma prensibi
+- Fren sisteminin parçaları
+- ABS ve ASR sistemleri
+- Büyük araçlardaki fren tipleri
+- Fren arızaları
+- Frenlemeyi ve uyarıları etkileyen etkenler
+- Kısaca
+- İlgili Kaynaklar
+
+### Güç Aktarma Organları
+URL: https://ehliyet.digital/dersler/arac-teknigi/guc-aktarma-organlari/
+Güç aktarma organları: debriyaj, vites kutusu, şaft, diferansiyel ve aks görevleri ile sık sorulan arıza belirtileri. Sınavda çıkan soruları çöz.
+
+Motorda üretilen gücün tekerleklere kadar nasıl ulaştığı, araç tekniği dersinin en çok soru gelen konularından biridir. Bu bölümde debriyaj, vites kutusu, şaft, diferansiyel, aks ve volanın görevlerini, bu organların sık sorulan arızalarını ve sınavın en sevdiği çeldiricileri sırayla ve sınav odaklı biçimde öğreneceğiz.
+
+Alt başlıklar:
+- Güç aktarma organları nedir?
+- Volan
+- Debriyaj (kavrama)
+- Vites kutusu (şanzıman)
+- Şaft (kardan mili)
+- Diferansiyel
+- Aks
+- Güç aktarma organlarının arızaları
+- Frenlemede debriyaj kullanılır mı?
+- Kısaca
+- İlgili Kaynaklar
+
+### Lastikler
+URL: https://ehliyet.digital/dersler/arac-teknigi/lastikler/
+Lastikler: yasal diş derinliği sınırı, hava basıncının doğru ölçümü, rot-balans ile aşınma ilişkisi ve mevsimlik lastik kuralları.
+
+Lastikler, aracı yolda tutan tek unsur olduğu için hem güvenlik hem de araç muayenesi açısından sınavda sıkça sorulur. Bu bölümde diş derinliğinin yasal sınırını, hava basıncının doğru ölçümünü, rot-balans ile aşınma ilişkisini, mevsim lastiklerini ve lastik bakımına dair sınav-kritik ayrıntıları düz bir anlatımla öğreneceğiz.
+
+Alt başlıklar:
+- Lastik neden bu kadar önemli?
+- Diş derinliği ve yasal sınır
+- Lastik hava basıncı
+- Rot ve balans ayarı
+- Mevsim lastikleri
+- Lastik bakımı ve kullanımı
+- Kısaca
+- İlgili Kaynaklar
+
+### Motor Nedir?
+URL: https://ehliyet.digital/dersler/arac-teknigi/motor-nedir/
+Motor nedir: tanımı, enerji ve soğutma tipine göre çeşitleri, dört zamanın sırası ve benzinli ile dizel motor farkları. Konuyu öğrenmek için oku.
+
+Motor, araç tekniği dersinin en temel ve en çok soru gelen konusudur. Bu ilk bölümde motorun tanımını, enerji türüne, zamanına ve soğutma tipine göre çeşitlerini, dört zamanın sırasını ve benzinli ile dizel motor arasındaki kritik farkları sınav odaklı biçimde öğreneceğiz.
+
+Alt başlıklar:
+- Motor nedir?
+- Enerji türüne göre motorlar
+- Benzinli ve LPG'li motorlar
+- Dizel motorlar
+- Elektrikli motorlar
+- Hibrit motorlar
+- Zamanına göre motorlar ve dört zamanın sırası
+- Benzinli ve dizel dört zamanın karşılaştırması
+- Motorun parçaları
+- Soğutma tipine göre motorlar
+- Sık çıkan çeldirici bilgiler
+- Kısaca
+- İlgili Kaynaklar
+
+### Ön Düzen ve Direksiyon Sistemi
+URL: https://ehliyet.digital/dersler/arac-teknigi/on-duzen-direksiyon/
+Ön düzen ve direksiyon sistemi: direksiyonun görevi, en güvenli tutuş pozisyonu, ön düzen parçaları ve rot-balans arıza belirtileri.
+
+Ön düzen ve direksiyon sistemi, araç tekniği dersinde neredeyse her sınavda soru gelen konulardan biridir. Bu bölümde direksiyonun görevini, en güvenli tutuş pozisyonunu, ön düzen parçalarını ve rot-balans ayarıyla ilgili arıza belirtilerini sınav odaklı biçimde öğreneceğiz.
+
+Alt başlıklar:
+- Direksiyon sistemi nedir?
+- En güvenli direksiyon tutuş pozisyonu
+- Ön düzen parçaları
+- Direksiyonda boşluk ve rot başlarının aşınması
+- Direksiyon kutusunda yağ eksikliği
+- Balans ayarı ve direksiyonda titreme
+- Rot ayarı ve lastik aşınması
+- Direksiyonun zor dönmesinin sebepleri
+- Kısaca
+- İlgili Kaynaklar
+
+### Otomatik Vites
+URL: https://ehliyet.digital/dersler/arac-teknigi/otomatik-vites/
+Otomatik vites: P, R, N, D ve L konumlarının anlamları, manuel vitesten farkı ve sınavda en çok sorulan noktalar. Konuyu öğrenmek için hemen oku.
+
+Otomatik vites, araç tekniği dersinde neredeyse her sınavda çıkan, kolay puan getiren bir konudur. Bu bölümde otomatik vitesin (otomatik şanzıman) ne olduğunu, manuel vitesten farkını ve en çok sorulan P, R, N, D, L konumlarının anlamlarını sınav odaklı biçimde öğreneceğiz.
+
+Alt başlıklar:
+- Otomatik vites nedir?
+- Manuel vitesten farkı
+- Vites konumları ve anlamları
+- Sınavda nasıl sorulur?
+- Kısaca
+- İlgili Kaynaklar
+
+### Şarj Sistemi
+URL: https://ehliyet.digital/dersler/arac-teknigi/sarj-sistemi/
+Şarj sistemi: alternatör ve regülatörün görevleri, şarj göstergesinin kırmızı yanmasının anlamı ve akü ile ilgili sık sorulan arızalar.
+
+Şarj sistemi, araç tekniği dersinde neredeyse her sınavda soru gelen sistemlerden biridir. Bu bölümde şarj sisteminin görevini, alternatör ile regülatörün ne işe yaradığını, şarj göstergesinin kırmızı yanmasının ne anlama geldiğini ve marş motoru, akü, sigorta gibi elemanların rolünü sınav odaklı biçimde öğreneceğiz.
+
+Alt başlıklar:
+- Şarj sisteminin görevi
+- Şarj sisteminin parçaları
+- Alternatör (şarj dinamosu)
+- Regülatör (konjektör)
+- Şarj göstergesi (akü ikaz ışığı)
+- Marş motoru
+- Akü ve sigorta
+- Kısaca
+- İlgili Kaynaklar
+
+### Soğutma Sistemleri
+URL: https://ehliyet.digital/dersler/arac-teknigi/sogutma-sistemi/
+Soğutma sistemi: termostatın görevi, radyatöre su ve antifriz kuralları, aracın hararet yapma nedenleri. Sınavda çıkan soruları bu notla çözersin.
+
+Soğutma sistemi, araç tekniği dersinin en çok soru gelen bölümlerinden biridir. Bu notta soğutma sisteminin görevini, parçalarını tek tek, termostatın önemini, radyatöre su ve antifriz eklemenin kurallarını ve aracın neden hararet yaptığını sınav odaklı biçimde öğreneceğiz.
+
+Alt başlıklar:
+- Soğutma sistemi neden vardır?
+- Soğutmaya göre motor çeşitleri
+- Soğutma sisteminin parçaları
+- Soğutma sistemine ait olmayan parçalar
+- Termostat: sistemin en kritik parçası
+- Radyatöre su ve antifriz eklemek
+- Sıcak motora su eklerken dikkat
+- Aracın hararet yapma sebepleri
+- Kısaca
+- İlgili Kaynaklar
+
+### Süspansiyon Sistemi
+URL: https://ehliyet.digital/dersler/arac-teknigi/suspansiyon-sistemi/
+Süspansiyon sistemi: yay ve amortisörün görevleri, makasların kullanım yeri ve arıza belirtileri. Sınavda çıkan soruları bu notla çözersin.
+
+Süspansiyon sistemi, aracın hem konforunu hem de yol tutuşunu belirleyen ve sınavda düzenli olarak soru gelen bir konudur. Bu bölümde sistemin iki temel parçası olan yay ile amortisörün ne işe yaradığını, makasların nerede kullanıldığını, çukura veya kasise sert girmenin doğurduğu zararları ve en çok karıştırılan çeldiricileri sınav odaklı biçimde öğreneceğiz.
+
+Alt başlıklar:
+- Süspansiyon sistemi nedir?
+- Yay (helezon yay) ne işe yarar?
+- Amortisör ne işe yarar?
+- Makaslar
+- Çukura veya kasise sert girmenin zararları
+- Aks nedir?
+- Sık çıkan çeldiriciler
+- Kısaca
+- İlgili Kaynaklar
+
+### Yağlama Sistemi
+URL: https://ehliyet.digital/dersler/arac-teknigi/yaglama-sistemi/
+Yağlama sistemi: görevleri, parçaları, yağ lambasının kırmızı yanmasının anlamı ve motor yağı değişim aralıkları. Sınavda çıkan bilgileri öğren.
+
+Yağlama sistemi, araç tekniği dersinde parça isimlerinin, uyarı lambalarının ve bakım aralıklarının en çok sorulduğu konulardan biridir. Bu bölümde yağlama sisteminin görevlerini, parçalarını, yağ lambasının kırmızı yanmasının ne anlama geldiğini, yağ seviyesinin nasıl ve ne zaman ölçüldüğünü ve sınavda tekrarlanan renk ile çeldirici sorularını öğreneceğiz.
+
+Alt başlıklar:
+- Yağlama sisteminin görevi
+- Yağlama sisteminin parçaları
+- Çeldirici: hangisi parça değildir?
+- Yağ lambası kırmızı yanarsa
+- Yağ göstergesi ve ampul arızası
+- Yağ ve filtre değişimi
+- Yağ seviyesinin ölçülmesi
+- Egzozdan mavi duman
+- Kısaca
+- İlgili Kaynaklar
+
+---
+
+## Trafik Adabı (5 konu)
+
+Ehliyet sınavı trafik adabı ders notları: trafikte iletişim, temel değerler, öfke yönetimi ve sorumluluk dahil 5 konu. Sınava hazırlık için tamamı.
+
+Hub: https://ehliyet.digital/dersler/trafik-adabi/
+
+### Öfke, Stres ve Dikkat Yönetimi
+URL: https://ehliyet.digital/dersler/trafik-adabi/ofke-stres-dikkat/
+Öfke, stres ve dikkat yönetimi: bu durumların sürücü davranışına ve kaza riskine etkisi ile trafikte nasıl yönetileceği. Sınava bu notla hazırlan.
+
+Sürücünün ruh hâli, trafik güvenliğini doğrudan etkiler. Öfke, stres ve dikkat dağınıklığı; karar verme yeteneğini bozarak kaza riskini büyük ölçüde artırır. Bu bölümde bu olumsuz durumların trafikteki etkilerini ve nasıl yönetileceğini öğreneceğiz.
+
+Alt başlıklar:
+- Trafikte öfke
+- Öfke yönetimi
+- Stres ve acelecilik
+- Dikkat ve dikkat dağınıklığı
+- Kısaca
+- İlgili Kaynaklar
+
+### Bireysel ve Toplumsal Sorumluluk
+URL: https://ehliyet.digital/dersler/trafik-adabi/sorumluluk/
+Bireysel ve toplumsal sorumluluk: kural bilincinin anlamı, kazaların toplumsal sonuçları ve trafikte sorumlu sürücü davranışı. Konuyu hemen öğren.
+
+Trafik, yalnızca bireysel bir eylem değil, toplumsal bir alandır. Her sürücünün davranışı yalnızca kendisini değil, çevresindeki herkesi etkiler. Bu bölümde kural bilincinin gerçek anlamını, kazaların sonuçlarını ve trafikte topluma karşı sorumluluğumuzu ele alacağız.
+
+Alt başlıklar:
+- Kural bilinci ve gerçek sorumluluk
+- Kazaların sonuçları
+- Korunması gereken yol kullanıcıları
+- Çevreye ve topluma saygı
+- Kısaca
+- İlgili Kaynaklar
+
+### Trafikte Temel Değerler
+URL: https://ehliyet.digital/dersler/trafik-adabi/temel-degerler/
+Trafikte temel değerler: sabır, hoşgörü, saygı, nezaket, feragat, diğerkâmlık ve yardımlaşma kavramlarının tanımları ve örnekleri.
+
+Trafik adabının temelinde bir dizi değer yatar. Sabır, hoşgörü, saygı, nezaket, feragat, diğerkâmlık, yardımlaşma ve sorumluluk gibi değerler, sürücünün trafikteki davranışlarını belirler. Sınavda bu değerlerin tanımları ve örnekleri sıkça sorulur.
+
+Alt başlıklar:
+- Sabır ve hoşgörü
+- Saygı ve nezaket
+- Feragat ve diğerkâmlık
+- Yardımlaşma ve sorumluluk
+- Kısaca
+- İlgili Kaynaklar
+
+### Trafik Adabı ve Temel Kavramlar
+URL: https://ehliyet.digital/dersler/trafik-adabi/temel-kavramlar/
+Trafik adabı ve temel kavramlar: adabın tanımı, değer-tutum-davranış ilişkisi ve kazaların temelindeki insan faktörü. Konuyu öğrenmek için hemen oku.
+
+Trafik adabı; yazılı kuralların ötesinde, trafikteki diğer bireylere karşı sergilenen saygılı ve sorumlu davranış biçimidir. Bu bölümde trafik adabının ne olduğunu, değer-tutum-davranış ilişkisini ve kazaların temelindeki insan faktörünü öğreneceğiz.
+
+Alt başlıklar:
+- Trafik adabı nedir?
+- Değer, tutum ve davranış
+- Trafikte insan faktörü
+- Trafik kültürü
+- Kısaca
+- İlgili Kaynaklar
+
+### Trafikte İletişim
+URL: https://ehliyet.digital/dersler/trafik-adabi/trafikte-iletisim/
+Trafikte iletişim: sinyal, far, korna, beden dili ve göz temasıyla kurulan sözsüz iletişim ve kazaların önlenmesindeki rolü. Sınava bu notla hazırlan.
+
+Trafik, sürücülerin ve yayaların sürekli birbiriyle iletişim kurduğu bir ortamdır. Bu iletişim çoğunlukla sözsüzdür; sinyaller, farlar, korna, beden dili ve göz teması yoluyla gerçekleşir. Sağlıklı bir iletişim, kazaların önlenmesinde ve trafiğin akıcılığında büyük rol oynar.
+
+Alt başlıklar:
+- Trafikte iletişim araçları
+- Beden dili ve göz teması
+- Empati ile iletişim
+- Başarılı iletişim için
+- Kısaca
+- İlgili Kaynaklar
+
+---
+
+## Ek Kaynaklar
+
+- Hap Bilgiler (76 kısa özet): https://ehliyet.digital/hap-bilgiler/
+- Soru Çöz: https://ehliyet.digital/ehliyet-sinav-sorulari/
+- Ehliyet Nasıl Alınır: https://ehliyet.digital/ehliyet-nasil-alinir/
+- Sınav Konuları: https://ehliyet.digital/ehliyet-sinav-konulari/
+- Direksiyon Sınavı: https://ehliyet.digital/direksiyon-sinavi/

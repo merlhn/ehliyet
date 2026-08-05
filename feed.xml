@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>ehliyet.digital — Ehliyet Sınavı Ders Notları</title>
+    <link>https://ehliyet.digital/</link>
+    <description>Ehliyet sınavına hazırlık: MEB MTSK müfredatına uygun ders notları, hap bilgiler ve deneme sınavları.</description>
+    <language>tr</language>
+    <lastBuildDate>Wed, 05 Aug 2026 09:37:57 +0000</lastBuildDate>
+    <atom:link href="https://ehliyet.digital/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aktif ve Pasif Güvenlik Sistemleri</title>
+      <link>https://ehliyet.digital/dersler/arac-teknigi/aktif-pasif-guvenlik/</link>
+      <description>Araçlarda aktif ve pasif güvenlik sistemleri: hangisi kazadan önce, hangisi kaza anında devreye girer ve sınavda sorulan örnekleri.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/arac-teknigi/aktif-pasif-guvenlik/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Araç Tekniği</category>
+    </item>
+    <item>
+      <title>Araç Kullanmaya Hazırlık</title>
+      <link>https://ehliyet.digital/dersler/arac-teknigi/arac-kullanmaya-hazirlik/</link>
+      <description>Araç kullanmaya hazırlık: araca binmeden yapılan dış kontroller, koltuk ve ayna ayarları, emniyet ekipmanları ve doğru sürüş pozisyonu.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/arac-teknigi/arac-kullanmaya-hazirlik/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Araç Tekniği</category>
+    </item>
+    <item>
+      <title>Ateşleme Sistemi</title>
+      <link>https://ehliyet.digital/dersler/arac-teknigi/atesleme-sistemi/</link>
+      <description>Ateşleme sistemi: aküden bujiye giden parçalar, buji ile enjektör farkı ve benzinli motorlarda sınavda sorulan detaylar. Konuyu öğrenmek için oku.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/arac-teknigi/atesleme-sistemi/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Araç Tekniği</category>
+    </item>
+    <item>
+      <title>Aydınlatma ve İkaz Sistemi</title>
+      <link>https://ehliyet.digital/dersler/arac-teknigi/aydinlatma-ve-ikaz-sistemi/</link>
+      <description>Aydınlatma ve ikaz sistemi: far çeşitleri, renk ve mesafe değerleri, selektör kullanımı, sigorta, flaşör ve far müşürü arızaları.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/arac-teknigi/aydinlatma-ve-ikaz-sistemi/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Araç Tekniği</category>
+    </item>
+    <item>
+      <title>Derhal Durulması Gereken Haller</title>
+      <link>https://ehliyet.digital/dersler/arac-teknigi/derhal-durulmasi-gereken-haller/</link>
+      <description>Motorun derhal durdurulmasını gerektiren beş hâl: hangi uyarı veya belirtide beklemeden durmak gerekir, nedenleri ve yapılması gerekenler. Hemen öğren.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/arac-teknigi/derhal-durulmasi-gereken-haller/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Araç Tekniği</category>
+    </item>
+    <item>
+      <title>Fren Sistemi</title>
+      <link>https://ehliyet.digital/dersler/arac-teknigi/fren-sistemi/</link>
+      <description>Fren sistemi: ayak ve el freni farkı, hidrolik fren mantığı, ABS ve ASR sistemleri, fren arızaları ve sınavda çıkan çeldiriciler.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/arac-teknigi/fren-sistemi/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Araç Tekniği</category>
+    </item>
+    <item>
+      <title>Güç Aktarma Organları</title>
+      <link>https://ehliyet.digital/dersler/arac-teknigi/guc-aktarma-organlari/</link>
+      <description>Güç aktarma organları: debriyaj, vites kutusu, şaft, diferansiyel ve aks görevleri ile sık sorulan arıza belirtileri. Sınavda çıkan soruları çöz.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/arac-teknigi/guc-aktarma-organlari/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Araç Tekniği</category>
+    </item>
+    <item>
+      <title>Lastikler</title>
+      <link>https://ehliyet.digital/dersler/arac-teknigi/lastikler/</link>
+      <description>Lastikler: yasal diş derinliği sınırı, hava basıncının doğru ölçümü, rot-balans ile aşınma ilişkisi ve mevsimlik lastik kuralları.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/arac-teknigi/lastikler/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Araç Tekniği</category>
+    </item>
+    <item>
+      <title>Motor Nedir?</title>
+      <link>https://ehliyet.digital/dersler/arac-teknigi/motor-nedir/</link>
+      <description>Motor nedir: tanımı, enerji ve soğutma tipine göre çeşitleri, dört zamanın sırası ve benzinli ile dizel motor farkları. Konuyu öğrenmek için oku.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/arac-teknigi/motor-nedir/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Araç Tekniği</category>
+    </item>
+    <item>
+      <title>Ön Düzen ve Direksiyon Sistemi</title>
+      <link>https://ehliyet.digital/dersler/arac-teknigi/on-duzen-direksiyon/</link>
+      <description>Ön düzen ve direksiyon sistemi: direksiyonun görevi, en güvenli tutuş pozisyonu, ön düzen parçaları ve rot-balans arıza belirtileri.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/arac-teknigi/on-duzen-direksiyon/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Araç Tekniği</category>
+    </item>
+    <item>
+      <title>Otomatik Vites</title>
+      <link>https://ehliyet.digital/dersler/arac-teknigi/otomatik-vites/</link>
+      <description>Otomatik vites: P, R, N, D ve L konumlarının anlamları, manuel vitesten farkı ve sınavda en çok sorulan noktalar. Konuyu öğrenmek için hemen oku.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/arac-teknigi/otomatik-vites/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Araç Tekniği</category>
+    </item>
+    <item>
+      <title>Şarj Sistemi</title>
+      <link>https://ehliyet.digital/dersler/arac-teknigi/sarj-sistemi/</link>
+      <description>Şarj sistemi: alternatör ve regülatörün görevleri, şarj göstergesinin kırmızı yanmasının anlamı ve akü ile ilgili sık sorulan arızalar.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/arac-teknigi/sarj-sistemi/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Araç Tekniği</category>
+    </item>
+    <item>
+      <title>Soğutma Sistemleri</title>
+      <link>https://ehliyet.digital/dersler/arac-teknigi/sogutma-sistemi/</link>
+      <description>Soğutma sistemi: termostatın görevi, radyatöre su ve antifriz kuralları, aracın hararet yapma nedenleri. Sınavda çıkan soruları bu notla çözersin.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/arac-teknigi/sogutma-sistemi/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Araç Tekniği</category>
+    </item>
+    <item>
+      <title>Süspansiyon Sistemi</title>
+      <link>https://ehliyet.digital/dersler/arac-teknigi/suspansiyon-sistemi/</link>
+      <description>Süspansiyon sistemi: yay ve amortisörün görevleri, makasların kullanım yeri ve arıza belirtileri. Sınavda çıkan soruları bu notla çözersin.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/arac-teknigi/suspansiyon-sistemi/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Araç Tekniği</category>
+    </item>
+    <item>
+      <title>Yağlama Sistemi</title>
+      <link>https://ehliyet.digital/dersler/arac-teknigi/yaglama-sistemi/</link>
+      <description>Yağlama sistemi: görevleri, parçaları, yağ lambasının kırmızı yanmasının anlamı ve motor yağı değişim aralıkları. Sınavda çıkan bilgileri öğren.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/arac-teknigi/yaglama-sistemi/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Araç Tekniği</category>
+    </item>
+    <item>
+      <title>İlk Yardım ve Acil Tedavi</title>
+      <link>https://ehliyet.digital/dersler/ilk-yardim/ilk-yardim-ve-acil-tedavi/</link>
+      <description>İlk yardım ile acil tedavi arasındaki fark, ilk yardımın amaçları ve ilk yardımcının taşıması gereken özellikler. Sınavda çıkan soruları bu notla çöz.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/ilk-yardim/ilk-yardim-ve-acil-tedavi/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>İlk Yardım</category>
+    </item>
+    <item>
+      <title>İlk Yardımın ABC'si</title>
+      <link>https://ehliyet.digital/dersler/ilk-yardim/ilk-yardimin-abcsi/</link>
+      <description>İlk yardımın ABC'si: A hava yolu açıklığı, B solunum, C dolaşım. Temel yaşam desteğinin üç aşaması ve her aşamada yapılan işlemler.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/ilk-yardim/ilk-yardimin-abcsi/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>İlk Yardım</category>
+    </item>
+    <item>
+      <title>Kanamalar</title>
+      <link>https://ehliyet.digital/dersler/ilk-yardim/kanamalar/</link>
+      <description>Kanamalar: kanama çeşitleri, atardamar-toplardamar farkı, dış kanamayı durdurma yöntemleri ve iç kanama belirtileri. Sınavda çıkan soruları bu notla çöz.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/ilk-yardim/kanamalar/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>İlk Yardım</category>
+    </item>
+    <item>
+      <title>Kırık, Çıkık, Burkulma</title>
+      <link>https://ehliyet.digital/dersler/ilk-yardim/kirik-cikik-burkulma/</link>
+      <description>Kırık, çıkık ve burkulma: üçünün farkı, nerede oluştukları, ilk yardımı, atel kullanımı ve verilecek pozisyonlar. Sınavda çıkan soruları bu notla çöz.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/ilk-yardim/kirik-cikik-burkulma/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>İlk Yardım</category>
+    </item>
+    <item>
+      <title>Şok, Koma ve Bayılma</title>
+      <link>https://ehliyet.digital/dersler/ilk-yardim/sok-koma-bayilma/</link>
+      <description>Şok, koma ve bayılma: üçünü ayırt etme, belirtileri ve verilecek pozisyonlar. Koma uzun, bayılma kısa süreli bilinç kaybıdır. Sınava bu notla hazırlan.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/ilk-yardim/sok-koma-bayilma/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>İlk Yardım</category>
+    </item>
+    <item>
+      <title>Solunum Yolu Tıkanıkları (Heimlich Manevrası)</title>
+      <link>https://ehliyet.digital/dersler/ilk-yardim/solunum-yolu-tikanikligi/</link>
+      <description>Solunum yolu tıkanıklığı: tam ve kısmi tıkanma belirtileri, Heimlich manevrasının yetişkin, çocuk ile bebekte uygulanışı. Sınava bu notla hazırlan.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/ilk-yardim/solunum-yolu-tikanikligi/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>İlk Yardım</category>
+    </item>
+    <item>
+      <title>Taşıma Teknikleri</title>
+      <link>https://ehliyet.digital/dersler/ilk-yardim/tasima-teknikleri/</link>
+      <description>Taşıma teknikleri: kazazede ne zaman taşınır, acil taşıma yöntemleri, Rentek manevrası ve sedye ile taşımanın kuralları. Sınavda çıkan soruları öğren.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/ilk-yardim/tasima-teknikleri/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>İlk Yardım</category>
+    </item>
+    <item>
+      <title>Turnike Yöntemi</title>
+      <link>https://ehliyet.digital/dersler/ilk-yardim/turnike/</link>
+      <description>Turnike (boğucu sargı): ne zaman, nereye ve nasıl uygulanır, uygulama kuralları ve neden kanama durdurmada son çare olduğu. Sınava bu notla hazırlan.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/ilk-yardim/turnike/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>İlk Yardım</category>
+    </item>
+    <item>
+      <title>Vücudu Oluşturan Sistemler</title>
+      <link>https://ehliyet.digital/dersler/ilk-yardim/vucudu-olusturan-sistemler/</link>
+      <description>Vücudu oluşturan sistemler: yapıların küçükten büyüğe sıralaması, temel sistemler, görevleri ve hangi organın hangi sisteme ait olduğu.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/ilk-yardim/vucudu-olusturan-sistemler/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>İlk Yardım</category>
+    </item>
+    <item>
+      <title>Yanıklar</title>
+      <link>https://ehliyet.digital/dersler/ilk-yardim/yaniklar/</link>
+      <description>Yanıklar: tanımı, yanık çeşitleri, birinci-ikinci-üçüncü derece yanıkların ayrımı ve yanıkta doğru ilk yardım basamakları. Sınava bu notla hazırlan.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/ilk-yardim/yaniklar/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>İlk Yardım</category>
+    </item>
+    <item>
+      <title>Yaralanmalar</title>
+      <link>https://ehliyet.digital/dersler/ilk-yardim/yaralanmalar/</link>
+      <description>Yaralanmalar: yara çeşitleri, genel ilk yardım kuralları ve delici göğüs, karın ile kafatası-omurga yaralanmalarında yapılacaklar.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/ilk-yardim/yaralanmalar/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>İlk Yardım</category>
+    </item>
+    <item>
+      <title>Yaşam Bulguları</title>
+      <link>https://ehliyet.digital/dersler/ilk-yardim/yasam-bulgulari/</link>
+      <description>Yaşam bulguları: bilinç, solunum, nabız ve vücut ısısının nasıl değerlendirildiği ile yetişkin, çocuk ve bebekte normal değerleri.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/ilk-yardim/yasam-bulgulari/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>İlk Yardım</category>
+    </item>
+    <item>
+      <title>Öfke, Stres ve Dikkat Yönetimi</title>
+      <link>https://ehliyet.digital/dersler/trafik-adabi/ofke-stres-dikkat/</link>
+      <description>Öfke, stres ve dikkat yönetimi: bu durumların sürücü davranışına ve kaza riskine etkisi ile trafikte nasıl yönetileceği. Sınava bu notla hazırlan.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/trafik-adabi/ofke-stres-dikkat/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Trafik Adabı</category>
+    </item>
+    <item>
+      <title>Bireysel ve Toplumsal Sorumluluk</title>
+      <link>https://ehliyet.digital/dersler/trafik-adabi/sorumluluk/</link>
+      <description>Bireysel ve toplumsal sorumluluk: kural bilincinin anlamı, kazaların toplumsal sonuçları ve trafikte sorumlu sürücü davranışı. Konuyu hemen öğren.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/trafik-adabi/sorumluluk/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Trafik Adabı</category>
+    </item>
+    <item>
+      <title>Trafikte Temel Değerler</title>
+      <link>https://ehliyet.digital/dersler/trafik-adabi/temel-degerler/</link>
+      <description>Trafikte temel değerler: sabır, hoşgörü, saygı, nezaket, feragat, diğerkâmlık ve yardımlaşma kavramlarının tanımları ve örnekleri.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/trafik-adabi/temel-degerler/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Trafik Adabı</category>
+    </item>
+    <item>
+      <title>Trafik Adabı ve Temel Kavramlar</title>
+      <link>https://ehliyet.digital/dersler/trafik-adabi/temel-kavramlar/</link>
+      <description>Trafik adabı ve temel kavramlar: adabın tanımı, değer-tutum-davranış ilişkisi ve kazaların temelindeki insan faktörü. Konuyu öğrenmek için hemen oku.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/trafik-adabi/temel-kavramlar/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Trafik Adabı</category>
+    </item>
+    <item>
+      <title>Trafikte İletişim</title>
+      <link>https://ehliyet.digital/dersler/trafik-adabi/trafikte-iletisim/</link>
+      <description>Trafikte iletişim: sinyal, far, korna, beden dili ve göz temasıyla kurulan sözsüz iletişim ve kazaların önlenmesindeki rolü. Sınava bu notla hazırlan.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/trafik-adabi/trafikte-iletisim/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Trafik Adabı</category>
+    </item>
+    <item>
+      <title>Araç Kullanma Süreleri ve Yasakları</title>
+      <link>https://ehliyet.digital/dersler/trafik-ve-cevre/arac-kullanma-sureleri/</link>
+      <description>Araç kullanma süreleri ve yasakları: alkol promilleri, 625 kuralı, ticari araçlarda 4,5 ve 9 saat sınırları ve takograf kuralları.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/trafik-ve-cevre/arac-kullanma-sureleri/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Trafik ve Çevre</category>
+    </item>
+    <item>
+      <title>Araçlarla İlgili Tanımlar</title>
+      <link>https://ehliyet.digital/dersler/trafik-ve-cevre/araclarla-ilgili-tanimlar/</link>
+      <description>Araçlarla ilgili tanımlar: otomobil, kamyon, çekici, römork ve diğer araç türlerinin tanımları ile en çok karıştırılan ayrımlar.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/trafik-ve-cevre/araclarla-ilgili-tanimlar/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Trafik ve Çevre</category>
+    </item>
+    <item>
+      <title>Genel Tanımlar</title>
+      <link>https://ehliyet.digital/dersler/trafik-ve-cevre/genel-tanimlar/</link>
+      <description>Kara yolu ile ilgili genel tanımlar: yol türleri, yol kesimleri ve işaretlerle ilgili sınavda en çok sorulan tanımlar. Konuyu öğrenmek için hemen oku.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/trafik-ve-cevre/genel-tanimlar/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Trafik ve Çevre</category>
+    </item>
+    <item>
+      <title>Hız Sınırları</title>
+      <link>https://ehliyet.digital/dersler/trafik-ve-cevre/hiz-sinirlari/</link>
+      <description>Hız sınırları: yerleşim yeri içi ve dışı azami hızlar, araç türüne göre değerler, asgari-azami ayrımı ve römorklu araç kuralı.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/trafik-ve-cevre/hiz-sinirlari/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Trafik ve Çevre</category>
+    </item>
+    <item>
+      <title>Karayolunun Kullanılması</title>
+      <link>https://ehliyet.digital/dersler/trafik-ve-cevre/karayolunun-kullanilmasi/</link>
+      <description>Kara yolunun kullanılması: şerit seçimi, şerit değiştirme ve geçme kuralları, trafikte yasak davranışlar. Sınavda çıkan soruları bu notla çözersin.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/trafik-ve-cevre/karayolunun-kullanilmasi/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Trafik ve Çevre</category>
+    </item>
+    <item>
+      <title>Kavşaklarda İlk Geçiş Hakkı</title>
+      <link>https://ehliyet.digital/dersler/trafik-ve-cevre/kavsaklarda-gecis-hakki/</link>
+      <description>Kavşaklarda ilk geçiş hakkı: kontrolsüz kavşaklarda geçiş sırası, ana yol-tali yol ilişkisi ve sınavda çıkan kavşak senaryoları. Hemen öğrenmek için oku.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/trafik-ve-cevre/kavsaklarda-gecis-hakki/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Trafik ve Çevre</category>
+    </item>
+    <item>
+      <title>Kontrollü Kavşaklar</title>
+      <link>https://ehliyet.digital/dersler/trafik-ve-cevre/kontrollu-kavsaklar/</link>
+      <description>Kontrollü kavşaklar: levha, ışık ve trafik görevlisiyle düzenlenen kavşaklar, ana yol-tali yol ayrımı ve dönüş kuralları. Sınava bu notla hazırlan.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/trafik-ve-cevre/kontrollu-kavsaklar/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Trafik ve Çevre</category>
+    </item>
+    <item>
+      <title>Kurum ve Kuruluşlar</title>
+      <link>https://ehliyet.digital/dersler/trafik-ve-cevre/kurum-ve-kuruluslar/</link>
+      <description>Trafikle ilgili kurum ve kuruluşlar: hangi kurumun hangi görev ve yetkiye sahip olduğu ve çeldiricili sorularda ayırt etme mantığı.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/trafik-ve-cevre/kurum-ve-kuruluslar/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Trafik ve Çevre</category>
+    </item>
+    <item>
+      <title>Trafik İşaretlerine Uymada Öncelik Sırası</title>
+      <link>https://ehliyet.digital/dersler/trafik-ve-cevre/oncelik-sirasi/</link>
+      <description>Trafik işaretlerine uymada öncelik sırası: birden fazla işaret çeliştiğinde hangisine uyulur ve bu sıralamanın mantığı. Sınava bu notla hazırlan.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/trafik-ve-cevre/oncelik-sirasi/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Trafik ve Çevre</category>
+    </item>
+    <item>
+      <title>Temel Kavramlar</title>
+      <link>https://ehliyet.digital/dersler/trafik-ve-cevre/temel-tanimlar/</link>
+      <description>Temel trafik kavramları: sınavda hem doğrudan hem soru içinde çıkan tanımlar ve bunları ezberlemeden mantığıyla kavrama yolu. Konuyu hemen öğren.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/trafik-ve-cevre/temel-tanimlar/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Trafik ve Çevre</category>
+    </item>
+    <item>
+      <title>Trafik Işıkları</title>
+      <link>https://ehliyet.digital/dersler/trafik-ve-cevre/trafik-isiklari/</link>
+      <description>Trafik ışıkları: kırmızı, sarı, yeşil ışıkların anlamları, yanıp sönen (fasılalı) ışıklar, oklu ışıklar ve karşılık geldikleri levhalar.</description>
+      <guid isPermaLink="true">https://ehliyet.digital/dersler/trafik-ve-cevre/trafik-isiklari/</guid>
+      <pubDate>2026-08-03T13:39:46+03:00</pubDate>
+      <category>Trafik ve Çevre</category>
+    </item>
+  </channel>
+</rss>

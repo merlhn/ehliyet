@@ -1,0 +1,29 @@
+# ehliyet.digital
+
+> Türkiye ehliyet sınavına ücretsiz hazırlık platformu. MEB MTSK müfredatına uygun ders notları, hap bilgiler ve deneme sınavları sunar.
+
+Dil: Türkçe
+Konu: B sınıfı ehliyet (sürücü belgesi) teorik sınavı
+Kaynak: MEB Motorlu Taşıt Sürücüleri Kursu (MTSK) müfredatı
+Hedef kitle: Ehliyet sınavına hazırlanan adaylar (Türkiye)
+
+## İçerik
+
+Site 4 ana ders kategorisi altında 43 konu içerir:
+
+- [İlk Yardım](https://ehliyet.digital/dersler/ilk-yardim/) — 12 konu: temel yaşam desteği, kanamalar, kırıklar, taşıma teknikleri
+- [Trafik ve Çevre](https://ehliyet.digital/dersler/trafik-ve-cevre/) — 11 konu: trafik işaretleri, hız sınırları, kavşak kuralları, geçiş hakkı
+- [Araç Tekniği](https://ehliyet.digital/dersler/arac-teknigi/) — 15 konu: motor, fren, lastik, aydınlatma, güvenlik sistemleri
+- [Trafik Adabı](https://ehliyet.digital/dersler/trafik-adabi/) — 5 konu: trafikte iletişim, öfke yönetimi, sorumluluk
+
+## Ek kaynaklar
+
+- [Hap Bilgiler](https://ehliyet.digital/hap-bilgiler/) — 76 kısa özet kartı, hızlı tekrar için
+- [Soru Çöz](https://ehliyet.digital/ehliyet-sinav-sorulari/) — Gerçek sınav formatında çoktan seçmeli sorular
+- [Ehliyet Nasıl Alınır?](https://ehliyet.digital/ehliyet-nasil-alinir/) — Adım adım başvuru rehberi
+- [Sınav Konuları](https://ehliyet.digital/ehliyet-sinav-konulari/) — Konu dağılımı ve çalışma rehberi
+- [Direksiyon Sınavı](https://ehliyet.digital/direksiyon-sinavi/) — Direksiyon sınavı bilgileri
+
+## Detaylı içerik
+
+Tüm ders özetlerini içeren genişletilmiş versiyon: [llms-full.txt](https://ehliyet.digital/llms-full.txt)
