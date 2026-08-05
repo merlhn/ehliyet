@@ -263,7 +263,7 @@ function mediaHTML(q){
     const cap = q.caption || 'Görsel/video';
     if(q.media.type==='image'){
       return `<div class="media">
-        <img src="${q.media.file}" alt="soru görseli"${q.mediaWidth?` style="max-width:${q.mediaWidth}"`:''}
+        <img src="${q.media.file}" alt="${cap}"${q.mediaWidth?` style="max-width:${q.mediaWidth}"`:''}
              onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
         <div class="media-fallback" style="display:none">🖼️ ${cap}
           <span class="ph">[görsel eklenecek → ${q.media.file}]</span></div>
@@ -288,7 +288,7 @@ function render(){
   let opts = q.options.map((o,i)=>{
     const hasImg = !!q.optionImages;
     const inner = hasImg
-      ? `<span class="lbl">${LETTERS[i]}</span><img class="opt-img" src="${q.optionImages[i]}" alt="şık ${LETTERS[i]}" onerror="this.style.display='none'">`
+      ? `<span class="lbl">${LETTERS[i]}</span><img class="opt-img" src="${q.optionImages[i]}" alt="Şık ${LETTERS[i]}: ${q.options[i]}" onerror="this.style.display='none'">`
       : `<span class="lbl">${LETTERS[i]}</span><span>${o}</span>`;
     let cls='opt'+(hasImg?' has-img':'');
     if(finished){
