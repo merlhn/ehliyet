@@ -188,6 +188,19 @@ for p in sorted(ROOT.rglob("index.html")):
         ]
         tur = "hap bilgi"
 
+    elif dizin == "hakkinda":
+        graf = [
+            {"@type": "AboutPage",
+             "name": h1, "description": aciklama, "url": kanon,
+             "inLanguage": "tr-TR", "isPartOf": SITE, "publisher": YAYINCI},
+            {"@type": "Person",
+             "name": "Ömer İlhan",
+             "jobTitle": "Kurucu ve İçerik Editörü",
+             "worksFor": YAYINCI},
+            kirinti([("Ana Sayfa", f"{BASE}/"), (h1, kanon)]),
+        ]
+        tur = "hakkinda"
+
     else:
         graf = [
             {"@type": "CollectionPage" if dizin in ("dersler", "deneme-sinavlari", "hap-bilgiler") else "WebPage",

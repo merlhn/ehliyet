@@ -95,6 +95,12 @@
   .soru-reveal{margin-top:12px;background:none;border:1px solid var(--line);font-family:inherit;font-size:13px;font-weight:500;color:var(--fg);padding:8px 16px;border-radius:999px;cursor:pointer}
   .soru-reveal:hover{border-color:#c8c8c8;background:#fafafa}
   .soru.revealed .soru-reveal{display:none}
+  .soru-cevap{margin-top:12px}
+  .soru-cevap summary{display:inline-block;background:none;border:1px solid var(--line);font-family:inherit;font-size:13px;font-weight:500;color:var(--fg);padding:8px 16px;border-radius:999px;cursor:pointer;list-style:none}
+  .soru-cevap summary::-webkit-details-marker{display:none}
+  .soru-cevap summary:hover{border-color:#c8c8c8;background:#fafafa}
+  .soru-cevap p{margin:10px 0 0;font-size:14px;line-height:1.5;color:#0a7f3f;background:#effaf3;padding:10px 14px;border-radius:10px}
+  .soru.revealed .soru-cevap{display:none}
 
   /* CTA */
   .cta{max-width:1100px;margin:0 auto;padding:0 28px 48px}
@@ -667,6 +673,21 @@ Numaralanmış ifadelerden hangileri trafik adabına sahip olan bir sürücü i�
         <a class="grup-link" href="/dersler/trafik-adabi/temel-kavramlar/">Tüm Trafik Adabı ders notları →</a>
       </section>
     </div>
+
+    <section class="soru-grup" style="max-width:1100px;margin:0 auto;padding:32px 28px">
+      <h2>Deneme Sınavı Nasıl Çalışır?</h2>
+      <p class="grup-desc">ehliyet.digital deneme sınavı, MEB'in MTSK e-sınavıyla birebir aynı formatta çalışır:</p>
+      <ul style="font-size:15px;line-height:1.7;color:#444;padding-left:20px">
+        <li><b>50 soru, 45 dakika</b> — gerçek sınavla aynı süre ve soru sayısı</li>
+        <li><b>4 bölüm:</b> İlk Yardım (12 soru), Trafik ve Çevre (23 soru), Araç Tekniği (9 soru), Trafik Adabı (6 soru)</li>
+        <li><b>Puanlama:</b> Her doğru cevap 2 puan, yanlış cevap doğruyu götürmez. Geçme notu 70 (en az 35 doğru)</li>
+        <li><b>Sonuç ekranı:</b> Sınav bittiğinde puan, doğru/yanlış/boş sayısı ve konu bazlı performans analizi gösterilir</li>
+        <li><b>Çözümlü cevaplar:</b> Her sorunun doğru cevabı ve yanlış seçtiğin şıklar işaretlenir</li>
+        <li><b>Sınav geçmişi:</b> Tüm denemelerin kaydedilir, puan gelişimini takip edebilirsin</li>
+        <li><b>Ücretsiz:</b> Google hesabıyla giriş yap, sınavın ve sonuçların kaydedilsin. Ücret veya reklam yoktur</li>
+        <li><b>4 farklı deneme sınavı</b> — gerçek MTSK e-sınavlarında çıkmış sorulardan derlendi</li>
+      </ul>
+    </section>
 
     <section class="cta">
       <div class="cta-inner">
