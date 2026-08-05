@@ -29,6 +29,7 @@ Alt başlıklar:
 - İlk yardımcı kimdir?
 - İlk yardımcının özellikleri
 - Güvenli ortam ve 112
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -43,6 +44,7 @@ Alt başlıklar:
 - A — Hava yolu açıklığı
 - B — Solunumun değerlendirilmesi
 - C — Dolaşımın değerlendirilmesi
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -58,6 +60,7 @@ Alt başlıklar:
 - Kanamada ilk yardım
 - İç kanama ve belirtileri
 - Burun kanaması
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -75,6 +78,7 @@ Alt başlıklar:
 - CIPS kuralı (burkulmada ilk yardım)
 - Atel ve tespit
 - Kırıklarda verilecek pozisyonlar
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -89,6 +93,7 @@ Alt başlıklar:
 - Şokta ilk yardım
 - Koma
 - Bayılma
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -104,6 +109,7 @@ Alt başlıklar:
 - Tam tıkanma
 - Heimlich manevrası — yetişkin ve çocuk
 - Heimlich manevrası — bebek
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -120,6 +126,7 @@ Alt başlıklar:
 - Birden fazla ilk yardımcıyla taşıma
 - Sedye ile taşıma
 - İlk yardımcının kendini koruması
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -134,6 +141,7 @@ Alt başlıklar:
 - Nereye uygulanır?
 - Nasıl uygulanır?
 - Uygulama sonrası kurallar
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -152,6 +160,7 @@ Alt başlıklar:
 - Solunum sistemi
 - Boşaltım sistemi
 - Sindirim sistemi
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -169,6 +178,7 @@ Alt başlıklar:
 - Isı (ateş) yanığında ilk yardım
 - Yanıkta genel ilk yardım
 - Kimyasal yanıkta ilk yardım
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -183,6 +193,7 @@ Alt başlıklar:
 - Yaralanmalarda genel ilk yardım
 - Delici göğüs ve karın yaralanmaları
 - Kafatası ve omurga yaralanmaları
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -198,6 +209,7 @@ Alt başlıklar:
 - Solunum
 - Nabız (dolaşım)
 - Vücut ısısı
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -221,6 +233,7 @@ Alt başlıklar:
 - 625 kuralı (alkol ceza süreleri)
 - Ticari araçlarda kullanım ve dinlenme süreleri
 - Takograf cihazı
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -238,6 +251,7 @@ Alt başlıklar:
 - Okul taşıtı
 - Taşıt katarı ve özel amaçlı taşıt
 - B sınıfı ile kullanılabilenler
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -258,6 +272,7 @@ Alt başlıklar:
 - Ana yol ve tali yol
 - Demir yolu hemzemin geçidi
 - Şerit, durak ve muayene istasyonu
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -275,6 +290,7 @@ Alt başlıklar:
 - Römorklu araçlarda hız
 - Hız ihlali ve ceza
 - Hızın azaltılması gereken yerler
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -289,6 +305,7 @@ Alt başlıklar:
 - Şerit değiştirme
 - Yasak olan davranışlar
 - Kavşak ve dönüşlerde mesafe
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -303,6 +320,7 @@ Alt başlıklar:
 - Yol türüne ve manevraya göre öncelik
 - Kontrolsüz eşdeğer kavşaklar
 - Soru çözme tekniği
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -317,6 +335,7 @@ Alt başlıklar:
 - Ana yolda bile hız azaltma
 - Kaza ve kusur
 - Dönüş ve yön kuralları
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -335,6 +354,7 @@ Alt başlıklar:
 - Millî Eğitim Bakanlığı
 - Ulaştırma ve Altyapı Bakanlığı
 - İçişleri Bakanlığı
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -350,6 +370,7 @@ Alt başlıklar:
 - Bu sıra neden böyle? (Mantığı)
 - Örneklerle
 - Sınavda nasıl sorulur?
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -366,6 +387,7 @@ Alt başlıklar:
 - Durma, duraklama ve park etme
 - Trafik kazası nedir?
 - Trafikten men (alıkonulma)
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -381,6 +403,7 @@ Alt başlıklar:
 - Fasılalı (yanıp sönen) ışıklar
 - Oklu ışıklar
 - Işıkların olmadığı yerde levhalar
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -408,6 +431,7 @@ Alt başlıklar:
 - Emniyet kemeri
 - Hava yastığı
 - Koltuk başlığı (baş desteği)
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -426,6 +450,7 @@ Alt başlıklar:
 - Direksiyon ve ayna ayarı
 - Emniyet kemeri ve hava yastığı
 - Aracı doğru sırayla çalıştırma
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -443,6 +468,7 @@ Alt başlıklar:
 - Regülatör (konjektör)
 - Alternatör (şarj dinamosu)
 - Buji arızaları ve belirtileri
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -462,6 +488,7 @@ Alt başlıklar:
 - Kısa far ve uzun far simgelerinin ayrımı
 - Arıza mantığı: hangi belirti hangi parçadan?
 - Sigorta, fren müşürü, flaşör ve römork bağlantısı
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -478,6 +505,7 @@ Alt başlıklar:
 - Hararet göstergesinin kırmızı yanması
 - Motordan duman çıkması ve yanık kokusu
 - Motordan anormal ses gelmesi
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -496,6 +524,7 @@ Alt başlıklar:
 - Büyük araçlardaki fren tipleri
 - Fren arızaları
 - Frenlemeyi ve uyarıları etkileyen etkenler
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -515,6 +544,7 @@ Alt başlıklar:
 - Aks
 - Güç aktarma organlarının arızaları
 - Frenlemede debriyaj kullanılır mı?
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -531,6 +561,7 @@ Alt başlıklar:
 - Rot ve balans ayarı
 - Mevsim lastikleri
 - Lastik bakımı ve kullanımı
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -552,6 +583,7 @@ Alt başlıklar:
 - Motorun parçaları
 - Soğutma tipine göre motorlar
 - Sık çıkan çeldirici bilgiler
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -570,6 +602,7 @@ Alt başlıklar:
 - Balans ayarı ve direksiyonda titreme
 - Rot ayarı ve lastik aşınması
 - Direksiyonun zor dönmesinin sebepleri
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -584,6 +617,7 @@ Alt başlıklar:
 - Manuel vitesten farkı
 - Vites konumları ve anlamları
 - Sınavda nasıl sorulur?
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -601,6 +635,7 @@ Alt başlıklar:
 - Şarj göstergesi (akü ikaz ışığı)
 - Marş motoru
 - Akü ve sigorta
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -619,6 +654,7 @@ Alt başlıklar:
 - Radyatöre su ve antifriz eklemek
 - Sıcak motora su eklerken dikkat
 - Aracın hararet yapma sebepleri
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -636,6 +672,7 @@ Alt başlıklar:
 - Çukura veya kasise sert girmenin zararları
 - Aks nedir?
 - Sık çıkan çeldiriciler
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -654,6 +691,7 @@ Alt başlıklar:
 - Yağ ve filtre değişimi
 - Yağ seviyesinin ölçülmesi
 - Egzozdan mavi duman
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -676,6 +714,7 @@ Alt başlıklar:
 - Öfke yönetimi
 - Stres ve acelecilik
 - Dikkat ve dikkat dağınıklığı
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -690,6 +729,7 @@ Alt başlıklar:
 - Kazaların sonuçları
 - Korunması gereken yol kullanıcıları
 - Çevreye ve topluma saygı
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -704,6 +744,7 @@ Alt başlıklar:
 - Saygı ve nezaket
 - Feragat ve diğerkâmlık
 - Yardımlaşma ve sorumluluk
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -718,6 +759,7 @@ Alt başlıklar:
 - Değer, tutum ve davranış
 - Trafikte insan faktörü
 - Trafik kültürü
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
@@ -732,6 +774,7 @@ Alt başlıklar:
 - Beden dili ve göz teması
 - Empati ile iletişim
 - Başarılı iletişim için
+- Bu konudan sınavlık bilgiler
 - Kısaca
 - İlgili Kaynaklar
 
