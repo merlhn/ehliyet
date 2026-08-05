@@ -251,7 +251,11 @@ function tick(){
   if(remaining<=60) timerEl.classList.add('low');
   if(remaining<=0){ clearInterval(timerId); doFinish(true); }
 }
-function startTimer(){ window.SINAV_DEVAM_EDIYOR=true; timerEl.textContent=fmt(remaining); timerId=setInterval(tick,1000); }
+let _examStarted=false;
+function startTimer(){
+  window.SINAV_DEVAM_EDIYOR=true; timerEl.textContent=fmt(remaining); timerId=setInterval(tick,1000);
+  if(!_examStarted && typeof gtag==='function'){ _examStarted=true; gtag('event','exam_start',{exam_name:SINAV_ADI}); }
+}
 
 function mediaHTML(q){
   if(!q.media && !q.caption) return '';
@@ -429,10 +433,10 @@ function doFinish(timeUp){
   timerEl.style.display='none';
   if(timeUp) alert('Süre doldu! Sınav otomatik olarak bitirildi.');
   render();
-  // Sonucu Firestore'a kaydet
+  // Sonucu Firestore'a kaydet + analytics
   (async () => {
     try {
-      const { auth } = await import('/assets/js/firebase.js');
+      const { auth, denemeleriGetir } = await import('/assets/js/firebase.js');
       const user = auth.currentUser;
       if (!user) return;
       const { denemeKaydet } = await import('/assets/js/firebase.js');
@@ -453,6 +457,15 @@ function doFinish(timeUp){
         gecti: s.correct >= PASS_CORRECT,
         bolumler
       });
+      if (typeof gtag === 'function') {
+        let examCount = 0;
+        try { const prev = await denemeleriGetir(user.uid); examCount = prev.length; } catch(_){}
+        gtag('event', 'exam_complete', {
+          exam_name: SINAV_ADI, score: s.points, correct: s.correct,
+          wrong: s.wrong, empty: s.empty, passed: s.correct >= PASS_CORRECT,
+          exam_count: examCount, time_up: !!timeUp
+        });
+      }
     } catch(e) { console.error('Sonuç kaydedilemedi:', e); }
   })();
   window.scrollTo({top:0,behavior:'smooth'});
@@ -480,6 +493,12 @@ document.addEventListener('keydown',e=>{
     const k=e.key.toUpperCase();
     const idx=LETTERS.indexOf(k);
     if(idx>=0) pick(idx);
+  }
+});
+
+window.addEventListener('beforeunload', () => {
+  if (window.SINAV_DEVAM_EDIYOR && !finished && typeof gtag === 'function') {
+    gtag('event', 'exam_abandon', { exam_name: SINAV_ADI, questions_answered: answers.filter(a => a !== null).length, questions_total: Q.length });
   }
 });
 
