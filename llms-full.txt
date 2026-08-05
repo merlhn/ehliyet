@@ -17,7 +17,7 @@ Hub: https://ehliyet.digital/dersler/ilk-yardim/
 
 ### İlk Yardım ve Acil Tedavi
 URL: https://ehliyet.digital/dersler/ilk-yardim/ilk-yardim-ve-acil-tedavi/
-İlk yardım ile acil tedavi arasındaki fark, ilk yardımın amaçları ve ilk yardımcının taşıması gereken özellikler. Sınavda çıkan soruları bu notla çöz.
+İlk yardım ilaçsız müdahaledir, acil tedavi ise hekim tarafından yapılır. İlk yardımcının özellikleri, 112 arama kuralları ve sınavda çıkan sorular.
 
 İlk yardım ve acil tedavi kavramları sınavda düzenli olarak, çoğu zaman aralarındaki fark üzerinden sorulur. Bu bölümde iki kavramın tanımını, ilk yardımın amaçlarını ve ilk yardımcının kim olduğunu ile özelliklerini öğreneceğiz.
 
@@ -34,7 +34,7 @@ Alt başlıklar:
 
 ### İlk Yardımın ABC'si
 URL: https://ehliyet.digital/dersler/ilk-yardim/ilk-yardimin-abcsi/
-İlk yardımın ABC'si: A hava yolu açıklığı, B solunum, C dolaşım. Temel yaşam desteğinin üç aşaması ve her aşamada yapılan işlemler.
+İlk yardımın ABC'si: A = hava yolu açıklığı (baş geri çene yukarı), B = solunum kontrolü, C = dolaşım (nabız ve kalp masajı). Sınav soruları.
 
 İlk yardımın ABC’si, temel yaşam desteğinin üç aşamasını ifade eder: A hava yolu açıklığı, B solunumun değerlendirilmesi, C dolaşımın değerlendirilmesi. Sınavda bu üç harfin ne anlama geldiği ve her aşamada yapılan işlem sıkça sorulur.
 
@@ -48,7 +48,7 @@ Alt başlıklar:
 
 ### Kanamalar
 URL: https://ehliyet.digital/dersler/ilk-yardim/kanamalar/
-Kanamalar: kanama çeşitleri, atardamar-toplardamar farkı, dış kanamayı durdurma yöntemleri ve iç kanama belirtileri. Sınavda çıkan soruları bu notla çöz.
+Kanama çeşitleri: atardamar kanaması fışkırarak, toplardamar sızarak akar. Dış kanamayı durdurma yöntemleri, iç kanama belirtileri ve sınav soruları.
 
 Kanama, damar bütünlüğünün bozulması sonucu kanın damar dışına çıkmasıdır. Kontrol altına alınamayan kanamalar kısa sürede şoka ve ölüme yol açabildiğinden, kanama türlerini ve durdurma yöntemlerini bilmek hayati önemdedir.
 
@@ -63,7 +63,7 @@ Alt başlıklar:
 
 ### Kırık, Çıkık, Burkulma
 URL: https://ehliyet.digital/dersler/ilk-yardim/kirik-cikik-burkulma/
-Kırık, çıkık ve burkulma: üçünün farkı, nerede oluştukları, ilk yardımı, atel kullanımı ve verilecek pozisyonlar. Sınavda çıkan soruları bu notla çöz.
+Eklem yüzeylerinin anlık ayrılması burkulma, kalıcı ayrılması çıkıktır; kırık ise kemiğin kırılmasıdır. Farkları, atel uygulaması ve sınav soruları.
 
 Kırık, çıkık ve burkulma sınavda neredeyse her defa soru gelen bir konudur. Bu üç durumun nerede oluştuğunu, birbirinden farkını, ilk yardımını, atel kullanımını ve kırıklarda verilecek pozisyonları bu bölümde öğreneceğiz.
 
@@ -79,7 +79,7 @@ Alt başlıklar:
 
 ### Şok, Koma ve Bayılma
 URL: https://ehliyet.digital/dersler/ilk-yardim/sok-koma-bayilma/
-Şok, koma ve bayılma: üçünü ayırt etme, belirtileri ve verilecek pozisyonlar. Koma uzun, bayılma kısa süreli bilinç kaybıdır. Sınava bu notla hazırlan.
+Şok pozisyonunda ayaklar 30 cm kaldırılır; komada yan yatış (koma pozisyonu), bayılmada sırt üstü yatırılır. Üçünün farkı, belirtileri ve sınav soruları.
 
 Bilinç bozuklukları — şok, koma ve bayılma — sınavda kesinlikle soru gelen bir konudur. Bu üçünü birbirinden ayırt etmek ve her birinde verilecek pozisyonu bilmek önemlidir. En kritik ayrım şudur: koma uzun süreli, bayılma kısa süreli bilinç kaybıdır.
 
@@ -108,7 +108,7 @@ Alt başlıklar:
 
 ### Taşıma Teknikleri
 URL: https://ehliyet.digital/dersler/ilk-yardim/tasima-teknikleri/
-Taşıma teknikleri: kazazede ne zaman taşınır, acil taşıma yöntemleri, Rentek manevrası ve sedye ile taşımanın kuralları. Sınavda çıkan soruları öğren.
+Taşıma teknikleri: Rentek manevrası, itfaiyeci yöntemi, tezkereci taşıma ve sedye kuralları. Kazazede ne zaman taşınır, ne zaman yerinde bırakılır?
 
 Yanlış bir taşıma, mevcut bir yaralanmayı kalıcı sakatlığa çevirebilir. Bu bölümde kazazedeyi ne zaman taşımanın doğru olduğunu, acil taşıma yöntemlerini, Rentek manevrasını ve sedye ile taşımanın kurallarını öğreneceğiz.
 
@@ -124,7 +124,7 @@ Alt başlıklar:
 
 ### Turnike Yöntemi
 URL: https://ehliyet.digital/dersler/ilk-yardim/turnike/
-Turnike (boğucu sargı): ne zaman, nereye ve nasıl uygulanır, uygulama kuralları ve neden kanama durdurmada son çare olduğu. Sınava bu notla hazırlan.
+Turnike sadece tek kemikli bölgelere (kol ve bacak) uygulanır; kanama durdurmada son çaredir. Uygulama kuralları ve sınavda çıkan turnike soruları.
 
 Turnike (boğucu sargı), kanama durdurmanın en son başvurulan yöntemidir. Yanlış uygulandığında dokuya zarar verebildiği için ne zaman, nereye ve nasıl uygulanacağını doğru bilmek gerekir. Bu bölümde turnikenin uygulama kurallarını öğreneceğiz.
 
@@ -138,7 +138,7 @@ Alt başlıklar:
 
 ### Vücudu Oluşturan Sistemler
 URL: https://ehliyet.digital/dersler/ilk-yardim/vucudu-olusturan-sistemler/
-Vücudu oluşturan sistemler: yapıların küçükten büyüğe sıralaması, temel sistemler, görevleri ve hangi organın hangi sisteme ait olduğu.
+Yapı birimleri küçükten büyüğe: hücre → doku → organ → sistem. Bilinç ve algılama beyin tarafından yönetilir. Vücut sistemleri ve sınav soruları.
 
 Ehliyet sınavında vücudu oluşturan yapılar ve sistemler konusundan neredeyse her sınavda bir veya iki soru gelir. Bu bölümde yapıların küçükten büyüğe sıralamasını ve vücuttaki temel sistemleri, her sistemin görevini ve organlarını öğreneceğiz.
 
@@ -210,7 +210,7 @@ Hub: https://ehliyet.digital/dersler/trafik-ve-cevre/
 
 ### Araç Kullanma Süreleri ve Yasakları
 URL: https://ehliyet.digital/dersler/trafik-ve-cevre/arac-kullanma-sureleri/
-Araç kullanma süreleri ve yasakları: alkol promilleri, 625 kuralı, ticari araçlarda 4,5 ve 9 saat sınırları ve takograf kuralları.
+625 kuralı: alkollü araç kullanmada 1. ihlal 6 ay, 2. ihlal 2 yıl, 3. ihlal 5 yıl ehliyet geri alınır. 4,5 saat sınırı, takograf ve sınav soruları.
 
 Bu bölümde kara yollarında araç sürme yasaklarını, alkol sınırlarını, ceza sürelerini ve ticari araçların kullanım-dinlenme sürelerini işleyeceğiz. Buradaki rakamlar (alkol promilleri, 625 kuralı, 4,5 ve 9 saat, takograf saklama süreleri) sınavda doğrudan sorulur; bu yüzden hepsini net biçimde bilmeniz gerekir.
 
@@ -225,7 +225,7 @@ Alt başlıklar:
 
 ### Araçlarla İlgili Tanımlar
 URL: https://ehliyet.digital/dersler/trafik-ve-cevre/araclarla-ilgili-tanimlar/
-Araçlarla ilgili tanımlar: otomobil, kamyon, çekici, römork ve diğer araç türlerinin tanımları ile en çok karıştırılan ayrımlar.
+Birbirine bağlanmış en çok iki römorktan oluşan araçlara katır denir. Otomobil, kamyon, çekici, römork tanımları ve sınavda karıştırılan araç türleri.
 
 Araç türlerine ait tanımlar, sınavda doğrudan ya da fotoğraflı sorularla sıkça karşınıza çıkar. Özellikle otomobil, çekici ve römork tanımları en çok karıştırılan konulardır; bu tanımları netleştirdiğinizde bu konudan soru kaçırmazsınız.
 
@@ -293,7 +293,7 @@ Alt başlıklar:
 
 ### Kavşaklarda İlk Geçiş Hakkı
 URL: https://ehliyet.digital/dersler/trafik-ve-cevre/kavsaklarda-gecis-hakki/
-Kavşaklarda ilk geçiş hakkı: kontrolsüz kavşaklarda geçiş sırası, ana yol-tali yol ilişkisi ve sınavda çıkan kavşak senaryoları. Hemen öğrenmek için oku.
+Kontrolsüz kavşakta sağdan gelen geçer. Ana yoldan gelen tali yoldakine, dönel kavşaktaki girmek isteyene önceliklidir. Kavşak geçiş hakkı kuralları.
 
 Kavşaklarda geçiş hakkı, her sınavda kesinlikle en az bir soruyla karşınıza çıkan; ayrıca kazalarda kimin kusurlu olduğunu belirleyen hayati bir konudur. Konu, trafik görevlisi veya ışığın bulunmadığı kontrolsüz kavşaklar ile bunların bulunduğu kontrollü kavşaklar olmak üzere iki başlıkta incelenir; bu bölümde kontrolsüz kavşaklar ve temel öncelik kurallarını işleyeceğiz.
 
@@ -339,7 +339,7 @@ Alt başlıklar:
 
 ### Trafik İşaretlerine Uymada Öncelik Sırası
 URL: https://ehliyet.digital/dersler/trafik-ve-cevre/oncelik-sirasi/
-Trafik işaretlerine uymada öncelik sırası: birden fazla işaret çeliştiğinde hangisine uyulur ve bu sıralamanın mantığı. Sınava bu notla hazırlan.
+Trafik işaretlerine uymada öncelik sırası: 1) trafik görevlisi, 2) ışıklı işaret, 3) trafik levhaları, 4) yer işaretleri. Çeliştiğinde hangisi geçerli?
 
 Trafikte bazen birden fazla işaret aynı anda ve birbiriyle çelişecek biçimde karşınıza çıkar. Böyle durumlarda hangisine uyacağınızı bilmeniz gerekir. Bu konu, trafik işaretlerine uymadaki öncelik (üstünlük) sırasını ve bu sıranın mantığını anlatır; sınavda sık sorulan, puanı garanti konulardan biridir.
 
@@ -370,7 +370,7 @@ Alt başlıklar:
 
 ### Trafik Işıkları
 URL: https://ehliyet.digital/dersler/trafik-ve-cevre/trafik-isiklari/
-Trafik ışıkları: kırmızı, sarı, yeşil ışıkların anlamları, yanıp sönen (fasılalı) ışıklar, oklu ışıklar ve karşılık geldikleri levhalar.
+Fasılalı yanıp sönen sarı ışık dikkatli geç anlamındadır. Kırmızı ok, sarı ok, yeşil ok anlamları ve trafik ışıklarının levha karşılıkları.
 
 Işıklı trafik işaret cihazları, kırmızı-sarı-yeşil ışıklardan oluşur. Basit gibi görünse de yanıp sönen (fasılalı) ışıklar, oklu ışıklar ve bunların hangi levhalarla aynı anlama geldiği sınavda düzenli olarak sorulur. Işıkların anlamını kavradığınızda hem sınavda hem günlük trafikte doğru kararı verirsiniz.
 
@@ -393,7 +393,7 @@ Hub: https://ehliyet.digital/dersler/arac-teknigi/
 
 ### Aktif ve Pasif Güvenlik Sistemleri
 URL: https://ehliyet.digital/dersler/arac-teknigi/aktif-pasif-guvenlik/
-Araçlarda aktif ve pasif güvenlik sistemleri: hangisi kazadan önce, hangisi kaza anında devreye girer ve sınavda sorulan örnekleri.
+Aktif güvenlik sistemleri (ABS, ESP, ASR) kazayı önler; pasif güvenlik sistemleri (hava yastığı, emniyet kemeri) kaza anında korur. Farkları ve sınav soruları.
 
 Araçlardaki güvenlik sistemleri, sınavda hemen her denemede karşınıza çıkan ve mantığı kavrandığında kolayca yapılan bir konudur. Bu bölümde sistemlerin ikiye ayrıldığını, aktif sistemlerin kazadan önce, pasif sistemlerin kazadan sonra devreye girdiğini ve ABS, BAS, ASR, ESP ile emniyet kemeri, hava yastığı, koltuk başlığı gibi parçaların ne işe yaradığını sınav odaklı olarak öğreneceğiz.
 
@@ -430,7 +430,7 @@ Alt başlıklar:
 
 ### Ateşleme Sistemi
 URL: https://ehliyet.digital/dersler/arac-teknigi/atesleme-sistemi/
-Ateşleme sistemi: aküden bujiye giden parçalar, buji ile enjektör farkı ve benzinli motorlarda sınavda sorulan detaylar. Konuyu öğrenmek için oku.
+Ateşleme sisteminin parçaları: akü, kontak anahtarı, bobin ve buji. Buji benzinli motorda, enjektör dizel motorda bulunur. Sınavda çıkan sorular.
 
 Ateşleme sistemi, benzinli ve LPG'li motorların çalışmasını sağlayan ve sınavda parçaları ile görevleri sık sorulan bir konudur. Bu bölümde ateşleme sisteminin görevini, akünün 12 voltunu bujiye ulaştıran parçaları, buji ile enjektör farkını, akü-alternatör-regülatör ilişkisini ve buji arızalarının belirtilerini sınav odaklı biçimde öğreneceğiz.
 
@@ -447,7 +447,7 @@ Alt başlıklar:
 
 ### Aydınlatma ve İkaz Sistemi
 URL: https://ehliyet.digital/dersler/arac-teknigi/aydinlatma-ve-ikaz-sistemi/
-Aydınlatma ve ikaz sistemi: far çeşitleri, renk ve mesafe değerleri, selektör kullanımı, sigorta, flaşör ve far müşürü arızaları.
+Kısa far yeşil, uzun far mavi renkte yanar. Far mesafeleri, selektör kullanımı, flaşör ve ışıklı işaret cihazının anlamı. Sınavda çıkan sorular.
 
 Aydınlatma ve ikaz sistemi, hem farlarla ilgili renk ve mesafe değerleri hem de sigorta, far müşürü, flaşör gibi parçaların arıza mantığıyla neredeyse her sınavda soru getiren bir konudur. Bu bölümde göstergelerin görevini, selektörün nerede yapılıp nerede yapılmayacağını, geri ve fren ışıklarının renklerini, sigortanın önemini, far mesafelerini ve gösterge panelindeki renkleri, ayrıca hangi arızanın hangi parçadan kaynaklandığını sınav odaklı biçimde öğreneceğiz.
 
@@ -466,7 +466,7 @@ Alt başlıklar:
 
 ### Derhal Durulması Gereken Haller
 URL: https://ehliyet.digital/dersler/arac-teknigi/derhal-durulmasi-gereken-haller/
-Motorun derhal durdurulmasını gerektiren beş hâl: hangi uyarı veya belirtide beklemeden durmak gerekir, nedenleri ve yapılması gerekenler. Hemen öğren.
+Aracın derhal durdurulması gereken 5 durum: yağ basıncı lambası, şarj lambası, motor ısısı, direksiyon ağırlaşması ve fren ikazı. Neden durulur?
 
 Araç kullanırken bazı arıza belirtileri ortaya çıktığında bir an bile beklemeden aracı durdurmak gerekir; aksi halde motor ciddi ve pahalı zararlar görür. Bu bölümde motorun derhal durdurulmasını gerektiren beş durumu, her birinde ne yapılacağını ve sınavda en çok çeldirici olarak sorulan “kontak kapatılır mı kapatılmaz mı?” ayrımını sınav odaklı biçimde öğreneceğiz.
 
@@ -482,7 +482,7 @@ Alt başlıklar:
 
 ### Fren Sistemi
 URL: https://ehliyet.digital/dersler/arac-teknigi/fren-sistemi/
-Fren sistemi: ayak ve el freni farkı, hidrolik fren mantığı, ABS ve ASR sistemleri, fren arızaları ve sınavda çıkan çeldiriciler.
+Ayak frenine basıldığında 4 tekerlek de durur, el freni ise sadece arka tekerlekleri tutar. ABS, ASR, hidrolik fren mantığı ve sınavda çıkan çeldiriciler.
 
 Fren sistemi, araç tekniği dersinin en çok soru gelen ve en çok çeldirici barındıran konularından biridir. Bu bölümde frenin görevini, ayak ve el freni farkını, hidrolik çalışma mantığını, ABS ile ASR sistemlerini, büyük araçlardaki özel fren tiplerini ve en çok sorulan fren arızalarını sınav odaklı biçimde öğreneceğiz.
 
@@ -500,7 +500,7 @@ Alt başlıklar:
 
 ### Güç Aktarma Organları
 URL: https://ehliyet.digital/dersler/arac-teknigi/guc-aktarma-organlari/
-Güç aktarma organları: debriyaj, vites kutusu, şaft, diferansiyel ve aks görevleri ile sık sorulan arıza belirtileri. Sınavda çıkan soruları çöz.
+Araca geri hareket yeteneği kazandıran vites kutusu, şafttan aksa hareketi ileten diferansiyel ve aks. Güç aktarma organları ve sınavda çıkan sorular.
 
 Motorda üretilen gücün tekerleklere kadar nasıl ulaştığı, araç tekniği dersinin en çok soru gelen konularından biridir. Bu bölümde debriyaj, vites kutusu, şaft, diferansiyel, aks ve volanın görevlerini, bu organların sık sorulan arızalarını ve sınavın en sevdiği çeldiricileri sırayla ve sınav odaklı biçimde öğreneceğiz.
 
@@ -535,7 +535,7 @@ Alt başlıklar:
 
 ### Motor Nedir?
 URL: https://ehliyet.digital/dersler/arac-teknigi/motor-nedir/
-Motor nedir: tanımı, enerji ve soğutma tipine göre çeşitleri, dört zamanın sırası ve benzinli ile dizel motor farkları. Konuyu öğrenmek için oku.
+Motor, yakıtın ısı enerjisini mekanik enerjiye çeviren makinedir. Benzinli ve dizel farkı, dört zaman sırası (emme-sıkıştırma-iş-egzoz) ve sınav soruları.
 
 Motor, araç tekniği dersinin en temel ve en çok soru gelen konusudur. Bu ilk bölümde motorun tanımını, enerji türüne, zamanına ve soğutma tipine göre çeşitlerini, dört zamanın sırasını ve benzinli ile dizel motor arasındaki kritik farkları sınav odaklı biçimde öğreneceğiz.
 
@@ -588,7 +588,7 @@ Alt başlıklar:
 
 ### Şarj Sistemi
 URL: https://ehliyet.digital/dersler/arac-teknigi/sarj-sistemi/
-Şarj sistemi: alternatör ve regülatörün görevleri, şarj göstergesinin kırmızı yanmasının anlamı ve akü ile ilgili sık sorulan arızalar.
+Aküyü şarj eden parça alternatördür. Şarj müşürü (göstergesi) kırmızı yanıyorsa alternatör arızalıdır ve araç derhal durdurulmalıdır. Sınav soruları.
 
 Şarj sistemi, araç tekniği dersinde neredeyse her sınavda soru gelen sistemlerden biridir. Bu bölümde şarj sisteminin görevini, alternatör ile regülatörün ne işe yaradığını, şarj göstergesinin kırmızı yanmasının ne anlama geldiğini ve marş motoru, akü, sigorta gibi elemanların rolünü sınav odaklı biçimde öğreneceğiz.
 
@@ -640,7 +640,7 @@ Alt başlıklar:
 
 ### Yağlama Sistemi
 URL: https://ehliyet.digital/dersler/arac-teknigi/yaglama-sistemi/
-Yağlama sistemi: görevleri, parçaları, yağ lambasının kırmızı yanmasının anlamı ve motor yağı değişim aralıkları. Sınavda çıkan bilgileri öğren.
+Yağlama sisteminin amacı sürtünmeyi ve aşınmayı azaltmaktır. Motor yağı yağ kapağından konulur. Yağ lambası, parçaları ve sınavda çıkan sorular.
 
 Yağlama sistemi, araç tekniği dersinde parça isimlerinin, uyarı lambalarının ve bakım aralıklarının en çok sorulduğu konulardan biridir. Bu bölümde yağlama sisteminin görevlerini, parçalarını, yağ lambasının kırmızı yanmasının ne anlama geldiğini, yağ seviyesinin nasıl ve ne zaman ölçüldüğünü ve sınavda tekrarlanan renk ile çeldirici sorularını öğreneceğiz.
 
