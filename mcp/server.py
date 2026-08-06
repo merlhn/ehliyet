@@ -364,11 +364,49 @@ app = Server(
 )
 
 
-async def main():
+async def main_stdio():
     async with stdio_server() as (read_stream, write_stream):
         await app.run(read_stream, write_stream, app.create_initialization_options())
 
 
+async def main_http(host="0.0.0.0", port=8080):
+    """HTTP/SSE transport — remote agent'lar icin."""
+    try:
+        from mcp.server.sse import SseServerTransport
+        from starlette.applications import Starlette
+        from starlette.routing import Route, Mount
+        import uvicorn
+
+        sse = SseServerTransport("/messages/")
+
+        async def handle_sse(request):
+            async with sse.connect_sse(request.scope, request.receive, request._send) as streams:
+                await app.run(streams[0], streams[1], app.create_initialization_options())
+
+        starlette_app = Starlette(
+            routes=[
+                Route("/sse", endpoint=handle_sse),
+                Mount("/messages/", app=sse.handle_post_message),
+            ]
+        )
+        config = uvicorn.Config(starlette_app, host=host, port=port)
+        server = uvicorn.Server(config)
+        print(f"MCP SSE sunucusu baslatildi: http://{host}:{port}/sse")
+        await server.serve()
+    except ImportError:
+        print("HTTP transport icin ek bagimliliklar gerekli:")
+        print("  pip install 'mcp[sse]' starlette uvicorn")
+        raise
+
+
 if __name__ == "__main__":
     import asyncio
-    asyncio.run(main())
+    import sys
+    if "--http" in sys.argv:
+        port = 8080
+        for i, arg in enumerate(sys.argv):
+            if arg == "--port" and i + 1 < len(sys.argv):
+                port = int(sys.argv[i + 1])
+        asyncio.run(main_http(port=port))
+    else:
+        asyncio.run(main_stdio())

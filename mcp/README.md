@@ -99,6 +99,30 @@ Soru ID'sine gore dogru cevabi, ilgili hap bilgileri ve ders linklerini dondurur
 |---|---|---|---|
 | `question_id` | string | Evet | Soru ID'si (ornek: `sinav1-q01`) |
 
+## REST API (alternatif)
+
+MCP yerine dogrudan HTTP ile de erisebilirsiniz:
+
+```
+GET https://ehliyet.digital/api/questions?section=ilk_yardim&count=5
+GET https://ehliyet.digital/api/quick-facts?section=trafik_ve_cevre
+GET https://ehliyet.digital/api/mock-exam
+GET https://ehliyet.digital/api/lesson-summary?section=arac_teknigi&topic=fren
+```
+
+Tum endpoint'ler JSON doner ve CORS aciktir — herhangi bir agent veya uygulama dogrudan kullanabilir.
+
+## HTTP/SSE transport (remote MCP)
+
+Lokal yerine remote olarak calistirmak icin:
+
+```bash
+pip install -r requirements.txt
+python server.py --http --port 8080
+```
+
+Agent'lar `http://host:8080/sse` adresine SSE ile baglanabilir.
+
 ## Ornek kullanim
 
 Bir AI ajanina:
