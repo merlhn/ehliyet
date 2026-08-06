@@ -112,16 +112,33 @@ GET https://ehliyet.digital/api/lesson-summary?section=arac_teknigi&topic=fren
 
 Tum endpoint'ler JSON doner ve CORS aciktir — herhangi bir agent veya uygulama dogrudan kullanabilir.
 
-## HTTP/SSE transport (remote MCP)
+## Remote MCP sunucusu (canlı)
 
-Lokal yerine remote olarak calistirmak icin:
+Sunucu Railway'de host edilmektedir:
+
+```
+SSE endpoint: https://ehliyet-production.up.railway.app/sse
+```
+
+Claude Desktop yapilandirmasi (remote):
+
+```json
+{
+  "mcpServers": {
+    "ehliyet-digital": {
+      "transport": "sse",
+      "url": "https://ehliyet-production.up.railway.app/sse"
+    }
+  }
+}
+```
+
+### Kendi sunucunuzda calistirmak icin
 
 ```bash
 pip install -r requirements.txt
 python server.py --http --port 8080
 ```
-
-Agent'lar `http://host:8080/sse` adresine SSE ile baglanabilir.
 
 ## Ornek kullanim
 

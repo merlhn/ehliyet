@@ -35,6 +35,12 @@ Sorulara, hap bilgilere ve ders özetlerine programatik erişim:
 
 Tüm endpoint'ler JSON döner, CORS açıktır. Baz URL: https://ehliyet.digital
 
+## MCP Sunucusu (AI agent entegrasyonu)
+
+Model Context Protocol ile doğrudan bağlantı:
+- SSE endpoint: https://ehliyet-production.up.railway.app/sse
+- Araçlar: get_practice_questions, get_quick_facts, generate_mock_exam, get_lesson_summary, explain_answer
+
 ## Detaylı içerik
 
 Tüm ders özetlerini içeren genişletilmiş versiyon: [llms-full.txt](https://ehliyet.digital/llms-full.txt)
