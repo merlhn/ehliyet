@@ -401,9 +401,10 @@ async def main_http(host="0.0.0.0", port=8080):
 
 if __name__ == "__main__":
     import asyncio
+    import os
     import sys
     if "--http" in sys.argv:
-        port = 8080
+        port = int(os.environ.get("PORT", "8080"))
         for i, arg in enumerate(sys.argv):
             if arg == "--port" and i + 1 < len(sys.argv):
                 port = int(sys.argv[i + 1])

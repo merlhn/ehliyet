@@ -24,6 +24,17 @@ Site 4 ana ders kategorisi altında 43 konu içerir:
 - [Sınav Konuları](https://ehliyet.digital/ehliyet-sinav-konulari/) — Konu dağılımı ve çalışma rehberi
 - [Direksiyon Sınavı](https://ehliyet.digital/direksiyon-sinavi/) — Direksiyon sınavı bilgileri
 
+## API (makine erişimi)
+
+Sorulara, hap bilgilere ve ders özetlerine programatik erişim:
+
+- `GET /api/questions?section=ilk_yardim&count=5` — Rastgele soru çek
+- `GET /api/quick-facts?section=trafik_ve_cevre` — Hap bilgiler
+- `GET /api/mock-exam` — 50 soruluk deneme sınavı
+- `GET /api/lesson-summary?section=arac_teknigi&topic=fren` — Ders özeti
+
+Tüm endpoint'ler JSON döner, CORS açıktır. Baz URL: https://ehliyet.digital
+
 ## Detaylı içerik
 
 Tüm ders özetlerini içeren genişletilmiş versiyon: [llms-full.txt](https://ehliyet.digital/llms-full.txt)
