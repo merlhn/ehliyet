@@ -44,17 +44,24 @@ LOGO_OBJ = {
 }
 YAYINCI = {
     "@type": "Organization",
+    "@id": f"{BASE}/#organization",
     "name": "ehliyet.digital",
+    "alternateName": ["Ehliyet Digital", "ehliyet digital"],
     "url": f"{BASE}/",
     "logo": LOGO_OBJ,
+    "description": "Ehliyet (sürücü belgesi) sınavına hazırlık için ücretsiz, reklamsız ve bağımsız çalışma platformu.",
+    "foundingDate": "2026",
+    "areaServed": "TR",
+    "knowsAbout": [
+        "ehliyet sınavı", "MTSK e-sınav", "sürücü belgesi",
+        "trafik ve çevre bilgisi", "ilk yardım", "araç tekniği", "trafik adabı",
+    ],
 }
 YAYINCI_EGITIM = {
+    **YAYINCI,
     "@type": ["Organization", "EducationalOrganization"],
-    "name": "ehliyet.digital",
-    "url": f"{BASE}/",
-    "logo": LOGO_OBJ,
 }
-SITE = {"@type": "WebSite", "name": "Ehliyet Sınavı", "url": f"{BASE}/"}
+SITE = {"@type": "WebSite", "name": "ehliyet.digital", "url": f"{BASE}/"}
 
 # Ders kategorileri — Course schema icin
 KATEGORI_ADI = {
