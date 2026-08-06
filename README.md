@@ -1,184 +1,223 @@
 # ehliyet.digital
 
-Ehliyet (MTSK) sınavına hazırlık sitesi. İki ana bölüm var: **ders notları** ve **deneme sınavları**.
+**Türkiye ehliyet (sürücü belgesi) sınavına ücretsiz hazırlık platformu.**
 
-Build adımı yok — tamamen statik HTML/CSS/JS. Herhangi bir statik sunucudan servis edilir.
+MEB MTSK müfredatına uygun 43 ders notu, 76 hap bilgi, 200 çıkmış sınav sorusu ve gerçek formatta deneme sınavları. Reklamsız, açık kaynak.
+
+🌐 **Site:** [ehliyet.digital](https://ehliyet.digital)
+📄 **LLM dizini:** [llms.txt](https://ehliyet.digital/llms.txt) · [llms-full.txt](https://ehliyet.digital/llms-full.txt)
+🔌 **MCP:** [ehliyet-production.up.railway.app/sse](https://ehliyet-production.up.railway.app/sse)
+
+---
+
+## Ne içerir?
+
+| İçerik | Adet | Açıklama |
+|--------|------|----------|
+| Ders notları | 43 | 4 kategoride sınav odaklı konu anlatımı |
+| Hap bilgiler | 76 | Tek cümlelik ezberlenecek kurallar |
+| Atomik özetler | ~370 | Her ders sayfasında makine-okunur bilgi satırları |
+| Sınav soruları | 200 | 4 deneme sınavından çıkmış sorular + cevaplar |
+| Bireysel soru sayfaları | 186 | Her soru kendi URL'inde, cevap + açıklama ile |
+
+### Ders kategorileri
+
+| Kategori | Konu sayısı | Sınav dağılımı |
+|----------|-------------|----------------|
+| İlk Yardım | 12 | 12 soru (%24) |
+| Trafik ve Çevre Bilgisi | 11 | 23 soru (%46) |
+| Araç Tekniği (Motor) | 15 | 9 soru (%18) |
+| Trafik Adabı | 5 | 6 soru (%12) |
+
+### Sınav formatı
+
+- 50 soru, 45 dakika
+- Her doğru cevap 2 puan, yanlış doğruyu götürmez
+- Geçme notu: 70 puan (en az 35 doğru)
+
+---
+
+## API
+
+Tüm verilere programatik erişim — CORS açık, kimlik doğrulama yok.
+
+### REST API (Vercel)
+
+```bash
+# 5 rastgele İlk Yardım sorusu
+curl "https://ehliyet.digital/api/questions?section=ilk_yardim&count=5"
+
+# Trafik ve Çevre hap bilgileri
+curl "https://ehliyet.digital/api/quick-facts?section=trafik_ve_cevre"
+
+# 50 soruluk deneme sınavı (gerçek dağılımla)
+curl "https://ehliyet.digital/api/mock-exam"
+
+# Fren sistemi ders özeti
+curl "https://ehliyet.digital/api/lesson-summary?section=arac_teknigi&topic=fren"
+```
+
+**Endpoint'ler:**
+
+| Endpoint | Parametreler | Açıklama |
+|----------|-------------|----------|
+| `/api/questions` | `section`, `count` | Rastgele soru döner |
+| `/api/quick-facts` | `section` | Hap bilgiler |
+| `/api/mock-exam` | — | 50 soruluk tam deneme |
+| `/api/lesson-summary` | `section`, `topic` | Ders atomik özeti |
+
+`section` değerleri: `ilk_yardim`, `trafik_ve_cevre`, `arac_teknigi`, `trafik_adabi`, `all`
+
+### Örnek yanıt
+
+```json
+{
+  "count": 1,
+  "section": "ilk_yardim",
+  "source": "ehliyet.digital",
+  "questions": [
+    {
+      "id": "sinav1-q02",
+      "exam": "Sınav 1",
+      "section": "İlk Yardım",
+      "stem": "Yetişkinlerde temel yaşam desteği ile ilgili uygulamalardan hangisi doğrudur?",
+      "options": [
+        "A) Göğüs kemiği 3 cm aşağı inecek şekilde bası yapılması",
+        "B) Temel yaşam desteğine yapay solunum ile başlanması",
+        "C) 30 kalp masajı, 2 yapay solunum şeklinde uygulanması",
+        "D) Kalp masajı hızının dakikada 30 bası olacak şekilde ayarlanması"
+      ],
+      "correct_index": 2,
+      "correct_letter": "C",
+      "correct_text": "30 kalp masajı, 2 yapay solunum şeklinde uygulanması",
+      "has_image": false
+    }
+  ]
+}
+```
+
+---
+
+## MCP Sunucusu
+
+AI agent'lar Model Context Protocol ile doğrudan bağlanabilir.
+
+**Remote (canlı):**
+```
+SSE endpoint: https://ehliyet-production.up.railway.app/sse
+```
+
+**Claude Desktop yapılandırması:**
+```json
+{
+  "mcpServers": {
+    "ehliyet-digital": {
+      "transport": "sse",
+      "url": "https://ehliyet-production.up.railway.app/sse"
+    }
+  }
+}
+```
+
+**Lokal çalıştırma:**
+```bash
+cd mcp
+pip install -r requirements.txt
+python server.py          # stdio (Claude Desktop/Code)
+python server.py --http   # HTTP/SSE (remote agent'lar)
+```
+
+**Araçlar:**
+
+| Araç | Açıklama |
+|------|----------|
+| `get_practice_questions(section, count)` | Rastgele soru döner |
+| `get_quick_facts(section)` | Hap bilgiler |
+| `generate_mock_exam()` | 50 soruluk deneme sınavı |
+| `get_lesson_summary(section, topic)` | Ders atomik özeti |
+| `explain_answer(question_id)` | Soru açıklaması + ilgili dersler |
+
+---
+
+## Veri dosyaları
+
+Makine-okunur JSON formatında:
+
+| Dosya | İçerik |
+|-------|--------|
+| [`mcp/data/questions.json`](mcp/data/questions.json) | 200 soru (4 sınav) |
+| [`mcp/data/quick-facts.json`](mcp/data/quick-facts.json) | 76 hap bilgi |
+| [`mcp/data/lesson-summaries.json`](mcp/data/lesson-summaries.json) | 43 ders, ~370 atomik bilgi |
+
+---
+
+## Teknoloji
+
+- **Frontend:** Statik HTML/CSS/JS — build adımı yok, SSR
+- **Hosting:** Vercel (site) + Railway (MCP)
+- **Auth:** Firebase (Google OAuth)
+- **Veritabanı:** Firestore (yalnızca kullanıcı profili ve sınav sonuçları)
+- **Analytics:** GA4 (custom event'ler: sign_up, login, exam_start, exam_complete, exam_abandon, feedback_submit)
+
+---
 
 ## Yerelde çalıştırma
 
 ```bash
 python3 -m http.server 8000
+# http://localhost:8000
 ```
 
-Ardından http://localhost:8000
+---
 
-## Klasör yapısı
+## Proje yapısı
 
 ```
-index.html                          açılış sayfası
-dersler/                            ders listesi (hub)
-  <konu>/<slug>/index.html          43 ders notu
-hap-bilgiler/                       hap bilgiler (hub) — tools/hap-uret.py üretir; kaynak: soru bankaları
-  <konu>/index.html                 ders başına sınav odaklı kısa bilgiler
-panel/                              giriş gerektiren alan (indekslenmez)
-  sinav-N/index.html                testin kendisi
-  sinav-N/kilavuz/index.html        sınavın giriş kapısı
-assets/
-  js/questions-N.js                 sınav soru bankaları
-  js/lessons-nav.js                 ders sıralaması + sayfa içi içindekiler
-  js/search-index.js                site içi arama verisi
-  js/feedback.js
-  css/kilavuz.css
-  kilavuz-govde.html                kılavuz metni (tüm sınavlarda ortak)
-  img/sinav-N/                      sınav görselleri ve videoları
-hakkinda/ iletisim/ gizlilik/ kullanim-sartlari/
+├── index.html                  Ana sayfa
+├── dersler/                    43 ders notu (4 kategori)
+├── hap-bilgiler/               76 hap bilgi (4 kategori)
+├── ehliyet-sinav-sorulari/     20 örnek soru
+├── soru/                       186 bireysel soru sayfası
+├── panel/                      Giriş gerektiren alan (sınavlar)
+├── api/                        REST API (Vercel serverless)
+├── mcp/                        MCP sunucusu + veri dosyaları
+├── assets/js/questions-*.js    Soru bankaları (4 sınav)
+├── tools/                      Üretici scriptler
+│   ├── schema-uret.py          JSON-LD yapısal veri
+│   ├── sitemap-uret.py         sitemap.xml
+│   ├── llms-uret.py            llms-full.txt
+│   ├── feed-uret.py            RSS feed + discovery link
+│   ├── soru-sayfa-uret.py      Bireysel soru sayfaları
+│   ├── atomik-ekle.py          Ders atomik özetleri
+│   ├── cevap-ac.py             Soru cevaplarını HTML'e taşı
+│   └── mcp-veri-uret.py        MCP JSON veri dosyaları
+├── llms.txt                    AI/LLM site dizini
+├── llms-full.txt               Detaylı içerik dizini
+├── feed.xml                    RSS feed
+├── sitemap.xml                 251 URL
+├── robots.txt                  AI tarayıcıları açık
+└── 404.html                    Özel hata sayfası
 ```
 
-## Konvansiyonlar
+---
 
-- **URL'ler kebab-case ve ASCII.** Türkçe karakter kullanılmaz; tarayıcı bunları yüzde-kodlar ve paylaşımda sorun çıkarır.
-- **Ders numarası URL'de yer almaz.** Sıralama `assets/js/lessons-nav.js` içindeki `COURSES` dizisinden gelir; böylece araya ders eklendiğinde URL'ler değişmez.
-- **Kılavuz metni tek kaynaktadır.** Her sınavın kılavuz sayfası `assets/kilavuz-govde.html` dosyasını çeker; sınav sayısı artınca metin çoğalmaz.
+## İçerik kaynakları
 
-## Hesap ve veritabanı
+- MEB Motorlu Taşıt Sürücüleri Kursu (MTSK) müfredatı
+- 2918 sayılı Karayolları Trafik Kanunu ve ilgili yönetmelikler
+- Türkiye Kızılay Derneği ilk yardım eğitim materyalleri
+- Gerçek MTSK e-sınavlarında çıkmış sorular
 
-Firebase projesi `ehliyet-52d4d`; giriş yalnızca Google ile, veritabanı Firestore (`eur3`).
-Veritabanında **içerik tutulmaz** — sadece profil, sınav sonuçları ve sınav yetkileri.
+---
 
-- `assets/js/firebase.js` — başlatma ve veri yardımcıları. İçindeki config değerleri gizli değildir; erişimi koruyan şey `firestore.rules` ve sunucu tarafındaki yetki kontrolüdür.
-- `firestore.rules` — kullanıcı yalnızca kendi verisine erişir. **Yetki kayıtlarına istemci yazamaz**; yazma yalnızca Admin SDK ile sunucu tarafında yapılır. Kurallar konsolda `Firestore → Rules` altından yayınlanır.
-- `vercel.json` — `/__/auth/*` isteklerini Firebase'e proxy'ler. Bu rewrite, `firebaseConfig.authDomain` değerinin `ehliyet.digital` olabilmesi için **zorunludur**; olmazsa Google giriş ekranında `ehliyet-52d4d.firebaseapp.com` yazar. İkisi birlikte değiştirilmeli, tek başına biri girişi kırar.
+## Lisans
 
-## Yeni ders ekleme
+Bu proje açık kaynak olarak yayınlanmıştır. İçerikler MEB MTSK müfredatından derlenmiştir.
 
-`ders-notu` agent'ı kullanılır (`.claude/agents/ders-notu.md`). Üç yere kayıt gerekir: ana sayfa akordeonu, `lessons-nav.js` ve `search-index.js`.
+---
 
-## Yeni deneme sınavı ekleme
+## İletişim
 
-Kaynaklar `../Sınav_N/` altında toplanır (soru ekran görüntüleri, soru materyalleri, cevap anahtarı PDF'i); bunlardan `assets/js/questions-N.js` ve `deneme-sinavlari/sinav-N/` üretilir. Cevaplar yayına alınmadan önce anahtarla programatik olarak karşılaştırılmalıdır.
-
-## SEO ve ölçümleme
-
-- `robots.txt` — `/panel/` hariç her şey taranabilir, sitemap'i işaret eder.
-- `sitemap.xml` — **elle düzenlenmez.** Ders ya da sınav eklendikten sonra
-  `python3 tools/sitemap-uret.py` çalıştırılır; script `index.html` dosyalarını
-  tarar, `panel/` ve `noindex` işaretli sayfaları atlar, `lastmod` değerini son
-  commit tarihinden alır.
-- **GA4 etiketi her sayfanın `<head>`'inde inline durur**, ayrı bir js dosyasında
-  değil. Sebebi: Search Console'un Analytics ile doğrulama yöntemi sayfanın ham
-  HTML'ine bakar, JavaScript çalıştırmaz — etiket dinamik yüklenirse doğrulama
-  başarısız olur. Ölçüm kimliği değişirse 55 dosyada birden değiştirilir:
-
-  ```bash
-  grep -rl 'G-34HL041XN0' --include='*.html' . | xargs sed -i '' 's/G-34HL041XN0/G-YENIID/g'
-  ```
-
-## Favicon
-
-Kaynak `assets/img/marka/logo.png`. Üretilen dosyalar (`favicon.ico`,
-`apple-touch-icon.png`, `icon-192.png`, `icon-512.png`) **elle düzenlenmez**;
-logo değişirse `python3 tools/favicon-uret.py` tekrar çalıştırılır.
-
-Logo şeffaf zeminde ve neredeyse siyah; olduğu gibi kullanılsaydı tarayıcının
-koyu tema sekme şeridinde kaybolurdu. Bu yüzden beyaz yuvarlatılmış bir zemine
-oturtuluyor — kontrastı döşemenin kendisi sağlıyor.
-
-İnce çizgili kart detayı 16px'te okunmuyor; bu logonun doğasından ve kabul
-edilmiş bir sınır. 32px ve üstünde sorun yok. Keskinlik istenirse çözüm
-favicon'a özel sadeleştirilmiş bir işaret çizmek olur.
-
-## Kural: giriş sonrası hiçbir sayfa indekslenmez
-
-Kullanıcı giriş yaptıktan sonra gördüğü hiçbir sayfa arama sonuçlarında yer
-almaz. Üç katman birden gerekir:
-
-1. sayfada `<meta name="robots" content="noindex">`
-2. `robots.txt` içinde dizin `Disallow`
-3. `sitemap.xml` içinde adres bulunmaması
-
-Üçü de gerekli. **robots.txt tek başına yetmez** — o yalnızca taramayı
-engeller, indekslemeyi değil; sayfaya dışarıdan link verilirse Google adresi
-yine listeleyebilir. İndekslemeyi durduran şey `noindex` etiketidir.
-
-`python3 tools/index-kontrol.py` bu üç katmanı doğrular ve ihlal varsa 1 ile
-çıkar. Yeni kapılı sayfa eklendikten sonra çalıştırılır. Yeni bir yetki
-mekanizması gelirse script içindeki `KAPI_ISARETLERI` listesine eklenmeli,
-yoksa kontrol o sayfayı gözden kaçırır.
-
-## Meta açıklama ve paylaşım önizlemesi
-
-Her genel sayfada `<title>` → `meta description` → `canonical` → Open Graph
-bloğu sırası korunur. OG alanları açıklama ve canonical'dan türetilir; `og:url`
-ile `canonical` **birebir aynı olmalıdır**, ayrışırsa Google yinelenen sayfa
-uyarısı verir.
-
-`og:type` ders notlarında `article`, hub ve kurumsal sayfalarda `website`.
-
-Paylaşım görseli `og-image.png` (1200×630), `python3 tools/og-gorsel-uret.py`
-ile üretilir, elle düzenlenmez. Görseldeki iddialar sitenin kendi metinlerinden
-doğrulanabilir olmalı — örneğin "üyelik gerekmez" **yazılamaz**, deneme sınavı
-`/panel/` altında ve giriş istiyor.
-
-Panel sayfalarına OG etiketi eklenmez; kapalı içeriğin paylaşım önizlemesi
-olmaz.
-
-## H1, yapısal veri ve başlık uzunluğu
-
-**H1.** Her sayfada tam olarak bir H1 bulunur. Ders notlarında bu, `.ders-meta`
-içindeki konu adıdır — görsel olarak `.ders-meta b` ile aynı görünmesi için
-tarayıcının varsayılan h1 stilleri sıfırlanır. Yani H1 eklemek tasarımı
-değiştirmez; zaten başlık gibi görünen öğenin etiketi doğru olur.
-
-**Yapısal veri.** `python3 tools/schema-uret.py` ile üretilir, elle
-düzenlenmez; işaretçiler arasındaki blok silinip yeniden yazıldığı için tekrar
-tekrar çalıştırılabilir. Veriler sayfanın kendisinden (h1, description,
-canonical) okunur, ikinci bir kaynak tutulmaz.
-
-Bilinçli olarak kapsam dışı bırakılanlar script'in başında gerekçesiyle yazılı:
-FAQPage (Google 2023'te dar bir otorite grubuna kısıtladı, yanlış işaretleme
-manuel eylem riski), SearchAction (site içi arama istemci tarafında, sonuç
-URL'i üretmiyor), ders seviyesi kırıntı (`/dersler/ilk-yardim/` diye bir sayfa
-yok, 404 döner — ders adı `articleSection` olarak işaretlenir).
-
-**Başlık uzunluğu.** `<title>` 60 karakteri aşmamalı, aşarsa arama sonucunda
-ortadan kesilir. Aşan başlıklarda `Konu N:` kısmı atılır — arama değeri yok,
-numara sayfada ve yan menüde zaten görünür. `og:title` ve `twitter:title`
-`<title>` ile birebir aynı kalmalı.
-
-## Firestore tembel yüklenir
-
-`firebase.js` Firestore'u **statik import etmez**, ilk ihtiyaç anında dinamik
-indirir (`fs()`). Sebep: SDK 117 KB ve yalnızca profil ile deneme işlemlerinde
-gerekiyor — bunların hepsi kullanıcı giriş yaptıktan sonra çalışıyor. Statikken
-43 ders notu dahil her genel sayfa açılışta bu yükü boşuna indiriyordu.
-
-Auth statik kalır: başlıktaki giriş durumu sayfa açılır açılmaz doğru
-çizilmeli, geciktirilirse görünür titreme olur.
-
-`db` dışarı verilmez — SDK henüz inmemiş olabileceği için eş zamanlı okunamaz.
-Firestore'a ihtiyaç duyan her fonksiyon `await fs()` ile başlar. Yeni bir
-Firestore fonksiyonu eklerken destructure listesine gerekli isimleri yazmayı
-unutma; eksik isim ancak kullanıcı giriş yaptığında patlar.
-
-Aynı gerekçe `panel-kabuk.js` için de geçerli, o da firebase.js'i dinamik
-import ediyor.
-
-## Deneme sınavlarına erişim
-
-Deneme sınavlarına **yalnızca panelden** erişilir (`/panel/?g=sinavlar`).
-Public sitede sınav vitrini yoktur; header bağlantısı ve `/deneme-sinavlari/`
-sayfası kaldırıldı. Sayfa ileride yeniden yapılacak.
-
-`vercel.json` içindeki `/deneme-sinavlari/*` yönlendirmesi **bilerek geçici**
-(`permanent: false` → 307). Kalıcı olsaydı tarayıcılar ve Google adresi
-önbelleğe alır, sayfa aynı adreste geri geldiğinde eski yönlendirme takılı
-kalırdı.
-
-**Girişe zorlayan bağlantılar.** `auth-ui.js` içindeki `[data-korumali]`
-kancası: bağlantıya tıklanınca giriş yapılmışsa `href`'e gidilir, yapılmamışsa
-önce Google girişi açılır. Karar vermeden önce oturum durumunun netleşmesi
-beklenir; yoksa giriş yapmış kullanıcıya boşuna giriş penceresi açılır.
-
-`href` gerçek bir adres olarak bırakılır. JavaScript çalışmazsa bağlantı yine
-panele gider ve panel kabuğu oturum yoksa ana sayfaya atar — korumayı sağlayan
-şey bu kanca değil, panel kabuğu ve Firestore kuralları.
+- **Site:** [ehliyet.digital](https://ehliyet.digital)
+- **Hakkında:** [ehliyet.digital/hakkinda](https://ehliyet.digital/hakkinda/)
+- **GitHub:** [github.com/merlhn/ehliyet](https://github.com/merlhn/ehliyet)
