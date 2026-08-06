@@ -56,6 +56,9 @@ YAYINCI = {
         "ehliyet sınavı", "MTSK e-sınav", "sürücü belgesi",
         "trafik ve çevre bilgisi", "ilk yardım", "araç tekniği", "trafik adabı",
     ],
+    "sameAs": [
+        "https://github.com/merlhn/ehliyet",
+    ],
 }
 YAYINCI_EGITIM = {
     **YAYINCI,
