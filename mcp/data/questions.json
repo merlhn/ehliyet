@@ -1,0 +1,3202 @@
+[
+  {
+    "id": "sinav1-q01",
+    "exam": "Sınav 1",
+    "section": "İlk Yardım",
+    "stem": "I. Ambulans ekiplerince müdahale yapılması\nII. Olay yerinde, ilk yardımcı tarafından temel yaşam desteği yapılması\nIII. Hastane acil servislerinde müdahale yapılması\nIV. Sağlık kuruluşuna haber verilmesi\n\nHayat kurtarma zinciri halkalarının doğru sıralaması hangisinde verilmiştir?",
+    "options": [
+      "A) I - III - II - IV",
+      "B) II - III - I - IV",
+      "C) III - II - IV - I",
+      "D) IV - II - I - III"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "IV - II - I - III",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q02",
+    "exam": "Sınav 1",
+    "section": "İlk Yardım",
+    "stem": "Yetişkinlerde temel yaşam desteği ile ilgili uygulamalardan hangisi doğrudur?",
+    "options": [
+      "A) Göğüs kemiği 3 cm aşağı inecek şekilde bası yapılması",
+      "B) Temel yaşam desteğine yapay solunum ile başlanması",
+      "C) 30 kalp masajı, 2 yapay solunum şeklinde uygulanması",
+      "D) Kalp masajı hızının dakikada 30 bası olacak şekilde ayarlanması"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "30 kalp masajı, 2 yapay solunum şeklinde uygulanması",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q03",
+    "exam": "Sınav 1",
+    "section": "İlk Yardım",
+    "stem": "Trafik kazası sonucu araç dışına fırlayan bir bebeğin solunumunun olmadığını tespit eden ilk yardımcı, 2 kurtarıcı solunum verdikten sonra kalp basısı uygulamak için bebeğe pozisyon vermiştir.\n\nİlk yardımcı, bir elinin orta ve yüzük parmağını hangi bölgeye yerleştirmelidir?",
+    "options": [
+      "A) I",
+      "B) II",
+      "C) III",
+      "D) IV"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "III",
+    "has_image": true
+  },
+  {
+    "id": "sinav1-q04",
+    "exam": "Sınav 1",
+    "section": "İlk Yardım",
+    "stem": "• Bir el alna, diğer elin iki parmağı çene kemiğinin üzerine yerleştirilir.\n• Alından bastırılıp çeneden kaldırılarak baş geriye doğru itilir.\n\nUygulama basamakları verilen ve kazazedenin hava yolunu açmak için kullanılan pozisyon hangisidir?",
+    "options": [
+      "A) Şok",
+      "B) Yarı oturuş",
+      "C) Baş geri-çene yukarı",
+      "D) Yarı yüzükoyun-yan yatış"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Baş geri-çene yukarı",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q05",
+    "exam": "Sınav 1",
+    "section": "İlk Yardım",
+    "stem": "Görseldeki kanama türünde yaralıya ilk yardım olarak hangisinin yapılması yanlıştır?",
+    "options": [
+      "A) Kanayan bölgeyi yukarı kaldırmak",
+      "B) Kanayan yer üzerine temiz bir bez koyarak baskı uygulamak",
+      "C) Kanayan yere en uzak olan basınç noktasına elle baskı uygulamak",
+      "D) Yara üzerindeki bez kaldırılmadan bandaj ile sararak baskı uygulamak"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Kanayan yere en uzak olan basınç noktasına elle baskı uygulamak",
+    "has_image": true
+  },
+  {
+    "id": "sinav1-q06",
+    "exam": "Sınav 1",
+    "section": "İlk Yardım",
+    "stem": "Görseldeki tespit yöntemi hangi kemiğin kırılması durumunda uygulanır?",
+    "options": [
+      "A) Pazı",
+      "B) Boyun",
+      "C) Omuz",
+      "D) Köprücük"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Köprücük",
+    "has_image": true
+  },
+  {
+    "id": "sinav1-q07",
+    "exam": "Sınav 1",
+    "section": "İlk Yardım",
+    "stem": "Açık kırıkla ilgili hangisi söylenemez?",
+    "options": [
+      "A) Kan kaybı olur.",
+      "B) Deri bütünlüğü bozulmaz.",
+      "C) Enfeksiyon tehlikesi yüksektir.",
+      "D) Kemik bütünlüğü bozulur."
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Deri bütünlüğü bozulmaz.",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q08",
+    "exam": "Sınav 1",
+    "section": "İlk Yardım",
+    "stem": "Görseldeki pozisyon hangi durumdaki yaralıya uygulanır?",
+    "options": [
+      "A) Bilinci kapalı, solunum ve nabzı olan",
+      "B) Bacak bölgesinde deri ve kemik bütünlüğü bozulmuş olan",
+      "C) Karın bölgesinde delici cisim bulunan",
+      "D) Kulak ve burun kanaması olan"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Bilinci kapalı, solunum ve nabzı olan",
+    "has_image": true
+  },
+  {
+    "id": "sinav1-q09",
+    "exam": "Sınav 1",
+    "section": "İlk Yardım",
+    "stem": "I. Vücudu sıkan giysiler gevşetilir.\nII. Sırtüstü yatırılarak ayakları 45 cm kaldırılır.\nIII. Kusma varsa mide içeriğini yutmaması için yarı oturur pozisyonda tutulur.\nIV. Solunum yolu açıklığı kontrol edilir ve açıklığın korunması sağlanır.\n\nNumaralanmış ifadelerden hangileri bayılmış olan kazazedeye yapılması gereken ilk yardım uygulamalarındandır?",
+    "options": [
+      "A) I ve IV",
+      "B) II ve III",
+      "C) I, III ve IV",
+      "D) I, II, III ve IV"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "I ve IV",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q10",
+    "exam": "Sınav 1",
+    "section": "İlk Yardım",
+    "stem": "Kaza yapmış bir aracı gören ilk yardımcı, kendisinin ve çevrenin güvenliğini sağladıktan sonra araç sürücüsünün bilincinin kapalı, solunumunun olmadığını ve kazazedenin ayaklarının pedala sıkışmamış olduğunu tespit etmiştir.\n\nBuna göre, ilk yardımcının kazazedeyi araç içerisinden çıkarırken uygulaması gereken doğru teknik hangisidir? (Rentek manevrası)",
+    "options": [
+      "A) A",
+      "B) B",
+      "C) C",
+      "D) D"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "B",
+    "has_image": true
+  },
+  {
+    "id": "sinav1-q11",
+    "exam": "Sınav 1",
+    "section": "İlk Yardım",
+    "stem": "Bir kazazedenin taşınmasında, uyulması gereken genel kurallardan hangisi doğrudur?",
+    "options": [
+      "A) Kazazedenin baş-boyun-gövde ekseni esas alınarak en az 6 destek noktasından kavranması",
+      "B) Kazazedenin mümkün olduğunca çok hareket ettirilmesi",
+      "C) İlk yardımcının kalkarken ağırlığını karın kaslarına vermesi",
+      "D) İlk yardımcının kendi sağlığını riske atması"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Kazazedenin baş-boyun-gövde ekseni esas alınarak en az 6 destek noktasından kavranması",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q12",
+    "exam": "Sınav 1",
+    "section": "Trafik ve Çevre",
+    "stem": "Trafik kurallarına uymama eğiliminde olan bir sürücünün hangi davranışı gösterme olasılığı yüksektir?",
+    "options": [
+      "A) Hız sınırına uyma",
+      "B) Yayaya yol verme",
+      "C) Trafik levhalarını fark etme",
+      "D) Sürekli şerit değiştirerek araç kullanma"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Sürekli şerit değiştirerek araç kullanma",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q13",
+    "exam": "Sınav 1",
+    "section": "Trafik ve Çevre",
+    "stem": "Yapım ve bakımından sorumlu olduğu kara yollarında, İçişleri Bakanlığının uygun görüşü alınmak suretiyle, Kara Yolları Trafik Yönetmeliği'nde belirlenen hız sınırlarının üstünde veya altında hız sınırları belirlemek ve işaretlemek hangi kurumun görev ve yetkisidir?",
+    "options": [
+      "A) Sağlık Bakanlığının",
+      "B) Emniyet Genel Müdürlüğünün",
+      "C) Kara Yolları Genel Müdürlüğünün",
+      "D) Millî Eğitim Bakanlığının"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Kara Yolları Genel Müdürlüğünün",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q14",
+    "exam": "Sınav 1",
+    "section": "Trafik ve Çevre",
+    "stem": "Aralıklı yanıp sönen kırmızı ışık, trafik işaretlerinden hangisi ile aynı anlamdadır?",
+    "options": [
+      "A) A",
+      "B) B",
+      "C) C",
+      "D) D"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "A",
+    "has_image": true
+  },
+  {
+    "id": "sinav1-q15",
+    "exam": "Sınav 1",
+    "section": "Trafik ve Çevre",
+    "stem": "Görseldeki mavi renkli aracın sürücüsü nasıl davranmalıdır?",
+    "options": [
+      "A) En sol şeride geçmeli",
+      "B) Yavaşlayarak sağ şeride girmeli",
+      "C) Hızlanarak bulunduğu şeritte devam etmeli",
+      "D) Kırmızı renkli aracı uyararak yavaşlamasını sağlamalı"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Yavaşlayarak sağ şeride girmeli",
+    "has_image": true
+  },
+  {
+    "id": "sinav1-q16",
+    "exam": "Sınav 1",
+    "section": "Trafik ve Çevre",
+    "stem": "Hangisi \"köprü yaklaşımı\" levhasıdır?",
+    "options": [
+      "A) A",
+      "B) B",
+      "C) C",
+      "D) D"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "D",
+    "has_image": true
+  },
+  {
+    "id": "sinav1-q17",
+    "exam": "Sınav 1",
+    "section": "Trafik ve Çevre",
+    "stem": "I. Yükün hasar görmesi\nII. Direksiyon hâkimiyetinin kaybolması\nIII. Araç aksının kırılması veya amortisörlerin arızalanması\n\nGörseldeki sürücü trafik işaretini fark etmeden yoluna devam ederse numaralanmış ifadelerden hangilerinin olma ihtimali vardır?",
+    "options": [
+      "A) I ve II",
+      "B) I ve III",
+      "C) II ve III",
+      "D) I, II ve III"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "I, II ve III",
+    "has_image": true
+  },
+  {
+    "id": "sinav1-q18",
+    "exam": "Sınav 1",
+    "section": "Trafik ve Çevre",
+    "stem": "Sürücünün hangisini yapması kural ihlali sayılır?",
+    "options": [
+      "A) Üç şeritli ve iki yönlü yollarda sağ şeritten gitmesi",
+      "B) Aracın cinsine ve hızına uygun olan şeridi kullanması",
+      "C) Geçme, dönme gibi mecburi hâller dışında şerit değiştirmesi",
+      "D) Şerit değiştirmeden önce, gireceği şeritteki araçların güvenle geçişlerini beklemesi"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Geçme, dönme gibi mecburi hâller dışında şerit değiştirmesi",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q19",
+    "exam": "Sınav 1",
+    "section": "Trafik ve Çevre",
+    "stem": "Görseldeki kırmızı renkli aracın sürücüsü nasıl davranmalıdır?",
+    "options": [
+      "A) Sol şeride geçip beklemeli",
+      "B) Önündeki aracın geçişini beklemeli",
+      "C) Önündeki aracı acele etmesi için uyarmalı",
+      "D) Sol şeride geçip yoluna devam etmeli"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Önündeki aracın geçişini beklemeli",
+    "has_image": true
+  },
+  {
+    "id": "sinav1-q20",
+    "exam": "Sınav 1",
+    "section": "Trafik ve Çevre",
+    "stem": "Trafik kuralının ihlal edildiği tarihten geriye doğru bir yıl içinde, toplam 100 ceza puanını ilk defa aştığı tespit edilen sürücülerin sürücü belgesi kaç ay süre ile geri alınır?",
+    "options": [
+      "A) 2",
+      "B) 3",
+      "C) 6",
+      "D) 12"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "2",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q21",
+    "exam": "Sınav 1",
+    "section": "Trafik ve Çevre",
+    "stem": "I. Can ve mal güvenliğini tehlikeye attığı\nII. İleri sürüş tekniklerine sahip olduğu\nIII. Şerit takip kurallarına uyduğu\nIV. Geçme kurallarına uymadığı\n\nMotosiklet sürücüsü için numaralanmış ifadelerden hangileri kesinlikle söylenebilir?",
+    "options": [
+      "A) I ve II",
+      "B) I ve IV",
+      "C) II ve III",
+      "D) III ve IV"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "I ve IV",
+    "has_image": true
+  },
+  {
+    "id": "sinav1-q22",
+    "exam": "Sınav 1",
+    "section": "Trafik ve Çevre",
+    "stem": "Arkadan çarpma sonucunda meydana gelen trafik kazalarının en önemli sebebi hangisidir?",
+    "options": [
+      "A) Takip mesafesi kuralına uyulmaması",
+      "B) Görüş mesafesinin kötü olması",
+      "C) Öndeki aracın durması",
+      "D) Havanın yağışlı olması"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Takip mesafesi kuralına uyulmaması",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q23",
+    "exam": "Sınav 1",
+    "section": "Trafik ve Çevre",
+    "stem": "Videodaki kazayla ilgili hangisi kesinlikle söylenir?",
+    "options": [
+      "A) Yeşil araç sürücüsünün ani fren yapması kazaya sebep olmuştur.",
+      "B) Mavi araç sürücüsünün hatalı geçme yapması kazaya sebep olmuştur.",
+      "C) Araç sürücüleri takip mesafesine uymaktadır.",
+      "D) Kaza, iklim şartlarına bağlı olarak meydana gelmiştir."
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Mavi araç sürücüsünün hatalı geçme yapması kazaya sebep olmuştur.",
+    "has_image": true
+  },
+  {
+    "id": "sinav1-q24",
+    "exam": "Sınav 1",
+    "section": "Trafik ve Çevre",
+    "stem": "Görselde iki yönlü ve üç şeritli kara yolu bölümünde seyreden araçlar verilmiştir.\n\nYol çizgilerine göre hangi numaralı araç sürücüleri hatalı sollama yapmaktadır?",
+    "options": [
+      "A) 1 ve 2",
+      "B) 1 ve 3",
+      "C) 2 ve 3",
+      "D) 1, 2 ve 3"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "1 ve 2",
+    "has_image": true
+  },
+  {
+    "id": "sinav1-q25",
+    "exam": "Sınav 1",
+    "section": "Trafik ve Çevre",
+    "stem": "Videoya göre, beyaz otomobilin sürücüsü için hangisi kesinlikle söylenir?",
+    "options": [
+      "A) Uyuşturucu veya uyarıcı madde etkisinde araç kullandığı",
+      "B) Uykusuz ve yorgun olarak araç kullandığı",
+      "C) Şerit takip ve manevra kurallarına uymadığı",
+      "D) İleri sürüş tekniklerine uygun araç kullandığı"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Şerit takip ve manevra kurallarına uymadığı",
+    "has_image": true
+  },
+  {
+    "id": "sinav1-q26",
+    "exam": "Sınav 1",
+    "section": "Trafik ve Çevre",
+    "stem": "Videoya göre, sürücü nasıl bir tehlikenin olabileceğini düşünmelidir?",
+    "options": [
+      "A) Rüzgar nedeniyle direksiyon hakimiyetini kaybedebileceğini",
+      "B) Orta şeritteki otomobilin ani fren yapabileceğini",
+      "C) Bir aracın benzin istasyonundan yola çıkabileceğini",
+      "D) Yolun ilerisinde trafik denetimi yapılabileceğini"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Bir aracın benzin istasyonundan yola çıkabileceğini",
+    "has_image": true
+  },
+  {
+    "id": "sinav1-q27",
+    "exam": "Sınav 1",
+    "section": "Trafik ve Çevre",
+    "stem": "I. Güvenlik güçlerine ait araçlar\nII. Organ ve doku nakli yapan araçlar\nIII. İtfaiye araçları ile benzeri acil müdahale araçları\nIV. Ambulans ve özel amaçlı taşıtlarla yaralı ve acil hasta taşıyan diğer araçlar\n\nVerilen araçların geçiş üstünlüğünü kullanmadaki doğru sıralaması hangisidir?",
+    "options": [
+      "A) II - III - IV - I",
+      "B) III - IV - I - II",
+      "C) IV - III - I - II",
+      "D) IV - II - III - I"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "IV - II - III - I",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q28",
+    "exam": "Sınav 1",
+    "section": "Trafik ve Çevre",
+    "stem": "Araç sürücülerinin duraklanan veya park edilen yerden çıkarken;\nI. ışıkla veya kolla çıkış işareti vermeleri,\nII. araçlarını ve araçların etrafını kontrol etmeleri,\nIII. yoldan geçen araçları ikaz ederek durdurmaları,\nIV. görüş alanları dışında kalan yerler varsa gözcü bulundurmaları mecburidir.\n\nNumaralanmış bilgilerden hangileri doğrudur?",
+    "options": [
+      "A) I ve III",
+      "B) I, II ve IV",
+      "C) II, III ve IV",
+      "D) I, II, III ve IV"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "I, II ve IV",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q29",
+    "exam": "Sınav 1",
+    "section": "Trafik ve Çevre",
+    "stem": "• Trafik işaretiyle yasaklanmış olan yerlerde\n• Belirlenmiş yangın musluklarına her iki yönden 5 metre mesafe içinde\n• Yerleşim yeri içinde kavşaklara ve bağlantı yollarına 5 metre mesafe içinde\n\nVerilen yerlerde hangisi yasaktır?",
+    "options": [
+      "A) Durmak",
+      "B) Duraklamak",
+      "C) Hızı azaltmak",
+      "D) Vites yükseltmek"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Duraklamak",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q30",
+    "exam": "Sınav 1",
+    "section": "Trafik ve Çevre",
+    "stem": "I. Yolcuların koruyucu tertibat kullanması\nII. Kasanın yan ve arka kapaklarının kapalı olması\nIII. Yüklerin sağlam olarak yerleştirilmiş ve bağlanmış olması\n\nKamyon, kamyonet ve römorklarda yükle birlikte yolcu taşınırken numaralanmış ifadelerden hangilerinin yapılması zorunludur?",
+    "options": [
+      "A) Yalnız I",
+      "B) I ve II",
+      "C) II ve III",
+      "D) I, II ve III"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "II ve III",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q31",
+    "exam": "Sınav 1",
+    "section": "Trafik ve Çevre",
+    "stem": "Araçlarda emniyet kemeri kullanımının zorunlu olması ile hangisi hedeflenmektedir?",
+    "options": [
+      "A) Kazaların önlenmesi",
+      "B) Sürücülerin dikkatinin artırılması",
+      "C) Denetimlerde herhangi bir sorun yaşanmaması",
+      "D) Kaza anında ölüm ve yaralanmaların en aza indirilmesi"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Kaza anında ölüm ve yaralanmaların en aza indirilmesi",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q32",
+    "exam": "Sınav 1",
+    "section": "Trafik ve Çevre",
+    "stem": "Ölümle sonuçlanan trafik kazalarına asli kusurlu olarak sebebiyet veren sürücülerin sürücü belgeleri, ilgili mahkeme tarafından kaç yıl süre ile geri alınır?",
+    "options": [
+      "A) 1",
+      "B) 2",
+      "C) 3",
+      "D) 4"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "1",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q33",
+    "exam": "Sınav 1",
+    "section": "Araç Tekniği",
+    "stem": "Muayene süresi dolmasa bile aracın özel teknik muayenesi hangi durumda zorunludur?",
+    "options": [
+      "A) Araç sahibinin değişmesi",
+      "B) Maddi hasarlı kazaya karışması",
+      "C) Trafik zabıtalarının gerekli görmesi",
+      "D) Aracın periyodik bakımının yapılmaması"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Trafik zabıtalarının gerekli görmesi",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q34",
+    "exam": "Sınav 1",
+    "section": "Trafik ve Çevre",
+    "stem": "Sürüş güvenliğini hangisi olumsuz yönde etkiler?",
+    "options": [
+      "A) Viraja girmeden önce hızı artırmak",
+      "B) Aracı kullanırken yola konsantre olmak",
+      "C) Yüksek hızlarda ani manevra yapmaktan kaçınmak",
+      "D) Hız ile fren mesafesi arasındaki ilişkiyi öğrenmek"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Viraja girmeden önce hızı artırmak",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q35",
+    "exam": "Sınav 1",
+    "section": "Trafik ve Çevre",
+    "stem": "Hangisi atıkların çevreye verdiği zararlardan biri değildir?",
+    "options": [
+      "A) Kötü koku yayması",
+      "B) Çirkin görünüm arz etmesi",
+      "C) Hastalık bulaştıran zararlıların üremesine sebep olması",
+      "D) Toplanıp işlenerek tekrar kullanılabilir hâle getirilmesi"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Toplanıp işlenerek tekrar kullanılabilir hâle getirilmesi",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q36",
+    "exam": "Sınav 1",
+    "section": "Araç Tekniği",
+    "stem": "Motor parçalarından hangisinin işlevini kaybetmesi durumunda motorun içine su sızar?",
+    "options": [
+      "A) A",
+      "B) B",
+      "C) C",
+      "D) D"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "A",
+    "has_image": true
+  },
+  {
+    "id": "sinav1-q37",
+    "exam": "Sınav 1",
+    "section": "Araç Tekniği",
+    "stem": "Şekildeki uyarı ışığının araç gösterge panelinde yanması aracın hangi sisteminde arıza olduğunu belirtir?",
+    "options": [
+      "A) Marş",
+      "B) Şarj",
+      "C) Ateşleme",
+      "D) Fren"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Fren",
+    "has_image": true
+  },
+  {
+    "id": "sinav1-q38",
+    "exam": "Sınav 1",
+    "section": "Araç Tekniği",
+    "stem": "Şekildeki uyarı ışığı araç gösterge panelinde yandığında sürücü ne yapmalıdır?",
+    "options": [
+      "A) Aracı durdurup motoru stop etmeli",
+      "B) Araç motoruna yağ ilave etmeli",
+      "C) Silecek suyu deposuna su eklemeli",
+      "D) Motor soğutma suyu seviyesini kontrol etmeli"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Silecek suyu deposuna su eklemeli",
+    "has_image": true
+  },
+  {
+    "id": "sinav1-q39",
+    "exam": "Sınav 1",
+    "section": "Araç Tekniği",
+    "stem": "Sürüşe başlamadan önce koltuk ve ayna ayarlarının yapılmasının sebebi hangisidir?",
+    "options": [
+      "A) Sürüş konforu ve güvenliğini sağlamak",
+      "B) Aracın ivmelenme süresini artırmak",
+      "C) Koltukların yıpranmasını engellemek",
+      "D) Yakıt tüketimini azaltmak"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Sürüş konforu ve güvenliğini sağlamak",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q40",
+    "exam": "Sınav 1",
+    "section": "Araç Tekniği",
+    "stem": "I. Akü şarjının azalması\nII. Fren balatalarının azalması\nIII. Motor yağının özelliğini kaybetmesi\n\nAracın çok uzun süre kullanılmaması durumunda numaralanmış ifadelerden hangileri meydana gelebilir?",
+    "options": [
+      "A) Yalnız III",
+      "B) I ve II",
+      "C) I ve III",
+      "D) I, II ve III"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "I ve III",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q41",
+    "exam": "Sınav 1",
+    "section": "Araç Tekniği",
+    "stem": "Dizel yakıt kullanan bir araca yanlışlıkla benzin konulması durumunda hangisinin yapılması uygundur?",
+    "options": [
+      "A) Aracın düşük hızda sürülmesi",
+      "B) Yakıt deposunun boşaltılması",
+      "C) Aracın yüksek devirde kullanılması",
+      "D) Hava filtresinin değiştirilmesi"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Yakıt deposunun boşaltılması",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q42",
+    "exam": "Sınav 1",
+    "section": "Araç Tekniği",
+    "stem": "I. Şarj\nII. ABS\nIII. Yağ basıncı\n\nNumaralanmış ikaz lambalarından hangilerinin araç gösterge panelinde yanması, aracın kurallara uygun olarak derhal durdurulmasını ve kontağın kapatılmasını gerektirir?",
+    "options": [
+      "A) Yalnız I",
+      "B) I ve II",
+      "C) I ve III",
+      "D) II ve III"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "I ve III",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q43",
+    "exam": "Sınav 1",
+    "section": "Araç Tekniği",
+    "stem": "Aracın motoru yağlama yapmadığında gösterge panelinde hangi lamba yanar?",
+    "options": [
+      "A) A",
+      "B) B",
+      "C) C",
+      "D) D"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "D",
+    "has_image": true
+  },
+  {
+    "id": "sinav1-q44",
+    "exam": "Sınav 1",
+    "section": "Araç Tekniği",
+    "stem": "• Ani duruş ve hızlanmalardan kaçınılması\n• Tavsiye edilen tip ve ebatlarda araç lastiği kullanılması\n• Araçta yapılması gerekli bakım ve ayarların zamanında yapılması\n\nVerilenlerin yapılması durumunda hangisinin gerçekleşmesi beklenir?",
+    "options": [
+      "A) Çevre kirliliğinin artması",
+      "B) Sürüş konforunun azalması",
+      "C) Trafik yoğunluğunun artması",
+      "D) Aracın daha az yakıt tüketmesi"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Aracın daha az yakıt tüketmesi",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q45",
+    "exam": "Sınav 1",
+    "section": "Trafik Adabı",
+    "stem": "I. Trafikteki bütün kuralların nedenini öğrenir.\nII. Araç kullanırken yapacağı bir kural ihlalinin sonucunda sadece maddi ceza olduğunu düşünür.\nIII. Trafik içinde yapacağı bir kural ihlalinde, kendisinin ya da sevdiklerinin canını tehlikeye attığının farkındadır.\n\nNumaralanmış ifadelerden hangileri trafik adabına sahip olan bir sürücü için söylenebilir?",
+    "options": [
+      "A) I ve II",
+      "B) I ve III",
+      "C) II ve III",
+      "D) I, II ve III"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "I ve III",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q46",
+    "exam": "Sınav 1",
+    "section": "Trafik Adabı",
+    "stem": "Sürücünün trafik ortamında yaptığı davranışlardan hangisi, diğer sürücülerin dikkatinin dağılmasına ya da paniğe kapılmalarına sebep olabilir?",
+    "options": [
+      "A) Davranışlarının sonuçlarını düşünerek hareket etmesi",
+      "B) Sürekli ve ani şerit değiştirerek araç kullanması",
+      "C) Aracını kullanırken trafik kurallarının bilincinde olması",
+      "D) Trafik içindeki davranışlarının sorumluluğunu üstlenerek araç kullanması"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Sürekli ve ani şerit değiştirerek araç kullanması",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q47",
+    "exam": "Sınav 1",
+    "section": "Trafik Adabı",
+    "stem": "Bir araç sürücüsünün kendini geçmekte olan bir araca yavaşlayarak kolaylık sağlaması durumu trafikte hangi değer ile ifade edilir?",
+    "options": [
+      "A) Bencillik",
+      "B) Feragat",
+      "C) Diğerkâmlık",
+      "D) Sorumsuzluk"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Diğerkâmlık",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q48",
+    "exam": "Sınav 1",
+    "section": "Trafik Adabı",
+    "stem": "Sürücüler, trafik adabı açısından başarılı iletişim kurma becerilerini geliştirmek için hangisini yapmalıdır?",
+    "options": [
+      "A) İnsanların değişebileceğine inanmalıdır.",
+      "B) Dinlerken aynı zamanda değerlendirme eğiliminde olmalıdır.",
+      "C) Karşısındakinin kişiliğini sevmediğinde kendini iletişime kapatmalıdır.",
+      "D) Birini anlamak için tek bir olayın yeterli olduğunu düşünmelidir."
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "İnsanların değişebileceğine inanmalıdır.",
+    "has_image": false
+  },
+  {
+    "id": "sinav1-q49",
+    "exam": "Sınav 1",
+    "section": "Araç Tekniği",
+    "stem": "Videodaki sarı minibüsle ilgili hangisi kesinlikle söylenir?",
+    "options": [
+      "A) Egzozunun arızalı olduğu",
+      "B) Motorunun düzensiz çalıştığı",
+      "C) Yüksek devirde kullanıldığı",
+      "D) Kapasitesinin üzerinde yük taşıdığı"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Motorunun düzensiz çalıştığı",
+    "has_image": true
+  },
+  {
+    "id": "sinav1-q50",
+    "exam": "Sınav 1",
+    "section": "Trafik ve Çevre",
+    "stem": "I. Orta refüjlere ve yol kenarlarına dikilen ağaçların zarar görmesi\nII. Köprü ve tünel gibi noktalarda yaşanan kazalarda ulaşımın aksaması\nIII. Trafo ve elektrik direğine çarpma gibi durumlarda kesintilerin yaşanması\nIV. Yakıt, kimyasal madde, tıbbi atık vs. yüklü araçların yaptığı kazalar neticesinde büyük ekolojik zararların görülmesi\n\nNumaralanmış ifadelerden hangileri kara yolunda meydana gelen trafik kazalarının topluma, kamuya ve çevreye verdiği zararlardandır?",
+    "options": [
+      "A) I ve II",
+      "B) I, II ve IV",
+      "C) II, III ve IV",
+      "D) I, II, III ve IV"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "I, II, III ve IV",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q01",
+    "exam": "Sınav 2",
+    "section": "İlk Yardım",
+    "stem": "Sinir sistemine aittir ve omurga kanalı içinde, boyundan başlayıp kuyruk sokumuna kadar uzanır. Bu organ beyin ve vücut arasında bağlantıyı sağlar ve reflekslerin merkezidir.\n\nBu bilgi, hangi organa aittir?",
+    "options": [
+      "A) Beyin",
+      "B) Beyincik",
+      "C) Omurilik",
+      "D) Omurilik soğanı"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Omurilik",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q02",
+    "exam": "Sınav 2",
+    "section": "İlk Yardım",
+    "stem": "Baş veya omurga yaralanması olmayan bilinci kapalı yaralıya, hava yolu açıklığını sağlamak için hangi pozisyon verilmelidir?",
+    "options": [
+      "A) A",
+      "B) B",
+      "C) C",
+      "D) D"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "B",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q03",
+    "exam": "Sınav 2",
+    "section": "İlk Yardım",
+    "stem": "Görselde bebeklerde ilk yardım olarak uygulanan Heimlich manevrasının uygulama aşamaları karışık olarak verilmiştir.\n\nBuna göre, sıralamanın doğru olması için numaralanmış aşamalardan hangileri yer değiştirmelidir?",
+    "options": [
+      "A) I ve II",
+      "B) I ve IV",
+      "C) II ve III",
+      "D) III ve IV"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "I ve IV",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q04",
+    "exam": "Sınav 2",
+    "section": "İlk Yardım",
+    "stem": "Olay yerindeki ilk yardımcının, bilinçleri kapalı ve solunumu olmayan dört farklı kazazedeye ilişkin tespitleri tabloda verilmiştir.\n\nKazazede — Tespit Edilen Durum\nI. Ağız ve çevresinde yaralanma\nII. Bacakta açık kırık ve yaralanma\nIII. Göz çevresinde morluk ve kulağında kanama\nIV. Karın gölgesinde vücut eksenine dik olan açık yara\n\nBuna göre ilk yardımcı, numaralanmış kazazedelerden hangilerine \"ağızdan buruna\" suni solunum yapmalıdır?",
+    "options": [
+      "A) Yalnız I",
+      "B) Yalnız IV",
+      "C) II ve III",
+      "D) III ve IV"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Yalnız I",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q05",
+    "exam": "Sınav 2",
+    "section": "İlk Yardım",
+    "stem": "Görseldeki yaralıya ilk yardımcının, hangi uygulamayı yapması uygun değildir?",
+    "options": [
+      "A) Boyun tespiti yapması",
+      "B) Yarı oturur pozisyona alması",
+      "C) Bilinç durumunu kontrol etmesi",
+      "D) Yaşam bulgularını (ABC) değerlendirmesi"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Yarı oturur pozisyona alması",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q06",
+    "exam": "Sınav 2",
+    "section": "İlk Yardım",
+    "stem": "Meydana gelen trafik kazasına tanık olan ilk yardımcı, gerekli güvenlik önlemlerini alarak hemen 112'yi aramıştır. Yaralanan araç sürücüsünün durumunu değerlendirdiğinde; bilincinin kapalı, parmak uçlarında ve dudaklarında solukluk, gözlerinde donukluk, derisinin nemli ve soğuk olduğunu tespit etmiştir.\n\nBu değerlendirmeye göre, ilk yardımcının yaralı için hangisini yapması doğrudur?",
+    "options": [
+      "A) Ağızdan sıcak içecekler vermesi",
+      "B) Başını 30 cm olacak şekilde yukarı kaldırması",
+      "C) Vücut sıcaklığını korumak için üzerini örtmesi",
+      "D) Hareket ettirmeye çalışması"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Vücut sıcaklığını korumak için üzerini örtmesi",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q07",
+    "exam": "Sınav 2",
+    "section": "İlk Yardım",
+    "stem": "Tabloda numaralanmış kazazedelerin kırılan kemikleri ve ilk yardımcının uyguladığı tespit işlemleri verilmiştir.\n\nBuna göre uygulanan tespit işlemleri doğru (D), yanlış (Y) olarak değerlendirildiğinde sıralama hangisi olur?",
+    "options": [
+      "A) Y - D - Y",
+      "B) Y - D - D",
+      "C) D - D - Y",
+      "D) D - Y - Y"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "D - D - Y",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q08",
+    "exam": "Sınav 2",
+    "section": "İlk Yardım",
+    "stem": "İlk yardımcı, kalça veya alt taraf kemiklerinde kırık olan kazazedeye tespit işlemi yaparken hangisine dikkat etmelidir?",
+    "options": [
+      "A) Bacaklar arasına yerleştirilecek destek malzemelerinin sert olmasına",
+      "B) Açık kırık oluşmuş ise yaranın temiz bir bezle kapatılmasına",
+      "C) Şerit sargıların kırık bölgenin üzerine gelecek şekilde bağlanmasına",
+      "D) Yaralının oturur pozisyonda olmasına"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Açık kırık oluşmuş ise yaranın temiz bir bezle kapatılmasına",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q09",
+    "exam": "Sınav 2",
+    "section": "İlk Yardım",
+    "stem": "• Ölüm korkusu ve yoğun sıkıntı hissedilir.\n• Ağrı şiddetli ve uzun sürelidir, dinlenmekle geçmez.\n• Ağrı hissi; sıklıkla kravat bölgesinde görülür, omuzlara, boyuna, çeneye ve sol kola doğru yayılır.\n\nBu belirtiler, acil bakım gerektiren hastalıklardan hangisiyle ilgilidir?",
+    "options": [
+      "A) Bayılma",
+      "B) Kalp krizi",
+      "C) Sara krizi",
+      "D) Havale"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Kalp krizi",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q10",
+    "exam": "Sınav 2",
+    "section": "İlk Yardım",
+    "stem": "Hangisi \"kısa süreli, yüzeysel ve geçici bilinç kaybı\" olarak tanımlanmaktadır?",
+    "options": [
+      "A) Koma",
+      "B) Bayılma",
+      "C) Epilepsi",
+      "D) Kalp spazmı"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Bayılma",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q11",
+    "exam": "Sınav 2",
+    "section": "İlk Yardım",
+    "stem": "Hangisi yaralıyı sedye üzerine yerleştirme yöntemlerinden biri değildir?",
+    "options": [
+      "A) A",
+      "B) B",
+      "C) C",
+      "D) D"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "D",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q12",
+    "exam": "Sınav 2",
+    "section": "İlk Yardım",
+    "stem": "Yaralı taşımada kullanılan \"teskereci yöntemi\"nin uygulanış biçimi hangisinde gösterilmiştir?",
+    "options": [
+      "A) A",
+      "B) B",
+      "C) C",
+      "D) D"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "A",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q13",
+    "exam": "Sınav 2",
+    "section": "Trafik ve Çevre",
+    "stem": "Şehir içinde, yol yapısı veya işaretleme yetersizliği yüzünden trafik kazalarının meydana geldiği yerlerde, yetkililerce teklif edilen tedbirleri almak hangi kurumun görevidir?",
+    "options": [
+      "A) Belediyenin",
+      "B) İçişleri Bakanlığının",
+      "C) Jandarma Teşkilatının",
+      "D) Karayolları Genel Müdürlüğünün"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Belediyenin",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q14",
+    "exam": "Sınav 2",
+    "section": "Trafik ve Çevre",
+    "stem": "I. Direksiyon hakimiyetinde zorlanacağını\nII. Kamyonla yan yana geldiğinde rüzgârın şiddetini daha az hissedeceğini\nIII. İleride trafik kontrolünün olacağını\nIV. Yerleşim yeri sınırları içine gireceğini\n\nSürücü, tehlike uyarı işaretine göre numaralanmış ifadelerden hangilerinin olacağını düşünmelidir?",
+    "options": [
+      "A) I ve II",
+      "B) I ve IV",
+      "C) I, II ve III",
+      "D) II, III ve IV"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "I ve II",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q15",
+    "exam": "Sınav 2",
+    "section": "Trafik ve Çevre",
+    "stem": "I. Yolun, iki şeritli ve iki yönlü olduğunu\nII. 1 numaralı aracın gerektiğinde geçme yapabileceğini\nIII. 2 numaralı aracın gerektiğinde geçme yapabileceğini\n\nGörseldeki yol çizgileri ve yer işaretlemeleri, numaralanmış ifadelerden hangilerini belirtir?",
+    "options": [
+      "A) I ve II",
+      "B) I ve III",
+      "C) II ve III",
+      "D) I, II ve III"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "I ve III",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q16",
+    "exam": "Sınav 2",
+    "section": "Trafik ve Çevre",
+    "stem": "Videoya göre hangisinin yapılması doğru olur?",
+    "options": [
+      "A) Beyaz otomobil sürücüsünün beklemesi",
+      "B) Sarı otomobil sürücüsünün hızlanması",
+      "C) Siyah otomobil sürücüsünün sol şeride geçmesi",
+      "D) Siyah otomobil sürücüsünün beyaz otomobil sürücüsüne ilk geçiş hakkını vermesi"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Beyaz otomobil sürücüsünün beklemesi",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q17",
+    "exam": "Sınav 2",
+    "section": "Trafik ve Çevre",
+    "stem": "Trafik işaretlerinden hangisi, aracın yük taşıma kapasitesine sınırlama getirir?",
+    "options": [
+      "A) A",
+      "B) B",
+      "C) C",
+      "D) D"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "C",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q18",
+    "exam": "Sınav 2",
+    "section": "Trafik ve Çevre",
+    "stem": "Videoya göre, mavi araç sürücüsünün hangisini ihlal ettiği kesinlikle söylenir?",
+    "options": [
+      "A) Dönüş ve manevra kuralını",
+      "B) Geçme kuralını",
+      "C) Takip mesafesi kuralını",
+      "D) Hız sınırlaması kuralını"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Dönüş ve manevra kuralını",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q19",
+    "exam": "Sınav 2",
+    "section": "Trafik ve Çevre",
+    "stem": "Görsele göre, hangisinin yapılması doğru olur?",
+    "options": [
+      "A) 1 numaralı aracın 2 numaralı araca geçme önceliği vermesi",
+      "B) 1 numaralı aracın, 2 numaralı araca geçiş kolaylığı sağlamak için, solundaki şeride geçmesi",
+      "C) 2 numaralı aracın, 1 numaralı araç geçtikten sonra sol şeride geçmesi",
+      "D) 2 numaralı aracın, 1 numaralı aracı uyararak yavaşlatması"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "2 numaralı aracın, 1 numaralı araç geçtikten sonra sol şeride geçmesi",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q20",
+    "exam": "Sınav 2",
+    "section": "Trafik ve Çevre",
+    "stem": "Görseldeki yolda, numaralanmış araçlardan hangileri en fazla 70 km/saat hızla yollarına devam edebilir?",
+    "options": [
+      "A) Yalnız 4",
+      "B) 1 ve 2",
+      "C) 2 ve 3",
+      "D) 3 ve 4"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "1 ve 2",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q21",
+    "exam": "Sınav 2",
+    "section": "Trafik ve Çevre",
+    "stem": "I. Takip mesafesini artırması\nII. Hızını azaltması\nIII. Bulunduğu şeridin soluna yanaşması\n\nGörsele göre, 1 numaralı araç sürücüsünün numaralanmış davranışlardan hangilerini yapması trafik kazası riskini azaltır?",
+    "options": [
+      "A) I ve II",
+      "B) I ve III",
+      "C) II ve III",
+      "D) I, II ve III"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "I ve II",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q22",
+    "exam": "Sınav 2",
+    "section": "Trafik ve Çevre",
+    "stem": "Görsele göre, numaralı araçlardan hangileri hatalı geçme yapmaktadır?",
+    "options": [
+      "A) Yalnız 2",
+      "B) Yalnız 3",
+      "C) 2 ve 3",
+      "D) 1, 2 ve 3"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Yalnız 3",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q23",
+    "exam": "Sınav 2",
+    "section": "Trafik ve Çevre",
+    "stem": "Görsele göre, Adana istikametine gitmek isteyen otomobil sürücüsü hakkında hangisi söylenemez?",
+    "options": [
+      "A) Araç ışıklarını doğru yerde kullanmadığı",
+      "B) Dönüş öncesi doğru şeride girmediği",
+      "C) Kamyon sürücüsünü zor durumda bıraktığı",
+      "D) Geçme kurallarına uymadığı"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Araç ışıklarını doğru yerde kullanmadığı",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q24",
+    "exam": "Sınav 2",
+    "section": "Trafik ve Çevre",
+    "stem": "Görseldeki kavşakta ilk geçiş hakkı sıralaması nasıl olmalıdır?",
+    "options": [
+      "A) 1 - 2 - 3",
+      "B) 1 - 3 - 2",
+      "C) 2 - 1 - 3",
+      "D) 3 - 2 - 1"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "1 - 3 - 2",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q25",
+    "exam": "Sınav 2",
+    "section": "Trafik ve Çevre",
+    "stem": "Görseldeki gibi bir karşılaşmada, 2 numaralı araç sürücüsü ne yapmalıdır?",
+    "options": [
+      "A) Geçiş önceliğini kendisi kullanmalı",
+      "B) Hızlanıp köprüye 1 numaralı araçtan önce girmeli",
+      "C) Geçiş önceliğini 1 numaralı araca vermeli",
+      "D) 1 numaralı aracın daralan yol bölümüne girmemesi için selektör yaparak uyarmalı"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Geçiş önceliğini 1 numaralı araca vermeli",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q26",
+    "exam": "Sınav 2",
+    "section": "Trafik ve Çevre",
+    "stem": "Geçiş üstünlüğüne sahip araçların, duyulan uyarı işaretini aldığımızda, ilk önce yapmamız gereken hangisidir?",
+    "options": [
+      "A) Derhal sağ şeride yanaşmak",
+      "B) Sesin yönünü tayin etmek",
+      "C) Kavşakta bulunuyorsak, kavşağı hemen boşaltmak",
+      "D) Önümüzdeki araçları, hızlanmaları için uyarmak"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Sesin yönünü tayin etmek",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q27",
+    "exam": "Sınav 2",
+    "section": "Trafik ve Çevre",
+    "stem": "\"İşaret levhalarına yaklaşım yönünde ve park izni verilen yerler dışında; yerleşim birimleri içinde - - - - metre ve yerleşim birimleri dışında - - - - metre mesafede duraklamak yasaktır.\"\n\nBu cümlede boş bırakılan yerlere hangileri getirilmelidir?",
+    "options": [
+      "A) 15 - 100",
+      "B) 20 - 150",
+      "C) 30 - 200",
+      "D) 40 - 250"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "15 - 100",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q28",
+    "exam": "Sınav 2",
+    "section": "Trafik ve Çevre",
+    "stem": "I. Hızlarını artırmaları\nII. Virajı geniş bir kavisle almaları\nIII. Öndeki aracı geçmeleri\n\nGörseldeki gibi bir kara yolu bölümünde seyreden sürücülerin, numaralanmış davranışlardan hangilerini yapmaları tehlikeli durumların oluşmasına neden olur?",
+    "options": [
+      "A) I ve II",
+      "B) I ve III",
+      "C) II ve III",
+      "D) I, II ve III"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "I ve III",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q29",
+    "exam": "Sınav 2",
+    "section": "Trafik ve Çevre",
+    "stem": "I. Yeteri kadar aydınlatılmış yollara girdiğimizde\nII. Yayalarla aynı yönde ilerliyorsak\nIII. Demiryolu geçidine geldiğimizde\nIV. Geceleyin önümüzdeki aracı geçeceğimiz zaman\n\nUzun hüzmeli far açıkken, numaralanmış durumlardan hangileri olursa kısa hüzmeli farı kullanmalıyız?",
+    "options": [
+      "A) I ve II",
+      "B) I ve IV",
+      "C) II ve III",
+      "D) I, III ve IV"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "I ve IV",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q30",
+    "exam": "Sınav 2",
+    "section": "Trafik ve Çevre",
+    "stem": "Görseldeki otoyol bilgi levhası hangisini bildirir?",
+    "options": [
+      "A) Cep telefonu sinyalinin güçlü olduğunu",
+      "B) Radyo yayınlarının yol boyunca dinlenebileceğini",
+      "C) Ücretli otoyola girileceğini",
+      "D) Yol boyunca elektronik denetleme sisteminin olduğunu"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Ücretli otoyola girileceğini",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q31",
+    "exam": "Sınav 2",
+    "section": "Trafik ve Çevre",
+    "stem": "Hangisi trafik kaza oranını etkileyen etmenlerden biri değildir?",
+    "options": [
+      "A) Aracın yük durumu",
+      "B) Kural ihlalleri",
+      "C) Araç bakımları",
+      "D) Aracın beygir gücü"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Aracın beygir gücü",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q32",
+    "exam": "Sınav 2",
+    "section": "Trafik ve Çevre",
+    "stem": "Videodaki tehlikeli durum, sürücülerin hangi kuralı ihlal etmeleri sonucunda oluşmuştur?",
+    "options": [
+      "A) Takip mesafesi kuralını",
+      "B) Geçme kuralını",
+      "C) Kavşaklarda ilk geçiş hakkı kuralını",
+      "D) Şerit takip kuralını"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Şerit takip kuralını",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q33",
+    "exam": "Sınav 2",
+    "section": "Trafik ve Çevre",
+    "stem": "I. Rot başlarının boşluk yapması\nII. Ön cam sileceklerinin çalışmaması\nIII. Park lambalarının yanmaması\nIV. Kısa hüzmeli far ayarının bozuk olması\n\nAraç muayenesi sırasında, numaralanmış arızalardan hangileri ağır kusur olarak değerlendirilir?",
+    "options": [
+      "A) I ve IV",
+      "B) II ve IV",
+      "C) I, II ve III",
+      "D) II, III ve IV"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "I, II ve III",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q34",
+    "exam": "Sınav 2",
+    "section": "Trafik ve Çevre",
+    "stem": "Hangisi aracın durma mesafesini etkileyen faktörlerden biri değildir?",
+    "options": [
+      "A) Kaplamanın cinsi",
+      "B) Yolun eğimi",
+      "C) Aracın hızı",
+      "D) Hidrolik direksiyon"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Hidrolik direksiyon",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q35",
+    "exam": "Sınav 2",
+    "section": "Trafik ve Çevre",
+    "stem": "Hangisini yapmak çevrenin temiz kalmasına katkı sağlar?",
+    "options": [
+      "A) Gereksiz yere korna çalmak",
+      "B) Seyahat esnasında, yiyecek atıklarını otoyol kenarlarına bırakmak",
+      "C) Egzoz emisyon ölçümünü geciktirmek",
+      "D) Araç bakımlarını zamanında yaptırmak"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Araç bakımlarını zamanında yaptırmak",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q36",
+    "exam": "Sınav 2",
+    "section": "Trafik ve Çevre",
+    "stem": "\"Geceleyin şehirlerarası kara yolunda seyrederken araçla karşılaşıldığında kısa farları kullanmak gerekir. Bu durumda, net görüş mesafesi ortalama 25 metreye düşer.\"\n\nBu bilgiye göre, kısa farların kullanılması gerektiğinde hangisini yapmak doğru olur?",
+    "options": [
+      "A) Karşı taraf ikazda bulunmazsa uzun farla devam etmek",
+      "B) Araç hızını, herhangi bir tehlike anında, kolayca durulabilecek hıza getirmek",
+      "C) Yolu daha iyi görmek için art arda kısa aralıklarla selektör yapmak",
+      "D) Yolun sağından bir tehlike gelebileceği düşünülerek iyice sola yanaşmak"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Araç hızını, herhangi bir tehlike anında, kolayca durulabilecek hıza getirmek",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q37",
+    "exam": "Sınav 2",
+    "section": "Araç Tekniği",
+    "stem": "Hangisi, motor soğutma sisteminin elemanı değildir?",
+    "options": [
+      "A) Balata",
+      "B) Su pompası",
+      "C) Radyatör",
+      "D) Termostat"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Balata",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q38",
+    "exam": "Sınav 2",
+    "section": "Araç Tekniği",
+    "stem": "Aşağıda motor yağı kontrol edilirken yapılması gereken işlemler karışık verilmiştir.\nI. Motor yağ seviye çubuğu çekilip temizlenmeli\nII. Motor yağ çubuğu tekrar yerine daldırılıp çekilip kontrol edilmeli\nIII. Araç düz bir zeminde durdurulup motor kaputu açılmalı\nIV. Yağ miktarının max-min seviyesi arasında olduğu görülmeli\n\nİşlemlerin doğru sıralanışı hangisidir?",
+    "options": [
+      "A) I, II, III ve IV",
+      "B) II, I, IV ve III",
+      "C) III, I, IV ve II",
+      "D) III, I, II ve IV"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "III, I, II ve IV",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q39",
+    "exam": "Sınav 2",
+    "section": "Araç Tekniği",
+    "stem": "Görseldeki ikaz ışığı hangi durumda yanmaz?",
+    "options": [
+      "A) Lastik basıncı azaldığında",
+      "B) Lastik ısındığında",
+      "C) Lastik patladığında",
+      "D) Sensör arızalandığında"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Lastik ısındığında",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q40",
+    "exam": "Sınav 2",
+    "section": "Araç Tekniği",
+    "stem": "Hangisi, servis veya tamir atölyeleri tarafından yapılmalıdır?",
+    "options": [
+      "A) Silecek lastiklerinin kontrolü",
+      "B) Antifiriz yoğunluk derecesi kontrolü",
+      "C) Lastik hava basınç kontrolü",
+      "D) Motor yağı seviyesinin kontrolü"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Antifiriz yoğunluk derecesi kontrolü",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q41",
+    "exam": "Sınav 2",
+    "section": "Araç Tekniği",
+    "stem": "Hangi parçanın düzgün çalışmaması, şarj ikaz lambasının yanmasına sebep olur?",
+    "options": [
+      "A) V kayışının",
+      "B) Triger kayışının",
+      "C) Marş motorunun",
+      "D) Radyatörün"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "V kayışının",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q42",
+    "exam": "Sınav 2",
+    "section": "Araç Tekniği",
+    "stem": "Videoya göre sürücü nasıl davranmalıdır?",
+    "options": [
+      "A) Sabit hızla aynı şeritte yoluna devam etmeli",
+      "B) Sol şeride geçip derhal servise gitmeli",
+      "C) Yavaşlayıp sağ şeritten yoluna devam etmeli",
+      "D) Trafik kurallarına uygun olarak derhal durmalı"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Trafik kurallarına uygun olarak derhal durmalı",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q43",
+    "exam": "Sınav 2",
+    "section": "Araç Tekniği",
+    "stem": "Hangisi, motorun hararet yapmasına sebep olan durumlardan biri değildir?",
+    "options": [
+      "A) Termostatın arızalanması",
+      "B) Devirdaim hortumunun yırtılması",
+      "C) Antifriz seviyesinin düşük olması",
+      "D) Vantilatör kayışının gevşemesi"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Antifriz seviyesinin düşük olması",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q44",
+    "exam": "Sınav 2",
+    "section": "Araç Tekniği",
+    "stem": "I. Mümkün olduğunca az fren yapmak\nII. Vitese göre daha düşük devirde araç kullanmak\nIII. Araç ilk çalıştırıldığında motora tam güç vermek\nIV. Vitese göre yüksek devirde araç kullanmak\n\nNumaralanmış ifadelerden hangilerinin yapılması, yakıt tüketiminin artmasına sebep olur?",
+    "options": [
+      "A) I ve II",
+      "B) I ve IV",
+      "C) I, II ve III",
+      "D) II, III ve IV"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "II, III ve IV",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q45",
+    "exam": "Sınav 2",
+    "section": "Trafik Adabı",
+    "stem": "Hangisi, toplum adabına aykırı davranışlardandır?",
+    "options": [
+      "A) Trafikte aracı arızalanan birine yardımcı olmak",
+      "B) Kaza, deprem, sel gibi felaketlerden çıkar sağlamaya çalışmak",
+      "C) Engellilere ayrılmış alanların dışına park etmek",
+      "D) Toplu taşıma araçlarındaki yaşlı, çocuklu veya engelli insanlara yer vermek"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Kaza, deprem, sel gibi felaketlerden çıkar sağlamaya çalışmak",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q46",
+    "exam": "Sınav 2",
+    "section": "Trafik Adabı",
+    "stem": "Deprem, sel gibi doğal afetlerden etkilenenlere yardım götürmeye çalışan araçlara kolaylık sağlayan sürücünün hangisine önem verdiği söylenemez?",
+    "options": [
+      "A) Feragata",
+      "B) Diğerkâmlığa",
+      "C) Empatiye",
+      "D) Aceleciliğe"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Aceleciliğe",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q47",
+    "exam": "Sınav 2",
+    "section": "Trafik Adabı",
+    "stem": "Görseldeki park etmiş aracın sürücüsüyle ilgili hangisi kesinlikle söylenir?",
+    "options": [
+      "A) Trafik adabına uygun davrandığı",
+      "B) Empati kurabilen biri olduğu",
+      "C) Trafikte saygı kavramına önem verdiği",
+      "D) Sorumluluk bilincinin zayıf olduğu"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Sorumluluk bilincinin zayıf olduğu",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q48",
+    "exam": "Sınav 2",
+    "section": "Trafik Adabı",
+    "stem": "I. Kaygıları artar.\nII. Kalp atışları hızlanır.\nIII. Saldırgan tutum sergilemezler.\n\nTrafikte yaşanan stresin, bireyler üzerindeki etkileriyle ilgili numaralanmış ifadeler doğru (D), yanlış (Y) olarak değerlendirildiğinde sıralama hangisi olur?",
+    "options": [
+      "A) D - D - Y",
+      "B) D - Y - D",
+      "C) D - D - D",
+      "D) Y - D - D"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "D - D - Y",
+    "has_image": false
+  },
+  {
+    "id": "sinav2-q49",
+    "exam": "Sınav 2",
+    "section": "Trafik Adabı",
+    "stem": "Görselde karşıya geçmeye çalışan yayanın hızlı hareket etmesi için el, kol ve sözle uyarılarda bulunan sürücüyle ilgili hangisi söylenir?",
+    "options": [
+      "A) İletişim kabiliyetinin yüksek olduğu",
+      "B) Empati kurabildiği",
+      "C) Sabırlı hareket edemediği",
+      "D) Saygı kavramına önem verdiği"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Sabırlı hareket edemediği",
+    "has_image": true
+  },
+  {
+    "id": "sinav2-q50",
+    "exam": "Sınav 2",
+    "section": "Trafik Adabı",
+    "stem": "Görseldeki gibi emisyon değeri yüksek egzoz dumanı çıkaran araçların kullanılması, hak ihlallerinden hangisinin kapsamına girmez?",
+    "options": [
+      "A) Doğa ve Çevreye Karşı Yapılan Hak İhlalleri",
+      "B) Kamu Hak İhlalleri",
+      "C) Diğer Canlılara Karşı Yapılan Hak İhlalleri",
+      "D) Bireylere Karşı Yapılan Hak İhlalleri"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Kamu Hak İhlalleri",
+    "has_image": true
+  },
+  {
+    "id": "sinav3-q01",
+    "exam": "Sınav 3",
+    "section": "İlk Yardım",
+    "stem": "Aşağıdakilerden hangisi ilk yardımcıda bulunması gereken özelliklerdendir?",
+    "options": [
+      "A) Telaşlı ve tedirgin olması",
+      "B) İletişim becerilerinin zayıf olması",
+      "C) Önce çevrenin güvenliğini sağlaması",
+      "D) İnsan vücudu ile ilgili temel bilgilere sahip olması"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "İnsan vücudu ile ilgili temel bilgilere sahip olması",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q02",
+    "exam": "Sınav 3",
+    "section": "İlk Yardım",
+    "stem": "Kazazedeye sözlü uyaranla ya da hafifçe omzuna dokunarak \"iyi misiniz?\" diye sorularak - - - - değerlendirmesi yapılır.\n\nYukarıdaki açıklamada boş bırakılan yere hangisi yazılmalıdır?",
+    "options": [
+      "A) dolaşım",
+      "B) bilinç durumu",
+      "C) solunum",
+      "D) hava yolu açıklığı"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "bilinç durumu",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q03",
+    "exam": "Sınav 3",
+    "section": "İlk Yardım",
+    "stem": "I. El freninin çekilmesi\nII. Kontağın kapatılması\nIII. LPG'li ise aracın bagajında bulunan tüpün vanasının kapatılması\n\nYukarıdakilerden hangileri kazaya uğrayan araçta alınması gereken güvenlik önlemlerindendir?",
+    "options": [
+      "A) Yalnız I",
+      "B) I ve II",
+      "C) II ve III",
+      "D) I, II ve III"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "I, II ve III",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q04",
+    "exam": "Sınav 3",
+    "section": "İlk Yardım",
+    "stem": "• Bir el alına yerleştirilir.\n• Diğer elin iki parmağı çene kemiğinin üzerine yerleştirilir.\n• Alından bastırılıp çeneden kaldırılarak baş geriye doğru itilir.\n\nUygulama basamakları verilen ve kazazedenin hava yolunu açmak için kullanılan pozisyon aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Şok pozisyonu",
+      "B) Yarı oturuş pozisyonu",
+      "C) Baş geri-çene yukarı pozisyonu",
+      "D) Yarı yüzükoyun-yan pozisyon"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Baş geri-çene yukarı pozisyonu",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q05",
+    "exam": "Sınav 3",
+    "section": "İlk Yardım",
+    "stem": "Yetişkin bir kazazedenin solunum yapıp yapmadığı bak-dinle-hisset yöntemiyle kaç saniye süre ile kontrol edilir?",
+    "options": [
+      "A) 10",
+      "B) 20",
+      "C) 30",
+      "D) 40"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "10",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q06",
+    "exam": "Sınav 3",
+    "section": "İlk Yardım",
+    "stem": "Aşağıdaki durumların hangisinde kazazedeye Heimlich Manevrası uygulanır?",
+    "options": [
+      "A) Kan şekeri düştüğünde",
+      "B) Tam tıkanma yaşadığında",
+      "C) Kanaması olduğunda",
+      "D) Kalbi durduğunda"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Tam tıkanma yaşadığında",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q07",
+    "exam": "Sınav 3",
+    "section": "İlk Yardım",
+    "stem": "Aşağıdakilerden hangisi atardamar kanamalarının özelliklerindendir?",
+    "options": [
+      "A) Kanamanın sızıntı şeklinde olması",
+      "B) Kanın koyu renkli ve küçük kabarcıklar şeklinde akması",
+      "C) Açık renkli kanın kalp atımları ile uyumlu olarak kesik kesik akması",
+      "D) Kanamanın fışkırma olmadan akması ve kısa sürede durdurulabilmesi"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Açık renkli kanın kalp atımları ile uyumlu olarak kesik kesik akması",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q08",
+    "exam": "Sınav 3",
+    "section": "İlk Yardım",
+    "stem": "Aşağıdakilerden hangisi dış kanamalarda yapılan hatalı ilk yardım uygulamalarındandır?",
+    "options": [
+      "A) Kanayan bölgeyi aşağıya indirmek",
+      "B) Kanayan yer üzerine temiz bir bezle bastırmak",
+      "C) Uzuv kopması varsa boğucu sargı (turnike) uygulamak",
+      "D) Kanayan yere en yakın basınç noktasına baskı uygulamak"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Kanayan bölgeyi aşağıya indirmek",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q09",
+    "exam": "Sınav 3",
+    "section": "İlk Yardım",
+    "stem": "Aşağıdakilerden hangisi delici karın yaralanması olan kazazedeye yapılması gereken ilk yardım uygulamalarından biri değildir?",
+    "options": [
+      "A) Bilinç kontrolünün yapılması",
+      "B) Yaşam bulgularının sık sık izlenmesi",
+      "C) Dışarı çıkan organlarının içeri sokulmaya çalışılması",
+      "D) Bilinci yerinde ise sırtüstü pozisyonda bacakları bükülmüş olarak yatırılması"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Dışarı çıkan organlarının içeri sokulmaya çalışılması",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q10",
+    "exam": "Sınav 3",
+    "section": "İlk Yardım",
+    "stem": "Aşağıdakilerden hangisi çıkıklarda yapılması gereken ilk yardım uygulamalarındandır?",
+    "options": [
+      "A) Çıkığın yerine oturtulmaya çalışılması",
+      "B) Eklemin düzeltildikten sonra tespit edilmesi",
+      "C) Çıkık olan bölgeye kuvvetli masaj yapılması",
+      "D) Bölgenin nabzının, deri renginin ve ısısının kontrol edilmesi"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Bölgenin nabzının, deri renginin ve ısısının kontrol edilmesi",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q11",
+    "exam": "Sınav 3",
+    "section": "İlk Yardım",
+    "stem": "Beyne giden kan akışının azalması sonucu oluşan kısa süreli, yüzeysel ve geçici bilinç kaybına ne ad verilir?",
+    "options": [
+      "A) Koma",
+      "B) Bayılma",
+      "C) Sara krizi",
+      "D) Ateşli havale"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Bayılma",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q12",
+    "exam": "Sınav 3",
+    "section": "İlk Yardım",
+    "stem": "Kaza sonrası solunum durması, yangın tehlikesi, patlama gibi tehlikeli durumların olasılığı mevcut ise kazazedenin omuriliğine zarar vermeden araçtan çıkarılmasında kullanılan teknik aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Rentek manevrası",
+      "B) İtfaiyeci yöntemi ile omuzda taşıma",
+      "C) Ayak bileklerinden sürükleme yöntemi",
+      "D) Koltuk altından tutarak sürükleme yöntemi"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Rentek manevrası",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q13",
+    "exam": "Sınav 3",
+    "section": "Trafik ve Çevre",
+    "stem": "Alkol en çok beyin hücrelerini etkilemekte ve merkezi sinir sisteminde olumsuz etki yapmaktadır.\n\nBuna göre aşağıdakilerden hangisi bu durumun sonuçlarındandır?",
+    "options": [
+      "A) Karar verme ve kendini kontrol edebilme yeteneğinin azalması",
+      "B) Yollarda tehdit unsuru oluşumunun azalması",
+      "C) Kaza yapma riskinin azalması",
+      "D) Sürüş yeteneğinin artması"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Karar verme ve kendini kontrol edebilme yeteneğinin azalması",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q14",
+    "exam": "Sınav 3",
+    "section": "Trafik ve Çevre",
+    "stem": "Aşağıdakilerden hangisi tüm kara yollarındaki işaretleme standartlarının tespiti, yayınlanması ve kontrolü ile görevlidir?",
+    "options": [
+      "A) Sağlık Bakanlığı",
+      "B) Millî Eğitim Bakanlığı",
+      "C) Emniyet Genel Müdürlüğü",
+      "D) Karayolları Genel Müdürlüğü"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Karayolları Genel Müdürlüğü",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q15",
+    "exam": "Sınav 3",
+    "section": "Trafik ve Çevre",
+    "stem": "Kamu hizmeti yapan yolcu taşıtlarının yolcu veya hizmetlileri bindirmeleri, indirmeleri veya duraklamaları için yatay ve düşey işaretlerle belirlenmiş yere ne ad verilir?",
+    "options": [
+      "A) Garaj",
+      "B) Durak",
+      "C) Otopark",
+      "D) Park yeri"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Durak",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q16",
+    "exam": "Sınav 3",
+    "section": "Trafik ve Çevre",
+    "stem": "Aşağıdakilerden hangisi iki yönlü trafik işaret levhasıdır?",
+    "options": [
+      "A) A",
+      "B) B",
+      "C) C",
+      "D) D"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "A",
+    "has_image": true
+  },
+  {
+    "id": "sinav3-q17",
+    "exam": "Sınav 3",
+    "section": "Trafik ve Çevre",
+    "stem": "Şekildeki trafik işaretini gören sürücü aşağıdakilerden hangisini yapmalıdır?",
+    "options": [
+      "A) Banketten gitmelidir.",
+      "B) Aracının hızını artırmalıdır.",
+      "C) Öndeki aracı geçmemelidir.",
+      "D) Geçiş hakkını kendisi kullanmalıdır."
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Öndeki aracı geçmemelidir.",
+    "has_image": true
+  },
+  {
+    "id": "sinav3-q18",
+    "exam": "Sınav 3",
+    "section": "Trafik ve Çevre",
+    "stem": "Aşağıdakilerden hangisi karşıdan gelene yol ver anlamındadır?",
+    "options": [
+      "A) A",
+      "B) B",
+      "C) C",
+      "D) D"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "B",
+    "has_image": true
+  },
+  {
+    "id": "sinav3-q19",
+    "exam": "Sınav 3",
+    "section": "Trafik ve Çevre",
+    "stem": "Aşağıdaki trafik işaretlerinden hangisi tali yolda bulunur?",
+    "options": [
+      "A) A",
+      "B) B",
+      "C) C",
+      "D) D"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "C",
+    "has_image": true
+  },
+  {
+    "id": "sinav3-q20",
+    "exam": "Sınav 3",
+    "section": "Trafik ve Çevre",
+    "stem": "Taşıt yolu üzerine çizilen şekildeki çizgilerin anlamı nedir?",
+    "options": [
+      "A) Yaya geçidi",
+      "B) Bisiklet yolu",
+      "C) Taralı alana girilmez",
+      "D) Yavaşlama uyarı çizgileri"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Yavaşlama uyarı çizgileri",
+    "has_image": true
+  },
+  {
+    "id": "sinav3-q21",
+    "exam": "Sınav 3",
+    "section": "Trafik ve Çevre",
+    "stem": "Trafik kuruluşunca, uyuşturucu veya uyarıcı madde kullandığı tespit edilen sürücüye aşağıdaki işlemlerden hangisi uygulanır?",
+    "options": [
+      "A) Sürücü belgesi 5 yıl süreyle geçici olarak geri alınır.",
+      "B) Sadece şehir içinde araç sürmesine izin verilir.",
+      "C) Sürücü belgesi 6 ay süreyle geri alınır.",
+      "D) Sadece para cezası verilir."
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Sürücü belgesi 5 yıl süreyle geçici olarak geri alınır.",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q22",
+    "exam": "Sınav 3",
+    "section": "Trafik ve Çevre",
+    "stem": "Aksine bir işaret bulunmadıkça otoyolda minibüs ve otobüsler için azami hız saatte kaç kilometredir?",
+    "options": [
+      "A) 80",
+      "B) 90",
+      "C) 100",
+      "D) 110"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "100",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q23",
+    "exam": "Sınav 3",
+    "section": "Trafik ve Çevre",
+    "stem": "Arkadan çarpma şeklindeki trafik kazalarının en önemli sebebi aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Öndeki aracın durması",
+      "B) Öndeki aracın yavaşlaması",
+      "C) Görüş mesafesinin kötü olması",
+      "D) Takip mesafesi kurallarına uyulmaması"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Takip mesafesi kurallarına uyulmaması",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q24",
+    "exam": "Sınav 3",
+    "section": "Trafik ve Çevre",
+    "stem": "Şekle göre hangi numaralı aracın sürücüsü hatalı davranmıştır?",
+    "options": [
+      "A) 1",
+      "B) 2",
+      "C) 3",
+      "D) 4"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "3",
+    "has_image": true
+  },
+  {
+    "id": "sinav3-q25",
+    "exam": "Sınav 3",
+    "section": "Trafik ve Çevre",
+    "stem": "Manevra yapacak sürücü aşağıdakilerden hangisini yapmalıdır?",
+    "options": [
+      "A) Ön, arka ve yanlardaki trafiği kontrol etmeli",
+      "B) İşaret verdiği anda manevraya başlamalı",
+      "C) Manevraya başladıktan sonra işaret vermeli",
+      "D) Manevra bitmeden önce işaret vermeyi sona erdirmeli"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Ön, arka ve yanlardaki trafiği kontrol etmeli",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q26",
+    "exam": "Sınav 3",
+    "section": "Trafik ve Çevre",
+    "stem": "Şekildeki akaryakıt istasyonundan çıkmak isteyen 2 numaralı aracın sürücüsü ne yapmalıdır?",
+    "options": [
+      "A) Korna çalıp 1 numaralı aracı durdurmalı",
+      "B) 1 numaralı aracın geçmesini beklemeli",
+      "C) Hızlanarak yoluna devam etmeli",
+      "D) Geçiş hakkını kendisi kullanmalı"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "1 numaralı aracın geçmesini beklemeli",
+    "has_image": true
+  },
+  {
+    "id": "sinav3-q27",
+    "exam": "Sınav 3",
+    "section": "Trafik ve Çevre",
+    "stem": "Geçiş üstünlüğüne sahip araç sürücüsü, bu hakkı kullanırken aşağıdakilerden hangisine dikkat etmek zorundadır?",
+    "options": [
+      "A) Hız sınırlamasına",
+      "B) Trafik yasaklarına",
+      "C) Çevreyi rahatsız etmemeye",
+      "D) Can ve mal güvenliğini tehlikeye sokmamaya"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Can ve mal güvenliğini tehlikeye sokmamaya",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q28",
+    "exam": "Sınav 3",
+    "section": "Trafik ve Çevre",
+    "stem": "Şekildeki aracın sürücüsü, kamu hizmeti yapan yolcu taşıtı durağının en az kaç metre mesafe dışına aracını park edebilir?",
+    "options": [
+      "A) 5",
+      "B) 10",
+      "C) 15",
+      "D) 20"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "15",
+    "has_image": true
+  },
+  {
+    "id": "sinav3-q29",
+    "exam": "Sınav 3",
+    "section": "Trafik ve Çevre",
+    "stem": "Geceleyin, görüşün yeterli olmadığı kavşağa yaklaşan sürücü gelişini nasıl haber vermelidir?",
+    "options": [
+      "A) Birkaç defa selektör yaparak",
+      "B) Acil uyarı ışıklarını yakarak",
+      "C) Birkaç defa korna çalarak",
+      "D) Dönüş ışıklarını yakarak"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Birkaç defa selektör yaparak",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q30",
+    "exam": "Sınav 3",
+    "section": "Trafik ve Çevre",
+    "stem": "I. Yüklerin üzerine yolcu bindirilmesi\nII. Kasanın yan ve arka kapaklarının kapalı olması\nIII. Yüklerin sağlam olarak yerleştirilmiş ve bağlanmış olması\n\nKamyon, kamyonet ve römorklarda yükle birlikte yolcu taşınırken yukarıda verilenlerden hangilerinin yapılması zorunludur?",
+    "options": [
+      "A) Yalnız I.",
+      "B) I ve II.",
+      "C) II ve III.",
+      "D) I, II ve III."
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "II ve III.",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q31",
+    "exam": "Sınav 3",
+    "section": "Trafik ve Çevre",
+    "stem": "Park hâlindeki araca çarpan sürücünün aşağıdakilerden hangisini yapması yanlıştır?",
+    "options": [
+      "A) Aracın sahibini bulamazsa yazılı bilgi bırakması",
+      "B) Zarar fazla değilse olay yerinden uzaklaşması",
+      "C) Zarar verdiği aracın sahibini bulması",
+      "D) Trafik görevlisine haber vermesi"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Zarar fazla değilse olay yerinden uzaklaşması",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q32",
+    "exam": "Sınav 3",
+    "section": "Trafik ve Çevre",
+    "stem": "I. Reflektör\nII. İlk yardım çantası\nIII. Yangın söndürme cihazı\n\nYukarıdakilerden hangilerinin otomobillerde bulundurulması zorunludur?",
+    "options": [
+      "A) Yalnız I.",
+      "B) I ve II.",
+      "C) II ve III.",
+      "D) I, II ve III."
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "I, II ve III.",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q33",
+    "exam": "Sınav 3",
+    "section": "Trafik ve Çevre",
+    "stem": "Aşağıdakilerden hangisi Karayolları Trafik Kanunu'na göre sürücü olabilmenin şartlarından biri değildir?",
+    "options": [
+      "A) Bir meslek sahibi olmak",
+      "B) Belirli bir eğitim seviyesine sahip olmak",
+      "C) Kullanacağı araca göre belirli bir yaşın üzerinde olmak",
+      "D) Sürücülük yapmaya uygun olduğunu gösterir sağlık raporu almak"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Bir meslek sahibi olmak",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q34",
+    "exam": "Sınav 3",
+    "section": "Trafik ve Çevre",
+    "stem": "• Aracın hızı arttıkça fren mesafesi azalır.\n• Yol yüzeyinde su birikmesi, buz ya da kar olması fren mesafesini artıran faktörlerdendir.\n\nFren mesafesi ile ilgili verilen cümleler doğru (D) - yanlış (Y) olarak değerlendirildiğinde sıralama aşağıdakilerden hangisi olur?",
+    "options": [
+      "A) D - Y",
+      "B) Y - D",
+      "C) D - D",
+      "D) Y - Y"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Y - D",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q35",
+    "exam": "Sınav 3",
+    "section": "Trafik ve Çevre",
+    "stem": "Aşağıdakilerden hangisi atıkların çevreye verdiği zararlardan biri değildir?",
+    "options": [
+      "A) Kötü koku yayması",
+      "B) Çirkin görünüm arz etmesi",
+      "C) Hastalık bulaştıran zararlıların üremesine sebep olması",
+      "D) Toplanıp işlenerek tekrar kullanılabilir hâle getirilmesi"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Toplanıp işlenerek tekrar kullanılabilir hâle getirilmesi",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q36",
+    "exam": "Sınav 3",
+    "section": "Araç Tekniği",
+    "stem": "Aşağıdakilerden hangisi araçlarda gücün kaynağıdır?",
+    "options": [
+      "A) Şaft",
+      "B) Motor",
+      "C) Tekerlek",
+      "D) Vites kutusu"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Motor",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q37",
+    "exam": "Sınav 3",
+    "section": "Araç Tekniği",
+    "stem": "Aşağıdakilerden hangisi buji ile ateşlemeli motorların yakıtıdır?",
+    "options": [
+      "A) Benzin",
+      "B) Motorin",
+      "C) Antifriz",
+      "D) Gaz yağı"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Benzin",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q38",
+    "exam": "Sınav 3",
+    "section": "Araç Tekniği",
+    "stem": "Aracın gösterge panelinde bulunan şekildeki gösterge sürücüye neyi bildirir?",
+    "options": [
+      "A) Karterdeki yağ miktarını",
+      "B) Depodaki yakıt miktarını",
+      "C) Soğutma suyu sıcaklığını",
+      "D) Radyatördeki su seviyesini"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Soğutma suyu sıcaklığını",
+    "has_image": true
+  },
+  {
+    "id": "sinav3-q39",
+    "exam": "Sınav 3",
+    "section": "Araç Tekniği",
+    "stem": "Yakıt içerisinde toz, su veya pislik varsa motor nasıl çalışır?",
+    "options": [
+      "A) Yüksek devirde",
+      "B) Zengin karışımla",
+      "C) Yüksek performansla",
+      "D) Düzensiz, tekleyerek"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Düzensiz, tekleyerek",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q40",
+    "exam": "Sınav 3",
+    "section": "Araç Tekniği",
+    "stem": "Kışın aşırı soğuktan dolayı motor soğutma suyu donduğu zaman meydana gelen genleşme kuvveti; silindir bloğu, silindir kapağı ve radyatörü çatlatabilir.\n\nBuna göre donmayı önlemek için motor soğutma suyuna aşağıdakilerden hangisinin yeterli miktarda karıştırılması gerekir?",
+    "options": [
+      "A) Asit",
+      "B) Antifriz",
+      "C) Saf su",
+      "D) Motor yağı"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Antifriz",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q41",
+    "exam": "Sınav 3",
+    "section": "Araç Tekniği",
+    "stem": "Lastiklerin hava basıncı dengesizse frenleme anında aşağıdakilerden hangisi olur?",
+    "options": [
+      "A) Araç bir tarafa çeker.",
+      "B) Fren pedalı sertleşir.",
+      "C) Frenlerden ses gelir.",
+      "D) Fren hidroliği azalır."
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Araç bir tarafa çeker.",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q42",
+    "exam": "Sınav 3",
+    "section": "Araç Tekniği",
+    "stem": "Aşağıdakilerden hangisi elektrik devresindeki sigortanın görevidir?",
+    "options": [
+      "A) Aküyü şarj etmek",
+      "B) Bujilere giden akımı yükseltmek",
+      "C) Kısa devre olduğunda sistemi korumak",
+      "D) Endüksiyon bobinine giden akımı yükseltmek"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Kısa devre olduğunda sistemi korumak",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q43",
+    "exam": "Sınav 3",
+    "section": "Araç Tekniği",
+    "stem": "Seyir hâlindeyken araçtan \"sürekli yakıt kokusu\" alınması durumunda aşağıdakilerden hangisi yapılır?",
+    "options": [
+      "A) Açık camlar kapatılır.",
+      "B) Önemsenmez yola devam edilir.",
+      "C) Lastiklerin hava basıncı kontrol edilir.",
+      "D) Trafik kurallarına uyarak durulur ve kontak kapatılır."
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Trafik kurallarına uyarak durulur ve kontak kapatılır.",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q44",
+    "exam": "Sınav 3",
+    "section": "Araç Tekniği",
+    "stem": "Araçlarda yakıt tasarrufu sağlamak için aşağıdakilerden hangisi yapılmalıdır?",
+    "options": [
+      "A) Termostat çıkartılmalı",
+      "B) Eskimiş bujiler değiştirilmeli",
+      "C) Lastiklerin hava basıncı indirilmeli",
+      "D) Motor yüksek devirde çalıştırılmalı"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Eskimiş bujiler değiştirilmeli",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q45",
+    "exam": "Sınav 3",
+    "section": "Trafik Adabı",
+    "stem": "Sürücü, trafik içinde yapacağı bir kural ihlalinde kendisinin ya da sevdiklerinin canını tehlikeye attığının farkında olmalıdır.\n\nBu farkındalığı kazanmak için yapılması gereken aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Trafikteki her kuralın altında yatan güvenlik gerekçelerinin sorgulanıp öğrenilmesi",
+      "B) Kural ihlalinin sonucunda sadece maddi ceza olduğunun düşünülmesi",
+      "C) Karşılıklı saygının öncelikle başkalarından beklenmesi",
+      "D) Kızgın ve yarışmacı motivasyon ile araç kullanılması"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Trafikteki her kuralın altında yatan güvenlik gerekçelerinin sorgulanıp öğrenilmesi",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q46",
+    "exam": "Sınav 3",
+    "section": "Trafik Adabı",
+    "stem": "Sürücünün trafik ortamında yaptığı davranışlardan hangisi, diğer sürücülerin dikkatinin dağılmasına ya da paniğe kapılmalarına sebep olabilir?",
+    "options": [
+      "A) Davranışlarının sonuçlarını düşünerek hareket etmesi",
+      "B) Sürekli şerit değiştirerek (slalom yaparak) araç kullanması",
+      "C) Aracını kullanırken trafik kurallarının bilincinde olması",
+      "D) Trafik içindeki davranışlarının sorumluluğunu üstlenerek araç kullanması"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Sürekli şerit değiştirerek (slalom yaparak) araç kullanması",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q47",
+    "exam": "Sınav 3",
+    "section": "Trafik Adabı",
+    "stem": "Ters yönden gelen bir sürücüye \"Bu sokak tek yönlü, herhalde siz girişteki levhayı görmediniz, lütfen daha dikkatli olun.\" diyen bir sürücü, trafikte aşağıdaki değerlerden hangisine uygun davranmıştır?",
+    "options": [
+      "A) İnatlaşmaya",
+      "B) Aşırı tepki göstermeye",
+      "C) Kaba ve saldırgan davranmaya",
+      "D) Trafik kültüründe birbirini uyarmaya"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Trafik kültüründe birbirini uyarmaya",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q48",
+    "exam": "Sınav 3",
+    "section": "Trafik Adabı",
+    "stem": "Geçilmekte olan araç sürücüsünün yavaşlayıp geçme yapan araca kolaylık sağlaması durumu, trafikte aşağıdaki değerlerden hangisiyle ifade edilir?",
+    "options": [
+      "A) Bencillik",
+      "B) İnatlaşmak",
+      "C) Diğergamlık",
+      "D) Sorumsuzluk"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Diğergamlık",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q49",
+    "exam": "Sınav 3",
+    "section": "Trafik Adabı",
+    "stem": "Aşağıdakilerden hangisinin trafikte öfke duygusuna kapılan sürücülerde görülme olasılığı diğer sürücülere göre daha fazladır?",
+    "options": [
+      "A) Dikkatin dağılması",
+      "B) Kural ihlallerinin azalması",
+      "C) Direksiyon hâkimiyetinin artması",
+      "D) Kazaya karışma olasılığının azalması"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Dikkatin dağılması",
+    "has_image": false
+  },
+  {
+    "id": "sinav3-q50",
+    "exam": "Sınav 3",
+    "section": "Trafik Adabı",
+    "stem": "I. Orta refüjlere ve yol kenarlarına dikilen ağaçların zarar görmesi\nII. Köprü ve tünel gibi noktalarda yaşanan kazalarda ulaşımın aksaması\nIII. Trafo ve elektrik direğine çarpma gibi durumlarda kesintilerin yaşanması\nIV. Yakıt, kimyasal madde, tıbbi atık vs. yüklü araçların yaptığı kazalar neticesinde büyük ekolojik zararların görülmesi\n\nYukarıdakilerden hangileri kara yolunda meydana gelen trafik kazalarının kişiye, topluma, kamuya ve çevreye verdiği zararlardandır?",
+    "options": [
+      "A) I ve II.",
+      "B) I, III ve IV.",
+      "C) II, III ve IV.",
+      "D) I, II, III ve IV."
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "I, II, III ve IV.",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q01",
+    "exam": "Sınav 4",
+    "section": "İlk Yardım",
+    "stem": "I. Kazazedenin tedavi edilmesi\nII. Hayati tehlikenin ortadan kaldırılması\nIII. Yaşamsal fonksiyonların sürdürülmesinin sağlanması\n\nYukarıdakilerden hangileri ilk yardımın öncelikli amaçlarındandır?",
+    "options": [
+      "A) I ve II.",
+      "B) I ve III.",
+      "C) II ve III.",
+      "D) I, II ve III."
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "II ve III.",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q02",
+    "exam": "Sınav 4",
+    "section": "İlk Yardım",
+    "stem": "Aşağıdakilerden hangisi solunum sistemi organlarındandır?",
+    "options": [
+      "A) Kalp",
+      "B) Akciğerler",
+      "C) Pankreas",
+      "D) Böbrekler"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Akciğerler",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q03",
+    "exam": "Sınav 4",
+    "section": "İlk Yardım",
+    "stem": "Aşağıdakilerden hangisi \"kaza sonuçlarının ağırlaşmasını önlemek için olay yerinin değerlendirilmesi\" işlemini kapsar?",
+    "options": [
+      "A) Koruma",
+      "B) Bildirme",
+      "C) Kurtarma",
+      "D) Tedavi etme"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Koruma",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q04",
+    "exam": "Sınav 4",
+    "section": "İlk Yardım",
+    "stem": "Aşağıdakilerden hangisi kalp durmasının belirtilerindendir?",
+    "options": [
+      "A) Aşırı hareketlilik",
+      "B) Bilincin açık olması",
+      "C) Kalp atımının olmaması",
+      "D) Hızlı ve yüzeysel solunum"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Kalp atımının olmaması",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q05",
+    "exam": "Sınav 4",
+    "section": "İlk Yardım",
+    "stem": "Aşağıdakilerden hangisi bebeklere yapılan yapay solunum uygulamasında, ilk yardımcının dikkat etmesi gereken kurallardandır?",
+    "options": [
+      "A) Bebeğin yumuşak bir zemin üzerine sırtüstü yatırılması",
+      "B) Hava yolu tıkanıklığına neden olan yabancı cisim varsa bebeğin yutmasının sağlanması",
+      "C) Bebeğin solunum yapıp yapmadığının bak-dinle-hisset yöntemiyle 2 dakika süre ile kontrol edilmesi",
+      "D) Bebekte solunum yoksa ağız dolusu nefes alınması ve ağzın, bebeğin ağız ve burnunu içine alacak şekilde yerleştirilmesi"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Bebekte solunum yoksa ağız dolusu nefes alınması ve ağzın, bebeğin ağız ve burnunu içine alacak şekilde yerleştirilmesi",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q06",
+    "exam": "Sınav 4",
+    "section": "İlk Yardım",
+    "stem": "Solunum yolu yabancı bir cisimle tıkanmış olan kazazede öksürüyor, nefes alabiliyor ve konuşabiliyorsa bu kazazedede aşağıdakilerden hangisinin olduğu düşünülür?",
+    "options": [
+      "A) Koma",
+      "B) Kısmi tıkanma",
+      "C) Tam tıkanma",
+      "D) Solunum durması"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Kısmi tıkanma",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q07",
+    "exam": "Sınav 4",
+    "section": "İlk Yardım",
+    "stem": "Aşağıdakilerden hangisi şok belirtilerinden biri değildir?",
+    "options": [
+      "A) Huzursuzluk",
+      "B) Baş dönmesi",
+      "C) Dudak çevresinde morarma",
+      "D) Ciltte ısı artışı, kızarıklık ve kuruluk"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Ciltte ısı artışı, kızarıklık ve kuruluk",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q08",
+    "exam": "Sınav 4",
+    "section": "İlk Yardım",
+    "stem": "Burun kanaması olan kazazedeye yapılması gereken ilk yardım uygulaması hangisidir?",
+    "options": [
+      "A) Burun kanatlarının 5 dakika süre ile sıkılması",
+      "B) Yan yatış pozisyonuna getirilmesi",
+      "C) Başının geriye doğru itilmesi",
+      "D) Sırtüstü yatırılması"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Burun kanatlarının 5 dakika süre ile sıkılması",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q09",
+    "exam": "Sınav 4",
+    "section": "İlk Yardım",
+    "stem": "Aşağıdakilerden hangisi delici göğüs yaralanmalarında kazazedeye yapılan doğru bir ilk yardım uygulamasıdır?",
+    "options": [
+      "A) Ayaklarının yüksekte tutulup yüzüstü yatırılması",
+      "B) Bilinci açık ise yarı oturur duruma getirilmesi",
+      "C) Ağızdan ılık içecekler verilmesi",
+      "D) Batan cismin çıkarılması"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Bilinci açık ise yarı oturur duruma getirilmesi",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q10",
+    "exam": "Sınav 4",
+    "section": "İlk Yardım",
+    "stem": "Aşağıdakilerden hangisi burkulmalarda yapılması gereken ilk yardım uygulamalarındandır?",
+    "options": [
+      "A) Sıkıştırıcı bir bandajla burkulan eklemin tespit edilmesi",
+      "B) Şişliği azaltmak için bölgenin vücut seviyesinden aşağıya indirilmesi",
+      "C) Burkulan eklem yüzeyinin sürekli hareket ettirilmesi",
+      "D) Boğucu sargı (turnike) uygulanması"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Sıkıştırıcı bir bandajla burkulan eklemin tespit edilmesi",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q11",
+    "exam": "Sınav 4",
+    "section": "İlk Yardım",
+    "stem": "Koma durumundaki kazazedeye aşağıdaki pozisyonlardan hangisi verilmelidir?",
+    "options": [
+      "A) Şok pozisyonu",
+      "B) Sırtüstü yatış pozisyonu",
+      "C) Yarı yüzükoyun-yan pozisyon",
+      "D) Baş geride yarı oturuş pozisyonu"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Yarı yüzükoyun-yan pozisyon",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q12",
+    "exam": "Sınav 4",
+    "section": "İlk Yardım",
+    "stem": "Aşağıdakilerden hangisi kazazedenin taşınmasında uyulması gereken genel kurallardandır?",
+    "options": [
+      "A) İlk yardımcının kendi sağlığını riske sokması",
+      "B) İlk yardımcının kalkarken ağırlığı karın kaslarına vermesi",
+      "C) Kazazedenin mümkün olduğunca çok hareket ettirilmesi",
+      "D) Kazazedenin baş-boyun-gövde ekseni esas alınarak en az 6 destek noktasından kavranması"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Kazazedenin baş-boyun-gövde ekseni esas alınarak en az 6 destek noktasından kavranması",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q13",
+    "exam": "Sınav 4",
+    "section": "Trafik ve Çevre",
+    "stem": "I. Hoşgörülü olunması\nII. Bencillikten uzak durulması\nIII. Olaylara aşırı tepki gösterilmesi\n\nTrafik ortamını paylaşanlarda, yukarıda verilen tutum ve davranışlardan hangilerinin bulunması hâlinde trafik düzeni ve güvenliği olumlu yönde etkilenir?",
+    "options": [
+      "A) Yalnız I.",
+      "B) I ve II.",
+      "C) II ve III.",
+      "D) I, II ve III."
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "I ve II.",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q14",
+    "exam": "Sınav 4",
+    "section": "Trafik ve Çevre",
+    "stem": "Aşağıdakilerden hangisi Karayolları Genel Müdürlüğünün görevlerinden biri değildir?",
+    "options": [
+      "A) Şehir içindeki açık ve kapalı otoparklara izin vermek",
+      "B) Kara yollarındaki hız sınırlarını belirleyip işaretlemek",
+      "C) Kara yollarındaki işaretleme standartlarını tespit ve kontrol etmek",
+      "D) Kara yolu güvenliğini ilgilendiren konulardaki projeleri incelemek ve onaylamak"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Şehir içindeki açık ve kapalı otoparklara izin vermek",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q15",
+    "exam": "Sınav 4",
+    "section": "Trafik ve Çevre",
+    "stem": "Trafik zabıtası veya yetkililerce Kanunda ve yönetmelikte belirtilen hâllerde araçla ilgili belgelerin alınması ve aracın belirli bir yere çekilerek trafikten alıkonulmasına ne denir?",
+    "options": [
+      "A) Trafik suçu",
+      "B) Trafik terörü",
+      "C) Trafik kusuru",
+      "D) Trafikten men"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Trafikten men",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q16",
+    "exam": "Sınav 4",
+    "section": "Trafik ve Çevre",
+    "stem": "Şekildeki trafik görevlisinin yapmış olduğu işaretin sürücüler için anlamı nedir?",
+    "options": [
+      "A) Dur",
+      "B) Hızlan",
+      "C) Yavaşla",
+      "D) Sağa yanaş"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Yavaşla",
+    "has_image": true
+  },
+  {
+    "id": "sinav4-q17",
+    "exam": "Sınav 4",
+    "section": "Trafik ve Çevre",
+    "stem": "Şekildeki trafik işareti aşağıdakilerden hangisine yaklaşıldığını bildirir?",
+    "options": [
+      "A) Okul geçidine",
+      "B) Yürüyüş yoluna",
+      "C) Gençlik kampına",
+      "D) Alt veya üst geçitlere"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Okul geçidine",
+    "has_image": true
+  },
+  {
+    "id": "sinav4-q18",
+    "exam": "Sınav 4",
+    "section": "Trafik ve Çevre",
+    "stem": "Şekildeki tehlike uyarı işaretini gören sürücü aşağıdakilerden hangisini yapmalıdır?",
+    "options": [
+      "A) Banketten gitmeli",
+      "B) Takip mesafesini artırmalı",
+      "C) Hızını artırarak öndeki aracı geçmeli",
+      "D) Acil uyarı ışıklarını yakarak derhâl durmalı"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Takip mesafesini artırmalı",
+    "has_image": true
+  },
+  {
+    "id": "sinav4-q19",
+    "exam": "Sınav 4",
+    "section": "Trafik ve Çevre",
+    "stem": "Aşağıdaki trafik işaretlerinden hangisi öndeki taşıtı geçme yasağının sona erdiğini bildirir?",
+    "options": [
+      "A) A",
+      "B) B",
+      "C) C",
+      "D) D"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "A",
+    "has_image": true
+  },
+  {
+    "id": "sinav4-q20",
+    "exam": "Sınav 4",
+    "section": "Trafik ve Çevre",
+    "stem": "Şekildeki trafik işareti aşağıdakilerden hangisini bildirir?",
+    "options": [
+      "A) Kamyon garajını",
+      "B) Kamyonun giremeyeceğini",
+      "C) Kamyon için geçme yasağının sona erdiğini",
+      "D) Kamyon için azami hız sınırlaması olduğunu"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Kamyonun giremeyeceğini",
+    "has_image": true
+  },
+  {
+    "id": "sinav4-q21",
+    "exam": "Sınav 4",
+    "section": "Trafik ve Çevre",
+    "stem": "Kavşaklara yaklaşırken yol üzerine çizilmiş şekildeki oklar sürücülere neyi bildirir?",
+    "options": [
+      "A) Hızın artırılması gerektiğini",
+      "B) Sağa ve sola dönülemeyeceğini",
+      "C) Seyir yönüne uygun şeridin kullanılması gerektiğini",
+      "D) Durma, duraklama ve park etmenin yasaklanmış olduğunu"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Seyir yönüne uygun şeridin kullanılması gerektiğini",
+    "has_image": true
+  },
+  {
+    "id": "sinav4-q22",
+    "exam": "Sınav 4",
+    "section": "Trafik ve Çevre",
+    "stem": "Aşağıdaki hâllerin hangisinde sürücü araç kullanmaktan men edilir?",
+    "options": [
+      "A) Taşıma sınırının üstünde yolcu almışsa",
+      "B) Taşıma sınırının üstünde yük yüklemişse",
+      "C) Uyuşturucu madde alarak araç kullanıyorsa",
+      "D) Zorunlu mali sorumluluk sigortasını yaptırmamışsa"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Uyuşturucu madde alarak araç kullanıyorsa",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q23",
+    "exam": "Sınav 4",
+    "section": "Trafik ve Çevre",
+    "stem": "I. Aracın yük ve teknik özelliğine\nII. Görüş, yol, hava ve trafik durumuna\nIII. Aracın cinsine uygun hız sınırlamalarına\n\nSürücüler, araçlarının hızını yukarıdakilerden hangilerine göre ayarlamak zorundadır?",
+    "options": [
+      "A) Yalnız I.",
+      "B) I ve II.",
+      "C) II ve III.",
+      "D) I, II ve III."
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "I, II ve III.",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q24",
+    "exam": "Sınav 4",
+    "section": "Trafik ve Çevre",
+    "stem": "Öndeki aracın güvenle takip edildiği uzaklığa ne denir?",
+    "options": [
+      "A) Takip mesafesi",
+      "B) Geçiş mesafesi",
+      "C) Görüş mesafesi",
+      "D) İntikal mesafesi"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Takip mesafesi",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q25",
+    "exam": "Sınav 4",
+    "section": "Trafik ve Çevre",
+    "stem": "Şekildeki kara yolu bölümünde, yan yana çizilmiş kesik ve devamlı yol çizgileri sürücülere aşağıdakilerden hangisini bildirir?",
+    "options": [
+      "A) Çift yönlü yoldan tek yönlü yola girileceğini",
+      "B) Her iki yönde seyreden araçların bölünmüş yola gireceğini",
+      "C) Her iki yönde seyreden araçların şerit değiştiremeyeceğini",
+      "D) Devamlı çizgi tarafındaki araçların şerit değiştiremeyeceğini"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Devamlı çizgi tarafındaki araçların şerit değiştiremeyeceğini",
+    "has_image": true
+  },
+  {
+    "id": "sinav4-q26",
+    "exam": "Sınav 4",
+    "section": "Trafik ve Çevre",
+    "stem": "Şekildeki aracın sürücüsü, dönel kavşaktan geriye dönüş yapmak için hangi şeridi izlemelidir?",
+    "options": [
+      "A) İstediği şeridi",
+      "B) 1 numaralı şeridi",
+      "C) 2 numaralı şeridi",
+      "D) 3 numaralı şeridi"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "1 numaralı şeridi",
+    "has_image": true
+  },
+  {
+    "id": "sinav4-q27",
+    "exam": "Sınav 4",
+    "section": "Trafik ve Çevre",
+    "stem": "Şekildeki gibi kontrolsüz kavşakta karşılaşan araçların geçiş hakkı sıralaması nasıl olmalıdır?",
+    "options": [
+      "A) 1 - 2 - 3",
+      "B) 2 - 1 - 3",
+      "C) 3 - 1 - 2",
+      "D) 3 - 2 - 1"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "3 - 2 - 1",
+    "has_image": true
+  },
+  {
+    "id": "sinav4-q28",
+    "exam": "Sınav 4",
+    "section": "Trafik ve Çevre",
+    "stem": "Aşağıdakilerden hangisi geçiş üstünlüğüne sahip araçlardandır?",
+    "options": [
+      "A) İtfaiye aracı",
+      "B) Motosiklet",
+      "C) Tarım traktörü",
+      "D) Toplu taşıma aracı"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "İtfaiye aracı",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q29",
+    "exam": "Sınav 4",
+    "section": "Trafik ve Çevre",
+    "stem": "Park edilen araç için aşağıdakilerden hangisinin yapılmasına gerek yoktur?",
+    "options": [
+      "A) El freninin çekilmesine",
+      "B) Motorunun durdurulmasına",
+      "C) Acil uyarı ışıklarının yakılmasına",
+      "D) Yol eğimli ise uygun vitese takılmasına"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Acil uyarı ışıklarının yakılmasına",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q30",
+    "exam": "Sınav 4",
+    "section": "Trafik ve Çevre",
+    "stem": "Geceleyin önündeki aracı geçmek isteyen sürücü, bu araçla yan yana gelinceye kadar hangi ışıkları kullanmalıdır?",
+    "options": [
+      "A) Sis ışıklarını",
+      "B) Acil uyarı ışıklarını",
+      "C) Uzağı gösteren ışıkları",
+      "D) Yakını gösteren ışıkları"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Yakını gösteren ışıkları",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q31",
+    "exam": "Sınav 4",
+    "section": "Trafik ve Çevre",
+    "stem": "Kamyon, kamyonet ve römorklarda yükle birlikte yolcu taşınırken aşağıdakilerden hangisinin yapılması yasaktır?",
+    "options": [
+      "A) Yüklerin bağlanması",
+      "B) Yolcuların yüklerin üzerine oturtulması",
+      "C) Kasanın yan ve arka kapaklarının kapatılması",
+      "D) Yolcuların kasa içinde ayrılmış bir yere oturtulması"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Yolcuların yüklerin üzerine oturtulması",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q32",
+    "exam": "Sınav 4",
+    "section": "Trafik ve Çevre",
+    "stem": "Araçlarda emniyet kemeri kullanımının zorunlu olması ile aşağıdakilerden hangisi hedeflenmektedir?",
+    "options": [
+      "A) Kazaların önlenmesi",
+      "B) Sürücülerin dikkatinin artırılması",
+      "C) Denetimlerde herhangi bir sorun yaşanmaması",
+      "D) Kaza anında ölüm ve yaralanmaların en aza indirilmesi"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Kaza anında ölüm ve yaralanmaların en aza indirilmesi",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q33",
+    "exam": "Sınav 4",
+    "section": "Trafik ve Çevre",
+    "stem": "Aşağıdakilerden hangisi trafik kazalarının en önemli sebebidir?",
+    "options": [
+      "A) Trafik görevlisi sayısının yetersiz olması",
+      "B) Uyarı işaretlerinin yetersiz olması",
+      "C) Sürücülerin kurallara uymaması",
+      "D) Yolların bakımsız olması"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Sürücülerin kurallara uymaması",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q34",
+    "exam": "Sınav 4",
+    "section": "Trafik ve Çevre",
+    "stem": "Aşağıdakilerden hangisi sürüş güvenliğini olumsuz yönde etkiler?",
+    "options": [
+      "A) Viraja girmeden önce hızı artırmak",
+      "B) Aracı kullanırken yola konsantre olmak",
+      "C) Yüksek hızlarda ani manevra yapmaktan kaçınmak",
+      "D) Her hızda, fren için ne kadar duruş mesafesi olduğunu hesaplamayı öğrenmek"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Viraja girmeden önce hızı artırmak",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q35",
+    "exam": "Sınav 4",
+    "section": "Trafik ve Çevre",
+    "stem": "Aşağıdakilerden hangisi çevre kirliliğini önleyici tedbirlerden biri değildir?",
+    "options": [
+      "A) Kısa mesafeli yerlere yürüyerek gidilmesi",
+      "B) İniş eğimli yollarda motorun durdurulması",
+      "C) Trafiğin yoğun olmadığı taşıt yollarının seçilmesi",
+      "D) Mümkün olduğunca toplu taşıma araçlarının kullanılması"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "İniş eğimli yollarda motorun durdurulması",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q36",
+    "exam": "Sınav 4",
+    "section": "Araç Tekniği",
+    "stem": "Aşağıdakilerden hangisi aracı istenilen yöne sevk eder?",
+    "options": [
+      "A) Marş sistemi",
+      "B) Yağlama sistemi",
+      "C) Direksiyon sistemi",
+      "D) Aydınlatma sistemi"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Direksiyon sistemi",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q37",
+    "exam": "Sınav 4",
+    "section": "Araç Tekniği",
+    "stem": "I. LPG\nII. Benzin\nIII. Motorin\n\nİçten yanmalı motorlarda yukarıdaki yakıtlardan hangileri kullanılır?",
+    "options": [
+      "A) Yalnız I.",
+      "B) I ve II.",
+      "C) II ve III.",
+      "D) I, II ve III."
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "I, II ve III.",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q38",
+    "exam": "Sınav 4",
+    "section": "Araç Tekniği",
+    "stem": "Aşağıdakilerden hangisi aracı kullanmaya başlamadan önce yapılması gereken hazırlıklardan biri değildir?",
+    "options": [
+      "A) Klimanın açılması",
+      "B) Koltuğun ayarlanması",
+      "C) Aynaların ayarlanması",
+      "D) Emniyet kemerinin takılması"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Klimanın açılması",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q39",
+    "exam": "Sınav 4",
+    "section": "Araç Tekniği",
+    "stem": "Aracın gösterge panelinde aşağıdaki ikaz ışıklarından hangisinin yanıyor olması araç yakıtının bitmek üzere olduğunu bildirir?",
+    "options": [
+      "A) A",
+      "B) B",
+      "C) C",
+      "D) D"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "C",
+    "has_image": true
+  },
+  {
+    "id": "sinav4-q40",
+    "exam": "Sınav 4",
+    "section": "Araç Tekniği",
+    "stem": "Motorlu araçlarda motorun yağ seviyesini kontrol etmeye yarayan ve özel işaretleri bulunan parçaya ne ad verilir?",
+    "options": [
+      "A) Yağdanlık",
+      "B) Yağ çubuğu",
+      "C) Yağ filtresi",
+      "D) Yağ pompası"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Yağ çubuğu",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q41",
+    "exam": "Sınav 4",
+    "section": "Araç Tekniği",
+    "stem": "Aracın elektrik devresinde, akım yüksek olduğunda eriyerek güvenliği sağlayan parça aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Akü",
+      "B) Platin",
+      "C) Sigorta",
+      "D) Alternatör"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Sigorta",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q42",
+    "exam": "Sınav 4",
+    "section": "Araç Tekniği",
+    "stem": "Kriko ile aracı kaldırırken tekerleklere takoz konulmasının nedeni aşağıdakilerden hangisidir?",
+    "options": [
+      "A) Aracın motorunu çalıştırabilmek",
+      "B) Aracın hareket etmesini engellemek",
+      "C) Araç yakıtının buharlaşmasını engellemek",
+      "D) Araç motorunun sarsıntısız çalışmasını sağlamak"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Aracın hareket etmesini engellemek",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q43",
+    "exam": "Sınav 4",
+    "section": "Araç Tekniği",
+    "stem": "Seyir hâlindeyken araçtan \"sürekli yakıt kokusu\" alınması durumunda aşağıdakilerden hangisi yapılır?",
+    "options": [
+      "A) Antifriz kontrol edilir.",
+      "B) Önemsenmez yola devam edilir.",
+      "C) Lastiklerin hava basıncı kontrol edilir.",
+      "D) Trafik kurallarına uyarak durulur ve kontak kapatılır."
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Trafik kurallarına uyarak durulur ve kontak kapatılır.",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q44",
+    "exam": "Sınav 4",
+    "section": "Araç Tekniği",
+    "stem": "Aşağıdakilerden hangisi yakıt tüketiminin artmasında sürücüden kaynaklanan kusurdur?",
+    "options": [
+      "A) Aşırı hız yapılması",
+      "B) Frenlerin ayarsız olması",
+      "C) Rölanti ayarının bozuk olması",
+      "D) Lastiklerin havasının az olması"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Aşırı hız yapılması",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q45",
+    "exam": "Sınav 4",
+    "section": "Trafik Adabı",
+    "stem": "I. Trafikteki bütün kuralların nedenini öğrenir.\nII. Araç kullanırken yapacağı bir kural ihlalinin sonucunda sadece maddi ceza olduğunu düşünür.\nIII. Trafik içinde yapacağı bir kural ihlalinde, kendisinin ya da sevdiklerinin canını tehlikeye attığının farkında değildir.\n\nYukarıdakilerden hangileri trafik adabına sahip olan bir sürücü için söylenebilir?",
+    "options": [
+      "A) Yalnız I.",
+      "B) I ve II.",
+      "C) II ve III.",
+      "D) I, II ve III."
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Yalnız I.",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q46",
+    "exam": "Sınav 4",
+    "section": "Trafik Adabı",
+    "stem": "Ailesi ile birlikte yolculuk yapan bir sürücü, aracını hız limitlerini aşarak sürdüğünde ailesinin hayatını da tehlikeye atmış olacaktır.\n\nBu sürücü, hız ihlalinden kaynaklanan olası bir kazada sevdiklerinin canını riske atmakla trafikte aşağıdaki değerlerden hangisini yerine getirmemiş olur?",
+    "options": [
+      "A) Hırçınlık",
+      "B) Bencillik",
+      "C) Sorumluluk",
+      "D) Hoşnutsuzluk"
+    ],
+    "correct_index": 2,
+    "correct_letter": "C",
+    "correct_text": "Sorumluluk",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q47",
+    "exam": "Sınav 4",
+    "section": "Trafik Adabı",
+    "stem": "Öndeki araç yol kenarına park etmeye çalışırken arkadan gelen diğer aracın onu beklemesi durumu, trafikte aşağıdaki değerlerden hangisine sahip olunduğunu gösterir?",
+    "options": [
+      "A) Öfke",
+      "B) Sabır",
+      "C) İnatlaşma",
+      "D) Aşırı tepki"
+    ],
+    "correct_index": 1,
+    "correct_letter": "B",
+    "correct_text": "Sabır",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q48",
+    "exam": "Sınav 4",
+    "section": "Trafik Adabı",
+    "stem": "Aşağıdaki değerlerden hangisine sahip olan sürücü, yoğun trafikte bir dizi hâlinde gitmekte olan diğer sürücülerin önlerine geçip trafiği daha da sıkışık hâle getirerek yoluna devam etmez?",
+    "options": [
+      "A) Bencil",
+      "B) Sorumsuz",
+      "C) Görgü seviyesi düşük",
+      "D) Empati düzeyi yüksek"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Empati düzeyi yüksek",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q49",
+    "exam": "Sınav 4",
+    "section": "Trafik Adabı",
+    "stem": "Seyir hâlindeki sürücünün, yaptığı bir hatadan dolayı eliyle veya yüz ifadesiyle diğer sürücülerden özür dilemesi trafikte aşağıdakilerden hangisinin kullanıldığına örnek olur?",
+    "options": [
+      "A) Beden dilinin",
+      "B) Bencilliğin",
+      "C) İnatlaşmanın",
+      "D) Tahammülsüzlüğün"
+    ],
+    "correct_index": 0,
+    "correct_letter": "A",
+    "correct_text": "Beden dilinin",
+    "has_image": false
+  },
+  {
+    "id": "sinav4-q50",
+    "exam": "Sınav 4",
+    "section": "Trafik Adabı",
+    "stem": "Aşağıdakilerden hangisi trafikte bireye yapılan hak ihlallerindendir?",
+    "options": [
+      "A) Aşırı hız yapmaktan kaçınılması",
+      "B) Geçiş önceliğine sahip araçlara yol verilmesi",
+      "C) Trafikte sürücülerin tek başına olmadığının düşünülmesi",
+      "D) Engeli olmadığı hâlde engelli kişiler için ayrılmış yerlere park edilmesi"
+    ],
+    "correct_index": 3,
+    "correct_letter": "D",
+    "correct_text": "Engeli olmadığı hâlde engelli kişiler için ayrılmış yerlere park edilmesi",
+    "has_image": false
+  }
+]

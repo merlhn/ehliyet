@@ -1,0 +1,657 @@
+[
+  {
+    "section": "İlk Yardım",
+    "lesson": "İlk Yardım ve Acil Tedavi",
+    "url": "/dersler/ilk-yardim/ilk-yardim-ve-acil-tedavi/",
+    "facts": [
+      "İlk yardımda ilaç kullanılmaz; tedavi etmek ilk yardımın değil acil tedavinin işidir.",
+      "Acil tedavi, sağlık personeli tarafından tıbbi araç gereç ve ilaçla yapılan müdahaledir; ambulans veya hastanede gerçekleşir.",
+      "İlk yardım ile acil tedaviyi ayıran 3 temel kriter: müdahaleyi kimin yaptığı, nerede yaptığı ve nasıl (ilaçlı/ilaçsız) yaptığıdır.",
+      "İlk yardımın öncelikli amaçları hayatı korumak, kötüleşmeyi önlemek ve iyileşmeyi kolaylaştırmaktır; 'tedavi etmek' bu amaçlar arasında yer almaz.",
+      "İlk yardımcı, müdahaleye başlamadan önce kendi can güvenliğini sağlamak zorundadır.",
+      "Trafik kazasında ilk yardıma her zaman olay yerinde başlanır; hastane veya ambulans beklenmez.",
+      "Kaza yerinde önce güvenli ortam oluşturulur, sonra 112 aranır.",
+      "112 aranırken kazanın türü, kişi sayısı ve genel durum net olarak bildirilmelidir.",
+      "İlk yardımcı eğitim almış herhangi bir kişi olabilir; sağlık personeli olma zorunluluğu yoktur."
+    ]
+  },
+  {
+    "section": "İlk Yardım",
+    "lesson": "İlk Yardımın ABC'si",
+    "url": "/dersler/ilk-yardim/ilk-yardimin-abcsi/",
+    "facts": [
+      "İlk yardımın ABC'sinde A harfi hava yolu açıklığını (Airway), B harfi solunumu (Breathing), C harfi dolaşımı (Circulation) ifade eder.",
+      "ABC değerlendirmesine geçmeden önce ilk adım kişinin bilincini kontrol etmektir: omzuna dokunulup 'iyi misiniz?' diye seslenilir.",
+      "Hava yolu açıklığı için baş geri-çene yukarı pozisyonu verilir; ancak boyun yaralanması şüphesinde bu pozisyon verilmez.",
+      "Solunum yolunu tıkayabilecek 3 neden: dilin geriye kayması, takma diş ve yabancı cisimdir.",
+      "Solunum bak-dinle-hisset yöntemiyle değerlendirilir: göğüs hareketine bakılır, nefes sesi dinlenir, nefes yanakta hissedilir.",
+      "Solunum değerlendirmesi 10 saniye süreyle yapılır; bu süre tüm yaş grupları için geçerlidir.",
+      "Nabız tanımı: kalp atımlarının atardamar duvarına yaptığı basınçtır; toplardamardan nabız alınmaz.",
+      "Yetişkin ve çocuklarda nabız şah (boyun/karotis) damarından, bebeklerde ise kol (brakiyal) atardamarından kontrol edilir.",
+      "Hava yolunu açmak için ağız içinde yabancı cisim varsa işaret parmağıyla dışarı alınmaya çalışılır."
+    ]
+  },
+  {
+    "section": "İlk Yardım",
+    "lesson": "Kanamalar",
+    "url": "/dersler/ilk-yardim/kanamalar/",
+    "facts": [
+      "Kanama, damar bütünlüğünün bozulması sonucu kanın damar dışına çıkmasıdır; dış ve iç kanama olmak üzere 2 türü vardır.",
+      "Atardamar kanamasında kan açık kırmızıdır ve fışkırarak akar; en tehlikeli kanama türüdür.",
+      "Toplardamar kanamasında kan koyu kırmızıdır ve sızıntı şeklinde sürekli akar.",
+      "Kılcal damar kanaması az miktarda olur ve çoğunlukla kendiliğinden durur.",
+      "Kanamayı durdurmada sıralama: doğrudan baskı, bölgeyi kalp üzerine kaldırma, basınç noktasına baskı, son çare turnike.",
+      "Baskı uygulanan bez kanla dolarsa çıkarılmaz; üzerine yeni bez eklenerek baskıya devam edilir.",
+      "İç kanama belirtileri şok belirtileriyle aynıdır: soluk-soğuk cilt, hızlı-zayıf nabız ve huzursuzluk.",
+      "İç kanama şüphesi olan kişiye yiyecek ve içecek verilmez; şok pozisyonu verilir ve üzeri örtülür.",
+      "Burun kanamasında baş hafifçe öne eğilir ve burun kanatları sıkılır; başın geriye atılması yanlıştır."
+    ]
+  },
+  {
+    "section": "İlk Yardım",
+    "lesson": "Kırık, Çıkık, Burkulma",
+    "url": "/dersler/ilk-yardim/kirik-cikik-burkulma/",
+    "facts": [
+      "Kırık kemikte, çıkık ve burkulma eklemde oluşur; sınavda 'kırık' denince kemik akla gelmelidir.",
+      "Çıkık eklem yüzeylerinin kalıcı, burkulma ise anlık ayrılmasıdır. Ağırlık: kırık > çıkık > burkulma.",
+      "Açık kırıkta kemik ucu dışarı çıkmıştır ve enfeksiyon riski yüksektir; en tehlikeli kırık türüdür.",
+      "Kırık olan bölge hareket ettirilmez ve düzeltilmeye çalışılmaz.",
+      "Köprücük kemiği, kaburga ve kafatası kırıklarına atel uygulanmaz; atel yalnızca uzun kemiklere uygulanır.",
+      "Atelin boyu kırığın iki ucundaki eklemleri de içine alacak kadar uzun olmalıdır.",
+      "Göğüs, kaburga, köprücük ve kol kırıklarında yarı oturuş; diğer kırıklarda sırtüstü yatış pozisyonu verilir.",
+      "Omurga kırığında baş-boyun-gövde hizası kesinlikle bozulmaz; dik pozisyon vermek felce yol açabilir.",
+      "Burkulmada CIPS kuralı uygulanır: Cilt soğutma, İstirahat, Pansuman, Seviye yükseltme."
+    ]
+  },
+  {
+    "section": "İlk Yardım",
+    "lesson": "Şok, Koma ve Bayılma",
+    "url": "/dersler/ilk-yardim/sok-koma-bayilma/",
+    "facts": [
+      "Şok, tansiyon düşüklüğü ile seyreden dolaşım yetmezliğidir; yaşamsal organlara yeterince kan gitmemesi durumudur.",
+      "Şokun en önemli ve ayırt edici belirtisi zayıf ve hızlı nabızdır; yavaş veya güçlü nabız şok belirtisi değildir.",
+      "Baş bölgesinde yaralanma varsa şok pozisyonu verilmez; beyne ek kan gönderilmesi kanamayı artırır.",
+      "Koma, uzun süreli bilinç kaybıdır; yutkunma ve öksürük refleksleri kaybolur ancak nabız vardır.",
+      "Komadaki kişiye yarı yüzükoyun yan yatış (koma) pozisyonu verilir; amacı kusmuğun boğulmaya yol açmasını önlemektir.",
+      "Komadaki kişiye yiyecek-içecek verilmez, tokat gibi sert uyaranlar uygulanmaz ve kolonya koklatılmaz.",
+      "Bayılma kısa süreli ve geçici bilinç kaybıdır; aşırı heyecan, korku ve kapalı ortamda oksijensiz kalma nedenleri arasındadır.",
+      "Kusma olan her bilinç kaybı durumunda yarı yüzükoyun yan yatış pozisyonu verilir.",
+      "İlk yardımda kazazedeye yiyecek-içecek verilmez; tek istisna kan şekeri düşüklüğünde şekerli gıda verilebilmesidir."
+    ]
+  },
+  {
+    "section": "İlk Yardım",
+    "lesson": "Solunum Yolu Tıkanıkları (Heimlich Manevrası)",
+    "url": "/dersler/ilk-yardim/solunum-yolu-tikanikligi/",
+    "facts": [
+      "Solunum yolu tıkanıklığı tam tıkanma ve kısmi tıkanma olmak üzere 2 türdür.",
+      "Kısmi tıkanmada kişi öksürebilir ve nefes alabilir; müdahale edilmez, yalnızca öksürmeye teşvik edilir.",
+      "Kısmi tıkanma yaşayan kişiye su verilmez ve sırta vurulmaz.",
+      "Tam tıkanmada kişi nefes alamaz, konuşamaz ve rengi morarır; Heimlich manevrası uygulanır.",
+      "Heimlich manevrasında önce 5 kez sırta vurma, sonra 5 kez karına içe-yukarı bası uygulanır.",
+      "Karına bası noktası göbek ile göğüs kemiği arasıdır.",
+      "Sırta vurma ve karına bası yabancı cisim çıkana kadar dönüşümlü (5+5) tekrarlanır.",
+      "Bebeklerde karına bası yerine göğüs kemiğinden 2 parmakla 5 kez göğüs basısı uygulanır.",
+      "Kişi tek başınaysa sandalye arkalığına karnını bastırarak Heimlich'i kendine uygulayabilir."
+    ]
+  },
+  {
+    "section": "İlk Yardım",
+    "lesson": "Taşıma Teknikleri",
+    "url": "/dersler/ilk-yardim/tasima-teknikleri/",
+    "facts": [
+      "Kazazede yalnızca hayatı tehdit eden bir tehlike (yangın, patlama, zehirli gaz) varsa taşınır; yoksa yerinden oynatılmaz.",
+      "Rentek manevrası, araç içinde bilinci kapalı kazazedeyi yangın/patlama tehlikesinde araçtan çıkarmak için kullanılır.",
+      "İtfaiyeci yöntemi, tek ilk yardımcının kazazedeyi omzuna alarak taşıdığı acil taşıma tekniğidir.",
+      "Altın beşik yöntemi, 2 ilk yardımcının ellerini kenetleyerek oturak oluşturduğu taşıma tekniğidir.",
+      "Omurga yaralanması şüphesinde mutlaka sert sedye kullanılır; yumuşak sedye kullanılmaz.",
+      "Her taşıma tekniğinde baş-boyun-gövde ekseni korunur.",
+      "Taşıma sırasında ağırlık belden değil bacak kaslarından alınır; dizler bükülerek çömelip kalkılır.",
+      "Sürükleme yöntemi yalnızca hayati tehlike varken ve kısa mesafe için tercih edilir."
+    ]
+  },
+  {
+    "section": "İlk Yardım",
+    "lesson": "Turnike Yöntemi",
+    "url": "/dersler/ilk-yardim/turnike/",
+    "facts": [
+      "Turnike, doğrudan baskı ve basınç noktası yöntemlerinin yetersiz kaldığı hayati kanamalarda son çare olarak uygulanır.",
+      "Turnike, kanayan bölgede yara ile kalp arasına, uzvun tek kemikli üst bölümüne (üst kol veya uyluk) uygulanır.",
+      "Çift kemikli bölgelerde (ön kol, alt bacak) turnike etkisiz kalır çünkü damarlar kemikler arasında yeterince sıkıştırılamaz.",
+      "Turnike malzemesi en az 5 cm genişliğinde, geniş ve yassı bir bez olmalıdır; ip veya tel dokuyu keser.",
+      "Turnike yalnızca kanama duracak kadar sıkılır; fazla sıkmak dokuya zarar verir.",
+      "Turnikenin uygulama saati mutlaka yazılıp kazazedenin görünür bir yerine iğnelenir.",
+      "Turnike, sağlık ekibi devralana kadar gevşetilmez ve açılmaz.",
+      "Turnikenin üzeri örtülerek gizlenmez; sağlık ekibinin görebilmesi için açıkta bırakılır."
+    ]
+  },
+  {
+    "section": "İlk Yardım",
+    "lesson": "Vücudu Oluşturan Sistemler",
+    "url": "/dersler/ilk-yardim/vucudu-olusturan-sistemler/",
+    "facts": [
+      "Vücudun yapı sıralaması küçükten büyüğe: hücre, doku, organ, sistem, organizmadır; hücre en küçük yapı birimidir.",
+      "Hücrenin beslenmesinde hücre zarı görev yapar; çekirdek veya sitoplazma değil.",
+      "Hareket sisteminin organları kemikler, kaslar ve eklemlerdir; kırık ve ezilmeler hareket sistemini ilgilendirir.",
+      "Dolaşım sisteminin organları kalp ve damarlardır; kalp 4 odacıktan oluşur ve göğüs kafesinde yer alır.",
+      "Damarlar atardamar (açık kırmızı, kalpten vücuda), toplardamar (koyu kırmızı, vücuttan kalbe) ve kılcal damar olmak üzere 3 türdür.",
+      "Sinir sisteminin organları beyin, beyincik, omurilik ve omurilik soğanıdır; omuriliğin zedelenmesi felce yol açabilir.",
+      "Oksijensizliğe en dayanıksız organ beyindir; oksijensiz kalırsa en fazla 5 dakikada kalıcı hasar veya ölüm gerçekleşir.",
+      "Solunum sisteminin organları burun, yutak, gırtlak, soluk borusu ve akciğerlerdir.",
+      "Sindirim ağızda başlar; sindirim sisteminin organları ağız, yemek borusu, mide, bağırsaklar ve pankreastır."
+    ]
+  },
+  {
+    "section": "İlk Yardım",
+    "lesson": "Yanıklar",
+    "url": "/dersler/ilk-yardim/yaniklar/",
+    "facts": [
+      "Yanık, derinin fiziksel veya kimyasal bir yakıcıya maruz kalması sonucu oluşur; her yanık ateşle olmak zorunda değildir.",
+      "1. derece yanıkta yalnızca kızarıklık görülür; güneş yanığı buna örnektir.",
+      "2. derece yanıkta deri su toplar (kabarcıklar oluşur); orta şiddette yanıktır.",
+      "3. derece yanıkta sinir harabiyeti vardır ve en ağır yanık türüdür.",
+      "Üzeri tutuşan kişi koşturulmamalıdır; battaniyeyle sarılıp yuvarlanarak söndürülür.",
+      "Yanık bölge tazyikli değil yumuşak akan soğuk suyla en az 20 dakika soğutulur.",
+      "Yanık üzerine merhem, diş macunu veya tentürdiyot sürülmez; su toplamış kabarcıklar patlatılmaz.",
+      "Geniş yanıklarda kusması yoksa kazazedeye ağızdan sıvı verilebilir; yiyecek-içecek yasağının istisnasıdır.",
+      "Kimyasal yanıkta maddenin deriyle teması kesilerek bölge bol ve tazyiksiz suyla yıkanır."
+    ]
+  },
+  {
+    "section": "İlk Yardım",
+    "lesson": "Yaralanmalar",
+    "url": "/dersler/ilk-yardim/yaralanmalar/",
+    "facts": [
+      "Yara, travma sonucu deri veya mukoza bütünlüğünün bozulmasıdır; kapalı ve açık olarak 2 ana gruba ayrılır.",
+      "Ezik yara künt cisimlerle oluşur ve trafik kazalarında en sık görülen yara türüdür.",
+      "Delici yaralar sivri cisimlerle oluşur ve tetanoz riski en yüksek yara türüdür.",
+      "Yaraya saplanan yabancı cisim asla çıkarılmaz; etrafı desteklenerek sabitlenir.",
+      "Yaranın üzerine tentürdiyot gibi maddeler dökülmez.",
+      "Isırma, sokma, 6 saatten geç müdahale edilen ve çok kirli-derin yaralar enfekte (kirli) yara sayılır.",
+      "Delici göğüs yaralanmasında kişiye oturur pozisyon verilir.",
+      "Karın yaralanmasında dışarı çıkan organlar içeri konulmaz; üzeri temiz nemli bezle örtülür.",
+      "Kafatası ve omurga yaralanmalarında baş-boyun-gövde ekseni bozulmadan taşıma yapılır."
+    ]
+  },
+  {
+    "section": "İlk Yardım",
+    "lesson": "Yaşam Bulguları",
+    "url": "/dersler/ilk-yardim/yasam-bulgulari/",
+    "facts": [
+      "Yaşam bulguları 5 tanedir: bilinç, solunum, dolaşım (nabız), vücut ısısı ve kan basıncı.",
+      "Bebeklerde bilinç kontrolü ayak topuğuna vurularak yapılır; yetişkinlerde omza dokunulup seslenilir.",
+      "Bilinç kaybı 3 derecedir: 1. derece sözlü uyarana, 2. derece yalnızca ağrılı uyarana cevap verir, 3. derecede hiçbir uyarana tepki yoktur.",
+      "Boyun yaralanması olan kişiye baş geri-çene yukarı pozisyonu verilmez.",
+      "Vücut ısısı ilk yardımda koltuk altından ölçülür; sağlıklı değer 36,5 derecedir.",
+      "38 derece ve üzeri yüksek ateş kabul edilir; çocuklarda yüksek ateş havale riskine yol açar.",
+      "42 derece üzeri ve 34,5 derece altı vücut ısısı çok tehlikelidir.",
+      "Solunum durduğunda ilk 5 dakika içinde müdahale edilmezse beyin ölümü gerçekleşir."
+    ]
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "lesson": "Araç Kullanma Süreleri ve Yasakları",
+    "url": "/dersler/trafik-ve-cevre/arac-kullanma-sureleri/",
+    "facts": [
+      "Sürücü belgesinin sınıfı dışında araç kullanmak yasaktır.",
+      "Uyuşturucu etkisinde araç kullananın belgesi 5 yıl süreyle geri alınır.",
+      "Alkol sınırı hususi araçlarda 0,50 promil, ticari araçlarda 0,20 promildir.",
+      "Alkollü araç kullanmada 625 kuralı: birincisinde 6 ay, ikincisinde 2 yıl, üçüncüsünde 5 yıl belge geri alınır.",
+      "Ticari araç sürücüsü devamlı olarak en fazla 4,5 saat araç kullanabilir; ardından en az 45 dakika mola zorunludur.",
+      "Ticari araçlarda günlük toplam araç kullanma süresi molalar dâhil en fazla 9 saattir.",
+      "Zorunlu 45 dakikalık mola tek seferde veya en az 15'er dakikalık dilimlere bölünebilir.",
+      "Takograf aracın kullanım süresini ve hızını kaydeder; ticari araçlarda bulunması zorunludur.",
+      "Belgesiz araç kullanılırsa hem sürene hem kullandırana ceza uygulanır."
+    ]
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "lesson": "Araçlarla İlgili Tanımlar",
+    "url": "/dersler/trafik-ve-cevre/araclarla-ilgili-tanimlar/",
+    "facts": [
+      "Otomobil, yapısı itibarıyla sürücüsü dâhil en fazla 9 oturma yeri olan araçtır; 9-17 arası minibüs, 9'dan fazlası otobüstür.",
+      "Çekici, römork ve yarı römorkları çekmek için imal edilmiş motorlu araçtır ve kendisi yük taşımaz.",
+      "Yarı römork, bir kısmı çekici araç üzerine oturan motorsuz yük taşıtıdır; römork ise tamamen çekilen motorsuz yük taşıtıdır.",
+      "Taşıt katarı, kara yolunda bir birim olarak seyretmek üzere birbirine bağlanmış en çok 2 römorktan oluşan araçtır.",
+      "Okul taşıtının arkasındaki altıgen 'DUR' ışığı yandığında arkadaki sürücünün durması zorunludur.",
+      "Okul taşıtlarında camların sabit olması ve araçta rehber personel bulunması zorunludur.",
+      "B sınıfı sürücü belgesiyle lastik tekerlekli traktör, minibüs ve kamyonet kullanılabilir.",
+      "Özel amaçlı taşıtlar arasında itfaiye, cankurtaran, cenaze aracı ve kütüphane aracı yer alır."
+    ]
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "lesson": "Genel Tanımlar",
+    "url": "/dersler/trafik-ve-cevre/genel-tanimlar/",
+    "facts": [
+      "Tırmanma şeridi yokuşlarda çıkış yönünde kullanılır ve ilk kullanım hakkı çıkan araca aittir.",
+      "Bölünmüş kara yolu, bir yöndeki taşıt yolunun ayırıcı ile diğer taşıt yolundan ayrılmasıyla meydana gelir.",
+      "Geçiş yolu bir mülkün ana yola bağlantısıdır; bağlantı yolu ise yolları ve kavşakları birbirine bağlar.",
+      "Banket, yaya yolu ayrılmamış kara yolunda taşıt yolu kenarı ile şev başı arasında kalan bölümdür.",
+      "Yaya yolu yürümek, yaya geçidi ise karşıdan karşıya geçmek içindir; yaya geçidinde yol hakkı yayanındır.",
+      "Ana yol ile tali yolun kesiştiği kavşakta kaza olursa kusurlu olan tali yoldaki araçtır.",
+      "Demir yolu hemzemin geçidinde bariyerli olanlar kontrollü, bariyersiz olanlar kontrolsüz geçittir.",
+      "Yolda çift çizgi varsa o kesimde sollama yasaktır; kesik çizgide şerit değiştirme yapılabilir.",
+      "Otoyolda U dönüşü yasaktır, mecburi hâller dışında durma ve park etme yapılamaz."
+    ]
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "lesson": "Hız Sınırları",
+    "url": "/dersler/trafik-ve-cevre/hiz-sinirlari/",
+    "facts": [
+      "Hız sınırlarında %10'luk yasal tolerans vardır.",
+      "Azami hız en yüksek hızı, asgari hız ise en düşük hızı ifade eder; çok yavaş gitmek de tehlikelidir.",
+      "Römork takılmış araçlarda hız sınırı romorksuz araca göre 10 km/s daha düşüktür.",
+      "Hız sınırını %30'dan fazla aşarak bir yıl içinde 5 defa ihlal eden sürücünün belgesi 1 yıl geri alınır.",
+      "Radar cihazlarını tespit eden cihaz bulundurmak hem hapis hem para cezası gerektirir.",
+      "12 tonu geçen kamyonlarda ve 10 tonu geçen otobüslerde hız sınırlandırıcı cihaz zorunludur.",
+      "Bölünmüş yolda seyir hâlindeyken hız azaltmak zorunlu değildir.",
+      "Hızın azaltılması gereken yerler: kavşaklar, virajlar, tepe üstü, okul ve yaya geçitleri, tünel, köprü ve menfezlerdir."
+    ]
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "lesson": "Karayolunun Kullanılması",
+    "url": "/dersler/trafik-ve-cevre/karayolunun-kullanilmasi/",
+    "facts": [
+      "Türkiye'de trafik sağdan işler; sürücüler mümkün olduğunca sağ şeridi kullanır, sol şerit yalnızca sollama içindir.",
+      "İki şeridi birlikte kullanmak ve en sol şeridi sürekli işgal etmek yasaktır.",
+      "İşaret vermeden şerit değiştirmek yasaktır; önce girilecek şeritteki araçların geçmesi beklenmelidir.",
+      "Emniyet şeritleri ve banketler kaza ve arıza dışında kullanılamaz.",
+      "Ters yöne girmek asli kusurdur ve cezası ağırdır.",
+      "Dönüş için uygun şeride şehir içinde 30 metre, şehirler arası 150 metre önceden geçilmelidir.",
+      "Sağa sola kavis çizerek gitmek yasaktır; şerit değiştirme yalnızca geçme, dönme, duraklama ve park etme için yapılır.",
+      "Şerit değiştirme yol çizgilerinin kesik olduğu yerde yapılabilir; çizgi sürekli ise yasaktır."
+    ]
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "lesson": "Kavşaklarda İlk Geçiş Hakkı",
+    "url": "/dersler/trafik-ve-cevre/kavsaklarda-gecis-hakki/",
+    "facts": [
+      "Kavşaklarda ilk geçiş hakkı her zaman geçiş üstünlüğüne sahip araçlara verilir.",
+      "Geçiş üstünlüğü sırası: önce cankurtaran, sonra itfaiye, sonra polis, en son sivil savunma.",
+      "Siren sesi duyulduğunda yapılması gereken ilk iş sesin geldiği yönü tayin etmektir.",
+      "Dönel kavşakta yol hakkı her zaman ada içindeki araca aittir; adaya girmek isteyen bekler.",
+      "Dönüş yapan sürücü doğrudan giden araçlara yol vermek zorundadır.",
+      "Kontrolsüz eşdeğer kavşaklarda motorsuz araç sürücüleri motorlu araçlara yol verir.",
+      "Tüm araçlar aynı statüde ve düz gidiyorsa soldaki sürücü sağındaki araca yol verir.",
+      "Tali yoldan ana yola çıkan sürücü ana yoldaki araçlara yol verir.",
+      "Mülkten yola çıkan sürücü yolda seyreden araçlara öncelik tanımak zorundadır."
+    ]
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "lesson": "Kontrollü Kavşaklar",
+    "url": "/dersler/trafik-ve-cevre/kontrollu-kavsaklar/",
+    "facts": [
+      "Kontrollü kavşak, levha, ışık veya trafik görevlisi tarafından düzenlenen kavşaktır.",
+      "Altıgen 'DUR' levhası kırmızı ışıkla aynı anlama gelir ve bulunduğu yer tali yoldur; mutlaka durmak zorunludur.",
+      "Ters üçgen 'YOL VER' levhası sarı ışıkla aynı anlama gelir; yavaşlanır ve gerekirse durulur.",
+      "Ana yolda ve yeşil ışıkta bile kavşağa girerken hız azaltmak zorunludur.",
+      "Tali yoldan gelip durması gerekirken durmayan sürücü kazada %100 asli kusurlu kabul edilir.",
+      "Sağa dönüşler dar bir kavisle en sağa yaklaşarak yapılır.",
+      "Sola dönüşler geniş bir kavisle yapılır; 'girilmez' levhalı yola girmek yasaktır.",
+      "Ana yol levhası bulunan yol ana yoldur ve yol hakkı ana yoldaki araca aittir."
+    ]
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "lesson": "Kurum ve Kuruluşlar",
+    "url": "/dersler/trafik-ve-cevre/kurum-ve-kuruluslar/",
+    "facts": [
+      "Şehir içi trafik işlerinin çoğu belediyeye, şehirler arası ve kara yolu işleri Karayolları Genel Müdürlüğü'ne aittir.",
+      "Trafik denetimi şehir içinde Emniyet (polis), şehirler arasında Jandarma tarafından yapılır; ikisi de İçişleri Bakanlığı'na bağlıdır.",
+      "Kara yolları üzerinde ilk yardım istasyonlarını kurmak Sağlık Bakanlığı'nın görevidir.",
+      "Çocuklar için trafik eğitim tesislerini belediye yapar, denetimini Millî Eğitim Bakanlığı üstlenir.",
+      "Sürücü kursları, sınav yapmak ve sürücü sertifikası vermek Millî Eğitim Bakanlığı'nın görevidir.",
+      "Araç muayeneleri Ulaştırma ve Altyapı Bakanlığı'na bağlı muayene istasyonlarında yapılır.",
+      "Plaka ve tescil belgesini noterler, sürücü belgesini nüfus müdürlükleri verir.",
+      "Kültür ve Turizm Bakanlığı'nın trafikle ilgili herhangi bir görevi yoktur.",
+      "Yalnızca maddi hasarlı kazalarda taraflar kendi aralarında tutanak tutup yoluna devam edebilir."
+    ]
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "lesson": "Trafik İşaretlerine Uymada Öncelik Sırası",
+    "url": "/dersler/trafik-ve-cevre/oncelik-sirasi/",
+    "facts": [
+      "Trafik işaretlerine uymada öncelik sırası: 1) trafik görevlisi, 2) ışıklı ve sesli işaretler, 3) trafik işaret levhaları, 4) yer çizgileri.",
+      "İki işaret çelişirse her zaman sırada daha üstte olana uyulur; yeşil ışık yansa bile görevlinin 'dur' işareti bağlayıcıdır.",
+      "Trafik görevlisi en üstte yer alır çünkü o anki gerçek durumu görüp anında karar verebilen tek unsurdur.",
+      "Işıklar levhalardan üstündür; çünkü ışıklar duruma göre değişen, anlık ve daha kesin bir yönlendirme sağlar.",
+      "Levhalar yer çizgilerinden üstündür; çünkü yer çizgileri zamanla silinebilir veya karla kapanabilir.",
+      "Sınav bu konuyu iki şekilde sorar: doğrudan sıralama istenir veya çelişen iki işaret verilip hangisine uyulacağı sorulur.",
+      "Bir levha ile yol çizgileri çelişiyorsa levhaya, işaret levhası ile trafik ışığı çelişiyorsa ışığa uyulur."
+    ]
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "lesson": "Temel Kavramlar",
+    "url": "/dersler/trafik-ve-cevre/temel-tanimlar/",
+    "facts": [
+      "Trafik, yaya, hayvan ve araçların kara yolu üzerindeki hâl ve hareketleridir; durmak da trafiğin bir parçasıdır.",
+      "Kara yolu, trafik için kamunun yararlanmasına açık arazi şeridi, köprüler ve alanları kapsar; yalnızca asfalt yollarla sınırlı değildir.",
+      "Şoför ile sürücü arasındaki tek fark ticari faaliyettir; ticari amaçla araç kullanan kişi şoför, ticari amaç gütmeyen kişi sürücüdür.",
+      "Durma, kırmızı ışık veya engel gibi zorunlu hâllerdeki beklemedir; sürücü isteğiyle yapılmaz.",
+      "Duraklama isteğe bağlı ve en fazla 5 dakikalık kısa beklemedir; 5 dakikayı aşan bekleme park etme sayılır.",
+      "Trafik kazası sayılabilmesi için 3 şart bir arada bulunmalıdır: olay kara yolunda olmalı, araç hareket hâlinde olmalı ve ölüm/yaralanma/zarar bulunmalıdır.",
+      "Tarlada çalışan traktörün çukura düşmesi trafik kazası değil iş kazasıdır; olay kara yolu üzerinde gerçekleşmemiştir.",
+      "Trafikten men, aracın belgelerinin alınıp trafikten alıkonulmasıdır; en yaygın sebebi zorunlu trafik sigortasının yaptırılmamış olmasıdır."
+    ]
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "lesson": "Trafik Işıkları",
+    "url": "/dersler/trafik-ve-cevre/trafik-isiklari/",
+    "facts": [
+      "Kırmızı ışık 'dur', yeşil ışık 'geç', sarı ışık 'hazırlan' anlamındadır.",
+      "Kırmızıdan sonra yanan sarı yeşilin geleceğini, yeşilden sonra yanan sarı kırmızının geleceğini gösterir.",
+      "Fasılalı yanıp sönen kırmızı ışık 'DUR' levhasıyla aynı anlamdadır: önce durulur, kontrol edilir ve güvenli şekilde geçilir.",
+      "Fasılalı yanıp sönen sarı ışık 'YOL VER' levhasıyla aynı anlamdadır; yavaş ve dikkatli geçilir.",
+      "Sürekli yanan kırmızı ışıkta beklenir; fasılalı kırmızıda durup kontrol ederek devam edilir.",
+      "Oklu ışıklarda her hareket kendi yönüne ait ışığa göre değerlendirilir.",
+      "Işıkların olmadığı yerde levhalar devreye girer; levhaya uymayan sürücü kazada kusurlu sayılır."
+    ]
+  },
+  {
+    "section": "Araç Tekniği",
+    "lesson": "Aktif ve Pasif Güvenlik Sistemleri",
+    "url": "/dersler/arac-teknigi/aktif-pasif-guvenlik/",
+    "facts": [
+      "Aktif güvenlik sistemleri kazadan önce devreye girip kazayı önlemeye çalışır; pasif sistemler kaza sonrası ölüm ve yaralanmayı azaltır.",
+      "ABS ani frenlemede tekerleklerin kilitlenmesini önler; asıl faydası frenlerken direksiyon kontrolünü korumaktır.",
+      "ASR kalkış ve hızlanma sırasında tekerleklerin patinaj yapmasını önler.",
+      "ESP, ABS ve ASR üzerine geliştirilmiş en kapsamlı aktif güvenlik sistemidir; aracı dengede tutar.",
+      "Hava yastığı pasif güvenlik sistemidir; ön koltukta oturan çocuk için tehlikelidir.",
+      "Hava yastığı emniyet kemeri takılı değilse çalışmayabilir; ikisinin birlikte kullanılması gerekir.",
+      "Emniyet kemeri kazayı önlemez; sürücünün araçtan fırlamasını ve araç içinde çarpmasını engeller.",
+      "Koltuk başlığı özellikle arkadan çarpma durumunda boyun zedelenmesini önler."
+    ]
+  },
+  {
+    "section": "Araç Tekniği",
+    "lesson": "Araç Kullanmaya Hazırlık",
+    "url": "/dersler/arac-teknigi/arac-kullanmaya-hazirlik/",
+    "facts": [
+      "Araca binmeden önce lastikler ve aracın altı (yakıt sızıntısı, yağ akıntısı, hayvan veya çocuk) kontrol edilmelidir.",
+      "Araç içinde yakıt veya LPG kokusu varsa patlama riski nedeniyle kesinlikle kontak çevrilmemelidir.",
+      "Koltuk başlığı, arkadan çarpma kazalarında boynun zedelenmesini önleyen pasif güvenlik parçasıdır.",
+      "Direksiyon en güvenli biçimde saat kadranında 9-15 pozisyonunda tutulur.",
+      "Aynalar kör noktaları en aza indirmek için 90 derece açıyla ayarlanır.",
+      "Ön ısıtma bujisi yalnızca dizel araçlarda bulunur; ikaz ışığının sönmesi beklenmelidir.",
+      "Motor çalışırken mars yapılırsa mars dişlisi zarar görür.",
+      "Emniyet kemeri ve hava yastığı kazayı önlemez, kaza sonrası ölüm ve yaralanmayı azaltır."
+    ]
+  },
+  {
+    "section": "Araç Tekniği",
+    "lesson": "Ateşleme Sistemi",
+    "url": "/dersler/arac-teknigi/atesleme-sistemi/",
+    "facts": [
+      "Ateşleme sistemi yalnızca benzinli ve LPG'li araçlarda görev yapar; dizel araçlarda ateşleme sistemi yoktur.",
+      "Endüksiyon bobini akunun 12 voltluk enerjisini 15.000-25.000 volt arasına yükseltir.",
+      "Radyatör ateşleme sisteminin değil soğutma sisteminin parçasıdır.",
+      "Dizel araçlardaki ön ısıtma bujisi ateşleme sağlamaz; soğuk havada motor parçalarını ısıtır.",
+      "Sulu aküde su azaldığında yalnızca saf su eklenir; asit veya çeşme suyu konulmaz.",
+      "Regülatör bozulduğunda voltaj kontrol edilemez, ampuller patlar ve akü suyu sık azalır.",
+      "Alternatör V kayışından güç alarak hareketi elektriğe çevirir, hem aracın ihtiyacını karşılar hem aküyü şarj eder.",
+      "Bujiler kurum bağlarsa motor tekleyerek çalışır, güçten düşer ve yakıt sarfiyatı artar."
+    ]
+  },
+  {
+    "section": "Araç Tekniği",
+    "lesson": "Aydınlatma ve İkaz Sistemi",
+    "url": "/dersler/arac-teknigi/aydinlatma-ve-ikaz-sistemi/",
+    "facts": [
+      "Selektör viraj, tepe üstü, kavşak ve sollamada diger sürücüyü uyarmak için kullanılır.",
+      "Geri vitese takıldığında aracın arkasında beyaz ışık yanar; fren yapıldığında kırmızı stop lambası yanar.",
+      "Sigorta, aractaki elektrik tesisatını kısa devreye karşı korur ve atan sigorta aynı amper değerinde değiştirilmelidir.",
+      "Farlardan yalnızca biri yanmıyorsa ampul patlamıştır; hepsi birden yanmıyorsa sigorta atmıştır.",
+      "Sinyal veya dörtlü flaşör yanmıyorsa flaşör arızalıdır; fren lambalarının hepsi yanmıyorsa fren müşürü arızalıdır.",
+      "Kısa far simgesinde ışınlar aşağı eğik, uzun far simgesinde ışınlar düz yatay biçimde ileri gider.",
+      "Sigorta aydınlatma sisteminin, fren müşürü ise ikaz sisteminin parçasıdır.",
+      "Tek ışık sönükse sorun ampulde, hepsi birden sönükse sorun ortak beslemede (sigorta veya müşür) aranmalıdır."
+    ]
+  },
+  {
+    "section": "Araç Tekniği",
+    "lesson": "Derhal Durulması Gereken Haller",
+    "url": "/dersler/arac-teknigi/derhal-durulmasi-gereken-haller/",
+    "facts": [
+      "Aracı derhal durdurmayı gerektiren 5 durum: yağ lambası, şarj lambası, hararet göstergesi, motordan duman ve yanık koku/anormal ses.",
+      "Yağ lambası ve şarj lambası kontak açıldığında yanar, motor çalışınca söner; hareket hâlinde yanmaları arıza işaretidir.",
+      "Yağ lambası hareket hâlinde yanarsa motor yağlanmıyor demektir; durulmadan devam edilirse yatak sarar.",
+      "Şarj lambası hareket hâlinde yanarsa alternatör çalışmıyor ve akü şarj olmuyor demektir.",
+      "Dört durumda kontak kapatılırken hararette kontak kapatılmaz; motor rölantide çalıştırılarak ısı dengesini bulması beklenir.",
+      "Hararet yapan araçta soğutma suyu ve vantilatör kayışı kontrol edilmelidir.",
+      "Motordan duman geldiğinde kontak kapatılıp akü kutup başları çıkarılarak elektrik kesilmelidir.",
+      "Anormal ses bir parçanın zarar görmeye başladığının habercisidir; erken durmak büyük hasarı önler."
+    ]
+  },
+  {
+    "section": "Araç Tekniği",
+    "lesson": "Fren Sistemi",
+    "url": "/dersler/arac-teknigi/fren-sistemi/",
+    "facts": [
+      "Ayak freni hareket hâlindeki aracı yavaşlatıp ön ve arka tekerlekleri birlikte durdururken, el freni yalnızca duran aracı sabit tutar.",
+      "Fren sistemi hidrolik yağ ile çalışır ve sıvıların sıkıştırılamaması ilkesine dayanır.",
+      "El freni çekili unutulursa balatalar ısınıp aşınır ve yakıt sarfiyatı artar.",
+      "Hidrolik sisteme hava girerse fren tutmaz; fren ayarı yanlışsa araç bir tarafa çeker.",
+      "El freni tutmuyorsa el freni teli kopmuştur; hidrolik yağ akıyorsa fren patlamıştır.",
+      "Disk veya kampana yüzeyinin bozulması fren pedalında titreşim hissedilmesine yol açar.",
+      "Kamyon ve otobüs gibi büyük araçlarda havali fren, motor freni ve retarder bulunur.",
+      "Aks arızası bir fren arızası değildir; aks güç aktarma organlarına aittir."
+    ]
+  },
+  {
+    "section": "Araç Tekniği",
+    "lesson": "Güç Aktarma Organları",
+    "url": "/dersler/arac-teknigi/guc-aktarma-organlari/",
+    "facts": [
+      "Güç aktarma organları motordaki hareketi tekerleklere ileten parçalardır: debriyaj, vites kutusu, şaft, diferansiyel ve aks.",
+      "Debriyaj motorun hareketini isteğe bağlı olarak keser ve verir; volan ile vites kutusu arasında bulunur.",
+      "Vites kutusu araca güç, hız ve geri hareket yeteneği kazandırır.",
+      "Şaft vites kutusundan gelen hareketi diferansiyele iletir; önden çekişli araçlarda şaft bulunmaz.",
+      "Diferansiyel güçü 90 derece bükerek tekerleklere iletir ve virajlarda dış tekerleğin daha fazla dönmesini sağlar.",
+      "Yakıt tasarrufu sağlamak diferansiyelin görevi değildir.",
+      "Debriyaj teli koparsa araç vitese geçmez; balata aşınırsa debriyaj kaçırır.",
+      "Seyir hâlinde ayağı sürekli debriyaj pedalında tutmak balatayı aşındırır.",
+      "Amortisör ve süspansiyon parçaları güç aktarma organı değildir."
+    ]
+  },
+  {
+    "section": "Araç Tekniği",
+    "lesson": "Lastikler",
+    "url": "/dersler/arac-teknigi/lastikler/",
+    "facts": [
+      "Lastik aracın yol ile temas eden tek noktasıdır ve kauçuk ile çelik kord katmanlarından oluşur.",
+      "Lastik hava basıncı lastik soğukken ölçülmelidir; sıcak lastik genleşip gerçek değerden yüksek sonuç verir.",
+      "Düşük basınç lastiği yanaklarından aşındırır ve patlama riski oluşturur; yüksek basınç ortasından aşındırır.",
+      "Islak zeminde diş derinliği yetersiz lastik suyu tahliye edemez ve kızaklanmaya (aquaplaning) başlar.",
+      "Rot ayarı bozuksa tek taraflı aşınma, balans ayarı bozuksa direksiyonda titreme görülür.",
+      "Kış lastiği kar, buz ve yaklaşık 7 derecenin altındaki soğuk havalar için tasarlanmıştır.",
+      "Aynı akstaki lastikler aynı özellikte olmalıdır; farklı tip lastik yol tutuşunu bozar.",
+      "Çatlamış veya üretim tarihi çok eski lastikler diş derinliği yeterli görünse bile değiştirilmelidir."
+    ]
+  },
+  {
+    "section": "Araç Tekniği",
+    "lesson": "Motor Nedir?",
+    "url": "/dersler/arac-teknigi/motor-nedir/",
+    "facts": [
+      "Motor, yakıttan elde edilen ısı enerjisini mekanik enerjiye çeviren makinedir.",
+      "Otomobillerde kullanılan motor, yanmanın silindir içinde gerçekleştiği içten yanmalı motor türüdür.",
+      "Benzinli motorlarda ateşlemeyi buji sağlar; LPG de buji ile ateşlendiğinden yalnızca benzinli araçlara takılır.",
+      "Dizel motorlarda emme zamanında silindire sadece hava alınır; ateşleme enjektörle motorin püskürtülerek sıkıştırma yoluyla gerçekleşir.",
+      "Hibrit araçlarda hem sıvı yakıt hem elektrik sistemi bir arada bulunur; pil ayrıca şarj gerektirmeden araç hareket ettikçe dolar.",
+      "Dört zamanlı motorun çalışma sıralaması: 1-Emme, 2-Sıkıştırma, 3-Ateşleme, 4-Egzoz.",
+      "Dizel araçta depodaki yakıt biterse araç hava yapar ve motor çalışmaz.",
+      "LPG'li araçlar patlama riski nedeniyle kapalı otoparklara alınmaz."
+    ]
+  },
+  {
+    "section": "Araç Tekniği",
+    "lesson": "Ön Düzen ve Direksiyon Sistemi",
+    "url": "/dersler/arac-teknigi/on-duzen-direksiyon/",
+    "facts": [
+      "Ön düzenin temel parçaları direksiyon kutusu ile rot ve rot başlarıdır.",
+      "Direksiyonda boşluk varsa rot başları aşınmış demektir ve araç sağa sola çeker.",
+      "Direksiyon kutusundan gıcırtı sesi geliyorsa dişli yağı azalmıştır.",
+      "Balans ayarı bozuksa belirli bir hızdan sonra direksiyonda titreme hissedilir.",
+      "Rot ayarı bozuksa ön lastikler içten ve dıştan düzensiz aşınır.",
+      "Rot-balans ayarı yılda en az 1 kez veya yaklaşık 15.000 km'de bir yaptırılmalıdır.",
+      "Direksiyonun zor dönmesinin sebepleri dişli yağının azalması ve lastik basıncının düşük olmasıdır."
+    ]
+  },
+  {
+    "section": "Araç Tekniği",
+    "lesson": "Otomatik Vites",
+    "url": "/dersler/arac-teknigi/otomatik-vites/",
+    "facts": [
+      "Otomatik vitesli araçta vites geçişlerini sürücü değil, aracın kendisi motorun tork ve devir sayısına göre yapar.",
+      "P (Park) konumu aracı park durumunda sabitler.",
+      "R (Reverse) konumu geri yönlü hareket için kullanılır.",
+      "N (Nötr) konumu vitesin boşta olduğu anlamına gelir.",
+      "D (Drive) konumu ileri yönlü normal sürüşte en çok kullanılan konumdur.",
+      "L konumu düşük deviri ifade eder ve özellikle dik yokuşlarda kullanılır.",
+      "Manuel viteste vites geçişlerini sürücü kendi eliyle yaparken, otomatik viteste araç bunu kendiliğinden ayarlar."
+    ]
+  },
+  {
+    "section": "Araç Tekniği",
+    "lesson": "Şarj Sistemi",
+    "url": "/dersler/arac-teknigi/sarj-sistemi/",
+    "facts": [
+      "Şarj sistemi hareket enerjisini elektriğe çevirerek motor çalışırken aracın elektrik ihtiyacını karşılar ve aküyü şarj eder.",
+      "Araç çalışmıyorken akü, çalışıyorken alternatör aracın elektriğini sağlar.",
+      "Regülatör alternatörden gelen voltajı yaklaşık 12 volta ayarlar; bozulursa ampuller patlar.",
+      "Şarj göstergesi motor çalışınca söner; hareket hâlinde kırmızı yanarsa şarj arızası var demektir.",
+      "V kayışının koptuğu ilk önce şarj göstergesinden anlaşılır.",
+      "Mars motoru motora ilk hareketi verir; 15 saniyeyi geçen mars hem aküye hem mars motoruna zarar verir.",
+      "Sigorta devreden geçen akım yükseldiğinde eriyerek devreyi keser.",
+      "Distribütör şarj değil ateşleme sisteminin parçasıdır."
+    ]
+  },
+  {
+    "section": "Araç Tekniği",
+    "lesson": "Soğutma Sistemleri",
+    "url": "/dersler/arac-teknigi/sogutma-sistemi/",
+    "facts": [
+      "Soğutma sistemi motoru yaklaşık 90 derece çalışma sıcaklığında sabit tutarak parçaları aşırı ısıdan korur.",
+      "Su soğutmalı sisteme otomobil, hava soğutmalı sisteme motosiklet örnek gösterilir.",
+      "Termostat kapalı kalırsa araç hararet yapar; çıkarılır veya sürekli açık kalırsa araç geç ısınır ve parçalar aşınır.",
+      "Aks ve karbüratör soğutma sisteminin parçası değildir.",
+      "Radyatördeki su peteklerin yaklaşık 1 cm üzerinde ve kireçsiz olmalıdır.",
+      "Antifriz hem suyun donmasını önler hem pas ve kireç oluşumunu engeller; yıl boyu kullanılır.",
+      "Sıcak motora soğuk su eklenirse radyatör kapağı ve silindir bloğu çatlar.",
+      "V kayışı koptuğunda pompa ve fan dönmez, soğutma durur ve araç hararet yapar."
+    ]
+  },
+  {
+    "section": "Araç Tekniği",
+    "lesson": "Süspansiyon Sistemi",
+    "url": "/dersler/arac-teknigi/suspansiyon-sistemi/",
+    "facts": [
+      "Süspansiyon sistemi tekerlekler ile şasi arasında yer alır; iki temel parçası yay ve amortisördür.",
+      "Yay yoldan gelen sarsıntı ve darbeleri üzerine alarak sürüş konforu sağlar.",
+      "Amortisör lastiğin yol ile temasını sürekli sağlar ve yayların salınım süresini kısaltır.",
+      "Ağır araçlarda yaylanmayı makaslar, binek otomobillerde helezon yay sağlar.",
+      "Çukura veya kasise sert ve hızlı girmek amortisörleri patlatabilir ve direksiyon hakimiyetini kaybettirebilir.",
+      "Diferansiyel süspansiyon parçası değil güç aktarma organıdır.",
+      "Yayların salınım süresini kısaltan parça amortisördür.",
+      "Aks güç aktarma organlarının son halkasıdır ve süspansiyon parçası değildir."
+    ]
+  },
+  {
+    "section": "Araç Tekniği",
+    "lesson": "Yağlama Sistemi",
+    "url": "/dersler/arac-teknigi/yaglama-sistemi/",
+    "facts": [
+      "Yağlama sistemi hareketli parçalar arasındaki sürtünmeyi ve aşınmayı azaltır, yüzeyleri temizler ve motorun soğumasına yardımcı olur.",
+      "Karter yağ deposudur, yağ pompası yağı basınçlı biçimde parçalara gönderir, yağ filtresi metal tozunu süzer.",
+      "Aks ve su pompası yağlama sisteminin parçası değildir.",
+      "Hareket hâlinde kırmızı yağ lambası yanarsa araç hemen durdurulmalıdır; yoksa yatak sarar.",
+      "Motor yağı seviyesi düz zeminde, motor durduktan yaklaşık 45 dakika sonra yağ çubuğuyla ölçülmelidir.",
+      "Gereğinden fazla yağ konulursa basınç artar ve conta ile keçelerden sızıntı oluşur.",
+      "Motor yağı külbütör (subap) kapağından konulur.",
+      "Silindirler aşınıp motor yağ yakmaya başladığında egzozdan mavi renkli duman çıkar."
+    ]
+  },
+  {
+    "section": "Trafik Adabı",
+    "lesson": "Öfke, Stres ve Dikkat Yönetimi",
+    "url": "/dersler/trafik-adabi/ofke-stres-dikkat/",
+    "facts": [
+      "Trafikte öfke saldırgan sürücülüğe yol açar; öfkeli sürücünün karar verme süreci bozulur.",
+      "Öfkenin 4 tipik belirtisi: sürekli korna, çok yakından takip, ani şerit değiştirme, öfkeli el-kol hareketleri.",
+      "Öfke anında yapılması gereken ilk şey sakinleşmektir: derin nefes almak ve olayı büyütmemek gerekir.",
+      "Stresli sürücü kırmızı ışığı zorlar, takip mesafesini ihmal eder ve hız sınırını aşar.",
+      "Stresin etkisini azaltmak için yola çıkmadan önce yeterli zaman ayırmak gerekir.",
+      "Dikkati dağıtan en önemli 3 etken telefon kullanımı, yorgunluk ve uykusuzluktur.",
+      "Direksiyon başında telefon kullanmak hem gözü hem zihni yoldan uzaklaştırır.",
+      "Öfkeli sürücü davranışları yalnızca kendisini değil diğer sürücülerin de dikkatini dağıtır ve paniğe yol açar."
+    ]
+  },
+  {
+    "section": "Trafik Adabı",
+    "lesson": "Bireysel ve Toplumsal Sorumluluk",
+    "url": "/dersler/trafik-adabi/sorumluluk/",
+    "facts": [
+      "Trafik adabına sahip sürücü kuralları ceza korkusuyla değil nedenini kavrayarak uygular.",
+      "'Nasılsa görülmem' anlayışıyla hareket etmek sorumluluk bilincinin eksikliğini gösterir.",
+      "Trafik kazalarının etkisi o an ve o kişiyle sınırlı kalmaz; ailelere ve topluma psikolojik ve ekonomik yük bırakır.",
+      "Trafikte en korunmasız 3 grup: çocuklar, yaşlılar ve engellilerdir.",
+      "Okul çevresinde hızı düşürmek ve engellilerin hareketine dikkat etmek sürücünün sorumluluğudur.",
+      "Sorumlu sürücü gereksiz korna çalarak gürültüye ve bakımsız araçla egzoz kirliliğine yol açmaktan kaçınır.",
+      "Bireysel sorumluluk kendi davranışının sonuçlarını üstlenmek, toplumsal sorumluluk çevreye iyi örnek olmaktır.",
+      "Her bireyin sorumlu davranışı toplumda daha güvenli bir trafik ortamı oluşturur; trafik kültürü bireysel davranışların toplamıdır."
+    ]
+  },
+  {
+    "section": "Trafik Adabı",
+    "lesson": "Trafikte Temel Değerler",
+    "url": "/dersler/trafik-adabi/temel-degerler/",
+    "facts": [
+      "Sabır, yoğun trafikte soğukkanlılığı koruyabilme yetisidir; sabırlı sürücü acele etmez ve öfkeye kapılmaz.",
+      "Hoşgörü, başkalarının hatalarını affedebilmek ve herkesin zaman zaman yanılabileceğini kabul etmektir.",
+      "Saygı, yayaların ve diğer sürücülerin haklarını gözetmektir; yaya geçidinde yayaya öncelik vermek saygı davranışıdır.",
+      "Feragat ile diğerkâmlık arasındaki fark: feragat kendi hakkından vazgeçmek, diğerkâmlık başkalarının iyiliğini önce düşünmektir.",
+      "Feragat ve diğerkâmlık benmerkezciliğin karşıtıdır ve trafiği herkes için daha güvenli kılar.",
+      "Yardımlaşma, kaza veya arıza durumunda başkalarına yardım eli uzatmaktır.",
+      "Sorumluluk, davranışların sonuçlarını önceden düşünerek hareket etmek ve sonuçları üstlenmektir.",
+      "Trafik adabının temelindeki 8 değer: sabır, hoşgörü, saygı, nezaket, feragat, diğerkâmlık, yardımlaşma ve sorumluluktur."
+    ]
+  },
+  {
+    "section": "Trafik Adabı",
+    "lesson": "Trafik Adabı ve Temel Kavramlar",
+    "url": "/dersler/trafik-adabi/temel-kavramlar/",
+    "facts": [
+      "Trafik adabı, yazılı kuralların ötesinde diğer bireylere saygılı ve sorumlu davranma biçimidir; kurallar zorunlu, adap gönüllüdür.",
+      "Kırmızı ışıkta durmak trafik kuralıdır; sıkışan sürücüye yol vermek trafik adabı örneğidir.",
+      "Değer-tutum-davranış zincirinde sıralama: önce değer, sonra tutum, en sonda davranış oluşur.",
+      "Değer neyin doğru olduğuna dair inançtır; tutum ise bir konuya karşı olumlu ya da olumsuz eğilimdir.",
+      "Trafik kazalarının büyük çoğunluğunun sebebi yol, araç veya hava koşulları değil insan faktörüdür.",
+      "Trafik kültürü bir toplumun trafikte sergilediği ortak davranış biçimlerinin bütünüdür.",
+      "İyi bir sürücü hem kurallara hem de trafik adabına uyar; yalnızca birine uymak yeterli değildir.",
+      "Trafik adabı eğitiminin temel amacı kazaların arkasındaki insan faktörünü olumlu yönde geliştirmektir."
+    ]
+  },
+  {
+    "section": "Trafik Adabı",
+    "lesson": "Trafikte İletişim",
+    "url": "/dersler/trafik-adabi/trafikte-iletisim/",
+    "facts": [
+      "Trafikte iletişim büyük ölçüde sözsüzdür; sinyal lambası, korna, far, beden dili ve göz teması 5 temel aracıdır.",
+      "Dönüş sinyali trafikte en temel iletişim aracıdır ve dönme ya da şerit değiştirme niyetini önceden bildirir.",
+      "Korna yalnızca gerekli uyarı amacıyla kullanılmalıdır; öfke aracı olarak kullanılması yanlış iletişimdir.",
+      "Uzun farla karşı sürücünün gözünü almak hatalı bir iletişim davranışıdır.",
+      "Göz teması özellikle yayalarla kurulan iletişimde en etkili yöntemdir.",
+      "Empati kendini karşıdaki sürücünün yerine koyabilmektir ve trafikte gerginliği azaltır.",
+      "İletişimi engelleyen 3 tutum: dinlerken değerlendirme eğilimi, karşıdakini sevmeyince kapanma, tek olayla yargılama.",
+      "Karşı tarafın niyetini doğru okumak ani tehlikelerin önüne geçer; sürücü kendi niyetini de açıkça belli etmelidir."
+    ]
+  }
+]

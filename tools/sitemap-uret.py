@@ -20,6 +20,7 @@ ONCELIK = [
     (re.compile(r"^/(dersler|deneme-sinavlari)/$"), "0.9"),
     (re.compile(r"^/deneme-sinavlari/"), "0.8"),
     (re.compile(r"^/dersler/"), "0.7"),
+    (re.compile(r"^/soru/"), "0.6"),
 ]
 VARSAYILAN_ONCELIK = "0.5"
 
@@ -64,7 +65,7 @@ def degisim_sikligi(url_yolu: str) -> str:
 def sayfalar():
     for p in sorted(ROOT.rglob("index.html")):
         parcalar = p.relative_to(ROOT).parts
-        if ".git" in parcalar or ".claude" in parcalar or "panel" in parcalar:
+        if ".git" in parcalar or ".claude" in parcalar or "panel" in parcalar or "mcp" in parcalar:
             continue
         if 'name="robots"' in p.read_text(encoding="utf-8") and "noindex" in p.read_text(encoding="utf-8"):
             continue

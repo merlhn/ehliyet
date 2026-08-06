@@ -1,0 +1,306 @@
+[
+  {
+    "section": "İlk Yardım",
+    "fact": "Hayat kurtarma zincirinin sırası: 112’ye haber verilir → olay yerinde temel yaşam desteği yapılır → ambulans ekipleri müdahale eder → hastane acil servisinde tedavi edilir."
+  },
+  {
+    "section": "İlk Yardım",
+    "fact": "Yetişkinde temel yaşam desteği 30 kalp masajı + 2 yapay solunum döngüsüyle uygulanır ve uygulamaya kalp masajıyla başlanır."
+  },
+  {
+    "section": "İlk Yardım",
+    "fact": "Yetişkinde kalp masajı: göğüs kemiği 5–6 cm çökecek şekilde, dakikada 100–120 bası. (3 cm ya da dakikada 30 bası yanlıştır.)"
+  },
+  {
+    "section": "İlk Yardım",
+    "fact": "Bebekte kalp basısı, bir elin orta ve yüzük parmağıyla, iki meme başını birleştiren hattın hemen altına yapılır."
+  },
+  {
+    "section": "İlk Yardım",
+    "fact": "Hava yolunu açan pozisyon baş geri–çene yukarı: bir el alna, diğer elin iki parmağı çene kemiğine konur; alından bastırılıp çeneden kaldırılır."
+  },
+  {
+    "section": "İlk Yardım",
+    "fact": "Kazazedenin ağzı ve çevresinde yaralanma varsa yapay solunum ağızdan buruna yapılır."
+  },
+  {
+    "section": "İlk Yardım",
+    "fact": "Solunum yolu tam tıkanan bebekte: önce yüzüstü pozisyonda 5 sırt darbesi, ardından sırtüstü çevrilip 5 göğüs basısı uygulanır."
+  },
+  {
+    "section": "İlk Yardım",
+    "fact": "Bayılma, kısa süreli, yüzeysel ve geçici bilinç kaybıdır."
+  },
+  {
+    "section": "İlk Yardım",
+    "fact": "Bilinci kapalı ama solunumu ve nabzı olan kazazedeye koma (yarı yüzükoyun-yan yatış) pozisyonu verilir. Baş-omurga yaralanması yoksa hava yolu açıklığı bu pozisyonla korunur."
+  },
+  {
+    "section": "İlk Yardım",
+    "fact": "Bayılan kazazedede sıkan giysiler gevşetilir ve solunum yolu açıklığı korunur. Ayakları 45 cm kaldırmak ya da yarı oturtmak bayılmada uygulanmaz."
+  },
+  {
+    "section": "İlk Yardım",
+    "fact": "Şokun belirtileri: deri soluk, soğuk ve nemli, gözler donuk, bilinç bulanık. Kazazedenin üzeri örtülerek vücut sıcaklığı korunur; ağızdan içecek verilmez."
+  },
+  {
+    "section": "İlk Yardım",
+    "fact": "Kalp krizinin tipik ağrısı dinlenmekle geçmez; kravat bölgesinde hissedilir, omuzlara, boyuna, çeneye ve sol kola yayılır, ölüm korkusu eşlik eder."
+  },
+  {
+    "section": "İlk Yardım",
+    "fact": "Omurilik, omurga kanalı içinde boyundan kuyruk sokumuna uzanır; beyin ile vücut arasındaki bağlantıyı sağlar ve reflekslerin merkezidir."
+  },
+  {
+    "section": "İlk Yardım",
+    "fact": "Fışkırır tarzda kanama atardamar kanamasıdır: bölge yukarı kaldırılır, temiz bezle baskı yapılır, bez kaldırılmadan üzerinden bandajla sarılır. Elle baskı, kanayan yere en yakın basınç noktasına uygulanır — en uzak noktaya değil."
+  },
+  {
+    "section": "İlk Yardım",
+    "fact": "Kulaktan kanama ve göz çevresinde morluk, kafatası yaralanması işaretidir: kazazede yarı oturur pozisyona alınmaz; boyun tespiti yapılır, yaşam bulguları (ABC) değerlendirilir."
+  },
+  {
+    "section": "İlk Yardım",
+    "fact": "Açık kırıkta deri bütünlüğü bozulur; kan kaybı ve enfeksiyon riski yüksektir. Deri bütünlüğünün korunduğu kırık, kapalı kırıktır."
+  },
+  {
+    "section": "İlk Yardım",
+    "fact": "Köprücük kemiği kırığında tespit, her iki omuz üzerinden geçen çapraz (sekiz) bandajla yapılır."
+  },
+  {
+    "section": "İlk Yardım",
+    "fact": "Kalça ve alt taraf kırıklarının tespitinde: açık kırık varsa yara önce temiz bir bezle kapatılır; destek malzemeleri yumuşak olmalı, sargı kırığın üzerine bağlanmamalı, yaralı oturtulmamalıdır."
+  },
+  {
+    "section": "İlk Yardım",
+    "fact": "Taşımada genel kural: baş-boyun-gövde ekseni bozulmadan, kazazede en az 6 destek noktasından kavranır ve mümkün olduğunca az hareket ettirilir. Kaldırırken ağırlık karın değil bacak kaslarına verilir."
+  },
+  {
+    "section": "İlk Yardım",
+    "fact": "Rentek manevrası: solunumu durmuş ya da tehlike altındaki kazazedeyi, ayakları pedala sıkışmamışsa araç içinden çıkarma tekniğidir."
+  },
+  {
+    "section": "İlk Yardım",
+    "fact": "Teskereci yöntemi, kaşık ve köprü teknikleri kazazedeyi sedyeye yerleştirmek için kullanılır."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "Kara yollarında hız sınırlarını (yönetmeliktekinin üstünde ya da altında) belirlemek ve işaretlemek, İçişleri Bakanlığının uygun görüşüyle Karayolları Genel Müdürlüğünün yetkisidir."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "Şehir içinde yol yapısı ya da işaretleme yetersizliği yüzünden kaza olan yerlerde teklif edilen tedbirleri almak belediyenin görevidir."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "Aralıklı yanıp sönen kırmızı ışık, DUR levhasıyla aynı anlamdadır: durulur, yol uygunsa devam edilir."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "Gişe simgeli otoyol bilgi levhası, ücretli otoyola girileceğini bildirir."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "“Şerit azalması” levhası görülünce yapılacak şey: yavaşlayıp devam eden (sağ) şeride girmek — hızlanıp şeritte ısrar etmek değil."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "Geçme ve dönme gibi mecburi hâller dışında şerit değiştirmek kural ihlalidir. Şerit değiştirmeden önce girilecek şeritteki araçların güvenle geçişi beklenir."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "İki yönlü üç şeritli yolda orta şerit yalnızca geçme (sollama) içindir; orta şeridi sürekli işgal etmek hatalı sollamadır."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "Önündeki araç geçiş hâlindeyken karşıdan araç geliyorsa sürücü öndeki aracın geçişini bekler; sol şeride çıkmaz."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "Arkadan çarpma şeklindeki kazaların en önemli sebebi takip mesafesi kuralına uyulmamasıdır."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "Durma mesafesini etkileyen etkenler: aracın hızı, yolun eğimi ve kaplamanın cinsi. Hidrolik direksiyon durma mesafesini etkilemez."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "Ortalama hız tespiti yapılan yol kesiminde levhadaki sınır, iki nokta arasındaki ortalama hız için geçerlidir; araçlar en fazla bu hızla ilerleyebilir."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "Uzun hüzmeli fardan kısa fara geçilir: yeterince aydınlatılmış yola girince ve geceleyin öndeki aracı geçerken."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "Gece kısa farla net görüş mesafesi ortalama 25 metredir; hız, tehlike anında bu mesafe içinde durulabilecek seviyeye indirilir."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "Duraklamak yasaktır: trafik işaretiyle yasaklanmış yerlerde, yangın musluklarına 5 metre ve yerleşim yeri içinde kavşak ve bağlantı yollarına 5 metre mesafede."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "İşaret levhalarına yaklaşım yönünde duraklama yasağı: yerleşim birimi içinde 15 metre, dışında 100 metre."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "Duraklanan ya da park edilen yerden çıkarken: çıkış işareti verilir, araç ve etrafı kontrol edilir, görüş dışı noktalar varsa gözcü bulundurulur. Yoldan geçen araçları durdurmak kurala aykırıdır."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "Geçiş üstünlüğü sıralaması: ambulans ve yaralı taşıyan araçlar → organ-doku nakli araçları → itfaiye ve acil müdahale araçları → güvenlik güçleri."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "Geçiş üstünlüğü olan aracın sireni duyulduğunda ilk yapılacak şey sesin yönünü tayin etmektir."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "Dar köprü gibi kesimlerde karşılaşan araçlardan geçiş önceliği karşıdaki araca bırakılır; hızlanıp köprüye önce girmeye çalışmak yanlıştır."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "Bir yıl içinde 100 ceza puanını ilk kez aşan sürücünün belgesi 2 ay geri alınır."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "Ölümle sonuçlanan kazada asli kusurlu sürücünün belgesi mahkemece 1 yıl geri alınır."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "Kamyon, kamyonet ve römorkta yükle birlikte yolcu taşınırken: kasanın yan ve arka kapakları kapalı, yük sağlam yerleştirilmiş ve bağlanmış olmalıdır."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "Emniyet kemeri zorunluluğunun amacı, kaza anında ölüm ve yaralanmaları en aza indirmektir."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "Araç muayenesinde ağır kusur sayılır: rot başlarının boşluk yapması, ön cam sileceklerinin çalışmaması, park lambalarının yanmaması."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "Kaza oranını etkileyen etmenler: kural ihlalleri, araç bakımları ve aracın yük durumu. Aracın beygir gücü etkilemez."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "Atıkların toplanıp işlenerek yeniden kullanılması çevreye zarar değil, faydadır; koku, çirkin görünüm ve hastalık taşıyıcıların üremesi ise zararlarıdır."
+  },
+  {
+    "section": "Trafik ve Çevre",
+    "fact": "Araç bakımlarını ve egzoz emisyon ölçümünü zamanında yaptırmak çevrenin temiz kalmasına katkı sağlar."
+  },
+  {
+    "section": "Araç Tekniği",
+    "fact": "ABS uyarı ışığı, fren sisteminde arıza olduğunu bildirir."
+  },
+  {
+    "section": "Araç Tekniği",
+    "fact": "Motor yağlama yapmadığında kırmızı yağdanlık (yağ) lambası yanar."
+  },
+  {
+    "section": "Araç Tekniği",
+    "fact": "Şarj ve yağ basıncı lambaları yanarsa araç kurallara uygun şekilde derhal durdurulur ve kontak kapatılır. ABS ışığı bu grupta değildir."
+  },
+  {
+    "section": "Araç Tekniği",
+    "fact": "Lastik basıncı (TPMS) ikazı; basınç azaldığında, lastik patladığında ve sensör arızalandığında yanar — lastik ısındığında yanmaz."
+  },
+  {
+    "section": "Araç Tekniği",
+    "fact": "Cam yıkama suyu ikazı yandığında silecek suyu deposuna su eklenir."
+  },
+  {
+    "section": "Araç Tekniği",
+    "fact": "Motor soğutma sisteminin elemanları: radyatör, su pompası ve termostat. Balata fren sistemi elemanıdır."
+  },
+  {
+    "section": "Araç Tekniği",
+    "fact": "Motorun hararet yapma sebepleri: termostat arızası, devirdaim (su) hortumunun yırtılması, vantilatör kayışının gevşemesi. Antifriz seviyesinin düşük olması hararet sebebi sayılmaz."
+  },
+  {
+    "section": "Araç Tekniği",
+    "fact": "Silindir kapak contası işlevini kaybederse motorun içine su sızar."
+  },
+  {
+    "section": "Araç Tekniği",
+    "fact": "V kayışı düzgün çalışmazsa şarj ikaz lambası yanar."
+  },
+  {
+    "section": "Araç Tekniği",
+    "fact": "Motor yağı kontrol sırası: düz zeminde dur, kaputu aç → çubuğu çekip temizle → tekrar daldırıp çek → seviyenin max–min arasında olduğunu gör."
+  },
+  {
+    "section": "Araç Tekniği",
+    "fact": "Dizel araca yanlışlıkla benzin konursa yakıt deposu boşaltılır; araç bu yakıtla kullanılmaz."
+  },
+  {
+    "section": "Araç Tekniği",
+    "fact": "Muayene süresi dolmasa bile aracın özel teknik muayenesi, trafik zabıtasının gerekli görmesi hâlinde zorunludur."
+  },
+  {
+    "section": "Araç Tekniği",
+    "fact": "Araç çok uzun süre kullanılmazsa akü şarjı azalır ve motor yağı özelliğini kaybeder. Fren balataları kullanılmayan araçta azalmaz."
+  },
+  {
+    "section": "Araç Tekniği",
+    "fact": "Antifriz yoğunluğu ölçümü servis ya da tamir atölyesinin işidir; silecek, lastik basıncı ve yağ seviyesi kontrolünü sürücü kendisi yapar."
+  },
+  {
+    "section": "Araç Tekniği",
+    "fact": "Sürüşe başlamadan önce koltuk ve ayna ayarı, sürüş konforu ve güvenliği için yapılır."
+  },
+  {
+    "section": "Araç Tekniği",
+    "fact": "Yakıt tüketimini azaltır: ani duruş-kalkıştan kaçınmak, tavsiye edilen lastikleri kullanmak, bakımları zamanında yaptırmak. Artırır: vitese göre yanlış devirde sürmek ve ilk çalıştırmada motora tam güç vermek."
+  },
+  {
+    "section": "Araç Tekniği",
+    "fact": "Egzozdan çıkan yoğun duman, motorun düzensiz çalıştığının işaretidir."
+  },
+  {
+    "section": "Trafik Adabı",
+    "fact": "Diğerkâmlık: başkasını da düşünmek — kendini geçmekte olan araca yavaşlayarak kolaylık sağlamak bu değerin örneğidir."
+  },
+  {
+    "section": "Trafik Adabı",
+    "fact": "Feragat: kendi hakkından başkası yararına vazgeçebilmektir."
+  },
+  {
+    "section": "Trafik Adabı",
+    "fact": "Yardım araçlarına kolaylık sağlayan sürücü feragate, diğerkâmlığa ve empatiye önem verir — aceleciliğe değil."
+  },
+  {
+    "section": "Trafik Adabı",
+    "fact": "Toplum adabına aykırı davranış: kaza, deprem, sel gibi felaketlerden çıkar sağlamaya çalışmak."
+  },
+  {
+    "section": "Trafik Adabı",
+    "fact": "Trafik adabına sahip sürücü, kuralların nedenini öğrenir ve ihlalin kendisinin ya da sevdiklerinin canını tehlikeye attığının farkındadır. İhlali yalnızca “maddi ceza” sanmak adaba aykırıdır."
+  },
+  {
+    "section": "Trafik Adabı",
+    "fact": "Sürekli ve ani şerit değiştirerek araç kullanmak, diğer sürücülerin dikkatinin dağılmasına ve paniğe kapılmalarına sebep olur."
+  },
+  {
+    "section": "Trafik Adabı",
+    "fact": "Engellilere ayrılmış alana ya da hissedilebilir yüzeyin üzerine park eden sürücünün sorumluluk bilinci zayıftır."
+  },
+  {
+    "section": "Trafik Adabı",
+    "fact": "Karşıya geçen yayayı el, kol ve sözle acele ettiren sürücü sabırlı davranamamıştır."
+  },
+  {
+    "section": "Trafik Adabı",
+    "fact": "Başarılı iletişim için sürücü insanların değişebileceğine inanmalıdır; dinlerken yargılamak, iletişime kapanmak ve tek olayla değerlendirmek yanlıştır."
+  },
+  {
+    "section": "Trafik Adabı",
+    "fact": "Trafikte yaşanan stres kaygıyı artırır, kalp atışını hızlandırır ve saldırgan tutuma yol açabilir."
+  },
+  {
+    "section": "Trafik Adabı",
+    "fact": "Emisyonu yüksek egzoz dumanıyla araç kullanmak doğaya, diğer canlılara ve bireylere karşı hak ihlalidir."
+  }
+]
