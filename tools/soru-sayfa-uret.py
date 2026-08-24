@@ -392,7 +392,8 @@ def generate_page(q, slug, exam_num):
   <script src="/assets/js/mobile-nav.js" defer></script>
 <!-- Google tag (gtag.js) -->
 <script>
-function loadGA(){{var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-34HL041XN0';s.async=true;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function g(){{dataLayer.push(arguments)}}window.gtag=g;g('js',new Date());g('config','G-34HL041XN0')}}
+window.dataLayer=window.dataLayer||[];function g(){{dataLayer.push(arguments)}}window.gtag=g;g('js',new Date());g('config','G-34HL041XN0');var r=document.referrer,h=r?r.split('/')[2]:'';if(h&&/(chatgpt\\.com|openai\\.com|perplexity\\.ai|claude\\.ai|anthropic\\.com|gemini\\.google\\.com|copilot\\.microsoft\\.com|bing\\.com\\/chat|you\\.com|mistral\\.ai|deepseek\\.com)$/.test(h)){{g('event','ai_referral',{{ai_source:h}})}}
+function loadGA(){{var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-34HL041XN0';s.async=true;document.head.appendChild(s)}}
 if(typeof requestIdleCallback==='function'){{requestIdleCallback(loadGA)}}else{{setTimeout(loadGA,2500)}}
 </script>
 </body>

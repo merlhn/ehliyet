@@ -101,6 +101,11 @@
   .hap{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;padding:18px 20px;background:#fff;font-size:15px;line-height:1.62}
   .hap b{font-weight:600}
   .hap-num{font-family:'Geist Mono',monospace;font-size:12.5px;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:6px 9px;flex-shrink:0}
+  a.hap-num{text-decoration:none;transition:.12s}
+  a.hap-num:hover{color:var(--fg);border-color:#c8c8c8;background:#fafafa}
+  .hap-detay{margin-left:auto;align-self:center;flex-shrink:0;font-size:13px;color:var(--muted);text-decoration:none;white-space:nowrap}
+  .hap-detay:hover{color:var(--fg);text-decoration:underline}
+  @media(max-width:640px){.hap{flex-wrap:wrap}.hap-detay{margin-left:0;width:100%;padding-left:0}}
 
   .cta{max-width:1100px;margin:0 auto;padding:48px 28px 96px}
   .cta-inner{border:1px solid var(--line);border-radius:24px;background:#fafafa;padding:52px 32px;text-align:center}
@@ -155,7 +160,8 @@
           "trafik adabı"
         ],
         "sameAs": [
-          "https://github.com/merlhn/ehliyet"
+          "https://github.com/merlhn/ehliyet",
+          "https://mcpmarket.com/server/ehliyet-digital"
         ]
       }
     },
@@ -211,51 +217,51 @@
       <section class="grup">
         <h2>Temel yaşam desteği</h2>
         <div class="hap-list">
-        <div class="hap"><span class="hap-num">01</span><span>Hayat kurtarma zincirinin sırası: <b>112’ye haber verilir → olay yerinde temel yaşam desteği yapılır → ambulans ekipleri müdahale eder → hastane acil servisinde tedavi edilir</b>.</span></div>
-        <div class="hap"><span class="hap-num">02</span><span>Yetişkinde temel yaşam desteği <b>30 kalp masajı + 2 yapay solunum</b> döngüsüyle uygulanır ve uygulamaya <b>kalp masajıyla başlanır</b>.</span></div>
-        <div class="hap"><span class="hap-num">03</span><span>Yetişkinde kalp masajı: göğüs kemiği <b>5–6 cm</b> çökecek şekilde, dakikada <b>100–120</b> bası. (3 cm ya da dakikada 30 bası yanlıştır.)</span></div>
-        <div class="hap"><span class="hap-num">04</span><span>Bebekte kalp basısı, bir elin <b>orta ve yüzük parmağıyla</b>, iki meme başını birleştiren hattın <b>hemen altına</b> yapılır.</span></div>
-        <div class="hap"><span class="hap-num">05</span><span>Hava yolunu açan pozisyon <b>baş geri–çene yukarı</b>: bir el alna, diğer elin iki parmağı çene kemiğine konur; alından bastırılıp çeneden kaldırılır.</span></div>
-        <div class="hap"><span class="hap-num">06</span><span>Kazazedenin <b>ağzı ve çevresinde yaralanma</b> varsa yapay solunum <b>ağızdan buruna</b> yapılır.</span></div>
-        <div class="hap"><span class="hap-num">07</span><span>Solunum yolu tam tıkanan bebekte: önce yüzüstü pozisyonda <b>5 sırt darbesi</b>, ardından sırtüstü çevrilip <b>5 göğüs basısı</b> uygulanır.</span></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/ilk-yardim/hayat-kurtarma-zincirinin-sirasi-112ye-haber-verilir-olay/" aria-label="Hap bilgi 01 sayfası">01</a><span>Hayat kurtarma zincirinin sırası: <b>112’ye haber verilir → olay yerinde temel yaşam desteği yapılır → ambulans ekipleri müdahale eder → hastane acil servisinde tedavi edilir</b>.</span><a class="hap-detay" href="/hap-bilgiler/ilk-yardim/hayat-kurtarma-zincirinin-sirasi-112ye-haber-verilir-olay/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/ilk-yardim/yetiskinde-temel-yasam-destegi-30-kalp-masaji-2-yapay/" aria-label="Hap bilgi 02 sayfası">02</a><span>Yetişkinde temel yaşam desteği <b>30 kalp masajı + 2 yapay solunum</b> döngüsüyle uygulanır ve uygulamaya <b>kalp masajıyla başlanır</b>.</span><a class="hap-detay" href="/hap-bilgiler/ilk-yardim/yetiskinde-temel-yasam-destegi-30-kalp-masaji-2-yapay/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/ilk-yardim/yetiskinde-kalp-masaji-gogus-kemigi-56-cm-cokecek-sekilde/" aria-label="Hap bilgi 03 sayfası">03</a><span>Yetişkinde kalp masajı: göğüs kemiği <b>5–6 cm</b> çökecek şekilde, dakikada <b>100–120</b> bası. (3 cm ya da dakikada 30 bası yanlıştır.)</span><a class="hap-detay" href="/hap-bilgiler/ilk-yardim/yetiskinde-kalp-masaji-gogus-kemigi-56-cm-cokecek-sekilde/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/ilk-yardim/bebekte-kalp-basisi-bir-elin-orta-ve-yuzuk-parmagiyla-iki/" aria-label="Hap bilgi 04 sayfası">04</a><span>Bebekte kalp basısı, bir elin <b>orta ve yüzük parmağıyla</b>, iki meme başını birleştiren hattın <b>hemen altına</b> yapılır.</span><a class="hap-detay" href="/hap-bilgiler/ilk-yardim/bebekte-kalp-basisi-bir-elin-orta-ve-yuzuk-parmagiyla-iki/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/ilk-yardim/hava-yolunu-acan-pozisyon-bas-gericene-yukari-bir-el-alna/" aria-label="Hap bilgi 05 sayfası">05</a><span>Hava yolunu açan pozisyon <b>baş geri–çene yukarı</b>: bir el alna, diğer elin iki parmağı çene kemiğine konur; alından bastırılıp çeneden kaldırılır.</span><a class="hap-detay" href="/hap-bilgiler/ilk-yardim/hava-yolunu-acan-pozisyon-bas-gericene-yukari-bir-el-alna/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/ilk-yardim/kazazedenin-agzi-ve-cevresinde-yaralanma-varsa-yapay/" aria-label="Hap bilgi 06 sayfası">06</a><span>Kazazedenin <b>ağzı ve çevresinde yaralanma</b> varsa yapay solunum <b>ağızdan buruna</b> yapılır.</span><a class="hap-detay" href="/hap-bilgiler/ilk-yardim/kazazedenin-agzi-ve-cevresinde-yaralanma-varsa-yapay/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/ilk-yardim/solunum-yolu-tam-tikanan-bebekte-once-yuzustu-pozisyonda-5/" aria-label="Hap bilgi 07 sayfası">07</a><span>Solunum yolu tam tıkanan bebekte: önce yüzüstü pozisyonda <b>5 sırt darbesi</b>, ardından sırtüstü çevrilip <b>5 göğüs basısı</b> uygulanır.</span><a class="hap-detay" href="/hap-bilgiler/ilk-yardim/solunum-yolu-tam-tikanan-bebekte-once-yuzustu-pozisyonda-5/">Detay &rarr;</a></div>
         </div>
       </section>
 
       <section class="grup">
         <h2>Bilinç bozuklukları ve pozisyonlar</h2>
         <div class="hap-list">
-        <div class="hap"><span class="hap-num">08</span><span>Bayılma, <b>kısa süreli, yüzeysel ve geçici bilinç kaybı</b>dır.</span></div>
-        <div class="hap"><span class="hap-num">09</span><span>Bilinci kapalı ama <b>solunumu ve nabzı olan</b> kazazedeye <b>koma (yarı yüzükoyun-yan yatış)</b> pozisyonu verilir. Baş-omurga yaralanması yoksa hava yolu açıklığı bu pozisyonla korunur.</span></div>
-        <div class="hap"><span class="hap-num">10</span><span>Bayılan kazazedede sıkan giysiler <b>gevşetilir</b> ve solunum yolu açıklığı korunur. Ayakları 45 cm kaldırmak ya da yarı oturtmak bayılmada <b>uygulanmaz</b>.</span></div>
-        <div class="hap"><span class="hap-num">11</span><span>Şokun belirtileri: deri <b>soluk, soğuk ve nemli</b>, gözler donuk, bilinç bulanık. Kazazedenin üzeri örtülerek <b>vücut sıcaklığı korunur</b>; ağızdan içecek verilmez.</span></div>
-        <div class="hap"><span class="hap-num">12</span><span>Kalp krizinin tipik ağrısı <b>dinlenmekle geçmez</b>; kravat bölgesinde hissedilir, <b>omuzlara, boyuna, çeneye ve sol kola</b> yayılır, ölüm korkusu eşlik eder.</span></div>
-        <div class="hap"><span class="hap-num">13</span><span><b>Omurilik</b>, omurga kanalı içinde boyundan kuyruk sokumuna uzanır; beyin ile vücut arasındaki bağlantıyı sağlar ve <b>reflekslerin merkezi</b>dir.</span></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/ilk-yardim/bayilma-kisa-sureli-yuzeysel-ve-gecici-bilinc-kaybidir/" aria-label="Hap bilgi 08 sayfası">08</a><span>Bayılma, <b>kısa süreli, yüzeysel ve geçici bilinç kaybı</b>dır.</span><a class="hap-detay" href="/hap-bilgiler/ilk-yardim/bayilma-kisa-sureli-yuzeysel-ve-gecici-bilinc-kaybidir/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/ilk-yardim/bilinci-kapali-ama-solunumu-ve-nabzi-olan-kazazedeye-koma/" aria-label="Hap bilgi 09 sayfası">09</a><span>Bilinci kapalı ama <b>solunumu ve nabzı olan</b> kazazedeye <b>koma (yarı yüzükoyun-yan yatış)</b> pozisyonu verilir. Baş-omurga yaralanması yoksa hava yolu açıklığı bu pozisyonla korunur.</span><a class="hap-detay" href="/hap-bilgiler/ilk-yardim/bilinci-kapali-ama-solunumu-ve-nabzi-olan-kazazedeye-koma/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/ilk-yardim/bayilan-kazazedede-sikan-giysiler-gevsetilir-ve-solunum/" aria-label="Hap bilgi 10 sayfası">10</a><span>Bayılan kazazedede sıkan giysiler <b>gevşetilir</b> ve solunum yolu açıklığı korunur. Ayakları 45 cm kaldırmak ya da yarı oturtmak bayılmada <b>uygulanmaz</b>.</span><a class="hap-detay" href="/hap-bilgiler/ilk-yardim/bayilan-kazazedede-sikan-giysiler-gevsetilir-ve-solunum/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/ilk-yardim/sokun-belirtileri-deri-soluk-soguk-ve-nemli-gozler-donuk/" aria-label="Hap bilgi 11 sayfası">11</a><span>Şokun belirtileri: deri <b>soluk, soğuk ve nemli</b>, gözler donuk, bilinç bulanık. Kazazedenin üzeri örtülerek <b>vücut sıcaklığı korunur</b>; ağızdan içecek verilmez.</span><a class="hap-detay" href="/hap-bilgiler/ilk-yardim/sokun-belirtileri-deri-soluk-soguk-ve-nemli-gozler-donuk/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/ilk-yardim/kalp-krizinin-tipik-agrisi-dinlenmekle-gecmez-kravat/" aria-label="Hap bilgi 12 sayfası">12</a><span>Kalp krizinin tipik ağrısı <b>dinlenmekle geçmez</b>; kravat bölgesinde hissedilir, <b>omuzlara, boyuna, çeneye ve sol kola</b> yayılır, ölüm korkusu eşlik eder.</span><a class="hap-detay" href="/hap-bilgiler/ilk-yardim/kalp-krizinin-tipik-agrisi-dinlenmekle-gecmez-kravat/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/ilk-yardim/omurilik-omurga-kanali-icinde-boyundan-kuyruk-sokumuna/" aria-label="Hap bilgi 13 sayfası">13</a><span><b>Omurilik</b>, omurga kanalı içinde boyundan kuyruk sokumuna uzanır; beyin ile vücut arasındaki bağlantıyı sağlar ve <b>reflekslerin merkezi</b>dir.</span><a class="hap-detay" href="/hap-bilgiler/ilk-yardim/omurilik-omurga-kanali-icinde-boyundan-kuyruk-sokumuna/">Detay &rarr;</a></div>
         </div>
       </section>
 
       <section class="grup">
         <h2>Kanamalar ve yaralanmalar</h2>
         <div class="hap-list">
-        <div class="hap"><span class="hap-num">14</span><span>Fışkırır tarzda kanama <b>atardamar</b> kanamasıdır: bölge yukarı kaldırılır, temiz bezle baskı yapılır, bez kaldırılmadan üzerinden bandajla sarılır. Elle baskı, kanayan yere <b>en yakın</b> basınç noktasına uygulanır — en uzak noktaya değil.</span></div>
-        <div class="hap"><span class="hap-num">15</span><span>Kulaktan kanama ve göz çevresinde morluk, <b>kafatası yaralanması</b> işaretidir: kazazede <b>yarı oturur pozisyona alınmaz</b>; boyun tespiti yapılır, yaşam bulguları (ABC) değerlendirilir.</span></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/ilk-yardim/fiskirir-tarzda-kanama-atardamar-kanamasidir-bolge-yukari/" aria-label="Hap bilgi 14 sayfası">14</a><span>Fışkırır tarzda kanama <b>atardamar</b> kanamasıdır: bölge yukarı kaldırılır, temiz bezle baskı yapılır, bez kaldırılmadan üzerinden bandajla sarılır. Elle baskı, kanayan yere <b>en yakın</b> basınç noktasına uygulanır — en uzak noktaya değil.</span><a class="hap-detay" href="/hap-bilgiler/ilk-yardim/fiskirir-tarzda-kanama-atardamar-kanamasidir-bolge-yukari/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/ilk-yardim/kulaktan-kanama-ve-goz-cevresinde-morluk-kafatasi/" aria-label="Hap bilgi 15 sayfası">15</a><span>Kulaktan kanama ve göz çevresinde morluk, <b>kafatası yaralanması</b> işaretidir: kazazede <b>yarı oturur pozisyona alınmaz</b>; boyun tespiti yapılır, yaşam bulguları (ABC) değerlendirilir.</span><a class="hap-detay" href="/hap-bilgiler/ilk-yardim/kulaktan-kanama-ve-goz-cevresinde-morluk-kafatasi/">Detay &rarr;</a></div>
         </div>
       </section>
 
       <section class="grup">
         <h2>Kırıklar</h2>
         <div class="hap-list">
-        <div class="hap"><span class="hap-num">16</span><span><b>Açık kırıkta deri bütünlüğü bozulur</b>; kan kaybı ve enfeksiyon riski yüksektir. Deri bütünlüğünün korunduğu kırık, kapalı kırıktır.</span></div>
-        <div class="hap"><span class="hap-num">17</span><span><b>Köprücük kemiği</b> kırığında tespit, her iki omuz üzerinden geçen <b>çapraz (sekiz) bandajla</b> yapılır.</span></div>
-        <div class="hap"><span class="hap-num">18</span><span>Kalça ve alt taraf kırıklarının tespitinde: açık kırık varsa yara önce <b>temiz bir bezle kapatılır</b>; destek malzemeleri yumuşak olmalı, sargı kırığın üzerine bağlanmamalı, yaralı oturtulmamalıdır.</span></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/ilk-yardim/acik-kirikta-deri-butunlugu-bozulur-kan-kaybi-ve-enfeksiyon/" aria-label="Hap bilgi 16 sayfası">16</a><span><b>Açık kırıkta deri bütünlüğü bozulur</b>; kan kaybı ve enfeksiyon riski yüksektir. Deri bütünlüğünün korunduğu kırık, kapalı kırıktır.</span><a class="hap-detay" href="/hap-bilgiler/ilk-yardim/acik-kirikta-deri-butunlugu-bozulur-kan-kaybi-ve-enfeksiyon/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/ilk-yardim/koprucuk-kemigi-kiriginda-tespit-her-iki-omuz-uzerinden/" aria-label="Hap bilgi 17 sayfası">17</a><span><b>Köprücük kemiği</b> kırığında tespit, her iki omuz üzerinden geçen <b>çapraz (sekiz) bandajla</b> yapılır.</span><a class="hap-detay" href="/hap-bilgiler/ilk-yardim/koprucuk-kemigi-kiriginda-tespit-her-iki-omuz-uzerinden/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/ilk-yardim/kalca-ve-alt-taraf-kiriklarinin-tespitinde-acik-kirik-varsa/" aria-label="Hap bilgi 18 sayfası">18</a><span>Kalça ve alt taraf kırıklarının tespitinde: açık kırık varsa yara önce <b>temiz bir bezle kapatılır</b>; destek malzemeleri yumuşak olmalı, sargı kırığın üzerine bağlanmamalı, yaralı oturtulmamalıdır.</span><a class="hap-detay" href="/hap-bilgiler/ilk-yardim/kalca-ve-alt-taraf-kiriklarinin-tespitinde-acik-kirik-varsa/">Detay &rarr;</a></div>
         </div>
       </section>
 
       <section class="grup">
         <h2>Taşıma teknikleri</h2>
         <div class="hap-list">
-        <div class="hap"><span class="hap-num">19</span><span>Taşımada genel kural: <b>baş-boyun-gövde ekseni</b> bozulmadan, kazazede <b>en az 6 destek noktasından</b> kavranır ve mümkün olduğunca az hareket ettirilir. Kaldırırken ağırlık karın değil <b>bacak kaslarına</b> verilir.</span></div>
-        <div class="hap"><span class="hap-num">20</span><span><b>Rentek manevrası</b>: solunumu durmuş ya da tehlike altındaki kazazedeyi, ayakları pedala sıkışmamışsa araç içinden çıkarma tekniğidir.</span></div>
-        <div class="hap"><span class="hap-num">21</span><span><b>Teskereci yöntemi</b>, kaşık ve köprü teknikleri kazazedeyi sedyeye yerleştirmek için kullanılır.</span></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/ilk-yardim/tasimada-genel-kural-bas-boyun-govde-ekseni-bozulmadan/" aria-label="Hap bilgi 19 sayfası">19</a><span>Taşımada genel kural: <b>baş-boyun-gövde ekseni</b> bozulmadan, kazazede <b>en az 6 destek noktasından</b> kavranır ve mümkün olduğunca az hareket ettirilir. Kaldırırken ağırlık karın değil <b>bacak kaslarına</b> verilir.</span><a class="hap-detay" href="/hap-bilgiler/ilk-yardim/tasimada-genel-kural-bas-boyun-govde-ekseni-bozulmadan/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/ilk-yardim/rentek-manevrasi-solunumu-durmus-ya-da-tehlike-altindaki/" aria-label="Hap bilgi 20 sayfası">20</a><span><b>Rentek manevrası</b>: solunumu durmuş ya da tehlike altındaki kazazedeyi, ayakları pedala sıkışmamışsa araç içinden çıkarma tekniğidir.</span><a class="hap-detay" href="/hap-bilgiler/ilk-yardim/rentek-manevrasi-solunumu-durmus-ya-da-tehlike-altindaki/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/ilk-yardim/teskereci-yontemi-kasik-ve-kopru-teknikleri-kazazedeyi/" aria-label="Hap bilgi 21 sayfası">21</a><span><b>Teskereci yöntemi</b>, kaşık ve köprü teknikleri kazazedeyi sedyeye yerleştirmek için kullanılır.</span><a class="hap-detay" href="/hap-bilgiler/ilk-yardim/teskereci-yontemi-kasik-ve-kopru-teknikleri-kazazedeyi/">Detay &rarr;</a></div>
         </div>
       </section>
     </div>
@@ -338,7 +344,8 @@
 
 <!-- Google tag (gtag.js) — sayfa yüklendikten sonra yüklenir -->
 <script>
-function loadGA(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-34HL041XN0';s.async=true;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function g(){dataLayer.push(arguments)}window.gtag=g;g('js',new Date());g('config','G-34HL041XN0')}
+window.dataLayer=window.dataLayer||[];function g(){dataLayer.push(arguments)}window.gtag=g;g('js',new Date());g('config','G-34HL041XN0');var r=document.referrer,h=r?r.split('/')[2]:'';if(h&&/(chatgpt\.com|openai\.com|perplexity\.ai|claude\.ai|anthropic\.com|gemini\.google\.com|copilot\.microsoft\.com|bing\.com\/chat|you\.com|mistral\.ai|deepseek\.com)$/.test(h)){g('event','ai_referral',{ai_source:h})}
+function loadGA(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-34HL041XN0';s.async=true;document.head.appendChild(s)}
 if(typeof requestIdleCallback==='function'){requestIdleCallback(loadGA)}else{setTimeout(loadGA,2500)}
 </script>
 </body>

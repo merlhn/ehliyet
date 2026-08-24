@@ -137,7 +137,9 @@ Turnike sadece tek kemikli bölgelere (kol ve bacak) uygulanır; kanama durdurma
 Turnike (boğucu sargı), kanama durdurmanın en son başvurulan yöntemidir. Yanlış uygulandığında dokuya zarar verebildiği için ne zaman, nereye ve nasıl uygulanacağını doğru bilmek gerekir. Bu bölümde turnikenin uygulama kurallarını öğreneceğiz.
 
 Alt başlıklar:
+- Turnike nedir?
 - Turnike ne zaman uygulanır?
+- Turnike mi, basınçlı pansuman mı?
 - Nereye uygulanır?
 - Nasıl uygulanır?
 - Uygulama sonrası kurallar
@@ -311,12 +313,13 @@ Alt başlıklar:
 
 ### Kavşaklarda İlk Geçiş Hakkı
 URL: https://ehliyet.digital/dersler/trafik-ve-cevre/kavsaklarda-gecis-hakki/
-Kontrolsüz kavşakta sağdan gelen geçer. Ana yoldan gelen tali yoldakine, dönel kavşaktaki girmek isteyene önceliklidir. Kavşak geçiş hakkı kuralları.
+Kavşaklarda geçiş hakkı: CİPS kuralı, 625 kuralı ve kontrolsüz kavşaklarda sağdan gelen önceliği. Ehliyet sınavında en çok çıkan kavşak soruları.
 
 Kavşaklarda geçiş hakkı, her sınavda kesinlikle en az bir soruyla karşınıza çıkan; ayrıca kazalarda kimin kusurlu olduğunu belirleyen hayati bir konudur. Konu, trafik görevlisi veya ışığın bulunmadığı kontrolsüz kavşaklar ile bunların bulunduğu kontrollü kavşaklar olmak üzere iki başlıkta incelenir; bu bölümde kontrolsüz kavşaklar ve temel öncelik kurallarını işleyeceğiz.
 
 Alt başlıklar:
 - Geçiş üstünlüğü ve CİPS kuralı
+- 625 kuralı: trafik işaretlerine uymada öncelik sırası
 - Yol türüne ve manevraya göre öncelik
 - Kontrolsüz eşdeğer kavşaklar
 - Soru çözme tekniği
@@ -523,6 +526,7 @@ Alt başlıklar:
 - ABS ve ASR sistemleri
 - Büyük araçlardaki fren tipleri
 - Fren arızaları
+- Fren mesafesini etkileyen faktörler
 - Frenlemeyi ve uyarıları etkileyen etkenler
 - Bu konudan sınavlık bilgiler
 - Kısaca
@@ -536,6 +540,7 @@ Motorda üretilen gücün tekerleklere kadar nasıl ulaştığı, araç tekniği
 
 Alt başlıklar:
 - Güç aktarma organları nedir?
+- Motor hareketinin tekerleklere ulaşma sırası
 - Volan
 - Debriyaj (kavrama)
 - Vites kutusu (şanzıman)

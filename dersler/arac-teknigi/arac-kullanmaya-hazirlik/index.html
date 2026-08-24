@@ -13,7 +13,7 @@
 
 <!-- Open Graph (WhatsApp / Facebook / LinkedIn) -->
 <meta property="og:type" content="article">
-<meta property="article:modified_time" content="2026-08-05">
+<meta property="article:modified_time" content="2026-08-24">
 <meta property="article:published_time" content="2026-07-19">
 <meta property="og:site_name" content="ehliyet.digital">
 <meta property="og:title" content="Araç Tekniği (Motor) — Konu 3: Araç Kullanmaya Hazırlık">
@@ -96,6 +96,7 @@
   /* İlgili konular */
   .ilgili-konular{margin-top:48px;padding-top:32px;border-top:1px solid var(--line)}
   .ilgili-konular h2{font-size:17px;margin:0 0 12px}
+.ilgili-konular h3{font-size:15px;margin:20px 0 10px}
   .ilgili-konular ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
   .ilgili-konular li{font-size:14px;line-height:1.5}
   .ilgili-konular a{color:var(--fg);font-weight:500}
@@ -165,7 +166,7 @@
       "educationalLevel": "B sınıfı ehliyet",
       "teaches": "Araç Kullanmaya Hazırlık",
       "datePublished": "2026-07-19",
-      "dateModified": "2026-08-06T11:31:31+03:00",
+      "dateModified": "2026-08-24T16:29:29.657634+03:00",
       "author": {
         "@type": "Organization",
         "@id": "https://ehliyet.digital/#organization",
@@ -194,7 +195,8 @@
           "trafik adabı"
         ],
         "sameAs": [
-          "https://github.com/merlhn/ehliyet"
+          "https://github.com/merlhn/ehliyet",
+          "https://mcpmarket.com/server/ehliyet-digital"
         ]
       },
       "publisher": {
@@ -225,7 +227,8 @@
           "trafik adabı"
         ],
         "sameAs": [
-          "https://github.com/merlhn/ehliyet"
+          "https://github.com/merlhn/ehliyet",
+          "https://mcpmarket.com/server/ehliyet-digital"
         ]
       },
       "isPartOf": {
@@ -311,6 +314,12 @@
       <li>Ön ısıtma bujisi yalnızca dizel araçlarda bulunur; ikaz ışığının sönmesi beklenmelidir.</li>
       <li>Motor çalışırken mars yapılırsa mars dişlisi zarar görür.</li>
       <li>Emniyet kemeri ve hava yastığı kazayı önlemez, kaza sonrası ölüm ve yaralanmayı azaltır.</li>
+      <li>Lastikler günlük değil, araca her binildiğinde kontrol edilir; araca binmeden önce yapılacak kontrol lastik kontrolüdür.</li>
+      <li>Dış kontrolde lastiklerde patlak, hava ve bijon (vida) eksikliği; aracın altında yakıt sızıntısı ve yağ akıntısı aranır.</li>
+      <li>Kaput altındaki motor yağı, soğutma suyu ve hidrolik yağ seviyesi kontrolü her gün yapılmak zorunda değildir.</li>
+      <li>Güvenli sürüş için dik oturulur ve sırt koltuğa tam yaslanır; aksi hâlde virajlarda denge kaybı yaşanır.</li>
+      <li>Aracı çalıştırmadan önce el freni çekili olmalı ve vites boşa (otomatik viteste P konumuna) alınmalıdır.</li>
+      <li>İdeal marş süresi 10-15 saniyedir; araç ilk marşta çalışmazsa biraz beklenip yeniden marş yapılır.</li>
     </ul>
 
     <h2>Kısaca</h2>
@@ -331,6 +340,12 @@
         <li><a href="/hap-bilgiler/arac-teknigi/">Araç Tekniği Hap Bilgileri</a> — Sınavda çıkan bilgiler tek sayfada</li>
         <li><a href="/dersler/">Tüm Ders Notları</a> — 43 konunun tamamı</li>
       </ul>
+      <!-- HAP_LINKLERI_BASLA -->
+      <h3>Bu konunun hap bilgileri</h3>
+      <ul>
+        <li><a href="/hap-bilgiler/arac-teknigi/dizel-araca-yanlislikla-benzin-konursa-yakit-deposu/">Dizel araca yanlışlıkla benzin konursa yakıt deposu boşaltılır; araç bu yakıtla kullanılmaz.</a></li>
+      </ul>
+      <!-- HAP_LINKLERI_BITIR -->
     </div>
   
     <div class="quiz-card">
@@ -450,7 +465,8 @@
 
 <!-- Google tag (gtag.js) — sayfa yüklendikten sonra yüklenir -->
 <script>
-function loadGA(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-34HL041XN0';s.async=true;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function g(){dataLayer.push(arguments)}window.gtag=g;g('js',new Date());g('config','G-34HL041XN0')}
+window.dataLayer=window.dataLayer||[];function g(){dataLayer.push(arguments)}window.gtag=g;g('js',new Date());g('config','G-34HL041XN0');var r=document.referrer,h=r?r.split('/')[2]:'';if(h&&/(chatgpt\.com|openai\.com|perplexity\.ai|claude\.ai|anthropic\.com|gemini\.google\.com|copilot\.microsoft\.com|bing\.com\/chat|you\.com|mistral\.ai|deepseek\.com)$/.test(h)){g('event','ai_referral',{ai_source:h})}
+function loadGA(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-34HL041XN0';s.async=true;document.head.appendChild(s)}
 if(typeof requestIdleCallback==='function'){requestIdleCallback(loadGA)}else{setTimeout(loadGA,2500)}
 </script>
 </body>

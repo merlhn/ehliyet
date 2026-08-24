@@ -105,7 +105,8 @@ def parse_questions():
 
 class HapParser(HTMLParser):
     """Extract facts from hap-bilgiler pages.
-    Facts are in <div class="hap"><span class="hap-num">...</span><span>FACT</span></div>
+    Facts are in <div class="hap"><a class="hap-num">...</a><span>FACT</span></div>
+    (hap-num was a <span> before the per-fact pages; both forms are accepted).
     """
     def __init__(self):
         super().__init__()
@@ -123,16 +124,14 @@ class HapParser(HTMLParser):
         if tag == "div" and "hap" in cls.split() and "hap-list" not in cls:
             self._in_hap = True
             self._span_count = 0
-        elif self._in_hap and tag == "span":
-            self._span_count += 1
-            if "hap-num" in cls:
-                self._in_num = True
-            elif self._span_count == 2:
-                self._in_fact_span = True
-                self._current_text = []
+        elif self._in_hap and "hap-num" in cls.split():
+            self._in_num = True
+        elif self._in_hap and tag == "span" and not self._in_num:
+            self._in_fact_span = True
+            self._current_text = []
 
     def handle_endtag(self, tag):
-        if tag == "span" and self._in_num:
+        if tag in ("span", "a") and self._in_num:
             self._in_num = False
         elif tag == "span" and self._in_fact_span:
             self._in_fact_span = False

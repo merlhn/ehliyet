@@ -1,0 +1,11 @@
+# Smithery (smithery.ai) kayıt tanımı — MCP sunucusu mcp/server.py
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties: {}
+  commandFunction: |-
+    (config) => ({ command: "python", args: ["mcp/server.py"] })
+build:
+  dockerfile: Dockerfile
+  dockerBuildPath: mcp

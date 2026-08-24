@@ -6,7 +6,7 @@ MEB MTSK müfredatına uygun 43 ders notu, 76 hap bilgi, 200 çıkmış sınav s
 
 🌐 **Site:** [ehliyet.digital](https://ehliyet.digital)
 📄 **LLM dizini:** [llms.txt](https://ehliyet.digital/llms.txt) · [llms-full.txt](https://ehliyet.digital/llms-full.txt)
-🔌 **MCP:** [ehliyet-production.up.railway.app/sse](https://ehliyet-production.up.railway.app/sse)
+🔌 **MCP:** [ehliyet-production.up.railway.app/sse](https://ehliyet-production.up.railway.app/sse) · [MCP Market](https://mcpmarket.com/server/ehliyet-digital)
 
 ---
 
@@ -16,9 +16,10 @@ MEB MTSK müfredatına uygun 43 ders notu, 76 hap bilgi, 200 çıkmış sınav s
 |--------|------|----------|
 | Ders notları | 43 | 4 kategoride sınav odaklı konu anlatımı |
 | Hap bilgiler | 76 | Tek cümlelik ezberlenecek kurallar |
-| Atomik özetler | ~370 | Her ders sayfasında makine-okunur bilgi satırları |
+| Atomik özetler | ~560 | Her ders sayfasında makine-okunur bilgi satırları |
 | Sınav soruları | 200 | 4 deneme sınavından çıkmış sorular + cevaplar |
 | Bireysel soru sayfaları | 186 | Her soru kendi URL'inde, cevap + açıklama ile |
+| Bireysel hap bilgi sayfaları | 76 | Her hap bilgi kendi URL'inde, bağlam + ilgili ders ile |
 
 ### Ders kategorileri
 
@@ -147,7 +148,7 @@ Makine-okunur JSON formatında:
 |-------|--------|
 | [`mcp/data/questions.json`](mcp/data/questions.json) | 200 soru (4 sınav) |
 | [`mcp/data/quick-facts.json`](mcp/data/quick-facts.json) | 76 hap bilgi |
-| [`mcp/data/lesson-summaries.json`](mcp/data/lesson-summaries.json) | 43 ders, ~370 atomik bilgi |
+| [`mcp/data/lesson-summaries.json`](mcp/data/lesson-summaries.json) | 43 ders, ~560 atomik bilgi |
 
 ---
 
@@ -188,6 +189,7 @@ python3 -m http.server 8000
 │   ├── llms-uret.py            llms-full.txt
 │   ├── feed-uret.py            RSS feed + discovery link
 │   ├── soru-sayfa-uret.py      Bireysel soru sayfaları
+│   ├── hap-sayfa-uret.py       Bireysel hap bilgi sayfaları
 │   ├── atomik-ekle.py          Ders atomik özetleri
 │   ├── cevap-ac.py             Soru cevaplarını HTML'e taşı
 │   └── mcp-veri-uret.py        MCP JSON veri dosyaları
@@ -221,3 +223,4 @@ Bu proje açık kaynak olarak yayınlanmıştır. İçerikler MEB MTSK müfredat
 - **Site:** [ehliyet.digital](https://ehliyet.digital)
 - **Hakkında:** [ehliyet.digital/hakkinda](https://ehliyet.digital/hakkinda/)
 - **GitHub:** [github.com/merlhn/ehliyet](https://github.com/merlhn/ehliyet)
+- **MCP Market:** [mcpmarket.com/server/ehliyet-digital](https://mcpmarket.com/server/ehliyet-digital)

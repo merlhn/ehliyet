@@ -13,7 +13,7 @@
 
 <!-- Open Graph (WhatsApp / Facebook / LinkedIn) -->
 <meta property="og:type" content="article">
-<meta property="article:modified_time" content="2026-08-05">
+<meta property="article:modified_time" content="2026-08-24">
 <meta property="article:published_time" content="2026-07-19">
 <meta property="og:site_name" content="ehliyet.digital">
 <meta property="og:title" content="Trafik ve Çevre — Konu 8: Hız Sınırları">
@@ -96,6 +96,7 @@
   /* İlgili konular */
   .ilgili-konular{margin-top:48px;padding-top:32px;border-top:1px solid var(--line)}
   .ilgili-konular h2{font-size:17px;margin:0 0 12px}
+.ilgili-konular h3{font-size:15px;margin:20px 0 10px}
   .ilgili-konular ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
   .ilgili-konular li{font-size:14px;line-height:1.5}
   .ilgili-konular a{color:var(--fg);font-weight:500}
@@ -165,7 +166,7 @@
       "educationalLevel": "B sınıfı ehliyet",
       "teaches": "Hız Sınırları",
       "datePublished": "2026-07-19",
-      "dateModified": "2026-08-06T11:31:31+03:00",
+      "dateModified": "2026-08-24T16:29:29.658389+03:00",
       "author": {
         "@type": "Organization",
         "@id": "https://ehliyet.digital/#organization",
@@ -194,7 +195,8 @@
           "trafik adabı"
         ],
         "sameAs": [
-          "https://github.com/merlhn/ehliyet"
+          "https://github.com/merlhn/ehliyet",
+          "https://mcpmarket.com/server/ehliyet-digital"
         ]
       },
       "publisher": {
@@ -225,7 +227,8 @@
           "trafik adabı"
         ],
         "sameAs": [
-          "https://github.com/merlhn/ehliyet"
+          "https://github.com/merlhn/ehliyet",
+          "https://mcpmarket.com/server/ehliyet-digital"
         ]
       },
       "isPartOf": {
@@ -308,6 +311,11 @@
       <li>12 tonu geçen kamyonlarda ve 10 tonu geçen otobüslerde hız sınırlandırıcı cihaz zorunludur.</li>
       <li>Bölünmüş yolda seyir hâlindeyken hız azaltmak zorunlu değildir.</li>
       <li>Hızın azaltılması gereken yerler: kavşaklar, virajlar, tepe üstü, okul ve yaya geçitleri, tünel, köprü ve menfezlerdir.</li>
+      <li>Otomobiller için hız sınırı devlet otoyollarında 130 km/s, özel (yap-işlet-devret) otoyollarda 140 km/s'dir.</li>
+      <li>Yerleşim yeri içinde çoğu araç için hız sınırı 50 km/s'dir.</li>
+      <li>Asgari hız şehirler arası kara yollarında 15 km/s, otoyollarda 40 km/s'dir.</li>
+      <li>Otoyollara motorlu bisiklet, lastik tekerlekli traktör ve iş makinesi giremez.</li>
+      <li>Römorklu araçlardaki 10 km/s düşük hız kuralı lastik tekerlekli traktörler için geçerli değildir.</li>
     </ul>
 
     <h2>Kısaca</h2>
@@ -449,7 +457,8 @@
 
 <!-- Google tag (gtag.js) — sayfa yüklendikten sonra yüklenir -->
 <script>
-function loadGA(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-34HL041XN0';s.async=true;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function g(){dataLayer.push(arguments)}window.gtag=g;g('js',new Date());g('config','G-34HL041XN0')}
+window.dataLayer=window.dataLayer||[];function g(){dataLayer.push(arguments)}window.gtag=g;g('js',new Date());g('config','G-34HL041XN0');var r=document.referrer,h=r?r.split('/')[2]:'';if(h&&/(chatgpt\.com|openai\.com|perplexity\.ai|claude\.ai|anthropic\.com|gemini\.google\.com|copilot\.microsoft\.com|bing\.com\/chat|you\.com|mistral\.ai|deepseek\.com)$/.test(h)){g('event','ai_referral',{ai_source:h})}
+function loadGA(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-34HL041XN0';s.async=true;document.head.appendChild(s)}
 if(typeof requestIdleCallback==='function'){requestIdleCallback(loadGA)}else{setTimeout(loadGA,2500)}
 </script>
 </body>

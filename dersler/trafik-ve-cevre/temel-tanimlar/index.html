@@ -13,7 +13,7 @@
 
 <!-- Open Graph (WhatsApp / Facebook / LinkedIn) -->
 <meta property="og:type" content="article">
-<meta property="article:modified_time" content="2026-08-05">
+<meta property="article:modified_time" content="2026-08-24">
 <meta property="article:published_time" content="2026-07-19">
 <meta property="og:site_name" content="ehliyet.digital">
 <meta property="og:title" content="Trafik ve Çevre — Konu 1: Temel Kavramlar">
@@ -110,6 +110,7 @@
   /* İlgili konular */
   .ilgili-konular{margin-top:48px;padding-top:32px;border-top:1px solid var(--line)}
   .ilgili-konular h2{font-size:17px;margin:0 0 12px}
+.ilgili-konular h3{font-size:15px;margin:20px 0 10px}
   .ilgili-konular ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
   .ilgili-konular li{font-size:14px;line-height:1.5}
   .ilgili-konular a{color:var(--fg);font-weight:500}
@@ -178,7 +179,7 @@
       "educationalLevel": "B sınıfı ehliyet",
       "teaches": "Temel Kavramlar",
       "datePublished": "2026-07-19",
-      "dateModified": "2026-08-06T11:31:31+03:00",
+      "dateModified": "2026-08-24T16:29:29.658080+03:00",
       "author": {
         "@type": "Organization",
         "@id": "https://ehliyet.digital/#organization",
@@ -207,7 +208,8 @@
           "trafik adabı"
         ],
         "sameAs": [
-          "https://github.com/merlhn/ehliyet"
+          "https://github.com/merlhn/ehliyet",
+          "https://mcpmarket.com/server/ehliyet-digital"
         ]
       },
       "publisher": {
@@ -238,7 +240,8 @@
           "trafik adabı"
         ],
         "sameAs": [
-          "https://github.com/merlhn/ehliyet"
+          "https://github.com/merlhn/ehliyet",
+          "https://mcpmarket.com/server/ehliyet-digital"
         ]
       },
       "isPartOf": {
@@ -321,6 +324,10 @@
       <li>Trafik kazası sayılabilmesi için 3 şart bir arada bulunmalıdır: olay kara yolunda olmalı, araç hareket hâlinde olmalı ve ölüm/yaralanma/zarar bulunmalıdır.</li>
       <li>Tarlada çalışan traktörün çukura düşmesi trafik kazası değil iş kazasıdır; olay kara yolu üzerinde gerçekleşmemiştir.</li>
       <li>Trafikten men, aracın belgelerinin alınıp trafikten alıkonulmasıdır; en yaygın sebebi zorunlu trafik sigortasının yaptırılmamış olmasıdır.</li>
+      <li>Park etme, durma ve duraklama dışında kalan, aracın daha uzun süre bir yerde bırakılmasıdır.</li>
+      <li>Park hâlindeki aracın üzerine cisim düşmesi trafik kazası değildir; araç hareket hâlinde değildir ve orası kara yolu sayılmaz.</li>
+      <li>İş kazası ve ev kazası birer kaza çeşididir ancak trafik kazası kapsamına girmez.</li>
+      <li>Trafikten men edilen araç otoparka çekilir; ehliyetsiz araç kullanmak veya kırmızı ışıkta geçmek çoğunlukla para cezasıyla sonuçlanır ve men gerektirmez.</li>
     </ul>
 
     <h2>Kısaca</h2>
@@ -467,7 +474,8 @@
 
 <!-- Google tag (gtag.js) — sayfa yüklendikten sonra yüklenir -->
 <script>
-function loadGA(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-34HL041XN0';s.async=true;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function g(){dataLayer.push(arguments)}window.gtag=g;g('js',new Date());g('config','G-34HL041XN0')}
+window.dataLayer=window.dataLayer||[];function g(){dataLayer.push(arguments)}window.gtag=g;g('js',new Date());g('config','G-34HL041XN0');var r=document.referrer,h=r?r.split('/')[2]:'';if(h&&/(chatgpt\.com|openai\.com|perplexity\.ai|claude\.ai|anthropic\.com|gemini\.google\.com|copilot\.microsoft\.com|bing\.com\/chat|you\.com|mistral\.ai|deepseek\.com)$/.test(h)){g('event','ai_referral',{ai_source:h})}
+function loadGA(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-34HL041XN0';s.async=true;document.head.appendChild(s)}
 if(typeof requestIdleCallback==='function'){requestIdleCallback(loadGA)}else{setTimeout(loadGA,2500)}
 </script>
 </body>

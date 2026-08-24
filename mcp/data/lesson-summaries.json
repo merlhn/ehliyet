@@ -12,7 +12,11 @@
       "Trafik kazasında ilk yardıma her zaman olay yerinde başlanır; hastane veya ambulans beklenmez.",
       "Kaza yerinde önce güvenli ortam oluşturulur, sonra 112 aranır.",
       "112 aranırken kazanın türü, kişi sayısı ve genel durum net olarak bildirilmelidir.",
-      "İlk yardımcı eğitim almış herhangi bir kişi olabilir; sağlık personeli olma zorunluluğu yoktur."
+      "İlk yardımcı eğitim almış herhangi bir kişi olabilir; sağlık personeli olma zorunluluğu yoktur.",
+      "İlk yardım olay yerinde, eldeki mevcut malzemeyle ve ilaçsız yapılır; bu 3 nokta tanımın anahtarıdır.",
+      "İlk yardım yapmak eğitim almış kişi için bir yükümlülüktür; kazaya duyarsız kalmanın yaptırımı vardır.",
+      "Güvenli ortam için meraklılar uzaklaştırılır, patlama-devrilme riski giderilir ve aracın hareket riski varsa el freni çekilir.",
+      "'Önce can, sonra canan' ilkesi, ilk yardımcının kendi güvenliğini almadan müdahaleye başlamamasını anlatır."
     ]
   },
   {
@@ -28,7 +32,11 @@
       "Solunum değerlendirmesi 10 saniye süreyle yapılır; bu süre tüm yaş grupları için geçerlidir.",
       "Nabız tanımı: kalp atımlarının atardamar duvarına yaptığı basınçtır; toplardamardan nabız alınmaz.",
       "Yetişkin ve çocuklarda nabız şah (boyun/karotis) damarından, bebeklerde ise kol (brakiyal) atardamarından kontrol edilir.",
-      "Hava yolunu açmak için ağız içinde yabancı cisim varsa işaret parmağıyla dışarı alınmaya çalışılır."
+      "Hava yolunu açmak için ağız içinde yabancı cisim varsa işaret parmağıyla dışarı alınmaya çalışılır.",
+      "Hava yolunu değerlendirmek için kişi baş-boyun-gövde ekseni düz olacak şekilde sırtüstü yatırılır.",
+      "Baş geri-çene yukarı pozisyonunda bir el alna, diğer elin iki parmağı çene kemiğine konur; alından bastırılıp çene kaldırılır.",
+      "Solunum çok zayıfsa ağza yaklaştırılan cam, ayna veya telefon camının buğulanıp buğulanmadığına bakılabilir.",
+      "Kalbi duran kişinin dolaşımı olmaz; dolaşım için kalbin çalışması ve damarlar gerekir."
     ]
   },
   {
@@ -44,7 +52,11 @@
       "Baskı uygulanan bez kanla dolarsa çıkarılmaz; üzerine yeni bez eklenerek baskıya devam edilir.",
       "İç kanama belirtileri şok belirtileriyle aynıdır: soluk-soğuk cilt, hızlı-zayıf nabız ve huzursuzluk.",
       "İç kanama şüphesi olan kişiye yiyecek ve içecek verilmez; şok pozisyonu verilir ve üzeri örtülür.",
-      "Burun kanamasında baş hafifçe öne eğilir ve burun kanatları sıkılır; başın geriye atılması yanlıştır."
+      "Burun kanamasında baş hafifçe öne eğilir ve burun kanatları sıkılır; başın geriye atılması yanlıştır.",
+      "Kanamada ilk adım ilk yardımcının kendi güvenliğini almasıdır; mümkünse eldiven kullanılır.",
+      "Kanayan bölge kalp seviyesinin üzerine kaldırılır; böylece bölgeye giden kan azalır.",
+      "Basınç noktası, kanayan yere en yakın ve yara ile kalp arasında bulunan noktadır.",
+      "Burun kanamasında baş geriye atılırsa kan mideye veya soluk yoluna kaçabilir."
     ]
   },
   {
@@ -60,7 +72,11 @@
       "Atelin boyu kırığın iki ucundaki eklemleri de içine alacak kadar uzun olmalıdır.",
       "Göğüs, kaburga, köprücük ve kol kırıklarında yarı oturuş; diğer kırıklarda sırtüstü yatış pozisyonu verilir.",
       "Omurga kırığında baş-boyun-gövde hizası kesinlikle bozulmaz; dik pozisyon vermek felce yol açabilir.",
-      "Burkulmada CIPS kuralı uygulanır: Cilt soğutma, İstirahat, Pansuman, Seviye yükseltme."
+      "Burkulmada CIPS kuralı uygulanır: Cilt soğutma, İstirahat, Pansuman, Seviye yükseltme.",
+      "Kırık belirtileri: hareketle artan ağrı, şekil bozukluğu, hareket kaybı, şişlik ve kanamaya bağlı morarmadır.",
+      "Kol kırığında şişlik olabileceği için yüzük ve saat çıkarılır; tespitte parmaklar açıkta bırakılarak nabız ve morarma takip edilir.",
+      "Açık kırıkta tespitten önce yara üzeri temiz bir bezle kapatılır.",
+      "Atel doğrudan kemiğe konmaz, önce ince yumuşak malzemeyle sarılır; diz-kalça arası kırıkta atel topuktan koltuk altına uzanır."
     ]
   },
   {
@@ -76,7 +92,11 @@
       "Komadaki kişiye yiyecek-içecek verilmez, tokat gibi sert uyaranlar uygulanmaz ve kolonya koklatılmaz.",
       "Bayılma kısa süreli ve geçici bilinç kaybıdır; aşırı heyecan, korku ve kapalı ortamda oksijensiz kalma nedenleri arasındadır.",
       "Kusma olan her bilinç kaybı durumunda yarı yüzükoyun yan yatış pozisyonu verilir.",
-      "İlk yardımda kazazedeye yiyecek-içecek verilmez; tek istisna kan şekeri düşüklüğünde şekerli gıda verilebilmesidir."
+      "İlk yardımda kazazedeye yiyecek-içecek verilmez; tek istisna kan şekeri düşüklüğünde şekerli gıda verilebilmesidir.",
+      "Şok pozisyonunda kişi sırtüstü yatırılır ve ayakları 30 cm kaldırılır; amaç kalp ve beyne kan göndermektir.",
+      "Şoktaki kişinin üzeri örtülerek sıcak tutulur; amaç ısı kaybını önleyerek vücut sıcaklığını korumaktır.",
+      "Şoktaki kazazedenin yaşam bulguları 2-3 dakikada bir kontrol edilir ve 112 aranır.",
+      "Bayılan kişi sırtüstü yatırılıp ayakları 30 cm kaldırılır, sıkan giysileri gevşetilir; tokat vurulmaz."
     ]
   },
   {
@@ -92,7 +112,11 @@
       "Karına bası noktası göbek ile göğüs kemiği arasıdır.",
       "Sırta vurma ve karına bası yabancı cisim çıkana kadar dönüşümlü (5+5) tekrarlanır.",
       "Bebeklerde karına bası yerine göğüs kemiğinden 2 parmakla 5 kez göğüs basısı uygulanır.",
-      "Kişi tek başınaysa sandalye arkalığına karnını bastırarak Heimlich'i kendine uygulayabilir."
+      "Kişi tek başınaysa sandalye arkalığına karnını bastırarak Heimlich'i kendine uygulayabilir.",
+      "Tam tıkanmada kişi refleks olarak ellerini boynuna götürür; bu boğulmanın tipik işaretidir.",
+      "Sırta vurma, kişi hafifçe öne eğilerek el ayasıyla iki kürek kemiği arasına süpürür tarzda yapılır.",
+      "Bebek, ilk yardımcının kolu üzerine yüzü aşağı bakacak şekilde yatırılır; bu cismin ağızdan çıkmasını kolaylaştırır.",
+      "Bebekte sırta 5 vuruştan sonra bebek sırtüstü çevrilip ağız içi kontrol edilir; cisim çıkmamışsa göğüs basısına geçilir."
     ]
   },
   {
@@ -107,7 +131,12 @@
       "Omurga yaralanması şüphesinde mutlaka sert sedye kullanılır; yumuşak sedye kullanılmaz.",
       "Her taşıma tekniğinde baş-boyun-gövde ekseni korunur.",
       "Taşıma sırasında ağırlık belden değil bacak kaslarından alınır; dizler bükülerek çömelip kalkılır.",
-      "Sürükleme yöntemi yalnızca hayati tehlike varken ve kısa mesafe için tercih edilir."
+      "Sürükleme yöntemi yalnızca hayati tehlike varken ve kısa mesafe için tercih edilir.",
+      "Sürükleme yöntemlerinde kazazede koltuk altından, ayak bileklerinden veya bir battaniyeye alınarak sürüklenir.",
+      "Rentek manevrası ayakları pedallara sıkışmamış kazazedeye uygulanır; ilk yardımcı arkadan kolların altından geçerek bir kolu kavrar.",
+      "Sedyeyle taşımada kazazede battaniyeyle örtülür, sedyeye sabitlenir; yokuş ve merdivende baş yukarıda tutulur.",
+      "Kazazede sedyeye alınırken vücut bir bütün olarak çevrilir; bunun için birden fazla ilk yardımcı birlikte çalışır.",
+      "Bilinci açık ve ayakta durabilen kazazedeyi iki ilk yardımcı destek olarak yürütebilir."
     ]
   },
   {
@@ -122,7 +151,11 @@
       "Turnike yalnızca kanama duracak kadar sıkılır; fazla sıkmak dokuya zarar verir.",
       "Turnikenin uygulama saati mutlaka yazılıp kazazedenin görünür bir yerine iğnelenir.",
       "Turnike, sağlık ekibi devralana kadar gevşetilmez ve açılmaz.",
-      "Turnikenin üzeri örtülerek gizlenmez; sağlık ekibinin görebilmesi için açıkta bırakılır."
+      "Turnikenin üzeri örtülerek gizlenmez; sağlık ekibinin görebilmesi için açıkta bırakılır.",
+      "Turnike (boğma bandajı), büyük kanamalarda son çare olarak uygulanan bağlama yöntemidir.",
+      "Dış kanamalarda ilk tercih basınçlı pansumandır; turnike son çaredir.",
+      "Turnike tek kemikli bölgelere uygulanır: üst kol (humerus) ve üst bacak (femur).",
+      "Boyun, gövde, karın ve göğüs bölgelerine turnike uygulanmaz."
     ]
   },
   {
@@ -138,7 +171,12 @@
       "Sinir sisteminin organları beyin, beyincik, omurilik ve omurilik soğanıdır; omuriliğin zedelenmesi felce yol açabilir.",
       "Oksijensizliğe en dayanıksız organ beyindir; oksijensiz kalırsa en fazla 5 dakikada kalıcı hasar veya ölüm gerçekleşir.",
       "Solunum sisteminin organları burun, yutak, gırtlak, soluk borusu ve akciğerlerdir.",
-      "Sindirim ağızda başlar; sindirim sisteminin organları ağız, yemek borusu, mide, bağırsaklar ve pankreastır."
+      "Sindirim ağızda başlar; sindirim sisteminin organları ağız, yemek borusu, mide, bağırsaklar ve pankreastır.",
+      "Yetişkin insanda ortalama 5-6 litre kan vardır; kan vücut ağırlığının yaklaşık on üçte biri kadardır.",
+      "Kanın %20'si kaybedilirse hayati tehlike başlar.",
+      "Dakikadaki nabız sayısı yetişkinde 60-100, çocukta 100-120, bebekte 100-140'tır.",
+      "Dakikadaki solunum sayısı yetişkinde 12-20, çocukta 16-22'dir; bebeklerde daha yüksektir.",
+      "Boşaltım sisteminin en önemli organı böbreklerdir; böbrekler kanı süzer ve atıklar idrar olarak atılır."
     ]
   },
   {
@@ -154,7 +192,11 @@
       "Yanık bölge tazyikli değil yumuşak akan soğuk suyla en az 20 dakika soğutulur.",
       "Yanık üzerine merhem, diş macunu veya tentürdiyot sürülmez; su toplamış kabarcıklar patlatılmaz.",
       "Geniş yanıklarda kusması yoksa kazazedeye ağızdan sıvı verilebilir; yiyecek-içecek yasağının istisnasıdır.",
-      "Kimyasal yanıkta maddenin deriyle teması kesilerek bölge bol ve tazyiksiz suyla yıkanır."
+      "Kimyasal yanıkta maddenin deriyle teması kesilerek bölge bol ve tazyiksiz suyla yıkanır.",
+      "Fiziksel yanıklar ateş, elektrik, ışın, sürtünme ve donma sonucu; kimyasal yanıklar asit, çamaşır suyu ve akü suyu gibi maddelerle oluşur.",
+      "Yanığın ciddiyetini en çok belirleyen etkenler yanığın derinliği ve genişliğidir.",
+      "Vücut yüzeyinin %20'sinden fazlasının yanması yaşamsal risk oluşturur; bu oran bebeklerde %10'dur.",
+      "Yanığa yapışmış giysi çekilip çıkarılmaz, gerekirse makasla kesilir; yanık bölgeye bandaj yapılmaz."
     ]
   },
   {
@@ -170,7 +212,11 @@
       "Isırma, sokma, 6 saatten geç müdahale edilen ve çok kirli-derin yaralar enfekte (kirli) yara sayılır.",
       "Delici göğüs yaralanmasında kişiye oturur pozisyon verilir.",
       "Karın yaralanmasında dışarı çıkan organlar içeri konulmaz; üzeri temiz nemli bezle örtülür.",
-      "Kafatası ve omurga yaralanmalarında baş-boyun-gövde ekseni bozulmadan taşıma yapılır."
+      "Kafatası ve omurga yaralanmalarında baş-boyun-gövde ekseni bozulmadan taşıma yapılır.",
+      "Kesik yara bıçak, cam gibi kesici cisimlerle; parçalı yara çekme etkisiyle oluşur.",
+      "Kesik yaralarda yara uçları birbirine yaklaştırılıp üzeri kapatılarak sarılır; yara içi kurcalanmaz.",
+      "Karın yaralanmasında kişi bacakları bükülü şekilde yatırılır ve ısı kaybını önlemek için üzeri örtülür.",
+      "Kafatası-omurga yaralanmasında kazazede 12-24 saat doktor gözetiminde tutulur; kulaktan kan geliyorsa kanın geldiği tarafa yatırılır."
     ]
   },
   {
@@ -185,7 +231,12 @@
       "Vücut ısısı ilk yardımda koltuk altından ölçülür; sağlıklı değer 36,5 derecedir.",
       "38 derece ve üzeri yüksek ateş kabul edilir; çocuklarda yüksek ateş havale riskine yol açar.",
       "42 derece üzeri ve 34,5 derece altı vücut ısısı çok tehlikelidir.",
-      "Solunum durduğunda ilk 5 dakika içinde müdahale edilmezse beyin ölümü gerçekleşir."
+      "Solunum durduğunda ilk 5 dakika içinde müdahale edilmezse beyin ölümü gerçekleşir.",
+      "Solunum, baş geri-çene yukarı pozisyonunda bak-dinle-hisset yöntemiyle 10 saniye boyunca kontrol edilir.",
+      "Dinlenme hâlindeki yetişkinde solunum sayısı dakikada 12-20'dir; bebek ve çocuklarda daha yüksektir.",
+      "Vücutta nabız alınabilen 4 bölge: şah damarı (boyun), ön kol damarı, kol damarı ve bacak damarı.",
+      "Yetişkin ve çocukta nabız şah damarından, bebekte ön kol atardamarından alınır.",
+      "31 derecenin altındaki vücut ısısı ölümcüldür."
     ]
   },
   {
@@ -201,7 +252,11 @@
       "Ticari araçlarda günlük toplam araç kullanma süresi molalar dâhil en fazla 9 saattir.",
       "Zorunlu 45 dakikalık mola tek seferde veya en az 15'er dakikalık dilimlere bölünebilir.",
       "Takograf aracın kullanım süresini ve hızını kaydeder; ticari araçlarda bulunması zorunludur.",
-      "Belgesiz araç kullanılırsa hem sürene hem kullandırana ceza uygulanır."
+      "Belgesiz araç kullanılırsa hem sürene hem kullandırana ceza uygulanır.",
+      "Takograf kayıtları araçta 1 ay, iş yerinde ise 5 yıl süreyle saklanır.",
+      "Takograf veya taksimetre bulundurmayan araçlar trafikten men edilir.",
+      "Uyuşturucu veya uyarıcı madde etkisinde araç kullanan sürücü derhal araç kullanmaktan men edilir ve belgesi iptal edilir.",
+      "Alkol aç karnına daha etkilidir; refleksleri azaltır, karar verme sürecini yavaşlatır ve sinir sistemini etkiler."
     ]
   },
   {
@@ -216,7 +271,12 @@
       "Okul taşıtının arkasındaki altıgen 'DUR' ışığı yandığında arkadaki sürücünün durması zorunludur.",
       "Okul taşıtlarında camların sabit olması ve araçta rehber personel bulunması zorunludur.",
       "B sınıfı sürücü belgesiyle lastik tekerlekli traktör, minibüs ve kamyonet kullanılabilir.",
-      "Özel amaçlı taşıtlar arasında itfaiye, cankurtaran, cenaze aracı ve kütüphane aracı yer alır."
+      "Özel amaçlı taşıtlar arasında itfaiye, cankurtaran, cenaze aracı ve kütüphane aracı yer alır.",
+      "Yüklü ağırlığı 3500 kilogramı geçmeyen yük taşıtı kamyonet, 3500 kilogramı geçen yük taşıtı kamyondur.",
+      "Hafif römork, yüklü ağırlığı 750 kilogramı geçmeyen römorktur ve B sınıfı belgeyle çekilebilir.",
+      "Lastik tekerlekli traktör F sınıfı sürücü belgesiyle kullanılır; B sınıfı belge sahipleri de kullanabilir.",
+      "Oto kurtarıcı arızalı veya hasar görmüş araçları taşıyan araçtır; tanım olarak çekiciyle karıştırılmamalıdır.",
+      "B sınıfı sürücü belgesiyle 50 cc üzerindeki motosiklet kullanılamaz."
     ]
   },
   {
@@ -232,7 +292,11 @@
       "Ana yol ile tali yolun kesiştiği kavşakta kaza olursa kusurlu olan tali yoldaki araçtır.",
       "Demir yolu hemzemin geçidinde bariyerli olanlar kontrollü, bariyersiz olanlar kontrolsüz geçittir.",
       "Yolda çift çizgi varsa o kesimde sollama yasaktır; kesik çizgide şerit değiştirme yapılabilir.",
-      "Otoyolda U dönüşü yasaktır, mecburi hâller dışında durma ve park etme yapılamaz."
+      "Otoyolda U dönüşü yasaktır, mecburi hâller dışında durma ve park etme yapılamaz.",
+      "Otoyola yaya, bisiklet, at arabası ve traktör giremez.",
+      "Otoyolda asgari hız 40 km/s, azami hız devlet otoyollarında 130 km/s, özel otoyollarda 140 km/s'dir.",
+      "Duraklara 15 metre mesafede park etmek yasaktır.",
+      "Ters üçgen 'YOL VER' levhasının bulunduğu yol tali yoldur."
     ]
   },
   {
@@ -247,7 +311,12 @@
       "Radar cihazlarını tespit eden cihaz bulundurmak hem hapis hem para cezası gerektirir.",
       "12 tonu geçen kamyonlarda ve 10 tonu geçen otobüslerde hız sınırlandırıcı cihaz zorunludur.",
       "Bölünmüş yolda seyir hâlindeyken hız azaltmak zorunlu değildir.",
-      "Hızın azaltılması gereken yerler: kavşaklar, virajlar, tepe üstü, okul ve yaya geçitleri, tünel, köprü ve menfezlerdir."
+      "Hızın azaltılması gereken yerler: kavşaklar, virajlar, tepe üstü, okul ve yaya geçitleri, tünel, köprü ve menfezlerdir.",
+      "Otomobiller için hız sınırı devlet otoyollarında 130 km/s, özel (yap-işlet-devret) otoyollarda 140 km/s'dir.",
+      "Yerleşim yeri içinde çoğu araç için hız sınırı 50 km/s'dir.",
+      "Asgari hız şehirler arası kara yollarında 15 km/s, otoyollarda 40 km/s'dir.",
+      "Otoyollara motorlu bisiklet, lastik tekerlekli traktör ve iş makinesi giremez.",
+      "Römorklu araçlardaki 10 km/s düşük hız kuralı lastik tekerlekli traktörler için geçerli değildir."
     ]
   },
   {
@@ -262,7 +331,12 @@
       "Ters yöne girmek asli kusurdur ve cezası ağırdır.",
       "Dönüş için uygun şeride şehir içinde 30 metre, şehirler arası 150 metre önceden geçilmelidir.",
       "Sağa sola kavis çizerek gitmek yasaktır; şerit değiştirme yalnızca geçme, dönme, duraklama ve park etme için yapılır.",
-      "Şerit değiştirme yol çizgilerinin kesik olduğu yerde yapılabilir; çizgi sürekli ise yasaktır."
+      "Şerit değiştirme yol çizgilerinin kesik olduğu yerde yapılabilir; çizgi sürekli ise yasaktır.",
+      "Çok şeritli bazı yollarda sağ şerit kamyon ve ağır vasıtalar içindir; bu durum yolun girişinde levhayla bildirilir.",
+      "İki şeritli yollarda motosiklet, otomobil, kamyonet, minibüs ve otobüs dışındaki araçlar yolun en sağından gitmek zorundadır.",
+      "Aracın cinsine ve hızına uygun olmayan şeritten gitmek yasaktır.",
+      "Emniyet şeridi ambulans gibi zorunlu durumlarda kullanılabilir.",
+      "Trafiği aksatacak şekilde şerit değiştirmek hatalıdır."
     ]
   },
   {
@@ -278,7 +352,10 @@
       "Kontrolsüz eşdeğer kavşaklarda motorsuz araç sürücüleri motorlu araçlara yol verir.",
       "Tüm araçlar aynı statüde ve düz gidiyorsa soldaki sürücü sağındaki araca yol verir.",
       "Tali yoldan ana yola çıkan sürücü ana yoldaki araçlara yol verir.",
-      "Mülkten yola çıkan sürücü yolda seyreden araçlara öncelik tanımak zorundadır."
+      "Mülkten yola çıkan sürücü yolda seyreden araçlara öncelik tanımak zorundadır.",
+      "CİPS kuralı: C = Cankurtaran > İ = İtfaiye > P = Polis > S = Sivil savunma.",
+      "625 kuralı: Trafik görevlisi (6) > Işıklı işaret (2) > İşaret levhası (5) > Yer işaretleri > Genel kurallar.",
+      "Bağlantı yolundan veya tali yoldan ana yola çıkan sürücü, ana yoldaki araçları bekler."
     ]
   },
   {
@@ -293,7 +370,11 @@
       "Tali yoldan gelip durması gerekirken durmayan sürücü kazada %100 asli kusurlu kabul edilir.",
       "Sağa dönüşler dar bir kavisle en sağa yaklaşarak yapılır.",
       "Sola dönüşler geniş bir kavisle yapılır; 'girilmez' levhalı yola girmek yasaktır.",
-      "Ana yol levhası bulunan yol ana yoldur ve yol hakkı ana yoldaki araca aittir."
+      "Ana yol levhası bulunan yol ana yoldur ve yol hakkı ana yoldaki araca aittir.",
+      "'YOL VER' levhasının bulunduğu yer tali yoldur; mutlaka durma zorunluluğu yoktur, araç varsa durulur.",
+      "Kavşakta dönüş yapacak araçlar önce hızlarını azaltır; sağa dönüş sağ şeritte tamamlanır.",
+      "'U dönüşü yasağı' levhası bulunan noktada U dönüşü yapmak yasaktır.",
+      "Kavşak kazasında kusur önce levhalara bakılarak belirlenir; 'DUR' veya 'YOL VER' levhası bulunan yoldaki sürücü geçiş hakkını karşı tarafa bırakmak zorundadır."
     ]
   },
   {
@@ -309,7 +390,11 @@
       "Araç muayeneleri Ulaştırma ve Altyapı Bakanlığı'na bağlı muayene istasyonlarında yapılır.",
       "Plaka ve tescil belgesini noterler, sürücü belgesini nüfus müdürlükleri verir.",
       "Kültür ve Turizm Bakanlığı'nın trafikle ilgili herhangi bir görevi yoktur.",
-      "Yalnızca maddi hasarlı kazalarda taraflar kendi aralarında tutanak tutup yoluna devam edebilir."
+      "Yalnızca maddi hasarlı kazalarda taraflar kendi aralarında tutanak tutup yoluna devam edebilir.",
+      "Ölümlü veya yaralanmalı kazalarda emniyet mutlaka gelir ve araçlar yerinden oynatılmadan tutanak tutulur.",
+      "Kara yollarının yapımı, bakımı, onarımı ve hız sınırlarının belirlenip işaretlenmesi Karayolları Genel Müdürlüğü'nün görevidir.",
+      "Şehirler arası yollarda kışın tuzlama Karayolları'na, şehir içi yolların kar temizliği belediyeye aittir.",
+      "Trafik ışıklarının çalışmasını kontrol etmek ve ışık arızalandığında trafiği yönetmek Emniyet Genel Müdürlüğü'nün görevidir."
     ]
   },
   {
@@ -323,7 +408,11 @@
       "Işıklar levhalardan üstündür; çünkü ışıklar duruma göre değişen, anlık ve daha kesin bir yönlendirme sağlar.",
       "Levhalar yer çizgilerinden üstündür; çünkü yer çizgileri zamanla silinebilir veya karla kapanabilir.",
       "Sınav bu konuyu iki şekilde sorar: doğrudan sıralama istenir veya çelişen iki işaret verilip hangisine uyulacağı sorulur.",
-      "Bir levha ile yol çizgileri çelişiyorsa levhaya, işaret levhası ile trafik ışığı çelişiyorsa ışığa uyulur."
+      "Bir levha ile yol çizgileri çelişiyorsa levhaya, işaret levhası ile trafik ışığı çelişiyorsa ışığa uyulur.",
+      "Yolda trafiği düzenleyen 4 tür işaret vardır: trafik görevlisinin işaretleri, ışıklı ve sesli işaretler, trafik işaret levhaları ve yer çizgileri.",
+      "Öncelik sırası işaretin anlık karar verme ve güvenilirlik gücüne göre dizilmiştir; görevliden çizgilere inildikçe bu güç azalır.",
+      "İşaretler çoğu zaman uyumludur; kaza, arıza veya geçici düzenleme nedeniyle çeliştiğinde öncelik sırası devreye girer.",
+      "Işıklı ve sesli işaretler ifadesi trafik ışıklarını kapsar ve öncelik sırasında trafik görevlisinden hemen sonra gelir."
     ]
   },
   {
@@ -338,7 +427,11 @@
       "Duraklama isteğe bağlı ve en fazla 5 dakikalık kısa beklemedir; 5 dakikayı aşan bekleme park etme sayılır.",
       "Trafik kazası sayılabilmesi için 3 şart bir arada bulunmalıdır: olay kara yolunda olmalı, araç hareket hâlinde olmalı ve ölüm/yaralanma/zarar bulunmalıdır.",
       "Tarlada çalışan traktörün çukura düşmesi trafik kazası değil iş kazasıdır; olay kara yolu üzerinde gerçekleşmemiştir.",
-      "Trafikten men, aracın belgelerinin alınıp trafikten alıkonulmasıdır; en yaygın sebebi zorunlu trafik sigortasının yaptırılmamış olmasıdır."
+      "Trafikten men, aracın belgelerinin alınıp trafikten alıkonulmasıdır; en yaygın sebebi zorunlu trafik sigortasının yaptırılmamış olmasıdır.",
+      "Park etme, durma ve duraklama dışında kalan, aracın daha uzun süre bir yerde bırakılmasıdır.",
+      "Park hâlindeki aracın üzerine cisim düşmesi trafik kazası değildir; araç hareket hâlinde değildir ve orası kara yolu sayılmaz.",
+      "İş kazası ve ev kazası birer kaza çeşididir ancak trafik kazası kapsamına girmez.",
+      "Trafikten men edilen araç otoparka çekilir; ehliyetsiz araç kullanmak veya kırmızı ışıkta geçmek çoğunlukla para cezasıyla sonuçlanır ve men gerektirmez."
     ]
   },
   {
@@ -352,7 +445,12 @@
       "Fasılalı yanıp sönen sarı ışık 'YOL VER' levhasıyla aynı anlamdadır; yavaş ve dikkatli geçilir.",
       "Sürekli yanan kırmızı ışıkta beklenir; fasılalı kırmızıda durup kontrol ederek devam edilir.",
       "Oklu ışıklarda her hareket kendi yönüne ait ışığa göre değerlendirilir.",
-      "Işıkların olmadığı yerde levhalar devreye girer; levhaya uymayan sürücü kazada kusurlu sayılır."
+      "Işıkların olmadığı yerde levhalar devreye girer; levhaya uymayan sürücü kazada kusurlu sayılır.",
+      "Yaya ışıklarında 'dur' ve 'geç' anlamlı insan figürleri bulunur; figür olmasa da bu ışıklar yayalara aittir.",
+      "Düz gidiş için kırmızı yanarken sağa dönüş oku yeşilse düz gidecek araç durur, sağa dönecek araç geçebilir.",
+      "'DUR' levhasında mutlaka durup kontrol edilir; 'YOL VER' levhasında yavaşlayıp geçiş hakkı olan araçlara yol verilir.",
+      "Fasılalı yanıp sönen kırmızı ışık genellikle gece geç saatlerde veya sakin yollarda kullanılır.",
+      "Fasılalı yanıp sönen sarı ışık ikaz (uyarı) niteliğindedir; sarı ışık her zaman dikkatli olunmasını ister."
     ]
   },
   {
@@ -367,7 +465,13 @@
       "Hava yastığı pasif güvenlik sistemidir; ön koltukta oturan çocuk için tehlikelidir.",
       "Hava yastığı emniyet kemeri takılı değilse çalışmayabilir; ikisinin birlikte kullanılması gerekir.",
       "Emniyet kemeri kazayı önlemez; sürücünün araçtan fırlamasını ve araç içinde çarpmasını engeller.",
-      "Koltuk başlığı özellikle arkadan çarpma durumunda boyun zedelenmesini önler."
+      "Koltuk başlığı özellikle arkadan çarpma durumunda boyun zedelenmesini önler.",
+      "ABS, tekerleği saniyede yaklaşık 20 kez tutup bırakarak kilitlenmeyi önler.",
+      "BAS, ABS'nin gelişmiş hâlidir; panik frenlemeyi algılayıp azami fren basıncı uygulayarak fren mesafesini kısaltır.",
+      "ASR hız sensörleriyle çalışır, ABS ile ortak parçalar kullanır ve gereksiz patinajı önlediği için lastik aşınmasını azaltır.",
+      "ESP kuru, ıslak ve buzlu yolların hepsinde tekerleklere ayrı ayrı fren uygulayıp motor gücüne müdahale ederek savrulmayı önler.",
+      "Hava yastığının içinde yastığı çok kısa sürede şişiren nitrojen ya da argon gazı bulunur.",
+      "Darbe emici sistemler, çarpma enerjisini üzerine alan çelik alaşımlı kaporta ve şasi yapılarıdır; pasif güvenlik sistemidir."
     ]
   },
   {
@@ -382,7 +486,13 @@
       "Aynalar kör noktaları en aza indirmek için 90 derece açıyla ayarlanır.",
       "Ön ısıtma bujisi yalnızca dizel araçlarda bulunur; ikaz ışığının sönmesi beklenmelidir.",
       "Motor çalışırken mars yapılırsa mars dişlisi zarar görür.",
-      "Emniyet kemeri ve hava yastığı kazayı önlemez, kaza sonrası ölüm ve yaralanmayı azaltır."
+      "Emniyet kemeri ve hava yastığı kazayı önlemez, kaza sonrası ölüm ve yaralanmayı azaltır.",
+      "Lastikler günlük değil, araca her binildiğinde kontrol edilir; araca binmeden önce yapılacak kontrol lastik kontrolüdür.",
+      "Dış kontrolde lastiklerde patlak, hava ve bijon (vida) eksikliği; aracın altında yakıt sızıntısı ve yağ akıntısı aranır.",
+      "Kaput altındaki motor yağı, soğutma suyu ve hidrolik yağ seviyesi kontrolü her gün yapılmak zorunda değildir.",
+      "Güvenli sürüş için dik oturulur ve sırt koltuğa tam yaslanır; aksi hâlde virajlarda denge kaybı yaşanır.",
+      "Aracı çalıştırmadan önce el freni çekili olmalı ve vites boşa (otomatik viteste P konumuna) alınmalıdır.",
+      "İdeal marş süresi 10-15 saniyedir; araç ilk marşta çalışmazsa biraz beklenip yeniden marş yapılır."
     ]
   },
   {
@@ -397,7 +507,13 @@
       "Sulu aküde su azaldığında yalnızca saf su eklenir; asit veya çeşme suyu konulmaz.",
       "Regülatör bozulduğunda voltaj kontrol edilemez, ampuller patlar ve akü suyu sık azalır.",
       "Alternatör V kayışından güç alarak hareketi elektriğe çevirir, hem aracın ihtiyacını karşılar hem aküyü şarj eder.",
-      "Bujiler kurum bağlarsa motor tekleyerek çalışır, güçten düşer ve yakıt sarfiyatı artar."
+      "Bujiler kurum bağlarsa motor tekleyerek çalışır, güçten düşer ve yakıt sarfiyatı artar.",
+      "Ateşleme sisteminin görevi silindir içinde sıkıştırılmış yakıt-hava karışımını ateşlemektir.",
+      "Distribütör, endüksiyon bobininden gelen yüksek voltajı sırayla bujilere dağıtır.",
+      "Ateşleme sisteminin parçaları kontak, endüksiyon bobini, akü, distribütör ve bujidir.",
+      "Otomobil aküsü 12 volttur; kamyon ve otobüs gibi büyük araçlarda akü 24 volt olabilir.",
+      "Akü elektroliti saf su ile sülfürik asit karışımıdır; su, plakaların yaklaşık 1 cm üzerine kadar tamamlanır.",
+      "Elektrik tesisatında kısa devreden kaynaklanan yangında ilk iş akü kutup başlarını sökerek elektriği kesmektir."
     ]
   },
   {
@@ -412,7 +528,13 @@
       "Sinyal veya dörtlü flaşör yanmıyorsa flaşör arızalıdır; fren lambalarının hepsi yanmıyorsa fren müşürü arızalıdır.",
       "Kısa far simgesinde ışınlar aşağı eğik, uzun far simgesinde ışınlar düz yatay biçimde ileri gider.",
       "Sigorta aydınlatma sisteminin, fren müşürü ise ikaz sisteminin parçasıdır.",
-      "Tek ışık sönükse sorun ampulde, hepsi birden sönükse sorun ortak beslemede (sigorta veya müşür) aranmalıdır."
+      "Tek ışık sönükse sorun ampulde, hepsi birden sönükse sorun ortak beslemede (sigorta veya müşür) aranmalıdır.",
+      "Gösterge panelindeki lambaların görevi sürücüye motor ve araç sistemlerinin çalışması hakkında bilgi vermektir.",
+      "Radar veya trafik kontrolü olan yerde diğer sürücüleri uyarmak için selektör yapılmaz; bu suça yardım sayılabilir.",
+      "Kısa farlar önü 25 metre, uzun farlar 100 metre aydınlatır.",
+      "Kısa far açıkken gösterge panelinde yeşil, uzun far açıkken mavi ikaz ışığı yanar.",
+      "Bir far sönük yanıyorsa bağlantı noktalarında oksitlenme, paslanma veya gevşek kablo bağlantısı vardır.",
+      "Römork takıldığında arkadaki sinyal ve fren lambalarının görünmesi için elektrik kablo bağlantısı mutlaka yapılır."
     ]
   },
   {
@@ -427,7 +549,12 @@
       "Dört durumda kontak kapatılırken hararette kontak kapatılmaz; motor rölantide çalıştırılarak ısı dengesini bulması beklenir.",
       "Hararet yapan araçta soğutma suyu ve vantilatör kayışı kontrol edilmelidir.",
       "Motordan duman geldiğinde kontak kapatılıp akü kutup başları çıkarılarak elektrik kesilmelidir.",
-      "Anormal ses bir parçanın zarar görmeye başladığının habercisidir; erken durmak büyük hasarı önler."
+      "Anormal ses bir parçanın zarar görmeye başladığının habercisidir; erken durmak büyük hasarı önler.",
+      "Hararet göstergesi motor soğutma suyunun sıcaklığını gösterir; ibre kırmızı alana geldiyse motor aşırı ısınmıştır.",
+      "Hararette motor rölantide çalışmaya devam ederse su pompası ve soğutma sistemi çalışmayı sürdürür ve motor kontrollü soğur.",
+      "Motor sıcakken radyatör kapağı hemen açılmamalıdır.",
+      "Motordan duman çıkması ve yanık kokusu çoğunlukla kablo yanmasından, yani elektrik arızasından kaynaklanır.",
+      "Şarj lambası yanarken yola devam edilirse motor bir süre akünün enerjisiyle çalışır, akü boşalınca araç durur."
     ]
   },
   {
@@ -442,7 +569,11 @@
       "El freni tutmuyorsa el freni teli kopmuştur; hidrolik yağ akıyorsa fren patlamıştır.",
       "Disk veya kampana yüzeyinin bozulması fren pedalında titreşim hissedilmesine yol açar.",
       "Kamyon ve otobüs gibi büyük araçlarda havali fren, motor freni ve retarder bulunur.",
-      "Aks arızası bir fren arızası değildir; aks güç aktarma organlarına aittir."
+      "Aks arızası bir fren arızası değildir; aks güç aktarma organlarına aittir.",
+      "Durma mesafesi = algı mesafesi + tepki mesafesi + fren mesafesi; hız arttıkça fren mesafesi hızın karesiyle orantılı artar.",
+      "Lastik hava basıncı dengesiz ise frenleme anında araç savrulur.",
+      "Frene basıldığında ağırlık öne kayar ve önce ön tekerlekler durur; ancak ayak freni dört tekerleği birden durdurur.",
+      "Yol yüzeyinde su, buz veya kar olması fren mesafesini artıran faktörlerdendir."
     ]
   },
   {
@@ -458,7 +589,11 @@
       "Yakıt tasarrufu sağlamak diferansiyelin görevi değildir.",
       "Debriyaj teli koparsa araç vitese geçmez; balata aşınırsa debriyaj kaçırır.",
       "Seyir hâlinde ayağı sürekli debriyaj pedalında tutmak balatayı aşındırır.",
-      "Amortisör ve süspansiyon parçaları güç aktarma organı değildir."
+      "Amortisör ve süspansiyon parçaları güç aktarma organı değildir.",
+      "Güç akış sırası: Motor → Volan → Debriyaj → Vites Kutusu → Şaft → Diferansiyel → Aks → Tekerlekler.",
+      "Araca geri hareket yeteneği kazandıran organ = vites kutusu.",
+      "Şafttan aldığı hareketi aksa ileten organ = diferansiyel.",
+      "Diferansiyelden aldığı hareketi tekerleklere ileten organ = aks."
     ]
   },
   {
@@ -473,7 +608,13 @@
       "Rot ayarı bozuksa tek taraflı aşınma, balans ayarı bozuksa direksiyonda titreme görülür.",
       "Kış lastiği kar, buz ve yaklaşık 7 derecenin altındaki soğuk havalar için tasarlanmıştır.",
       "Aynı akstaki lastikler aynı özellikte olmalıdır; farklı tip lastik yol tutuşunu bozar.",
-      "Çatlamış veya üretim tarihi çok eski lastikler diş derinliği yeterli görünse bile değiştirilmelidir."
+      "Çatlamış veya üretim tarihi çok eski lastikler diş derinliği yeterli görünse bile değiştirilmelidir.",
+      "Otomobillerde lastik diş derinliği yasal olarak en az 1,6 mm olmalıdır; altına düşen araç muayeneden geçemez.",
+      "Otobüs ve kamyon gibi büyük araçlarda asgari lastik diş derinliği genellikle 4 mm'dir.",
+      "Lastik diş derinliği azaldıkça frenleme mesafesi uzar.",
+      "Yüksek basınçlı lastikte yol ile temas alanı azalır, sürüş sertleşir ve yol tutuşu düşer.",
+      "Lastikler mevsime göre yaz, kış ve dört mevsim olmak üzere üçe ayrılır; yaz lastiği düşük sıcaklıkta sertleşir.",
+      "Yedek lastik (stepne) düzenli kontrol edilmeli; lastikler eşit aşınsın diye rotasyonla yer değiştirilebilir."
     ]
   },
   {
@@ -488,7 +629,13 @@
       "Hibrit araçlarda hem sıvı yakıt hem elektrik sistemi bir arada bulunur; pil ayrıca şarj gerektirmeden araç hareket ettikçe dolar.",
       "Dört zamanlı motorun çalışma sıralaması: 1-Emme, 2-Sıkıştırma, 3-Ateşleme, 4-Egzoz.",
       "Dizel araçta depodaki yakıt biterse araç hava yapar ve motor çalışmaz.",
-      "LPG'li araçlar patlama riski nedeniyle kapalı otoparklara alınmaz."
+      "LPG'li araçlar patlama riski nedeniyle kapalı otoparklara alınmaz.",
+      "Motorlar enerji türüne göre benzinli, dizel, hibrit ve elektrikli olmak üzere dörde ayrılır.",
+      "Elektrikli araçlarda sıvı yakıt yoktur; hibrit araçlarda ise sıvı yakıt bulunur.",
+      "Motorlar zamanına göre iki zamanlı (motosiklet) ve dört zamanlı (otomobil) olarak ikiye ayrılır.",
+      "Emme zamanında benzinli motorda yakıt ve hava birlikte, dizel motorda yalnızca hava emilir; yanmış gazlar egzoz zamanında atılır.",
+      "Hava soğutmalı motora motosiklet, su soğutmalı motora otomobil örnektir.",
+      "Hava filtresi kirliyse motor zengin karışımla çalışır; bujilerin kurum bağlaması benzinli motorda normal yanmayı bozar."
     ]
   },
   {
@@ -502,7 +649,13 @@
       "Balans ayarı bozuksa belirli bir hızdan sonra direksiyonda titreme hissedilir.",
       "Rot ayarı bozuksa ön lastikler içten ve dıştan düzensiz aşınır.",
       "Rot-balans ayarı yılda en az 1 kez veya yaklaşık 15.000 km'de bir yaptırılmalıdır.",
-      "Direksiyonun zor dönmesinin sebepleri dişli yağının azalması ve lastik basıncının düşük olmasıdır."
+      "Direksiyonun zor dönmesinin sebepleri dişli yağının azalması ve lastik basıncının düşük olmasıdır.",
+      "Direksiyon, aracı sürücünün istediği yöne sevk eden sistemdir.",
+      "En güvenli direksiyon tutuşu 9-15 pozisyonudur; bu konumda kulakçıklara kolay ulaşılır ve hava yastığı en verimli açılır.",
+      "Direksiyon hareketi sırasıyla direksiyon simidinden kutuya, kutudan rot ve rot başlarına, oradan ön tekerleklere iletilir.",
+      "Direksiyon kutusundaki yağ azaldığında dişli yağı ile tamamlanır.",
+      "Rot ayarı bozuk araç düzgün bir istikamette gitmez, sürekli bir yöne kaymaya çalışır.",
+      "Lastikler yeterince şişik değilse yol ile temas eden yüzey büyür ve direksiyonu çevirmek zorlaşır."
     ]
   },
   {
@@ -516,7 +669,12 @@
       "N (Nötr) konumu vitesin boşta olduğu anlamına gelir.",
       "D (Drive) konumu ileri yönlü normal sürüşte en çok kullanılan konumdur.",
       "L konumu düşük deviri ifade eder ve özellikle dik yokuşlarda kullanılır.",
-      "Manuel viteste vites geçişlerini sürücü kendi eliyle yaparken, otomatik viteste araç bunu kendiliğinden ayarlar."
+      "Manuel viteste vites geçişlerini sürücü kendi eliyle yaparken, otomatik viteste araç bunu kendiliğinden ayarlar.",
+      "Otomatik vitese otomatik şanzıman da denir; günümüzde binek araçların çoğu otomatik vitesli üretilmektedir.",
+      "Otomatik vites, vitesin kendiliğinden geçtiği ya da düştüğü vites türü olarak tanımlanır.",
+      "Otomatik vites, belli bir motor devri için tekerleklerin devir hızını dişliler aracılığıyla kademeli olarak yükseltir ya da alçaltır.",
+      "Bazı araçlarda düşük devir konumu L yerine M harfiyle gösterilir.",
+      "Otomatik vites kolundaki harfler P, R, N, D ve L'dir; harfler araçtan araca çok az değişebilir."
     ]
   },
   {
@@ -531,7 +689,12 @@
       "V kayışının koptuğu ilk önce şarj göstergesinden anlaşılır.",
       "Mars motoru motora ilk hareketi verir; 15 saniyeyi geçen mars hem aküye hem mars motoruna zarar verir.",
       "Sigorta devreden geçen akım yükseldiğinde eriyerek devreyi keser.",
-      "Distribütör şarj değil ateşleme sisteminin parçasıdır."
+      "Distribütör şarj değil ateşleme sisteminin parçasıdır.",
+      "Şarj sisteminin parçaları alternatör, regülatör, şarj müşürü, şarj göstergesi, akü, sigorta ve marş motorudur.",
+      "Şarj göstergesi hareket hâlinde kırmızı yanarsa araç derhal durdurulup kontak kapatılır; devam edilirse akü boşalır.",
+      "Şarj lambasının kırmızı yanma sebepleri: şarj müşürü kısa devresi, V kayışının kopması veya gevşemesi, alternatör-regülatör arızası ve gevşek kablolar.",
+      "Marş motoru dönmüyorsa akü boşalmış olabilir; marş motorunu döndüren elektriği akü sağlar.",
+      "Akü, araç çalışmadığında elektriği sağlayan ve marş anında marş motorunu döndüren enerji deposudur; araç çalışınca alternatör tarafından şarj edilir."
     ]
   },
   {
@@ -546,7 +709,13 @@
       "Radyatördeki su peteklerin yaklaşık 1 cm üzerinde ve kireçsiz olmalıdır.",
       "Antifriz hem suyun donmasını önler hem pas ve kireç oluşumunu engeller; yıl boyu kullanılır.",
       "Sıcak motora soğuk su eklenirse radyatör kapağı ve silindir bloğu çatlar.",
-      "V kayışı koptuğunda pompa ve fan dönmez, soğutma durur ve araç hararet yapar."
+      "V kayışı koptuğunda pompa ve fan dönmez, soğutma durur ve araç hararet yapar.",
+      "Motorun çalışma sıcaklığı pratikte 70-90 derece aralığında sabit kalır.",
+      "Hava soğutmalı motorlarda silindir üzerindeki hava kanatları (soğutma kanatçıkları) ısıyı doğrudan havaya verir.",
+      "Radyatör soğutma suyuna depoluk eder, vantilatör radyatöre hava üfleyerek suyu soğutur, devirdaim pompası suyu basınçlı dolaştırır.",
+      "V kayışı krank kasnağından aldığı hareketi vantilatöre ve devirdaim pompasına iletir.",
+      "Hararet yapan araç hemen stop ettirilmez; rölantide çalıştırılıp soğuduktan sonra ılık ve kireçsiz su yavaşça eklenir.",
+      "Hararet sebepleri: V kayışının kopması, radyatör peteklerinin tıkanması, kireç, silindir kapağı çatlağı, termostat veya fan arızası ve soğutma suyunun azalması."
     ]
   },
   {
@@ -561,7 +730,12 @@
       "Çukura veya kasise sert ve hızlı girmek amortisörleri patlatabilir ve direksiyon hakimiyetini kaybettirebilir.",
       "Diferansiyel süspansiyon parçası değil güç aktarma organıdır.",
       "Yayların salınım süresini kısaltan parça amortisördür.",
-      "Aks güç aktarma organlarının son halkasıdır ve süspansiyon parçası değildir."
+      "Aks güç aktarma organlarının son halkasıdır ve süspansiyon parçası değildir.",
+      "Süspansiyon sistemi hem sürüş konforunu hem de sürüş güvenliğini sağlar.",
+      "Aks, tekerlek ile diferansiyel arasındaki parçadır ve aracın gücünü tekerleğe iletmede rol oynar.",
+      "Çukura veya kasise sert girildiğinde amortisörlerin yanı sıra aks ve motor aksamı da hasar görebilir.",
+      "Bozuk yol kesimlerine, kasislere ve çukurlara hız düşürülerek yavaşça girilmelidir.",
+      "Yayların salınım süresini kısaltan parça rot, rotil veya şaft değil amortisördür."
     ]
   },
   {
@@ -576,7 +750,13 @@
       "Motor yağı seviyesi düz zeminde, motor durduktan yaklaşık 45 dakika sonra yağ çubuğuyla ölçülmelidir.",
       "Gereğinden fazla yağ konulursa basınç artar ve conta ile keçelerden sızıntı oluşur.",
       "Motor yağı külbütör (subap) kapağından konulur.",
-      "Silindirler aşınıp motor yağ yakmaya başladığında egzozdan mavi renkli duman çıkar."
+      "Silindirler aşınıp motor yağ yakmaya başladığında egzozdan mavi renkli duman çıkar.",
+      "Yağ soğutmaya yalnızca yardımcı olur; motoru asıl soğutan su soğutma sistemidir.",
+      "Yağ çubuğu yağ seviyesini ölçer; yağ müşürü yağ basıncını algılar, yağ göstergesi sürücüyü bilgilendirir.",
+      "Yağ lambasının yanma sebepleri yağın azalması, sızıntı, yağ müşürü arızası veya yağ pompası arızasıdır.",
+      "Kontak açıldığında yağ göstergesi hiç yanmıyorsa arıza yağ lambasının ampulünde olabilir.",
+      "Yağ filtresi genellikle 10.000-15.000 km'de değiştirilir; bir otomobil ortalama 4 litre yağ alır.",
+      "Yağ seviyesi her gün kontrol edilir ve yağ çubuğundaki asgari-azami çizgileri arasında olmalıdır."
     ]
   },
   {
@@ -591,7 +771,12 @@
       "Stresin etkisini azaltmak için yola çıkmadan önce yeterli zaman ayırmak gerekir.",
       "Dikkati dağıtan en önemli 3 etken telefon kullanımı, yorgunluk ve uykusuzluktur.",
       "Direksiyon başında telefon kullanmak hem gözü hem zihni yoldan uzaklaştırır.",
-      "Öfkeli sürücü davranışları yalnızca kendisini değil diğer sürücülerin de dikkatini dağıtır ve paniğe yol açar."
+      "Öfkeli sürücü davranışları yalnızca kendisini değil diğer sürücülerin de dikkatini dağıtır ve paniğe yol açar.",
+      "Öfke kontrol edilebilen bir duygudur; öfkeyi araca yansıtmamak gerekir.",
+      "Karşı tarafın hatasını kişisel bir saldırı olarak algılamamak ve empati kurmak öfkeyi yatıştırır.",
+      "Trafikte stresi oluşturan etkenler yoğunluk, gecikme korkusu ve acele etme isteğidir.",
+      "'Geç kalmaktansa güvenli varmak daha önemlidir' anlayışı stresin olumsuz etkilerini azaltır.",
+      "Yorgun ve uykusuz sürüş refleksleri zayıflatır ve tepki süresini uzatır."
     ]
   },
   {
@@ -606,7 +791,12 @@
       "Okul çevresinde hızı düşürmek ve engellilerin hareketine dikkat etmek sürücünün sorumluluğudur.",
       "Sorumlu sürücü gereksiz korna çalarak gürültüye ve bakımsız araçla egzoz kirliliğine yol açmaktan kaçınır.",
       "Bireysel sorumluluk kendi davranışının sonuçlarını üstlenmek, toplumsal sorumluluk çevreye iyi örnek olmaktır.",
-      "Her bireyin sorumlu davranışı toplumda daha güvenli bir trafik ortamı oluşturur; trafik kültürü bireysel davranışların toplamıdır."
+      "Her bireyin sorumlu davranışı toplumda daha güvenli bir trafik ortamı oluşturur; trafik kültürü bireysel davranışların toplamıdır.",
+      "Kural ihlalinin sonucu yalnızca maddi ceza değildir; sürücü kendisinin ya da sevdiklerinin canını da tehlikeye atar.",
+      "Sorumlu sürücü trafikteki bütün kuralların bir nedeni olduğunu bilir ve bu nedenleri öğrenmeye çalışır.",
+      "Trafik kazaları ölüm, yaralanma ve maddi zararla sonuçlanabilen ağır olaylardır.",
+      "Trafikte en korunmasız yol kullanıcıları yayalardır; sürücünün öncelikli sorumluluğu onların güvenliğini gözetmektir.",
+      "Yaya geçidinde yayaya öncelik vermek ve yerleşim yerlerinde hızı düşürmek sorumlu sürücü davranışıdır."
     ]
   },
   {
@@ -621,7 +811,12 @@
       "Feragat ve diğerkâmlık benmerkezciliğin karşıtıdır ve trafiği herkes için daha güvenli kılar.",
       "Yardımlaşma, kaza veya arıza durumunda başkalarına yardım eli uzatmaktır.",
       "Sorumluluk, davranışların sonuçlarını önceden düşünerek hareket etmek ve sonuçları üstlenmektir.",
-      "Trafik adabının temelindeki 8 değer: sabır, hoşgörü, saygı, nezaket, feragat, diğerkâmlık, yardımlaşma ve sorumluluktur."
+      "Trafik adabının temelindeki 8 değer: sabır, hoşgörü, saygı, nezaket, feragat, diğerkâmlık, yardımlaşma ve sorumluluktur.",
+      "Nezaket, trafikte inceliği elden bırakmamaktır; yol verene teşekkür etmek ve gereksiz korna çalmamak nezaket örnekleridir.",
+      "Kendini geçmekte olan araca yavaşlayarak kolaylık sağlamak trafikte feragat değerinin örneğidir.",
+      "Diğerkâmlık (özgecilik), kendi çıkarından önce başkalarının iyiliğini düşünmektir.",
+      "İlk yardım yapmak ve yol kenarında kalan bir aracın güvenliğini sağlamak yardımlaşma örnekleridir.",
+      "Sorumluluk sahibi sürücü, yaptığı her hareketin kendisini ve çevresindekileri etkileyebileceğinin farkındadır."
     ]
   },
   {
@@ -636,7 +831,12 @@
       "Trafik kazalarının büyük çoğunluğunun sebebi yol, araç veya hava koşulları değil insan faktörüdür.",
       "Trafik kültürü bir toplumun trafikte sergilediği ortak davranış biçimlerinin bütünüdür.",
       "İyi bir sürücü hem kurallara hem de trafik adabına uyar; yalnızca birine uymak yeterli değildir.",
-      "Trafik adabı eğitiminin temel amacı kazaların arkasındaki insan faktörünü olumlu yönde geliştirmektir."
+      "Trafik adabı eğitiminin temel amacı kazaların arkasındaki insan faktörünü olumlu yönde geliştirmektir.",
+      "Trafikteki davranışlar sürücünün sahip olduğu değerlerin bir yansımasıdır; adap ezberlenen kurallardan çok içselleştirilen değerlerle ilgilidir.",
+      "Saygı değerine sahip sürücü yayaya karşı olumlu tutum geliştirir ve ona yol vererek bunu davranışa döker.",
+      "Dikkatsizlik, öfke, acelecilik, kural tanımama ve saygısızlık kazaların temelinde yer alan insan davranışlarıdır.",
+      "Güvenli trafik yalnızca iyi yollar ve sağlam araçlarla değil, öncelikle bilinçli ve adaplı sürücülerle sağlanır.",
+      "Sürücü, yaya ve yolcuların birbirine gösterdiği saygı, sabır ve yardımlaşma trafik kültürünün göstergesidir."
     ]
   },
   {
@@ -651,7 +851,12 @@
       "Göz teması özellikle yayalarla kurulan iletişimde en etkili yöntemdir.",
       "Empati kendini karşıdaki sürücünün yerine koyabilmektir ve trafikte gerginliği azaltır.",
       "İletişimi engelleyen 3 tutum: dinlerken değerlendirme eğilimi, karşıdakini sevmeyince kapanma, tek olayla yargılama.",
-      "Karşı tarafın niyetini doğru okumak ani tehlikelerin önüne geçer; sürücü kendi niyetini de açıkça belli etmelidir."
+      "Karşı tarafın niyetini doğru okumak ani tehlikelerin önüne geçer; sürücü kendi niyetini de açıkça belli etmelidir.",
+      "Farlar gece görüşü sağlamanın yanında selektörle karşı tarafı uyarmaya da yarar.",
+      "El-kol işaretleri ve göz teması trafikte doğrudan ve kişisel iletişim biçimleridir.",
+      "Yayanın karşıya geçmek isteyip istemediği çoğu zaman göz teması ve beden dilinden anlaşılır.",
+      "Empati kuran sürücü acele eden birine yol verir ve hata yapan birini hoşgörüyle karşılar.",
+      "Başarılı iletişim için sürücü insanların değişebileceğine inanmalı ve karşısındakini önyargısız dinlemelidir."
     ]
   }
 ]

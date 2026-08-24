@@ -1,9 +1,54 @@
 # -*- coding: utf-8 -*-
 # Hap Bilgiler sayfalarını üretir ve 6 public sayfanın footer'ını sütunlu yapıya çevirir.
 # Tek seferlik üretim scripti; içerik questions-1.js + questions-2.js analizinden.
-import os, sys
+import os, sys, re, unicodedata
 
 KOK = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# ------------------------------------------------------------- hap slug ----
+# Her hap bilginin kendi sayfası var: /hap-bilgiler/{kategori}/{slug}/
+# Slug burada üretilir; tools/hap-sayfa-uret.py da aynı fonksiyonu kullanır,
+# böylece kategori sayfasındaki link ile üretilen sayfa yolu ayrışamaz.
+
+_TR_MAP = str.maketrans({
+    "ş": "s", "Ş": "s", "ç": "c", "Ç": "c", "ğ": "g", "Ğ": "g",
+    "ı": "i", "İ": "i", "ö": "o", "Ö": "o", "ü": "u", "Ü": "u",
+})
+
+def duz_metin(html_metin):
+    """Hap bilgideki <b> gibi etiketleri atar."""
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", html_metin)).strip()
+
+def slugify(text, max_len=60):
+    """Türkçe uyumlu kebab-case slug (soru-sayfa-uret.py ile aynı kural)."""
+    s = text.translate(_TR_MAP).lower()
+    s = unicodedata.normalize("NFKD", s)
+    s = re.sub(r"[^\w\s-]", "", s)
+    s = re.sub(r"[\s_]+", "-", s.strip())
+    s = re.sub(r"-{2,}", "-", s)
+    s = s.strip("-")
+    if len(s) > max_len:
+        s = s[:max_len]
+        last_dash = s.rfind("-")
+        if last_dash > max_len // 2:
+            s = s[:last_dash]
+    return s
+
+def hap_listesi(d):
+    """Bir dersin hap bilgilerini sırayla döndürür: (sira, grup, html, duz, slug).
+    Slug çakışmalarında -2, -3 eki eklenir (deterministik)."""
+    sonuc, kullanilan, sira = [], set(), 0
+    for grup_ad, bilgiler in d["gruplar"]:
+        for b in bilgiler:
+            sira += 1
+            duz = duz_metin(b)
+            slug = taban = slugify(duz) or f"hap-{sira:02d}"
+            n = 2
+            while slug in kullanilan:
+                slug = f"{taban}-{n}"; n += 1
+            kullanilan.add(slug)
+            sonuc.append((sira, grup_ad, b, duz, slug))
+    return sonuc
 
 # ---------------------------------------------------------------- içerik ----
 
@@ -495,6 +540,11 @@ DERS_CSS = """
   .hap{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;padding:18px 20px;background:#fff;font-size:15px;line-height:1.62}
   .hap b{font-weight:600}
   .hap-num{font-family:'Geist Mono',monospace;font-size:12.5px;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:6px 9px;flex-shrink:0}
+  a.hap-num{text-decoration:none;transition:.12s}
+  a.hap-num:hover{color:var(--fg);border-color:#c8c8c8;background:#fafafa}
+  .hap-detay{margin-left:auto;align-self:center;flex-shrink:0;font-size:13px;color:var(--muted);text-decoration:none;white-space:nowrap}
+  .hap-detay:hover{color:var(--fg);text-decoration:underline}
+  @media(max-width:640px){.hap{flex-wrap:wrap}.hap-detay{margin-left:0;width:100%;padding-left:0}}
 
   .cta{max-width:1100px;margin:0 auto;padding:48px 28px 96px}
   .cta-inner{border:1px solid var(--line);border-radius:24px;background:#fafafa;padding:52px 32px;text-align:center}
@@ -506,12 +556,14 @@ DERS_CSS = """
 
 def ders_sayfasi(d):
     adet = sum(len(f) for _, f in d["gruplar"])
-    parcalar, sira = [], 0
+    parcalar = []
+    haplar = iter(hap_listesi(d))
     for grup_ad, bilgiler in d["gruplar"]:
         maddeler = []
-        for b in bilgiler:
-            sira += 1
-            maddeler.append(f"""        <div class="hap"><span class="hap-num">{sira:02d}</span><span>{b}</span></div>""")
+        for _ in bilgiler:
+            sira, _g, b, _duz, slug = next(haplar)
+            # Numara, hap bilginin kendi sayfasına link (tools/hap-sayfa-uret.py üretir).
+            maddeler.append(f"""        <div class="hap"><a class="hap-num" href="/hap-bilgiler/{d['slug']}/{slug}/" aria-label="Hap bilgi {sira:02d} sayfası">{sira:02d}</a><span>{b}</span><a class="hap-detay" href="/hap-bilgiler/{d['slug']}/{slug}/">Detay &rarr;</a></div>""")
         maddeler_html = "\n".join(maddeler)
         parcalar.append(f"""      <section class="grup">
         <h2>{grup_ad}</h2>

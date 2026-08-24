@@ -101,6 +101,11 @@
   .hap{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;padding:18px 20px;background:#fff;font-size:15px;line-height:1.62}
   .hap b{font-weight:600}
   .hap-num{font-family:'Geist Mono',monospace;font-size:12.5px;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:6px 9px;flex-shrink:0}
+  a.hap-num{text-decoration:none;transition:.12s}
+  a.hap-num:hover{color:var(--fg);border-color:#c8c8c8;background:#fafafa}
+  .hap-detay{margin-left:auto;align-self:center;flex-shrink:0;font-size:13px;color:var(--muted);text-decoration:none;white-space:nowrap}
+  .hap-detay:hover{color:var(--fg);text-decoration:underline}
+  @media(max-width:640px){.hap{flex-wrap:wrap}.hap-detay{margin-left:0;width:100%;padding-left:0}}
 
   .cta{max-width:1100px;margin:0 auto;padding:48px 28px 96px}
   .cta-inner{border:1px solid var(--line);border-radius:24px;background:#fafafa;padding:52px 32px;text-align:center}
@@ -155,7 +160,8 @@
           "trafik adabı"
         ],
         "sameAs": [
-          "https://github.com/merlhn/ehliyet"
+          "https://github.com/merlhn/ehliyet",
+          "https://mcpmarket.com/server/ehliyet-digital"
         ]
       }
     },
@@ -211,35 +217,35 @@
       <section class="grup">
         <h2>Gösterge paneli ikazları</h2>
         <div class="hap-list">
-        <div class="hap"><span class="hap-num">01</span><span><b>ABS uyarı ışığı</b>, <b>fren sisteminde</b> arıza olduğunu bildirir.</span></div>
-        <div class="hap"><span class="hap-num">02</span><span>Motor yağlama yapmadığında <b>kırmızı yağdanlık (yağ) lambası</b> yanar.</span></div>
-        <div class="hap"><span class="hap-num">03</span><span><b>Şarj</b> ve <b>yağ basıncı</b> lambaları yanarsa araç kurallara uygun şekilde <b>derhal durdurulur ve kontak kapatılır</b>. ABS ışığı bu grupta değildir.</span></div>
-        <div class="hap"><span class="hap-num">04</span><span>Lastik basıncı (TPMS) ikazı; basınç azaldığında, lastik patladığında ve sensör arızalandığında yanar — <b>lastik ısındığında yanmaz</b>.</span></div>
-        <div class="hap"><span class="hap-num">05</span><span>Cam yıkama suyu ikazı yandığında <b>silecek suyu deposuna su eklenir</b>.</span></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/arac-teknigi/abs-uyari-isigi-fren-sisteminde-ariza-oldugunu-bildirir/" aria-label="Hap bilgi 01 sayfası">01</a><span><b>ABS uyarı ışığı</b>, <b>fren sisteminde</b> arıza olduğunu bildirir.</span><a class="hap-detay" href="/hap-bilgiler/arac-teknigi/abs-uyari-isigi-fren-sisteminde-ariza-oldugunu-bildirir/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/arac-teknigi/motor-yaglama-yapmadiginda-kirmizi-yagdanlik-yag-lambasi/" aria-label="Hap bilgi 02 sayfası">02</a><span>Motor yağlama yapmadığında <b>kırmızı yağdanlık (yağ) lambası</b> yanar.</span><a class="hap-detay" href="/hap-bilgiler/arac-teknigi/motor-yaglama-yapmadiginda-kirmizi-yagdanlik-yag-lambasi/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/arac-teknigi/sarj-ve-yag-basinci-lambalari-yanarsa-arac-kurallara-uygun/" aria-label="Hap bilgi 03 sayfası">03</a><span><b>Şarj</b> ve <b>yağ basıncı</b> lambaları yanarsa araç kurallara uygun şekilde <b>derhal durdurulur ve kontak kapatılır</b>. ABS ışığı bu grupta değildir.</span><a class="hap-detay" href="/hap-bilgiler/arac-teknigi/sarj-ve-yag-basinci-lambalari-yanarsa-arac-kurallara-uygun/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/arac-teknigi/lastik-basinci-tpms-ikazi-basinc-azaldiginda-lastik/" aria-label="Hap bilgi 04 sayfası">04</a><span>Lastik basıncı (TPMS) ikazı; basınç azaldığında, lastik patladığında ve sensör arızalandığında yanar — <b>lastik ısındığında yanmaz</b>.</span><a class="hap-detay" href="/hap-bilgiler/arac-teknigi/lastik-basinci-tpms-ikazi-basinc-azaldiginda-lastik/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/arac-teknigi/cam-yikama-suyu-ikazi-yandiginda-silecek-suyu-deposuna-su/" aria-label="Hap bilgi 05 sayfası">05</a><span>Cam yıkama suyu ikazı yandığında <b>silecek suyu deposuna su eklenir</b>.</span><a class="hap-detay" href="/hap-bilgiler/arac-teknigi/cam-yikama-suyu-ikazi-yandiginda-silecek-suyu-deposuna-su/">Detay &rarr;</a></div>
         </div>
       </section>
 
       <section class="grup">
         <h2>Motor ve sistemler</h2>
         <div class="hap-list">
-        <div class="hap"><span class="hap-num">06</span><span>Motor soğutma sisteminin elemanları: <b>radyatör, su pompası ve termostat</b>. Balata fren sistemi elemanıdır.</span></div>
-        <div class="hap"><span class="hap-num">07</span><span>Motorun <b>hararet</b> yapma sebepleri: termostat arızası, devirdaim (su) hortumunun yırtılması, vantilatör kayışının gevşemesi. Antifriz seviyesinin düşük olması hararet sebebi sayılmaz.</span></div>
-        <div class="hap"><span class="hap-num">08</span><span><b>Silindir kapak contası</b> işlevini kaybederse motorun içine <b>su sızar</b>.</span></div>
-        <div class="hap"><span class="hap-num">09</span><span><b>V kayışı</b> düzgün çalışmazsa <b>şarj ikaz lambası</b> yanar.</span></div>
-        <div class="hap"><span class="hap-num">10</span><span>Motor yağı kontrol sırası: <b>düz zeminde dur, kaputu aç → çubuğu çekip temizle → tekrar daldırıp çek → seviyenin max–min arasında olduğunu gör</b>.</span></div>
-        <div class="hap"><span class="hap-num">11</span><span>Dizel araca yanlışlıkla benzin konursa <b>yakıt deposu boşaltılır</b>; araç bu yakıtla kullanılmaz.</span></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/arac-teknigi/motor-sogutma-sisteminin-elemanlari-radyator-su-pompasi-ve/" aria-label="Hap bilgi 06 sayfası">06</a><span>Motor soğutma sisteminin elemanları: <b>radyatör, su pompası ve termostat</b>. Balata fren sistemi elemanıdır.</span><a class="hap-detay" href="/hap-bilgiler/arac-teknigi/motor-sogutma-sisteminin-elemanlari-radyator-su-pompasi-ve/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/arac-teknigi/motorun-hararet-yapma-sebepleri-termostat-arizasi-devirdaim/" aria-label="Hap bilgi 07 sayfası">07</a><span>Motorun <b>hararet</b> yapma sebepleri: termostat arızası, devirdaim (su) hortumunun yırtılması, vantilatör kayışının gevşemesi. Antifriz seviyesinin düşük olması hararet sebebi sayılmaz.</span><a class="hap-detay" href="/hap-bilgiler/arac-teknigi/motorun-hararet-yapma-sebepleri-termostat-arizasi-devirdaim/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/arac-teknigi/silindir-kapak-contasi-islevini-kaybederse-motorun-icine-su/" aria-label="Hap bilgi 08 sayfası">08</a><span><b>Silindir kapak contası</b> işlevini kaybederse motorun içine <b>su sızar</b>.</span><a class="hap-detay" href="/hap-bilgiler/arac-teknigi/silindir-kapak-contasi-islevini-kaybederse-motorun-icine-su/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/arac-teknigi/v-kayisi-duzgun-calismazsa-sarj-ikaz-lambasi-yanar/" aria-label="Hap bilgi 09 sayfası">09</a><span><b>V kayışı</b> düzgün çalışmazsa <b>şarj ikaz lambası</b> yanar.</span><a class="hap-detay" href="/hap-bilgiler/arac-teknigi/v-kayisi-duzgun-calismazsa-sarj-ikaz-lambasi-yanar/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/arac-teknigi/motor-yagi-kontrol-sirasi-duz-zeminde-dur-kaputu-ac-cubugu/" aria-label="Hap bilgi 10 sayfası">10</a><span>Motor yağı kontrol sırası: <b>düz zeminde dur, kaputu aç → çubuğu çekip temizle → tekrar daldırıp çek → seviyenin max–min arasında olduğunu gör</b>.</span><a class="hap-detay" href="/hap-bilgiler/arac-teknigi/motor-yagi-kontrol-sirasi-duz-zeminde-dur-kaputu-ac-cubugu/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/arac-teknigi/dizel-araca-yanlislikla-benzin-konursa-yakit-deposu/" aria-label="Hap bilgi 11 sayfası">11</a><span>Dizel araca yanlışlıkla benzin konursa <b>yakıt deposu boşaltılır</b>; araç bu yakıtla kullanılmaz.</span><a class="hap-detay" href="/hap-bilgiler/arac-teknigi/dizel-araca-yanlislikla-benzin-konursa-yakit-deposu/">Detay &rarr;</a></div>
         </div>
       </section>
 
       <section class="grup">
         <h2>Bakım ve kullanım</h2>
         <div class="hap-list">
-        <div class="hap"><span class="hap-num">12</span><span>Muayene süresi dolmasa bile aracın <b>özel teknik muayenesi, trafik zabıtasının gerekli görmesi</b> hâlinde zorunludur.</span></div>
-        <div class="hap"><span class="hap-num">13</span><span>Araç çok uzun süre kullanılmazsa <b>akü şarjı azalır</b> ve <b>motor yağı özelliğini kaybeder</b>. Fren balataları kullanılmayan araçta azalmaz.</span></div>
-        <div class="hap"><span class="hap-num">14</span><span><b>Antifriz yoğunluğu ölçümü</b> servis ya da tamir atölyesinin işidir; silecek, lastik basıncı ve yağ seviyesi kontrolünü sürücü kendisi yapar.</span></div>
-        <div class="hap"><span class="hap-num">15</span><span>Sürüşe başlamadan önce <b>koltuk ve ayna ayarı</b>, sürüş konforu ve <b>güvenliği</b> için yapılır.</span></div>
-        <div class="hap"><span class="hap-num">16</span><span>Yakıt tüketimini azaltır: ani duruş-kalkıştan kaçınmak, tavsiye edilen lastikleri kullanmak, bakımları zamanında yaptırmak. Artırır: <b>vitese göre yanlış devirde sürmek</b> ve ilk çalıştırmada motora tam güç vermek.</span></div>
-        <div class="hap"><span class="hap-num">17</span><span>Egzozdan çıkan yoğun duman, <b>motorun düzensiz çalıştığının</b> işaretidir.</span></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/arac-teknigi/muayene-suresi-dolmasa-bile-aracin-ozel-teknik-muayenesi/" aria-label="Hap bilgi 12 sayfası">12</a><span>Muayene süresi dolmasa bile aracın <b>özel teknik muayenesi, trafik zabıtasının gerekli görmesi</b> hâlinde zorunludur.</span><a class="hap-detay" href="/hap-bilgiler/arac-teknigi/muayene-suresi-dolmasa-bile-aracin-ozel-teknik-muayenesi/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/arac-teknigi/arac-cok-uzun-sure-kullanilmazsa-aku-sarji-azalir-ve-motor/" aria-label="Hap bilgi 13 sayfası">13</a><span>Araç çok uzun süre kullanılmazsa <b>akü şarjı azalır</b> ve <b>motor yağı özelliğini kaybeder</b>. Fren balataları kullanılmayan araçta azalmaz.</span><a class="hap-detay" href="/hap-bilgiler/arac-teknigi/arac-cok-uzun-sure-kullanilmazsa-aku-sarji-azalir-ve-motor/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/arac-teknigi/antifriz-yogunlugu-olcumu-servis-ya-da-tamir-atolyesinin/" aria-label="Hap bilgi 14 sayfası">14</a><span><b>Antifriz yoğunluğu ölçümü</b> servis ya da tamir atölyesinin işidir; silecek, lastik basıncı ve yağ seviyesi kontrolünü sürücü kendisi yapar.</span><a class="hap-detay" href="/hap-bilgiler/arac-teknigi/antifriz-yogunlugu-olcumu-servis-ya-da-tamir-atolyesinin/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/arac-teknigi/suruse-baslamadan-once-koltuk-ve-ayna-ayari-surus-konforu/" aria-label="Hap bilgi 15 sayfası">15</a><span>Sürüşe başlamadan önce <b>koltuk ve ayna ayarı</b>, sürüş konforu ve <b>güvenliği</b> için yapılır.</span><a class="hap-detay" href="/hap-bilgiler/arac-teknigi/suruse-baslamadan-once-koltuk-ve-ayna-ayari-surus-konforu/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/arac-teknigi/yakit-tuketimini-azaltir-ani-durus-kalkistan-kacinmak/" aria-label="Hap bilgi 16 sayfası">16</a><span>Yakıt tüketimini azaltır: ani duruş-kalkıştan kaçınmak, tavsiye edilen lastikleri kullanmak, bakımları zamanında yaptırmak. Artırır: <b>vitese göre yanlış devirde sürmek</b> ve ilk çalıştırmada motora tam güç vermek.</span><a class="hap-detay" href="/hap-bilgiler/arac-teknigi/yakit-tuketimini-azaltir-ani-durus-kalkistan-kacinmak/">Detay &rarr;</a></div>
+        <div class="hap"><a class="hap-num" href="/hap-bilgiler/arac-teknigi/egzozdan-cikan-yogun-duman-motorun-duzensiz-calistiginin/" aria-label="Hap bilgi 17 sayfası">17</a><span>Egzozdan çıkan yoğun duman, <b>motorun düzensiz çalıştığının</b> işaretidir.</span><a class="hap-detay" href="/hap-bilgiler/arac-teknigi/egzozdan-cikan-yogun-duman-motorun-duzensiz-calistiginin/">Detay &rarr;</a></div>
         </div>
       </section>
     </div>
@@ -321,7 +327,8 @@
 
 <!-- Google tag (gtag.js) — sayfa yüklendikten sonra yüklenir -->
 <script>
-function loadGA(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-34HL041XN0';s.async=true;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function g(){dataLayer.push(arguments)}window.gtag=g;g('js',new Date());g('config','G-34HL041XN0')}
+window.dataLayer=window.dataLayer||[];function g(){dataLayer.push(arguments)}window.gtag=g;g('js',new Date());g('config','G-34HL041XN0');var r=document.referrer,h=r?r.split('/')[2]:'';if(h&&/(chatgpt\.com|openai\.com|perplexity\.ai|claude\.ai|anthropic\.com|gemini\.google\.com|copilot\.microsoft\.com|bing\.com\/chat|you\.com|mistral\.ai|deepseek\.com)$/.test(h)){g('event','ai_referral',{ai_source:h})}
+function loadGA(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-34HL041XN0';s.async=true;document.head.appendChild(s)}
 if(typeof requestIdleCallback==='function'){requestIdleCallback(loadGA)}else{setTimeout(loadGA,2500)}
 </script>
 </body>

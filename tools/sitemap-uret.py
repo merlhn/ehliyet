@@ -21,6 +21,7 @@ ONCELIK = [
     (re.compile(r"^/deneme-sinavlari/"), "0.8"),
     (re.compile(r"^/dersler/"), "0.7"),
     (re.compile(r"^/soru/"), "0.6"),
+    (re.compile(r"^/hap-bilgiler/[^/]+/[^/]+/$"), "0.6"),  # tekil hap bilgi sayfaları
 ]
 VARSAYILAN_ONCELIK = "0.5"
 

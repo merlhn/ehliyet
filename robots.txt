@@ -4,7 +4,5 @@ Allow: /
 # Panel giriş yapan kullanıcıya özeldir, arama sonuçlarında yeri yok.
 Disallow: /panel/
 Disallow: /assets/kilavuz-govde.html
-Disallow: /llms.txt
-Disallow: /llms-full.txt
 
 Sitemap: https://ehliyet.digital/sitemap.xml
