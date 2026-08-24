@@ -6,7 +6,7 @@ MEB MTSK müfredatına uygun 43 ders notu, 76 hap bilgi, 200 çıkmış sınav s
 
 🌐 **Site:** [ehliyet.digital](https://ehliyet.digital)
 📄 **LLM dizini:** [llms.txt](https://ehliyet.digital/llms.txt) · [llms-full.txt](https://ehliyet.digital/llms-full.txt)
-🔌 **MCP:** [ehliyet-production.up.railway.app/mcp](https://ehliyet-production.up.railway.app/mcp) · [MCP Market](https://mcpmarket.com/server/ehliyet-digital)
+🔌 **MCP:** [ehliyet-production.up.railway.app/mcp](https://ehliyet-production.up.railway.app/mcp) · [MCP Market](https://mcpmarket.com/server/ehliyet-digital) · [Smithery](https://smithery.ai/servers/omerlhn/ehliyet-digital) · MCP Registry: `io.github.merlhn/ehliyet-digital`
 
 ---
 
@@ -225,3 +225,5 @@ Bu proje açık kaynak olarak yayınlanmıştır. İçerikler MEB MTSK müfredat
 - **Hakkında:** [ehliyet.digital/hakkinda](https://ehliyet.digital/hakkinda/)
 - **GitHub:** [github.com/merlhn/ehliyet](https://github.com/merlhn/ehliyet)
 - **MCP Market:** [mcpmarket.com/server/ehliyet-digital](https://mcpmarket.com/server/ehliyet-digital)
+- **Smithery:** [smithery.ai/servers/omerlhn/ehliyet-digital](https://smithery.ai/servers/omerlhn/ehliyet-digital)
+- **MCP Registry:** `io.github.merlhn/ehliyet-digital`

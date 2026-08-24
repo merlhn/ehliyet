@@ -1,7 +1,7 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
   "name": "io.github.merlhn/ehliyet-digital",
-  "description": "Türkiye B sınıfı ehliyet sınavına hazırlık: 200 çıkmış soru, 76 hap bilgi, 43 ders özeti ve deneme sınavı üretimi.",
+  "description": "Türkiye ehliyet sınavı hazırlık: 200 çıkmış soru, 76 hap bilgi, 43 ders özeti, deneme sınavı.",
   "status": "active",
   "repository": {
     "url": "https://github.com/merlhn/ehliyet",

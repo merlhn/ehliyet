@@ -41,7 +41,7 @@ Model Context Protocol ile doğrudan bağlantı:
 - Streamable HTTP endpoint: https://ehliyet-production.up.railway.app/mcp
 - SSE endpoint (eski): https://ehliyet-production.up.railway.app/sse
 - Araçlar: get_practice_questions, get_quick_facts, generate_mock_exam, get_lesson_summary, explain_answer
-- Dizin kaydı: https://mcpmarket.com/server/ehliyet-digital
+- Dizin kayıtları: https://mcpmarket.com/server/ehliyet-digital · https://smithery.ai/servers/omerlhn/ehliyet-digital · MCP Registry (io.github.merlhn/ehliyet-digital)
 - Kaynak kod ve veri (açık kaynak, MIT): https://github.com/merlhn/ehliyet
 
 ## Detaylı içerik

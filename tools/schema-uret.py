@@ -59,6 +59,7 @@ YAYINCI = {
     "sameAs": [
         "https://github.com/merlhn/ehliyet",
         "https://mcpmarket.com/server/ehliyet-digital",
+        "https://smithery.ai/servers/omerlhn/ehliyet-digital",
     ],
 }
 YAYINCI_EGITIM = {
