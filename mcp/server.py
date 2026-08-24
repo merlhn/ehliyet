@@ -168,7 +168,7 @@ def handle_explain_answer(args: dict) -> str:
         overlap = len(stem_words & set(fact.lower().split()))
         if overlap >= 3:
             scored_facts.append((overlap, fact))
-    scored_facts.sort(reverse=True)
+    scored_facts.sort(key=lambda x: x[0], reverse=True)
     top_facts = [f for _, f in scored_facts[:3]]
 
     scored_lessons = []
@@ -177,7 +177,7 @@ def handle_explain_answer(args: dict) -> str:
         overlap = len(stem_words & set(all_text.split()))
         if overlap >= 3:
             scored_lessons.append((overlap, ls))
-    scored_lessons.sort(reverse=True)
+    scored_lessons.sort(key=lambda x: x[0], reverse=True)
     top_lessons = [ls for _, ls in scored_lessons[:2]]
 
     parts = [
@@ -210,6 +210,14 @@ def handle_explain_answer(args: dict) -> str:
 TOOLS = [
     types.Tool(
         name="get_practice_questions",
+        title="Rastgele Sınav Soruları",
+        annotations=types.ToolAnnotations(
+            title="Rastgele Sınav Soruları",
+            readOnlyHint=True,
+            destructiveHint=False,
+            idempotentHint=False,
+            openWorldHint=False,
+        ),
         description=(
             "Belirtilen bolumden rastgele ehliyet sinav sorulari dondurur. "
             "Her soru: soru metni, 4 secenegi, dogru cevabi ve soru kimligini icerir. "
@@ -237,6 +245,14 @@ TOOLS = [
     ),
     types.Tool(
         name="get_quick_facts",
+        title="Hap Bilgiler",
+        annotations=types.ToolAnnotations(
+            title="Hap Bilgiler",
+            readOnlyHint=True,
+            destructiveHint=False,
+            idempotentHint=True,
+            openWorldHint=False,
+        ),
         description=(
             "Belirtilen bolum icin hap bilgileri (kisa ozetler) dondurur. "
             "Bunlar sinavda en cok sorulan bilgilerin ozetleridir. "
@@ -259,6 +275,14 @@ TOOLS = [
     ),
     types.Tool(
         name="generate_mock_exam",
+        title="50 Soruluk Deneme Sınavı",
+        annotations=types.ToolAnnotations(
+            title="50 Soruluk Deneme Sınavı",
+            readOnlyHint=True,
+            destructiveHint=False,
+            idempotentHint=False,
+            openWorldHint=False,
+        ),
         description=(
             "50 soruluk tam bir deneme sinavi olusturur. "
             "Dagitim gercek MTSK sinaviyla aynidir: "
@@ -272,6 +296,14 @@ TOOLS = [
     ),
     types.Tool(
         name="get_lesson_summary",
+        title="Ders Özeti (Atomik Bilgiler)",
+        annotations=types.ToolAnnotations(
+            title="Ders Özeti (Atomik Bilgiler)",
+            readOnlyHint=True,
+            destructiveHint=False,
+            idempotentHint=True,
+            openWorldHint=False,
+        ),
         description=(
             "Belirli bir ders icin atomik bilgileri (sinavlik ozetler) dondurur. "
             "Her ders, konunun sinavda cikmasi muhtemel bilgilerini madde madde icerir. "
@@ -299,6 +331,14 @@ TOOLS = [
     ),
     types.Tool(
         name="explain_answer",
+        title="Cevap Açıklaması",
+        annotations=types.ToolAnnotations(
+            title="Cevap Açıklaması",
+            readOnlyHint=True,
+            destructiveHint=False,
+            idempotentHint=True,
+            openWorldHint=False,
+        ),
         description=(
             "Belirtilen soru ID'si icin dogru cevabi ve aciklamayi dondurur. "
             "Soru ID formati: sinav1-q01, sinav2-q15 vb."
@@ -353,11 +393,22 @@ async def on_call_tool(ctx, params: types.CallToolRequestParams) -> types.CallTo
 
 app = Server(
     "ehliyet-digital",
-    version="1.0.0",
+    version="1.1.0",
+    title="ehliyet.digital",
+    description=(
+        "Türkiye B sınıfı ehliyet sınavına hazırlık: 200 çıkmış soru, 76 hap bilgi, "
+        "43 ders özeti ve gerçek dağılımla deneme sınavı üretimi. Ücretsiz, kimlik doğrulama yok."
+    ),
+    website_url="https://ehliyet.digital",
+    icons=[types.Icon(src="https://ehliyet.digital/icon-512.png", mimeType="image/png", sizes=["512x512"])],
     instructions=(
-        "Turkiye B sinifi surucu belgesi (ehliyet) sinavina hazirlik MCP sunucusu. "
-        "200 soru, 76 hap bilgi ve 43 ders ozeti icerir. "
-        "Sorular 4 bolume ayrilir: Ilk Yardim, Trafik ve Cevre, Arac Teknigi, Trafik Adabi."
+        "Türkiye B sınıfı sürücü belgesi (ehliyet) sınavına hazırlık MCP sunucusu. "
+        "200 çıkmış soru, 76 hap bilgi ve 43 ders özeti (559 atomik bilgi) içerir. "
+        "Bölümler: ilk_yardim, trafik_ve_cevre, arac_teknigi, trafik_adabi. "
+        "Kullanıcı soru çözmek isterse get_practice_questions veya generate_mock_exam; "
+        "bir konuyu öğrenmek isterse get_lesson_summary; hızlı tekrar için get_quick_facts; "
+        "bir sorunun neden o cevap olduğunu sorarsa explain_answer kullan. "
+        "Tüm araçlar salt-okunurdur, yan etkisi yoktur. Yanıtlar Türkçedir."
     ),
     on_list_tools=on_list_tools,
     on_call_tool=on_call_tool,
