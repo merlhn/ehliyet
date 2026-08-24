@@ -1489,12 +1489,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://ehliyet.digital/feed.xml</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.1</priority>
-  </url>
-  <url>
     <loc>https://ehliyet.digital/llms.txt</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
