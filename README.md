@@ -6,7 +6,7 @@ MEB MTSK müfredatına uygun 43 ders notu, 76 hap bilgi, 200 çıkmış sınav s
 
 🌐 **Site:** [ehliyet.digital](https://ehliyet.digital)
 📄 **LLM dizini:** [llms.txt](https://ehliyet.digital/llms.txt) · [llms-full.txt](https://ehliyet.digital/llms-full.txt)
-🔌 **MCP:** [ehliyet-production.up.railway.app/sse](https://ehliyet-production.up.railway.app/sse) · [MCP Market](https://mcpmarket.com/server/ehliyet-digital)
+🔌 **MCP:** [ehliyet-production.up.railway.app/mcp](https://ehliyet-production.up.railway.app/mcp) · [MCP Market](https://mcpmarket.com/server/ehliyet-digital)
 
 ---
 
@@ -105,7 +105,8 @@ AI agent'lar Model Context Protocol ile doğrudan bağlanabilir.
 
 **Remote (canlı):**
 ```
-SSE endpoint: https://ehliyet-production.up.railway.app/sse
+Streamable HTTP: https://ehliyet-production.up.railway.app/mcp   (önerilen)
+SSE (eski):      https://ehliyet-production.up.railway.app/sse
 ```
 
 **Claude Desktop yapılandırması:**
@@ -113,8 +114,8 @@ SSE endpoint: https://ehliyet-production.up.railway.app/sse
 {
   "mcpServers": {
     "ehliyet-digital": {
-      "transport": "sse",
-      "url": "https://ehliyet-production.up.railway.app/sse"
+      "type": "http",
+      "url": "https://ehliyet-production.up.railway.app/mcp"
     }
   }
 }

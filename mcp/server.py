@@ -370,10 +370,17 @@ async def main_stdio():
 
 
 async def main_http(host="0.0.0.0", port=8080):
-    """HTTP/SSE transport — remote agent'lar icin."""
+    """HTTP transport — remote agent'lar icin.
+
+    /mcp  -> Streamable HTTP (guncel standart; Smithery, MCP Registry vb. bunu bekler)
+    /sse  -> SSE (eski istemciler icin korunuyor)
+    """
     try:
+        import contextlib
         from mcp.server.sse import SseServerTransport
+        from mcp.server.streamable_http_manager import StreamableHTTPSessionManager
         from starlette.applications import Starlette
+        from starlette.responses import JSONResponse, Response
         from starlette.routing import Route, Mount
         import uvicorn
 
@@ -382,20 +389,48 @@ async def main_http(host="0.0.0.0", port=8080):
         async def handle_sse(request):
             async with sse.connect_sse(request.scope, request.receive, request._send) as streams:
                 await app.run(streams[0], streams[1], app.create_initialization_options())
+            # Yanit SSE akisi icinde gonderildi; Starlette'in None cagirmamasi icin bos Response.
+            return Response()
+
+        # Stateless: her istek bagimsiz; oturum tutulmadigi icin yatay olceklenir
+        # ve Railway yeniden baslatmalarinda istemci kopmaz.
+        session_manager = StreamableHTTPSessionManager(app=app, stateless=True)
+
+        class StreamableHTTPApp:
+            """Ham ASGI uygulamasi: Route ile /mcp'ye baglanir, Mount'un
+            yaptigi /mcp -> /mcp/ yonlendirmesi olusmaz."""
+            async def __call__(self, scope, receive, send):
+                await session_manager.handle_request(scope, receive, send)
+
+        async def health(request):
+            return JSONResponse({
+                "name": "ehliyet-digital",
+                "status": "ok",
+                "transports": {"streamable_http": "/mcp", "sse": "/sse"},
+                "site": "https://ehliyet.digital",
+            })
+
+        @contextlib.asynccontextmanager
+        async def lifespan(_app):
+            async with session_manager.run():
+                yield
 
         starlette_app = Starlette(
             routes=[
+                Route("/", endpoint=health),
+                Route("/mcp", endpoint=StreamableHTTPApp(), methods=["GET", "POST", "DELETE"]),
                 Route("/sse", endpoint=handle_sse),
                 Mount("/messages/", app=sse.handle_post_message),
-            ]
+            ],
+            lifespan=lifespan,
         )
         config = uvicorn.Config(starlette_app, host=host, port=port)
         server = uvicorn.Server(config)
-        print(f"MCP SSE sunucusu baslatildi: http://{host}:{port}/sse")
+        print(f"MCP sunucusu baslatildi: http://{host}:{port}/mcp (streamable http), /sse (sse)")
         await server.serve()
     except ImportError:
         print("HTTP transport icin ek bagimliliklar gerekli:")
-        print("  pip install 'mcp[sse]' starlette uvicorn")
+        print("  pip install 'mcp>=1.10' starlette uvicorn")
         raise
 
 

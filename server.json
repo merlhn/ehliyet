@@ -11,6 +11,10 @@
   "websiteUrl": "https://ehliyet.digital",
   "remotes": [
     {
+      "type": "streamable-http",
+      "url": "https://ehliyet-production.up.railway.app/mcp"
+    },
+    {
       "type": "sse",
       "url": "https://ehliyet-production.up.railway.app/sse"
     }
