@@ -84,3 +84,17 @@
     .confirm-btn::after{right:13px;font-size:19px}
     .foot-row .btn-back{width:100%;justify-content:center;padding:8px;font-size:12.5px}
   }
+
+/* Telefon: 12px'lik belge metni okunmuyordu; kutu kenar boşlukları da daraltıldı. */
+@media(max-width:600px){
+  .wrap{margin:14px auto;padding:0 12px}
+  .panels{grid-template-columns:1fr;gap:12px}
+  .panel{padding:14px 16px}
+  .panel .row{font-size:13.5px;flex-wrap:wrap}
+  .panel .row .k{width:110px}
+  .guide{padding:18px 16px;font-size:14px}
+  .guide h3{font-size:15.5px}
+  .guide h4{font-size:14px}
+  .guide table{font-size:13px}
+  .guide th,.guide td{padding:7px 8px}
+}

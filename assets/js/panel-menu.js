@@ -42,9 +42,14 @@ export const MENU_CSS = `
 
 @media(max-width:820px){
   .pk-yan{position:static;width:100%;height:auto;flex-direction:row;align-items:center;
-    border-right:none;border-bottom:1px solid #ececec;padding:0 14px;gap:6px;overflow-x:auto}
-  .pk-marka{height:52px;padding:0 10px 0 0;border-bottom:none}
-  .pk-ust,.pk-alt{flex-direction:row;padding:0;margin-top:0}
+    border-right:none;border-bottom:1px solid #ececec;padding:0 12px;gap:4px;overflow-x:auto;
+    scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .pk-yan::-webkit-scrollbar{display:none}
+  .pk-marka{height:52px;padding:0 8px 0 0;border-bottom:none}
+  .pk-marka span{display:none}
+  .pk-ust,.pk-alt{flex-direction:row;padding:0;margin-top:0;gap:2px}
+  .pk-oge{padding:9px 10px;font-size:12.5px;min-height:40px;width:auto}
+  .pk-profil{display:none}
 }
 `;
 
