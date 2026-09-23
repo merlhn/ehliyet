@@ -23,7 +23,13 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 # Sayfanin giris gerektirdigini gosteren isaretler. Yeni bir yetki mekanizmasi
 # eklenirse buraya da eklenmeli, yoksa kontrol o sayfayi gozden kacirir.
-KAPI_ISARETLERI = ("panel-kabuk.js", "kullaniciDinle")
+#
+# kullaniciDinle tek basina kapi degildir: /deneme-sinavi/ gibi herkese acik
+# sayfalar oturumu yalnizca "sonucu kaydet" daveti icin dinler. Kapi, oturum
+# yoksa ana sayfaya atan yonlendirmedir; bu yuzden ikisi birlikte aranir.
+KAPI_ISARETLERI = ("panel-kabuk.js",)
+KAPI_DINLEYICI = "kullaniciDinle"
+KAPI_YONLENDIRME = "location.replace('/')"
 KAPILI_DIZINLER = ("panel",)
 
 ihlaller = []
@@ -32,7 +38,9 @@ ihlaller = []
 def kapili_mi(yol: pathlib.Path, metin: str) -> bool:
     if any(d in yol.relative_to(ROOT).parts for d in KAPILI_DIZINLER):
         return True
-    return any(isaret in metin for isaret in KAPI_ISARETLERI)
+    if any(isaret in metin for isaret in KAPI_ISARETLERI):
+        return True
+    return KAPI_DINLEYICI in metin and KAPI_YONLENDIRME in metin
 
 
 robots = (ROOT / "robots.txt").read_text(encoding="utf-8")

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Hap bilgi sayfası üretici — 76 hap bilginin her birini
+Hap bilgi sayfası üretici — 80 hap bilginin her birini
 /hap-bilgiler/{kategori}/{slug}/index.html olarak üretir ve kategori
 sayfalarındaki hap numaralarını bu sayfalara link yapar.
 
@@ -26,6 +26,11 @@ import importlib.util
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HAP_DIR = os.path.join(ROOT, "hap-bilgiler")
 DATA_DIR = os.path.join(ROOT, "mcp", "data")
+# İsteğe bağlı ayrıntılı içerik: tools/hap-detay/{slug}.html
+# İlk satırlarda <!-- baslik: ... --> ve <!-- aciklama: ... --> yorumları varsa
+# sayfa başlığı ve meta açıklaması olarak kullanılır; kalan HTML "detay" bölümüdür.
+DETAY_DIR = os.path.join(ROOT, "tools", "hap-detay")
+SORU_DIR = os.path.join(ROOT, "soru")
 DOMAIN = "https://ehliyet.digital"
 YAYIN_TARIHI = "2026-08-24"
 
@@ -155,6 +160,81 @@ def ilgili_satirlar(hap_duz, ders, adet=2):
 # Sayfa
 # ---------------------------------------------------------------------------
 
+def detay_oku(slug):
+    yol = os.path.join(DETAY_DIR, f"{slug}.html")
+    if not os.path.exists(yol):
+        return None
+    metin = open(yol, encoding="utf-8").read()
+    sonuc = {"baslik": None, "aciklama": None}
+    for alan in ("baslik", "aciklama"):
+        m = re.search(r"<!--\s*" + alan + r":\s*(.*?)\s*-->\n?", metin)
+        if m:
+            sonuc[alan] = m.group(1).strip()
+            metin = metin.replace(m.group(0), "", 1)
+    sonuc["html"] = metin.strip("\n")
+    return sonuc
+
+
+_SORULAR = None
+
+def sorulari_yukle():
+    """Soru sayfalarından (bölüm, slug, başlık, kökler); ikinci bir liste tutulmaz."""
+    global _SORULAR
+    if _SORULAR is not None:
+        return _SORULAR
+    _SORULAR = []
+    if os.path.isdir(SORU_DIR):
+        for ad in sorted(os.listdir(SORU_DIR)):
+            yol = os.path.join(SORU_DIR, ad, "index.html")
+            if not os.path.exists(yol):
+                continue
+            t = open(yol, encoding="utf-8").read()
+            h1 = re.search(r"<h1[^>]*>(.*?)</h1>", t, re.S)
+            bolum = re.search(r"Bu soru <b>([^<]+)</b> konusuna aittir", t)
+            if not h1 or not bolum:
+                continue
+            baslik = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", re.sub(r"<br\s*/?>", " ", h1.group(1))))).strip()
+            _SORULAR.append((bolum.group(1), ad, baslik, kokler(baslik)))
+    return _SORULAR
+
+
+_SORU_DF = None
+
+def soru_df(section):
+    """Bölümdeki soru başlıklarında her kökün kaç soruda geçtiği (doküman sıklığı)."""
+    global _SORU_DF
+    if _SORU_DF is None:
+        _SORU_DF = {}
+        for bolum, _slug, _baslik, sk in sorulari_yukle():
+            df = _SORU_DF.setdefault(bolum, {"_n": 0})
+            df["_n"] += 1
+            for k in sk:
+                df[k] = df.get(k, 0) + 1
+    return _SORU_DF.get(section, {"_n": 0})
+
+
+def ilgili_sorular(hap_duz, section, adet=5, min_ortusme=3):
+    """Aynı bölümde hap bilgiyle en az 3 *ayırt edici* kök paylaşan sorular.
+    "kazazede", "sürücü" gibi bölümün sorularının %12'sinden fazlasında geçen
+    kökler sayılmaz; yoksa her ilk yardım hap bilgisi her ilk yardım sorusuyla eşleşir."""
+    df = soru_df(section)
+    n = df.get("_n", 0)
+    if not n:
+        return []
+    esik = max(2, int(n * 0.12))
+    hk = {k for k in kokler(hap_duz) if df.get(k, 0) <= esik}
+    adaylar = []
+    for bolum, slug, baslik, sk in sorulari_yukle():
+        if bolum != section:
+            continue
+        ortak = hk & sk
+        if len(ortak) >= min_ortusme:
+            agirlik = sum(1.0 / df.get(k, 1) for k in ortak)  # nadir kök daha değerli
+            adaylar.append((-len(ortak), -agirlik, baslik, slug))
+    adaylar.sort()
+    return [(slug, baslik) for _, _, baslik, slug in adaylar[:adet]]
+
+
 def baglam_paragrafi(kategori_ad, grup_ad, ders, satirlar):
     cumleler = [f"Bu bilgi, {esc(kategori_ad)} hap bilgilerinde <b>{esc(grup_ad)}</b> başlığı altında yer alır."]
     if ders and satirlar:
@@ -176,6 +256,21 @@ def generate_page(d, hap, onceki, sonraki, ders, satirlar):
     h1_text = truncate(bilgi_duz, 70)
     title_text = truncate(bilgi_duz, 52) + " | ehliyet.digital"
     desc_text = truncate(f"{kategori_ad} hap bilgi: {bilgi_duz}", 155)
+    detay = detay_oku(slug)
+    if detay and detay["baslik"]:
+        h1_text = detay["baslik"]
+        title_text = detay["baslik"] + " | ehliyet.digital"
+    if detay and detay["aciklama"]:
+        desc_text = detay["aciklama"]
+    detay_html = ""
+    if detay and detay["html"]:
+        detay_html = "\n    <section class=\"detay\">\n" + detay["html"] + "\n    </section>\n"
+    sorular = ilgili_sorular(bilgi_duz, kategori_ad)
+    sorular_html = ""
+    if sorular:
+        sorular_html = ("\n    <h2 class=\"bolum\">Bu bilgi hangi sorularda çıkar?</h2>\n    <ul class=\"hap-sorular\">\n"
+                        + "".join(f'      <li><a href="/soru/{s_}/">{esc(truncate(b_, 120))}</a></li>\n' for s_, b_ in sorular)
+                        + "    </ul>\n")
 
     ders_url = ders["url"] if ders else SECTION_URL.get(kategori_ad, "/dersler/")
     ders_ad = ders["lesson"] if ders else f"{kategori_ad} ders notları"
@@ -278,6 +373,17 @@ def generate_page(d, hap, onceki, sonraki, ders, satirlar):
   .hap-num{{font-family:'Geist Mono',monospace;font-size:12.5px;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:6px 9px;flex-shrink:0}}
 
   .baglam{{font-size:15px;line-height:1.7;color:#444;margin:0 0 32px}}
+  h2.bolum,.detay h2{{font-size:19px;font-weight:600;letter-spacing:-.02em;margin:30px 0 10px;line-height:1.3}}
+  .detay p{{font-size:15px;line-height:1.7;color:#333;margin:0 0 12px}}
+  .detay ul,.detay ol{{font-size:15px;line-height:1.7;color:#333;padding-left:22px;margin:0 0 14px}}
+  .detay li{{margin:0 0 6px}}
+  .detay .detay-gorsel{{margin:16px 0 20px;border:1px solid var(--line);border-radius:14px;padding:16px;background:#fafafa;text-align:center}}
+  .detay .detay-gorsel img{{max-width:100%;height:auto;max-height:320px;display:inline-block}}
+  .detay figcaption{{margin-top:10px;font-size:13px;color:var(--muted);line-height:1.5}}
+  .detay .kutu{{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:#fafafa;margin:0 0 14px;font-size:15px;line-height:1.6}}
+  .hap-sorular{{list-style:none;padding:0;margin:0 0 32px;display:flex;flex-direction:column;gap:8px}}
+  .hap-sorular a{{display:block;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px;line-height:1.5;color:var(--fg);text-decoration:none}}
+  .hap-sorular a:hover{{border-color:#c8c8c8;background:#fafafa}}
   .baglam b{{font-weight:600;color:var(--fg)}}
 
   .ilgili{{margin-top:8px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;line-height:1.6}}
@@ -351,14 +457,16 @@ def generate_page(d, hap, onceki, sonraki, ders, satirlar):
 
     <!-- BODY_START -->
     <div class="hap"><span class="hap-num">{sira:02d}</span><span>{bilgi_html}</span></div>
-
+{detay_html}
+    <h2 class="bolum">Ders notunda nasıl geçer?</h2>
     <p class="baglam">{baglam_paragrafi(kategori_ad, grup_ad, ders, satirlar)}</p>
-    <!-- BODY_END -->
+{sorular_html}    <!-- BODY_END -->
 
     <div class="ilgili">
       <p>Bu bilgi <b>{esc(kategori_ad)}</b> konusuna aittir.
         <a href="{ders_url}">{esc(ders_ad)} &rarr;</a></p>
       <p><a href="{kat_url}">Tüm {esc(kategori_ad)} hap bilgileri &rarr;</a></p>
+      <p><a href="/ehliyet-sinav-sorulari/{kat_slug}/">{esc(kategori_ad)} çıkmış sınav soruları &rarr;</a> · <a href="/deneme-sinavi/?konu={kat_slug}">Bu konudan deneme çöz &rarr;</a></p>
     </div>
 
     <nav class="hap-nav" aria-label="Önceki / sonraki hap bilgi">
@@ -414,7 +522,6 @@ def generate_page(d, hap, onceki, sonraki, ders, satirlar):
   </footer>
 
   <script src="/assets/js/mobile-nav.js" defer></script>
-  <script src="/assets/js/deneme-davet.js" defer></script>
 <!-- Google tag (gtag.js) -->
 <script>
 window.dataLayer=window.dataLayer||[];function g(){{dataLayer.push(arguments)}}window.gtag=g;g('js',new Date());g('config','G-34HL041XN0');var r=document.referrer,h=r?r.split('/')[2]:'';if(h&&/(chatgpt\\.com|openai\\.com|perplexity\\.ai|claude\\.ai|anthropic\\.com|gemini\\.google\\.com|copilot\\.microsoft\\.com|bing\\.com\\/chat|you\\.com|mistral\\.ai|deepseek\\.com)$/.test(h)){{g('event','ai_referral',{{ai_source:h}})}}

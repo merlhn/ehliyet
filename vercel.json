@@ -10,35 +10,62 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
-        { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains"
+        }
       ]
     },
     {
       "source": "/((?!__/auth/).*)",
       "headers": [
-        { "key": "X-Frame-Options", "value": "DENY" }
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        }
       ]
     },
     {
       "source": "/api/(.*)",
       "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" },
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
       ]
     },
     {
       "source": "/assets/fonts/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
       ]
     }
   ],
@@ -86,6 +113,46 @@
     {
       "source": "/ehliyet-sorulari/:path+",
       "destination": "/ehliyet-sinav-sorulari/",
+      "permanent": true
+    },
+    {
+      "source": "/hap-bilgiler/arac-teknigi/arac-muayene-suresi-dolmasa-blie-aracin-ozel-teknik-muayenesi",
+      "destination": "/hap-bilgiler/arac-teknigi/muayene-suresi-dolmasa-bile-aracin-ozel-teknik-muayenesi/",
+      "permanent": true
+    },
+    {
+      "source": "/hap-bilgiler/arac-teknigi/arac-muayene-suresi-dolmasa-blie-aracin-ozel-teknik-muayenesi/",
+      "destination": "/hap-bilgiler/arac-teknigi/muayene-suresi-dolmasa-bile-aracin-ozel-teknik-muayenesi/",
+      "permanent": true
+    },
+    {
+      "source": "/hap-bilgiler/ilk-yardim/koprucuk-kemigi-kirigina-tespit-her-iki-omuz-uzerinden",
+      "destination": "/hap-bilgiler/ilk-yardim/koprucuk-kemigi-kiriginda-tespit-her-iki-omuz-uzerinden/",
+      "permanent": true
+    },
+    {
+      "source": "/hap-bilgiler/ilk-yardim/koprucuk-kemigi-kirigina-tespit-her-iki-omuz-uzerinden/",
+      "destination": "/hap-bilgiler/ilk-yardim/koprucuk-kemigi-kiriginda-tespit-her-iki-omuz-uzerinden/",
+      "permanent": true
+    },
+    {
+      "source": "/hap-bilgiler/trafik-ve-cevre/arac-muayeness-agir-kusur-sayilir-rot-baslarinin-bosluk",
+      "destination": "/hap-bilgiler/trafik-ve-cevre/arac-muayenesinde-agir-kusur-sayilir-rot-baslarinin-bosluk/",
+      "permanent": true
+    },
+    {
+      "source": "/hap-bilgiler/trafik-ve-cevre/arac-muayeness-agir-kusur-sayilir-rot-baslarinin-bosluk/",
+      "destination": "/hap-bilgiler/trafik-ve-cevre/arac-muayenesinde-agir-kusur-sayilir-rot-baslarinin-bosluk/",
+      "permanent": true
+    },
+    {
+      "source": "/hap-bilgiler/trafik-ve-cevre/aralikli-yanip-sonen-isik-dur-levhasiyla-ayni",
+      "destination": "/hap-bilgiler/trafik-ve-cevre/aralikli-yanip-sonen-kirmizi-isik-dur-levhasiyla-ayni/",
+      "permanent": true
+    },
+    {
+      "source": "/hap-bilgiler/trafik-ve-cevre/aralikli-yanip-sonen-isik-dur-levhasiyla-ayni/",
+      "destination": "/hap-bilgiler/trafik-ve-cevre/aralikli-yanip-sonen-kirmizi-isik-dur-levhasiyla-ayni/",
       "permanent": true
     }
   ]

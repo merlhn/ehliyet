@@ -1,7 +1,7 @@
 # ehliyet.digital — Tam İçerik Dizini
 
 > Türkiye ehliyet sınavına ücretsiz hazırlık platformu.
-> MEB MTSK müfredatına uygun 43 ders notu, 76 hap bilgi ve deneme sınavları.
+> MEB MTSK müfredatına uygun 43 ders notu, 80 hap bilgi ve deneme sınavları.
 > Dil: Türkçe | Konu: B sınıfı ehliyet teorik sınavı
 
 Bu dosya AI/LLM sistemlerinin site içeriğini hızlıca kavraması için üretilmiştir.
@@ -520,7 +520,7 @@ Fren sistemi, araç tekniği dersinin en çok soru gelen ve en çok çeldirici b
 
 Alt başlıklar:
 - Fren sisteminin görevi
-- Ayak freni ve el freni
+- Ayak freni ve el freni hangi tekerlekleri tutar?
 - Hidrolik çalışma prensibi
 - Fren sisteminin parçaları
 - ABS ve ASR sistemleri
@@ -789,6 +789,11 @@ Alt başlıklar:
 
 - Hap Bilgiler (76 kısa özet): https://ehliyet.digital/hap-bilgiler/
 - Soru Çöz: https://ehliyet.digital/ehliyet-sinav-sorulari/
+- Deneme Sınavı (giriş gerektirmez, 50 soru / 45 dk): https://ehliyet.digital/deneme-sinavi/
+- İlk Yardım çıkmış sorular: https://ehliyet.digital/ehliyet-sinav-sorulari/ilk-yardim/
+- Trafik ve Çevre çıkmış sorular: https://ehliyet.digital/ehliyet-sinav-sorulari/trafik-ve-cevre/
+- Araç Tekniği çıkmış sorular: https://ehliyet.digital/ehliyet-sinav-sorulari/arac-teknigi/
+- Trafik Adabı çıkmış sorular: https://ehliyet.digital/ehliyet-sinav-sorulari/trafik-adabi/
 - Ehliyet Nasıl Alınır: https://ehliyet.digital/ehliyet-nasil-alinir/
 - Sınav Konuları: https://ehliyet.digital/ehliyet-sinav-konulari/
 - Direksiyon Sınavı: https://ehliyet.digital/direksiyon-sinavi/

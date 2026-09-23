@@ -2,7 +2,7 @@
 
 **Türkiye ehliyet (sürücü belgesi) sınavına ücretsiz hazırlık platformu.**
 
-MEB MTSK müfredatına uygun 43 ders notu, 76 hap bilgi, 200 çıkmış sınav sorusu ve gerçek formatta deneme sınavları. Reklamsız, açık kaynak.
+MEB MTSK müfredatına uygun 43 ders notu, 80 hap bilgi, 200 çıkmış sınav sorusu ve gerçek formatta deneme sınavları. Reklamsız, açık kaynak.
 
 🌐 **Site:** [ehliyet.digital](https://ehliyet.digital)
 📄 **LLM dizini:** [llms.txt](https://ehliyet.digital/llms.txt) · [llms-full.txt](https://ehliyet.digital/llms-full.txt)
@@ -148,7 +148,7 @@ Makine-okunur JSON formatında:
 | Dosya | İçerik |
 |-------|--------|
 | [`mcp/data/questions.json`](mcp/data/questions.json) | 200 soru (4 sınav) |
-| [`mcp/data/quick-facts.json`](mcp/data/quick-facts.json) | 76 hap bilgi |
+| [`mcp/data/quick-facts.json`](mcp/data/quick-facts.json) | 80 hap bilgi |
 | [`mcp/data/lesson-summaries.json`](mcp/data/lesson-summaries.json) | 43 ders, ~560 atomik bilgi |
 
 ---
@@ -177,8 +177,9 @@ python3 -m http.server 8000
 ```
 ├── index.html                  Ana sayfa
 ├── dersler/                    43 ders notu (4 kategori)
-├── hap-bilgiler/               76 hap bilgi (4 kategori)
-├── ehliyet-sinav-sorulari/     20 örnek soru
+├── hap-bilgiler/               80 hap bilgi (4 kategori)
+├── ehliyet-sinav-sorulari/     20 örnek soru + 186 sorunun dizini; alt dizinler: konu bazlı soru sayfaları
+├── deneme-sinavi/              Herkese açık deneme sınavı (4 sınav, giriş gerekmez)
 ├── soru/                       186 bireysel soru sayfası
 ├── panel/                      Giriş gerektiren alan (sınavlar)
 ├── api/                        REST API (Vercel serverless)

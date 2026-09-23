@@ -72,6 +72,12 @@
   .ilgili{margin-top:8px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;line-height:1.6}
   .ilgili a{font-weight:500;text-decoration:none}
   .ilgili a:hover{text-decoration:underline;text-underline-offset:3px}
+  .ilgili p{margin:0 0 8px}
+  .deneme-cta a{display:inline-block;margin-top:6px;background:#08090a;color:#fff;border-radius:999px;padding:9px 16px;font-size:13.5px;font-weight:500}
+  .deneme-cta a:hover{background:#26282c;text-decoration:none}
+  .soru-nav{display:flex;justify-content:space-between;gap:12px;margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+  .soru-nav a{font-size:14px;font-weight:500;text-decoration:none}
+  .soru-nav a:hover{text-decoration:underline;text-underline-offset:3px}
 
   .kaynak{margin-top:24px;font-size:13px;color:var(--muted);line-height:1.6}
 
@@ -252,7 +258,14 @@
     <div class="ilgili">
       <p>Bu soru <b>Trafik ve Çevre</b> konusuna aittir.
         <a href="/dersler/trafik-ve-cevre/">Trafik ve Çevre ders notlarına git &rarr;</a></p>
+      <p><a href="/ehliyet-sinav-sorulari/trafik-ve-cevre/">Tüm Trafik ve Çevre soruları &rarr;</a></p>
+      <p class="deneme-cta"><a href="/deneme-sinavi/?basla=1">Bu soruyu gerçek sınav formatında çöz: Sınav 1 denemesine başla &rarr;</a></p>
     </div>
+
+    <nav class="soru-nav" aria-label="Önceki / sonraki soru">
+      <a class="prev" href="/soru/muayene-suresi-dolmasa-bile-aracin-ozel-teknik-muayenesi/">&larr; Önceki soru</a>
+      <a class="next" href="/soru/hangisi-atiklarin-cevreye-verdigi-zararlardan-biri-degildir/">Sonraki soru &rarr;</a>
+    </nav>
 
     <div class="kaynak">
       <p>Kaynak: MEB MTSK e-sınavı</p>
@@ -304,7 +317,6 @@
   </footer>
 
   <script src="/assets/js/mobile-nav.js" defer></script>
-  <script src="/assets/js/deneme-davet.js" defer></script>
 <!-- Google tag (gtag.js) -->
 <script>
 window.dataLayer=window.dataLayer||[];function g(){dataLayer.push(arguments)}window.gtag=g;g('js',new Date());g('config','G-34HL041XN0');var r=document.referrer,h=r?r.split('/')[2]:'';if(h&&/(chatgpt\.com|openai\.com|perplexity\.ai|claude\.ai|anthropic\.com|gemini\.google\.com|copilot\.microsoft\.com|bing\.com\/chat|you\.com|mistral\.ai|deepseek\.com)$/.test(h)){g('event','ai_referral',{ai_source:h})}

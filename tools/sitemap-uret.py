@@ -17,8 +17,8 @@ BASE = "https://ehliyet.digital"
 # Ana sayfa ve hub sayfaları daha sık taranmalı; ders notları nadiren değişir.
 ONCELIK = [
     (re.compile(r"^/$"), "1.0"),
-    (re.compile(r"^/(dersler|deneme-sinavlari)/$"), "0.9"),
-    (re.compile(r"^/deneme-sinavlari/"), "0.8"),
+    (re.compile(r"^/(ehliyet-sinav-sorulari|deneme-sinavi)/$"), "0.9"),
+    (re.compile(r"^/(dersler|hap-bilgiler)/$"), "0.8"),
     (re.compile(r"^/dersler/"), "0.7"),
     (re.compile(r"^/soru/"), "0.6"),
     (re.compile(r"^/hap-bilgiler/[^/]+/[^/]+/$"), "0.6"),  # tekil hap bilgi sayfaları
@@ -27,7 +27,7 @@ VARSAYILAN_ONCELIK = "0.5"
 
 DEGISIM_SIKLIGI = [
     (re.compile(r"^/$"), "weekly"),
-    (re.compile(r"^/(dersler|hap-bilgiler)/$"), "weekly"),
+    (re.compile(r"^/(dersler|hap-bilgiler|ehliyet-sinav-sorulari|deneme-sinavi)/$"), "weekly"),
     (re.compile(r"^/dersler/"), "monthly"),
     (re.compile(r"^/hap-bilgiler/"), "monthly"),
 ]

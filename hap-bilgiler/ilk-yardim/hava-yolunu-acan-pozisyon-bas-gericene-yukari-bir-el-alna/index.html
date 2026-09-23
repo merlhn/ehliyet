@@ -65,6 +65,17 @@
   .hap-num{font-family:'Geist Mono',monospace;font-size:12.5px;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:6px 9px;flex-shrink:0}
 
   .baglam{font-size:15px;line-height:1.7;color:#444;margin:0 0 32px}
+  h2.bolum,.detay h2{font-size:19px;font-weight:600;letter-spacing:-.02em;margin:30px 0 10px;line-height:1.3}
+  .detay p{font-size:15px;line-height:1.7;color:#333;margin:0 0 12px}
+  .detay ul,.detay ol{font-size:15px;line-height:1.7;color:#333;padding-left:22px;margin:0 0 14px}
+  .detay li{margin:0 0 6px}
+  .detay .detay-gorsel{margin:16px 0 20px;border:1px solid var(--line);border-radius:14px;padding:16px;background:#fafafa;text-align:center}
+  .detay .detay-gorsel img{max-width:100%;height:auto;max-height:320px;display:inline-block}
+  .detay figcaption{margin-top:10px;font-size:13px;color:var(--muted);line-height:1.5}
+  .detay .kutu{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:#fafafa;margin:0 0 14px;font-size:15px;line-height:1.6}
+  .hap-sorular{list-style:none;padding:0;margin:0 0 32px;display:flex;flex-direction:column;gap:8px}
+  .hap-sorular a{display:block;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px;line-height:1.5;color:var(--fg);text-decoration:none}
+  .hap-sorular a:hover{border-color:#c8c8c8;background:#fafafa}
   .baglam b{font-weight:600;color:var(--fg)}
 
   .ilgili{margin-top:8px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;line-height:1.6}
@@ -261,13 +272,21 @@
     <!-- BODY_START -->
     <div class="hap"><span class="hap-num">05</span><span>Hava yolunu açan pozisyon <b>baş geri–çene yukarı</b>: bir el alna, diğer elin iki parmağı çene kemiğine konur; alından bastırılıp çeneden kaldırılır.</span></div>
 
+    <h2 class="bolum">Ders notunda nasıl geçer?</h2>
     <p class="baglam">Bu bilgi, İlk Yardım hap bilgilerinde <b>Temel yaşam desteği</b> başlığı altında yer alır. Konunun ayrıntısı <b>İlk Yardımın ABC&#x27;si</b> ders notundadır; aynı ders notundan: Baş geri-çene yukarı pozisyonunda bir el alna, diğer elin iki parmağı çene kemiğine konur; alından bastırılıp çene kaldırılır. Hava yolunu açmak için ağız içinde yabancı cisim varsa işaret parmağıyla dışarı alınmaya çalışılır. Sınavda bu tür bilgiler genellikle sayı, sıra ya da kural olarak doğrudan sorulur.</p>
+
+    <h2 class="bolum">Bu bilgi hangi sorularda çıkar?</h2>
+    <ul class="hap-sorular">
+      <li><a href="/soru/bir-el-alna-diger-elin-iki-parmagi-cene-kemiginin-uzerine/">• Bir el alna, diğer elin iki parmağı çene kemiğinin üzerine yerleştirilir. • Alından bastırılıp çeneden kaldırılarak...</a></li>
+      <li><a href="/soru/bir-el-alina-yerlestirilir-diger-elin-iki-parmagi-cene/">• Bir el alına yerleştirilir. • Diğer elin iki parmağı çene kemiğinin üzerine yerleştirilir. • Alından bastırılıp...</a></li>
+    </ul>
     <!-- BODY_END -->
 
     <div class="ilgili">
       <p>Bu bilgi <b>İlk Yardım</b> konusuna aittir.
         <a href="/dersler/ilk-yardim/ilk-yardimin-abcsi/">İlk Yardımın ABC&#x27;si &rarr;</a></p>
       <p><a href="/hap-bilgiler/ilk-yardim/">Tüm İlk Yardım hap bilgileri &rarr;</a></p>
+      <p><a href="/ehliyet-sinav-sorulari/ilk-yardim/">İlk Yardım çıkmış sınav soruları &rarr;</a> · <a href="/deneme-sinavi/?konu=ilk-yardim">Bu konudan deneme çöz &rarr;</a></p>
     </div>
 
     <nav class="hap-nav" aria-label="Önceki / sonraki hap bilgi">
@@ -325,7 +344,6 @@
   </footer>
 
   <script src="/assets/js/mobile-nav.js" defer></script>
-  <script src="/assets/js/deneme-davet.js" defer></script>
 <!-- Google tag (gtag.js) -->
 <script>
 window.dataLayer=window.dataLayer||[];function g(){dataLayer.push(arguments)}window.gtag=g;g('js',new Date());g('config','G-34HL041XN0');var r=document.referrer,h=r?r.split('/')[2]:'';if(h&&/(chatgpt\.com|openai\.com|perplexity\.ai|claude\.ai|anthropic\.com|gemini\.google\.com|copilot\.microsoft\.com|bing\.com\/chat|you\.com|mistral\.ai|deepseek\.com)$/.test(h)){g('event','ai_referral',{ai_source:h})}

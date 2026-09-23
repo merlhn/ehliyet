@@ -22,6 +22,13 @@ SECTION_URL = {
     "Araç Tekniği": "/dersler/arac-teknigi/",
     "Trafik Adabı": "/dersler/trafik-adabi/",
 }
+# Konu bazlı soru dizini sayfaları (tools/konu-sayfa-uret.py üretir)
+TOPIC_URL = {
+    "İlk Yardım": "/ehliyet-sinav-sorulari/ilk-yardim/",
+    "Trafik ve Çevre": "/ehliyet-sinav-sorulari/trafik-ve-cevre/",
+    "Araç Tekniği": "/ehliyet-sinav-sorulari/arac-teknigi/",
+    "Trafik Adabı": "/ehliyet-sinav-sorulari/trafik-adabi/",
+}
 
 TR_MAP = str.maketrans({
     "ş": "s", "Ş": "s",
@@ -147,13 +154,21 @@ def truncate(text, max_len):
     return text[:max_len - 1].rsplit(" ", 1)[0] + "..."
 
 
-def generate_page(q, slug, exam_num):
+def generate_page(q, slug, exam_num, prev_slug=None, next_slug=None):
     stem_text = re.sub(r"\s+", " ", q["stem"]).strip()
     title_text = truncate(stem_text, 60) + " | ehliyet.digital"
     desc_text = truncate(stem_text, 155)
     canonical = f"{DOMAIN}/soru/{slug}/"
     section = q["section"]
     section_url = SECTION_URL.get(section, "/dersler/")
+    topic_url = TOPIC_URL.get(section, "/ehliyet-sinav-sorulari/")
+    nav_items = ""
+    if prev_slug:
+        nav_items += f'      <a class="prev" href="/soru/{prev_slug}/">&larr; Önceki soru</a>\n'
+    else:
+        nav_items += '      <span></span>\n'
+    if next_slug:
+        nav_items += f'      <a class="next" href="/soru/{next_slug}/">Sonraki soru &rarr;</a>\n'
     correct_idx = q["correct"]
     correct_letter = LETTER[correct_idx] if correct_idx < len(LETTER) else "A"
     correct_text = q["options"][correct_idx] if correct_idx < len(q["options"]) else ""
@@ -269,6 +284,12 @@ def generate_page(q, slug, exam_num):
   .ilgili{{margin-top:8px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;line-height:1.6}}
   .ilgili a{{font-weight:500;text-decoration:none}}
   .ilgili a:hover{{text-decoration:underline;text-underline-offset:3px}}
+  .ilgili p{{margin:0 0 8px}}
+  .deneme-cta a{{display:inline-block;margin-top:6px;background:#08090a;color:#fff;border-radius:999px;padding:9px 16px;font-size:13.5px;font-weight:500}}
+  .deneme-cta a:hover{{background:#26282c;text-decoration:none}}
+  .soru-nav{{display:flex;justify-content:space-between;gap:12px;margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}}
+  .soru-nav a{{font-size:14px;font-weight:500;text-decoration:none}}
+  .soru-nav a:hover{{text-decoration:underline;text-underline-offset:3px}}
 
   .kaynak{{margin-top:24px;font-size:13px;color:var(--muted);line-height:1.6}}
 
@@ -338,7 +359,12 @@ def generate_page(q, slug, exam_num):
     <div class="ilgili">
       <p>Bu soru <b>{esc(section)}</b> konusuna aittir.
         <a href="{section_url}">{esc(section)} ders notlarına git &rarr;</a></p>
+      <p><a href="{topic_url}">Tüm {esc(section)} soruları &rarr;</a></p>
+      <p class="deneme-cta"><a href="/deneme-sinavi/?basla={exam_num}">Bu soruyu gerçek sınav formatında çöz: Sınav {exam_num} denemesine başla &rarr;</a></p>
     </div>
+
+    <nav class="soru-nav" aria-label="Önceki / sonraki soru">
+{nav_items}    </nav>
 
     <div class="kaynak">
       <p>Kaynak: MEB MTSK e-sınavı</p>
@@ -390,7 +416,6 @@ def generate_page(q, slug, exam_num):
   </footer>
 
   <script src="/assets/js/mobile-nav.js" defer></script>
-  <script src="/assets/js/deneme-davet.js" defer></script>
 <!-- Google tag (gtag.js) -->
 <script>
 window.dataLayer=window.dataLayer||[];function g(){{dataLayer.push(arguments)}}window.gtag=g;g('js',new Date());g('config','G-34HL041XN0');var r=document.referrer,h=r?r.split('/')[2]:'';if(h&&/(chatgpt\\.com|openai\\.com|perplexity\\.ai|claude\\.ai|anthropic\\.com|gemini\\.google\\.com|copilot\\.microsoft\\.com|bing\\.com\\/chat|you\\.com|mistral\\.ai|deepseek\\.com)$/.test(h)){{g('event','ai_referral',{{ai_source:h}})}}
@@ -429,6 +454,7 @@ def main():
     generated = 0
     skipped = 0
 
+    secilen = []  # (soru, slug) — sıra: sınav 1..4, soru numarası
     for q in all_questions:
         if should_skip(q):
             skipped += 1
@@ -454,9 +480,14 @@ def main():
             slug = f"{base_slug}-{counter}"
             counter += 1
         used_slugs.add(slug)
+        secilen.append((q, slug))
+
+    for i, (q, slug) in enumerate(secilen):
+        prev_slug = secilen[i - 1][1] if i > 0 else None
+        next_slug = secilen[i + 1][1] if i + 1 < len(secilen) else None
 
         # Generate page
-        page_html = generate_page(q, slug, q["exam"])
+        page_html = generate_page(q, slug, q["exam"], prev_slug, next_slug)
         page_dir = os.path.join(SORU_DIR, slug)
         os.makedirs(page_dir, exist_ok=True)
         with open(os.path.join(page_dir, "index.html"), "w", encoding="utf-8") as f:

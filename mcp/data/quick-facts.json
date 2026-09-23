@@ -53,6 +53,10 @@
   },
   {
     "section": "İlk Yardım",
+    "fact": "Şok pozisyonu: kazazede sırtüstü yatırılır, ayakları 30 cm kaldırılır; amaç kalp ve beyne kan göndermektir. Baş yaralanması varsa şok pozisyonu verilmez."
+  },
+  {
+    "section": "İlk Yardım",
     "fact": "Fışkırır tarzda kanama atardamar kanamasıdır: bölge yukarı kaldırılır, temiz bezle baskı yapılır, bez kaldırılmadan üzerinden bandajla sarılır. Elle baskı, kanayan yere en yakın basınç noktasına uygulanır — en uzak noktaya değil."
   },
   {
@@ -73,6 +77,10 @@
   },
   {
     "section": "İlk Yardım",
+    "fact": "Burkulmada ilk yardım CİPS kuralı ile hatırlanır: Cilt soğutma (buz), İstirahat, Pansuman (baskılı sargı), Seviye yükseltme."
+  },
+  {
+    "section": "İlk Yardım",
     "fact": "Taşımada genel kural: baş-boyun-gövde ekseni bozulmadan, kazazede en az 6 destek noktasından kavranır ve mümkün olduğunca az hareket ettirilir. Kaldırırken ağırlık karın değil bacak kaslarına verilir."
   },
   {
@@ -81,7 +89,7 @@
   },
   {
     "section": "İlk Yardım",
-    "fact": "Teskereci yöntemi, kaşık ve köprü teknikleri kazazedeyi sedyeye yerleştirmek için kullanılır."
+    "fact": "Teskereci yöntemi iki ilk yardımcıyla yapılan bir taşıma yöntemidir: biri kazazedeyi arkadan koltuk altlarından, diğeri önden diz altlarından kavrar. Kaşık ve köprü teknikleri ise kazazedeyi sedyeye yerleştirmek için kullanılır."
   },
   {
     "section": "Trafik ve Çevre",
@@ -169,6 +177,10 @@
   },
   {
     "section": "Trafik ve Çevre",
+    "fact": "625 kuralı: alkollü araç kullanmada sürücü belgesi 1. ihlalde 6 ay, 2. ihlalde 2 yıl, 3. ihlalde 5 yıl geri alınır. Alkol sınırı hususi araçta 0,50, ticari araçta 0,20 promildir."
+  },
+  {
+    "section": "Trafik ve Çevre",
     "fact": "Kamyon, kamyonet ve römorkta yükle birlikte yolcu taşınırken: kasanın yan ve arka kapakları kapalı, yük sağlam yerleştirilmiş ve bağlanmış olmalıdır."
   },
   {
@@ -234,6 +246,10 @@
   {
     "section": "Araç Tekniği",
     "fact": "Dizel araca yanlışlıkla benzin konursa yakıt deposu boşaltılır; araç bu yakıtla kullanılmaz."
+  },
+  {
+    "section": "Araç Tekniği",
+    "fact": "Ayak frenine basıldığında aracın dört tekerleği de durur; el freni yalnızca arka tekerlekleri tutar. Ağırlık öne kaydığı için önce ön tekerlekler durur, ön balatalar daha çabuk aşınır."
   },
   {
     "section": "Araç Tekniği",

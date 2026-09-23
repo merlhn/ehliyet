@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<title>Ehliyet Deneme Sınavı Çöz: 50 Soru, 45 Dakika | ehliyet.digital</title>
+<meta name="description" content="Giriş gerektirmeyen ücretsiz ehliyet deneme sınavı. MEB e-sınav formatında 50 soru, 45 dakika, anında puan ve çözümlü cevaplar. Çıkmış sorulardan 4 farklı deneme.">
+<link rel="canonical" href="https://ehliyet.digital/deneme-sinavi/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ehliyet.digital">
+<meta property="og:title" content="Ehliyet Deneme Sınavı Çöz: 50 Soru, 45 Dakika">
+<meta property="og:description" content="Giriş gerektirmeyen ücretsiz ehliyet deneme sınavı. MEB e-sınav formatında 50 soru, 45 dakika, anında puan ve çözümlü cevaplar. Çıkmış sorulardan 4 farklı deneme.">
+<meta property="og:url" content="https://ehliyet.digital/deneme-sinavi/">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:image" content="https://ehliyet.digital/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ehliyet.digital — Ehliyet deneme sınavı">
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ehliyet Deneme Sınavı Çöz: 50 Soru, 45 Dakika">
+<meta name="twitter:description" content="Giriş gerektirmeyen ücretsiz ehliyet deneme sınavı. MEB e-sınav formatında 50 soru, 45 dakika, anında puan ve çözümlü cevaplar. Çıkmış sorulardan 4 farklı deneme.">
+<meta name="twitter:image" content="https://ehliyet.digital/og-image.png">
+<meta name="twitter:image:alt" content="ehliyet.digital — Ehliyet deneme sınavı">
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/css/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/assets/css/fonts.css"></noscript>
+<link rel="alternate" type="application/rss+xml" title="ehliyet.digital RSS" href="/feed.xml">
+<style>
+  :root{--fg:#08090a;--muted:#6a6f76;--line:#ececec;--bg:#fff}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter','Inter-fallback',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    color:var(--fg);background:#fff;-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;min-height:100vh;letter-spacing:-.011em}
+  a{color:inherit}
+
+  header{display:flex;align-items:center;gap:26px;height:64px;
+    padding:0 max(28px, calc((100% - 1100px) / 2));border-bottom:1px solid var(--line);
+    position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(10px);z-index:20}
+  .nav{display:flex;gap:24px}
+  .nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:450;white-space:nowrap}
+  .nav a:hover{color:var(--fg)}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:inherit;font-weight:500;
+    font-size:14px;line-height:1;text-decoration:none;cursor:pointer;border-radius:999px;padding:9px 16px;transition:.15s;white-space:nowrap;letter-spacing:-.01em}
+  .btn-primary{background:#08090a;color:#fff;border:1px solid #08090a}
+  .btn-primary:hover{background:#26282c;border-color:#26282c}
+  .btn-outline{background:#fff;color:var(--fg);border:1px solid var(--line)}
+  .btn-outline:hover{border-color:#c8c8c8;background:#fafafa}
+  .btn-lg{padding:9px 16px;font-size:13.5px}
+
+  main{flex:1}
+
+  /* Hero */
+  .hero{max-width:1100px;margin:0 auto;padding:72px 28px 48px}
+  .breadcrumb{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:6px;margin:0 0 24px}
+  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .breadcrumb a:hover{color:var(--fg);text-decoration:underline;text-underline-offset:3px}
+  .breadcrumb .sep{color:var(--muted);font-size:11px}
+  .hero h1{margin:0 0 16px;font-size:clamp(32px,5vw,48px);font-weight:600;letter-spacing:-.03em;line-height:1.08}
+  .hero p{margin:0;font-size:17px;line-height:1.6;color:var(--muted);max-width:680px}
+  .hero-actions{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+
+  /* Sections */
+  .icerik{max-width:1100px;margin:0 auto;padding:0 28px 48px}
+  .soru-grup{padding:32px 0;border-top:1px solid var(--line)}
+  .soru-grup h2{margin:0 0 8px;font-size:24px;font-weight:600;letter-spacing:-.025em}
+  .grup-desc{margin:0 0 24px;font-size:15px;color:var(--muted);line-height:1.5}
+  .grup-link{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:14px;font-weight:500;color:var(--fg);text-decoration:none}
+  .grup-link:hover{opacity:.7}
+
+  /* CTA */
+  .cta{max-width:1100px;margin:0 auto;padding:0 28px 48px}
+  .cta-inner{border:1px solid var(--line);border-radius:24px;background:#fafafa;padding:40px 20px;text-align:center;overflow:hidden}
+  .cta-inner h2{margin:0 0 10px;font-size:clamp(22px,4vw,34px);font-weight:600;letter-spacing:-.03em;line-height:1.15}
+  .cta-inner p{margin:0 auto 20px;font-size:15px;color:var(--muted);max-width:520px;line-height:1.5}
+
+  /* Footer */
+  .site-footer{border-top:1px solid var(--line);background:#fafafa;margin-top:auto;padding:0}
+  .foot-wrap{max-width:1100px;margin:0 auto;padding:44px 28px 40px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1fr;gap:40px;align-items:start}
+  .foot-hakkinda{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+  .foot-hakkinda p{margin:0;font-size:14px;color:var(--muted);line-height:1.55;max-width:270px}
+  .foot-col{display:flex;flex-direction:column;gap:10px}
+  .foot-label{display:block;margin:0 0 4px;font-family:'Geist Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .foot-col a{color:var(--fg);font-size:14px;text-decoration:none}
+  .foot-col a:hover{text-decoration:underline;text-underline-offset:3px}
+  @media(max-width:860px){.foot-wrap{grid-template-columns:1fr 1fr;gap:30px}.foot-hakkinda{grid-column:1/-1}}
+  .foot-feedback{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);background:#fff;border-radius:10px;padding:11px 18px;font-size:14px;font-weight:500;color:var(--fg);text-decoration:none;transition:.15s;white-space:nowrap}
+  .foot-feedback:hover{border-color:#c8c8c8}
+  .foot-feedback svg{color:var(--muted)}
+
+  .marka{display:flex;align-items:center;flex-shrink:0;text-decoration:none}
+  .marka img{width:26px;height:26px;object-fit:contain;display:block}
+  .foot-marka{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--fg);font-size:14.5px;font-weight:600;letter-spacing:-.02em;flex-shrink:0}
+  .foot-marka img{width:22px;height:22px;object-fit:contain;display:block}
+
+  @media(max-width:640px){
+    header{padding:0 16px;gap:12px;height:58px}
+    .nav{gap:14px}
+    .nav a{font-size:11px}
+    .hero{padding:52px 20px 40px}
+    .icerik{padding:0 20px 36px}
+    .cta-inner{padding:44px 22px}
+    .marka img{width:22px;height:22px}
+    .foot-wrap{gap:26px}
+  }
+
+  /* Açılış sayfası */
+  .hero .ozet{display:flex;gap:28px;flex-wrap:wrap;margin-top:28px}
+  .hero .ozet div{display:flex;flex-direction:column;gap:2px}
+  .hero .ozet b{font-size:26px;font-weight:600;letter-spacing:-.03em;line-height:1}
+  .hero .ozet span{font-size:13px;color:var(--muted)}
+  .icerik{max-width:1100px;margin:0 auto;padding:0 28px 48px}
+  .blok{padding:36px 0;border-top:1px solid var(--line)}
+  .blok h2{margin:0 0 8px;font-size:24px;font-weight:600;letter-spacing:-.025em}
+  .blok>p{margin:0 0 20px;font-size:15px;color:var(--muted);line-height:1.6;max-width:720px}
+  .sinav-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  @media(max-width:900px){.sinav-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.sinav-grid{grid-template-columns:1fr}}
+  .sinav-kart{border:1px solid var(--line);border-radius:16px;padding:22px 20px;display:flex;flex-direction:column;gap:10px;background:#fff}
+  .sinav-kart .no{font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .sinav-kart h3{margin:0;font-size:18px;font-weight:600;letter-spacing:-.02em}
+  .sinav-kart p{margin:0 0 6px;font-size:13.5px;color:var(--muted);line-height:1.5;flex:1}
+  .madde{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,1fr);gap:12px 28px}
+  @media(max-width:700px){.madde{grid-template-columns:1fr}}
+  .madde li{font-size:15px;line-height:1.6;color:#333;padding-left:22px;position:relative}
+  .madde li::before{content:'';position:absolute;left:0;top:11px;width:8px;height:8px;border-radius:50%;background:#08090a}
+  .dagilim{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:8px}
+  @media(max-width:700px){.dagilim{grid-template-columns:repeat(2,1fr)}}
+  .dagilim div{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:#fafafa}
+  .dagilim b{display:block;font-size:22px;font-weight:600;letter-spacing:-.03em}
+  .dagilim span{font-size:13px;color:var(--muted)}
+  .sss details{border-top:1px solid var(--line);padding:14px 0}
+  .sss details:last-child{border-bottom:1px solid var(--line)}
+  .sss summary{cursor:pointer;font-size:16px;font-weight:500;letter-spacing:-.01em;list-style:none;display:flex;justify-content:space-between;gap:12px}
+  .sss summary::-webkit-details-marker{display:none}
+  .sss summary::after{content:'+';color:var(--muted);font-weight:400}
+  .sss details[open] summary::after{content:'–'}
+  .sss p{margin:10px 0 0;font-size:15px;line-height:1.6;color:#444;max-width:760px}
+  .baglantilar{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+  .sonuc-kayit{max-width:660px;margin:18px auto 4px;border:1px solid var(--line);border-radius:14px;padding:18px 20px;background:#fafafa;text-align:left;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+  .sonuc-kayit p{margin:0;font-size:14px;line-height:1.55;color:#333;flex:1;min-width:220px}
+  .sonuc-kayit button{background:#08090a;color:#fff;border:1px solid #08090a;border-radius:999px;padding:10px 18px;font:inherit;font-size:14px;font-weight:500;cursor:pointer;white-space:nowrap}
+  .sonuc-kayit button:hover{background:#26282c}
+
+  /* ---- Sınav motoru (panel/sinav-1 ile ortak) ---- */
+  :root{
+    --pink:#000000; --pink-d:#333333; --pink-l:#f5f5f5;
+    --ink:#08090a; --muted:#6a6f76; --line:#ececec;
+    --ok:#0a7f3f; --ok-l:#effaf3; --bad:#c72c2c; --bad-l:#fdf1f1;
+    --warn:#8a6d00; --warn-l:#fbf8ec;
+  }
+  .sinav-modal>header{background:#fff;border-bottom:1px solid var(--line);
+    height:60px;padding:0 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;position:static;z-index:20}
+  .h-title{color:#000;font-weight:600;letter-spacing:-.01em;position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap}
+  .h-meta{margin-left:auto;display:flex;align-items:center;gap:12px}
+  .timer-label{color:#666;font-size:13px}
+  .timer-group{display:flex;align-items:center;gap:6px}
+  .timer{font-family:'Geist Mono',monospace;font-weight:500;font-size:13px;line-height:18px;background:#fff;color:#000;border:1px solid var(--line);border-radius:999px;padding:5px 11px;min-width:64px;text-align:center}
+  .timer.low{border-color:var(--bad);color:var(--bad)}
+  .finish-btn{background:#000;color:#fff;border:1px solid #000;border-radius:999px;padding:5px 16px;font-weight:500;font-size:13px;line-height:18px;cursor:pointer;white-space:nowrap;font-family:inherit}
+  .finish-btn:hover{background:#333;border-color:#333}
+  .exit-btn{background:#fff;border:1px solid var(--line);color:#000;border-radius:999px;padding:5px 16px;font-weight:500;font-size:13px;line-height:18px;cursor:pointer;white-space:nowrap;font-family:inherit}
+  .exit-btn:hover{border-color:#000}
+
+  .wrap{max-width:1080px;margin:18px auto;padding:0 16px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .qhead{display:flex;align-items:center;gap:12px;padding:16px 22px;border-bottom:1px solid var(--line);background:#fff}
+  .qno{color:#000;font-weight:600;font-size:19px;letter-spacing:-.02em}
+  .qsec{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.03em;color:#000;background:#f5f5f5;border:1px solid var(--line);border-radius:6px;padding:3px 9px;font-weight:500}
+  .qprog{margin-left:auto;color:var(--muted);font-size:13px}
+
+  .qbody{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  @media(max-width:820px){.qbody{grid-template-columns:1fr}.qleft{border-right:none;border-bottom:1px solid var(--line)}}
+  .qleft{padding:22px;border-right:1px solid var(--line)}
+  .qright{padding:22px;display:flex;flex-direction:column;gap:12px;justify-content:center}
+  .qtext{font-size:16px;line-height:1.6;white-space:pre-wrap;color:#111}
+  .media{margin-top:16px}
+  .media img,.media video{max-width:100%;border:1px solid var(--line);border-radius:10px;display:block}
+  .media-fallback{background:var(--warn-l);border:1px dashed #e0b070;color:#7a5200;border-radius:10px;padding:12px 14px;font-size:14px;margin-top:8px}
+  .media-fallback .ph{display:block;margin-top:6px;color:#a06a00;font-size:12px;font-style:italic}
+
+  .opt{display:flex;align-items:center;gap:12px;border:1px solid var(--line);background:#fff;
+    border-radius:10px;padding:14px 16px;cursor:pointer;font-size:15px;transition:.12s;user-select:none}
+  .opt:hover{border-color:#000}
+  .opt .lbl{font-weight:600;color:#000;font-family:'Geist Mono',monospace}
+  .opt.sel{background:#000;color:#fff;border-color:#000}
+  .opt.sel .lbl{color:#fff}
+  .opt.has-img{flex-direction:column;align-items:stretch}
+  .opt-img{max-height:130px;width:auto;max-width:100%;border-radius:8px;margin-top:8px;object-fit:contain;background:#fff;align-self:center}
+  .opts{display:flex;flex-direction:column;gap:12px}
+  .opts-2x2{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:12px}
+  @media(max-width:360px){.opts-2x2{grid-template-columns:1fr}}
+  /* review states */
+  .opt.correct{background:var(--ok-l);border-color:var(--ok)}
+  .opt.correct .lbl{color:var(--ok)}
+  .opt.wrong{background:var(--bad-l);border-color:var(--bad)}
+  .opt.wrong .lbl{color:var(--bad)}
+  .review .opt{cursor:default}
+  .tag{margin-left:auto;font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;text-align:center}
+  .tag.ok{background:var(--ok);color:#fff}
+  .tag.no{background:var(--bad);color:#fff}
+  .note{margin-top:4px;background:var(--warn-l);border-left:3px solid var(--warn);color:#7a5200;padding:8px 12px;border-radius:6px;font-size:13px}
+
+  .footer{display:flex;align-items:center;gap:12px;padding:16px 20px;border-top:1px solid var(--line);flex-wrap:wrap}
+  .nav-btn{background:#fff;border:1px solid var(--line);color:#000;border-radius:999px;padding:10px 18px;font-weight:500;font-size:14px;cursor:pointer;font-family:inherit}
+  .nav-btn:hover{border-color:#000}
+  .nav-btn:disabled{opacity:.4;cursor:not-allowed}
+  .nav-btn.next{background:#000;color:#fff;border-color:#000}
+  .nav-btn.next:hover{background:#333;border-color:#333}
+  .spacer{flex:1}
+
+  .grid{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px;padding:16px;background:#fff;border:1px solid var(--line);border-radius:14px}
+  .cell{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:#fff;color:#666;font-weight:500;cursor:pointer;font-size:13px;font-family:'Geist Mono',monospace;transition:.12s}
+  .cell:hover{border-color:#000;color:#000}
+  .cell.answered{background:#000;color:#fff;border-color:#000}
+  .cell.current{outline:2px solid #000;outline-offset:2px}
+  .cell.c-correct{background:var(--ok);color:#fff;border-color:var(--ok)}
+  .cell.c-wrong{background:var(--bad);color:#fff;border-color:var(--bad)}
+  .cell.c-empty{background:#efefef;color:#999}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;margin-bottom:18px;font-size:12px;color:var(--muted)}
+  .legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:5px;vertical-align:middle}
+
+  /* results */
+  .result{padding:34px 30px;text-align:center}
+  .result h1{margin:0 0 6px;font-size:28px;font-weight:600;letter-spacing:-.03em}
+  .verdict{display:inline-block;padding:7px 20px;border-radius:999px;font-weight:600;font-size:16px;margin:10px 0;border:1px solid}
+  .verdict.pass{background:var(--ok-l);color:var(--ok);border-color:#bfe6cd}
+  .verdict.fail{background:var(--bad-l);color:var(--bad);border-color:#f2c9c9}
+  .stats{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:20px 0}
+  .stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 22px;min-width:110px}
+  .stat b{display:block;font-size:26px;font-weight:600}
+  .stat.g b{color:var(--ok)} .stat.r b{color:var(--bad)} .stat.m b{color:var(--muted)} .stat.p b{color:#000}
+  .breakdown{max-width:520px;margin:26px auto 8px;text-align:left;border-top:1px solid var(--line);padding-top:22px}
+  .bd-title{font-size:14px;font-weight:600;color:#000;margin-bottom:16px;letter-spacing:-.01em}
+  .bd-row{margin:13px 0}
+  .bd-top{display:flex;justify-content:space-between;align-items:baseline;font-size:14px;margin-bottom:7px}
+  .bd-val{font-family:'Geist Mono',monospace;font-size:12.5px;color:#666}
+  .bd-bar{height:7px;background:#eee;border-radius:999px;overflow:hidden}
+  .bd-fill{height:100%;background:#000;border-radius:999px;transition:width .4s}
+  .modal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;z-index:120}
+  .modal.show{display:flex}
+  .modal .box{background:#fff;border-radius:14px;padding:26px;max-width:420px;text-align:center}
+  .modal .box p{color:var(--muted)}
+  .row{display:flex;gap:10px;justify-content:center;margin-top:16px}
+
+  /* ---------- Mobil (tablet ve altı) ---------- */
+  @media(max-width:600px){
+    .sinav-modal>header{height:auto;gap:8px 6px;padding:8px 12px}
+    .h-title{font-size:13px;flex-basis:100%;order:-1;line-height:1.25;position:static;transform:none;left:auto;white-space:normal;text-align:center}
+    .h-meta{display:contents}
+    .exit-btn{order:1;padding:5px 12px;font-size:13px;line-height:18px}
+    .timer-group{order:2;flex:1;justify-content:center;gap:6px;margin-top:0}
+    .finish-btn{order:3;margin-left:0;padding:5px 12px;font-size:13px;line-height:18px}
+    .timer-label{font-size:11px}
+    .timer{font-size:12px;padding:5px 8px;min-width:52px}
+
+    .wrap{margin:10px auto;padding:0 10px}
+    .card{border-radius:12px}
+    .qhead{padding:10px 14px;gap:8px}
+    .qno{font-size:16px}
+    .qsec{font-size:11px}
+    .qprog{font-size:11px}
+    .qleft,.qright{padding:14px}
+    .qtext{font-size:15px}
+    .opt{font-size:14px;padding:12px 12px;border-radius:12px}
+    .opt-img{max-height:120px}
+    .tag{font-size:11px}
+
+    .footer{padding:12px 14px;gap:8px}
+    .footer .spacer{display:none}
+    .nav-btn{padding:10px 12px;font-size:14px;flex:1 1 40%}
+    .nav-btn.next{flex-basis:100%;order:5}
+
+    .grid{gap:6px;padding:12px;justify-content:center}
+    .cell{width:34px;height:34px;font-size:12px}
+    .legend{justify-content:center;gap:12px}
+
+    .result{padding:20px}
+    .result h1{font-size:22px}
+    .verdict{font-size:17px;padding:7px 18px}
+    .stats{gap:10px}
+    .stat{min-width:calc(50% - 5px);padding:12px 10px}
+    .stat b{font-size:22px}
+
+    .modal .box{margin:16px;padding:22px}
+  }
+  /* Çok küçük telefonlar */
+  @media(max-width:380px){
+    .cell{width:30px;height:30px;font-size:11px}
+    .h-title{font-size:12px}
+  }
+
+  /* Sınav, panelin üzerinde tam ekran bir modal olarak açılır:
+     panel (altta) -> koyu overlay -> sınav modalı. Yan menü overlay'in altında
+     kaldığı için sınav sürerken yanlışlıkla tıklanamaz. */
+  .sinav-overlay{position:fixed;inset:0;background:rgba(15,20,40,.6);z-index:100;
+    display:flex;align-items:center;justify-content:center;padding:20px}
+  .sinav-modal{background:#fff;border-radius:18px;width:100%;max-width:1180px;
+    max-height:calc(100vh - 40px);display:flex;flex-direction:column;overflow:hidden;
+    box-shadow:0 24px 60px rgba(0,0,0,.25)}
+  .sinav-modal > header{position:static;left:auto;border-radius:18px 18px 0 0;flex-shrink:0}
+  .sinav-modal .wrap{flex:1;overflow-y:auto;margin:0;padding:18px 16px;max-width:none}
+  @media(max-width:820px){
+    .sinav-overlay{padding:0}
+    .sinav-modal{max-width:none;max-height:100vh;height:100vh;max-height:100dvh;height:100dvh;border-radius:0}
+    .sinav-modal > header{border-radius:0}
+  }
+
+
+  .sinav-overlay{display:none}
+  .sinav-overlay.acik{display:flex}
+  .modal{z-index:200}
+</style>
+<!-- schema.org — tools/schema-uret.py tarafından üretilir, elle düzenlenmez -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "Ehliyet Deneme Sınavı",
+      "description": "Giriş gerektirmeyen ücretsiz ehliyet deneme sınavı. MEB e-sınav formatında 50 soru, 45 dakika, anında puan ve çözümlü cevaplar. Çıkmış sorulardan 4 farklı deneme.",
+      "url": "https://ehliyet.digital/deneme-sinavi/",
+      "inLanguage": "tr-TR",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "ehliyet.digital",
+        "url": "https://ehliyet.digital/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://ehliyet.digital/#organization",
+        "name": "ehliyet.digital",
+        "alternateName": [
+          "Ehliyet Digital",
+          "ehliyet digital"
+        ],
+        "url": "https://ehliyet.digital/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ehliyet.digital/icon-512.png",
+          "width": 512,
+          "height": 512
+        },
+        "description": "Ehliyet (sürücü belgesi) sınavına hazırlık için ücretsiz, reklamsız ve bağımsız çalışma platformu.",
+        "foundingDate": "2026",
+        "areaServed": "TR",
+        "knowsAbout": [
+          "ehliyet sınavı",
+          "MTSK e-sınav",
+          "sürücü belgesi",
+          "trafik ve çevre bilgisi",
+          "ilk yardım",
+          "araç tekniği",
+          "trafik adabı"
+        ],
+        "sameAs": [
+          "https://github.com/merlhn/ehliyet",
+          "https://mcpmarket.com/server/ehliyet-digital",
+          "https://smithery.ai/servers/omerlhn/ehliyet-digital"
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://ehliyet.digital/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Ehliyet Deneme Sınavı",
+          "item": "https://ehliyet.digital/deneme-sinavi/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- /schema.org -->
+</head>
+<body>
+
+  <header>
+    <a class="marka" href="/" aria-label="ehliyet.digital"><img src="/assets/img/marka/logo.png" alt="ehliyet.digital" width="26" height="26"></a>
+    <nav class="nav" aria-label="Ana navigasyon">
+      <a href="/">Ana Sayfa</a>
+      <a href="/ehliyet-sinav-sorulari/">Soru Çöz</a>
+      <a href="/dersler/">Ders Notları</a>
+      <a href="/hap-bilgiler/">Hap Bilgiler</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <nav class="breadcrumb" aria-label="Gezinme">
+        <a href="/">Ana Sayfa</a> <span class="sep">›</span> <a href="/ehliyet-sinav-sorulari/">Ehliyet Sınav Soruları</a> <span class="sep">›</span> <span>Deneme Sınavı</span>
+      </nav>
+      <h1>Ehliyet Deneme Sınavı</h1>
+      <p>MEB e-sınavıyla birebir aynı formatta ücretsiz deneme: <b>50 soru, 45 dakika</b>, dört bölüm. Giriş yapmadan hemen başla; süre tutulur, sınav bitince puanın ve her sorunun doğru cevabı anında gösterilir. Sorular gerçek ehliyet sınavında çıkmış sorulardan derlendi.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary btn-lg" type="button" data-sinav="1">Deneme Sınavına Başla</button>
+        <a class="btn btn-outline btn-lg" href="#sinavlar">Diğer denemeler</a>
+      </div>
+      <div class="ozet" aria-label="Sınav özeti">
+        <div><b>50</b><span>soru</span></div>
+        <div><b>45</b><span>dakika</span></div>
+        <div><b>70</b><span>geçme puanı</span></div>
+        <div><b>4</b><span>farklı deneme</span></div>
+      </div>
+    </div>
+
+    <div class="icerik">
+      <section class="blok" id="sinavlar">
+        <h2>Deneme sınavını seç</h2>
+        <p>Dört deneme de MEB MTSK e-sınavında çıkmış sorulardan oluşur. Hepsi aynı format: 50 soru, 45 dakika, her doğru 2 puan.</p>
+        <div class="sinav-grid">
+          <div class="sinav-kart"><span class="no">Deneme 1</span><h3>Sınav 1</h3><p>Başlangıç için önerilen deneme. Dört konudan dengeli soru dağılımı.</p><button class="btn btn-primary" type="button" data-sinav="1">Sınava Başla</button></div>
+          <div class="sinav-kart"><span class="no">Deneme 2</span><h3>Sınav 2</h3><p>Görselli trafik işareti ve kavşak soruları ağırlıklı.</p><button class="btn btn-primary" type="button" data-sinav="2">Sınava Başla</button></div>
+          <div class="sinav-kart"><span class="no">Deneme 3</span><h3>Sınav 3</h3><p>İlk yardım ve araç tekniği çeldiricileri yoğun.</p><button class="btn btn-primary" type="button" data-sinav="3">Sınava Başla</button></div>
+          <div class="sinav-kart"><span class="no">Deneme 4</span><h3>Sınav 4</h3><p>Video ve görsel sorularıyla en güncel e-sınav formatı.</p><button class="btn btn-primary" type="button" data-sinav="4">Sınava Başla</button></div>
+        </div>
+      </section>
+
+      <section class="blok" id="konu-denemeleri">
+        <h2>Konu bazlı deneme</h2>
+        <p>Tek bir konuda eksiğin varsa dört sınavın o konudaki sorularını tek denemede çöz. Süre soru sayısına göre ayarlanır, geçme koşulu yüzde 70. Konu denemeleri panele kaydedilmez.</p>
+        <div class="baglantilar">
+          <a class="btn btn-outline" href="/deneme-sinavi/?konu=ilk-yardim">İlk Yardım denemesi</a>
+          <a class="btn btn-outline" href="/deneme-sinavi/?konu=trafik-ve-cevre">Trafik ve Çevre denemesi</a>
+          <a class="btn btn-outline" href="/deneme-sinavi/?konu=arac-teknigi">Araç Tekniği denemesi</a>
+          <a class="btn btn-outline" href="/deneme-sinavi/?konu=trafik-adabi">Trafik Adabı denemesi</a>
+        </div>
+      </section>
+
+      <section class="blok">
+        <h2>Deneme sınavı nasıl çalışır?</h2>
+        <p>Arayüz, süre ve puanlama gerçek e-sınavla aynı. Sınav sırasında sorular arasında ileri geri gidebilir, soru haritasından istediğin soruya atlayabilirsin.</p>
+        <ul class="madde">
+          <li><b>Giriş gerekmez.</b> Sayfayı aç, sınava başla. Sonuçlarını kaydetmek istersen Google ile giriş yapabilirsin.</li>
+          <li><b>50 soru, 45 dakika.</b> Süre dolunca sınav otomatik biter, işaretlediklerin puanlanır.</li>
+          <li><b>Puanlama gerçek sınav gibi.</b> Her doğru 2 puan, yanlış doğruyu götürmez. Geçmek için 70 puan, yani en az 35 doğru.</li>
+          <li><b>Anında sonuç.</b> Puan, doğru, yanlış ve boş sayısı; konu bazlı performans grafiği.</li>
+          <li><b>Çözümlü inceleme.</b> Sınav bitince her sorunun doğru cevabı ve senin işaretin yan yana gösterilir.</li>
+          <li><b>Ücretsiz ve reklamsız.</b> Ücret, üyelik zorunluluğu veya reklam yok.</li>
+        </ul>
+      </section>
+
+      <section class="blok">
+        <h2>Gerçek ehliyet sınavıyla aynı soru dağılımı</h2>
+        <p>MEB e-sınavında 50 soru dört bölümden gelir. Denemelerdeki dağılım da aynıdır, böylece hangi bölümde eksiğin olduğunu gerçek sınavdaki ağırlığıyla görürsün.</p>
+        <div class="dagilim">
+          <div><b>12</b><span>İlk Yardım</span></div>
+          <div><b>23</b><span>Trafik ve Çevre</span></div>
+          <div><b>9</b><span>Araç Tekniği</span></div>
+          <div><b>6</b><span>Trafik Adabı</span></div>
+        </div>
+      </section>
+
+      <section class="blok sss">
+        <h2>Sık sorulan sorular</h2>
+        <details><summary>Deneme sınavı ücretsiz mi?</summary><p>Evet. Dört deneme de ücretsiz, reklam yok. Herhangi bir üyelik veya ödeme gerekmez.</p></details>
+        <details><summary>Giriş yapmam gerekiyor mu?</summary><p>Hayır. Sınava doğrudan başlayabilirsin. Google ile giriş yaparsan denemelerin hesabına kaydedilir ve panelde puan gelişimini, konu bazlı eksiklerini takip edebilirsin.</p></details>
+        <details><summary>Sorular gerçek sınavdan mı?</summary><p>Sorular MEB MTSK e-sınavında çıkmış sorulardan derlendi. Dört denemede toplam 200 soru var. Aynı soruları tek tek cevaplarıyla incelemek için <a href="/ehliyet-sinav-sorulari/">ehliyet sınav soruları</a> sayfasına bakabilirsin.</p></details>
+        <details><summary>Kaç doğru ile geçilir?</summary><p>Gerçek sınavda ve bu denemede 50 soruda en az 35 doğru gerekir. Her doğru 2 puandır, geçme notu 70'tir. Yanlış cevaplar doğruları götürmez, bu yüzden boş bırakmak yerine işaretlemek daha mantıklıdır.</p></details>
+        <details><summary>Süre ne kadar?</summary><p>45 dakika, gerçek e-sınavla aynı. Süre dolduğunda sınav otomatik olarak biter ve o ana kadar işaretlediklerin puanlanır.</p></details>
+        <details><summary>Sınav bitince ne görürüm?</summary><p>Puanını, doğru, yanlış ve boş sayılarını, bölüm bazlı başarı yüzdelerini ve her sorunun doğru cevabını görürsün. Yanlış yaptığın soruların konusunu <a href="/dersler/">ders notlarından</a> veya <a href="/hap-bilgiler/">hap bilgilerden</a> hızlıca tekrar edebilirsin.</p></details>
+      </section>
+
+      <section class="blok">
+        <h2>Sınava hazırlanırken</h2>
+        <p>Deneme sonucunda düşük çıkan bölüm için kısa yol: önce o konunun hap bilgilerini oku, sonra ders notuna geç, ardından yeni bir deneme çöz.</p>
+        <div class="baglantilar">
+          <a class="btn btn-outline" href="/ehliyet-sinav-sorulari/">Çıkmış sorular ve cevapları</a>
+          <a class="btn btn-outline" href="/hap-bilgiler/">Hap bilgiler</a>
+          <a class="btn btn-outline" href="/dersler/">Ders notları</a>
+          <a class="btn btn-outline" href="/ehliyet-sinav-konulari/">Sınav konuları</a>
+        </div>
+      </section>
+    </div>
+
+    <section class="cta">
+      <div class="cta-inner">
+        <h2>Hazırsan başlayalım</h2>
+        <p>50 soru, 45 dakika. Sınav bitince puanını ve her sorunun cevabını hemen gör.</p>
+        <button class="btn btn-primary btn-lg" type="button" data-sinav="1">Deneme Sınavına Başla</button>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="foot-wrap">
+      <div class="foot-hakkinda">
+        <a class="foot-marka" href="/">
+          <img src="/assets/img/marka/logo.png" alt="ehliyet.digital" width="22" height="22" loading="lazy">
+          ehliyet.digital
+        </a>
+        <p>Sınavdan önce ders notlarını incele, hap bilgileri al ve deneme sınavları ile kendini test et. Ehliyet sınavına kolaylıkla hazırlan.</p>
+        <a class="foot-feedback" href="mailto:omerlhn@gmail.com?subject=Ehliyet%20Deneme%20—%20Geri%20Bildirim">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Geri bildirim gönder
+        </a>
+      </div>
+      <nav class="foot-col" aria-label="Hap Bilgiler">
+        <span class="foot-label">Hap Bilgiler</span>
+        <a href="/hap-bilgiler/ilk-yardim/">İlk Yardım</a>
+        <a href="/hap-bilgiler/trafik-ve-cevre/">Trafik ve Çevre</a>
+        <a href="/hap-bilgiler/arac-teknigi/">Araç Tekniği</a>
+        <a href="/hap-bilgiler/trafik-adabi/">Trafik Adabı</a>
+      </nav>
+      <nav class="foot-col" aria-label="Ders Notları">
+        <span class="foot-label">Ders Notları</span>
+        <a href="/dersler/ilk-yardim/">İlk Yardım</a>
+        <a href="/dersler/trafik-ve-cevre/">Trafik ve Çevre</a>
+        <a href="/dersler/arac-teknigi/">Araç Tekniği</a>
+        <a href="/dersler/trafik-adabi/">Trafik Adabı</a>
+      </nav>
+      <nav class="foot-col" aria-label="Faydalı Bilgiler">
+        <span class="foot-label">Faydalı Bilgiler</span>
+        <a href="/ehliyet-sinav-sorulari/">Soru Çöz</a>
+        <a href="/ehliyet-nasil-alinir/">Ehliyet Nasıl Alınır?</a>
+        <a href="/ehliyet-sinav-konulari/">Sınav Konuları</a>
+        <a href="/direksiyon-sinavi/">Direksiyon Sınavı</a>
+      </nav>
+      <nav class="foot-col" aria-label="Sayfalar">
+        <span class="foot-label">Sayfalar</span>
+        <a href="/hakkinda/">Hakkında</a>
+        <a href="/iletisim/">İletişim</a>
+        <a href="/gizlilik/">Gizlilik Politikası</a>
+        <a href="/kullanim-sartlari/">Kullanım Şartları</a>
+      </nav>
+    </div>
+  </footer>
+
+<div class="sinav-overlay" id="sinavOverlay" role="dialog" aria-modal="true" aria-label="Deneme sınavı">
+<div class="sinav-modal">
+<header>
+  <button class="exit-btn" type="button" onclick="cikisIste()">‹ Çıkış</button>
+  <div class="h-title">Sınav 1</div>
+  <div class="h-meta">
+    <div class="timer-group">
+      <span class="timer-label">Kalan süre</span>
+      <div class="timer" id="timer">45:00</div>
+    </div>
+    <button class="finish-btn" id="finishBtn">Sınavı Bitir</button>
+  </div>
+</header>
+
+<div class="wrap" id="app"></div>
+</div>
+</div>
+
+<!-- confirm finish -->
+<div class="modal" id="confirmModal">
+  <div class="box">
+    <h2>Sınavı bitir?</h2>
+    <p id="confirmText"></p>
+    <div class="row">
+      <button class="nav-btn" onclick="closeConfirm()">Vazgeç</button>
+      <button class="nav-btn next" onclick="doFinish()">Evet, bitir</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let Q = [];
+const LETTERS = ["A","B","C","D"];
+let PASS_CORRECT = 35;         // 50 soruda geçme (≈70 puan)
+let SINAV_ADI = 'Sınav 1';
+let SINAV_NO = 1;
+let KONU = null;
+let DURATION = 45*60;          // 45 dakika
+
+let cur = 0;
+let answers = []; // seçilen index veya null
+let finished = false;
+let remaining = DURATION;
+let timerId = null;
+
+const app = document.getElementById('app');
+const timerEl = document.getElementById('timer');
+
+function fmt(s){const m=Math.floor(s/60),x=s%60;return `${String(m).padStart(2,'0')}:${String(x).padStart(2,'0')}`;}
+function tick(){
+  remaining--;
+  timerEl.textContent = fmt(Math.max(0,remaining));
+  if(remaining<=60) timerEl.classList.add('low');
+  if(remaining<=0){ clearInterval(timerId); doFinish(true); }
+}
+let _examStarted=false;
+function startTimer(){
+  window.SINAV_DEVAM_EDIYOR=true; timerEl.textContent=fmt(remaining); timerId=setInterval(tick,1000);
+  if(!_examStarted && typeof gtag==='function'){ _examStarted=true; gtag('event','exam_start',{exam_name:SINAV_ADI, logged_in:!!window.__girisVar, kaynak:'acik', konu:KONU||''}); }
+}
+
+function mediaHTML(q){
+  if(!q.media && !q.caption) return '';
+  if(q.media){
+    const cap = q.caption || 'Görsel/video';
+    if(q.media.type==='image'){
+      return `<div class="media">
+        <img src="${q.media.file}" alt="${cap}"${q.mediaWidth?` style="max-width:${q.mediaWidth}"`:''}
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="media-fallback" style="display:none">🖼️ ${cap}
+          <span class="ph">[görsel eklenecek → ${q.media.file}]</span></div>
+      </div>`;
+    } else {
+      return `<div class="media">
+        <video src="${q.media.file}" controls playsinline
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'"></video>
+        <div class="media-fallback" style="display:none">🎬 ${cap}
+          <span class="ph">[video eklenecek → ${q.media.file}]</span></div>
+      </div>`;
+    }
+  }
+  return `<div class="media"><div class="media-fallback">🖼️ ${q.caption}</div></div>`;
+}
+
+function render(){
+  const q = Q[cur];
+  const sel = answers[cur];
+  const answeredCount = answers.filter(a=>a!==null).length;
+
+  let opts = q.options.map((o,i)=>{
+    const hasImg = !!q.optionImages;
+    const inner = hasImg
+      ? `<span class="lbl">${LETTERS[i]}</span><img class="opt-img" src="${q.optionImages[i]}" alt="Şık ${LETTERS[i]}: ${q.options[i]}" onerror="this.style.display='none'">`
+      : `<span class="lbl">${LETTERS[i]}</span><span>${o}</span>`;
+    let cls='opt'+(hasImg?' has-img':'');
+    if(finished){
+      if(i===q.correct) cls+=' correct';
+      else if(i===sel) cls+=' wrong';
+      let tag='';
+      if(i===q.correct) tag='<span class="tag ok">Doğru cevap</span>';
+      else if(i===sel) tag='<span class="tag no">Senin cevabın</span>';
+      return `<div class="${cls}">${inner}${tag}</div>`;
+    }else{
+      if(i===sel) cls+=' sel';
+      return `<div class="${cls}" onclick="pick(${i})">${inner}</div>`;
+    }
+  }).join('');
+
+  const noteHTML = (finished && q.note) ? `<div class="note">${q.uncertain?'⚠️':'ℹ️'} ${q.note}</div>` : '';
+
+  app.innerHTML = `
+  ${finished ? resultHTML() : ''}
+  <div class="grid" id="grid">${gridHTML()}</div>
+  <div class="legend">
+    ${finished
+      ? `<span><i style="background:var(--ok)"></i>Doğru</span><span><i style="background:var(--bad)"></i>Yanlış</span><span><i style="background:#efefef"></i>Boş</span>`
+      : `<span><i style="background:var(--pink)"></i>İşaretlendi</span><span><i style="background:#fff;border:1px solid var(--line)"></i>Boş</span><span><i style="background:#fff;outline:2px solid #08090a"></i>Bulunduğun soru</span>`}
+  </div>
+
+  <div class="card ${finished?'review':''}">
+    <div class="qhead">
+      <span class="qno">Soru ${cur+1}</span>
+      <span class="qsec">${q.section}</span>
+      <span class="qprog">${finished?'İnceleme modu':`İşaretlenen: ${answeredCount}/${Q.length}`}</span>
+    </div>
+    <div class="qbody">
+      <div class="qleft">
+        <div class="qtext">${q.stem}</div>
+        ${mediaHTML(q)}
+      </div>
+      <div class="qright">
+        <div class="opts${q.optionImages?' opts-2x2':''}">${opts}</div>
+        ${noteHTML}
+      </div>
+    </div>
+    <div class="footer">
+      <button class="nav-btn" onclick="go(-1)" ${cur===0?'disabled':''}>‹ Önceki Soru</button>
+      ${!finished ? `<button class="nav-btn" onclick="clearAns()">Temizle</button>` : ''}
+      <div class="spacer"></div>
+      <button class="nav-btn next" onclick="go(1)" ${cur===Q.length-1?'disabled':''}>Sonraki Soru ›</button>
+    </div>
+  </div>
+  `;
+}
+
+function gridHTML(){
+  return Q.map((q,i)=>{
+    let cls='cell';
+    if(finished){
+      if(answers[i]===null) cls+=' c-empty';
+      else if(answers[i]===q.correct) cls+=' c-correct';
+      else cls+=' c-wrong';
+    }else{
+      if(answers[i]!==null) cls+=' answered';
+    }
+    if(i===cur) cls+=' current';
+    return `<button class="${cls}" onclick="jump(${i})">${i+1}</button>`;
+  }).join('');
+}
+
+function scoreObj(){
+  let correct=0,wrong=0,empty=0;
+  Q.forEach((q,i)=>{
+    if(answers[i]===null) empty++;
+    else if(answers[i]===q.correct) correct++;
+    else wrong++;
+  });
+  return {correct,wrong,empty,points: Q.length===50 ? correct*2 : Math.round(correct/Q.length*100)};
+}
+
+function sectionBreakdownHTML(){
+  const order=["İlk Yardım","Trafik ve Çevre","Araç Tekniği","Trafik Adabı"];
+  const m={};
+  Q.forEach((q,i)=>{
+    if(!m[q.section]) m[q.section]={total:0,correct:0};
+    m[q.section].total++;
+    if(answers[i]===q.correct) m[q.section].correct++;
+  });
+  const rows=order.filter(k=>m[k]).map(k=>{
+    const d=m[k], pct=Math.round(d.correct/d.total*100);
+    return `<div class="bd-row">
+      <div class="bd-top"><span>${k}</span><span class="bd-val">${d.correct}/${d.total} · %${pct}</span></div>
+      <div class="bd-bar"><div class="bd-fill" style="width:${pct}%"></div></div>
+    </div>`;
+  }).join('');
+  return `<div class="breakdown"><div class="bd-title">Konulara göre performans</div>${rows}</div>`;
+}
+function resultHTML(){
+  const s=scoreObj();
+  const pass=s.correct>=PASS_CORRECT;
+  return `
+  <div class="card" style="margin-top:16px">
+    <div class="result">
+      <h1>Sınav Sonucu</h1>
+      <div class="verdict ${pass?'pass':'fail'}">${pass?'GEÇTİNİZ 🎉':'KALDINIZ'}</div>
+      <div class="stats">
+        <div class="stat g"><b>${s.correct}</b>Doğru</div>
+        <div class="stat r"><b>${s.wrong}</b>Yanlış</div>
+        <div class="stat m"><b>${s.empty}</b>Boş</div>
+        <div class="stat p"><b>${s.points}</b>Puan</div>
+      </div>
+      ${sectionBreakdownHTML()}
+      <p style="color:var(--muted);margin:8px 0 2px">Geçme koşulu: en az ${PASS_CORRECT} doğru (100 üzerinden 70 puan).</p>
+      ${KONU ? '' : `      <p style="color:#444;max-width:660px;margin:12px auto 4px;font-size:13px;line-height:1.6;background:#f6f7f9;border:1px solid var(--line);border-radius:10px;padding:14px 18px;text-align:left">
+        <b>Puanlama:</b> Ehliyet sınavında yanlış cevaplar doğru yanıtları silmez veya puanınızı düşürmez. Sınavda 50 soru sorulur ve her sorunun puan değeri 2'dir. Başarılı olmak için en az 35 doğru yaparak 70 puan almanız yeterlidir. Yanlış cevaplarınız net sayınızı etkilemediği için, emin olmadığınız sorularda boş bırakmak yerine şansınızı denemeniz önerilir.
+      </p>`}
+      ${window.__girisVar ? '' : `<div class="sonuc-kayit">
+        <p><b>Sonucunu kaydet, gelişimini gör.</b> Google ile giriş yaparsan denemelerin hesabına kaydedilir; hangi konuda eksiğin olduğunu takip edersin.</p>
+        <button type="button" onclick="girisYap()">Google ile giriş yap</button>
+      </div>`}
+      <div class="row">
+        <button class="nav-btn next" onclick="restart()">Tekrar Başla</button>
+        <button class="nav-btn" onclick="kapat()">Sınav Seçimine Dön</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function pick(i){ answers[cur]=i; render(); }
+function clearAns(){ answers[cur]=null; render(); }
+function go(d){ const n=cur+d; if(n>=0&&n<Q.length){cur=n; render(); window.scrollTo({top:0,behavior:'smooth'});} }
+function jump(i){ cur=i; render(); window.scrollTo({top:0,behavior:'smooth'}); }
+
+// finish flow
+const confirmModal=document.getElementById('confirmModal');
+document.getElementById('finishBtn').onclick=()=>{
+  if(finished){ restart(); return; }
+  const empty=answers.filter(a=>a===null).length;
+  document.getElementById('confirmText').textContent =
+    empty>0 ? `${empty} soru boş kaldı. Yine de bitirmek istiyor musunuz?` : `Tüm sorular işaretlendi. Sınavı bitiriyoruz.`;
+  confirmModal.classList.add('show');
+};
+function closeConfirm(){ confirmModal.classList.remove('show'); }
+function doFinish(timeUp){
+  closeConfirm();
+  finished=true; window.SINAV_DEVAM_EDIYOR=false;
+  clearInterval(timerId);
+  document.getElementById('finishBtn').textContent='Tekrar Başla';
+  document.querySelector('.timer-label').style.display='none';
+  timerEl.style.display='none';
+  if(timeUp) alert('Süre doldu! Sınav otomatik olarak bitirildi.');
+  render();
+  // Sonucu Firestore'a kaydet + analytics
+  (async () => {
+    try {
+      const s = scoreObj();
+      const { auth, denemeleriGetir, denemeKaydet } = await import('/assets/js/firebase.js');
+      const user = auth.currentUser;
+      let examCount = 0;
+      if (user && !KONU) {
+        const bolumler = {};
+        Q.forEach((q,i) => {
+          if (!bolumler[q.section]) bolumler[q.section] = {toplam:0,dogru:0};
+          bolumler[q.section].toplam++;
+          if (answers[i] === q.correct) bolumler[q.section].dogru++;
+        });
+        await denemeKaydet(user.uid, {
+          sinav: SINAV_ADI,
+          dogru: s.correct,
+          yanlis: s.wrong,
+          bos: s.empty,
+          puan: s.points,
+          gecti: s.correct >= PASS_CORRECT,
+          bolumler
+        });
+        try { const prev = await denemeleriGetir(user.uid); examCount = prev.length; } catch(_){}
+      }
+      // exam_complete event — giriş olmasa da gider
+      if (typeof gtag === 'function') {
+        gtag('event', 'exam_complete', {
+          exam_name: SINAV_ADI,
+          score: s.points,
+          correct: s.correct,
+          wrong: s.wrong,
+          empty: s.empty,
+          passed: s.correct >= PASS_CORRECT,
+          exam_count: examCount,
+          time_up: !!timeUp,
+          logged_in: !!user,
+          kaynak: 'acik',
+          konu: KONU || ''
+        });
+      }
+    } catch(e) { console.error('Sonuç kaydedilemedi:', e); }
+  })();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function exitExam(){
+  if(!finished && !confirm('Sınavdan çıkıp ana sayfaya dönmek istediğinize emin misiniz? İşaretledikleriniz kaybolacak.')) return;
+  kapat();
+}
+function restart(){
+  answers=new Array(Q.length).fill(null);
+  cur=0; finished=false; remaining=DURATION;
+  timerEl.classList.remove('low');
+  document.querySelector('.timer-label').style.display='';
+  timerEl.style.display='';
+  document.getElementById('finishBtn').textContent='Sınavı Bitir';
+  clearInterval(timerId); startTimer(); render();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// keyboard: ← → nav, A-D select
+document.addEventListener('keydown',e=>{
+  if(!Q.length || !overlay.classList.contains('acik')) return;
+  if(e.key==='ArrowLeft') go(-1);
+  else if(e.key==='ArrowRight') go(1);
+  else if(!finished){
+    const k=e.key.toUpperCase();
+    const idx=LETTERS.indexOf(k);
+    if(idx>=0) pick(idx);
+  }
+});
+
+// exam_abandon: kullanıcı sınavı bitirmeden sayfadan ayrılırsa
+window.addEventListener('beforeunload', () => {
+  if (window.SINAV_DEVAM_EDIYOR && !finished && typeof gtag === 'function') {
+    gtag('event', 'exam_abandon', {
+      exam_name: SINAV_ADI,
+      questions_answered: answers.filter(a => a !== null).length,
+      questions_total: Q.length
+    });
+  }
+});
+
+/* ---- Açık deneme: sınav seçimi ve yükleme ---- */
+const overlay = document.getElementById('sinavOverlay');
+const yuklenen = {};
+function sinavYukle(n){
+  if (yuklenen[n]) return Promise.resolve(yuklenen[n]);
+  return new Promise((res, rej) => {
+    const s = document.createElement('script');
+    s.src = '/assets/js/questions-' + n + '.js';
+    s.onload = () => { yuklenen[n] = window.QUESTIONS; res(yuklenen[n]); };
+    s.onerror = () => rej(new Error('Sınav yüklenemedi'));
+    document.head.appendChild(s);
+  });
+}
+const KONULAR = {'ilk-yardim':'İlk Yardım','trafik-ve-cevre':'Trafik ve Çevre','arac-teknigi':'Araç Tekniği','trafik-adabi':'Trafik Adabı'};
+async function konuYukle(slug){
+  const hepsi = [];
+  for (const n of [1,2,3,4]) { const q = await sinavYukle(n); hepsi.push(...q.filter(x => x.section === KONULAR[slug])); }
+  return hepsi;
+}
+async function sinaviBaslat(n, konu){
+  n = [1,2,3,4].includes(+n) ? +n : 1;
+  konu = KONULAR[konu] ? konu : null;
+  const btn = konu ? null : document.querySelector('[data-sinav="' + n + '"]');
+  if (btn) { btn.disabled = true; btn.textContent = 'Yükleniyor…'; }
+  try { Q = konu ? await konuYukle(konu) : await sinavYukle(n); }
+  catch (e) { if (btn) { btn.disabled = false; btn.textContent = 'Sınava Başla'; } alert('Sınav yüklenemedi, lütfen tekrar dene.'); return; }
+  if (btn) { btn.disabled = false; btn.textContent = 'Sınava Başla'; }
+  KONU = konu;
+  if (konu) { SINAV_ADI = KONULAR[konu] + ' Denemesi'; DURATION = Q.length * 54; PASS_CORRECT = Math.ceil(Q.length * 0.7); }
+  else { SINAV_ADI = 'Sınav ' + n; DURATION = 45 * 60; PASS_CORRECT = 35; }
+  SINAV_NO = n; _examStarted = false;
+  answers = new Array(Q.length).fill(null);
+  cur = 0; finished = false; remaining = DURATION;
+  timerEl.classList.remove('low');
+  document.querySelector('.timer-label').style.display = '';
+  timerEl.style.display = '';
+  document.getElementById('finishBtn').textContent = 'Sınavı Bitir';
+  document.querySelector('.h-title').textContent = SINAV_ADI;
+  overlay.classList.add('acik');
+  document.body.style.overflow = 'hidden';
+  history.replaceState(null, '', konu ? '?konu=' + konu : '?s=' + n);
+  clearInterval(timerId); startTimer(); render();
+  overlay.querySelector('.wrap').scrollTop = 0;
+}
+function kapat(){
+  clearInterval(timerId);
+  window.SINAV_DEVAM_EDIYOR = false;
+  overlay.classList.remove('acik');
+  document.body.style.overflow = '';
+  history.replaceState(null, '', location.pathname);
+}
+function cikisIste(){
+  if (window.SINAV_DEVAM_EDIYOR && !finished && !confirm('Sınav devam ediyor. Çıkarsan cevapların kaybolur. Çıkmak istiyor musun?')) return;
+  kapat();
+}
+function girisYap(){
+  const git = () => location.href = '/panel/?g=sinavlar';
+  if (typeof window.ehliyetGiris === 'function') window.ehliyetGiris('/panel/?g=sinavlar');
+  else import('/assets/js/auth-ui.js').then(() => window.ehliyetGiris ? window.ehliyetGiris('/panel/?g=sinavlar') : git()).catch(git);
+}
+document.querySelectorAll('[data-sinav]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); sinaviBaslat(b.dataset.sinav); }));
+
+// Oturum durumu: sonuç ekranındaki kayıt daveti ve analytics için. Firebase kritik yolda değil.
+function oturumuIzle(){
+  import('/assets/js/firebase.js')
+    .then(({ kullaniciDinle }) => kullaniciDinle(u => { window.__girisVar = !!u; if (finished) render(); }))
+    .catch(() => {});
+}
+if ('requestIdleCallback' in window) requestIdleCallback(oturumuIzle, { timeout: 2000 }); else setTimeout(oturumuIzle, 300);
+
+// ?basla=N sınavı, ?konu=<kategori> konu denemesini doğrudan başlatır (soru, hap ve konu sayfalarından gelen bağlantılar).
+const _prm = new URLSearchParams(location.search);
+if (KONULAR[_prm.get('konu')]) sinaviBaslat(1, _prm.get('konu'));
+else if (_prm.get('basla')) sinaviBaslat(_prm.get('basla'));
+</script>
+  <script src="/assets/js/feedback.js" defer></script>
+  <script type="module" src="/assets/js/auth-ui.js"></script>
+  <script src="/assets/js/mobile-nav.js" defer></script>
+<!-- Google tag (gtag.js) — sayfa yüklendikten sonra yüklenir -->
+<script>
+window.dataLayer=window.dataLayer||[];function g(){dataLayer.push(arguments)}window.gtag=g;g('js',new Date());g('config','G-34HL041XN0');var r=document.referrer,h=r?r.split('/')[2]:'';if(h&&/(chatgpt\.com|openai\.com|perplexity\.ai|claude\.ai|anthropic\.com|gemini\.google\.com|copilot\.microsoft\.com|bing\.com\/chat|you\.com|mistral\.ai|deepseek\.com)$/.test(h)){g('event','ai_referral',{ai_source:h})}
+function loadGA(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-34HL041XN0';s.async=true;document.head.appendChild(s)}
+if(typeof requestIdleCallback==='function'){requestIdleCallback(loadGA)}else{setTimeout(loadGA,2500)}
+</script>
+</body>
+</html>

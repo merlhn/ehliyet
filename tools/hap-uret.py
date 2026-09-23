@@ -34,6 +34,13 @@ def slugify(text, max_len=60):
             s = s[:last_dash]
     return s
 
+# Metni değişen ama adresi korunması gereken hap bilgiler (Search Console'da
+# gösterim alan URL'ler). Anahtar: düz metin, değer: eski slug.
+SLUG_SABIT = {
+    "Teskereci yöntemi iki ilk yardımcıyla yapılan bir taşıma yöntemidir: biri kazazedeyi arkadan koltuk altlarından, diğeri önden diz altlarından kavrar. Kaşık ve köprü teknikleri ise kazazedeyi sedyeye yerleştirmek için kullanılır.":
+        "teskereci-yontemi-kasik-ve-kopru-teknikleri-kazazedeyi",
+}
+
 def hap_listesi(d):
     """Bir dersin hap bilgilerini sırayla döndürür: (sira, grup, html, duz, slug).
     Slug çakışmalarında -2, -3 eki eklenir (deterministik)."""
@@ -42,7 +49,7 @@ def hap_listesi(d):
         for b in bilgiler:
             sira += 1
             duz = duz_metin(b)
-            slug = taban = slugify(duz) or f"hap-{sira:02d}"
+            slug = taban = SLUG_SABIT.get(duz) or slugify(duz) or f"hap-{sira:02d}"
             n = 2
             while slug in kullanilan:
                 slug = f"{taban}-{n}"; n += 1
@@ -83,6 +90,7 @@ DERSLER = [
         'Şokun belirtileri: deri <b>soluk, soğuk ve nemli</b>, gözler donuk, bilinç bulanık. Kazazedenin üzeri örtülerek <b>vücut sıcaklığı korunur</b>; ağızdan içecek verilmez.',
         'Kalp krizinin tipik ağrısı <b>dinlenmekle geçmez</b>; kravat bölgesinde hissedilir, <b>omuzlara, boyuna, çeneye ve sol kola</b> yayılır, ölüm korkusu eşlik eder.',
         '<b>Omurilik</b>, omurga kanalı içinde boyundan kuyruk sokumuna uzanır; beyin ile vücut arasındaki bağlantıyı sağlar ve <b>reflekslerin merkezi</b>dir.',
+        '<b>Şok pozisyonu</b>: kazazede sırtüstü yatırılır, ayakları <b>30 cm</b> kaldırılır; amaç kalp ve beyne kan göndermektir. <b>Baş yaralanması</b> varsa şok pozisyonu verilmez.',
       ]),
       ("Kanamalar ve yaralanmalar", [
         'Fışkırır tarzda kanama <b>atardamar</b> kanamasıdır: bölge yukarı kaldırılır, temiz bezle baskı yapılır, bez kaldırılmadan üzerinden bandajla sarılır. Elle baskı, kanayan yere <b>en yakın</b> basınç noktasına uygulanır — en uzak noktaya değil.',
@@ -92,11 +100,12 @@ DERSLER = [
         '<b>Açık kırıkta deri bütünlüğü bozulur</b>; kan kaybı ve enfeksiyon riski yüksektir. Deri bütünlüğünün korunduğu kırık, kapalı kırıktır.',
         '<b>Köprücük kemiği</b> kırığında tespit, her iki omuz üzerinden geçen <b>çapraz (sekiz) bandajla</b> yapılır.',
         'Kalça ve alt taraf kırıklarının tespitinde: açık kırık varsa yara önce <b>temiz bir bezle kapatılır</b>; destek malzemeleri yumuşak olmalı, sargı kırığın üzerine bağlanmamalı, yaralı oturtulmamalıdır.',
+        'Burkulmada ilk yardım <b>CİPS kuralı</b> ile hatırlanır: <b>C</b>ilt soğutma (buz), <b>İ</b>stirahat, <b>P</b>ansuman (baskılı sargı), <b>S</b>eviye yükseltme.',
       ]),
       ("Taşıma teknikleri", [
         'Taşımada genel kural: <b>baş-boyun-gövde ekseni</b> bozulmadan, kazazede <b>en az 6 destek noktasından</b> kavranır ve mümkün olduğunca az hareket ettirilir. Kaldırırken ağırlık karın değil <b>bacak kaslarına</b> verilir.',
         '<b>Rentek manevrası</b>: solunumu durmuş ya da tehlike altındaki kazazedeyi, ayakları pedala sıkışmamışsa araç içinden çıkarma tekniğidir.',
-        '<b>Teskereci yöntemi</b>, kaşık ve köprü teknikleri kazazedeyi sedyeye yerleştirmek için kullanılır.',
+        '<b>Teskereci yöntemi</b> iki ilk yardımcıyla yapılan bir taşıma yöntemidir: biri kazazedeyi arkadan koltuk altlarından, diğeri önden diz altlarından kavrar. <b>Kaşık ve köprü teknikleri</b> ise kazazedeyi <b>sedyeye yerleştirmek</b> için kullanılır.',
       ]),
     ],
   },
@@ -146,6 +155,7 @@ DERSLER = [
       ("Belge ve cezalar", [
         'Bir yıl içinde <b>100 ceza puanını ilk kez aşan</b> sürücünün belgesi <b>2 ay</b> geri alınır.',
         '<b>Ölümle sonuçlanan kazada asli kusurlu</b> sürücünün belgesi mahkemece <b>1 yıl</b> geri alınır.',
+        '<b>625 kuralı</b>: alkollü araç kullanmada sürücü belgesi <b>1. ihlalde 6 ay</b>, <b>2. ihlalde 2 yıl</b>, <b>3. ihlalde 5 yıl</b> geri alınır. Alkol sınırı hususi araçta 0,50, ticari araçta 0,20 promildir.',
       ]),
       ("Araç, yük ve muayene", [
         'Kamyon, kamyonet ve römorkta yükle birlikte yolcu taşınırken: kasanın yan ve arka kapakları <b>kapalı</b>, yük <b>sağlam yerleştirilmiş ve bağlanmış</b> olmalıdır.',
@@ -185,6 +195,7 @@ DERSLER = [
         '<b>V kayışı</b> düzgün çalışmazsa <b>şarj ikaz lambası</b> yanar.',
         'Motor yağı kontrol sırası: <b>düz zeminde dur, kaputu aç → çubuğu çekip temizle → tekrar daldırıp çek → seviyenin max–min arasında olduğunu gör</b>.',
         'Dizel araca yanlışlıkla benzin konursa <b>yakıt deposu boşaltılır</b>; araç bu yakıtla kullanılmaz.',
+        'Ayak frenine basıldığında aracın <b>dört tekerleği de</b> durur; <b>el freni</b> yalnızca <b>arka tekerlekleri</b> tutar. Ağırlık öne kaydığı için önce ön tekerlekler durur, ön balatalar daha çabuk aşınır.',
       ]),
       ("Bakım ve kullanım", [
         'Muayene süresi dolmasa bile aracın <b>özel teknik muayenesi, trafik zabıtasının gerekli görmesi</b> hâlinde zorunludur.',
@@ -653,10 +664,13 @@ def footer_guncelle():
                                (ESKI_FOOTER, FOOTER_HTML_YENI, "html")]:
             n = icerik.count(eski)
             if n != 1:
-                sys.exit(f"HATA: {yol} içinde '{ad}' bloğu {n} kez bulundu (1 bekleniyordu)")
+                # Footer bir kez dönüştürüldü; sayfa sonradan elle değişmiş olabilir. Atla.
+                print(f"footer atlandı (eski kalıp yok): {yol}")
+                break
             icerik = icerik.replace(eski, yeni)
-        open(tam, "w", encoding="utf-8").write(icerik)
-        print(f"footer güncellendi: {yol}")
+        else:
+            open(tam, "w", encoding="utf-8").write(icerik)
+            print(f"footer güncellendi: {yol}")
 
 def sayfalari_yaz():
     hedef = os.path.join(KOK, "hap-bilgiler")

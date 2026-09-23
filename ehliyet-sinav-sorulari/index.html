@@ -7,15 +7,15 @@
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<title>Ehliyet Sınav Soruları — Çöz ve Cevapları Öğren | ehliyet.digital</title>
-<meta name="description" content="Ehliyet deneme sınavı çöz: 50 soruluk online ehliyet testi, MEB e-sınav formatında. Gerçek sınavdan örnek sorular, anında sonuç ve çözümlü cevaplar.">
+<title>Ehliyet Sınav Soruları 2026: Çıkmış Sorular ve Deneme Sınavı</title>
+<meta name="description" content="Ehliyet sınavında çıkmış sorular ve cevapları: MEB e-sınav formatında 200 soru, konuya göre listelenmiş. 50 soruluk deneme sınavını giriş yapmadan hemen çöz.">
 <link rel="canonical" href="https://ehliyet.digital/ehliyet-sinav-sorulari/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ehliyet.digital">
-<meta property="og:title" content="Ehliyet Sınav Soruları — Çöz ve Cevapları Öğren">
-<meta property="og:description" content="Ehliyet deneme sınavı çöz: 50 soruluk online ehliyet testi, MEB e-sınav formatında. Anında sonuç ve çözümlü cevaplar.">
+<meta property="og:title" content="Ehliyet Sınav Soruları 2026: Çıkmış Sorular ve Deneme Sınavı">
+<meta property="og:description" content="Ehliyet sınavında çıkmış sorular ve cevapları: MEB e-sınav formatında 200 soru, konuya göre listelenmiş. 50 soruluk deneme sınavını giriş yapmadan hemen çöz.">
 <meta property="og:url" content="https://ehliyet.digital/ehliyet-sinav-sorulari/">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:image" content="https://ehliyet.digital/og-image.png">
@@ -25,8 +25,8 @@
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ehliyet Sınav Soruları — Çöz ve Cevapları Öğren">
-<meta name="twitter:description" content="Ehliyet deneme sınavı çöz: 50 soruluk online ehliyet testi, MEB e-sınav formatında. Anında sonuç ve çözümlü cevaplar.">
+<meta name="twitter:title" content="Ehliyet Sınav Soruları 2026: Çıkmış Sorular ve Deneme Sınavı">
+<meta name="twitter:description" content="Ehliyet sınavında çıkmış sorular ve cevapları: MEB e-sınav formatında 200 soru, konuya göre listelenmiş. 50 soruluk deneme sınavını giriş yapmadan hemen çöz.">
 <meta name="twitter:image" content="https://ehliyet.digital/og-image.png">
 <meta name="twitter:image:alt" content="ehliyet.digital — Ehliyet sınavına hazırlık platformu">
 
@@ -102,6 +102,21 @@
   .soru-cevap p{margin:10px 0 0;font-size:14px;line-height:1.5;color:#0a7f3f;background:#effaf3;padding:10px 14px;border-radius:10px}
   .soru.revealed .soru-cevap{display:none}
 
+  /* Tüm sorular listesi */
+  .soru-liste{border:1px solid var(--line);border-radius:14px;padding:0 20px;margin-bottom:12px;background:#fff}
+  .soru-liste summary{cursor:pointer;font-size:16px;font-weight:600;letter-spacing:-.01em;padding:16px 0;list-style:none;display:flex;align-items:center;gap:8px}
+  .soru-liste summary::-webkit-details-marker{display:none}
+  .soru-liste summary span{font-family:'Geist Mono',monospace;font-size:12px;font-weight:400;color:var(--muted)}
+  .soru-liste summary::after{content:'+';margin-left:12px;color:var(--muted);font-weight:400}
+  .soru-liste summary a{color:var(--fg);text-decoration:none}
+  .soru-liste summary a:hover{text-decoration:underline;text-underline-offset:3px}
+  .soru-liste[open] summary::after{content:'–'}
+  .soru-liste ol{margin:0 0 16px;padding:0 0 0 22px;columns:2;column-gap:32px}
+  @media(max-width:760px){.soru-liste ol{columns:1}}
+  .soru-liste li{font-size:14px;line-height:1.5;margin:0 0 8px;break-inside:avoid;color:var(--muted)}
+  .soru-liste li a{color:var(--fg);text-decoration:none}
+  .soru-liste li a:hover{text-decoration:underline;text-underline-offset:3px}
+
   /* CTA */
   .cta{max-width:1100px;margin:0 auto;padding:0 28px 48px}
   .cta-inner{border:1px solid var(--line);border-radius:24px;background:#fafafa;padding:40px 20px;text-align:center;overflow:hidden}
@@ -142,44 +157,6 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "WebPage",
-      "name": "Ehliyet Sınav Soruları",
-      "description": "Online ehliyet deneme sınavı çöz: 50 soruluk MEB e-sınav formatında deneme testi. Gerçek sınavdan örnek sorular, anında sonuç ve çözümlü cevaplar.",
-      "url": "https://ehliyet.digital/ehliyet-sinav-sorulari/",
-      "inLanguage": "tr-TR",
-      "isPartOf": {
-        "@type": "WebSite",
-        "name": "Ehliyet Sınavı",
-        "url": "https://ehliyet.digital/"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "ehliyet.digital",
-        "url": "https://ehliyet.digital/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://ehliyet.digital/icon-512.png"
-        }
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Ana Sayfa",
-          "item": "https://ehliyet.digital/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Ehliyet Sınav Soruları",
-          "item": "https://ehliyet.digital/ehliyet-sinav-sorulari/"
-        }
-      ]
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -356,8 +333,8 @@
   "@graph": [
     {
       "@type": "WebPage",
-      "name": "Ehliyet Deneme Sınavı ve Sınav Soruları",
-      "description": "Ehliyet deneme sınavı çöz: 50 soruluk online ehliyet testi, MEB e-sınav formatında. Gerçek sınavdan örnek sorular, anında sonuç ve çözümlü cevaplar.",
+      "name": "Ehliyet Sınav Soruları ve Çıkmış Sorular",
+      "description": "Ehliyet sınavında çıkmış sorular ve cevapları: MEB e-sınav formatında 200 soru, konuya göre listelenmiş. 50 soruluk deneme sınavını giriş yapmadan hemen çöz.",
       "url": "https://ehliyet.digital/ehliyet-sinav-sorulari/",
       "inLanguage": "tr-TR",
       "isPartOf": {
@@ -411,7 +388,7 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Ehliyet Deneme Sınavı ve Sınav Soruları",
+          "name": "Ehliyet Sınav Soruları ve Çıkmış Sorular",
           "item": "https://ehliyet.digital/ehliyet-sinav-sorulari/"
         }
       ]
@@ -438,10 +415,10 @@
       <nav class="breadcrumb" aria-label="Gezinme">
         <a href="/">Ana Sayfa</a> <span class="sep">›</span> <span>Ehliyet Sınav Soruları</span>
       </nav>
-      <h1>Ehliyet Deneme Sınavı ve Sınav Soruları</h1>
-      <p>Online ehliyet deneme sınavı çöz — MEB e-sınav formatında <b>50 soru, 45 dakika</b>. Gerçek ehliyet sınavında çıkmış sorulardan derlenen bu deneme testiyle <b>İlk Yardım</b>, <b>Trafik ve Çevre</b>, <b>Araç Tekniği</b> ve <b>Trafik Adabı</b> bölümlerine hazırlan. Anında sonuç, çözümlü cevaplar ve konu bazlı analiz.</p>
+      <h1>Ehliyet Sınav Soruları ve Çıkmış Sorular</h1>
+      <p>MEB e-sınavında çıkmış ehliyet sınav soruları ve cevapları. Dört konudan <b>200 soru</b>: <b>İlk Yardım</b>, <b>Trafik ve Çevre</b>, <b>Araç Tekniği</b> ve <b>Trafik Adabı</b>. Her soruyu tek tek cevabıyla inceleyebilir ya da gerçek sınav formatında <b>50 soru, 45 dakika</b> deneme sınavına giriş yapmadan başlayabilirsin.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary btn-lg" href="/panel/?g=sinavlar" rel="nofollow" data-korumali>50 Soruluk Deneme Sınavına Başla</a>
+        <a class="btn btn-primary btn-lg" href="/deneme-sinavi/">50 Soruluk Deneme Sınavına Başla</a>
         <a class="btn btn-outline btn-lg" href="/dersler/">Ders Notları</a>
       </div>
     </div>
@@ -515,7 +492,8 @@ Buna göre, ilk yardımcının kazazedeyi araç içerisinden çıkarırken uygul
           </div>
           <details class="soru-cevap"><summary>Cevabı Gör</summary><p><b>Doğru cevap: B)</b> B</p></details>
         </div>
-        <a class="grup-link" href="/dersler/ilk-yardim/ilk-yardim-ve-acil-tedavi/">Tüm İlk Yardım ders notları →</a>
+        <a class="grup-link" href="/ehliyet-sinav-sorulari/ilk-yardim/">Tüm İlk Yardım soruları →</a>
+        <a class="grup-link" href="/dersler/ilk-yardim/ilk-yardim-ve-acil-tedavi/" style="margin-left:18px">İlk Yardım ders notları →</a>
       </section>
       <section class="soru-grup">
         <h2>Trafik ve Çevre Soruları</h2>
@@ -570,7 +548,8 @@ Buna göre, ilk yardımcının kazazedeyi araç içerisinden çıkarırken uygul
           </div>
           <details class="soru-cevap"><summary>Cevabı Gör</summary><p><b>Doğru cevap: A)</b> Takip mesafesi kuralına uyulmaması</p></details>
         </div>
-        <a class="grup-link" href="/dersler/trafik-ve-cevre/temel-tanimlar/">Tüm Trafik ve Çevre ders notları →</a>
+        <a class="grup-link" href="/ehliyet-sinav-sorulari/trafik-ve-cevre/">Tüm Trafik ve Çevre soruları →</a>
+        <a class="grup-link" href="/dersler/trafik-ve-cevre/temel-tanimlar/" style="margin-left:18px">Trafik ve Çevre ders notları →</a>
       </section>
       <section class="soru-grup">
         <h2>Araç Tekniği Soruları</h2>
@@ -633,7 +612,8 @@ Numaralanmış ikaz lambalarından hangilerinin araç gösterge panelinde yanmas
           </div>
           <details class="soru-cevap"><summary>Cevabı Gör</summary><p><b>Doğru cevap: C)</b> I ve III</p></details>
         </div>
-        <a class="grup-link" href="/dersler/arac-teknigi/motor-nedir/">Tüm Araç Tekniği ders notları →</a>
+        <a class="grup-link" href="/ehliyet-sinav-sorulari/arac-teknigi/">Tüm Araç Tekniği soruları →</a>
+        <a class="grup-link" href="/dersler/arac-teknigi/motor-nedir/" style="margin-left:18px">Araç Tekniği ders notları →</a>
       </section>
       <section class="soru-grup">
         <h2>Trafik Adabı Soruları</h2>
@@ -692,9 +672,223 @@ Numaralanmış ifadelerden hangileri trafik adabına sahip olan bir sürücü i�
           </div>
           <details class="soru-cevap"><summary>Cevabı Gör</summary><p><b>Doğru cevap: B)</b> Kaza, deprem, sel gibi felaketlerden çıkar sağlamaya çalışmak</p></details>
         </div>
-        <a class="grup-link" href="/dersler/trafik-adabi/temel-kavramlar/">Tüm Trafik Adabı ders notları →</a>
+        <a class="grup-link" href="/ehliyet-sinav-sorulari/trafik-adabi/">Tüm Trafik Adabı soruları →</a>
+        <a class="grup-link" href="/dersler/trafik-adabi/temel-kavramlar/" style="margin-left:18px">Trafik Adabı ders notları →</a>
       </section>
     </div>
+
+<!-- TUM_SORULAR_BASLA: tools/konu-sayfa-uret.py üretir, elle düzenlenmez -->
+    <section class="soru-grup" id="tum-sorular" style="max-width:1100px;margin:0 auto;padding:32px 28px">
+      <h2>Tüm Ehliyet Sınav Soruları</h2>
+      <p class="grup-desc">Dört denemedeki 186 sorunun tamamı, konuya göre. Her bağlantıda sorunun cevabı ve açıklaması var.</p>
+      <details class="soru-liste" open>
+        <summary>İlk Yardım <span>(43 soru)</span> <a href="/ehliyet-sinav-sorulari/ilk-yardim/" style="margin-left:auto;font-size:13px;font-weight:500">Konu sayfası →</a></summary>
+        <ol>
+          <li><a href="/soru/acik-kirikla-ilgili-hangisi-soylenemez/">Açık kırıkla ilgili hangisi söylenemez?</a></li>
+          <li><a href="/soru/asagidaki-durumlarin-hangisinde-kazazedeye-heimlich/">Aşağıdaki durumların hangisinde kazazedeye Heimlich Manevrası uygulanır?</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-atardamar-kanamalarinin/">Aşağıdakilerden hangisi atardamar kanamalarının özelliklerindendir?</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-bebeklere-yapilan-yapay-solunum/">Aşağıdakilerden hangisi bebeklere yapılan yapay solunum uygulamasında, ilk yardımcının dikkat etmesi gereken…</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-burkulmalarda-yapilmasi-gereken-ilk/">Aşağıdakilerden hangisi burkulmalarda yapılması gereken ilk yardım uygulamalarındandır?</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-cikiklarda-yapilmasi-gereken-ilk/">Aşağıdakilerden hangisi çıkıklarda yapılması gereken ilk yardım uygulamalarındandır?</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-delici-gogus-yaralanmalarinda/">Aşağıdakilerden hangisi delici göğüs yaralanmalarında kazazedeye yapılan doğru bir ilk yardım uygulamasıdır?</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-delici-karin-yaralanmasi-olan/">Aşağıdakilerden hangisi delici karın yaralanması olan kazazedeye yapılması gereken ilk yardım…</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-dis-kanamalarda-yapilan-hatali-ilk/">Aşağıdakilerden hangisi dış kanamalarda yapılan hatalı ilk yardım uygulamalarındandır?</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-ilk-yardimcida-bulunmasi-gereken/">Aşağıdakilerden hangisi ilk yardımcıda bulunması gereken özelliklerdendir?</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-kalp-durmasinin-belirtilerindendir/">Aşağıdakilerden hangisi kalp durmasının belirtilerindendir?</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-kaza-sonuclarinin-agirlasmasini/">Aşağıdakilerden hangisi &quot;kaza sonuçlarının ağırlaşmasını önlemek için olay yerinin değerlendirilmesi&quot;…</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-kazazedenin-tasinmasinda-uyulmasi/">Aşağıdakilerden hangisi kazazedenin taşınmasında uyulması gereken genel kurallardandır?</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-sok-belirtilerinden-biri-degildir/">Aşağıdakilerden hangisi şok belirtilerinden biri değildir?</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-solunum-sistemi-organlarindandir/">Aşağıdakilerden hangisi solunum sistemi organlarındandır?</a></li>
+          <li><a href="/soru/beyne-giden-kan-akisinin-azalmasi-sonucu-olusan-kisa-sureli/">Beyne giden kan akışının azalması sonucu oluşan kısa süreli, yüzeysel ve geçici bilinç kaybına ne ad verilir?</a></li>
+          <li><a href="/soru/bir-el-alina-yerlestirilir-diger-elin-iki-parmagi-cene/">• Bir el alına yerleştirilir. • Diğer elin iki parmağı çene kemiğinin üzerine yerleştirilir. • Alından…</a></li>
+          <li><a href="/soru/bir-el-alna-diger-elin-iki-parmagi-cene-kemiginin-uzerine/">• Bir el alna, diğer elin iki parmağı çene kemiğinin üzerine yerleştirilir. • Alından bastırılıp çeneden…</a></li>
+          <li><a href="/soru/bir-kazazedenin-tasinmasinda-uyulmasi-gereken-genel/">Bir kazazedenin taşınmasında, uyulması gereken genel kurallardan hangisi doğrudur?</a></li>
+          <li><a href="/soru/burun-kanamasi-olan-kazazedeye-yapilmasi-gereken-ilk-yardim/">Burun kanaması olan kazazedeye yapılması gereken ilk yardım uygulaması hangisidir?</a></li>
+          <li><a href="/soru/gorselde-bebeklerde-ilk-yardim-olarak-uygulanan-heimlich/">Görselde bebeklerde ilk yardım olarak uygulanan Heimlich manevrasının uygulama aşamaları karışık olarak…</a></li>
+          <li><a href="/soru/gorseldeki-kanama-turunde-yaraliya-ilk-yardim-olarak/">Görseldeki kanama türünde yaralıya ilk yardım olarak hangisinin yapılması yanlıştır?</a></li>
+          <li><a href="/soru/gorseldeki-pozisyon-hangi-durumdaki-yaraliya-uygulanir/">Görseldeki pozisyon hangi durumdaki yaralıya uygulanır?</a></li>
+          <li><a href="/soru/gorseldeki-tespit-yontemi-hangi-kemigin-kirilmasi-durumunda/">Görseldeki tespit yöntemi hangi kemiğin kırılması durumunda uygulanır?</a></li>
+          <li><a href="/soru/gorseldeki-yaraliya-ilk-yardimcinin-hangi-uygulamayi/">Görseldeki yaralıya ilk yardımcının, hangi uygulamayı yapması uygun değildir?</a></li>
+          <li><a href="/soru/hangisi-kisa-sureli-yuzeysel-ve-gecici-bilinc-kaybi-olarak/">Hangisi &quot;kısa süreli, yüzeysel ve geçici bilinç kaybı&quot; olarak tanımlanmaktadır?</a></li>
+          <li><a href="/soru/i-ambulans-ekiplerince-mudahale-yapilmasi-ii-olay-yerinde/">I. Ambulans ekiplerince müdahale yapılması II. Olay yerinde, ilk yardımcı tarafından temel yaşam desteği…</a></li>
+          <li><a href="/soru/i-el-freninin-cekilmesi-ii-kontagin-kapatilmasi-iii-lpgli/">I. El freninin çekilmesi II. Kontağın kapatılması III. LPG&#x27;li ise aracın bagajında bulunan tüpün vanasının…</a></li>
+          <li><a href="/soru/i-kazazedenin-tedavi-edilmesi-ii-hayati-tehlikenin-ortadan/">I. Kazazedenin tedavi edilmesi II. Hayati tehlikenin ortadan kaldırılması III. Yaşamsal fonksiyonların…</a></li>
+          <li><a href="/soru/i-vucudu-sikan-giysiler-gevsetilir-ii-sirtustu-yatirilarak/">I. Vücudu sıkan giysiler gevşetilir. II. Sırtüstü yatırılarak ayakları 45 cm kaldırılır. III. Kusma varsa…</a></li>
+          <li><a href="/soru/ilk-yardimci-kalca-veya-alt-taraf-kemiklerinde-kirik-olan/">İlk yardımcı, kalça veya alt taraf kemiklerinde kırık olan kazazedeye tespit işlemi yaparken hangisine dikkat…</a></li>
+          <li><a href="/soru/kaza-sonrasi-solunum-durmasi-yangin-tehlikesi-patlama-gibi/">Kaza sonrası solunum durması, yangın tehlikesi, patlama gibi tehlikeli durumların olasılığı mevcut ise…</a></li>
+          <li><a href="/soru/kazazedeye-sozlu-uyaranla-ya-da-hafifce-omzuna-dokunarak/">Kazazedeye sözlü uyaranla ya da hafifçe omzuna dokunarak &quot;iyi misiniz?&quot; diye sorularak - - - -…</a></li>
+          <li><a href="/soru/koma-durumundaki-kazazedeye-asagidaki-pozisyonlardan/">Koma durumundaki kazazedeye aşağıdaki pozisyonlardan hangisi verilmelidir?</a></li>
+          <li><a href="/soru/meydana-gelen-trafik-kazasina-tanik-olan-ilk-yardimci/">Meydana gelen trafik kazasına tanık olan ilk yardımcı, gerekli güvenlik önlemlerini alarak hemen 112&#x27;yi…</a></li>
+          <li><a href="/soru/olay-yerindeki-ilk-yardimcinin-bilincleri-kapali-ve/">Olay yerindeki ilk yardımcının, bilinçleri kapalı ve solunumu olmayan dört farklı kazazedeye ilişkin…</a></li>
+          <li><a href="/soru/olum-korkusu-ve-yogun-sikinti-hissedilir-agri-siddetli-ve/">• Ölüm korkusu ve yoğun sıkıntı hissedilir. • Ağrı şiddetli ve uzun sürelidir, dinlenmekle geçmez. • Ağrı…</a></li>
+          <li><a href="/soru/sinir-sistemine-aittir-ve-omurga-kanali-icinde-boyundan/">Sinir sistemine aittir ve omurga kanalı içinde, boyundan başlayıp kuyruk sokumuna kadar uzanır. Bu organ…</a></li>
+          <li><a href="/soru/solunum-yolu-yabanci-bir-cisimle-tikanmis-olan-kazazede/">Solunum yolu yabancı bir cisimle tıkanmış olan kazazede öksürüyor, nefes alabiliyor ve konuşabiliyorsa bu…</a></li>
+          <li><a href="/soru/tabloda-numaralanmis-kazazedelerin-kirilan-kemikleri-ve-ilk/">Tabloda numaralanmış kazazedelerin kırılan kemikleri ve ilk yardımcının uyguladığı tespit işlemleri…</a></li>
+          <li><a href="/soru/trafik-kazasi-sonucu-arac-disina-firlayan-bir-bebegin/">Trafik kazası sonucu araç dışına fırlayan bir bebeğin solunumunun olmadığını tespit eden ilk yardımcı, 2…</a></li>
+          <li><a href="/soru/yetiskin-bir-kazazedenin-solunum-yapip-yapmadigi-bak-dinle/">Yetişkin bir kazazedenin solunum yapıp yapmadığı bak-dinle-hisset yöntemiyle kaç saniye süre ile kontrol…</a></li>
+          <li><a href="/soru/yetiskinlerde-temel-yasam-destegi-ile-ilgili-uygulamalardan/">Yetişkinlerde temel yaşam desteği ile ilgili uygulamalardan hangisi doğrudur?</a></li>
+        </ol>
+      </details>
+      <details class="soru-liste" open>
+        <summary>Trafik ve Çevre <span>(87 soru)</span> <a href="/ehliyet-sinav-sorulari/trafik-ve-cevre/" style="margin-left:auto;font-size:13px;font-weight:500">Konu sayfası →</a></summary>
+        <ol>
+          <li><a href="/soru/aksine-bir-isaret-bulunmadikca-otoyolda-minibus-ve/">Aksine bir işaret bulunmadıkça otoyolda minibüs ve otobüsler için azami hız saatte kaç kilometredir?</a></li>
+          <li><a href="/soru/alkol-en-cok-beyin-hucrelerini-etkilemekte-ve-merkezi-sinir/">Alkol en çok beyin hücrelerini etkilemekte ve merkezi sinir sisteminde olumsuz etki yapmaktadır. Buna göre…</a></li>
+          <li><a href="/soru/arac-suruculerinin-duraklanan-veya-park-edilen-yerden/">Araç sürücülerinin duraklanan veya park edilen yerden çıkarken; I. ışıkla veya kolla çıkış işareti vermeleri,…</a></li>
+          <li><a href="/soru/aracin-hizi-arttikca-fren-mesafesi-azalir-yol-yuzeyinde-su/">• Aracın hızı arttıkça fren mesafesi azalır. • Yol yüzeyinde su birikmesi, buz ya da kar olması fren…</a></li>
+          <li><a href="/soru/araclarda-emniyet-kemeri-kullaniminin-zorunlu-olmasi-ile/">Araçlarda emniyet kemeri kullanımının zorunlu olması ile hangisi hedeflenmektedir?</a></li>
+          <li><a href="/soru/araclarda-emniyet-kemeri-kullaniminin-zorunlu-olmasi-ile-2/">Araçlarda emniyet kemeri kullanımının zorunlu olması ile aşağıdakilerden hangisi hedeflenmektedir?</a></li>
+          <li><a href="/soru/arkadan-carpma-seklindeki-trafik-kazalarinin-en-onemli/">Arkadan çarpma şeklindeki trafik kazalarının en önemli sebebi aşağıdakilerden hangisidir?</a></li>
+          <li><a href="/soru/arkadan-carpma-sonucunda-meydana-gelen-trafik-kazalarinin/">Arkadan çarpma sonucunda meydana gelen trafik kazalarının en önemli sebebi hangisidir?</a></li>
+          <li><a href="/soru/asagidaki-hallerin-hangisinde-surucu-arac-kullanmaktan-men/">Aşağıdaki hâllerin hangisinde sürücü araç kullanmaktan men edilir?</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-atiklarin-cevreye-verdigi/">Aşağıdakilerden hangisi atıkların çevreye verdiği zararlardan biri değildir?</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-cevre-kirliligini-onleyici/">Aşağıdakilerden hangisi çevre kirliliğini önleyici tedbirlerden biri değildir?</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-gecis-ustunlugune-sahip/">Aşağıdakilerden hangisi geçiş üstünlüğüne sahip araçlardandır?</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-karayollari-genel-mudurlugunun/">Aşağıdakilerden hangisi Karayolları Genel Müdürlüğünün görevlerinden biri değildir?</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-karayollari-trafik-kanununa-gore/">Aşağıdakilerden hangisi Karayolları Trafik Kanunu&#x27;na göre sürücü olabilmenin şartlarından biri değildir?</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-surus-guvenligini-olumsuz-yonde/">Aşağıdakilerden hangisi sürüş güvenliğini olumsuz yönde etkiler?</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-trafik-kazalarinin-en-onemli/">Aşağıdakilerden hangisi trafik kazalarının en önemli sebebidir?</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-tum-kara-yollarindaki-isaretleme/">Aşağıdakilerden hangisi tüm kara yollarındaki işaretleme standartlarının tespiti, yayınlanması ve kontrolü…</a></li>
+          <li><a href="/soru/geceleyin-gorusun-yeterli-olmadigi-kavsaga-yaklasan-surucu/">Geceleyin, görüşün yeterli olmadığı kavşağa yaklaşan sürücü gelişini nasıl haber vermelidir?</a></li>
+          <li><a href="/soru/geceleyin-onundeki-araci-gecmek-isteyen-surucu-bu-aracla/">Geceleyin önündeki aracı geçmek isteyen sürücü, bu araçla yan yana gelinceye kadar hangi ışıkları…</a></li>
+          <li><a href="/soru/geceleyin-sehirlerarasi-kara-yolunda-seyrederken-aracla/">&quot;Geceleyin şehirlerarası kara yolunda seyrederken araçla karşılaşıldığında kısa farları kullanmak gerekir. Bu…</a></li>
+          <li><a href="/soru/gecis-ustunlugune-sahip-arac-surucusu-bu-hakki-kullanirken/">Geçiş üstünlüğüne sahip araç sürücüsü, bu hakkı kullanırken aşağıdakilerden hangisine dikkat etmek zorundadır?</a></li>
+          <li><a href="/soru/gecis-ustunlugune-sahip-araclarin-duyulan-uyari-isaretini/">Geçiş üstünlüğüne sahip araçların, duyulan uyarı işaretini aldığımızda, ilk önce yapmamız gereken hangisidir?</a></li>
+          <li><a href="/soru/gorselde-iki-yonlu-ve-uc-seritli-kara-yolu-bolumunde/">Görselde iki yönlü ve üç şeritli kara yolu bölümünde seyreden araçlar verilmiştir. Yol çizgilerine göre hangi…</a></li>
+          <li><a href="/soru/gorseldeki-gibi-bir-karsilasmada-2-numarali-arac-surucusu/">Görseldeki gibi bir karşılaşmada, 2 numaralı araç sürücüsü ne yapmalıdır?</a></li>
+          <li><a href="/soru/gorseldeki-kavsakta-ilk-gecis-hakki-siralamasi-nasil/">Görseldeki kavşakta ilk geçiş hakkı sıralaması nasıl olmalıdır?</a></li>
+          <li><a href="/soru/gorseldeki-kirmizi-renkli-aracin-surucusu-nasil/">Görseldeki kırmızı renkli aracın sürücüsü nasıl davranmalıdır?</a></li>
+          <li><a href="/soru/gorseldeki-mavi-renkli-aracin-surucusu-nasil-davranmalidir/">Görseldeki mavi renkli aracın sürücüsü nasıl davranmalıdır?</a></li>
+          <li><a href="/soru/gorseldeki-otoyol-bilgi-levhasi-hangisini-bildirir/">Görseldeki otoyol bilgi levhası hangisini bildirir?</a></li>
+          <li><a href="/soru/gorseldeki-yolda-numaralanmis-araclardan-hangileri-en-fazla/">Görseldeki yolda, numaralanmış araçlardan hangileri en fazla 70 km/saat hızla yollarına devam edebilir?</a></li>
+          <li><a href="/soru/gorsele-gore-adana-istikametine-gitmek-isteyen-otomobil/">Görsele göre, Adana istikametine gitmek isteyen otomobil sürücüsü hakkında hangisi söylenemez?</a></li>
+          <li><a href="/soru/gorsele-gore-hangisinin-yapilmasi-dogru-olur/">Görsele göre, hangisinin yapılması doğru olur?</a></li>
+          <li><a href="/soru/gorsele-gore-numarali-araclardan-hangileri-hatali-gecme/">Görsele göre, numaralı araçlardan hangileri hatalı geçme yapmaktadır?</a></li>
+          <li><a href="/soru/hangisi-aracin-durma-mesafesini-etkileyen-faktorlerden-biri/">Hangisi aracın durma mesafesini etkileyen faktörlerden biri değildir?</a></li>
+          <li><a href="/soru/hangisi-atiklarin-cevreye-verdigi-zararlardan-biri-degildir/">Hangisi atıkların çevreye verdiği zararlardan biri değildir?</a></li>
+          <li><a href="/soru/hangisi-trafik-kaza-oranini-etkileyen-etmenlerden-biri/">Hangisi trafik kaza oranını etkileyen etmenlerden biri değildir?</a></li>
+          <li><a href="/soru/hangisini-yapmak-cevrenin-temiz-kalmasina-katki-saglar/">Hangisini yapmak çevrenin temiz kalmasına katkı sağlar?</a></li>
+          <li><a href="/soru/i-aracin-yuk-ve-teknik-ozelligine-ii-gorus-yol-hava-ve/">I. Aracın yük ve teknik özelliğine II. Görüş, yol, hava ve trafik durumuna III. Aracın cinsine uygun hız…</a></li>
+          <li><a href="/soru/i-can-ve-mal-guvenligini-tehlikeye-attigi-ii-ileri-surus/">I. Can ve mal güvenliğini tehlikeye attığı II. İleri sürüş tekniklerine sahip olduğu III. Şerit takip…</a></li>
+          <li><a href="/soru/i-direksiyon-hakimiyetinde-zorlanacagini-ii-kamyonla-yan/">I. Direksiyon hakimiyetinde zorlanacağını II. Kamyonla yan yana geldiğinde rüzgârın şiddetini daha az…</a></li>
+          <li><a href="/soru/i-guvenlik-guclerine-ait-araclar-ii-organ-ve-doku-nakli/">I. Güvenlik güçlerine ait araçlar II. Organ ve doku nakli yapan araçlar III. İtfaiye araçları ile benzeri…</a></li>
+          <li><a href="/soru/i-hizlarini-artirmalari-ii-viraji-genis-bir-kavisle/">I. Hızlarını artırmaları II. Virajı geniş bir kavisle almaları III. Öndeki aracı geçmeleri Görseldeki gibi…</a></li>
+          <li><a href="/soru/i-hosgorulu-olunmasi-ii-bencillikten-uzak-durulmasi-iii/">I. Hoşgörülü olunması II. Bencillikten uzak durulması III. Olaylara aşırı tepki gösterilmesi Trafik ortamını…</a></li>
+          <li><a href="/soru/i-orta-refujlere-ve-yol-kenarlarina-dikilen-agaclarin-zarar/">I. Orta refüjlere ve yol kenarlarına dikilen ağaçların zarar görmesi II. Köprü ve tünel gibi noktalarda…</a></li>
+          <li><a href="/soru/i-reflektor-ii-ilk-yardim-cantasi-iii-yangin-sondurme/">I. Reflektör II. İlk yardım çantası III. Yangın söndürme cihazı Yukarıdakilerden hangilerinin otomobillerde…</a></li>
+          <li><a href="/soru/i-rot-baslarinin-bosluk-yapmasi-ii-on-cam-sileceklerinin/">I. Rot başlarının boşluk yapması II. Ön cam sileceklerinin çalışmaması III. Park lambalarının yanmaması IV.…</a></li>
+          <li><a href="/soru/i-takip-mesafesini-artirmasi-ii-hizini-azaltmasi-iii/">I. Takip mesafesini artırması II. Hızını azaltması III. Bulunduğu şeridin soluna yanaşması Görsele göre, 1…</a></li>
+          <li><a href="/soru/i-yeteri-kadar-aydinlatilmis-yollara-girdigimizde-ii/">I. Yeteri kadar aydınlatılmış yollara girdiğimizde II. Yayalarla aynı yönde ilerliyorsak III. Demiryolu…</a></li>
+          <li><a href="/soru/i-yolcularin-koruyucu-tertibat-kullanmasi-ii-kasanin-yan-ve/">I. Yolcuların koruyucu tertibat kullanması II. Kasanın yan ve arka kapaklarının kapalı olması III. Yüklerin…</a></li>
+          <li><a href="/soru/i-yolun-iki-seritli-ve-iki-yonlu-oldugunu-ii-1-numarali/">I. Yolun, iki şeritli ve iki yönlü olduğunu II. 1 numaralı aracın gerektiğinde geçme yapabileceğini III. 2…</a></li>
+          <li><a href="/soru/i-yuklerin-uzerine-yolcu-bindirilmesi-ii-kasanin-yan-ve/">I. Yüklerin üzerine yolcu bindirilmesi II. Kasanın yan ve arka kapaklarının kapalı olması III. Yüklerin…</a></li>
+          <li><a href="/soru/i-yukun-hasar-gormesi-ii-direksiyon-hakimiyetinin/">I. Yükün hasar görmesi II. Direksiyon hâkimiyetinin kaybolması III. Araç aksının kırılması veya…</a></li>
+          <li><a href="/soru/isaret-levhalarina-yaklasim-yonunde-ve-park-izni-verilen/">&quot;İşaret levhalarına yaklaşım yönünde ve park izni verilen yerler dışında; yerleşim birimleri içinde - - - -…</a></li>
+          <li><a href="/soru/kamu-hizmeti-yapan-yolcu-tasitlarinin-yolcu-veya/">Kamu hizmeti yapan yolcu taşıtlarının yolcu veya hizmetlileri bindirmeleri, indirmeleri veya duraklamaları…</a></li>
+          <li><a href="/soru/kamyon-kamyonet-ve-romorklarda-yukle-birlikte-yolcu/">Kamyon, kamyonet ve römorklarda yükle birlikte yolcu taşınırken aşağıdakilerden hangisinin yapılması yasaktır?</a></li>
+          <li><a href="/soru/kavsaklara-yaklasirken-yol-uzerine-cizilmis-sekildeki-oklar/">Kavşaklara yaklaşırken yol üzerine çizilmiş şekildeki oklar sürücülere neyi bildirir?</a></li>
+          <li><a href="/soru/manevra-yapacak-surucu-asagidakilerden-hangisini-yapmalidir/">Manevra yapacak sürücü aşağıdakilerden hangisini yapmalıdır?</a></li>
+          <li><a href="/soru/olumle-sonuclanan-trafik-kazalarina-asli-kusurlu-olarak/">Ölümle sonuçlanan trafik kazalarına asli kusurlu olarak sebebiyet veren sürücülerin sürücü belgeleri, ilgili…</a></li>
+          <li><a href="/soru/ondeki-aracin-guvenle-takip-edildigi-uzakliga-ne-denir/">Öndeki aracın güvenle takip edildiği uzaklığa ne denir?</a></li>
+          <li><a href="/soru/park-edilen-arac-icin-asagidakilerden-hangisinin/">Park edilen araç için aşağıdakilerden hangisinin yapılmasına gerek yoktur?</a></li>
+          <li><a href="/soru/park-halindeki-araca-carpan-surucunun-asagidakilerden/">Park hâlindeki araca çarpan sürücünün aşağıdakilerden hangisini yapması yanlıştır?</a></li>
+          <li><a href="/soru/sehir-icinde-yol-yapisi-veya-isaretleme-yetersizligi/">Şehir içinde, yol yapısı veya işaretleme yetersizliği yüzünden trafik kazalarının meydana geldiği yerlerde,…</a></li>
+          <li><a href="/soru/sekildeki-akaryakit-istasyonundan-cikmak-isteyen-2-numarali/">Şekildeki akaryakıt istasyonundan çıkmak isteyen 2 numaralı aracın sürücüsü ne yapmalıdır?</a></li>
+          <li><a href="/soru/sekildeki-aracin-surucusu-donel-kavsaktan-geriye-donus/">Şekildeki aracın sürücüsü, dönel kavşaktan geriye dönüş yapmak için hangi şeridi izlemelidir?</a></li>
+          <li><a href="/soru/sekildeki-aracin-surucusu-kamu-hizmeti-yapan-yolcu-tasiti/">Şekildeki aracın sürücüsü, kamu hizmeti yapan yolcu taşıtı durağının en az kaç metre mesafe dışına aracını…</a></li>
+          <li><a href="/soru/sekildeki-gibi-kontrolsuz-kavsakta-karsilasan-araclarin/">Şekildeki gibi kontrolsüz kavşakta karşılaşan araçların geçiş hakkı sıralaması nasıl olmalıdır?</a></li>
+          <li><a href="/soru/sekildeki-kara-yolu-bolumunde-yan-yana-cizilmis-kesik-ve/">Şekildeki kara yolu bölümünde, yan yana çizilmiş kesik ve devamlı yol çizgileri sürücülere aşağıdakilerden…</a></li>
+          <li><a href="/soru/sekildeki-tehlike-uyari-isaretini-goren-surucu/">Şekildeki tehlike uyarı işaretini gören sürücü aşağıdakilerden hangisini yapmalıdır?</a></li>
+          <li><a href="/soru/sekildeki-trafik-gorevlisinin-yapmis-oldugu-isaretin/">Şekildeki trafik görevlisinin yapmış olduğu işaretin sürücüler için anlamı nedir?</a></li>
+          <li><a href="/soru/sekildeki-trafik-isareti-asagidakilerden-hangisine/">Şekildeki trafik işareti aşağıdakilerden hangisine yaklaşıldığını bildirir?</a></li>
+          <li><a href="/soru/sekildeki-trafik-isareti-asagidakilerden-hangisini-bildirir/">Şekildeki trafik işareti aşağıdakilerden hangisini bildirir?</a></li>
+          <li><a href="/soru/sekildeki-trafik-isaretini-goren-surucu-asagidakilerden/">Şekildeki trafik işaretini gören sürücü aşağıdakilerden hangisini yapmalıdır?</a></li>
+          <li><a href="/soru/sekle-gore-hangi-numarali-aracin-surucusu-hatali/">Şekle göre hangi numaralı aracın sürücüsü hatalı davranmıştır?</a></li>
+          <li><a href="/soru/surucunun-hangisini-yapmasi-kural-ihlali-sayilir/">Sürücünün hangisini yapması kural ihlali sayılır?</a></li>
+          <li><a href="/soru/surus-guvenligini-hangisi-olumsuz-yonde-etkiler/">Sürüş güvenliğini hangisi olumsuz yönde etkiler?</a></li>
+          <li><a href="/soru/tasit-yolu-uzerine-cizilen-sekildeki-cizgilerin-anlami-nedir/">Taşıt yolu üzerine çizilen şekildeki çizgilerin anlamı nedir?</a></li>
+          <li><a href="/soru/trafik-isaretiyle-yasaklanmis-olan-yerlerde-belirlenmis/">• Trafik işaretiyle yasaklanmış olan yerlerde • Belirlenmiş yangın musluklarına her iki yönden 5 metre mesafe…</a></li>
+          <li><a href="/soru/trafik-kuralinin-ihlal-edildigi-tarihten-geriye-dogru-bir/">Trafik kuralının ihlal edildiği tarihten geriye doğru bir yıl içinde, toplam 100 ceza puanını ilk defa aştığı…</a></li>
+          <li><a href="/soru/trafik-kurallarina-uymama-egiliminde-olan-bir-surucunun/">Trafik kurallarına uymama eğiliminde olan bir sürücünün hangi davranışı gösterme olasılığı yüksektir?</a></li>
+          <li><a href="/soru/trafik-kurulusunca-uyusturucu-veya-uyarici-madde-kullandigi/">Trafik kuruluşunca, uyuşturucu veya uyarıcı madde kullandığı tespit edilen sürücüye aşağıdaki işlemlerden…</a></li>
+          <li><a href="/soru/trafik-zabitasi-veya-yetkililerce-kanunda-ve-yonetmelikte/">Trafik zabıtası veya yetkililerce Kanunda ve yönetmelikte belirtilen hâllerde araçla ilgili belgelerin…</a></li>
+          <li><a href="/soru/videodaki-kazayla-ilgili-hangisi-kesinlikle-soylenir/">Videodaki kazayla ilgili hangisi kesinlikle söylenir?</a></li>
+          <li><a href="/soru/videodaki-tehlikeli-durum-suruculerin-hangi-kurali-ihlal/">Videodaki tehlikeli durum, sürücülerin hangi kuralı ihlal etmeleri sonucunda oluşmuştur?</a></li>
+          <li><a href="/soru/videoya-gore-beyaz-otomobilin-surucusu-icin-hangisi/">Videoya göre, beyaz otomobilin sürücüsü için hangisi kesinlikle söylenir?</a></li>
+          <li><a href="/soru/videoya-gore-hangisinin-yapilmasi-dogru-olur/">Videoya göre hangisinin yapılması doğru olur?</a></li>
+          <li><a href="/soru/videoya-gore-mavi-arac-surucusunun-hangisini-ihlal-ettigi/">Videoya göre, mavi araç sürücüsünün hangisini ihlal ettiği kesinlikle söylenir?</a></li>
+          <li><a href="/soru/videoya-gore-surucu-nasil-bir-tehlikenin-olabilecegini/">Videoya göre, sürücü nasıl bir tehlikenin olabileceğini düşünmelidir?</a></li>
+          <li><a href="/soru/yapim-ve-bakimindan-sorumlu-oldugu-kara-yollarinda-icisleri/">Yapım ve bakımından sorumlu olduğu kara yollarında, İçişleri Bakanlığının uygun görüşü alınmak suretiyle,…</a></li>
+        </ol>
+      </details>
+      <details class="soru-liste" open>
+        <summary>Araç Tekniği <span>(34 soru)</span> <a href="/ehliyet-sinav-sorulari/arac-teknigi/" style="margin-left:auto;font-size:13px;font-weight:500">Konu sayfası →</a></summary>
+        <ol>
+          <li><a href="/soru/ani-durus-ve-hizlanmalardan-kacinilmasi-tavsiye-edilen-tip/">• Ani duruş ve hızlanmalardan kaçınılması • Tavsiye edilen tip ve ebatlarda araç lastiği kullanılması •…</a></li>
+          <li><a href="/soru/aracin-elektrik-devresinde-akim-yuksek-oldugunda-eriyerek/">Aracın elektrik devresinde, akım yüksek olduğunda eriyerek güvenliği sağlayan parça aşağıdakilerden…</a></li>
+          <li><a href="/soru/aracin-gosterge-panelinde-bulunan-sekildeki-gosterge/">Aracın gösterge panelinde bulunan şekildeki gösterge sürücüye neyi bildirir?</a></li>
+          <li><a href="/soru/araclarda-yakit-tasarrufu-saglamak-icin-asagidakilerden/">Araçlarda yakıt tasarrufu sağlamak için aşağıdakilerden hangisi yapılmalıdır?</a></li>
+          <li><a href="/soru/asagida-motor-yagi-kontrol-edilirken-yapilmasi-gereken/">Aşağıda motor yağı kontrol edilirken yapılması gereken işlemler karışık verilmiştir. I. Motor yağ seviye…</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-araci-istenilen-yone-sevk-eder/">Aşağıdakilerden hangisi aracı istenilen yöne sevk eder?</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-araci-kullanmaya-baslamadan-once/">Aşağıdakilerden hangisi aracı kullanmaya başlamadan önce yapılması gereken hazırlıklardan biri değildir?</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-araclarda-gucun-kaynagidir/">Aşağıdakilerden hangisi araçlarda gücün kaynağıdır?</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-buji-ile-ateslemeli-motorlarin/">Aşağıdakilerden hangisi buji ile ateşlemeli motorların yakıtıdır?</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-elektrik-devresindeki-sigortanin/">Aşağıdakilerden hangisi elektrik devresindeki sigortanın görevidir?</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-yakit-tuketiminin-artmasinda/">Aşağıdakilerden hangisi yakıt tüketiminin artmasında sürücüden kaynaklanan kusurdur?</a></li>
+          <li><a href="/soru/dizel-yakit-kullanan-bir-araca-yanlislikla-benzin-konulmasi/">Dizel yakıt kullanan bir araca yanlışlıkla benzin konulması durumunda hangisinin yapılması uygundur?</a></li>
+          <li><a href="/soru/gorseldeki-ikaz-isigi-hangi-durumda-yanmaz/">Görseldeki ikaz ışığı hangi durumda yanmaz?</a></li>
+          <li><a href="/soru/hangi-parcanin-duzgun-calismamasi-sarj-ikaz-lambasinin/">Hangi parçanın düzgün çalışmaması, şarj ikaz lambasının yanmasına sebep olur?</a></li>
+          <li><a href="/soru/hangisi-motor-sogutma-sisteminin-elemani-degildir/">Hangisi, motor soğutma sisteminin elemanı değildir?</a></li>
+          <li><a href="/soru/hangisi-motorun-hararet-yapmasina-sebep-olan-durumlardan/">Hangisi, motorun hararet yapmasına sebep olan durumlardan biri değildir?</a></li>
+          <li><a href="/soru/hangisi-servis-veya-tamir-atolyeleri-tarafindan-yapilmalidir/">Hangisi, servis veya tamir atölyeleri tarafından yapılmalıdır?</a></li>
+          <li><a href="/soru/i-aku-sarjinin-azalmasi-ii-fren-balatalarinin-azalmasi-iii/">I. Akü şarjının azalması II. Fren balatalarının azalması III. Motor yağının özelliğini kaybetmesi Aracın çok…</a></li>
+          <li><a href="/soru/i-lpg-ii-benzin-iii-motorin-icten-yanmali-motorlarda/">I. LPG II. Benzin III. Motorin İçten yanmalı motorlarda yukarıdaki yakıtlardan hangileri kullanılır?</a></li>
+          <li><a href="/soru/i-mumkun-oldugunca-az-fren-yapmak-ii-vitese-gore-daha-dusuk/">I. Mümkün olduğunca az fren yapmak II. Vitese göre daha düşük devirde araç kullanmak III. Araç ilk…</a></li>
+          <li><a href="/soru/i-sarj-ii-abs-iii-yag-basinci-numaralanmis-ikaz/">I. Şarj II. ABS III. Yağ basıncı Numaralanmış ikaz lambalarından hangilerinin araç gösterge panelinde…</a></li>
+          <li><a href="/soru/kisin-asiri-soguktan-dolayi-motor-sogutma-suyu-dondugu/">Kışın aşırı soğuktan dolayı motor soğutma suyu donduğu zaman meydana gelen genleşme kuvveti; silindir bloğu,…</a></li>
+          <li><a href="/soru/kriko-ile-araci-kaldirirken-tekerleklere-takoz-konulmasinin/">Kriko ile aracı kaldırırken tekerleklere takoz konulmasının nedeni aşağıdakilerden hangisidir?</a></li>
+          <li><a href="/soru/lastiklerin-hava-basinci-dengesizse-frenleme-aninda/">Lastiklerin hava basıncı dengesizse frenleme anında aşağıdakilerden hangisi olur?</a></li>
+          <li><a href="/soru/motorlu-araclarda-motorun-yag-seviyesini-kontrol-etmeye/">Motorlu araçlarda motorun yağ seviyesini kontrol etmeye yarayan ve özel işaretleri bulunan parçaya ne ad…</a></li>
+          <li><a href="/soru/muayene-suresi-dolmasa-bile-aracin-ozel-teknik-muayenesi/">Muayene süresi dolmasa bile aracın özel teknik muayenesi hangi durumda zorunludur?</a></li>
+          <li><a href="/soru/sekildeki-uyari-isigi-arac-gosterge-panelinde-yandiginda/">Şekildeki uyarı ışığı araç gösterge panelinde yandığında sürücü ne yapmalıdır?</a></li>
+          <li><a href="/soru/sekildeki-uyari-isiginin-arac-gosterge-panelinde-yanmasi/">Şekildeki uyarı ışığının araç gösterge panelinde yanması aracın hangi sisteminde arıza olduğunu belirtir?</a></li>
+          <li><a href="/soru/seyir-halindeyken-aractan-surekli-yakit-kokusu-alinmasi/">Seyir hâlindeyken araçtan &quot;sürekli yakıt kokusu&quot; alınması durumunda aşağıdakilerden hangisi yapılır?</a></li>
+          <li><a href="/soru/seyir-halindeyken-aractan-surekli-yakit-kokusu-alinmasi-2/">Seyir hâlindeyken araçtan &quot;sürekli yakıt kokusu&quot; alınması durumunda aşağıdakilerden hangisi yapılır?</a></li>
+          <li><a href="/soru/suruse-baslamadan-once-koltuk-ve-ayna-ayarlarinin/">Sürüşe başlamadan önce koltuk ve ayna ayarlarının yapılmasının sebebi hangisidir?</a></li>
+          <li><a href="/soru/videodaki-sari-minibusle-ilgili-hangisi-kesinlikle-soylenir/">Videodaki sarı minibüsle ilgili hangisi kesinlikle söylenir?</a></li>
+          <li><a href="/soru/videoya-gore-surucu-nasil-davranmalidir/">Videoya göre sürücü nasıl davranmalıdır?</a></li>
+          <li><a href="/soru/yakit-icerisinde-toz-su-veya-pislik-varsa-motor-nasil/">Yakıt içerisinde toz, su veya pislik varsa motor nasıl çalışır?</a></li>
+        </ol>
+      </details>
+      <details class="soru-liste" open>
+        <summary>Trafik Adabı <span>(22 soru)</span> <a href="/ehliyet-sinav-sorulari/trafik-adabi/" style="margin-left:auto;font-size:13px;font-weight:500">Konu sayfası →</a></summary>
+        <ol>
+          <li><a href="/soru/ailesi-ile-birlikte-yolculuk-yapan-bir-surucu-aracini-hiz/">Ailesi ile birlikte yolculuk yapan bir sürücü, aracını hız limitlerini aşarak sürdüğünde ailesinin hayatını…</a></li>
+          <li><a href="/soru/asagidaki-degerlerden-hangisine-sahip-olan-surucu-yogun/">Aşağıdaki değerlerden hangisine sahip olan sürücü, yoğun trafikte bir dizi hâlinde gitmekte olan diğer…</a></li>
+          <li><a href="/soru/asagidakilerden-hangisi-trafikte-bireye-yapilan-hak/">Aşağıdakilerden hangisi trafikte bireye yapılan hak ihlallerindendir?</a></li>
+          <li><a href="/soru/asagidakilerden-hangisinin-trafikte-ofke-duygusuna-kapilan/">Aşağıdakilerden hangisinin trafikte öfke duygusuna kapılan sürücülerde görülme olasılığı diğer sürücülere…</a></li>
+          <li><a href="/soru/bir-arac-surucusunun-kendini-gecmekte-olan-bir-araca/">Bir araç sürücüsünün kendini geçmekte olan bir araca yavaşlayarak kolaylık sağlaması durumu trafikte hangi…</a></li>
+          <li><a href="/soru/deprem-sel-gibi-dogal-afetlerden-etkilenenlere-yardim/">Deprem, sel gibi doğal afetlerden etkilenenlere yardım götürmeye çalışan araçlara kolaylık sağlayan sürücünün…</a></li>
+          <li><a href="/soru/gecilmekte-olan-arac-surucusunun-yavaslayip-gecme-yapan/">Geçilmekte olan araç sürücüsünün yavaşlayıp geçme yapan araca kolaylık sağlaması durumu, trafikte aşağıdaki…</a></li>
+          <li><a href="/soru/gorselde-karsiya-gecmeye-calisan-yayanin-hizli-hareket/">Görselde karşıya geçmeye çalışan yayanın hızlı hareket etmesi için el, kol ve sözle uyarılarda bulunan…</a></li>
+          <li><a href="/soru/gorseldeki-gibi-emisyon-degeri-yuksek-egzoz-dumani-cikaran/">Görseldeki gibi emisyon değeri yüksek egzoz dumanı çıkaran araçların kullanılması, hak ihlallerinden…</a></li>
+          <li><a href="/soru/gorseldeki-park-etmis-aracin-surucusuyle-ilgili-hangisi/">Görseldeki park etmiş aracın sürücüsüyle ilgili hangisi kesinlikle söylenir?</a></li>
+          <li><a href="/soru/hangisi-toplum-adabina-aykiri-davranislardandir/">Hangisi, toplum adabına aykırı davranışlardandır?</a></li>
+          <li><a href="/soru/i-kaygilari-artar-ii-kalp-atislari-hizlanir-iii-saldirgan/">I. Kaygıları artar. II. Kalp atışları hızlanır. III. Saldırgan tutum sergilemezler. Trafikte yaşanan stresin,…</a></li>
+          <li><a href="/soru/i-orta-refujlere-ve-yol-kenarlarina-dikilen-agaclarin-zarar-2/">I. Orta refüjlere ve yol kenarlarına dikilen ağaçların zarar görmesi II. Köprü ve tünel gibi noktalarda…</a></li>
+          <li><a href="/soru/i-trafikteki-butun-kurallarin-nedenini-ogrenir-ii-arac/">I. Trafikteki bütün kuralların nedenini öğrenir. II. Araç kullanırken yapacağı bir kural ihlalinin sonucunda…</a></li>
+          <li><a href="/soru/i-trafikteki-butun-kurallarin-nedenini-ogrenir-ii-arac-2/">I. Trafikteki bütün kuralların nedenini öğrenir. II. Araç kullanırken yapacağı bir kural ihlalinin sonucunda…</a></li>
+          <li><a href="/soru/ondeki-arac-yol-kenarina-park-etmeye-calisirken-arkadan/">Öndeki araç yol kenarına park etmeye çalışırken arkadan gelen diğer aracın onu beklemesi durumu, trafikte…</a></li>
+          <li><a href="/soru/seyir-halindeki-surucunun-yaptigi-bir-hatadan-dolayi-eliyle/">Seyir hâlindeki sürücünün, yaptığı bir hatadan dolayı eliyle veya yüz ifadesiyle diğer sürücülerden özür…</a></li>
+          <li><a href="/soru/surucu-trafik-icinde-yapacagi-bir-kural-ihlalinde/">Sürücü, trafik içinde yapacağı bir kural ihlalinde kendisinin ya da sevdiklerinin canını tehlikeye attığının…</a></li>
+          <li><a href="/soru/suruculer-trafik-adabi-acisindan-basarili-iletisim-kurma/">Sürücüler, trafik adabı açısından başarılı iletişim kurma becerilerini geliştirmek için hangisini yapmalıdır?</a></li>
+          <li><a href="/soru/surucunun-trafik-ortaminda-yaptigi-davranislardan-hangisi/">Sürücünün trafik ortamında yaptığı davranışlardan hangisi, diğer sürücülerin dikkatinin dağılmasına ya da…</a></li>
+          <li><a href="/soru/surucunun-trafik-ortaminda-yaptigi-davranislardan-hangisi-2/">Sürücünün trafik ortamında yaptığı davranışlardan hangisi, diğer sürücülerin dikkatinin dağılmasına ya da…</a></li>
+          <li><a href="/soru/ters-yonden-gelen-bir-surucuye-bu-sokak-tek-yonlu-herhalde/">Ters yönden gelen bir sürücüye &quot;Bu sokak tek yönlü, herhalde siz girişteki levhayı görmediniz, lütfen daha…</a></li>
+        </ol>
+      </details>
+    </section>
+<!-- TUM_SORULAR_BITIR -->
 
     <section class="soru-grup" style="max-width:1100px;margin:0 auto;padding:32px 28px">
       <h2>Deneme Sınavı Nasıl Çalışır?</h2>
@@ -706,7 +900,7 @@ Numaralanmış ifadelerden hangileri trafik adabına sahip olan bir sürücü i�
         <li><b>Sonuç ekranı:</b> Sınav bittiğinde puan, doğru/yanlış/boş sayısı ve konu bazlı performans analizi gösterilir</li>
         <li><b>Çözümlü cevaplar:</b> Her sorunun doğru cevabı ve yanlış seçtiğin şıklar işaretlenir</li>
         <li><b>Sınav geçmişi:</b> Tüm denemelerin kaydedilir, puan gelişimini takip edebilirsin</li>
-        <li><b>Ücretsiz:</b> Google hesabıyla giriş yap, sınavın ve sonuçların kaydedilsin. Ücret veya reklam yoktur</li>
+        <li><b>Giriş gerekmez:</b> Denemeye doğrudan başla. Sonuçlarını kaydetmek ve gelişimini görmek istersen Google ile giriş yap. Ücret veya reklam yoktur</li>
         <li><b>4 farklı deneme sınavı</b> — gerçek MTSK e-sınavlarında çıkmış sorulardan derlendi</li>
       </ul>
     </section>
@@ -714,8 +908,8 @@ Numaralanmış ifadelerden hangileri trafik adabına sahip olan bir sürücü i�
     <section class="cta">
       <div class="cta-inner">
         <h2>Ehliyet deneme sınavına hazır mısın?</h2>
-        <p>50 soruluk online ehliyet deneme testi ile gerçek sınav deneyimini yaşa. Süre tutulur, anında puan hesaplanır, her sorunun çözümü gösterilir — tıpkı MEB e-sınavı gibi. Ücretsiz — Google hesabınla giriş yap, sonuçların kaydedilsin.</p>
-        <a class="btn btn-primary btn-lg" href="/panel/?g=sinavlar" rel="nofollow" data-korumali>Ehliyet Deneme Sınavını Başlat</a>
+        <p>50 soruluk deneme sınavı ile gerçek e-sınav deneyimini yaşa. Süre tutulur, anında puan hesaplanır, her sorunun çözümü gösterilir. Giriş gerekmez, ücretsizdir.</p>
+        <a class="btn btn-primary btn-lg" href="/deneme-sinavi/">Ehliyet Deneme Sınavını Başlat</a>
       </div>
     </section>
   </main>
@@ -768,7 +962,6 @@ Numaralanmış ifadelerden hangileri trafik adabına sahip olan bir sürücü i�
   <script src="/assets/js/feedback.js" defer></script>
   <script type="module" src="/assets/js/auth-ui.js"></script>
   <script src="/assets/js/mobile-nav.js" defer></script>
-  <script src="/assets/js/deneme-davet.js" defer></script>
 
 <!-- Google tag (gtag.js) — sayfa yüklendikten sonra yüklenir -->
 <script>

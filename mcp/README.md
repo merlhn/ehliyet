@@ -7,7 +7,7 @@ Turkiye B sinifi surucu belgesi (ehliyet) sinavina hazirlik verilerini AI ajanla
 | Dosya | Icerik |
 |---|---|
 | `data/questions.json` | 200 soru (4 deneme sinavi) |
-| `data/quick-facts.json` | 76 hap bilgi |
+| `data/quick-facts.json` | 80 hap bilgi |
 | `data/lesson-summaries.json` | 43 ders, 354 atomik bilgi |
 
 Veri dosyalari `tools/mcp-veri-uret.py` ile sitedeki JS ve HTML kaynaklarindan uretilir.
