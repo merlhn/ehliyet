@@ -289,6 +289,7 @@ FOOTER_HTML_YENI = """  <footer class="site-footer">
       </nav>
       <nav class="foot-col" aria-label="Sayfalar">
         <h4>Sayfalar</h4>
+        <a href="/ehliyet-fiyatlari/">Ehliyet Fiyatları</a>
         <a href="/hakkinda/">Hakkında</a>
         <a href="/iletisim/">İletişim</a>
         <a href="/gizlilik/">Gizlilik Politikası</a>

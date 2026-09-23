@@ -510,6 +510,7 @@ def generate_page(d, hap, onceki, sonraki, ders, satirlar):
         <a href="/ehliyet-nasil-alinir/">Ehliyet Nasıl Alınır?</a>
         <a href="/ehliyet-sinav-konulari/">Sınav Konuları</a>
         <a href="/direksiyon-sinavi/">Direksiyon Sınavı</a>
+        <a href="/ehliyet-fiyatlari/">Ehliyet Fiyatları</a>
       </nav>
       <nav class="foot-col" aria-label="Sayfalar">
         <span class="foot-label">Sayfalar</span>

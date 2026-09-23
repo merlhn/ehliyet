@@ -21,6 +21,7 @@ Site 4 ana ders kategorisi altında 43 konu içerir:
 - [Hap Bilgiler](https://ehliyet.digital/hap-bilgiler/) — 76 kısa özet kartı, hızlı tekrar için
 - [Soru Çöz](https://ehliyet.digital/ehliyet-sinav-sorulari/) — Çıkmış 200 sorunun tamamı, konuya göre, cevaplı
 - [Deneme Sınavı](https://ehliyet.digital/deneme-sinavi/) — MEB e-sınav formatında 50 soru, 45 dakika; giriş gerektirmez
+- [Ehliyet Fiyatları 2026](https://ehliyet.digital/ehliyet-fiyatlari/) — Harç, değerli kağıt, sınav ve kurs ücretleri, yenileme ücreti
 - Konu bazlı sorular: [İlk Yardım](https://ehliyet.digital/ehliyet-sinav-sorulari/ilk-yardim/), [Trafik ve Çevre](https://ehliyet.digital/ehliyet-sinav-sorulari/trafik-ve-cevre/), [Araç Tekniği](https://ehliyet.digital/ehliyet-sinav-sorulari/arac-teknigi/), [Trafik Adabı](https://ehliyet.digital/ehliyet-sinav-sorulari/trafik-adabi/)
 - [Ehliyet Nasıl Alınır?](https://ehliyet.digital/ehliyet-nasil-alinir/) — Adım adım başvuru rehberi
 - [Sınav Konuları](https://ehliyet.digital/ehliyet-sinav-konulari/) — Konu dağılımı ve çalışma rehberi

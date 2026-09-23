@@ -180,6 +180,7 @@ python3 -m http.server 8000
 ├── hap-bilgiler/               80 hap bilgi (4 kategori)
 ├── ehliyet-sinav-sorulari/     20 örnek soru + 186 sorunun dizini; alt dizinler: konu bazlı soru sayfaları
 ├── deneme-sinavi/              Herkese açık deneme sınavı (4 sınav, giriş gerekmez)
+├── ehliyet-fiyatlari/                   2026 ehliyet fiyatları (harç, sınav, kurs)
 ├── soru/                       186 bireysel soru sayfası
 ├── panel/                      Giriş gerektiren alan (sınavlar)
 ├── api/                        REST API (Vercel serverless)

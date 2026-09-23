@@ -790,6 +790,7 @@ Alt başlıklar:
 - Hap Bilgiler (76 kısa özet): https://ehliyet.digital/hap-bilgiler/
 - Soru Çöz: https://ehliyet.digital/ehliyet-sinav-sorulari/
 - Deneme Sınavı (giriş gerektirmez, 50 soru / 45 dk): https://ehliyet.digital/deneme-sinavi/
+- Ehliyet Fiyatları 2026 (harç, sınav ve kurs ücretleri): https://ehliyet.digital/ehliyet-fiyatlari/
 - İlk Yardım çıkmış sorular: https://ehliyet.digital/ehliyet-sinav-sorulari/ilk-yardim/
 - Trafik ve Çevre çıkmış sorular: https://ehliyet.digital/ehliyet-sinav-sorulari/trafik-ve-cevre/
 - Araç Tekniği çıkmış sorular: https://ehliyet.digital/ehliyet-sinav-sorulari/arac-teknigi/
