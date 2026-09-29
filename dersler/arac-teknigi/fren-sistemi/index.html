@@ -130,6 +130,10 @@
   .quiz-card.revealed .reveal-btn{display:none}
 
   /* E-E-A-T: güncelleme tarihi ve kaynak */
+  .kisa-cevap{margin:20px 0 28px;padding:18px 20px;border:1px solid var(--line);border-left:3px solid var(--fg);border-radius:12px;background:#fafafa}
+  .kisa-cevap h2{margin:0 0 8px !important;font-size:15px !important;letter-spacing:.02em}
+  .kisa-cevap p{margin:0 0 8px}
+  .kisa-cevap .kisa-meta{margin:0;font-size:12.5px;color:var(--muted)}
   .ders-kaynak{margin-top:32px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);line-height:1.6}
   .ders-kaynak span{display:block;margin-bottom:4px}
 .ders-nav{display:flex;justify-content:space-between;align-items:center;max-width:760px;margin:48px auto 0;padding:24px 0;border-top:1px solid var(--line)}
@@ -214,7 +218,7 @@
       "educationalLevel": "B sınıfı ehliyet",
       "teaches": "Fren Sistemi",
       "datePublished": "2026-07-19",
-      "dateModified": "2026-09-23T21:08:59+03:00",
+      "dateModified": "2026-09-29T23:27:56+03:00",
       "author": {
         "@type": "Organization",
         "@id": "https://ehliyet.digital/#organization",
@@ -328,6 +332,11 @@
       <div><span class="k">Konu - 5</span> : <h1>Fren Sistemi</h1></div>
     </div>
     <p class="lead">Fren sistemi, araç tekniği dersinin en çok soru gelen ve en çok çeldirici barındıran konularından biridir. Bu bölümde frenin görevini, ayak ve el freni farkını, hidrolik çalışma mantığını, ABS ile ASR sistemlerini, büyük araçlardaki özel fren tiplerini ve en çok sorulan fren arızalarını sınav odaklı biçimde öğreneceğiz.</p>
+    <div class="kisa-cevap">
+      <h2>Kısaca</h2>
+      <p>Fren sistemi hareket halindeki aracı yavaşlatır, yavaşlayan aracı en kısa mesafede ve en kısa zamanda durdurur. Ayak frenine basıldığında aracın dört tekerleği de birlikte durur (ağırlık öne kaydığı için önce ön tekerlekler durur); el freni ise sadece arka tekerlekleri tutarak duran aracı sabitler. Sistem hidrolik yağ ile ve “sıvılar sıkıştırılamaz” ilkesiyle çalışır, yağ biterse fren tutmaz. Durma mesafesi algı, tepki ve fren mesafesinin toplamıdır; hız arttıkça fren mesafesi hızın karesiyle orantılı artar. Yol yüzeyinde su, buz veya kar olması ve lastik hava basıncının dengesiz olması fren mesafesini artırır, dengesiz basınçta araç savrulur. ABS tekerleklerin kilitlenmesini önleyip direksiyon hakimiyetini artırır, ASR patinajı önler; büyük araçlarda havalı, motor ve retarder frenleri bulunur. Aks arızası bir fren arızası değildir.</p>
+      <p class="kisa-meta">Son güncelleme: 14 Ağustos 2026 · Kaynak: MEB MTSK Müfredatı ve Karayolları Trafik Yönetmeliği</p>
+    </div>
 
 <!-- BODY_START -->
     <h2>Fren sisteminin görevi</h2>
@@ -344,7 +353,7 @@
     <p>Fren sistemini oluşturan temel parçalar <b>fren pedalı, merkez pompası, fren balataları, tekerlek silindirleri, kampana ve disktir</b>. Fren pedalına basıldığında merkez pompası hidrolik basıncı oluşturur, bu basınç tekerlek silindirlerine iletilir ve balatalar disk ya da kampana yüzeyine bastırılarak sürtünme yoluyla aracı yavaşlatır. Bu parçaların isimlerini tanımanız, arıza sorularını çözerken hangi parçanın neden sorumlu olduğunu ayırt etmenizi sağlar.</p>
 
     <h2>ABS ve ASR sistemleri</h2>
-    <p><a href="/dersler/arac-teknigi/aktif-pasif-guvenlik/">ABS</a>, frenleme sırasında tekerleklerin kilitlenmesini önleyen sistemdir.</b> Ani ya da sert frenlemede tekerlek kilitlenip kayarsa direksiyon hakimiyeti kaybolur; ABS, freni <b>saniyede yaklaşık 20 kez tutup bırakarak</b> tekerleğin kilitlenmesini engeller ve böylece <b>frenleme sırasında direksiyon hakimiyetini artırır</b>. <b>ASR ise patinaj önleme sistemidir;</b> kalkışta ve hızlanmada tekerleğin boşa dönerek patinaj yapmasını engeller. Sınavda ABS “kilitlenmeyi önler, direksiyon hakimiyetini artırır”, ASR ise “patinajı önler” ifadesiyle ayırt edilir; bu ikisini karıştırmayın.</p>
+    <p><a href="/dersler/arac-teknigi/aktif-pasif-guvenlik/">ABS</a>, frenleme sırasında tekerleklerin kilitlenmesini önleyen sistemdir. Ani ya da sert frenlemede tekerlek kilitlenip kayarsa direksiyon hakimiyeti kaybolur; ABS, freni <b>saniyede yaklaşık 20 kez tutup bırakarak</b> tekerleğin kilitlenmesini engeller ve böylece <b>frenleme sırasında direksiyon hakimiyetini artırır</b>. <b>ASR ise patinaj önleme sistemidir;</b> kalkışta ve hızlanmada tekerleğin boşa dönerek patinaj yapmasını engeller. Sınavda ABS “kilitlenmeyi önler, direksiyon hakimiyetini artırır”, ASR ise “patinajı önler” ifadesiyle ayırt edilir; bu ikisini karıştırmayın.</p>
 
     <h2>Büyük araçlardaki fren tipleri</h2>
     <p>Kamyon, çekici ve otobüs gibi <b>büyük tonajlı araçlarda</b>, ağırlıkları nedeniyle sıradan fren yetmez ve ek fren sistemleri bulunur. Bu araçlarda <b>havalı fren, motor freni ve retarder fren</b> yer alır. Bunlar aracın uzun inişlerde ve yüksek yükte güvenle yavaşlamasını sağlayan yardımcı fren sistemleridir; “büyük araçlarda hangi fren bulunur?” sorusunda bu üçünü hatırlamanız yeterlidir.</p>
@@ -357,7 +366,7 @@
     <p>Fren mesafesini artıran diğer faktörler şunlardır: <b>yol yüzeyinde su, buz veya kar olması</b> sürtünmeyi azaltarak fren mesafesini uzatır. <b>Lastiklerin hava basıncı dengesiz ise frenleme anında araç savrulur</b>, çünkü tekerlekler farklı sürtünme kuvvetine maruz kalır. <b>Fren balatalarının aşınmış olması</b> frenleme verimini doğrudan düşürür. Ayrıca <b>araç yükü arttıkça fren mesafesi de uzar</b> çünkü ağır aracı durdurmak daha fazla enerji gerektirir.</p>
 
     <h2>Frenlemeyi ve uyarıları etkileyen etkenler</h2>
-    <p>Frenleme mesafesini artıran önemli bir etken <a href="/dersler/arac-teknigi/lastikler/">lastik</a> diş derinliğinin azalmasıdır</b>; lastiğin yolu kavraması zayıfladıkça araç daha uzun mesafede durur ve <b>yasal asgari diş derinliği 1,6 mm'dir</b>. Gösterge panelinde <b>ABS uyarı ışığının yanması, fren sisteminde bir arıza olduğunu</b> gösterir. <b>Fren pedalına basıldığında arkadaki fren lambaları yanmıyorsa fren müşürü (fren lamba müşürü) arızalıdır.</b> Burada çok bilinen bir çeldiriciye dikkat edin: <b>“akslar arızalıdır” bir fren arızası değildir</b>, çünkü aks fren sistemine değil <b>güç aktarma organlarına</b> aittir; fren arızaları sorulduğunda aks seçeneği doğru cevap olmaz.</p>
+    <p>Frenleme mesafesini artıran önemli bir etken <a href="/dersler/arac-teknigi/lastikler/">lastik</a> diş derinliğinin azalmasıdır; lastiğin yolu kavraması zayıfladıkça araç daha uzun mesafede durur ve <b>yasal asgari diş derinliği 1,6 mm'dir</b>. Gösterge panelinde <b>ABS uyarı ışığının yanması, fren sisteminde bir arıza olduğunu</b> gösterir. <b>Fren pedalına basıldığında arkadaki fren lambaları yanmıyorsa fren müşürü (fren lamba müşürü) arızalıdır.</b> Burada çok bilinen bir çeldiriciye dikkat edin: <b>“akslar arızalıdır” bir fren arızası değildir</b>, çünkü aks fren sistemine değil <b>güç aktarma organlarına</b> aittir; fren arızaları sorulduğunda aks seçeneği doğru cevap olmaz.</p>
 
         <h2 id="sinavlik-bilgiler">Bu konudan sınavlık bilgiler</h2>
     <ul class="atomik">
@@ -375,8 +384,6 @@
       <li>Yol yüzeyinde su, buz veya kar olması fren mesafesini artıran faktörlerdendir.</li>
     </ul>
 
-    <h2>Kısaca</h2>
-    <p>Fren sistemi hareket halindeki aracı yavaşlatır, yavaşlayan aracı en kısa mesafede ve en kısa zamanda durdurur. Ayak frenine basıldığında aracın dört tekerleği de birlikte durur (ağırlık öne kaydığı için önce ön tekerlekler durur); el freni ise sadece arka tekerlekleri tutarak duran aracı sabitler. Sistem hidrolik yağ ile ve “sıvılar sıkıştırılamaz” ilkesiyle çalışır, yağ biterse fren tutmaz. Durma mesafesi algı, tepki ve fren mesafesinin toplamıdır; hız arttıkça fren mesafesi hızın karesiyle orantılı artar. Yol yüzeyinde su, buz veya kar olması ve lastik hava basıncının dengesiz olması fren mesafesini artırır, dengesiz basınçta araç savrulur. ABS tekerleklerin kilitlenmesini önleyip direksiyon hakimiyetini artırır, ASR patinajı önler; büyük araçlarda havalı, motor ve retarder frenleri bulunur. Aks arızası bir fren arızası değildir.</p>
 <!-- BODY_END -->
 
     <div class="ders-kaynak">

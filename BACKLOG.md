@@ -72,6 +72,24 @@ mimari değişmez.
 
 ---
 
+### 10. Yapay zekâ görünürlüğü (Bing + ölçüm)
+- **Bing Webmaster Tools:** Search Console'dan içe aktararak siteyi ekle, sitemap'i gönder. ChatGPT arama ve Copilot Bing indeksini kullanır.
+- **IndexNow:** her deploy'dan sonra `python3 tools/indexnow.py` (son commit'te değişen sayfaları bildirir).
+- **Aylık ölçüm:** Aşağıdaki soruları ChatGPT (arama açık), Perplexity, Gemini ve Google AI Overview'da sor; ehliyet.digital alıntılanıyor mu, not et.
+  1. Ehliyet sınavında hangi dersten kaç soru çıkar?
+  2. Ehliyet sınavını geçmek için kaç doğru gerekir?
+  3. Ücretsiz ehliyet deneme sınavı nerede çözülür?
+  4. Ehliyet çıkmış sorular 2026
+  5. Teskereci yöntemi nedir?
+  6. Ayak frenine basınca hangi tekerlekler durur?
+  7. Şok pozisyonunda ayaklar kaç cm kaldırılır?
+  8. Aralıklı yanıp sönen kırmızı ışık ne anlama gelir?
+  9. Kavşakta ilk geçiş hakkı kimindir?
+  10. 2026 ehliyet ücreti ne kadar?
+  11. Ehliyet sınavı hap bilgiler
+  12. İlk yardımın ABC'si nedir?
+- **Dış anılma:** Ekşi Sözlük / Reddit ehliyet başlıklarına faydalı cevap, sürücü kursu blog iş birlikleri, açık API'nin Türkçe veri seti listelerine eklenmesi.
+
 ## Sonraki faz
 
 ### Ödeme

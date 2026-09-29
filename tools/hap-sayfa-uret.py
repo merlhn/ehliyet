@@ -22,6 +22,8 @@ import json
 import shutil
 import pathlib
 import importlib.util
+import subprocess
+import datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HAP_DIR = os.path.join(ROOT, "hap-bilgiler")
@@ -176,6 +178,30 @@ def detay_oku(slug):
     return sonuc
 
 
+AYLAR = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz",
+         "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"]
+
+
+def guncelleme_tarihi(slug):
+    """Ayrıntılı içerik dosyası varsa son değiştiği gün (git'e göre;
+    commit'lenmemiş değişiklik varsa bugün), yoksa yayın tarihi. ISO döner."""
+    yol = os.path.join(DETAY_DIR, f"{slug}.html")
+    if not os.path.exists(yol):
+        return YAYIN_TARIHI
+    kirli = subprocess.run(["git", "status", "--porcelain", "--", yol], cwd=ROOT,
+                           capture_output=True, text=True).stdout.strip()
+    if kirli:
+        return datetime.date.today().isoformat()
+    tarih = subprocess.run(["git", "log", "-1", "--format=%cs", "--", yol], cwd=ROOT,
+                           capture_output=True, text=True).stdout.strip()
+    return max(tarih or YAYIN_TARIHI, YAYIN_TARIHI)
+
+
+def tarih_tr(iso):
+    y, a, g = iso.split("-")
+    return f"{int(g)} {AYLAR[int(a) - 1]} {y}"
+
+
 _SORULAR = None
 
 def sorulari_yukle():
@@ -258,6 +284,7 @@ def generate_page(d, hap, onceki, sonraki, ders, satirlar):
     title_text = truncate(bilgi_duz, 52) + " | ehliyet.digital"
     desc_text = truncate(f"{kategori_ad} hap bilgi: {bilgi_duz}", 155)
     detay = detay_oku(slug)
+    guncel = guncelleme_tarihi(slug)
     if detay and detay["baslik"]:
         h1_text = detay["baslik"]
         title_text = detay["baslik"] + " | ehliyet.digital"
@@ -287,6 +314,7 @@ def generate_page(d, hap, onceki, sonraki, ders, satirlar):
         "inLanguage": "tr",
         "articleSection": kategori_ad,
         "datePublished": YAYIN_TARIHI,
+        "dateModified": guncel,
         "author": {"@type": "Organization", "name": "ehliyet.digital", "url": f"{DOMAIN}/"},
         "publisher": {"@type": "Organization", "name": "ehliyet.digital", "url": f"{DOMAIN}/"},
         "about": {"@type": "Thing", "name": kategori_ad},
@@ -476,7 +504,7 @@ def generate_page(d, hap, onceki, sonraki, ders, satirlar):
 {nav_items}    </nav>
 
     <div class="kaynak">
-      <p>Kaynak: MEB MTSK e-sınavı</p>
+      <p>Son güncelleme: {tarih_tr(guncel)} · Kaynak: MEB MTSK e-sınavı ve müfredatı</p>
     </div>
   </main>
 

@@ -43,6 +43,8 @@ Bu şablonda `{{...}}` yer tutucuları vardır. **CSS ve JS'e asla dokunma** —
 - `{{KONU_NO}}` — konu numarası (ör. `8`)
 - `{{KONU_AD}}` — konunun görünen adı (ör. `Yanıklar`). Bu, hem `<title>`'da, hem ders-meta'da, hem quiz başlığında geçer.
 - `{{LEAD}}` — 1-2 cümlelik giriş paragrafı (konunun sınavdaki önemi + bu notta ne öğrenileceği).
+- `{{KISACA}}` — 2-3 cümlelik özet; konunun sınavda sorulan cevabını doğrudan verir (arama motorları ve yapay zekâ asistanları bu kutuyu alıntılar). Lead'in hemen altındaki kutuda durur.
+- `{{TARIH}}` — yayın tarihi, ör. `29 Eylül 2026`.
 - `{{BODY}}` — asıl ders notu (aşağıdaki kurallara göre `<h2>` + `<p>` blokları).
 - `{{QUIZ_JSON}}` — 5 soruluk quiz dizisi (aşağıdaki format).
 
@@ -54,7 +56,7 @@ Kullanıcının kesin ve tekrarlanan talebi:
 2. **Anlamlı ve akıcı olmalı**, ezber değil; kavramı gerçekten anlatan bir metin ol.
 3. **Sınav odaklı** ol: transkriptte "bu sınavda çıkar", "şunu sorarlar", "çeldirici" denen noktaları mutlaka metne yedir. Rakamlar (süreler, sayılar, yüzdeler, dereceler) korunur.
 4. Vurgu için sadece `<b>...</b>` kullan (anahtar terimler, kritik sayılar).
-5. Yapı: kısa bir `.lead`, ardından mantıklı `<h2>` başlıklarla bölümler, en sonda **"Kısaca"** başlıklı bir özet paragrafı.
+5. Yapı: kısa bir `.lead`, hemen altında `{{KISACA}}` özet kutusu (şablonda hazır), ardından mantıklı `<h2>` başlıklarla bölümler. BODY'nin sonuna ayrıca "Kısaca" bölümü **yazma**; özet yalnızca üstteki kutuda olur.
 6. Dil: Türkçe, sade, ikinci tekil/çoğul karışık ama profesyonel ders anlatım tonu. Transkriptteki "kanalı beğenin, abone olun" gibi alakasız kısımları at.
 7. Kaynak yoksa (kullanıcı sadece konu adı verdiyse) içeriği standart MTSK/ehliyet müfredatından üret ve çıktı özetinde "kaynak verilmedi, standart müfredattan üretildi" diye belirt.
 

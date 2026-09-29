@@ -16,10 +16,18 @@ Site 4 ana ders kategorisi altında 43 konu içerir:
 - [Araç Tekniği](https://ehliyet.digital/dersler/arac-teknigi/) — 15 konu: motor, fren, lastik, aydınlatma, güvenlik sistemleri
 - [Trafik Adabı](https://ehliyet.digital/dersler/trafik-adabi/) — 5 konu: trafikte iletişim, öfke yönetimi, sorumluluk
 
+## Sınav hakkında temel bilgiler
+
+- B sınıfı ehliyet e-sınavı: 50 soru, 45 dakika, çoktan seçmeli (4 şık)
+- Soru dağılımı: Trafik ve Çevre Bilgisi 23, İlk Yardım 12, Araç Tekniği (Motor) 9, Trafik Adabı 6
+- Her soru 2 puan; geçme notu 100 üzerinden 70 (en az 35 doğru)
+- Ders bazında ayrı baraj yoktur; yalnızca toplam puana bakılır
+- Ayrıntı: [Sınav Konuları ve Konu Dağılımı](https://ehliyet.digital/ehliyet-sinav-konulari/)
+
 ## Ek kaynaklar
 
-- [Hap Bilgiler](https://ehliyet.digital/hap-bilgiler/) — 76 kısa özet kartı, hızlı tekrar için
-- [Soru Çöz](https://ehliyet.digital/ehliyet-sinav-sorulari/) — Çıkmış 200 sorunun tamamı, konuya göre, cevaplı
+- [Hap Bilgiler](https://ehliyet.digital/hap-bilgiler/) — 80 kısa özet kartı, hızlı tekrar için
+- [Soru Çöz](https://ehliyet.digital/ehliyet-sinav-sorulari/) — MEB e-sınavından 200 çıkmış soru (186'sı ayrı cevaplı sayfada), konuya göre
 - [Deneme Sınavı](https://ehliyet.digital/deneme-sinavi/) — MEB e-sınav formatında 50 soru, 45 dakika; giriş gerektirmez
 - [Ehliyet Fiyatları 2026](https://ehliyet.digital/ehliyet-fiyatlari/) — Harç, değerli kağıt, sınav ve kurs ücretleri, yenileme ücreti
 - Konu bazlı sorular: [İlk Yardım](https://ehliyet.digital/ehliyet-sinav-sorulari/ilk-yardim/), [Trafik ve Çevre](https://ehliyet.digital/ehliyet-sinav-sorulari/trafik-ve-cevre/), [Araç Tekniği](https://ehliyet.digital/ehliyet-sinav-sorulari/arac-teknigi/), [Trafik Adabı](https://ehliyet.digital/ehliyet-sinav-sorulari/trafik-adabi/)

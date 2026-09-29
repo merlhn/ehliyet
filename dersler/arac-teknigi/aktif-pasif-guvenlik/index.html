@@ -130,6 +130,10 @@
   .quiz-card.revealed .reveal-btn{display:none}
 
   /* E-E-A-T: güncelleme tarihi ve kaynak */
+  .kisa-cevap{margin:20px 0 28px;padding:18px 20px;border:1px solid var(--line);border-left:3px solid var(--fg);border-radius:12px;background:#fafafa}
+  .kisa-cevap h2{margin:0 0 8px !important;font-size:15px !important;letter-spacing:.02em}
+  .kisa-cevap p{margin:0 0 8px}
+  .kisa-cevap .kisa-meta{margin:0;font-size:12.5px;color:var(--muted)}
   .ders-kaynak{margin-top:32px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);line-height:1.6}
   .ders-kaynak span{display:block;margin-bottom:4px}
 .ders-nav{display:flex;justify-content:space-between;align-items:center;max-width:760px;margin:48px auto 0;padding:24px 0;border-top:1px solid var(--line)}
@@ -166,7 +170,7 @@
       "educationalLevel": "B sınıfı ehliyet",
       "teaches": "Aktif ve Pasif Güvenlik Sistemleri",
       "datePublished": "2026-07-19",
-      "dateModified": "2026-09-23T20:54:45+03:00",
+      "dateModified": "2026-09-23T21:08:59+03:00",
       "author": {
         "@type": "Organization",
         "@id": "https://ehliyet.digital/#organization",
@@ -280,13 +284,18 @@
       <div><span class="k">Konu - 8</span> : <h1>Aktif ve Pasif Güvenlik Sistemleri</h1></div>
     </div>
     <p class="lead">Araçlardaki güvenlik sistemleri, sınavda hemen her denemede karşınıza çıkan ve mantığı kavrandığında kolayca yapılan bir konudur. Bu bölümde sistemlerin ikiye ayrıldığını, aktif sistemlerin kazadan önce, pasif sistemlerin kazadan sonra devreye girdiğini ve ABS, BAS, ASR, ESP ile emniyet kemeri, hava yastığı, koltuk başlığı gibi parçaların ne işe yaradığını sınav odaklı olarak öğreneceğiz.</p>
+    <div class="kisa-cevap">
+      <h2>Kısaca</h2>
+      <p>Araç güvenlik sistemleri aktif ve pasif olmak üzere ikiye ayrılır: aktif sistemler kazadan önce devreye girip kazayı önlemeye çalışır, pasif sistemler kazadan sonra devreye girip ölüm ve yaralanmayı azaltır. Aktif güvenlik sistemleri ABS (frenlerken tekerlek kilitlenmesini önleyip direksiyon hakimiyetini korur), BAS (panik freni algılayıp azami basınçla fren mesafesini kısaltır), ASR (patinajı ve savrulmayı önler, lastik aşınmasını azaltır) ve ESP'dir (kuru, ıslak, buzlu yolda savrulmayı önleyip aracı dengede tutar). Pasif güvenlik sistemleri ise emniyet kemeri, hava yastığı, koltuk başlığı, çocuk koltuğu ve darbe emici sistemlerdir; bunların hiçbiri kazayı önlemez, yalnızca sonuçlarını hafifletir. Bir sistemin kazadan önce mi sonra mı çalıştığını bilirseniz aktif-pasif ayrımını her soruda doğru yaparsınız.</p>
+      <p class="kisa-meta">Son güncelleme: 24 Temmuz 2026 · Kaynak: MEB MTSK Müfredatı ve Karayolları Trafik Yönetmeliği</p>
+    </div>
 
 <!-- BODY_START -->
     <h2>Güvenlik sistemleri neden ikiye ayrılır?</h2>
     <p>Araçlardaki güvenlik sistemleri en temelde <b>aktif</b> ve <b>pasif</b> olmak üzere ikiye ayrılır ve bu ayrımın mantığı çok basittir: bir sistem <b>kaza olmadan önce</b> devreye girip kazayı önlemeye çalışıyorsa <b>aktif güvenlik sistemidir</b>; kaza <b>gerçekleştikten sonra</b> devreye girip ölüm ve yaralanmayı azaltmaya çalışıyorsa <b>pasif güvenlik sistemidir</b>. Sınavda size bir sistem verip “bu aktif mi pasif mi?” ya da “hangisi aktif güvenlik sistemidir?” diye sorarlar; bu yüzden zamanlamayı, yani kazadan önce mi sonra mı çalıştığını aklınızda tutmanız yeterlidir. Aktif sistemler genellikle <b>frenleme, direksiyon hakimiyeti ve savrulmayı önleme</b> ile ilgiliyken, pasif sistemler çarpma anında insanı koruyan <b>kemer, yastık ve darbe emici</b> parçalardır.</p>
 
     <h2>ABS — Kilitlenmeyi önleyen fren sistemi</h2>
-    <p><a href="/dersler/arac-teknigi/fren-sistemi/">ABS</a> bir aktif güvenlik sistemidir</b> çünkü kazayı önlemeye çalışır. Ani ve sert frenlemede tekerleklerin kilitlenip aracın kaymasını önler; bunu tekerleği <b>saniyede yaklaşık 20 kez tutup bırakarak</b> yapar. Tekerlek kilitlenmediği için sürücü <b>direksiyon hakimiyetini kaybetmez</b>; yani hem durmaya çalışır hem de aracı bir engelden kaçırmak için yönlendirebilir. Sınavın en sevdiği nokta budur: ABS'nin asıl faydası aracı daha hızlı durdurmak değil, <b>frenlerken direksiyon kontrolünü korumaktır</b>.</p>
+    <p><a href="/dersler/arac-teknigi/fren-sistemi/">ABS</a> bir aktif güvenlik sistemidir çünkü kazayı önlemeye çalışır. Ani ve sert frenlemede tekerleklerin kilitlenip aracın kaymasını önler; bunu tekerleği <b>saniyede yaklaşık 20 kez tutup bırakarak</b> yapar. Tekerlek kilitlenmediği için sürücü <b>direksiyon hakimiyetini kaybetmez</b>; yani hem durmaya çalışır hem de aracı bir engelden kaçırmak için yönlendirebilir. Sınavın en sevdiği nokta budur: ABS'nin asıl faydası aracı daha hızlı durdurmak değil, <b>frenlerken direksiyon kontrolünü korumaktır</b>.</p>
 
     <h2>BAS — Fren destek sistemi</h2>
     <p><b>BAS, ABS'nin daha gelişmiş hâlidir</b> ve o da aktif bir güvenlik sistemidir. Sürücünün <b>ani ve panik biçimde</b> frene bastığı acil durumları algılar ve pedala tam basılmasa bile <b>azami fren basıncını uygulayarak fren mesafesini kısaltır</b>. Bu sistem zamanla sürücünün <b>fren basma alışkanlığını öğrenir</b> ve normal frenlemeyle panik frenlemeyi birbirinden ayırt eder. Kısacası BAS, tehlike anında sürücünün ayağı kadar güçlü basamadığı durumlarda devreye girip aracı daha kısa mesafede durdurmaya çalışır.</p>
@@ -327,8 +336,6 @@
       <li>Darbe emici sistemler, çarpma enerjisini üzerine alan çelik alaşımlı kaporta ve şasi yapılarıdır; pasif güvenlik sistemidir.</li>
     </ul>
 
-    <h2>Kısaca</h2>
-    <p>Araç güvenlik sistemleri aktif ve pasif olmak üzere ikiye ayrılır: aktif sistemler kazadan önce devreye girip kazayı önlemeye çalışır, pasif sistemler kazadan sonra devreye girip ölüm ve yaralanmayı azaltır. Aktif güvenlik sistemleri ABS (frenlerken tekerlek kilitlenmesini önleyip direksiyon hakimiyetini korur), BAS (panik freni algılayıp azami basınçla fren mesafesini kısaltır), ASR (patinajı ve savrulmayı önler, lastik aşınmasını azaltır) ve ESP'dir (kuru, ıslak, buzlu yolda savrulmayı önleyip aracı dengede tutar). Pasif güvenlik sistemleri ise emniyet kemeri, hava yastığı, koltuk başlığı, çocuk koltuğu ve darbe emici sistemlerdir; bunların hiçbiri kazayı önlemez, yalnızca sonuçlarını hafifletir. Bir sistemin kazadan önce mi sonra mı çalıştığını bilirseniz aktif-pasif ayrımını her soruda doğru yaparsınız.</p>
 <!-- BODY_END -->
 
     <div class="ders-kaynak">

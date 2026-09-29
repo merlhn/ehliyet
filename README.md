@@ -195,6 +195,7 @@ python3 -m http.server 8000
 │   ├── hap-sayfa-uret.py       Bireysel hap bilgi sayfaları
 │   ├── atomik-ekle.py          Ders atomik özetleri
 │   ├── cevap-ac.py             Soru cevaplarını HTML'e taşı
+│   ├── indexnow.py             Değişen sayfaları Bing/IndexNow'a bildir
 │   └── mcp-veri-uret.py        MCP JSON veri dosyaları
 ├── llms.txt                    AI/LLM site dizini
 ├── llms-full.txt               Detaylı içerik dizini

@@ -22,6 +22,7 @@ URL: https://ehliyet.digital/dersler/ilk-yardim/ilk-yardim-ve-acil-tedavi/
 İlk yardım ve acil tedavi kavramları sınavda düzenli olarak, çoğu zaman aralarındaki fark üzerinden sorulur. Bu bölümde iki kavramın tanımını, ilk yardımın amaçlarını ve ilk yardımcının kim olduğunu ile özelliklerini öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - İlk yardım nedir?
 - Acil tedavi nedir?
 - İlk yardım ile acil tedavi farkı
@@ -30,7 +31,6 @@ Alt başlıklar:
 - İlk yardımcının özellikleri
 - Güvenli ortam ve 112
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### İlk Yardımın ABC'si
@@ -40,12 +40,12 @@ URL: https://ehliyet.digital/dersler/ilk-yardim/ilk-yardimin-abcsi/
 İlk yardımın ABC’si, temel yaşam desteğinin üç aşamasını ifade eder: A hava yolu açıklığı, B solunumun değerlendirilmesi, C dolaşımın değerlendirilmesi. Sınavda bu üç harfin ne anlama geldiği ve her aşamada yapılan işlem sıkça sorulur.
 
 Alt başlıklar:
+- Kısaca
 - ABC nedir?
 - A — Hava yolu açıklığı
 - B — Solunumun değerlendirilmesi
 - C — Dolaşımın değerlendirilmesi
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Kanamalar
@@ -55,13 +55,13 @@ Kanama çeşitleri: atardamar kanaması fışkırarak, toplardamar sızarak akar
 Kanama, damar bütünlüğünün bozulması sonucu kanın damar dışına çıkmasıdır. Kontrol altına alınamayan kanamalar kısa sürede şoka ve ölüme yol açabildiğinden, kanama türlerini ve durdurma yöntemlerini bilmek hayati önemdedir.
 
 Alt başlıklar:
+- Kısaca
 - Kanama nedir?
 - Damara göre kanama türleri
 - Kanamada ilk yardım
 - İç kanama ve belirtileri
 - Burun kanaması
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Kırık, Çıkık, Burkulma
@@ -71,6 +71,7 @@ Eklem yüzeylerinin anlık ayrılması burkulma, kalıcı ayrılması çıkıkt�
 Kırık, çıkık ve burkulma sınavda neredeyse her defa soru gelen bir konudur. Bu üç durumun nerede oluştuğunu, birbirinden farkını, ilk yardımını, atel kullanımını ve kırıklarda verilecek pozisyonları bu bölümde öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Kırık, çıkık ve burkulma nerede olur?
 - Kırık
 - Kırıkta ilk yardım
@@ -79,22 +80,21 @@ Alt başlıklar:
 - Atel ve tespit
 - Kırıklarda verilecek pozisyonlar
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Şok, Koma ve Bayılma
 URL: https://ehliyet.digital/dersler/ilk-yardim/sok-koma-bayilma/
-Şok pozisyonunda ayaklar 30 cm kaldırılır; komada yan yatış (koma pozisyonu), bayılmada sırt üstü yatırılır. Üçünün farkı, belirtileri ve sınav soruları.
+Hangi kazazedeye hangi pozisyon verilir? Şok, koma ve bayılmayı ayırt etmenin kısa yolu, ayaklar kaç cm kaldırılır tuzağı ve bu konudan çıkmış sorular.
 
 Bilinç bozuklukları — şok, koma ve bayılma — sınavda kesinlikle soru gelen bir konudur. Bu üçünü birbirinden ayırt etmek ve her birinde verilecek pozisyonu bilmek önemlidir. En kritik ayrım şudur: koma uzun süreli, bayılma kısa süreli bilinç kaybıdır.
 
 Alt başlıklar:
+- Kısaca
 - Şok nedir?
 - Şokta ilk yardım
 - Koma
 - Bayılma
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Solunum Yolu Tıkanıkları (Heimlich Manevrası)
@@ -104,13 +104,13 @@ Solunum yolu tıkanıklığı: tam ve kısmi tıkanma belirtileri, Heimlich mane
 Solunum yolu tıkanıklığından sınavda kesinlikle bir soru gelir. Bu bölümde tam ve kısmi tıkanmanın belirtilerini, hangisinde ne yapılacağını ve Heimlich manevrasının yetişkin, çocuk ve bebekte nasıl uygulandığını sırasıyla öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Tıkanma nedir? Türleri
 - Kısmi tıkanma
 - Tam tıkanma
 - Heimlich manevrası — yetişkin ve çocuk
 - Heimlich manevrası — bebek
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Taşıma Teknikleri
@@ -120,6 +120,7 @@ Taşıma teknikleri: Rentek manevrası, itfaiyeci yöntemi, tezkereci taşıma v
 Yanlış bir taşıma, mevcut bir yaralanmayı kalıcı sakatlığa çevirebilir. Bu bölümde kazazedeyi ne zaman taşımanın doğru olduğunu, acil taşıma yöntemlerini, Rentek manevrasını ve sedye ile taşımanın kurallarını öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Taşımada temel kural
 - Tek ilk yardımcıyla acil taşıma
 - Rentek manevrası
@@ -127,7 +128,6 @@ Alt başlıklar:
 - Sedye ile taşıma
 - İlk yardımcının kendini koruması
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Turnike Yöntemi
@@ -137,6 +137,7 @@ Turnike sadece tek kemikli bölgelere (kol ve bacak) uygulanır; kanama durdurma
 Turnike (boğucu sargı), kanama durdurmanın en son başvurulan yöntemidir. Yanlış uygulandığında dokuya zarar verebildiği için ne zaman, nereye ve nasıl uygulanacağını doğru bilmek gerekir. Bu bölümde turnikenin uygulama kurallarını öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Turnike nedir?
 - Turnike ne zaman uygulanır?
 - Turnike mi, basınçlı pansuman mı?
@@ -144,7 +145,6 @@ Alt başlıklar:
 - Nasıl uygulanır?
 - Uygulama sonrası kurallar
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Vücudu Oluşturan Sistemler
@@ -154,6 +154,7 @@ Yapı birimleri küçükten büyüğe: hücre → doku → organ → sistem. Bil
 Ehliyet sınavında vücudu oluşturan yapılar ve sistemler konusundan neredeyse her sınavda bir veya iki soru gelir. Bu bölümde yapıların küçükten büyüğe sıralamasını ve vücuttaki temel sistemleri, her sistemin görevini ve organlarını öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Vücudu oluşturan yapılar
 - Vücut bölgeleri
 - Hareket sistemi
@@ -163,7 +164,6 @@ Alt başlıklar:
 - Boşaltım sistemi
 - Sindirim sistemi
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Yanıklar
@@ -173,6 +173,7 @@ Yanıklar: tanımı, yanık çeşitleri, birinci-ikinci-üçüncü derece yanık
 Yanıklar sınavda hem yanık dereceleri hem de yapılması gereken ilk yardım üzerinden düzenli olarak sorulur. Bu bölümde yanığın tanımını, çeşitlerini, üç yanık derecesini ve yanıkta doğru ilk yardım basamaklarını öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Yanık nedir?
 - Yanık çeşitleri
 - Yanığın ciddiyetini ne belirler?
@@ -181,7 +182,6 @@ Alt başlıklar:
 - Yanıkta genel ilk yardım
 - Kimyasal yanıkta ilk yardım
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Yaralanmalar
@@ -191,12 +191,12 @@ Yaralanmalar: yara çeşitleri, genel ilk yardım kuralları ve delici göğüs,
 Yaralanmalar konusundan sınavda genellikle bir, hatta iki soru gelir. Bu bölümde yara tanımını, yara çeşitlerini ve genel ilk yardım kurallarını; ayrıca en çok sorulan delici göğüs, karın ve kafatası-omurga yaralanmalarını işleyeceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Yara nedir ve çeşitleri
 - Yaralanmalarda genel ilk yardım
 - Delici göğüs ve karın yaralanmaları
 - Kafatası ve omurga yaralanmaları
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Yaşam Bulguları
@@ -206,13 +206,13 @@ Yaşam bulguları: bilinç, solunum, nabız ve vücut ısısının nasıl değer
 Yaşam bulguları, bir hasta ya da yaralının durumunu değerlendirirken baktığımız temel göstergelerdir ve sınavda bu konudan neredeyse her defa bir soru gelir. Bu bölümde bilinç, solunum, nabız ve vücut ısısının nasıl değerlendirildiğini öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Yaşam bulguları nelerdir?
 - Bilinç
 - Solunum
 - Nabız (dolaşım)
 - Vücut ısısı
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ---
@@ -230,13 +230,13 @@ URL: https://ehliyet.digital/dersler/trafik-ve-cevre/arac-kullanma-sureleri/
 Bu bölümde kara yollarında araç sürme yasaklarını, alkol sınırlarını, ceza sürelerini ve ticari araçların kullanım-dinlenme sürelerini işleyeceğiz. Buradaki rakamlar (alkol promilleri, 625 kuralı, 4,5 ve 9 saat, takograf saklama süreleri) sınavda doğrudan sorulur; bu yüzden hepsini net biçimde bilmeniz gerekir.
 
 Alt başlıklar:
+- Kısaca
 - Araç sürme yasakları
 - Alkol sınırları
 - 625 kuralı (alkol ceza süreleri)
 - Ticari araçlarda kullanım ve dinlenme süreleri
 - Takograf cihazı
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Araçlarla İlgili Tanımlar
@@ -246,6 +246,7 @@ Birbirine bağlanmış en çok iki römorktan oluşan araçlara katır denir. Ot
 Araç türlerine ait tanımlar, sınavda doğrudan ya da fotoğraflı sorularla sıkça karşınıza çıkar. Özellikle otomobil, çekici ve römork tanımları en çok karıştırılan konulardır; bu tanımları netleştirdiğinizde bu konudan soru kaçırmazsınız.
 
 Alt başlıklar:
+- Kısaca
 - Otomobil, otobüs ve minibüs
 - Kamyonet ve kamyon
 - Çekici, römork ve yarı römork
@@ -254,7 +255,6 @@ Alt başlıklar:
 - Taşıt katarı ve özel amaçlı taşıt
 - B sınıfı ile kullanılabilenler
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Genel Tanımlar
@@ -264,6 +264,7 @@ Kara yolu ile ilgili genel tanımlar: yol türleri, yol kesimleri ve işaretlerl
 Kara yolu ile ilgili tanımlar, sınavda hem doğrudan hem de fotoğraflı sorularla en çok karşınıza çıkan konulardandır. Bu bölümde yol türleri, yol kesimleri ve işaretlerle ilgili en çok sorulan tanımları öğreneceksiniz.
 
 Alt başlıklar:
+- Kısaca
 - Tırmanma şeridi
 - Tek yönlü ve iki yönlü kara yolu
 - Bölünmüş kara yolu ve ayırıcı
@@ -275,7 +276,6 @@ Alt başlıklar:
 - Demir yolu hemzemin geçidi
 - Şerit, durak ve muayene istasyonu
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Hız Sınırları
@@ -285,6 +285,7 @@ Hız sınırları: yerleşim yeri içi ve dışı azami hızlar, araç türüne 
 Hız sınırları büyük ölçüde ezber gerektiren bir konudur; çok sayıda rakam vardır ve hepsini birebir ezberlemek zordur. Bu bölümde en çok sorulan hız değerlerini, asgari-azami ayrımını, römorklu araçların kuralını ve hızın azaltılması gereken yerleri öğreneceksiniz.
 
 Alt başlıklar:
+- Kısaca
 - Otomobil hız sınırları
 - Otoyola giremeyen araçlar
 - Yasal tolerans (%10)
@@ -293,7 +294,6 @@ Alt başlıklar:
 - Hız ihlali ve ceza
 - Hızın azaltılması gereken yerler
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Karayolunun Kullanılması
@@ -303,28 +303,28 @@ Kara yolunun kullanılması: şerit seçimi, şerit değiştirme ve geçme kural
 Bu bölümde kara yolunu araç olarak nasıl kullanacağımızı, hangi şeritten gitmemiz gerektiğini, şerit değiştirme kurallarını ve yasak olan davranışları öğreneceğiz. Sınavda özellikle şerit kullanımıyla ilgili görselli sorular sıkça sorulur.
 
 Alt başlıklar:
+- Kısaca
 - Şeritlerin kullanımı
 - Şerit değiştirme
 - Yasak olan davranışlar
 - Kavşak ve dönüşlerde mesafe
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Kavşaklarda İlk Geçiş Hakkı
 URL: https://ehliyet.digital/dersler/trafik-ve-cevre/kavsaklarda-gecis-hakki/
-Kavşaklarda geçiş hakkı: CİPS kuralı, 625 kuralı ve kontrolsüz kavşaklarda sağdan gelen önceliği. Ehliyet sınavında en çok çıkan kavşak soruları.
+Kontrolsüz kavşakta, dönel kavşakta ve ana yola çıkarken ilk geçiş hakkı kimin? Sınavda en çok hata yapılan kavşak sorularının mantığı ve örnek sorular.
 
 Kavşaklarda geçiş hakkı, her sınavda kesinlikle en az bir soruyla karşınıza çıkan; ayrıca kazalarda kimin kusurlu olduğunu belirleyen hayati bir konudur. Konu, trafik görevlisi veya ışığın bulunmadığı kontrolsüz kavşaklar ile bunların bulunduğu kontrollü kavşaklar olmak üzere iki başlıkta incelenir; bu bölümde kontrolsüz kavşaklar ve temel öncelik kurallarını işleyeceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Geçiş üstünlüğü ve CİPS kuralı
 - 625 kuralı: trafik işaretlerine uymada öncelik sırası
 - Yol türüne ve manevraya göre öncelik
 - Kontrolsüz eşdeğer kavşaklar
 - Soru çözme tekniği
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Kontrollü Kavşaklar
@@ -334,12 +334,12 @@ Kontrollü kavşaklar: levha, ışık ve trafik görevlisiyle düzenlenen kavşa
 Kontrollü kavşaklar, bir levha, ışık ya da trafik görevlisi tarafından düzenlenen kavşaklardır. Bu bölümde levhaların anlamlarını, ana yol-tali yol ayrımını, dönüş kurallarını ve sık sorulan kaza senaryolarını işleyeceğiz. Bir kavşağın kontrollü olduğunu, orada levha veya ışık bulunmasından anlarsınız.
 
 Alt başlıklar:
+- Kısaca
 - Levhaların ışık karşılıkları
 - Ana yolda bile hız azaltma
 - Kaza ve kusur
 - Dönüş ve yön kuralları
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Kurum ve Kuruluşlar
@@ -349,6 +349,7 @@ Trafikle ilgili kurum ve kuruluşlar: hangi kurumun hangi görev ve yetkiye sahi
 Trafikle ilgili görev ve yetkiler farklı kurum ve kuruluşlar arasında paylaşılmıştır. Sınavda en çok karıştırılan konulardan biri budur; her kurumun ne yaptığını mantığıyla kavrarsanız, çeldiricili sorularda yanılmazsınız.
 
 Alt başlıklar:
+- Kısaca
 - Genel mantık
 - Emniyet Genel Müdürlüğü
 - Karayolları Genel Müdürlüğü
@@ -358,7 +359,6 @@ Alt başlıklar:
 - Ulaştırma ve Altyapı Bakanlığı
 - İçişleri Bakanlığı
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Trafik İşaretlerine Uymada Öncelik Sırası
@@ -368,13 +368,13 @@ Trafik işaretlerine uymada öncelik sırası: 1) trafik görevlisi, 2) ışıkl
 Trafikte bazen birden fazla işaret aynı anda ve birbiriyle çelişecek biçimde karşınıza çıkar. Böyle durumlarda hangisine uyacağınızı bilmeniz gerekir. Bu konu, trafik işaretlerine uymadaki öncelik (üstünlük) sırasını ve bu sıranın mantığını anlatır; sınavda sık sorulan, puanı garanti konulardan biridir.
 
 Alt başlıklar:
+- Kısaca
 - Öncelik sırası neden gerekir?
 - Öncelik sırası nedir?
 - Bu sıra neden böyle? (Mantığı)
 - Örneklerle
 - Sınavda nasıl sorulur?
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Temel Kavramlar
@@ -384,6 +384,7 @@ Temel trafik kavramları: sınavda hem doğrudan hem soru içinde çıkan tanım
 Sınavda hem doğrudan hem de soruların içinde sıkça karşınıza çıkan temel trafik tanımları. Bu tanımları ezberlemek yerine mantığını kavramanız gerekir; aksi hâlde soru biraz farklı sorulduğunda yanılırsınız.
 
 Alt başlıklar:
+- Kısaca
 - Trafik nedir?
 - Kara yolu nedir?
 - Sürücü ve şoför farkı
@@ -391,7 +392,6 @@ Alt başlıklar:
 - Trafik kazası nedir?
 - Trafikten men (alıkonulma)
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Trafik Işıkları
@@ -401,13 +401,13 @@ Fasılalı yanıp sönen sarı ışık dikkatli geç anlamındadır. Kırmızı 
 Işıklı trafik işaret cihazları, kırmızı-sarı-yeşil ışıklardan oluşur. Basit gibi görünse de yanıp sönen (fasılalı) ışıklar, oklu ışıklar ve bunların hangi levhalarla aynı anlama geldiği sınavda düzenli olarak sorulur. Işıkların anlamını kavradığınızda hem sınavda hem günlük trafikte doğru kararı verirsiniz.
 
 Alt başlıklar:
+- Kısaca
 - Kırmızı, sarı ve yeşil ışık
 - Yayalara ait ışıklar
 - Fasılalı (yanıp sönen) ışıklar
 - Oklu ışıklar
 - Işıkların olmadığı yerde levhalar
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ---
@@ -425,6 +425,7 @@ Aktif güvenlik sistemleri (ABS, ESP, ASR) kazayı önler; pasif güvenlik siste
 Araçlardaki güvenlik sistemleri, sınavda hemen her denemede karşınıza çıkan ve mantığı kavrandığında kolayca yapılan bir konudur. Bu bölümde sistemlerin ikiye ayrıldığını, aktif sistemlerin kazadan önce, pasif sistemlerin kazadan sonra devreye girdiğini ve ABS, BAS, ASR, ESP ile emniyet kemeri, hava yastığı, koltuk başlığı gibi parçaların ne işe yaradığını sınav odaklı olarak öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Güvenlik sistemleri neden ikiye ayrılır?
 - ABS — Kilitlenmeyi önleyen fren sistemi
 - BAS — Fren destek sistemi
@@ -435,7 +436,6 @@ Alt başlıklar:
 - Hava yastığı
 - Koltuk başlığı (baş desteği)
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Araç Kullanmaya Hazırlık
@@ -445,6 +445,7 @@ Araç kullanmaya hazırlık: araca binmeden yapılan dış kontroller, koltuk ve
 Araç kullanmaya başlamadan önce yapılması gereken kontroller ve doğru sürüş pozisyonu, sınavda düzenli soru gelen bir konudur. Bu bölümde araca binmeden yapılan dış kontrolleri, araç içi ayarları, emniyet ekipmanlarını ve aracı doğru çalıştırma sırasını sınav odaklı biçimde öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Sürüşe hazırlık neden önemli?
 - Araca binmeden yapılan dış kontroller
 - Lastikler ne zaman kontrol edilir?
@@ -454,7 +455,6 @@ Alt başlıklar:
 - Emniyet kemeri ve hava yastığı
 - Aracı doğru sırayla çalıştırma
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Ateşleme Sistemi
@@ -464,6 +464,7 @@ Ateşleme sisteminin parçaları: akü, kontak anahtarı, bobin ve buji. Buji be
 Ateşleme sistemi, benzinli ve LPG'li motorların çalışmasını sağlayan ve sınavda parçaları ile görevleri sık sorulan bir konudur. Bu bölümde ateşleme sisteminin görevini, akünün 12 voltunu bujiye ulaştıran parçaları, buji ile enjektör farkını, akü-alternatör-regülatör ilişkisini ve buji arızalarının belirtilerini sınav odaklı biçimde öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Ateşleme sisteminin görevi
 - Ateşleme sisteminin parçaları
 - Buji ve dizel farkı
@@ -472,7 +473,6 @@ Alt başlıklar:
 - Alternatör (şarj dinamosu)
 - Buji arızaları ve belirtileri
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Aydınlatma ve İkaz Sistemi
@@ -482,6 +482,7 @@ Kısa far yeşil, uzun far mavi renkte yanar. Far mesafeleri, selektör kullanı
 Aydınlatma ve ikaz sistemi, hem farlarla ilgili renk ve mesafe değerleri hem de sigorta, far müşürü, flaşör gibi parçaların arıza mantığıyla neredeyse her sınavda soru getiren bir konudur. Bu bölümde göstergelerin görevini, selektörün nerede yapılıp nerede yapılmayacağını, geri ve fren ışıklarının renklerini, sigortanın önemini, far mesafelerini ve gösterge panelindeki renkleri, ayrıca hangi arızanın hangi parçadan kaynaklandığını sınav odaklı biçimde öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Aydınlatma, ikaz ve gösterge sisteminin görevi
 - Selektör nedir, nerede kullanılır?
 - Selektör nerede yapılmaz?
@@ -492,7 +493,6 @@ Alt başlıklar:
 - Arıza mantığı: hangi belirti hangi parçadan?
 - Sigorta, fren müşürü, flaşör ve römork bağlantısı
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Derhal Durulması Gereken Haller
@@ -502,6 +502,7 @@ Aracın derhal durdurulması gereken 5 durum: yağ basıncı lambası, şarj lam
 Araç kullanırken bazı arıza belirtileri ortaya çıktığında bir an bile beklemeden aracı durdurmak gerekir; aksi halde motor ciddi ve pahalı zararlar görür. Bu bölümde motorun derhal durdurulmasını gerektiren beş durumu, her birinde ne yapılacağını ve sınavda en çok çeldirici olarak sorulan “kontak kapatılır mı kapatılmaz mı?” ayrımını sınav odaklı biçimde öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Derhal durmayı gerektiren durumlar nelerdir?
 - Yağ lambasının yanması
 - Şarj (akü) lambasının yanması
@@ -509,16 +510,16 @@ Alt başlıklar:
 - Motordan duman çıkması ve yanık kokusu
 - Motordan anormal ses gelmesi
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Fren Sistemi
 URL: https://ehliyet.digital/dersler/arac-teknigi/fren-sistemi/
-Ayak frenine basıldığında 4 tekerlek de durur, el freni ise sadece arka tekerlekleri tutar. ABS, ASR, hidrolik fren mantığı ve sınavda çıkan çeldiriciler.
+Ayak freni mi, el freni mi? Sınavda en çok şaşırtan fren sorusunun mantığı, ABS ve hidrolik fren, çeldirici şıklar ve bu konudan çıkmış sorular.
 
 Fren sistemi, araç tekniği dersinin en çok soru gelen ve en çok çeldirici barındıran konularından biridir. Bu bölümde frenin görevini, ayak ve el freni farkını, hidrolik çalışma mantığını, ABS ile ASR sistemlerini, büyük araçlardaki özel fren tiplerini ve en çok sorulan fren arızalarını sınav odaklı biçimde öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Fren sisteminin görevi
 - Ayak freni ve el freni hangi tekerlekleri tutar?
 - Hidrolik çalışma prensibi
@@ -529,16 +530,16 @@ Alt başlıklar:
 - Fren mesafesini etkileyen faktörler
 - Frenlemeyi ve uyarıları etkileyen etkenler
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Güç Aktarma Organları
 URL: https://ehliyet.digital/dersler/arac-teknigi/guc-aktarma-organlari/
-Araca geri hareket yeteneği kazandıran vites kutusu, şafttan aksa hareketi ileten diferansiyel ve aks. Güç aktarma organları ve sınavda çıkan sorular.
+Debriyaj, vites kutusu, şaft, diferansiyel ve aks sırayla ne işe yarar? Sınavda sorulan geri hareket ve aksa iletim sorularının mantığı ve çıkmış sorular.
 
 Motorda üretilen gücün tekerleklere kadar nasıl ulaştığı, araç tekniği dersinin en çok soru gelen konularından biridir. Bu bölümde debriyaj, vites kutusu, şaft, diferansiyel, aks ve volanın görevlerini, bu organların sık sorulan arızalarını ve sınavın en sevdiği çeldiricileri sırayla ve sınav odaklı biçimde öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Güç aktarma organları nedir?
 - Motor hareketinin tekerleklere ulaşma sırası
 - Volan
@@ -550,7 +551,6 @@ Alt başlıklar:
 - Güç aktarma organlarının arızaları
 - Frenlemede debriyaj kullanılır mı?
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Lastikler
@@ -560,6 +560,7 @@ Lastikler: yasal diş derinliği sınırı, hava basıncının doğru ölçümü
 Lastikler, aracı yolda tutan tek unsur olduğu için hem güvenlik hem de araç muayenesi açısından sınavda sıkça sorulur. Bu bölümde diş derinliğinin yasal sınırını, hava basıncının doğru ölçümünü, rot-balans ile aşınma ilişkisini, mevsim lastiklerini ve lastik bakımına dair sınav-kritik ayrıntıları düz bir anlatımla öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Lastik neden bu kadar önemli?
 - Diş derinliği ve yasal sınır
 - Lastik hava basıncı
@@ -567,7 +568,6 @@ Alt başlıklar:
 - Mevsim lastikleri
 - Lastik bakımı ve kullanımı
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Motor Nedir?
@@ -577,6 +577,7 @@ Motor, yakıtın ısı enerjisini mekanik enerjiye çeviren makinedir. Benzinli 
 Motor, araç tekniği dersinin en temel ve en çok soru gelen konusudur. Bu ilk bölümde motorun tanımını, enerji türüne, zamanına ve soğutma tipine göre çeşitlerini, dört zamanın sırasını ve benzinli ile dizel motor arasındaki kritik farkları sınav odaklı biçimde öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Motor nedir?
 - Enerji türüne göre motorlar
 - Benzinli ve LPG'li motorlar
@@ -589,7 +590,6 @@ Alt başlıklar:
 - Soğutma tipine göre motorlar
 - Sık çıkan çeldirici bilgiler
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Ön Düzen ve Direksiyon Sistemi
@@ -599,6 +599,7 @@ URL: https://ehliyet.digital/dersler/arac-teknigi/on-duzen-direksiyon/
 Ön düzen ve direksiyon sistemi, araç tekniği dersinde neredeyse her sınavda soru gelen konulardan biridir. Bu bölümde direksiyonun görevini, en güvenli tutuş pozisyonunu, ön düzen parçalarını ve rot-balans ayarıyla ilgili arıza belirtilerini sınav odaklı biçimde öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Direksiyon sistemi nedir?
 - En güvenli direksiyon tutuş pozisyonu
 - Ön düzen parçaları
@@ -608,7 +609,6 @@ Alt başlıklar:
 - Rot ayarı ve lastik aşınması
 - Direksiyonun zor dönmesinin sebepleri
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Otomatik Vites
@@ -618,12 +618,12 @@ Otomatik vites: P, R, N, D ve L konumlarının anlamları, manuel vitesten fark�
 Otomatik vites, araç tekniği dersinde neredeyse her sınavda çıkan, kolay puan getiren bir konudur. Bu bölümde otomatik vitesin (otomatik şanzıman) ne olduğunu, manuel vitesten farkını ve en çok sorulan P, R, N, D, L konumlarının anlamlarını sınav odaklı biçimde öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Otomatik vites nedir?
 - Manuel vitesten farkı
 - Vites konumları ve anlamları
 - Sınavda nasıl sorulur?
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Şarj Sistemi
@@ -633,6 +633,7 @@ Aküyü şarj eden parça alternatördür. Şarj müşürü (göstergesi) kırm�
 Şarj sistemi, araç tekniği dersinde neredeyse her sınavda soru gelen sistemlerden biridir. Bu bölümde şarj sisteminin görevini, alternatör ile regülatörün ne işe yaradığını, şarj göstergesinin kırmızı yanmasının ne anlama geldiğini ve marş motoru, akü, sigorta gibi elemanların rolünü sınav odaklı biçimde öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Şarj sisteminin görevi
 - Şarj sisteminin parçaları
 - Alternatör (şarj dinamosu)
@@ -641,7 +642,6 @@ Alt başlıklar:
 - Marş motoru
 - Akü ve sigorta
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Soğutma Sistemleri
@@ -651,6 +651,7 @@ Soğutma sistemi: termostatın görevi, radyatöre su ve antifriz kuralları, ar
 Soğutma sistemi, araç tekniği dersinin en çok soru gelen bölümlerinden biridir. Bu notta soğutma sisteminin görevini, parçalarını tek tek, termostatın önemini, radyatöre su ve antifriz eklemenin kurallarını ve aracın neden hararet yaptığını sınav odaklı biçimde öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Soğutma sistemi neden vardır?
 - Soğutmaya göre motor çeşitleri
 - Soğutma sisteminin parçaları
@@ -660,7 +661,6 @@ Alt başlıklar:
 - Sıcak motora su eklerken dikkat
 - Aracın hararet yapma sebepleri
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Süspansiyon Sistemi
@@ -670,6 +670,7 @@ Süspansiyon sistemi: yay ve amortisörün görevleri, makasların kullanım yer
 Süspansiyon sistemi, aracın hem konforunu hem de yol tutuşunu belirleyen ve sınavda düzenli olarak soru gelen bir konudur. Bu bölümde sistemin iki temel parçası olan yay ile amortisörün ne işe yaradığını, makasların nerede kullanıldığını, çukura veya kasise sert girmenin doğurduğu zararları ve en çok karıştırılan çeldiricileri sınav odaklı biçimde öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Süspansiyon sistemi nedir?
 - Yay (helezon yay) ne işe yarar?
 - Amortisör ne işe yarar?
@@ -678,7 +679,6 @@ Alt başlıklar:
 - Aks nedir?
 - Sık çıkan çeldiriciler
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Yağlama Sistemi
@@ -688,6 +688,7 @@ Yağlama sisteminin amacı sürtünmeyi ve aşınmayı azaltmaktır. Motor yağ�
 Yağlama sistemi, araç tekniği dersinde parça isimlerinin, uyarı lambalarının ve bakım aralıklarının en çok sorulduğu konulardan biridir. Bu bölümde yağlama sisteminin görevlerini, parçalarını, yağ lambasının kırmızı yanmasının ne anlama geldiğini, yağ seviyesinin nasıl ve ne zaman ölçüldüğünü ve sınavda tekrarlanan renk ile çeldirici sorularını öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Yağlama sisteminin görevi
 - Yağlama sisteminin parçaları
 - Çeldirici: hangisi parça değildir?
@@ -697,7 +698,6 @@ Alt başlıklar:
 - Yağ seviyesinin ölçülmesi
 - Egzozdan mavi duman
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ---
@@ -715,12 +715,12 @@ URL: https://ehliyet.digital/dersler/trafik-adabi/ofke-stres-dikkat/
 Sürücünün ruh hâli, trafik güvenliğini doğrudan etkiler. Öfke, stres ve dikkat dağınıklığı; karar verme yeteneğini bozarak kaza riskini büyük ölçüde artırır. Bu bölümde bu olumsuz durumların trafikteki etkilerini ve nasıl yönetileceğini öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Trafikte öfke
 - Öfke yönetimi
 - Stres ve acelecilik
 - Dikkat ve dikkat dağınıklığı
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Bireysel ve Toplumsal Sorumluluk
@@ -730,12 +730,12 @@ Bireysel ve toplumsal sorumluluk: kural bilincinin anlamı, kazaların toplumsal
 Trafik, yalnızca bireysel bir eylem değil, toplumsal bir alandır. Her sürücünün davranışı yalnızca kendisini değil, çevresindeki herkesi etkiler. Bu bölümde kural bilincinin gerçek anlamını, kazaların sonuçlarını ve trafikte topluma karşı sorumluluğumuzu ele alacağız.
 
 Alt başlıklar:
+- Kısaca
 - Kural bilinci ve gerçek sorumluluk
 - Kazaların sonuçları
 - Korunması gereken yol kullanıcıları
 - Çevreye ve topluma saygı
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Trafikte Temel Değerler
@@ -745,12 +745,12 @@ Trafikte temel değerler: sabır, hoşgörü, saygı, nezaket, feragat, diğerk�
 Trafik adabının temelinde bir dizi değer yatar. Sabır, hoşgörü, saygı, nezaket, feragat, diğerkâmlık, yardımlaşma ve sorumluluk gibi değerler, sürücünün trafikteki davranışlarını belirler. Sınavda bu değerlerin tanımları ve örnekleri sıkça sorulur.
 
 Alt başlıklar:
+- Kısaca
 - Sabır ve hoşgörü
 - Saygı ve nezaket
 - Feragat ve diğerkâmlık
 - Yardımlaşma ve sorumluluk
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Trafik Adabı ve Temel Kavramlar
@@ -760,12 +760,12 @@ Trafik adabı ve temel kavramlar: adabın tanımı, değer-tutum-davranış ili�
 Trafik adabı; yazılı kuralların ötesinde, trafikteki diğer bireylere karşı sergilenen saygılı ve sorumlu davranış biçimidir. Bu bölümde trafik adabının ne olduğunu, değer-tutum-davranış ilişkisini ve kazaların temelindeki insan faktörünü öğreneceğiz.
 
 Alt başlıklar:
+- Kısaca
 - Trafik adabı nedir?
 - Değer, tutum ve davranış
 - Trafikte insan faktörü
 - Trafik kültürü
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ### Trafikte İletişim
@@ -775,19 +775,19 @@ Trafikte iletişim: sinyal, far, korna, beden dili ve göz temasıyla kurulan s�
 Trafik, sürücülerin ve yayaların sürekli birbiriyle iletişim kurduğu bir ortamdır. Bu iletişim çoğunlukla sözsüzdür; sinyaller, farlar, korna, beden dili ve göz teması yoluyla gerçekleşir. Sağlıklı bir iletişim, kazaların önlenmesinde ve trafiğin akıcılığında büyük rol oynar.
 
 Alt başlıklar:
+- Kısaca
 - Trafikte iletişim araçları
 - Beden dili ve göz teması
 - Empati ile iletişim
 - Başarılı iletişim için
 - Bu konudan sınavlık bilgiler
-- Kısaca
 - İlgili Kaynaklar
 
 ---
 
 ## Ek Kaynaklar
 
-- Hap Bilgiler (76 kısa özet): https://ehliyet.digital/hap-bilgiler/
+- Hap Bilgiler (80 kısa özet): https://ehliyet.digital/hap-bilgiler/
 - Soru Çöz: https://ehliyet.digital/ehliyet-sinav-sorulari/
 - Deneme Sınavı (giriş gerektirmez, 50 soru / 45 dk): https://ehliyet.digital/deneme-sinavi/
 - Ehliyet Fiyatları 2026 (harç, sınav ve kurs ücretleri): https://ehliyet.digital/ehliyet-fiyatlari/

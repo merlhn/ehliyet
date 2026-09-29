@@ -21,6 +21,10 @@
   .ders-meta .k{display:inline-block;min-width:104px;font-family:'Geist Mono',monospace;font-size:13.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);vertical-align:top}
   .ders-meta b{color:#08090a;font-weight:600}
   .lead{font-size:14px;color:var(--muted);line-height:1.6;margin:0 0 8px}
+  .kisa-cevap{margin:20px 0 28px;padding:18px 20px;border:1px solid var(--line);border-left:3px solid var(--fg);border-radius:12px;background:#fafafa}
+  .kisa-cevap h2{margin:0 0 8px !important;font-size:15px !important;letter-spacing:.02em}
+  .kisa-cevap p{margin:0 0 8px}
+  .kisa-cevap .kisa-meta{margin:0;font-size:12.5px;color:var(--muted)}
   h2{font-size:19px;font-weight:600;letter-spacing:-.025em;line-height:1.2;margin:42px 0 10px}
   p{margin:16px 0;font-size:16px}
   b{font-weight:600}
@@ -74,6 +78,11 @@
       <div><span class="k">Konu - {{KONU_NO}}</span> : <b>{{KONU_AD}}</b></div>
     </div>
     <p class="lead">{{LEAD}}</p>
+    <div class="kisa-cevap">
+      <h2>Kısaca</h2>
+      <p>{{KISACA}}</p>
+      <p class="kisa-meta">Son güncelleme: {{TARIH}} · Kaynak: MEB MTSK Müfredatı</p>
+    </div>
 
 <!-- BODY_START -->
 {{BODY}}

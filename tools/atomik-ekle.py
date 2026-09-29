@@ -3,7 +3,7 @@
 
 Kullanım (depo kökünden):  python3 tools/atomik-ekle.py
 
-Her ders sayfasının 'Kısaca' başlığından hemen önce, makine-okunur
+Her ders sayfasının gövde sonuna (BODY_END'den önce), makine-okunur
 atomik satırlardan oluşan bir blok ekler. Idempotent: mevcut blok
 varsa tekrar eklemez.
 """
@@ -673,11 +673,8 @@ for p in sorted(ROOT.rglob("index.html")):
         blok += f"      <li>{s}</li>\n"
     blok += "    </ul>\n\n"
 
-    # "Kısaca" başlığından hemen önce ekle
-    if "<h2>Kısaca</h2>" in t:
-        t = t.replace("<h2>Kısaca</h2>", blok + "    <h2>Kısaca</h2>")
-    # Kısaca yoksa BODY_END'den önce ekle
-    elif "<!-- BODY_END -->" in t:
+    # Gövdenin sonuna ekle ("Kısaca" özeti artık sayfanın üstündeki kutuda)
+    if "<!-- BODY_END -->" in t:
         t = t.replace("<!-- BODY_END -->", blok + "<!-- BODY_END -->")
     else:
         continue

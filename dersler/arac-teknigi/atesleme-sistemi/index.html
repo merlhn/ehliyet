@@ -130,6 +130,10 @@
   .quiz-card.revealed .reveal-btn{display:none}
 
   /* E-E-A-T: güncelleme tarihi ve kaynak */
+  .kisa-cevap{margin:20px 0 28px;padding:18px 20px;border:1px solid var(--line);border-left:3px solid var(--fg);border-radius:12px;background:#fafafa}
+  .kisa-cevap h2{margin:0 0 8px !important;font-size:15px !important;letter-spacing:.02em}
+  .kisa-cevap p{margin:0 0 8px}
+  .kisa-cevap .kisa-meta{margin:0;font-size:12.5px;color:var(--muted)}
   .ders-kaynak{margin-top:32px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);line-height:1.6}
   .ders-kaynak span{display:block;margin-bottom:4px}
 .ders-nav{display:flex;justify-content:space-between;align-items:center;max-width:760px;margin:48px auto 0;padding:24px 0;border-top:1px solid var(--line)}
@@ -166,7 +170,7 @@
       "educationalLevel": "B sınıfı ehliyet",
       "teaches": "Ateşleme Sistemi",
       "datePublished": "2026-07-19",
-      "dateModified": "2026-09-23T20:54:45+03:00",
+      "dateModified": "2026-09-23T21:08:59+03:00",
       "author": {
         "@type": "Organization",
         "@id": "https://ehliyet.digital/#organization",
@@ -280,10 +284,15 @@
       <div><span class="k">Konu - 11</span> : <h1>Ateşleme Sistemi</h1></div>
     </div>
     <p class="lead">Ateşleme sistemi, benzinli ve LPG'li motorların çalışmasını sağlayan ve sınavda parçaları ile görevleri sık sorulan bir konudur. Bu bölümde ateşleme sisteminin görevini, akünün 12 voltunu bujiye ulaştıran parçaları, buji ile enjektör farkını, akü-alternatör-regülatör ilişkisini ve buji arızalarının belirtilerini sınav odaklı biçimde öğreneceğiz.</p>
+    <div class="kisa-cevap">
+      <h2>Kısaca</h2>
+      <p>Ateşleme sistemi, sıkıştırılmış yakıt-hava karışımını ateşler; akünün 12 voltunu endüksiyon bobini 15.000-25.000 volta yükseltir, distribütör bunu sırayla bujilere gönderir, buji kıvılcımla ateşler. Parçaları kontak, endüksiyon bobini, akü, distribütör ve bujidir; radyatör bu sisteme ait değildir, soğutma sistemindendir. Buji benzinli ve LPG'li araçları ateşler, dizelde ateşleme enjektörle olur ve ön ısıtma bujisi yalnızca ısıtma yapar. Otomobil aküsü 12 volttur, azalan suya sadece saf su eklenir; regülatör voltajı 12 volta ayarlar, bozulursa ampuller patlar ve akü suyu azalır; alternatör araç çalışınca elektrik üretip aküyü şarj eder. Buji kurumlanır, ıslanır ya da kablosu çıkarsa motor tekler ve güçten düşer; kısa devre yangınında akü kutup başları sökülür.</p>
+      <p class="kisa-meta">Son güncelleme: 24 Temmuz 2026 · Kaynak: MEB MTSK Müfredatı ve Karayolları Trafik Yönetmeliği</p>
+    </div>
 
 <!-- BODY_START -->
     <h2>Ateşleme sisteminin görevi</h2>
-    <p><b>Ateşleme sisteminin görevi, silindir içinde sıkıştırılmış olan yakıt-hava karışımını ateşlemektir.</b> Bu sistem yalnızca benzinli ve LPG'li araçlarda ateşlemeyi üstlenir. Sistemin çalışma mantığı sınavda çok sorulur: <a href="/dersler/arac-teknigi/sarj-sistemi/">akünün</a> verdiği 12 voltluk düşük enerji, endüksiyon bobini tarafından 15.000 ile 25.000 volt arasına yükseltilir</b>; bu yüksek voltajı <b>distribütör sırayla bujilere dağıtır</b>, buji de kıvılcım çıkararak ateşlemeyi gerçekleştirir. Yani zayıf bir akü voltajının nasıl olup da güçlü bir kıvılcıma dönüştüğünü soran soruların cevabı endüksiyon bobinidir; “yüksek voltajı bujilere sırayla gönderen parça hangisidir?” diye sorulursa cevap distribütördür.</p>
+    <p><b>Ateşleme sisteminin görevi, silindir içinde sıkıştırılmış olan yakıt-hava karışımını ateşlemektir.</b> Bu sistem yalnızca benzinli ve LPG'li araçlarda ateşlemeyi üstlenir. Sistemin çalışma mantığı sınavda çok sorulur: <a href="/dersler/arac-teknigi/sarj-sistemi/">akünün</a> verdiği 12 voltluk düşük enerji, endüksiyon bobini tarafından 15.000 ile 25.000 volt arasına yükseltilir; bu yüksek voltajı <b>distribütör sırayla bujilere dağıtır</b>, buji de kıvılcım çıkararak ateşlemeyi gerçekleştirir. Yani zayıf bir akü voltajının nasıl olup da güçlü bir kıvılcıma dönüştüğünü soran soruların cevabı endüksiyon bobinidir; “yüksek voltajı bujilere sırayla gönderen parça hangisidir?” diye sorulursa cevap distribütördür.</p>
 
     <h2>Ateşleme sisteminin parçaları</h2>
     <p>Ateşleme sistemini oluşturan temel parçalar <b>kontak, endüksiyon bobini, akü (akümülatör), distribütör ve buji</b>dir; sisteme ayrıca <b>marş <a href="/dersler/arac-teknigi/motor-nedir/">Motor</a> ve alternatör</b> de destek verir. Bu parçaların hangisinin ateşleme sistemine ait olduğu doğrudan sorulur. Buradaki en klasik çeldirici <b>radyatördür</b>: radyatör ateşleme sisteminin değil <b>soğutma sisteminin</b> bir parçasıdır, dolayısıyla “aşağıdakilerden hangisi ateşleme sisteminin parçası değildir?” sorusunda doğru cevap radyatör olur.</p>
@@ -321,8 +330,6 @@
       <li>Elektrik tesisatında kısa devreden kaynaklanan yangında ilk iş akü kutup başlarını sökerek elektriği kesmektir.</li>
     </ul>
 
-    <h2>Kısaca</h2>
-    <p>Ateşleme sistemi, sıkıştırılmış yakıt-hava karışımını ateşler; akünün 12 voltunu endüksiyon bobini 15.000-25.000 volta yükseltir, distribütör bunu sırayla bujilere gönderir, buji kıvılcımla ateşler. Parçaları kontak, endüksiyon bobini, akü, distribütör ve bujidir; radyatör bu sisteme ait değildir, soğutma sistemindendir. Buji benzinli ve LPG'li araçları ateşler, dizelde ateşleme enjektörle olur ve ön ısıtma bujisi yalnızca ısıtma yapar. Otomobil aküsü 12 volttur, azalan suya sadece saf su eklenir; regülatör voltajı 12 volta ayarlar, bozulursa ampuller patlar ve akü suyu azalır; alternatör araç çalışınca elektrik üretip aküyü şarj eder. Buji kurumlanır, ıslanır ya da kablosu çıkarsa motor tekler ve güçten düşer; kısa devre yangınında akü kutup başları sökülür.</p>
 <!-- BODY_END -->
 
     <div class="ders-kaynak">
