@@ -30,6 +30,19 @@ TOPIC_URL = {
     "Trafik Adabı": "/ehliyet-sinav-sorulari/trafik-adabi/",
 }
 
+# Arama Konsolu'nda gösterimi yüksek ama tıklanmayan sorular için elle yazılmış
+# <title> ve meta açıklaması: slug -> (başlık, açıklama). Diğerleri soru kökünden üretilir.
+SEO_OZEL = {
+    "aksine-bir-isaret-bulunmadikca-otoyolda-minibus-ve": (
+        "Otoyolda Minibüs ve Otobüs Azami Hızı Kaç km? (Çıkmış Soru)",
+        "MEB e-sınavında çıkmış soru: aksine bir işaret yoksa otoyolda minibüs ve otobüsler için azami hız kaç km/sa? Şıkları gör, cevabını kontrol et, benzer soruları deneme sınavında çöz.",
+    ),
+    "hangisi-servis-veya-tamir-atolyeleri-tarafindan-yapilmalidir": (
+        "Hangisi Servis veya Tamir Atölyesinde Yapılmalı? (Çıkmış Soru)",
+        "MEB e-sınavında çıkmış Araç Tekniği sorusu: silecek, antifriz, lastik basıncı, motor yağı; hangisi servise bırakılır? Cevabını kontrol et, benzer soruları deneme sınavında çöz.",
+    ),
+}
+
 TR_MAP = str.maketrans({
     "ş": "s", "Ş": "s",
     "ç": "c", "Ç": "c",
@@ -158,6 +171,9 @@ def generate_page(q, slug, exam_num, prev_slug=None, next_slug=None):
     stem_text = re.sub(r"\s+", " ", q["stem"]).strip()
     title_text = truncate(stem_text, 60) + " | ehliyet.digital"
     desc_text = truncate(stem_text, 155)
+    if slug in SEO_OZEL:
+        title_text = SEO_OZEL[slug][0] + " | ehliyet.digital"
+        desc_text = SEO_OZEL[slug][1]
     canonical = f"{DOMAIN}/soru/{slug}/"
     section = q["section"]
     section_url = SECTION_URL.get(section, "/dersler/")

@@ -424,6 +424,10 @@ LANDING_CSS = """
   .stat{font-family:'Geist Mono',monospace;font-size:13px;color:#8a9097;white-space:nowrap}
   .stat b{font-size:20px;font-weight:500;color:#fff;margin-right:7px}
   .stat-ayrac{color:#3a3d42}
+  .hero-cta{margin:30px 0 0;display:flex;flex-direction:column;align-items:center;gap:10px}
+  .btn-acik{background:#fff;color:#08090a;border:1px solid #fff}
+  .btn-acik:hover{background:#e6e8ea;border-color:#e6e8ea}
+  .hero-cta small{font-family:'Geist Mono',monospace;font-size:12px;color:#8a9097}
   .ornekler{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:48px 0 0;text-align:left}
   .ornek{background:#131417;border:1px solid #26282c;border-radius:14px;padding:18px 20px}
   .ornek .kim{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#8a9097;margin:0 0 9px}
@@ -499,6 +503,10 @@ def landing():
           <span class="stat-ayrac">·</span>
           <span class="stat"><b>~15 dk</b>tekrar</span>
         </div>
+        <div class="hero-cta">
+          <a class="btn btn-acik btn-lg" href="/deneme-sinavi/">Ücretsiz Deneme Sınavı Çöz →</a>
+          <small>Üyelik gerekmez · 50 soru · 45 dakika</small>
+        </div>
         <div class="ornekler">
 {ornekler_html}
         </div>
@@ -521,8 +529,8 @@ def landing():
     <section class="cta">
       <div class="cta-inner">
         <h2>Bilgileri sınavda test et</h2>
-        <p>Hap bilgileri okuduysan sıra denemede: gerçek e-sınav formatında 50 soruyla kendini ölç.</p>
-        <a class="btn btn-primary btn-lg" href="/panel/?g=sinavlar" data-korumali>Giriş Yap ve Sınava Başla</a>
+        <p>Hap bilgileri okuduysan sıra denemede: gerçek e-sınav formatında 50 soruyla kendini ölç. Üyelik gerekmez.</p>
+        <a class="btn btn-primary btn-lg" href="/deneme-sinavi/">Deneme Sınavına Başla</a>
       </div>
     </section>
 
@@ -600,9 +608,9 @@ def ders_sayfasi(d):
     <section class="cta">
       <div class="cta-inner">
         <h2>Bu bilgilerle kendini test et</h2>
-        <p>{d['ad']} soruları deneme sınavında seni bekliyor. Konuyu derinlemesine çalışmak istersen ders notları da hazır.</p>
+        <p>{d['ad']} soruları deneme sınavında seni bekliyor; üyelik gerekmez. Konuyu derinlemesine çalışmak istersen ders notları da hazır.</p>
         <div class="cta-actions">
-          <a class="btn btn-primary btn-lg" href="/panel/?g=sinavlar" data-korumali>Giriş Yap ve Sınava Başla</a>
+          <a class="btn btn-primary btn-lg" href="/deneme-sinavi/?konu={d['slug']}">{d['ad']} Denemesini Çöz</a>
           <a class="btn btn-outline btn-lg" href="{d['ders_link']}">{d['ad']} Ders Notları</a>
         </div>
       </div>

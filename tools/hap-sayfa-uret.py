@@ -29,6 +29,7 @@ DATA_DIR = os.path.join(ROOT, "mcp", "data")
 # İsteğe bağlı ayrıntılı içerik: tools/hap-detay/{slug}.html
 # İlk satırlarda <!-- baslik: ... --> ve <!-- aciklama: ... --> yorumları varsa
 # sayfa başlığı ve meta açıklaması olarak kullanılır; kalan HTML "detay" bölümüdür.
+# <!-- seo_baslik: ... --> varsa yalnızca <title>'ı değiştirir (H1 baslik'ta kalır).
 DETAY_DIR = os.path.join(ROOT, "tools", "hap-detay")
 SORU_DIR = os.path.join(ROOT, "soru")
 DOMAIN = "https://ehliyet.digital"
@@ -165,8 +166,8 @@ def detay_oku(slug):
     if not os.path.exists(yol):
         return None
     metin = open(yol, encoding="utf-8").read()
-    sonuc = {"baslik": None, "aciklama": None}
-    for alan in ("baslik", "aciklama"):
+    sonuc = {"baslik": None, "aciklama": None, "seo_baslik": None}
+    for alan in ("seo_baslik", "baslik", "aciklama"):
         m = re.search(r"<!--\s*" + alan + r":\s*(.*?)\s*-->\n?", metin)
         if m:
             sonuc[alan] = m.group(1).strip()
@@ -260,6 +261,8 @@ def generate_page(d, hap, onceki, sonraki, ders, satirlar):
     if detay and detay["baslik"]:
         h1_text = detay["baslik"]
         title_text = detay["baslik"] + " | ehliyet.digital"
+    if detay and detay["seo_baslik"]:
+        title_text = detay["seo_baslik"] + " | ehliyet.digital"
     if detay and detay["aciklama"]:
         desc_text = detay["aciklama"]
     detay_html = ""
