@@ -620,7 +620,7 @@ def ders_sayfasi(d):
 """
     return head(
         f"{d['ad']} Hap Bilgiler — Ehliyet Sınavı",
-        f"Ehliyet sınavı {d['ad']} hap bilgileri: {d['ozet'].rstrip('.')}. {adet} bilgi tek sayfada.",
+        f"Ehliyet sınavı {d['ad']} hap bilgileri: {d['ozet'].split(': ', 1)[-1].rstrip('.')}. {adet} bilgi tek sayfada.",
         f"/hap-bilgiler/{d['slug']}/",
         DERS_CSS,
     ) + govde + KUYRUK

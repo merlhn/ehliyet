@@ -4,7 +4,8 @@
 Kullanım (depo kökünden):  python3 tools/sitemap-uret.py
 
 Yeni ders ya da sınav eklendiğinde tekrar çalıştırılır; sitemap elle
-düzenlenmez. Panel sayfaları ve noindex işaretli sayfalar dışarıda bırakılır.
+düzenlenmez. Panel sayfaları, noindex işaretli sayfalar ve canonical'ı başka adresi
+gösteren sayfalar dışarıda bırakılır.
 """
 import pathlib
 import re
@@ -70,10 +71,17 @@ def sayfalar():
         parcalar = p.relative_to(ROOT).parts
         if ".git" in parcalar or ".claude" in parcalar or "panel" in parcalar or "mcp" in parcalar:
             continue
-        if 'name="robots"' in p.read_text(encoding="utf-8") and "noindex" in p.read_text(encoding="utf-8"):
+        metin = p.read_text(encoding="utf-8")
+        if 'name="robots"' in metin and "noindex" in metin:
             continue
         dizin = p.relative_to(ROOT).parent.as_posix()
-        yield p, "/" if dizin == "." else f"/{dizin}/"
+        yol = "/" if dizin == "." else f"/{dizin}/"
+        # canonical'ı başka bir adresi gösteren sayfa (ör. başka sınavda tekrar
+        # çıkmış sorunun kopyası) sitemap'e girmez; Google yalnız asıl adresi görür.
+        kanon = re.search(r'<link rel="canonical" href="([^"]+)"', metin)
+        if kanon and kanon.group(1) != BASE + yol:
+            continue
+        yield p, yol
 
 
 NS = "http://www.sitemaps.org/schemas/sitemap/0.9"

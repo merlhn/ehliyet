@@ -8,13 +8,13 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <title>Ehliyet Deneme Sınavı Çöz: 50 Soru, 45 Dakika | ehliyet.digital</title>
-<meta name="description" content="Giriş gerektirmeyen ücretsiz ehliyet deneme sınavı. MEB e-sınav formatında 50 soru, 45 dakika, anında puan ve çözümlü cevaplar. Çıkmış sorulardan 4 farklı deneme.">
+<meta name="description" content="Giriş gerektirmeyen ücretsiz ehliyet deneme sınavı: MEB e-sınav formatında 50 soru, 45 dakika, anında puan ve çözümlü cevaplar. Çıkmış sorulardan 4 deneme.">
 <link rel="canonical" href="https://ehliyet.digital/deneme-sinavi/">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ehliyet.digital">
 <meta property="og:title" content="Ehliyet Deneme Sınavı Çöz: 50 Soru, 45 Dakika">
-<meta property="og:description" content="Giriş gerektirmeyen ücretsiz ehliyet deneme sınavı. MEB e-sınav formatında 50 soru, 45 dakika, anında puan ve çözümlü cevaplar. Çıkmış sorulardan 4 farklı deneme.">
+<meta property="og:description" content="Giriş gerektirmeyen ücretsiz ehliyet deneme sınavı: MEB e-sınav formatında 50 soru, 45 dakika, anında puan ve çözümlü cevaplar. Çıkmış sorulardan 4 deneme.">
 <meta property="og:url" content="https://ehliyet.digital/deneme-sinavi/">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:image" content="https://ehliyet.digital/og-image.png">
@@ -24,7 +24,7 @@
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Ehliyet Deneme Sınavı Çöz: 50 Soru, 45 Dakika">
-<meta name="twitter:description" content="Giriş gerektirmeyen ücretsiz ehliyet deneme sınavı. MEB e-sınav formatında 50 soru, 45 dakika, anında puan ve çözümlü cevaplar. Çıkmış sorulardan 4 farklı deneme.">
+<meta name="twitter:description" content="Giriş gerektirmeyen ücretsiz ehliyet deneme sınavı: MEB e-sınav formatında 50 soru, 45 dakika, anında puan ve çözümlü cevaplar. Çıkmış sorulardan 4 deneme.">
 <meta name="twitter:image" content="https://ehliyet.digital/og-image.png">
 <meta name="twitter:image:alt" content="ehliyet.digital — Ehliyet deneme sınavı">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -228,7 +228,7 @@
 
   /* results */
   .result{padding:34px 30px;text-align:center}
-  .result h1{margin:0 0 6px;font-size:28px;font-weight:600;letter-spacing:-.03em}
+  .result h2{margin:0 0 6px;font-size:28px;font-weight:600;letter-spacing:-.03em}
   .verdict{display:inline-block;padding:7px 20px;border-radius:999px;font-weight:600;font-size:16px;margin:10px 0;border:1px solid}
   .verdict.pass{background:var(--ok-l);color:var(--ok);border-color:#bfe6cd}
   .verdict.fail{background:var(--bad-l);color:var(--bad);border-color:#f2c9c9}
@@ -282,7 +282,7 @@
     .legend{justify-content:center;gap:12px}
 
     .result{padding:20px}
-    .result h1{font-size:22px}
+    .result h2{font-size:22px}
     .verdict{font-size:17px;padding:7px 18px}
     .stats{gap:10px}
     .stat{min-width:calc(50% - 5px);padding:12px 10px}
@@ -325,7 +325,7 @@
     {
       "@type": "WebPage",
       "name": "Ehliyet Deneme Sınavı",
-      "description": "Giriş gerektirmeyen ücretsiz ehliyet deneme sınavı. MEB e-sınav formatında 50 soru, 45 dakika, anında puan ve çözümlü cevaplar. Çıkmış sorulardan 4 farklı deneme.",
+      "description": "Giriş gerektirmeyen ücretsiz ehliyet deneme sınavı: MEB e-sınav formatında 50 soru, 45 dakika, anında puan ve çözümlü cevaplar. Çıkmış sorulardan 4 deneme.",
       "url": "https://ehliyet.digital/deneme-sinavi/",
       "inLanguage": "tr-TR",
       "isPartOf": {
@@ -735,7 +735,7 @@ function resultHTML(){
   return `
   <div class="card" style="margin-top:16px">
     <div class="result">
-      <h1>Sınav Sonucu</h1>
+      <h2>Sınav Sonucu</h2>
       <div class="verdict ${pass?'pass':'fail'}">${pass?'GEÇTİNİZ 🎉':'KALDINIZ'}</div>
       <div class="stats">
         <div class="stat g"><b>${s.correct}</b>Doğru</div>

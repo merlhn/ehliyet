@@ -35,12 +35,33 @@ TOPIC_URL = {
 SEO_OZEL = {
     "aksine-bir-isaret-bulunmadikca-otoyolda-minibus-ve": (
         "Otoyolda Minibüs ve Otobüs Azami Hızı Kaç km? (Çıkmış Soru)",
-        "MEB e-sınavında çıkmış soru: aksine bir işaret yoksa otoyolda minibüs ve otobüsler için azami hız kaç km/sa? Şıkları gör, cevabını kontrol et, benzer soruları deneme sınavında çöz.",
+        "Çıkmış soru: aksine bir işaret yoksa otoyolda minibüs ve otobüslerin azami hızı kaç km/sa? Şıkları gör, cevabını kontrol et, benzerlerini deneme sınavında çöz.",
     ),
     "hangisi-servis-veya-tamir-atolyeleri-tarafindan-yapilmalidir": (
         "Hangisi Servis veya Tamir Atölyesinde Yapılmalı? (Çıkmış Soru)",
-        "MEB e-sınavında çıkmış Araç Tekniği sorusu: silecek, antifriz, lastik basıncı, motor yağı; hangisi servise bırakılır? Cevabını kontrol et, benzer soruları deneme sınavında çöz.",
+        "Çıkmış Araç Tekniği sorusu: silecek, antifriz, lastik basıncı, motor yağı; hangisi servise bırakılır? Cevabını kontrol et, benzerlerini deneme sınavında çöz.",
     ),
+    # Sınav 1 ve 4'te ilk iki ifadesi aynı, III. ifadesi ve cevabı farklı iki soru:
+    # ikisi de ayrı sayfa olarak kalır, başlık ve açıklama farkı gösterir.
+    "i-trafikteki-butun-kurallarin-nedenini-ogrenir-ii-arac": (
+        "Trafik Adabı: Kural İhlalinin Riskinin Farkındadır (Çıkmış Soru)",
+        "Trafik adabına sahip sürücü kuralların nedenini öğrenir ve bir ihlalde canını tehlikeye attığının farkındadır. Hangi ifadeler doğru? Cevap ve açıklaması.",
+    ),
+    "i-trafikteki-butun-kurallarin-nedenini-ogrenir-ii-arac-2": (
+        "Trafik Adabı: Kural İhlalinin Riskinin Farkında Değildir (Çıkmış Soru)",
+        "Sürücü kuralların nedenini öğrenir ama ihlalin canını tehlikeye attığının farkında değildir. Hangisi trafik adabına uyar? Cevap ve açıklaması.",
+    ),
+}
+
+# Aynı sorunun başka bir sınavda tekrar çıkmış hali: sayfa kalır (sınav içi gezinme ve
+# dizin bağlantıları için) ama canonical asıl sayfayı gösterir ve sitemap'e girmez.
+# Yeni bir slug çakışması çıkarsa üretici uyarır: aynı soruysa buraya, farklı soruysa
+# SEO_OZEL'e ayırt edici başlıkla eklenir.
+KOPYA = {
+    "araclarda-emniyet-kemeri-kullaniminin-zorunlu-olmasi-ile-2": "araclarda-emniyet-kemeri-kullaniminin-zorunlu-olmasi-ile",
+    "i-orta-refujlere-ve-yol-kenarlarina-dikilen-agaclarin-zarar-2": "i-orta-refujlere-ve-yol-kenarlarina-dikilen-agaclarin-zarar",
+    "seyir-halindeyken-aractan-surekli-yakit-kokusu-alinmasi-2": "seyir-halindeyken-aractan-surekli-yakit-kokusu-alinmasi",
+    "surucunun-trafik-ortaminda-yaptigi-davranislardan-hangisi-2": "surucunun-trafik-ortaminda-yaptigi-davranislardan-hangisi",
 }
 
 TR_MAP = str.maketrans({
@@ -170,6 +191,18 @@ def sayfa_basligi(metin):
     return metin + MARKA if len(metin + MARKA) <= BASLIK_SINIRI else metin
 
 
+# Meta açıklaması 70-155 karakter: kısa soru kökü tek başına zayıf bir açıklama
+# olduğundan sınav ve konu bilgisiyle tamamlanır; uzun kök kelime sınırında kesilir.
+ACIKLAMA_SINIRI = 155
+
+
+def soru_aciklamasi(kok, konu):
+    ek = f" Ehliyet sınavında çıkmış {konu} sorusu: şıklar, doğru cevap ve açıklaması."
+    if len(kok) < 70 and len(kok + ek) <= ACIKLAMA_SINIRI:
+        return kok + ek
+    return truncate(kok, ACIKLAMA_SINIRI)
+
+
 def truncate(text, max_len):
     text = re.sub(r"\s+", " ", text).strip()
     if len(text) <= max_len:
@@ -179,13 +212,13 @@ def truncate(text, max_len):
 
 def generate_page(q, slug, exam_num, prev_slug=None, next_slug=None):
     stem_text = re.sub(r"\s+", " ", q["stem"]).strip()
+    section = q["section"]
     title_text = sayfa_basligi(truncate(stem_text, 60))
-    desc_text = truncate(stem_text, 155)
+    desc_text = soru_aciklamasi(stem_text, section)
     if slug in SEO_OZEL:
         title_text = sayfa_basligi(SEO_OZEL[slug][0])
         desc_text = SEO_OZEL[slug][1]
-    canonical = f"{DOMAIN}/soru/{slug}/"
-    section = q["section"]
+    canonical = f"{DOMAIN}/soru/{KOPYA.get(slug, slug)}/"
     section_url = SECTION_URL.get(section, "/dersler/")
     topic_url = TOPIC_URL.get(section, "/ehliyet-sinav-sorulari/")
     nav_items = ""
@@ -506,6 +539,8 @@ def main():
         while slug in used_slugs:
             slug = f"{base_slug}-{counter}"
             counter += 1
+        if slug != base_slug and slug not in KOPYA and slug not in SEO_OZEL:
+            print(f"  UYARI: yeni slug cakismasi {slug} — KOPYA ya da SEO_OZEL'e ekle")
         used_slugs.add(slug)
         secilen.append((q, slug))
 

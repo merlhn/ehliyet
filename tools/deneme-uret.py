@@ -39,6 +39,8 @@ sinav_css = degistir(sinav_css, "    header{height:auto;gap:8px 6px;padding:8px 
 sinav_css = degistir(sinav_css,
     "  body{margin:0;font-family:'Inter','Inter-fallback',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fafafa;-webkit-font-smoothing:antialiased;letter-spacing:-.011em}\n", "")
 sinav_css = degistir(sinav_css, "  *{box-sizing:border-box}\n", "")
+sinav_css = degistir(sinav_css, ".result h1{margin:0 0 6px;", ".result h2{margin:0 0 6px;")
+sinav_css = degistir(sinav_css, ".result h1{font-size:22px}", ".result h2{font-size:22px}")
 sinav_css = degistir(sinav_css,
     "\n  /* Yan menünün yeri ilk boyamada ayrılır. panel-kabuk.js ertelenmiş bir modül\n"
     "     olduğu için burası olmazsa sayfa önce tam genişlikte çizilip sonra sağa kayar. */\n"
@@ -97,6 +99,8 @@ acilis_css = """
 sinav_js = kes(kaynak, '<script src="/assets/js/questions-1.js"></script>\n<script>\n',
                         '\n</script>\n  <script type="module" src="/assets/js/panel-kabuk.js"></script>')
 sinav_js = degistir(sinav_js, "const Q = window.QUESTIONS;", "let Q = [];")
+# Sayfanın tek <h1>'i açılıştaki "Ehliyet Deneme Sınavı"; sonuç ekranı başlığı <h2> olur.
+sinav_js = degistir(sinav_js, "<h1>Sınav Sonucu</h1>", "<h2>Sınav Sonucu</h2>")
 sinav_js = degistir(sinav_js, "const SINAV_ADI = 'Sınav 1';", "let SINAV_ADI = 'Sınav 1';\nlet SINAV_NO = 1;\nlet KONU = null;")
 sinav_js = degistir(sinav_js, "const PASS_CORRECT = 35;", "let PASS_CORRECT = 35;")
 sinav_js = degistir(sinav_js, "const DURATION = 45*60;", "let DURATION = 45*60;")
@@ -292,9 +296,9 @@ ga = kes(pillar, "<!-- Google tag (gtag.js) — sayfa yüklendikten sonra yükle
 ga = "<!-- Google tag (gtag.js) — sayfa yüklendikten sonra yüklenir -->" + ga
 
 TITLE = "Ehliyet Deneme Sınavı Çöz: 50 Soru, 45 Dakika | ehliyet.digital"
-DESC = ("Giriş gerektirmeyen ücretsiz ehliyet deneme sınavı. MEB e-sınav formatında 50 soru, 45 dakika, "
-        "anında puan ve çözümlü cevaplar. Çıkmış sorulardan 4 farklı deneme.")
-assert len(DESC) <= 165, len(DESC)
+DESC = ("Giriş gerektirmeyen ücretsiz ehliyet deneme sınavı: MEB e-sınav formatında 50 soru, 45 dakika,"
+        " anında puan ve çözümlü cevaplar. Çıkmış sorulardan 4 deneme.")
+assert len(DESC) <= 155, len(DESC)
 
 html = f"""<!DOCTYPE html>
 <html lang="tr">
