@@ -90,6 +90,26 @@ mimari değişmez.
   12. İlk yardımın ABC'si nedir?
 - **Dış anılma:** Ekşi Sözlük / Reddit ehliyet başlıklarına faydalı cevap, sürücü kursu blog iş birlikleri, açık API'nin Türkçe veri seti listelerine eklenmesi.
 
+### 11. MCP sunucusunu Google Cloud Run'a taşı
+Railway'deki sunucu kapandı (1 Eki 2026'da tüm yollar "Application not found" dönüyor).
+README, `llms.txt`, `server.json`, Smithery, MCP Market ve MCP Registry hâlâ eski
+adresi gösteriyor; o zamana kadar dizinlerdeki kayıtlar ölü.
+
+Hazır olanlar: `mcp/` imajı değişiklik gerektirmiyor (8080, durumsuz); Docker'da yerelde
+denendi, beş araç çalışıyor. `gcloud` kuruldu (`brew install --cask gcloud-cli`).
+
+Kalanlar:
+- `gcloud auth login` — Firebase projesinin (`ehliyet-52d4d`) sahibi hesapla
+- Projeyi Blaze planına geçir (Cloud Run faturalandırma hesabı ister); 1 $ bütçe uyarısı kur
+- `gcloud run deploy ehliyet-mcp --source mcp --region europe-west1 --allow-unauthenticated
+  --min-instances 0 --max-instances 1 --memory 256Mi` — tek instance SSE'nin
+  (`/sse` + `/messages/`) aynı makineye düşmesini de garanti eder
+- Canlıda initialize / tools/list / tools/call testi
+- Alan adı kararı: `*.run.app` adresi mi, `mcp.ehliyet.digital` mı (DNS'e tek kayıt;
+  servis bir daha değişirse dizin kayıtları bozulmaz)
+- Eski adresi değiştir: `server.json`, `README.md`, `mcp/README.md`, `llms.txt`
+  (5 × `/mcp`, 5 × `/sse`); ardından Smithery, MCP Market ve MCP Registry kayıtları
+
 ## Sonraki faz
 
 ### Ödeme
