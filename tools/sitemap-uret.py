@@ -38,7 +38,9 @@ def son_degisiklik(yol: pathlib.Path) -> str:
     """Dosyanın son commit tarihi; git yoksa dosya sistemi zamanına düşer."""
     try:
         cikti = subprocess.run(
-            ["git", "log", "-1", "--format=%cs", "--", str(yol)],
+            # Tarih guncelleme commit'leri ("chore: sitemap ...") sayilmaz: yalniz tarih
+            # degistirdikleri icin sayilsalar her calismada tarihleri yeniden ileri iterlerdi.
+            ["git", "log", "-1", "--invert-grep", "--grep=^chore: sitemap", "--format=%cs", "--", str(yol)],
             cwd=ROOT, capture_output=True, text=True, check=True,
         ).stdout.strip()
         if cikti:
