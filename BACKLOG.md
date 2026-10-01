@@ -6,20 +6,7 @@ Açık işler ve bekleyen kararlar. Tamamlananlar en alta taşınır.
 
 ## Sıradaki
 
-### 1. Firestore kurallarını yayına al — hesap silme bunu bekliyor
-`firestore.rules` artık kullanıcının kendi profilini ve denemelerini silmesine izin
-veriyor; eski kural (`allow delete: if false`) yüzünden **Hesabı Sil** her seferinde
-"Hesap silinemedi" hatası veriyordu. Yeni `firebase.js` bu kurala dayanıyor; kural
-yayına çıkana kadar silme yine hata verir.
-
-- Firebase CLI şu an `ehliyet-52d4d`'yi görmeyen hesapla açık: `firebase login:add`
-  ile proje sahibi hesabı ekle, `firebase login:use <hesap>`
-- `firebase deploy --only firestore:rules --project ehliyet-52d4d`
-  (ya da Firebase Console › Firestore › Rules'a dosyayı yapıştır)
-- Bir deneme hesabıyla panelden sil: Google onay penceresi → yönlendirme → Console'da
-  `users/{uid}` ve Authentication kaydının gittiğini gör
-
-### 2. Analitik çerezleri için onay (KVKK) — karar bekliyor
+### 1. Analitik çerezleri için onay (KVKK) — karar bekliyor
 GA4 343 sayfada onay alınmadan yükleniyor ve `_ga` çerezi yazıyor. Gizlilik metni bunu
 artık açıkça söylüyor ve hukuki sebep olarak meşru menfaat gösteriyor; ancak KVKK
 Kurumu'nun çerez rehberi analitik çerezler için açık rıza bekliyor. Seçenekler:
@@ -32,7 +19,7 @@ Aynı başlıkta: Firebase Authentication, Google Analytics ve Vercel verileri y
 dışında işleniyor (KVKK m. 9). Metin aktarımı belirtiyor; aktarımın dayanağı
 (standart sözleşme vb.) bir hukukçuya sorulmalı.
 
-### 3. Yapay zekâ görünürlüğü (Bing + ölçüm)
+### 2. Yapay zekâ görünürlüğü (Bing + ölçüm)
 - **Bing Webmaster Tools:** Search Console'dan içe aktararak siteyi ekle, sitemap'i gönder. ChatGPT arama ve Copilot Bing indeksini kullanır.
 - **IndexNow:** her deploy'dan sonra `python3 tools/indexnow.py` (son commit'te değişen sayfaları bildirir).
 - **Aylık ölçüm:** Aşağıdaki soruları ChatGPT (arama açık), Perplexity, Gemini ve Google AI Overview'da sor; ehliyet.digital alıntılanıyor mu, not et.
@@ -50,7 +37,7 @@ dışında işleniyor (KVKK m. 9). Metin aktarımı belirtiyor; aktarımın daya
   12. İlk yardımın ABC'si nedir?
 - **Dış anılma:** Ekşi Sözlük / Reddit ehliyet başlıklarına faydalı cevap, sürücü kursu blog iş birlikleri, açık API'nin Türkçe veri seti listelerine eklenmesi.
 
-### 4. MCP sunucusunu Google Cloud Run'a taşı
+### 3. MCP sunucusunu Google Cloud Run'a taşı
 Railway'deki sunucu kapandı (1 Eki 2026'da tüm yollar "Application not found" dönüyor).
 README, `llms.txt`, `server.json`, Smithery, MCP Market ve MCP Registry hâlâ eski
 adresi gösteriyor; o zamana kadar dizinlerdeki kayıtlar ölü.
@@ -148,7 +135,7 @@ dolayısıyla silemez. Gizlilik metni bunu söylüyor; talep gelirse Console'dan
   girişi, profil, sonuçlar, geri bildirim, GA4, Vercel, yurt dışı aktarım, saklama,
   silme, m. 11 hakları; kullanım şartları ve hakkında sayfası buna uyduruldu
 - Hesap silme düzeltildi: önce Google ile yeniden doğrulama, sonra denemeler, profil ve
-  Auth hesabı (kural yayını için bkz. Sıradaki 1)
+  Auth hesabı; kurallar 1 Eki 2026'da yayında, canlıda denendi
 - Hap bilgi kategori sayfaları Google Fonts yerine yerel fontlara geçti; `hap-uret.py`
   çıktısı canlı sayfalarla birebir
 
