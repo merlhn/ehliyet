@@ -15,11 +15,11 @@ MEB MTSK müfredatına uygun 43 ders notu, 80 hap bilgi, 200 çıkmış sınav s
 | İçerik | Adet | Açıklama |
 |--------|------|----------|
 | Ders notları | 43 | 4 kategoride sınav odaklı konu anlatımı |
-| Hap bilgiler | 76 | Tek cümlelik ezberlenecek kurallar |
+| Hap bilgiler | 80 | Tek cümlelik ezberlenecek kurallar |
 | Atomik özetler | ~560 | Her ders sayfasında makine-okunur bilgi satırları |
 | Sınav soruları | 200 | 4 deneme sınavından çıkmış sorular + cevaplar |
 | Bireysel soru sayfaları | 186 | Her soru kendi URL'inde, cevap + açıklama ile |
-| Bireysel hap bilgi sayfaları | 76 | Her hap bilgi kendi URL'inde, bağlam + ilgili ders ile |
+| Bireysel hap bilgi sayfaları | 80 | Her hap bilgi kendi URL'inde, bağlam + ilgili ders ile |
 
 ### Ders kategorileri
 

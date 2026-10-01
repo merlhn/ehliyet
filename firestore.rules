@@ -37,11 +37,14 @@ service cloud.firestore {
         && request.resource.data.diff(resource.data).affectedKeys()
              .hasOnly(['ad', 'soyad', 'telefon', 'ehliyetTuru', 'fotoUrl', 'sonGirisAt']);
 
-      allow delete: if false;
+      // Hesabı Sil (Panel › Ayarlar) önce denemeleri, sonra bu belgeyi siler,
+      // en son Auth hesabını. KVKK silme hakkı: kullanıcı kendi verisini
+      // kaldırabilmeli. Silme kapalıyken hesap silme her seferinde hata veriyordu.
+      allow delete: if sahibi(uid);
 
       // ---- Sınav denemeleri (sonuçlar) ----
-      // Kullanıcı kendi denemesini oluşturur ve okur. Değiştiremez, silemez —
-      // geçmiş kayıt sonradan düzeltilebilir olmamalı.
+      // Kullanıcı kendi denemesini oluşturur, okur ve hesabını silerken siler.
+      // Değiştiremez — geçmiş kayıt sonradan düzeltilebilir olmamalı.
       //
       // NOT: puan istemcide hesaplanıp yazıldığı için teorik olarak sahte sonuç
       // yazılabilir. Bu veri kişisel ilerleme takibi olduğundan kabul edilebilir.
@@ -57,11 +60,14 @@ service cloud.firestore {
           && request.resource.data.puan is int
           && request.resource.data.gecti is bool
           && request.resource.data.bolumler is map;
-        allow update, delete: if false;
+        allow delete: if sahibi(uid);
+        allow update: if false;
       }
 
       // ---- Sınav yetkileri ----
       // Sadece okunur. Yazma yalnızca sunucu tarafında (Admin SDK) yapılır.
+      // İstemci silemediği için hesap silinince burada kayıt kalır; ödeme
+      // gelip yetki yazılmaya başlarsa hesap silme sunucuya taşınmalı.
       match /yetkiler/{sinavId} {
         allow read: if sahibi(uid);
         allow write: if false;

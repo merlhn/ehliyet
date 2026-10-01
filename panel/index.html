@@ -467,7 +467,7 @@
       <div class="sil-modal-bg" data-sil-modal hidden>
         <div class="sil-modal">
           <h3>Hesabını silmek istediğine emin misin?</h3>
-          <p>Tüm verilerin kalıcı olarak silinecek. Bu işlem geri alınamaz.</p>
+          <p>Profilin ve tüm sınav sonuçların kalıcı olarak silinecek. Bu işlem geri alınamaz. Onay için Google hesabını bir kez daha seçmen istenecek.</p>
           <div class="sil-modal-btns">
             <button class="sil-iptal" type="button" data-sil-iptal>Vazgeç</button>
             <button class="sil-onayla" type="button" data-sil-onayla>Evet, Hesabımı Sil</button>
@@ -1304,7 +1304,13 @@ function kullaniciyiYaz(user) {
         location.replace('/');
       } catch (err) {
         console.error('Hesap silinemedi:', err);
-        if (err.code === 'auth/requires-recent-login') {
+        if (err.code === 'auth/popup-closed-by-user' || err.code === 'auth/cancelled-popup-request') {
+          silDurum.textContent = 'Onay penceresi kapatıldı; hesabın silinmedi.';
+        } else if (err.code === 'auth/popup-blocked') {
+          silDurum.textContent = 'Tarayıcı onay penceresini engelledi. Açılır pencerelere izin verip tekrar dene.';
+        } else if (err.code === 'auth/user-mismatch') {
+          silDurum.textContent = 'Farklı bir Google hesabı seçildi. Bu panele giriş yaptığın hesabı seç.';
+        } else if (err.code === 'auth/requires-recent-login') {
           silDurum.textContent = 'Güvenlik nedeniyle yeniden giriş yapmanız gerekiyor. Çıkış yapıp tekrar girin.';
         } else {
           silDurum.textContent = 'Hesap silinemedi. Lütfen tekrar deneyin.';

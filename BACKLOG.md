@@ -6,73 +6,33 @@ Açık işler ve bekleyen kararlar. Tamamlananlar en alta taşınır.
 
 ## Sıradaki
 
-### 1. Google giriş ekranında kendi domainimiz görünsün
-Şu an onay ekranında `ehliyet-52d4d.firebaseapp.com` yazıyor, güven kırıyor.
+### 1. Firestore kurallarını yayına al — hesap silme bunu bekliyor
+`firestore.rules` artık kullanıcının kendi profilini ve denemelerini silmesine izin
+veriyor; eski kural (`allow delete: if false`) yüzünden **Hesabı Sil** her seferinde
+"Hesap silinemedi" hatası veriyordu. Yeni `firebase.js` bu kurala dayanıyor; kural
+yayına çıkana kadar silme yine hata verir.
 
-- `assets/js/firebase.js` → `authDomain: 'ehliyet.digital'`
-- `vercel.json` içindeki `/__/auth/*` rewrite'ı zaten hazır
+- Firebase CLI şu an `ehliyet-52d4d`'yi görmeyen hesapla açık: `firebase login:add`
+  ile proje sahibi hesabı ekle, `firebase login:use <hesap>`
+- `firebase deploy --only firestore:rules --project ehliyet-52d4d`
+  (ya da Firebase Console › Firestore › Rules'a dosyayı yapıştır)
+- Bir deneme hesabıyla panelden sil: Google onay penceresi → yönlendirme → Console'da
+  `users/{uid}` ve Authentication kaydının gittiğini gör
 
-**İkisi birlikte değiştirilmeli.** Tek başına `authDomain`'i değiştirmek girişi tamamen kırar.
-`/__/auth/handler` canlıda test edildi, proxy çalışıyor — değişiklik yapılabilir durumda.
+### 2. Analitik çerezleri için onay (KVKK) — karar bekliyor
+GA4 343 sayfada onay alınmadan yükleniyor ve `_ga` çerezi yazıyor. Gizlilik metni bunu
+artık açıkça söylüyor ve hukuki sebep olarak meşru menfaat gösteriyor; ancak KVKK
+Kurumu'nun çerez rehberi analitik çerezler için açık rıza bekliyor. Seçenekler:
 
-### 2. OAuth onay ekranı kimliği
-Google Cloud Console → APIs & Services → OAuth consent screen → Branding
+- Çerez onay bandı: onaydan önce GA yüklenmez (Consent Mode ile)
+- GA4'ü kaldırıp çerezsiz bir ölçüm aracına geçmek
+- Bugünkü hâliyle bırakıp riski kabul etmek
 
-- App name: `ehliyet.digital`
-- App logo (onay ekranında görünür, dönüşümü belirgin etkiler)
-- Application home page: `https://ehliyet.digital`
-- Privacy policy: `https://ehliyet.digital/gizlilik/`
-- Terms of service: `https://ehliyet.digital/kullanim-sartlari/`
+Aynı başlıkta: Firebase Authentication, Google Analytics ve Vercel verileri yurt
+dışında işleniyor (KVKK m. 9). Metin aktarımı belirtiyor; aktarımın dayanağı
+(standart sözleşme vb.) bir hukukçuya sorulmalı.
 
-Son ikisi Google'ın doğrulama sürecinde de isteniyor.
-
-### 3. Gizlilik metnini KVKK'ya göre güncelle
-Artık kişisel veri işliyoruz; mevcut metin bunu kapsamıyor.
-
-- Google hesabından alınan veriler: ad, e-posta, profil fotoğrafı
-- Saklanan veriler: sınav sonuçları, sınav yetkileri
-- Verinin nerede tutulduğu (Firebase / Google Cloud, `eur3` Avrupa)
-- Silme talebi nasıl yapılır
-
-### 4. Panelde profil ekranı
-`/panel/` içinde profil şu an "yakında geliştirilecek" yer tutucusu. Eski `/profil/`
-sayfası silindi, yeniden tasarlanacak. Sınav geçmişi tablosu da buraya taşınacak.
-
-### 5. Panelde Ayarlar ve Ödeme Geçmişi ekranları
-İkisi de "yakında geliştirilecek" yer tutucusu. İçerikleri belirlenmedi.
-
-### 6. Sınav sonucunu kaydet
-Sınav bitince `users/{uid}/denemeler` altına yaz. Okuma tarafı (`denemeleriGetir`)
-hazır, panelde gösterilecek yer profil ekranı olacak.
-
-### 7. Logo entegrasyonu
-`assets/img/marka/logo.png` panelde kullanılıyor. Eksikler:
-- Favicon seti — logo ince çizgili ve detaylı, 16-32px'te okunmuyor; sadeleştirilmiş
-  varyant gerekiyor
-- Public site header'ında marka görünmüyor, sadece nav var
-- OAuth onay ekranı için kare logo yüklenmesi
-
-### 8. Geri bildirim gerçekten gönderilsin
-`assets/js/feedback.js` gönderimi **simüle ediyor** — kullanıcı "gönderildi" ekranı
-görüyor ama mesaj hiçbir yere ulaşmıyor. Panelde de aynı modal kullanılıyor.
-Bir uç (`/api/feedback`) ya da EmailJS/Formspree gibi bir servis bağlanmalı.
-
-### 9. Ücretli içeriğin korunması — **kritik**
-Şu an soru bankaları herkese açık: `https://ehliyet.digital/assets/js/questions-2.js`
-adresini açan 50 soruyu cevaplarıyla görür. Ödeme eklenmeden önce mutlaka çözülmeli,
-yoksa satılan şey zaten bedava indirilebilir durumda.
-
-- Ücretli soru bankaları public klasörden çıkarılır (içerik yine git'te kalır)
-- `/api/sorular?sinav=N` → Firebase ID token doğrula → yetki kontrol et → JSON dön
-- Sınav sayfası soruları `<script src>` yerine bu uçtan çeker
-- Repoya `package.json` ve `api/` girer; proje tam statik olmaktan çıkar
-
-1. fazda kural "hesabı var mı?", ödeme gelince "bu sınava yetkisi var mı?" olur —
-mimari değişmez.
-
----
-
-### 10. Yapay zekâ görünürlüğü (Bing + ölçüm)
+### 3. Yapay zekâ görünürlüğü (Bing + ölçüm)
 - **Bing Webmaster Tools:** Search Console'dan içe aktararak siteyi ekle, sitemap'i gönder. ChatGPT arama ve Copilot Bing indeksini kullanır.
 - **IndexNow:** her deploy'dan sonra `python3 tools/indexnow.py` (son commit'te değişen sayfaları bildirir).
 - **Aylık ölçüm:** Aşağıdaki soruları ChatGPT (arama açık), Perplexity, Gemini ve Google AI Overview'da sor; ehliyet.digital alıntılanıyor mu, not et.
@@ -90,7 +50,7 @@ mimari değişmez.
   12. İlk yardımın ABC'si nedir?
 - **Dış anılma:** Ekşi Sözlük / Reddit ehliyet başlıklarına faydalı cevap, sürücü kursu blog iş birlikleri, açık API'nin Türkçe veri seti listelerine eklenmesi.
 
-### 11. MCP sunucusunu Google Cloud Run'a taşı
+### 4. MCP sunucusunu Google Cloud Run'a taşı
 Railway'deki sunucu kapandı (1 Eki 2026'da tüm yollar "Application not found" dönüyor).
 README, `llms.txt`, `server.json`, Smithery, MCP Market ve MCP Registry hâlâ eski
 adresi gösteriyor; o zamana kadar dizinlerdeki kayıtlar ölü.
@@ -113,14 +73,23 @@ Kalanlar:
 ## Sonraki faz
 
 ### Ödeme
-Sınav 1 ücretsiz, diğerleri ücretli. Yetki kayıtları (`users/{uid}/yetkiler/{sinavId}`)
-yalnızca sunucu tarafında yazılır; istemcinin yazması Firestore kurallarıyla engelli.
-Sağlayıcı seçilmedi.
+Sınav 1 ücretsiz, diğerleri ücretli olacaktı; sağlayıcı seçilmedi. Yetki kayıtları
+(`users/{uid}/yetkiler/{sinavId}`) yalnızca sunucu tarafında yazılır; istemcinin
+yazması Firestore kurallarıyla engelli.
 
-### Sınav 3 ve sonrası
-Akış `README.md` içinde. `../Sınav_N/` klasöründen `assets/js/questions-N.js` +
-`deneme-sinavlari/sinav-N/` üretilir. Cevaplar yayına alınmadan önce anahtarla
-programatik doğrulanmalı.
+Ödemeden önce çözülmesi gerekenler:
+- **Soru bankaları herkese açık.** `assets/js/questions-N.js` ve açık deneme sınavı
+  (`/deneme-sinavi/`) bilinçli olarak giriş istemiyor; ücretli içerik gelirse bu
+  dosyalar public klasörden çıkar ve `/api/sorular?sinav=N` → Firebase ID token
+  doğrula → yetki kontrol et → JSON dön akışına geçilir (repoya `package.json` girer).
+- **Hesap silme sunucuya taşınır.** İstemci `yetkiler` alt koleksiyonunu silemez;
+  yetki yazılmaya başlayınca silme Admin SDK'lı bir uca (`/api/hesap-sil`) geçmeli.
+- Gizlilik metnine ödeme sağlayıcısı ve fatura verileri eklenir.
+
+### Sınav 5 ve sonrası
+Sınav 1–4 yayında. Akış `README.md` içinde. `../Sınav_N/` klasöründen
+`assets/js/questions-N.js` + `panel/sinav-N/` üretilir. Cevaplar yayına alınmadan önce
+anahtarla programatik doğrulanmalı.
 
 ---
 
@@ -142,12 +111,16 @@ elle kurmayı gerektirir; kazanç şu aşamada bu maliyeti karşılamıyor.
 Değerlendirildi ve bilinçli olarak reddedildi. Sınav sonucunu panelde gösterme
 gibi bir akış geldiğinde yeniden bakılabilir.
 
+**Geri bildirimler hesap silmeyle silinmez.** `feedback` koleksiyonunu istemci okuyamaz,
+dolayısıyla silemez. Gizlilik metni bunu söylüyor; talep gelirse Console'dan elle silinir.
+
 ---
 
 ## Tamamlananlar
 
 - Sınav 2 eklendi (50 soru, cevap anahtarıyla doğrulandı, 38 medya dosyası)
-- Klasör yapısı yeniden düzenlendi: `/dersler/` ve `/deneme-sinavlari/` kardeş bölümler,
+- Klasör yapısı yeniden düzenlendi: `/dersler/` ve `/deneme-sinavlari/` kardeş bölümler
+  (`/deneme-sinavlari/` sonradan `/ehliyet-sinav-sorulari/`'na yönlendirildi),
   varlıklar `/assets/` altında, URL'ler kebab-case ve ASCII
 - Proje `ehliyet.digital` olarak adlandırıldı, Vercel'e deploy edildi
 - Firebase kuruldu: Google girişi, Firestore (`eur3`), güvenlik kuralları
@@ -157,6 +130,27 @@ gibi bir akış geldiğinde yeniden bakılabilir.
 - Giriş sonrası panel (`/panel/`): yan menü, üst bar, deneme sınavları listesi
 - Sınav ve kılavuz sayfaları panelin içine taşındı (`/panel/sinav-N/`); giriş zorunlu,
   sınav sürerken menüden ayrılmak onay istiyor
+
+---
+- Google giriş ekranında kendi alan adı: `authDomain: 'ehliyet.digital'` + `/__/auth/*`
+  proxy'si (Vercel rewrite)
+- OAuth onay ekranı kimliği (ad, logo, ana sayfa, gizlilik ve şartlar bağlantıları)
+- Panel: Profilim (ad, soyad, telefon, ehliyet türü), Ayarlar (hesap bilgileri, hesabı
+  sil), sınav geçmişi, genel performans ve çalışılacak konular
+- Sınav sonucu kaydı: dört panel sınavı ve açık deneme (girişliyken)
+  `users/{uid}/denemeler`'e yazıyor
+- Logo: panelde ve public header'da marka, favicon seti (`tools/favicon-uret.py`)
+- Geri bildirim gerçekten gönderiliyor: Firestore `feedback` koleksiyonu
+- Sınav 3 ve 4 eklendi
+- Bing Site Scan (1 Eki 2026): 8 kırık link (tipografik tırnaklı `href`), 5 sayfada
+  boş `alt`, 211 uzun başlık düzeltildi; `tools/html-kontrol.py` yayından önce yakalar
+- Gizlilik metni KVKK aydınlatma metni olarak yeniden yazıldı (1 Eki 2026): Google
+  girişi, profil, sonuçlar, geri bildirim, GA4, Vercel, yurt dışı aktarım, saklama,
+  silme, m. 11 hakları; kullanım şartları ve hakkında sayfası buna uyduruldu
+- Hesap silme düzeltildi: önce Google ile yeniden doğrulama, sonra denemeler, profil ve
+  Auth hesabı (kural yayını için bkz. Sıradaki 1)
+- Hap bilgi kategori sayfaları Google Fonts yerine yerel fontlara geçti; `hap-uret.py`
+  çıktısı canlı sayfalarla birebir
 
 ---
 
