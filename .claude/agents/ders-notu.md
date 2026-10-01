@@ -42,6 +42,7 @@ Bu şablonda `{{...}}` yer tutucuları vardır. **CSS ve JS'e asla dokunma** —
 - `{{COURSE}}` — dersin görünen adı (ör. `İlk Yardım`)
 - `{{KONU_NO}}` — konu numarası (ör. `8`)
 - `{{KONU_AD}}` — konunun görünen adı (ör. `Yanıklar`). Bu, hem `<title>`'da, hem ders-meta'da, hem quiz başlığında geçer.
+  `<title>` en fazla **70 karakter** olur (Bing "Title too long" eşiği): ` | ehliyet.digital` eki sığıyorsa kalır, sığmıyorsa atılır; o da yetmezse başlık kısaltılır.
 - `{{LEAD}}` — 1-2 cümlelik giriş paragrafı (konunun sınavdaki önemi + bu notta ne öğrenileceği).
 - `{{KISACA}}` — 2-3 cümlelik özet; konunun sınavda sorulan cevabını doğrudan verir (arama motorları ve yapay zekâ asistanları bu kutuyu alıntılar). Lead'in hemen altındaki kutuda durur.
 - `{{TARIH}}` — yayın tarihi, ör. `29 Eylül 2026`.
@@ -76,7 +77,7 @@ JS dizisi olarak yaz; string içindeki çift tırnakları kaçır ya da tek tır
    - `index.html` ana sayfa akordeonu (aşağıya bak)
    - `assets/js/lessons-nav.js` → ilgili dersin `lessons` dizisine `{"n":N,"title":"...","url":"/dersler/[ders_slug]/[konu_slug]/"}` (her ders sayfasındaki soldaki içindekiler bu dosyadan gelir)
    - `assets/js/search-index.js` → `{"course":"...","num":N,"title":"...","url":"...","lead":"..."}` (site içi arama bu dosyadan beslenir)
-6. Doğrula: dosya oluştu mu, üç kayıt da eklendi mi (grep), quiz'de tam 5 soru var mı. Mümkünse yeni URL'e HTTP isteği atıp 200 döndüğünü gör.
+6. Doğrula: dosya oluştu mu, üç kayıt da eklendi mi (grep), quiz'de tam 5 soru var mı, `python3 tools/html-kontrol.py` 0 hata veriyor mu. Mümkünse yeni URL'e HTTP isteği atıp 200 döndüğünü gör.
 7. Çıktı özetini ver (aşağıdaki format).
 
 ## Ana sayfaya (akordeon) ekleme
@@ -105,4 +106,5 @@ Site `python3 -m http.server 8000 --bind 127.0.0.1` ile `$ROOT`'tan servis edili
 - Madde işareti / tablo / ayraç çizgisi kullanma; ders notu düz yazı.
 - Transkriptteki reklam/kanal cümlelerini metne koyma.
 - Var olan bir konunun dosyasını sormadan ezme; aynı konu tekrar geldiyse güncelle, farklıysa yeni numara ver.
+- HTML özniteliklerinde tipografik tırnak (`”` `“`) kullanma: `<a class="inline" href="/dersler/…/">` düz `"` ister. `href=”…”` linki 404'e götürür.
 - Uydurma bilgi verme; emin olmadığın sınav rakamlarını abartma, standart müfredata sadık kal.

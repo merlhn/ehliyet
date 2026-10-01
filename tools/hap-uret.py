@@ -264,7 +264,7 @@ FOOTER_HTML_YENI = """  <footer class="site-footer">
     <div class="foot-wrap">
       <div class="foot-hakkinda">
         <a class="foot-marka" href="/">
-          <img src="/assets/img/marka/logo.png" alt="">
+          <img src="/assets/img/marka/logo.png" alt="ehliyet.digital" width="22" height="22" loading="lazy">
           ehliyet.digital
         </a>
         <p>Sınavdan önce ders notlarını incele, hap bilgileri al ve deneme sınavları ile kendini test et. Ehliyet sınavına kolaylıkla hazırlan.</p>
@@ -345,7 +345,7 @@ ORTAK_CSS = """  :root{--fg:#08090a;--muted:#6a6f76;--line:#ececec;--bg:#fff}
   }""".replace("{FOOTER_CSS}", FOOTER_CSS_YENI)
 
 HEADER_HTML = """  <header>
-    <a class="marka" href="/" aria-label="ehliyet.digital"><img src="/assets/img/marka/logo.png" alt=""></a>
+    <a class="marka" href="/" aria-label="ehliyet.digital"><img src="/assets/img/marka/logo.png" alt="ehliyet.digital" width="26" height="26"></a>
     <nav class="nav">
       <a href="/">Ana Sayfa</a>
       <a href="/dersler/">Ders Notları</a>
@@ -641,7 +641,7 @@ YENI_MEDYA = ".foot-wrap{gap:26px}"
 ESKI_FOOTER = """  <footer class="site-footer">
     <div class="foot-wrap">
       <a class="foot-marka" href="/">
-        <img src="/assets/img/marka/logo.png" alt="">
+        <img src="/assets/img/marka/logo.png" alt="ehliyet.digital" width="22" height="22" loading="lazy">
         ehliyet.digital
       </a>
       <nav class="foot-links">

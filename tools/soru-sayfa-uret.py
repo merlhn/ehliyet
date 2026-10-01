@@ -160,6 +160,16 @@ def esc(text):
     return html.escape(text, quote=True)
 
 
+# <title> en fazla 70 karakter (Bing "Title too long" esigi). Marka eki
+# sigiyorsa eklenir, sigmiyorsa atilir; Google site adini zaten ayri gosterir.
+MARKA = " | ehliyet.digital"
+BASLIK_SINIRI = 70
+
+
+def sayfa_basligi(metin):
+    return metin + MARKA if len(metin + MARKA) <= BASLIK_SINIRI else metin
+
+
 def truncate(text, max_len):
     text = re.sub(r"\s+", " ", text).strip()
     if len(text) <= max_len:
@@ -169,10 +179,10 @@ def truncate(text, max_len):
 
 def generate_page(q, slug, exam_num, prev_slug=None, next_slug=None):
     stem_text = re.sub(r"\s+", " ", q["stem"]).strip()
-    title_text = truncate(stem_text, 60) + " | ehliyet.digital"
+    title_text = sayfa_basligi(truncate(stem_text, 60))
     desc_text = truncate(stem_text, 155)
     if slug in SEO_OZEL:
-        title_text = SEO_OZEL[slug][0] + " | ehliyet.digital"
+        title_text = sayfa_basligi(SEO_OZEL[slug][0])
         desc_text = SEO_OZEL[slug][1]
     canonical = f"{DOMAIN}/soru/{slug}/"
     section = q["section"]
