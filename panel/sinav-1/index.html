@@ -254,7 +254,7 @@ function tick(){
 let _examStarted=false;
 function startTimer(){
   window.SINAV_DEVAM_EDIYOR=true; timerEl.textContent=fmt(remaining); timerId=setInterval(tick,1000);
-  if(!_examStarted && typeof gtag==='function'){ _examStarted=true; gtag('event','exam_start',{exam_name:SINAV_ADI}); }
+  if(!_examStarted && typeof gtag==='function'){ _examStarted=true; gtag('event','exam_start',{exam_name:SINAV_ADI, logged_in:true, kaynak:'panel', konu:''}); }
 }
 
 function mediaHTML(q){
@@ -467,9 +467,13 @@ function doFinish(timeUp){
           correct: s.correct,
           wrong: s.wrong,
           empty: s.empty,
+          questions_answered: s.correct + s.wrong,
           passed: s.correct >= PASS_CORRECT,
           exam_count: examCount,
-          time_up: !!timeUp
+          time_up: !!timeUp,
+          logged_in: true,
+          kaynak: 'panel',
+          konu: ''
         });
       }
     } catch(e) { console.error('Sonuç kaydedilemedi:', e); }
@@ -481,6 +485,7 @@ function exitExam(){
   location.href='index.html';
 }
 function restart(){
+  _examStarted=false;
   answers=new Array(Q.length).fill(null);
   cur=0; finished=false; remaining=DURATION;
   timerEl.classList.remove('low');
@@ -508,7 +513,10 @@ window.addEventListener('beforeunload', () => {
     gtag('event', 'exam_abandon', {
       exam_name: SINAV_ADI,
       questions_answered: answers.filter(a => a !== null).length,
-      questions_total: Q.length
+      soru_no: cur + 1,
+      questions_total: Q.length,
+      kaynak: 'panel',
+      konu: ''
     });
   }
 });
