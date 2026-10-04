@@ -147,6 +147,9 @@
   .sonuc-kayit p{margin:0;font-size:14px;line-height:1.55;color:#333;flex:1;min-width:220px}
   .sonuc-kayit button{background:#08090a;color:#fff;border:1px solid #08090a;border-radius:999px;padding:10px 18px;font:inherit;font-size:14px;font-weight:500;cursor:pointer;white-space:nowrap}
   .sonuc-kayit button:hover{background:#26282c}
+  .h-yon{display:flex;gap:8px;order:3}
+  .h-yon[hidden]{display:none}
+  .h-yon a{text-decoration:none;display:inline-block}
   .sonuc-kilit{max-width:520px;margin:28px auto;padding:32px 28px;border:1px solid var(--line);border-radius:18px;background:#fff;text-align:center}
   .sonuc-kilit .kilit-ikon{width:52px;height:52px;margin:0 auto 14px;border-radius:50%;background:#f3f4f6;color:#08090a;display:flex;align-items:center;justify-content:center}
   .sonuc-kilit h2{margin:0 0 8px;font-size:22px;font-weight:600;letter-spacing:-.02em}
@@ -552,6 +555,7 @@
       <div class="timer" id="timer">45:00</div>
     </div>
     <button class="finish-btn" id="finishBtn">Sınavı Bitir</button>
+    <span class="h-yon" id="hYon" hidden><a class="exit-btn" href="/">Web sitesi</a><a class="finish-btn" href="/panel/">Panel</a></span>
   </div>
 </header>
 
@@ -627,6 +631,7 @@ function mediaHTML(q){
 }
 
 function render(){
+  basligiGuncelle();
   if (finished && sonucKilitli) { app.innerHTML = kilitHTML(); return; }
   const q = Q[cur];
   const sel = answers[cur];
@@ -751,11 +756,11 @@ function resultHTML(){
       </p>
       <div class="sonuc-kayit">
         <p><b>Sıradaki deneme hazır.</b> Bu sonuç paneline kaydedildi. Sınav 2, 3, 4 ve konu denemeleri de panelinde.</p>
-        <button type="button" onclick="girisYap('/panel/sinav-2/kilavuz/')">Sınav 2'ye geç</button>
+        <button type="button" onclick="location.href='/panel/?g=sinavlar'">Diğer sınavları keşfet</button>
       </div>
       <div class="row">
         <button class="nav-btn next" onclick="restart()">Tekrar Başla</button>
-        <button class="nav-btn" onclick="kapat()">Sayfaya Dön</button>
+        <button class="nav-btn" onclick="location.href='/panel/'">Panele Git</button>
       </div>
     </div>
   </div>`;
@@ -992,7 +997,14 @@ function kapat(){
 }
 function cikisIste(){
   if (window.SINAV_DEVAM_EDIYOR && !finished && !confirm('Sınav devam ediyor. Çıkarsan cevapların kaybolur. Çıkmak istiyor musun?')) return;
+  if (window.__girisVar) { location.href = '/panel/'; return; } // giriş yapmış kullanıcı ürünün içine
   kapat();
+}
+// Sonuç görünürken sağ üstte "Tekrar Başla" yerine Web sitesi / Panel.
+function basligiGuncelle(){
+  const sonucGorunur = finished && !sonucKilitli;
+  document.getElementById('finishBtn').hidden = sonucGorunur;
+  document.getElementById('hYon').hidden = !sonucGorunur;
 }
 // Girişliyse hedefe gider, değilse giriş penceresi açılır ve giriş sonrası hedefe gidilir.
 function girisYap(hedef = '/panel/?g=sinavlar'){

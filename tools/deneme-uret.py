@@ -98,6 +98,9 @@ acilis_css = """
   .sonuc-kayit p{margin:0;font-size:14px;line-height:1.55;color:#333;flex:1;min-width:220px}
   .sonuc-kayit button{background:#08090a;color:#fff;border:1px solid #08090a;border-radius:999px;padding:10px 18px;font:inherit;font-size:14px;font-weight:500;cursor:pointer;white-space:nowrap}
   .sonuc-kayit button:hover{background:#26282c}
+  .h-yon{display:flex;gap:8px;order:3}
+  .h-yon[hidden]{display:none}
+  .h-yon a{text-decoration:none;display:inline-block}
   .sonuc-kilit{max-width:520px;margin:28px auto;padding:32px 28px;border:1px solid var(--line);border-radius:18px;background:#fff;text-align:center}
   .sonuc-kilit .kilit-ikon{width:52px;height:52px;margin:0 auto 14px;border-radius:50%;background:#f3f4f6;color:#08090a;display:flex;align-items:center;justify-content:center}
   .sonuc-kilit h2{margin:0 0 8px;font-size:22px;font-weight:600;letter-spacing:-.02em}
@@ -123,7 +126,7 @@ sinav_js = degistir(sinav_js, "  location.href='index.html';\n", "  kapat();\n")
 sinav_js = degistir(sinav_js, "let finished = false;",
                               "let finished = false;\nlet sonucKilitli = false; // girişsiz bitirildiyse sonuç girişe kadar gizli\nlet kaydedildi = false;\nlet sureDoldu = false;")
 sinav_js = degistir(sinav_js, "function render(){\n  const q = Q[cur];",
-                              "function render(){\n  if (finished && sonucKilitli) { app.innerHTML = kilitHTML(); return; }\n  const q = Q[cur];")
+                              "function render(){\n  basligiGuncelle();\n  if (finished && sonucKilitli) { app.innerHTML = kilitHTML(); return; }\n  const q = Q[cur];")
 sinav_js = degistir(sinav_js, "  finished=true; window.SINAV_DEVAM_EDIYOR=false;\n",
                               "  finished=true; window.SINAV_DEVAM_EDIYOR=false;\n  sonucKilitli = !window.__girisVar; sureDoldu = !!timeUp;\n  if (sonucKilitli) bekleyenSakla();\n")
 sinav_js = degistir(sinav_js, "function restart(){\n  _examStarted=false;",
@@ -192,11 +195,11 @@ sinav_js = degistir(sinav_js,
       </div>""",
 """      <div class="sonuc-kayit">
         <p><b>Sıradaki deneme hazır.</b> Bu sonuç paneline kaydedildi. Sınav 2, 3, 4 ve konu denemeleri de panelinde.</p>
-        <button type="button" onclick="girisYap('/panel/sinav-2/kilavuz/')">Sınav 2'ye geç</button>
+        <button type="button" onclick="location.href='/panel/?g=sinavlar'">Diğer sınavları keşfet</button>
       </div>
       <div class="row">
         <button class="nav-btn next" onclick="restart()">Tekrar Başla</button>
-        <button class="nav-btn" onclick="kapat()">Sayfaya Dön</button>
+        <button class="nav-btn" onclick="location.href='/panel/'">Panele Git</button>
       </div>""")
 # Klavye kısayolları yalnızca sınav açıkken
 sinav_js = degistir(sinav_js, "document.addEventListener('keydown',e=>{\n  if(e.key==='ArrowLeft') go(-1);",
@@ -347,7 +350,14 @@ function kapat(){
 }
 function cikisIste(){
   if (window.SINAV_DEVAM_EDIYOR && !finished && !confirm('Sınav devam ediyor. Çıkarsan cevapların kaybolur. Çıkmak istiyor musun?')) return;
+  if (window.__girisVar) { location.href = '/panel/'; return; } // giriş yapmış kullanıcı ürünün içine
   kapat();
+}
+// Sonuç görünürken sağ üstte "Tekrar Başla" yerine Web sitesi / Panel.
+function basligiGuncelle(){
+  const sonucGorunur = finished && !sonucKilitli;
+  document.getElementById('finishBtn').hidden = sonucGorunur;
+  document.getElementById('hYon').hidden = !sonucGorunur;
 }
 // Girişliyse hedefe gider, değilse giriş penceresi açılır ve giriş sonrası hedefe gidilir.
 function girisYap(hedef = '/panel/?g=sinavlar'){
@@ -387,6 +397,10 @@ sinav_govde = degistir(sinav_govde, '<div class="sinav-overlay">', '<div class="
 sinav_govde = degistir(sinav_govde,
     """  <button class="exit-btn" onclick="location.href=(window.SINAV_DEVAM_EDIYOR && !confirm('Sınav devam ediyor. Çıkarsan cevapların kaybolur. Çıkmak istiyor musun?')) ? location.href : '/panel/'">‹ Çıkış</button>""",
     """  <button class="exit-btn" type="button" onclick="cikisIste()">‹ Çıkış</button>""")
+# Sonuç ekranında (giriş yapılmış) sağ üstte siteye ve panele dönüş; "Tekrar Başla" alttaki satırda kalır.
+sinav_govde = degistir(sinav_govde, '    <button class="finish-btn" id="finishBtn">Sınavı Bitir</button>\n',
+    '    <button class="finish-btn" id="finishBtn">Sınavı Bitir</button>\n'
+    '    <span class="h-yon" id="hYon" hidden><a class="exit-btn" href="/">Web sitesi</a><a class="finish-btn" href="/panel/">Panel</a></span>\n')
 
 # ---------- Site kabuğu ----------
 site_header = kes(pillar, '<body>\n', '  <main>')
