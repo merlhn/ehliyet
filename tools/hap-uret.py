@@ -504,7 +504,7 @@ def landing():
           <span class="stat"><b>~15 dk</b>tekrar</span>
         </div>
         <div class="hero-cta">
-          <a class="btn btn-acik btn-lg" href="/deneme-sinavi/">Ücretsiz Deneme Sınavı Çöz →</a>
+          <a class="btn btn-acik btn-lg" href="/deneme-sinavi/?basla=1">Ücretsiz Deneme Sınavı Çöz →</a>
           <small>Ücretsiz · 50 soru · 45 dakika</small>
         </div>
         <div class="ornekler">
@@ -530,7 +530,7 @@ def landing():
       <div class="cta-inner">
         <h2>Bilgileri sınavda test et</h2>
         <p>Hap bilgileri okuduysan sıra denemede: gerçek e-sınav formatında 50 soruyla kendini ölç. Ücretsiz.</p>
-        <a class="btn btn-primary btn-lg" href="/deneme-sinavi/">Deneme Sınavına Başla</a>
+        <a class="btn btn-primary btn-lg" href="/deneme-sinavi/?basla=1">Deneme Sınavına Başla</a>
       </div>
     </section>
 
