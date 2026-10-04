@@ -159,7 +159,7 @@ Makine-okunur JSON formatında:
 - **Hosting:** Vercel (site) + Railway (MCP)
 - **Auth:** Firebase (Google OAuth)
 - **Veritabanı:** Firestore (yalnızca kullanıcı profili ve sınav sonuçları)
-- **Analytics:** GA4 (custom event'ler: sign_up, login, exam_start, exam_complete, exam_abandon, feedback_submit)
+- **Analytics:** GA4 (custom event'ler: standart_sign_up, sign_up_end_of_exam_no_1, exam_start, exam_complete, exam_abandon, result_gate_view, banner_click, feedback_submit; sınav event'leri `kaynak` = web / panel taşır)
 
 ---
 
@@ -179,7 +179,7 @@ python3 -m http.server 8000
 ├── dersler/                    43 ders notu (4 kategori)
 ├── hap-bilgiler/               80 hap bilgi (4 kategori)
 ├── ehliyet-sinav-sorulari/     20 örnek soru + 186 sorunun dizini; alt dizinler: konu bazlı soru sayfaları
-├── deneme-sinavi/              Herkese açık deneme sınavı (4 sınav, giriş gerekmez)
+├── deneme-sinavi/              Herkese açık deneme sınavı (yalnız Sınav 1, giriş gerekmez)
 ├── ehliyet-fiyatlari/                   2026 ehliyet fiyatları (harç, sınav, kurs)
 ├── soru/                       186 bireysel soru sayfası
 ├── panel/                      Giriş gerektiren alan (sınavlar)
@@ -193,6 +193,8 @@ python3 -m http.server 8000
 │   ├── feed-uret.py            RSS feed + discovery link
 │   ├── soru-sayfa-uret.py      Bireysel soru sayfaları
 │   ├── hap-sayfa-uret.py       Bireysel hap bilgi sayfaları
+│   ├── konu-deneme-uret.py     Panel konu denemesi sayfası
+│   ├── banner-ekle.py          Header üstü deneme sınavı banner'ı (zincirin en sonunda çalışır)
 │   ├── atomik-ekle.py          Ders atomik özetleri
 │   ├── cevap-ac.py             Soru cevaplarını HTML'e taşı
 │   ├── indexnow.py             Değişen sayfaları Bing/IndexNow'a bildir

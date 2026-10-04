@@ -505,7 +505,7 @@ def landing():
         </div>
         <div class="hero-cta">
           <a class="btn btn-acik btn-lg" href="/deneme-sinavi/">Ücretsiz Deneme Sınavı Çöz →</a>
-          <small>Üyelik gerekmez · 50 soru · 45 dakika</small>
+          <small>Ücretsiz · 50 soru · 45 dakika</small>
         </div>
         <div class="ornekler">
 {ornekler_html}
@@ -529,7 +529,7 @@ def landing():
     <section class="cta">
       <div class="cta-inner">
         <h2>Bilgileri sınavda test et</h2>
-        <p>Hap bilgileri okuduysan sıra denemede: gerçek e-sınav formatında 50 soruyla kendini ölç. Üyelik gerekmez.</p>
+        <p>Hap bilgileri okuduysan sıra denemede: gerçek e-sınav formatında 50 soruyla kendini ölç. Ücretsiz.</p>
         <a class="btn btn-primary btn-lg" href="/deneme-sinavi/">Deneme Sınavına Başla</a>
       </div>
     </section>
@@ -608,9 +608,9 @@ def ders_sayfasi(d):
     <section class="cta">
       <div class="cta-inner">
         <h2>Bu bilgilerle kendini test et</h2>
-        <p>{d['ad']} soruları deneme sınavında seni bekliyor; üyelik gerekmez. Konuyu derinlemesine çalışmak istersen ders notları da hazır.</p>
+        <p>{d['ad']} soruları deneme sınavında seni bekliyor; girişsiz başlayabilirsin. Konuyu derinlemesine çalışmak istersen ders notları da hazır.</p>
         <div class="cta-actions">
-          <a class="btn btn-primary btn-lg" href="/deneme-sinavi/?konu={d['slug']}">{d['ad']} Denemesini Çöz</a>
+          <a class="btn btn-primary btn-lg" href="/deneme-sinavi/?basla=1">Deneme Sınavını Çöz</a>
           <a class="btn btn-outline btn-lg" href="{d['ders_link']}">{d['ad']} Ders Notları</a>
         </div>
       </div>

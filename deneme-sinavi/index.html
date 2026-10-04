@@ -8,13 +8,13 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <title>Ehliyet Deneme Sınavı Çöz: 50 Soru, 45 Dakika | ehliyet.digital</title>
-<meta name="description" content="Giriş gerektirmeyen ücretsiz ehliyet deneme sınavı: MEB e-sınav formatında 50 soru, 45 dakika, anında puan ve çözümlü cevaplar. Çıkmış sorulardan 4 deneme.">
+<meta name="description" content="Ücretsiz ehliyet deneme sınavı: MEB e-sınav formatında 50 soru, 45 dakika. Girişsiz başla; puanın ve çözümlü cevaplar ücretsiz üyelikle açılır.">
 <link rel="canonical" href="https://ehliyet.digital/deneme-sinavi/">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ehliyet.digital">
 <meta property="og:title" content="Ehliyet Deneme Sınavı Çöz: 50 Soru, 45 Dakika">
-<meta property="og:description" content="Giriş gerektirmeyen ücretsiz ehliyet deneme sınavı: MEB e-sınav formatında 50 soru, 45 dakika, anında puan ve çözümlü cevaplar. Çıkmış sorulardan 4 deneme.">
+<meta property="og:description" content="Ücretsiz ehliyet deneme sınavı: MEB e-sınav formatında 50 soru, 45 dakika. Girişsiz başla; puanın ve çözümlü cevaplar ücretsiz üyelikle açılır.">
 <meta property="og:url" content="https://ehliyet.digital/deneme-sinavi/">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:image" content="https://ehliyet.digital/og-image.png">
@@ -24,7 +24,7 @@
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Ehliyet Deneme Sınavı Çöz: 50 Soru, 45 Dakika">
-<meta name="twitter:description" content="Giriş gerektirmeyen ücretsiz ehliyet deneme sınavı: MEB e-sınav formatında 50 soru, 45 dakika, anında puan ve çözümlü cevaplar. Çıkmış sorulardan 4 deneme.">
+<meta name="twitter:description" content="Ücretsiz ehliyet deneme sınavı: MEB e-sınav formatında 50 soru, 45 dakika. Girişsiz başla; puanın ve çözümlü cevaplar ücretsiz üyelikle açılır.">
 <meta name="twitter:image" content="https://ehliyet.digital/og-image.png">
 <meta name="twitter:image:alt" content="ehliyet.digital — Ehliyet deneme sınavı">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -147,6 +147,16 @@
   .sonuc-kayit p{margin:0;font-size:14px;line-height:1.55;color:#333;flex:1;min-width:220px}
   .sonuc-kayit button{background:#08090a;color:#fff;border:1px solid #08090a;border-radius:999px;padding:10px 18px;font:inherit;font-size:14px;font-weight:500;cursor:pointer;white-space:nowrap}
   .sonuc-kayit button:hover{background:#26282c}
+  .sonuc-kilit{max-width:520px;margin:28px auto;padding:32px 28px;border:1px solid var(--line);border-radius:18px;background:#fff;text-align:center}
+  .sonuc-kilit .kilit-ikon{width:52px;height:52px;margin:0 auto 14px;border-radius:50%;background:#f3f4f6;color:#08090a;display:flex;align-items:center;justify-content:center}
+  .sonuc-kilit h2{margin:0 0 8px;font-size:22px;font-weight:600;letter-spacing:-.02em}
+  .sonuc-kilit>p{margin:0 0 20px;font-size:15px;line-height:1.6;color:#444}
+  .kilit-btn{background:#08090a;color:#fff;border:1px solid #08090a;border-radius:999px;padding:12px 22px;font:inherit;font-size:15px;font-weight:500;cursor:pointer}
+  .kilit-btn:hover{background:#26282c}
+  .kilit-btn:disabled{opacity:.6;cursor:default}
+  .sonuc-kilit .kilit-hata{margin:12px 0 0;font-size:13.5px;color:#dc2626}
+  .kilit-madde{list-style:none;padding:0;margin:20px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;font-size:13px;color:var(--muted)}
+  .kilit-madde li::before{content:'✓ ';color:#16a34a;font-weight:600}
 
   /* ---- Sınav motoru (panel/sinav-1 ile ortak) ---- */
   :root{
@@ -325,7 +335,7 @@
     {
       "@type": "WebPage",
       "name": "Ehliyet Deneme Sınavı",
-      "description": "Giriş gerektirmeyen ücretsiz ehliyet deneme sınavı: MEB e-sınav formatında 50 soru, 45 dakika, anında puan ve çözümlü cevaplar. Çıkmış sorulardan 4 deneme.",
+      "description": "Ücretsiz ehliyet deneme sınavı: MEB e-sınav formatında 50 soru, 45 dakika. Girişsiz başla; puanın ve çözümlü cevaplar ücretsiz üyelikle açılır.",
       "url": "https://ehliyet.digital/deneme-sinavi/",
       "inLanguage": "tr-TR",
       "isPartOf": {
@@ -407,39 +417,28 @@
         <a href="/">Ana Sayfa</a> <span class="sep">›</span> <a href="/ehliyet-sinav-sorulari/">Ehliyet Sınav Soruları</a> <span class="sep">›</span> <span>Deneme Sınavı</span>
       </nav>
       <h1>Ehliyet Deneme Sınavı</h1>
-      <p>MEB e-sınavıyla birebir aynı formatta ücretsiz deneme: <b>50 soru, 45 dakika</b>, dört bölüm. Giriş yapmadan hemen başla; süre tutulur, sınav bitince puanın ve her sorunun doğru cevabı anında gösterilir. Sorular gerçek ehliyet sınavında çıkmış sorulardan derlendi.</p>
+      <p>MEB e-sınavıyla birebir aynı formatta ücretsiz deneme: <b>50 soru, 45 dakika</b>, dört bölüm. Giriş yapmadan hemen başla, süre tutulur. Sınav bitince ücretsiz üye ol; puanını ve her sorunun doğru cevabını gör. Sorular gerçek ehliyet sınavında çıkmış sorulardan derlendi.</p>
       <div class="hero-actions">
         <button class="btn btn-primary btn-lg" type="button" data-sinav="1">Deneme Sınavına Başla</button>
-        <a class="btn btn-outline btn-lg" href="#sinavlar">Diğer denemeler</a>
+        <a class="btn btn-outline btn-lg" href="#diger-denemeler">Diğer denemeler</a>
       </div>
       <div class="ozet" aria-label="Sınav özeti">
         <div><b>50</b><span>soru</span></div>
         <div><b>45</b><span>dakika</span></div>
         <div><b>70</b><span>geçme puanı</span></div>
-        <div><b>4</b><span>farklı deneme</span></div>
+        <div><b>4</b><span>bölüm</span></div>
       </div>
     </div>
 
     <div class="icerik">
-      <section class="blok" id="sinavlar">
-        <h2>Deneme sınavını seç</h2>
-        <p>Dört deneme de MEB MTSK e-sınavında çıkmış sorulardan oluşur. Hepsi aynı format: 50 soru, 45 dakika, her doğru 2 puan.</p>
+      <section class="blok" id="diger-denemeler">
+        <h2>Daha fazla deneme</h2>
+        <p>Bu sayfadaki deneme herkese açık. Üç tam deneme daha ve konu bazlı denemeler panelde; hepsi ücretsiz, Google ile giriş yapman yeterli. Panelde sonuçların kaydedilir, puan gelişimini ve eksik konularını görürsün.</p>
         <div class="sinav-grid">
-          <div class="sinav-kart"><span class="no">Deneme 1</span><h3>Sınav 1</h3><p>Başlangıç için önerilen deneme. Dört konudan dengeli soru dağılımı.</p><button class="btn btn-primary" type="button" data-sinav="1">Sınava Başla</button></div>
-          <div class="sinav-kart"><span class="no">Deneme 2</span><h3>Sınav 2</h3><p>Görselli trafik işareti ve kavşak soruları ağırlıklı.</p><button class="btn btn-primary" type="button" data-sinav="2">Sınava Başla</button></div>
-          <div class="sinav-kart"><span class="no">Deneme 3</span><h3>Sınav 3</h3><p>İlk yardım ve araç tekniği çeldiricileri yoğun.</p><button class="btn btn-primary" type="button" data-sinav="3">Sınava Başla</button></div>
-          <div class="sinav-kart"><span class="no">Deneme 4</span><h3>Sınav 4</h3><p>Video ve görsel sorularıyla en güncel e-sınav formatı.</p><button class="btn btn-primary" type="button" data-sinav="4">Sınava Başla</button></div>
-        </div>
-      </section>
-
-      <section class="blok" id="konu-denemeleri">
-        <h2>Konu bazlı deneme</h2>
-        <p>Tek bir konuda eksiğin varsa dört sınavın o konudaki sorularını tek denemede çöz. Süre soru sayısına göre ayarlanır, geçme koşulu yüzde 70. Konu denemeleri panele kaydedilmez.</p>
-        <div class="baglantilar">
-          <a class="btn btn-outline" href="/deneme-sinavi/?konu=ilk-yardim">İlk Yardım denemesi</a>
-          <a class="btn btn-outline" href="/deneme-sinavi/?konu=trafik-ve-cevre">Trafik ve Çevre denemesi</a>
-          <a class="btn btn-outline" href="/deneme-sinavi/?konu=arac-teknigi">Araç Tekniği denemesi</a>
-          <a class="btn btn-outline" href="/deneme-sinavi/?konu=trafik-adabi">Trafik Adabı denemesi</a>
+          <div class="sinav-kart"><span class="no">Deneme 2</span><h3>Sınav 2</h3><p>Görselli trafik işareti ve kavşak soruları ağırlıklı.</p><a class="btn btn-outline" href="/panel/sinav-2/kilavuz/" data-panel="/panel/sinav-2/kilavuz/" rel="nofollow">Çözmek için giriş yap!</a></div>
+          <div class="sinav-kart"><span class="no">Deneme 3</span><h3>Sınav 3</h3><p>İlk yardım ve araç tekniği çeldiricileri yoğun.</p><a class="btn btn-outline" href="/panel/sinav-3/kilavuz/" data-panel="/panel/sinav-3/kilavuz/" rel="nofollow">Çözmek için giriş yap!</a></div>
+          <div class="sinav-kart"><span class="no">Deneme 4</span><h3>Sınav 4</h3><p>Video ve görsel sorularıyla en güncel e-sınav formatı.</p><a class="btn btn-outline" href="/panel/sinav-4/kilavuz/" data-panel="/panel/sinav-4/kilavuz/" rel="nofollow">Çözmek için giriş yap!</a></div>
+          <div class="sinav-kart"><span class="no">Konu bazlı</span><h3>Konu denemeleri</h3><p>İlk Yardım, Trafik ve Çevre, Araç Tekniği, Trafik Adabı: dört sınavın o konudaki soruları tek denemede.</p><a class="btn btn-outline" href="/panel/?g=sinavlar" data-panel="/panel/?g=sinavlar" rel="nofollow">Çözmek için giriş yap!</a></div>
         </div>
       </section>
 
@@ -447,12 +446,12 @@
         <h2>Deneme sınavı nasıl çalışır?</h2>
         <p>Arayüz, süre ve puanlama gerçek e-sınavla aynı. Sınav sırasında sorular arasında ileri geri gidebilir, soru haritasından istediğin soruya atlayabilirsin.</p>
         <ul class="madde">
-          <li><b>Giriş gerekmez.</b> Sayfayı aç, sınava başla. Sonuçlarını kaydetmek istersen Google ile giriş yapabilirsin.</li>
+          <li><b>Girişsiz başla.</b> Sayfayı aç, sınava başla. Sınav bitince sonucunu görmek için Google ile ücretsiz giriş yaparsın; sonucun hesabına kaydedilir.</li>
           <li><b>50 soru, 45 dakika.</b> Süre dolunca sınav otomatik biter, işaretlediklerin puanlanır.</li>
           <li><b>Puanlama gerçek sınav gibi.</b> Her doğru 2 puan, yanlış doğruyu götürmez. Geçmek için 70 puan, yani en az 35 doğru.</li>
-          <li><b>Anında sonuç.</b> Puan, doğru, yanlış ve boş sayısı; konu bazlı performans grafiği.</li>
+          <li><b>Ayrıntılı sonuç.</b> Puan, doğru, yanlış ve boş sayısı; konu bazlı performans grafiği.</li>
           <li><b>Çözümlü inceleme.</b> Sınav bitince her sorunun doğru cevabı ve senin işaretin yan yana gösterilir.</li>
-          <li><b>Ücretsiz ve reklamsız.</b> Ücret, üyelik zorunluluğu veya reklam yok.</li>
+          <li><b>Ücretsiz ve reklamsız.</b> Ücret veya reklam yok; üyelik de ücretsiz.</li>
         </ul>
       </section>
 
@@ -469,8 +468,8 @@
 
       <section class="blok sss">
         <h2>Sık sorulan sorular</h2>
-        <details><summary>Deneme sınavı ücretsiz mi?</summary><p>Evet. Dört deneme de ücretsiz, reklam yok. Herhangi bir üyelik veya ödeme gerekmez.</p></details>
-        <details><summary>Giriş yapmam gerekiyor mu?</summary><p>Hayır. Sınava doğrudan başlayabilirsin. Google ile giriş yaparsan denemelerin hesabına kaydedilir ve panelde puan gelişimini, konu bazlı eksiklerini takip edebilirsin.</p></details>
+        <details><summary>Deneme sınavı ücretsiz mi?</summary><p>Evet. Bu sayfadaki denemeye girişsiz başlarsın; sonucu görmek için ücretsiz üye olman yeterli. Sınav 2, 3, 4 ve konu denemeleri de ücretsiz, panelde. Reklam yok.</p></details>
+        <details><summary>Giriş yapmam gerekiyor mu?</summary><p>Sınava başlamak için hayır. Sınav bitince puanını ve çözümleri görmek için Google ile ücretsiz giriş yaparsın; sonucun hesabına kaydedilir ve panelde puan gelişimini, konu bazlı eksiklerini takip edersin. Diğer denemeler de panelde.</p></details>
         <details><summary>Sorular gerçek sınavdan mı?</summary><p>Sorular MEB MTSK e-sınavında çıkmış sorulardan derlendi. Dört denemede toplam 200 soru var. Aynı soruları tek tek cevaplarıyla incelemek için <a href="/ehliyet-sinav-sorulari/">ehliyet sınav soruları</a> sayfasına bakabilirsin.</p></details>
         <details><summary>Kaç doğru ile geçilir?</summary><p>Gerçek sınavda ve bu denemede 50 soruda en az 35 doğru gerekir. Her doğru 2 puandır, geçme notu 70'tir. Yanlış cevaplar doğruları götürmez, bu yüzden boş bırakmak yerine işaretlemek daha mantıklıdır.</p></details>
         <details><summary>Süre ne kadar?</summary><p>45 dakika, gerçek e-sınavla aynı. Süre dolduğunda sınav otomatik olarak biter ve o ana kadar işaretlediklerin puanlanır.</p></details>
@@ -492,7 +491,7 @@
     <section class="cta">
       <div class="cta-inner">
         <h2>Hazırsan başlayalım</h2>
-        <p>50 soru, 45 dakika. Sınav bitince puanını ve her sorunun cevabını hemen gör.</p>
+        <p>50 soru, 45 dakika. Girişsiz başla, sınav bitince ücretsiz üye olup sonucunu gör.</p>
         <button class="btn btn-primary btn-lg" type="button" data-sinav="1">Deneme Sınavına Başla</button>
       </div>
     </section>
@@ -575,15 +574,16 @@
 <script>
 let Q = [];
 const LETTERS = ["A","B","C","D"];
-let PASS_CORRECT = 35;         // 50 soruda geçme (≈70 puan)
-let SINAV_ADI = 'Sınav 1';
-let SINAV_NO = 1;
-let KONU = null;
-let DURATION = 45*60;          // 45 dakika
+const PASS_CORRECT = 35;         // 50 soruda geçme (≈70 puan)
+const SINAV_ADI = 'Sınav 1';
+const DURATION = 45*60;          // 45 dakika
 
 let cur = 0;
 let answers = []; // seçilen index veya null
 let finished = false;
+let sonucKilitli = false; // girişsiz bitirildiyse sonuç girişe kadar gizli
+let kaydedildi = false;
+let sureDoldu = false;
 let remaining = DURATION;
 let timerId = null;
 
@@ -600,7 +600,7 @@ function tick(){
 let _examStarted=false;
 function startTimer(){
   window.SINAV_DEVAM_EDIYOR=true; timerEl.textContent=fmt(remaining); timerId=setInterval(tick,1000);
-  if(!_examStarted && typeof gtag==='function'){ _examStarted=true; gtag('event','exam_start',{exam_name:SINAV_ADI, logged_in:!!window.__girisVar, kaynak:'acik', konu:KONU||''}); }
+  if(!_examStarted && typeof gtag==='function'){ _examStarted=true; gtag('event','exam_start',{exam_name:SINAV_ADI, logged_in:!!window.__girisVar, kaynak:'web', konu:''}); }
 }
 
 function mediaHTML(q){
@@ -627,6 +627,7 @@ function mediaHTML(q){
 }
 
 function render(){
+  if (finished && sonucKilitli) { app.innerHTML = kilitHTML(); return; }
   const q = Q[cur];
   const sel = answers[cur];
   const answeredCount = answers.filter(a=>a!==null).length;
@@ -663,7 +664,7 @@ function render(){
 
   <div class="card ${finished?'review':''}">
     <div class="qhead">
-      <span class="qno">Soru ${cur+1}</span>
+      <span class="qno">Soru ${q.n}</span>
       <span class="qsec">${q.section}</span>
       <span class="qprog">${finished?'İnceleme modu':`İşaretlenen: ${answeredCount}/${Q.length}`}</span>
     </div>
@@ -709,7 +710,7 @@ function scoreObj(){
     else if(answers[i]===q.correct) correct++;
     else wrong++;
   });
-  return {correct,wrong,empty,points: Q.length===50 ? correct*2 : Math.round(correct/Q.length*100)};
+  return {correct,wrong,empty,points:correct*2};
 }
 
 function sectionBreakdownHTML(){
@@ -745,16 +746,16 @@ function resultHTML(){
       </div>
       ${sectionBreakdownHTML()}
       <p style="color:var(--muted);margin:8px 0 2px">Geçme koşulu: en az ${PASS_CORRECT} doğru (100 üzerinden 70 puan).</p>
-      ${KONU ? '' : `      <p style="color:#444;max-width:660px;margin:12px auto 4px;font-size:13px;line-height:1.6;background:#f6f7f9;border:1px solid var(--line);border-radius:10px;padding:14px 18px;text-align:left">
+      <p style="color:#444;max-width:660px;margin:12px auto 4px;font-size:13px;line-height:1.6;background:#f6f7f9;border:1px solid var(--line);border-radius:10px;padding:14px 18px;text-align:left">
         <b>Puanlama:</b> Ehliyet sınavında yanlış cevaplar doğru yanıtları silmez veya puanınızı düşürmez. Sınavda 50 soru sorulur ve her sorunun puan değeri 2'dir. Başarılı olmak için en az 35 doğru yaparak 70 puan almanız yeterlidir. Yanlış cevaplarınız net sayınızı etkilemediği için, emin olmadığınız sorularda boş bırakmak yerine şansınızı denemeniz önerilir.
-      </p>`}
-      ${window.__girisVar ? '' : `<div class="sonuc-kayit">
-        <p><b>Sonucunu kaydet, gelişimini gör.</b> Google ile giriş yaparsan denemelerin hesabına kaydedilir; hangi konuda eksiğin olduğunu takip edersin.</p>
-        <button type="button" onclick="girisYap()">Google ile giriş yap</button>
-      </div>`}
+      </p>
+      <div class="sonuc-kayit">
+        <p><b>Sıradaki deneme hazır.</b> Bu sonuç paneline kaydedildi. Sınav 2, 3, 4 ve konu denemeleri de panelinde.</p>
+        <button type="button" onclick="girisYap('/panel/sinav-2/kilavuz/')">Sınav 2'ye geç</button>
+      </div>
       <div class="row">
         <button class="nav-btn next" onclick="restart()">Tekrar Başla</button>
-        <button class="nav-btn" onclick="kapat()">Sınav Seçimine Dön</button>
+        <button class="nav-btn" onclick="kapat()">Sayfaya Dön</button>
       </div>
     </div>
   </div>`;
@@ -778,6 +779,8 @@ function closeConfirm(){ confirmModal.classList.remove('show'); }
 function doFinish(timeUp){
   closeConfirm();
   finished=true; window.SINAV_DEVAM_EDIYOR=false;
+  sonucKilitli = !window.__girisVar; sureDoldu = !!timeUp;
+  if (sonucKilitli) bekleyenSakla();
   clearInterval(timerId);
   document.getElementById('finishBtn').textContent='Tekrar Başla';
   document.querySelector('.timer-label').style.display='none';
@@ -788,42 +791,15 @@ function doFinish(timeUp){
   (async () => {
     try {
       const s = scoreObj();
-      const { auth, denemeleriGetir, denemeKaydet } = await import('/assets/js/firebase.js');
+      const { auth } = await import('/assets/js/firebase.js');
       const user = auth.currentUser;
-      let examCount = 0;
-      if (user && !KONU) {
-        const bolumler = {};
-        Q.forEach((q,i) => {
-          if (!bolumler[q.section]) bolumler[q.section] = {toplam:0,dogru:0};
-          bolumler[q.section].toplam++;
-          if (answers[i] === q.correct) bolumler[q.section].dogru++;
-        });
-        await denemeKaydet(user.uid, {
-          sinav: SINAV_ADI,
-          dogru: s.correct,
-          yanlis: s.wrong,
-          bos: s.empty,
-          puan: s.points,
-          gecti: s.correct >= PASS_CORRECT,
-          bolumler
-        });
-        try { const prev = await denemeleriGetir(user.uid); examCount = prev.length; } catch(_){}
-      }
-      // exam_complete event — giriş olmasa da gider
-      if (typeof gtag === 'function') {
-        gtag('event', 'exam_complete', {
-          exam_name: SINAV_ADI,
-          score: s.points,
-          correct: s.correct,
-          wrong: s.wrong,
-          empty: s.empty,
-          passed: s.correct >= PASS_CORRECT,
-          exam_count: examCount,
-          time_up: !!timeUp,
-          logged_in: !!user,
-          kaynak: 'acik',
-          konu: KONU || ''
-        });
+      if (user) {
+        if (sonucKilitli) { sonucKilitli = false; render(); }
+        bekleyenSil();
+        tamamlandiGonder(await sonucuKaydet(user));
+      } else if (sonucKilitli && typeof gtag === 'function') {
+        // Sonuç kilitli: exam_complete sonuç açılınca (girişten sonra) gider.
+        gtag('event', 'result_gate_view', { exam_name: SINAV_ADI, questions_answered: s.correct + s.wrong });
       }
     } catch(e) { console.error('Sonuç kaydedilemedi:', e); }
   })();
@@ -834,6 +810,7 @@ function exitExam(){
   kapat();
 }
 function restart(){
+  _examStarted=false; kaydedildi=false; bekleyenSil();
   answers=new Array(Q.length).fill(null);
   cur=0; finished=false; remaining=DURATION;
   timerEl.classList.remove('low');
@@ -862,56 +839,151 @@ window.addEventListener('beforeunload', () => {
     gtag('event', 'exam_abandon', {
       exam_name: SINAV_ADI,
       questions_answered: answers.filter(a => a !== null).length,
-      questions_total: Q.length
+      soru_no: cur + 1,
+      questions_total: Q.length,
+      kaynak: 'web',
+      konu: ''
     });
   }
 });
 
-/* ---- Açık deneme: sınav seçimi ve yükleme ---- */
+/* ---- Açık deneme: Sınav 1 ---- */
 const overlay = document.getElementById('sinavOverlay');
-const yuklenen = {};
-function sinavYukle(n){
-  if (yuklenen[n]) return Promise.resolve(yuklenen[n]);
+let yuklenen = null;
+function sinavYukle(){
+  if (yuklenen) return Promise.resolve(yuklenen);
   return new Promise((res, rej) => {
     const s = document.createElement('script');
-    s.src = '/assets/js/questions-' + n + '.js';
-    s.onload = () => { yuklenen[n] = window.QUESTIONS; res(yuklenen[n]); };
+    s.src = '/assets/js/questions-1.js';
+    s.onload = () => { yuklenen = window.QUESTIONS; res(yuklenen); };
     s.onerror = () => rej(new Error('Sınav yüklenemedi'));
     document.head.appendChild(s);
   });
 }
-const KONULAR = {'ilk-yardim':'İlk Yardım','trafik-ve-cevre':'Trafik ve Çevre','arac-teknigi':'Araç Tekniği','trafik-adabi':'Trafik Adabı'};
-async function konuYukle(slug){
-  const hepsi = [];
-  for (const n of [1,2,3,4]) { const q = await sinavYukle(n); hepsi.push(...q.filter(x => x.section === KONULAR[slug])); }
-  return hepsi;
+// ---- Sonuç kilidi ----
+let fb = null; // firebase.js; açılır pencere tıklamayla aynı anda açılsın diye önceden yüklenir
+function kilitHTML(){
+  const cevaplanan = answers.filter(a => a !== null).length;
+  return `<div class="sonuc-kilit">
+    <div class="kilit-ikon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+    <h2>Sınavı tamamladın</h2>
+    <p>${Q.length} sorunun ${cevaplanan} tanesini cevapladın. Puanını, doğru ve yanlışlarını ve her sorunun doğru cevabını görmek için ücretsiz üye ol.</p>
+    <button type="button" class="kilit-btn" onclick="sonucIcinGiris(this)">Google ile devam et, sonucu gör</button>
+    <p class="kilit-hata" hidden>Giriş başlatılamadı. Lütfen tekrar dene.</p>
+    <ul class="kilit-madde"><li>Ücretsiz, reklamsız</li><li>Sonucun hesabına kaydedilir</li><li>3 farklı deneme sınavına daha erişebilir ve her konu ile ilgili konu deneme sınavlarını görebilirsin</li></ul>
+  </div>`;
 }
-async function sinaviBaslat(n, konu){
-  n = [1,2,3,4].includes(+n) ? +n : 1;
-  konu = KONULAR[konu] ? konu : null;
-  const btn = konu ? null : document.querySelector('[data-sinav="' + n + '"]');
-  if (btn) { btn.disabled = true; btn.textContent = 'Yükleniyor…'; }
-  try { Q = konu ? await konuYukle(konu) : await sinavYukle(n); }
-  catch (e) { if (btn) { btn.disabled = false; btn.textContent = 'Sınava Başla'; } alert('Sınav yüklenemedi, lütfen tekrar dene.'); return; }
-  if (btn) { btn.disabled = false; btn.textContent = 'Sınava Başla'; }
-  KONU = konu;
-  if (konu) { SINAV_ADI = KONULAR[konu] + ' Denemesi'; DURATION = Q.length * 54; PASS_CORRECT = Math.ceil(Q.length * 0.7); }
-  else { SINAV_ADI = 'Sınav ' + n; DURATION = 45 * 60; PASS_CORRECT = 35; }
-  SINAV_NO = n; _examStarted = false;
+async function sonucuKaydet(user){
+  if (kaydedildi) return 0;
+  kaydedildi = true;
+  const { denemeKaydet, denemeleriGetir } = await import('/assets/js/firebase.js');
+  const s = scoreObj();
+  const bolumler = {};
+  Q.forEach((q,i) => {
+    if (!bolumler[q.section]) bolumler[q.section] = {toplam:0,dogru:0};
+    bolumler[q.section].toplam++;
+    if (answers[i] === q.correct) bolumler[q.section].dogru++;
+  });
+  await denemeKaydet(user.uid, {
+    sinav: SINAV_ADI,
+    dogru: s.correct,
+    yanlis: s.wrong,
+    bos: s.empty,
+    puan: s.points,
+    gecti: s.correct >= PASS_CORRECT,
+    bolumler
+  });
+  try { return (await denemeleriGetir(user.uid)).length; } catch(_) { return 0; }
+}
+// Web'de exam_complete sonuç ekranı açıldığında gider (girişliyse bitişte, değilse kilitten girişte).
+function tamamlandiGonder(examCount){
+  if (typeof gtag !== 'function') return;
+  const s = scoreObj();
+  gtag('event', 'exam_complete', {
+    exam_name: SINAV_ADI,
+    score: s.points,
+    correct: s.correct,
+    wrong: s.wrong,
+    empty: s.empty,
+    questions_answered: s.correct + s.wrong,
+    passed: s.correct >= PASS_CORRECT,
+    exam_count: examCount,
+    time_up: sureDoldu,
+    logged_in: true,
+    kaynak: 'web',
+    konu: ''
+  });
+}
+function sonucuAc(user){
+  if (!sonucKilitli || !user) return;
+  sonucKilitli = false;
+  bekleyenSil();
+  render();
+  // Hesap az önce açıldıysa oluşturma ve son giriş zamanı aynıdır.
+  const yeni = !!user.metadata && user.metadata.creationTime === user.metadata.lastSignInTime;
+  if (typeof gtag === 'function') gtag('event', 'sign_up_end_of_exam_no_1', { exam_name: SINAV_ADI, yeni_uye: yeni });
+  sonucuKaydet(user).catch(e => { console.error('Sonuç kaydedilemedi:', e); return 0; }).then(tamamlandiGonder);
+}
+// Kilitli sonuç yenilemede ve sonraki ziyarette kaybolmasın diye tarayıcıda tutulur.
+const BEKLEYEN = 'ehliyet-bekleyen-sonuc';
+function bekleyenSakla(){ try { localStorage.setItem(BEKLEYEN, JSON.stringify({ sinav: SINAV_ADI, answers, sureDoldu, t: Date.now() })); } catch(_){} }
+function bekleyenSil(){ try { localStorage.removeItem(BEKLEYEN); } catch(_){} }
+function bekleyenOku(){
+  try {
+    const b = JSON.parse(localStorage.getItem(BEKLEYEN) || 'null');
+    if (b && b.sinav === SINAV_ADI && Array.isArray(b.answers) && Date.now() - b.t < 24*60*60*1000) return b;
+  } catch(_){}
+  bekleyenSil(); return null;
+}
+async function bekleyeniAc(b){
+  try { Q = await sinavYukle(); } catch(_) { return; }
+  if (b.answers.length !== Q.length) { bekleyenSil(); return; }
+  answers = b.answers; cur = 0; finished = true; kaydedildi = false; sureDoldu = !!b.sureDoldu;
+  sonucKilitli = !window.__girisVar;
+  window.SINAV_DEVAM_EDIYOR = false;
+  document.getElementById('finishBtn').textContent = 'Tekrar Başla';
+  document.querySelector('.timer-label').style.display = 'none';
+  timerEl.style.display = 'none';
+  overlay.classList.add('acik');
+  document.body.style.overflow = 'hidden';
+  history.replaceState(null, '', '?basla=1');
+  render();
+  if (fb && fb.auth.currentUser) sonucuAc(fb.auth.currentUser);
+}
+function sonucIcinGiris(btn){
+  const hata = btn.parentNode.querySelector('.kilit-hata');
+  hata.hidden = true; btn.disabled = true;
+  // auth-ui.js bu akıştan gelen yeni üyeyi standart_sign_up olarak saymaz.
+  window.__girisAkisi = 'sinav1';
+  const giris = fb ? fb.girisYap().then(() => fb) : import('/assets/js/firebase.js').then(m => m.girisYap().then(() => m));
+  giris.then(m => sonucuAc(m.auth.currentUser)).catch(e => {
+    window.__girisAkisi = null;
+    btn.disabled = false;
+    if (e?.code !== 'auth/popup-closed-by-user' && e?.code !== 'auth/cancelled-popup-request') { console.error('Giriş başarısız:', e); hata.hidden = false; }
+  });
+}
+async function sinaviBaslat(){
+  const btn = document.querySelector('[data-sinav]');
+  btn.disabled = true; btn.textContent = 'Yükleniyor…';
+  try { Q = await sinavYukle(); }
+  catch (e) { btn.disabled = false; btn.textContent = 'Deneme Sınavına Başla'; alert('Sınav yüklenemedi, lütfen tekrar dene.'); return; }
+  btn.disabled = false; btn.textContent = 'Deneme Sınavına Başla';
+  _examStarted = false; kaydedildi = false; bekleyenSil();
   answers = new Array(Q.length).fill(null);
   cur = 0; finished = false; remaining = DURATION;
   timerEl.classList.remove('low');
   document.querySelector('.timer-label').style.display = '';
   timerEl.style.display = '';
   document.getElementById('finishBtn').textContent = 'Sınavı Bitir';
-  document.querySelector('.h-title').textContent = SINAV_ADI;
   overlay.classList.add('acik');
   document.body.style.overflow = 'hidden';
-  history.replaceState(null, '', konu ? '?konu=' + konu : '?s=' + n);
+  // ?s= kullanılmaz: GA4 onu site içi arama sayıp view_search_results gönderir.
+  history.replaceState(null, '', '?basla=1');
   clearInterval(timerId); startTimer(); render();
   overlay.querySelector('.wrap').scrollTop = 0;
 }
 function kapat(){
+  if (finished && sonucKilitli) bekleyenSil(); // kişi kilit ekranından kendisi çıktı
   clearInterval(timerId);
   window.SINAV_DEVAM_EDIYOR = false;
   overlay.classList.remove('acik');
@@ -922,25 +994,37 @@ function cikisIste(){
   if (window.SINAV_DEVAM_EDIYOR && !finished && !confirm('Sınav devam ediyor. Çıkarsan cevapların kaybolur. Çıkmak istiyor musun?')) return;
   kapat();
 }
-function girisYap(){
-  const git = () => location.href = '/panel/?g=sinavlar';
-  if (typeof window.ehliyetGiris === 'function') window.ehliyetGiris('/panel/?g=sinavlar');
-  else import('/assets/js/auth-ui.js').then(() => window.ehliyetGiris ? window.ehliyetGiris('/panel/?g=sinavlar') : git()).catch(git);
+// Girişliyse hedefe gider, değilse giriş penceresi açılır ve giriş sonrası hedefe gidilir.
+function girisYap(hedef = '/panel/?g=sinavlar'){
+  const git = () => location.href = hedef;
+  if (typeof window.ehliyetGiris === 'function') window.ehliyetGiris(hedef);
+  else import('/assets/js/auth-ui.js').then(() => window.ehliyetGiris ? window.ehliyetGiris(hedef) : git()).catch(git);
 }
-document.querySelectorAll('[data-sinav]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); sinaviBaslat(b.dataset.sinav); }));
+document.querySelectorAll('[data-sinav]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); sinaviBaslat(); }));
+document.querySelectorAll('[data-panel]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); girisYap(b.dataset.panel); }));
 
-// Oturum durumu: sonuç ekranındaki kayıt daveti ve analytics için. Firebase kritik yolda değil.
+// Oturum durumu: sonuç kilidi ve analytics için. Firebase kritik yolda değil.
 function oturumuIzle(){
   import('/assets/js/firebase.js')
-    .then(({ kullaniciDinle }) => kullaniciDinle(u => { window.__girisVar = !!u; if (finished) render(); }))
+    .then(m => { fb = m; m.kullaniciDinle(u => { window.__girisVar = !!u; if (u && sonucKilitli) sonucuAc(u); else if (finished) render(); }); })
     .catch(() => {});
 }
 if ('requestIdleCallback' in window) requestIdleCallback(oturumuIzle, { timeout: 2000 }); else setTimeout(oturumuIzle, 300);
 
-// ?basla=N sınavı, ?konu=<kategori> konu denemesini doğrudan başlatır (soru, hap ve konu sayfalarından gelen bağlantılar).
+// ?basla=1 Sınav 1'i doğrudan başlatır (soru, hap, ders ve konu sayfalarından gelen bağlantılar).
+// Bekleyen kilitli sonuç varsa yeni sınav yerine o açılır.
+// Sınav 2–4 ve konu denemeleri panele taşındı; eski bağlantılar giriş penceresiyle panele gider.
 const _prm = new URLSearchParams(location.search);
-if (KONULAR[_prm.get('konu')]) sinaviBaslat(1, _prm.get('konu'));
-else if (_prm.get('basla')) sinaviBaslat(_prm.get('basla'));
+const _konu = _prm.get('konu'), _no = _prm.get('basla');
+if (['ilk-yardim','trafik-ve-cevre','arac-teknigi','trafik-adabi'].includes(_konu)) {
+  history.replaceState(null, '', location.pathname); girisYap('/panel/konu-denemesi/?k=' + _konu);
+} else if (['2','3','4'].includes(_no)) {
+  history.replaceState(null, '', location.pathname); girisYap('/panel/sinav-' + _no + '/kilavuz/');
+} else {
+  const _bekleyen = bekleyenOku();
+  if (_bekleyen) bekleyeniAc(_bekleyen);
+  else if (_no) sinaviBaslat();
+}
 </script>
   <script src="/assets/js/feedback.js" defer></script>
   <script type="module" src="/assets/js/auth-ui.js"></script>

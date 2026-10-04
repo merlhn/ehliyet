@@ -509,7 +509,7 @@ def generate_page(d, hap, onceki, sonraki, ders, satirlar):
       <p>Bu bilgi <b>{esc(kategori_ad)}</b> konusuna aittir.
         <a href="{ders_url}">{esc(ders_ad)} &rarr;</a></p>
       <p><a href="{kat_url}">Tüm {esc(kategori_ad)} hap bilgileri &rarr;</a></p>
-      <p><a href="/ehliyet-sinav-sorulari/{kat_slug}/">{esc(kategori_ad)} çıkmış sınav soruları &rarr;</a> · <a href="/deneme-sinavi/?konu={kat_slug}">Bu konudan deneme çöz &rarr;</a></p>
+      <p><a href="/ehliyet-sinav-sorulari/{kat_slug}/">{esc(kategori_ad)} çıkmış sınav soruları &rarr;</a> · <a href="/deneme-sinavi/?basla=1">Deneme sınavını çöz &rarr;</a></p>
     </div>
 
     <nav class="hap-nav" aria-label="Önceki / sonraki hap bilgi">

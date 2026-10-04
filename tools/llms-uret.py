@@ -123,7 +123,7 @@ satirlar.append("")
 hap_sayisi = sum(1 for p in (ROOT / "hap-bilgiler").glob("*/*/index.html"))
 satirlar.append(f"- Hap Bilgiler ({hap_sayisi} kısa özet): {BASE}/hap-bilgiler/")
 satirlar.append(f"- Soru Çöz: {BASE}/ehliyet-sinav-sorulari/")
-satirlar.append(f"- Deneme Sınavı (giriş gerektirmez, 50 soru / 45 dk): {BASE}/deneme-sinavi/")
+satirlar.append(f"- Deneme Sınavı (girişsiz başlanır, sonuç ücretsiz üyelikle; 50 soru / 45 dk): {BASE}/deneme-sinavi/")
 satirlar.append(f"- Ehliyet Fiyatları 2026 (harç, sınav ve kurs ücretleri): {BASE}/ehliyet-fiyatlari/")
 for _k, _a in (("ilk-yardim", "İlk Yardım"), ("trafik-ve-cevre", "Trafik ve Çevre"), ("arac-teknigi", "Araç Tekniği"), ("trafik-adabi", "Trafik Adabı")):
     satirlar.append(f"- {_a} çıkmış sorular: {BASE}/ehliyet-sinav-sorulari/{_k}/")

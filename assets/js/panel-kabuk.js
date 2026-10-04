@@ -40,9 +40,15 @@ if (document.body) menuyuKur();
 else document.addEventListener('DOMContentLoaded', menuyuKur, { once: true });
 
 // Oturum kontrolü ayrı ve gecikmeli yürür; yalnızca yönlendirmeden sorumlu.
+// Girişsiz gelen ziyaretçi ana sayfada giriş penceresiyle karşılanır, girişten sonra
+// bu sayfaya döner. Bu sayfada oturum kapanırsa (çıkış) düz ana sayfaya gidilir.
 function oturumuDogrula() {
+  let oturumVardi = false;
   import('./firebase.js')
-    .then(({ kullaniciDinle }) => kullaniciDinle(user => { if (!user) location.replace('/'); }))
+    .then(({ kullaniciDinle }) => kullaniciDinle(user => {
+      if (user) { oturumVardi = true; return; }
+      location.replace(oturumVardi ? '/' : '/?giris=' + encodeURIComponent(location.pathname + location.search));
+    }))
     .catch(err => console.error('Oturum kontrolü yüklenemedi:', err));
 }
 

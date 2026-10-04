@@ -419,7 +419,7 @@ def generate_page(q, slug, exam_num, prev_slug=None, next_slug=None):
       <p>Bu soru <b>{esc(section)}</b> konusuna aittir.
         <a href="{section_url}">{esc(section)} ders notlarına git &rarr;</a></p>
       <p><a href="{topic_url}">Tüm {esc(section)} soruları &rarr;</a></p>
-      <p class="deneme-cta"><a href="/deneme-sinavi/?basla={exam_num}">Bu soruyu gerçek sınav formatında çöz: Sınav {exam_num} denemesine başla &rarr;</a></p>
+      <p class="deneme-cta"><a href="/deneme-sinavi/?basla=1">Gerçek sınav formatında kendini dene: 50 soruluk ücretsiz deneme sınavına başla &rarr;</a></p>
     </div>
 
     <nav class="soru-nav" aria-label="Önceki / sonraki soru">

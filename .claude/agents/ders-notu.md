@@ -77,8 +77,9 @@ JS dizisi olarak yaz; string içindeki çift tırnakları kaçır ya da tek tır
    - `index.html` ana sayfa akordeonu (aşağıya bak)
    - `assets/js/lessons-nav.js` → ilgili dersin `lessons` dizisine `{"n":N,"title":"...","url":"/dersler/[ders_slug]/[konu_slug]/"}` (her ders sayfasındaki soldaki içindekiler bu dosyadan gelir)
    - `assets/js/search-index.js` → `{"course":"...","num":N,"title":"...","url":"...","lead":"..."}` (site içi arama bu dosyadan beslenir)
-6. Doğrula: dosya oluştu mu, üç kayıt da eklendi mi (grep), quiz'de tam 5 soru var mı, `python3 tools/html-kontrol.py` 0 hata veriyor mu. Mümkünse yeni URL'e HTTP isteği atıp 200 döndüğünü gör.
-7. Çıktı özetini ver (aşağıdaki format).
+6. `python3 tools/banner-ekle.py` çalıştır: yeni sayfaya header üstündeki deneme sınavı banner'ını ekler (şablonda yok).
+7. Doğrula: dosya oluştu mu, üç kayıt da eklendi mi (grep), quiz'de tam 5 soru var mı, `python3 tools/html-kontrol.py` 0 hata veriyor mu. Mümkünse yeni URL'e HTTP isteği atıp 200 döndüğünü gör.
+8. Çıktı özetini ver (aşağıdaki format).
 
 ## Ana sayfaya (akordeon) ekleme
 Ana sayfa: `$ROOT/index.html`. Her dersin akordeon panelinde şu formatta `<a>` satırları var:

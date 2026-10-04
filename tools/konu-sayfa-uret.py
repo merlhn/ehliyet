@@ -2,8 +2,8 @@
 """Konu bazlı soru dizini sayfalarını üretir: /ehliyet-sinav-sorulari/{konu}/index.html
 
 Her sayfa o konunun çıkmış sorularını (/soru/ sayfalarına bağlantı), sınavda
-en çok çıkan hap bilgileri ve ders notlarını tek yerde toplar; konu denemesine
-(/deneme-sinavi/?konu=...) yönlendirir. Hedef sorgular "ehliyet motor soruları",
+en çok çıkan hap bilgileri ve ders notlarını tek yerde toplar; herkese açık deneme
+sınavına (/deneme-sinavi/?basla=1) yönlendirir, konu denemesi panelde (giriş ister). Hedef sorgular "ehliyet motor soruları",
 "ehliyet ilk yardım soruları" gibi konu + soru kalıplarıdır.
 
 Kullanım (depo kökünden):  python3 tools/konu-sayfa-uret.py
@@ -176,7 +176,7 @@ def sayfa(konu, liste, stil, header, footer, ga):
     url = f"{BASE}/ehliyet-sinav-sorulari/{slug}/"
     title = f"{ad} Ehliyet Sınav Soruları: {n} Çıkmış Soru ve Cevabı"
     desc = (f"Ehliyet sınavında {ad} bölümünden çıkmış {n} soru ve cevabı. Sınavda bu konudan {konu['sinavda']} soru gelir. "
-            f"Soruları incele ya da sadece {konu['kisa']} denemesini çöz.")
+            f"Soruları incele, ardından ücretsiz deneme sınavını çöz.")
     assert len(desc) <= 165, (slug, len(desc))
 
     haplar = hap_bilgiler(slug)
@@ -236,7 +236,7 @@ def sayfa(konu, liste, stil, header, footer, ga):
       <h1>{ad} Ehliyet Sınav Soruları</h1>
       <p>{konu["giris"]}</p>
       <div class="hero-actions">
-        <a class="btn btn-primary btn-lg" href="/deneme-sinavi/?konu={slug}">{ad} Denemesine Başla</a>
+        <a class="btn btn-primary btn-lg" href="/deneme-sinavi/?basla=1">Deneme Sınavına Başla</a>
         <a class="btn btn-outline btn-lg" href="#sorular">{n} soruyu incele</a>
       </div>
       <div class="ozet" aria-label="Özet">
@@ -281,10 +281,10 @@ def sayfa(konu, liste, stil, header, footer, ga):
 
     <section class="cta">
       <div class="cta-inner">
-        <h2>{ad} sorularında kendini dene</h2>
-        <p>Dört sınavın {ad} soruları tek denemede, gerçek sınav formatında. Giriş gerekmez, süre soru sayısına göre ayarlanır.</p>
-        <a class="btn btn-primary btn-lg" href="/deneme-sinavi/?konu={slug}">{ad} Denemesine Başla</a>
-        <p style="margin-top:14px"><a href="/deneme-sinavi/" style="font-size:14px;color:var(--muted)">ya da 50 soruluk tam denemeyi çöz →</a></p>
+        <h2>Gerçek sınav formatında kendini dene</h2>
+        <p>50 soru, 45 dakika, dört bölüm; {ad} soruları da içinde. Girişsiz başla; sınav bitince ücretsiz üye olup puanını ve her sorunun cevabını görürsün.</p>
+        <a class="btn btn-primary btn-lg" href="/deneme-sinavi/?basla=1">Deneme Sınavına Başla</a>
+        <p style="margin-top:14px"><a href="/panel/konu-denemesi/?k={slug}" data-korumali rel="nofollow" style="font-size:14px;color:var(--muted)">Sadece {ad} sorularından deneme: ücretsiz giriş yap, panelde çöz →</a></p>
       </div>
     </section>
   </main>
