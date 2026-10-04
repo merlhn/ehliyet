@@ -1,6 +1,6 @@
 # ehliyet.digital
 
-> Türkiye ehliyet sınavına ücretsiz hazırlık platformu. MEB MTSK müfredatına uygun ders notları, hap bilgiler ve deneme sınavları sunar.
+> Ücretsiz ehliyet deneme sınavı.
 
 Dil: Türkçe
 Konu: B sınıfı ehliyet (sürücü belgesi) teorik sınavı
