@@ -604,7 +604,7 @@ function tick(){
 let _examStarted=false;
 function startTimer(){
   window.SINAV_DEVAM_EDIYOR=true; timerEl.textContent=fmt(remaining); timerId=setInterval(tick,1000);
-  if(!_examStarted && typeof gtag==='function'){ _examStarted=true; gtag('event','exam_start',{exam_name:SINAV_ADI, logged_in:!!window.__girisVar, kaynak:'web', konu:''}); }
+  if(!_examStarted && typeof gtag==='function'){ _examStarted=true; gtag('event','start_exam_1',{exam_name:SINAV_ADI, logged_in:!!window.__girisVar, kaynak:'web', konu:''}); }
 }
 
 function mediaHTML(q){

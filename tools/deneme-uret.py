@@ -6,7 +6,7 @@ Sınav CSS'i ve JS'i panel sayfasından alınır, panel kabuğuna bağımlı kı
 üstüne indekslenebilir bir açılış sayfası eklenir. Sitede herkese açık tek deneme
 Sınav 1'dir (?basla=1 doğrudan başlatır). Sınava girişsiz başlanır; bitince sonuç
 ve çözümler Google ile girişe kadar kilitli kalır (açılır pencere, sayfa değişmez),
-giriş sonrası sonuç gösterilir ve panele kaydedilir. Analytics: girişsiz bitişte
+giriş sonrası sonuç gösterilir ve panele kaydedilir. Analytics: başlangıçta start_exam_1, girişsiz bitişte
 result_gate_view; kilitten girişte sign_up_end_of_exam_no_1 (yeni_uye) ve ardından
 exam_1_complete. Bu akışta standart_sign_up gitmez (window.__girisAkisi, bkz. auth-ui.js). Web'de Sınav 1 bitişi
 exam_1_complete olarak sonuç açıldığında gider; panel sınavları exam_complete gönderir. Kilitli sonuç 24 saat
@@ -133,7 +133,7 @@ sinav_js = degistir(sinav_js, "  finished=true; window.SINAV_DEVAM_EDIYOR=false;
 sinav_js = degistir(sinav_js, "function restart(){\n  _examStarted=false;",
                               "function restart(){\n  _examStarted=false; kaydedildi=false; bekleyenSil();")
 sinav_js = degistir(sinav_js, "  if(!_examStarted && typeof gtag==='function'){ _examStarted=true; gtag('event','exam_start',{exam_name:SINAV_ADI, logged_in:true, kaynak:'panel', konu:''}); }",
-                              "  if(!_examStarted && typeof gtag==='function'){ _examStarted=true; gtag('event','exam_start',{exam_name:SINAV_ADI, logged_in:!!window.__girisVar, kaynak:'web', konu:''}); }")
+                              "  if(!_examStarted && typeof gtag==='function'){ _examStarted=true; gtag('event','start_exam_1',{exam_name:SINAV_ADI, logged_in:!!window.__girisVar, kaynak:'web', konu:''}); }")
 sinav_js = degistir(sinav_js, "      questions_total: Q.length,\n      kaynak: 'panel',\n      konu: ''\n",
                               "      questions_total: Q.length,\n      kaynak: 'web',\n      konu: ''\n")
 # Sonuç kaydı: giriş yoksa da analytics gitsin, kayıt yalnızca giriş varsa.
