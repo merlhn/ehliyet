@@ -132,8 +132,17 @@ sinav_js = degistir(sinav_js, "  finished=true; window.SINAV_DEVAM_EDIYOR=false;
                               "  finished=true; window.SINAV_DEVAM_EDIYOR=false;\n  sonucKilitli = !window.__girisVar; sureDoldu = !!timeUp;\n  if (sonucKilitli) bekleyenSakla();\n")
 sinav_js = degistir(sinav_js, "function restart(){\n  _examStarted=false;",
                               "function restart(){\n  _examStarted=false; kaydedildi=false; bekleyenSil();")
-sinav_js = degistir(sinav_js, "  if(!_examStarted && typeof gtag==='function'){ _examStarted=true; gtag('event','exam_start',{exam_name:SINAV_ADI, logged_in:true, kaynak:'panel', konu:''}); }",
+sinav_js = degistir(sinav_js, """  if(!_examStarted && typeof gtag==='function'){
+    _examStarted=true;
+    // Oturum panel-kabuk.js'te gecikmeli doğrulanır; girişsiz ziyaretçi yönlendirilirken exam_start gitmesin.
+    const gonder = () => gtag('event','exam_start',{exam_name:SINAV_ADI, logged_in:true, kaynak:'panel', konu:''});
+    window.__oturumDogrulandi ? gonder() : document.addEventListener('pk-oturum', gonder, { once:true });
+  }""",
                               "  if(!_examStarted && typeof gtag==='function'){ _examStarted=true; gtag('event','start_exam_1',{exam_name:SINAV_ADI, logged_in:!!window.__girisVar, kaynak:'web', konu:''}); }")
+# Web'de panel-kabuk yok; terk koşulu oturum doğrulamasını beklemez.
+sinav_js = degistir(sinav_js, "  // Girişsiz ziyaretçi yönlendirilirken de sayfa kapanır; yalnızca doğrulanmış oturumda sayılır.\n"
+                              "  if (window.__oturumDogrulandi && window.SINAV_DEVAM_EDIYOR",
+                              "  if (window.SINAV_DEVAM_EDIYOR")
 sinav_js = degistir(sinav_js, "      questions_total: Q.length,\n      kaynak: 'panel',\n      konu: ''\n",
                               "      questions_total: Q.length,\n      kaynak: 'web',\n      konu: ''\n")
 # Sonuç kaydı: giriş yoksa da analytics gitsin, kayıt yalnızca giriş varsa.

@@ -53,7 +53,7 @@ j = html.index("      });\n", i) + len("      });\n")
 html = html[:i] + html[j:]
 html = degistir(html, "      const { denemeKaydet } = await import('/assets/js/firebase.js');\n", "")
 
-html = degistir(html, "kaynak:'panel', konu:''}); }", "kaynak:'panel', konu:KONU}); }")
+html = degistir(html, "kaynak:'panel', konu:''});\n", "kaynak:'panel', konu:KONU});\n")
 html = degistir(html, "          kaynak: 'panel',\n          konu: ''\n", "          kaynak: 'panel',\n          konu: KONU\n")
 html = degistir(html, "      kaynak: 'panel',\n      konu: ''\n", "      kaynak: 'panel',\n      konu: KONU\n")
 html = degistir(html, "  location.href='index.html';\n", "  location.href='/panel/?g=sinavlar';\n")

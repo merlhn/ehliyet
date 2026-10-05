@@ -254,7 +254,12 @@ function tick(){
 let _examStarted=false;
 function startTimer(){
   window.SINAV_DEVAM_EDIYOR=true; timerEl.textContent=fmt(remaining); timerId=setInterval(tick,1000);
-  if(!_examStarted && typeof gtag==='function'){ _examStarted=true; gtag('event','exam_start',{exam_name:SINAV_ADI, logged_in:true, kaynak:'panel', konu:''}); }
+  if(!_examStarted && typeof gtag==='function'){
+    _examStarted=true;
+    // Oturum panel-kabuk.js'te gecikmeli doğrulanır; girişsiz ziyaretçi yönlendirilirken exam_start gitmesin.
+    const gonder = () => gtag('event','exam_start',{exam_name:SINAV_ADI, logged_in:true, kaynak:'panel', konu:''});
+    window.__oturumDogrulandi ? gonder() : document.addEventListener('pk-oturum', gonder, { once:true });
+  }
 }
 
 function mediaHTML(q){
@@ -509,7 +514,8 @@ document.addEventListener('keydown',e=>{
 
 // exam_abandon: kullanıcı sınavı bitirmeden sayfadan ayrılırsa
 window.addEventListener('beforeunload', () => {
-  if (window.SINAV_DEVAM_EDIYOR && !finished && typeof gtag === 'function') {
+  // Girişsiz ziyaretçi yönlendirilirken de sayfa kapanır; yalnızca doğrulanmış oturumda sayılır.
+  if (window.__oturumDogrulandi && window.SINAV_DEVAM_EDIYOR && !finished && typeof gtag === 'function') {
     gtag('event', 'exam_abandon', {
       exam_name: SINAV_ADI,
       questions_answered: answers.filter(a => a !== null).length,

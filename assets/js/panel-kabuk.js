@@ -46,7 +46,12 @@ function oturumuDogrula() {
   let oturumVardi = false;
   import('./firebase.js')
     .then(({ kullaniciDinle }) => kullaniciDinle(user => {
-      if (user) { oturumVardi = true; return; }
+      if (user) {
+        oturumVardi = true;
+        // Sınav sayfaları exam_start'ı bu sinyali bekleyerek gönderir.
+        if (!window.__oturumDogrulandi) { window.__oturumDogrulandi = true; document.dispatchEvent(new Event('pk-oturum')); }
+        return;
+      }
       location.replace(oturumVardi ? '/' : '/?giris=' + encodeURIComponent(location.pathname + location.search));
     }))
     .catch(err => console.error('Oturum kontrolü yüklenemedi:', err));
