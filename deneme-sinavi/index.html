@@ -803,7 +803,7 @@ function doFinish(timeUp){
         bekleyenSil();
         tamamlandiGonder(await sonucuKaydet(user));
       } else if (sonucKilitli && typeof gtag === 'function') {
-        // Sonuç kilitli: exam_complete sonuç açılınca (girişten sonra) gider.
+        // Sonuç kilitli: exam_1_complete sonuç açılınca (girişten sonra) gider.
         gtag('event', 'result_gate_view', { exam_name: SINAV_ADI, questions_answered: s.correct + s.wrong });
       }
     } catch(e) { console.error('Sonuç kaydedilemedi:', e); }
@@ -900,11 +900,12 @@ async function sonucuKaydet(user){
   });
   try { return (await denemeleriGetir(user.uid)).length; } catch(_) { return 0; }
 }
-// Web'de exam_complete sonuç ekranı açıldığında gider (girişliyse bitişte, değilse kilitten girişte).
+// Web'de Sınav 1 bitişi panelin exam_complete'inden ayrı sayılır; sonuç ekranı açıldığında gider
+// (girişliyse bitişte, değilse kilitten girişte).
 function tamamlandiGonder(examCount){
   if (typeof gtag !== 'function') return;
   const s = scoreObj();
-  gtag('event', 'exam_complete', {
+  gtag('event', 'exam_1_complete', {
     exam_name: SINAV_ADI,
     score: s.points,
     correct: s.correct,

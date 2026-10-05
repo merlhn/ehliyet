@@ -159,7 +159,7 @@ Makine-okunur JSON formatında:
 - **Hosting:** Vercel (site) + Railway (MCP)
 - **Auth:** Firebase (Google OAuth)
 - **Veritabanı:** Firestore (yalnızca kullanıcı profili ve sınav sonuçları)
-- **Analytics:** GA4 (custom event'ler: standart_sign_up, sign_up_end_of_exam_no_1, exam_start, exam_complete, exam_abandon, result_gate_view, banner_click, feedback_submit; sınav event'leri `kaynak` = web / panel taşır)
+- **Analytics:** GA4 (custom event'ler: standart_sign_up, sign_up_end_of_exam_no_1, exam_start, exam_complete (panel), exam_1_complete (web Sınav 1), exam_abandon, result_gate_view, banner_click, feedback_submit; sınav event'leri `kaynak` = web / panel taşır)
 
 ---
 

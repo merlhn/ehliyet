@@ -8,7 +8,8 @@ Sınav 1'dir (?basla=1 doğrudan başlatır). Sınava girişsiz başlanır; biti
 ve çözümler Google ile girişe kadar kilitli kalır (açılır pencere, sayfa değişmez),
 giriş sonrası sonuç gösterilir ve panele kaydedilir. Analytics: girişsiz bitişte
 result_gate_view; kilitten girişte sign_up_end_of_exam_no_1 (yeni_uye) ve ardından
-exam_complete. Bu akışta standart_sign_up gitmez (window.__girisAkisi, bkz. auth-ui.js). Web'de exam_complete sonuç açıldığında gider. Kilitli sonuç 24 saat
+exam_1_complete. Bu akışta standart_sign_up gitmez (window.__girisAkisi, bkz. auth-ui.js). Web'de Sınav 1 bitişi
+exam_1_complete olarak sonuç açıldığında gider; panel sınavları exam_complete gönderir. Kilitli sonuç 24 saat
 localStorage'da tutulur; sayfa yenilenir ya da sonra geri gelinirse kilit ekranı
 aynı cevaplarla yeniden açılır. Sınav 2–4 ve konu denemeleri panelde (giriş ister, ücretsiz). Eski
 ?basla=2..4 ve ?konu=<kategori> bağlantıları giriş penceresiyle panele gönderilir.
@@ -185,7 +186,7 @@ sinav_js = degistir(sinav_js,
         bekleyenSil();
         tamamlandiGonder(await sonucuKaydet(user));
       } else if (sonucKilitli && typeof gtag === 'function') {
-        // Sonuç kilitli: exam_complete sonuç açılınca (girişten sonra) gider.
+        // Sonuç kilitli: exam_1_complete sonuç açılınca (girişten sonra) gider.
         gtag('event', 'result_gate_view', { exam_name: SINAV_ADI, questions_answered: s.correct + s.wrong });
       }""")
 # Sonuç ekranına giriş yapmamış kullanıcı için kayıt daveti
@@ -253,11 +254,12 @@ async function sonucuKaydet(user){
   });
   try { return (await denemeleriGetir(user.uid)).length; } catch(_) { return 0; }
 }
-// Web'de exam_complete sonuç ekranı açıldığında gider (girişliyse bitişte, değilse kilitten girişte).
+// Web'de Sınav 1 bitişi panelin exam_complete'inden ayrı sayılır; sonuç ekranı açıldığında gider
+// (girişliyse bitişte, değilse kilitten girişte).
 function tamamlandiGonder(examCount){
   if (typeof gtag !== 'function') return;
   const s = scoreObj();
-  gtag('event', 'exam_complete', {
+  gtag('event', 'exam_1_complete', {
     exam_name: SINAV_ADI,
     score: s.points,
     correct: s.correct,
@@ -404,6 +406,8 @@ sinav_govde = degistir(sinav_govde, '    <button class="finish-btn" id="finishBt
 
 # ---------- Site kabuğu ----------
 site_header = kes(pillar, '<body>\n', '  <main>')
+# Pillar'a banner-ekle.py'nin koyduğu banner bu sayfada istenmez (kendi sayfasına çıkar).
+site_header = re.sub(r'<!-- ust-banner -->.*?<!-- /ust-banner -->\n', '', site_header, flags=re.S)
 site_footer = kes(pillar, '  <footer class="site-footer">', '  </footer>', dahil=True)
 ga = kes(pillar, "<!-- Google tag (gtag.js) — sayfa yüklendikten sonra yüklenir -->", "</body>", dahil=False)
 ga = "<!-- Google tag (gtag.js) — sayfa yüklendikten sonra yüklenir -->" + ga
