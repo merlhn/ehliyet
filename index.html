@@ -106,6 +106,13 @@
   .cat-yatay p b{color:#fff;font-weight:600}
   .cat-yatay .cat-go{margin:0 0 0 auto;white-space:nowrap;color:#fff}
   @media(max-width:640px){.cat-yatay{flex-direction:column;align-items:flex-start}.cat-yatay .cat-go{margin-left:0}}
+  /* Trafik ve Çevre'ye bağlı açık renkli tam genişlik kart (Trafik İşaretleri) */
+  .cat-serit{grid-column:1/-1;flex-direction:row;align-items:center;gap:18px}
+  .cat-serit .cat-govde{flex:1;min-width:0}
+  .cat-serit h3{margin:0 0 4px}
+  .cat-serit p{margin:0}
+  .cat-serit .cat-go{margin:0 0 0 auto;white-space:nowrap}
+  @media(max-width:640px){.cat-serit{flex-direction:column;align-items:flex-start}.cat-serit .cat-go{margin-left:0}}
 
   /* Two-column feature */
   .two-col{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
@@ -326,6 +333,15 @@
           <span class="cat-go">Konuya başla →</span>
         </a>
 
+        <a class="cat-card cat-serit" href="/trafik-isaretleri/">
+          <span class="cat-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></span>
+          <div class="cat-govde">
+            <h3>Trafik İşaretleri</h3>
+            <p>Trafik ve Çevre’nin en çok soru gelen konusu: <b>tehlike uyarı, tanzim ve bilgi levhaları</b> ile yol çizgileri görselli ve anlamlarıyla.</p>
+          </div>
+          <span class="cat-go">İşaretleri gör →</span>
+        </a>
+
         <a class="cat-card cat-yatay" href="/hap-bilgiler/">
           <span class="cat-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
           <div class="cat-govde">
@@ -423,6 +439,7 @@
         <a href="/ehliyet-sinav-sorulari/">Soru Çöz</a>
         <a href="/ehliyet-nasil-alinir/">Ehliyet Nasıl Alınır?</a>
         <a href="/ehliyet-sinav-konulari/">Sınav Konuları</a>
+        <a href="/trafik-isaretleri/">Trafik İşaretleri</a>
         <a href="/direksiyon-sinavi/">Direksiyon Sınavı</a>
         <a href="/ehliyet-fiyatlari/">Ehliyet Fiyatları</a>
       </nav>
