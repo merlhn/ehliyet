@@ -6,6 +6,27 @@ Açık işler ve bekleyen kararlar. Tamamlananlar en alta taşınır.
 
 ## Sıradaki
 
+### 0. Trafik 3x planı (18 Eki 2026) — takip
+Hedef: GSC "son 28 gün" tık 326'dan (20 Eyl–17 Eki) 31 Ocak 2027'ye ~980.
+Gerekçe: tıkların %57'si hub/kaynak sayfalarından (CTR %4.6, ort. sıra 10.7); metin
+soru/hap/ders sayfaları sıfır-tık (4-6. sırada bile %0.9); görselli sorular ilk 4'te %9.7.
+Yapılanlar 18 Eki: kopya 301'leri, fren canonical'ı, standart_sign_up; hub'lar kaynak
+sayfası (konu-listesi-uret.py), fiyat hesaplayıcı, ana sayfa başlığı, soru sayfalarında
+görsel/video + image sitemap, yeni Trafik ve Çevre dersleri, /trafik-isaretleri/.
+- **Kontrol 15 Kasım:** /ehliyet-sinav-konulari/ ve /ehliyet-fiyatlari/ sırası 9-12'den
+  7'nin altına indi mi? /trafik-isaretleri/ ve yeni dersler indekslendi mi?
+- **Kontrol 15 Aralık:** 28 günlük tık ≥ 650 mü (2x)? Değilse ikinci tur hub düzeltmesi.
+- **Aralık sonu:** 2027 harç/değerli kağıt/vakıf ve MEB sınav ücretleri açıklanınca
+  /ehliyet-fiyatlari/ (tablolar + hesaplayıcıdaki sabitler), /ehliyet-nasil-alinir/,
+  /direksiyon-sinavi/ güncellenir; sonra `python3 tools/yil-guncelle.py 2026 2027 --veri --uygula`.
+- **1 Ocak:** `python3 tools/yil-guncelle.py 2026 2027 --uygula` → hap-uret, hap-sayfa-uret,
+  schema-uret, feed-uret, banner-ekle, sitemap-uret, llms-uret.
+- **Kontrol 31 Ocak:** 28 günlük tık ~980 mi (3x)?
+- Kullanıcıda: Keyword Planner hacimleri ("trafik işaretleri ve anlamları", "ehliyet hap
+  bilgiler pdf", "ehliyet sınavı kısa notlar", "ehliyet fiyatları 2027", "ehliyet ders
+  notları"); yeni sayfalar için GSC "Request indexing".
+
+
 ### 1. Analitik çerezleri için onay (KVKK) — karar bekliyor
 GA4 343 sayfada onay alınmadan yükleniyor ve `_ga` çerezi yazıyor. Gizlilik metni bunu
 artık açıkça söylüyor ve hukuki sebep olarak meşru menfaat gösteriyor; ancak KVKK
