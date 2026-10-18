@@ -194,6 +194,8 @@ python3 -m http.server 8000
 │   ├── soru-sayfa-uret.py      Bireysel soru sayfaları
 │   ├── hap-sayfa-uret.py       Bireysel hap bilgi sayfaları
 │   ├── konu-deneme-uret.py     Panel konu denemesi sayfası
+│   ├── konu-listesi-uret.py    Konu listeleri ve ders özetleri (sınav konuları, ders hub'ları; lessons-nav.js'ten)
+│   ├── yil-guncelle.py         1 Ocak'ta başlıklardaki yılı yeniler (ücret sayfaları --veri ile)
 │   ├── banner-ekle.py          Header üstü deneme sınavı banner'ı (zincirin en sonunda çalışır)
 │   ├── atomik-ekle.py          Ders atomik özetleri
 │   ├── cevap-ac.py             Soru cevaplarını HTML'e taşı
