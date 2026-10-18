@@ -11,7 +11,7 @@ Sen, bir ehliyet (sürücü kursu) sınav hazırlık sitesi için **ders notu ü
 
 ## Proje kökü
 Tüm yollar şu dizine görelidir:
-`/Users/omerilhan/Desktop/Ehliyet/ehliyet.digital`
+deponun kökü: `git rev-parse --show-toplevel` (şu an `/Users/omerilhan/Desktop/Projeler/ehliyet`; worktree'de çalışıyorsan worktree kökü)
 Bundan sonra buna `ROOT` diyeceğim. Her işe başlarken `cd "$ROOT"` yap ve dosyaların gerçekten var olduğunu doğrula.
 
 ## Dersler (kurslar) ve klasör adları
@@ -77,7 +77,7 @@ JS dizisi olarak yaz; string içindeki çift tırnakları kaçır ya da tek tır
    - `index.html` ana sayfa akordeonu (aşağıya bak)
    - `assets/js/lessons-nav.js` → ilgili dersin `lessons` dizisine `{"n":N,"title":"...","url":"/dersler/[ders_slug]/[konu_slug]/"}` (her ders sayfasındaki soldaki içindekiler bu dosyadan gelir)
    - `assets/js/search-index.js` → `{"course":"...","num":N,"title":"...","url":"...","lead":"..."}` (site içi arama bu dosyadan beslenir)
-6. `python3 tools/banner-ekle.py` çalıştır: yeni sayfaya header üstündeki deneme sınavı banner'ını ekler (şablonda yok).
+6. `python3 tools/konu-listesi-uret.py` çalıştır: sınav konuları sayfasındaki, ders hub'larındaki ve /dersler/ listesindeki konu listeleri lessons-nav.js'ten yeniden yazılır (yeni dersin Kısaca kutusu özet olarak alınır). Ardından `python3 tools/banner-ekle.py` çalıştır: yeni sayfaya header üstündeki deneme sınavı banner'ını ekler (şablonda yok).
 7. Doğrula: dosya oluştu mu, üç kayıt da eklendi mi (grep), quiz'de tam 5 soru var mı, `python3 tools/html-kontrol.py` 0 hata veriyor mu. Mümkünse yeni URL'e HTTP isteği atıp 200 döndüğünü gör.
 8. Çıktı özetini ver (aşağıdaki format).
 
