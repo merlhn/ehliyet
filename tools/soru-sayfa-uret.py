@@ -53,10 +53,10 @@ SEO_OZEL = {
     ),
 }
 
-# Aynı sorunun başka bir sınavda tekrar çıkmış hali: sayfa kalır (sınav içi gezinme ve
-# dizin bağlantıları için) ama canonical asıl sayfayı gösterir ve sitemap'e girmez.
-# Yeni bir slug çakışması çıkarsa üretici uyarır: aynı soruysa buraya, farklı soruysa
-# SEO_OZEL'e ayırt edici başlıkla eklenir.
+# Aynı sorunun başka bir sınavda tekrar çıkmış hali: sayfası üretilmez, vercel.json asıl
+# sayfaya 301 verir. (Eskiden sayfa canonical ile kalıyordu; Google canonical'ı yok sayıp
+# kopyayı gösterdi, Ekim 2026.) Yeni bir slug çakışması çıkarsa üretici uyarır: aynı
+# soruysa buraya ve vercel.json'a, farklı soruysa SEO_OZEL'e ayırt edici başlıkla eklenir.
 KOPYA = {
     "araclarda-emniyet-kemeri-kullaniminin-zorunlu-olmasi-ile-2": "araclarda-emniyet-kemeri-kullaniminin-zorunlu-olmasi-ile",
     "i-orta-refujlere-ve-yol-kenarlarina-dikilen-agaclarin-zarar-2": "i-orta-refujlere-ve-yol-kenarlarina-dikilen-agaclarin-zarar",
@@ -542,6 +542,9 @@ def main():
         if slug != base_slug and slug not in KOPYA and slug not in SEO_OZEL:
             print(f"  UYARI: yeni slug cakismasi {slug} — KOPYA ya da SEO_OZEL'e ekle")
         used_slugs.add(slug)
+        if slug in KOPYA:
+            skipped += 1
+            continue
         secilen.append((q, slug))
 
     for i, (q, slug) in enumerate(secilen):

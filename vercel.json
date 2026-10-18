@@ -154,6 +154,56 @@
       "source": "/hap-bilgiler/trafik-ve-cevre/aralikli-yanip-sonen-isik-dur-levhasiyla-ayni/",
       "destination": "/hap-bilgiler/trafik-ve-cevre/aralikli-yanip-sonen-kirmizi-isik-dur-levhasiyla-ayni/",
       "permanent": true
+    },
+    {
+      "source": "/hap-bilgiler/trafik-ve-cevre/aralikli-yanip-sone-kirmizi-isik-dur-levhasiyla-ayni",
+      "destination": "/hap-bilgiler/trafik-ve-cevre/aralikli-yanip-sonen-kirmizi-isik-dur-levhasiyla-ayni/",
+      "permanent": true
+    },
+    {
+      "source": "/hap-bilgiler/trafik-ve-cevre/aralikli-yanip-sone-kirmizi-isik-dur-levhasiyla-ayni/",
+      "destination": "/hap-bilgiler/trafik-ve-cevre/aralikli-yanip-sonen-kirmizi-isik-dur-levhasiyla-ayni/",
+      "permanent": true
+    },
+    {
+      "source": "/soru/araclarda-emniyet-kemeri-kullaniminin-zorunlu-olmasi-ile-2",
+      "destination": "/soru/araclarda-emniyet-kemeri-kullaniminin-zorunlu-olmasi-ile/",
+      "permanent": true
+    },
+    {
+      "source": "/soru/araclarda-emniyet-kemeri-kullaniminin-zorunlu-olmasi-ile-2/",
+      "destination": "/soru/araclarda-emniyet-kemeri-kullaniminin-zorunlu-olmasi-ile/",
+      "permanent": true
+    },
+    {
+      "source": "/soru/i-orta-refujlere-ve-yol-kenarlarina-dikilen-agaclarin-zarar-2",
+      "destination": "/soru/i-orta-refujlere-ve-yol-kenarlarina-dikilen-agaclarin-zarar/",
+      "permanent": true
+    },
+    {
+      "source": "/soru/i-orta-refujlere-ve-yol-kenarlarina-dikilen-agaclarin-zarar-2/",
+      "destination": "/soru/i-orta-refujlere-ve-yol-kenarlarina-dikilen-agaclarin-zarar/",
+      "permanent": true
+    },
+    {
+      "source": "/soru/seyir-halindeyken-aractan-surekli-yakit-kokusu-alinmasi-2",
+      "destination": "/soru/seyir-halindeyken-aractan-surekli-yakit-kokusu-alinmasi/",
+      "permanent": true
+    },
+    {
+      "source": "/soru/seyir-halindeyken-aractan-surekli-yakit-kokusu-alinmasi-2/",
+      "destination": "/soru/seyir-halindeyken-aractan-surekli-yakit-kokusu-alinmasi/",
+      "permanent": true
+    },
+    {
+      "source": "/soru/surucunun-trafik-ortaminda-yaptigi-davranislardan-hangisi-2",
+      "destination": "/soru/surucunun-trafik-ortaminda-yaptigi-davranislardan-hangisi/",
+      "permanent": true
+    },
+    {
+      "source": "/soru/surucunun-trafik-ortaminda-yaptigi-davranislardan-hangisi-2/",
+      "destination": "/soru/surucunun-trafik-ortaminda-yaptigi-davranislardan-hangisi/",
+      "permanent": true
     }
   ]
 }

@@ -5,3 +5,6 @@
 
 # Python
 __pycache__/
+
+# Claude Code ajan calisma kopyalari
+.claude/worktrees/
