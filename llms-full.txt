@@ -11,7 +11,7 @@ Kısa versiyon: https://ehliyet.digital/llms.txt
 
 ## İlk Yardım (12 konu)
 
-Ehliyet sınavı ilk yardım ders notları: temel yaşam desteği, kanamalar, kırıklar ve taşıma teknikleri dahil 12 konu. Sınava hazırlık için tamamı.
+Ehliyet sınavı ilk yardım ders notları: temel yaşam desteği, kanamalar, kırıklar, şok ve taşıma teknikleri; 12 konunun özeti tek sayfada, ücretsiz.
 
 Hub: https://ehliyet.digital/dersler/ilk-yardim/
 
@@ -217,9 +217,9 @@ Alt başlıklar:
 
 ---
 
-## Trafik ve Çevre (11 konu)
+## Trafik ve Çevre (18 konu)
 
-Ehliyet sınavı trafik ve çevre ders notları: temel kavramlar, trafik işaretleri, hız sınırları ve kavşak kuralları dahil 11 konu.
+Ehliyet sınavı trafik ve çevre ders notları: hız sınırları, kavşak, duraklama-park, geçiş üstünlüğü, ceza puanı; 18 konunun özeti tek sayfada, ücretsiz.
 
 Hub: https://ehliyet.digital/dersler/trafik-ve-cevre/
 
@@ -239,6 +239,22 @@ Alt başlıklar:
 - Bu konudan sınavlık bilgiler
 - İlgili Kaynaklar
 
+### Araç Muayenesi
+URL: https://ehliyet.digital/dersler/trafik-ve-cevre/arac-muayenesi/
+Araç muayenesi: muayeneyi kim yapar, periyodik muayene, özel teknik muayenenin zorunlu olduğu durum, ağır kusur sayılan arızalar ve egzoz emisyon ölçümü.
+
+Araç muayenesi sınavda üç farklı biçimde karşınıza çıkar: kurum sorusu, kusur sorusu ve özel teknik muayene sorusu. Bu notta muayeneyi kimin yaptığını, periyodik muayene ile özel teknik muayene arasındaki farkı, hangi arızaların ağır kusur sayıldığını ve egzoz emisyon ölçümünün neden önemli olduğunu öğreneceksiniz.
+
+Alt başlıklar:
+- Kısaca
+- Araç muayenesi nedir, kim yapar?
+- Periyodik muayene
+- Özel teknik muayene
+- Ağır kusur ve hafif kusur
+- Egzoz emisyon ölçümü
+- Bu konudan sınavlık bilgiler
+- İlgili Kaynaklar
+
 ### Araçlarla İlgili Tanımlar
 URL: https://ehliyet.digital/dersler/trafik-ve-cevre/araclarla-ilgili-tanimlar/
 Birbirine bağlanmış en çok iki römorktan oluşan araçlara katır denir. Otomobil, kamyon, çekici, römork tanımları ve sınavda karıştırılan araç türleri.
@@ -254,6 +270,73 @@ Alt başlıklar:
 - Okul taşıtı
 - Taşıt katarı ve özel amaçlı taşıt
 - B sınıfı ile kullanılabilenler
+- Bu konudan sınavlık bilgiler
+- İlgili Kaynaklar
+
+### Trafik Kaynaklı Çevre Kirliliği
+URL: https://ehliyet.digital/dersler/trafik-ve-cevre/cevre-kirliligi/
+Trafik kaynaklı çevre kirliliği: egzoz gazı, gürültü, atıklar ve kazaların çevreye zararları. Kirliliği önleyen sürücü davranışları ve çıkmış sorular.
+
+Trafik ve Çevre dersinin adındaki “çevre” kısmı, sınavda her denemede en az bir soruyla karşınıza çıkar. Bu notta trafiğin hava, gürültü ve atık yoluyla çevreye verdiği zararları, trafik kazalarının topluma ve çevreye etkisini, çevre kirliliğini önleyen sürücü davranışlarını ve yakıt tasarrufunun çevreyle ilişkisini öğreneceksiniz.
+
+Alt başlıklar:
+- Kısaca
+- Trafik çevreyi nasıl kirletir?
+- Atıkların çevreye zararları
+- Trafik kazalarının topluma ve çevreye zararları
+- Çevre kirliliğini önleyen sürücü davranışları
+- Yakıt tasarrufu ve çevre
+- Çevre ve trafik adabı
+- Bu konudan sınavlık bilgiler
+- İlgili Kaynaklar
+
+### Duraklama ve Park Etme Kuralları
+URL: https://ehliyet.digital/dersler/trafik-ve-cevre/duraklama-ve-park-etme/
+Duraklama ve park yasakları: yangın musluğu ve kavşağa 5 m, durağa 15 m, levhalara 15/100 m. Park edilen araçta yapılacaklar ve çıkmış sorular.
+
+Duraklama ve park etme, sınavda rakamlarla sorulan konuların başında gelir: yangın musluğuna, kavşağa, durağa ve işaret levhalarına kaç metre kala durulamayacağı neredeyse her denemede karşınıza çıkar. Bu notta duraklama ile park arasındaki farkı, yasak yerleri, park edilen araçta yapılması gerekenleri ve duraklanan yerden güvenle çıkmayı öğreneceksiniz.
+
+Alt başlıklar:
+- Kısaca
+- Duraklama ile park etme arasındaki fark
+- Duraklamanın yasak olduğu yerler
+- İşaret levhalarına yaklaşım: 15 ve 100 metre
+- Park etmenin yasak olduğu yerler
+- Park edilen araçta yapılması gerekenler
+- Duraklanan veya park edilen yerden çıkış
+- Bu konudan sınavlık bilgiler
+- İlgili Kaynaklar
+
+### Geçiş Üstünlüğü
+URL: https://ehliyet.digital/dersler/trafik-ve-cevre/gecis-ustunlugu/
+Geçiş üstünlüğü olan araçlar ve sıralaması: ambulans, organ nakli, itfaiye, güvenlik güçleri. Siren duyunca ilk ne yapılır, bu hak nasıl kullanılır?
+
+Geçiş üstünlüğü, trafikte en acil görevleri yürüten araçlara tanınan bir ayrıcalıktır ve sınavda hem sıralama hem de davranış sorusu olarak çıkar. Bu notta hangi araçların geçiş üstünlüğüne sahip olduğunu, aralarındaki resmi sıralamayı, bu hakkın hangi şartlarla kullanılabildiğini ve siren duyduğunuzda ne yapmanız gerektiğini öğreneceksiniz.
+
+Alt başlıklar:
+- Kısaca
+- Geçiş üstünlüğü nedir?
+- Hangi araçlar geçiş üstünlüğüne sahiptir?
+- Geçiş üstünlüğü sıralaması
+- Bu hak hangi şartlarla kullanılır?
+- Siren duyduğunuzda ne yapmalısınız?
+- Bu konudan sınavlık bilgiler
+- İlgili Kaynaklar
+
+### Geçme Kuralları ve Takip Mesafesi
+URL: https://ehliyet.digital/dersler/trafik-ve-cevre/gecme-kurallari-ve-takip-mesafesi/
+Geçme (sollama) kuralları: geçmenin yasak olduğu yerler, iki yönlü üç şeritli yolda orta şerit, gece geçerken far kullanımı ve takip mesafesi.
+
+Geçme ve takip mesafesi, hem kuralla hem de görselli ve videolu sorularla sınanan konulardır. Bu notta geçmenin nasıl ve nerede yapılacağını, geçmenin yasak olduğu yerleri, iki yönlü üç şeritli yoldaki orta şeridi ve arkadan çarpma kazalarının asıl sebebi olan takip mesafesini öğreneceksiniz.
+
+Alt başlıklar:
+- Kısaca
+- Geçme nedir, nasıl yapılır?
+- Geçilen aracın sürücüsü ne yapar?
+- Geçmenin yasak olduğu yerler
+- Yol çizgileri ve iki yönlü üç şeritli yol
+- Gece geçme ve ışık kullanımı
+- Takip mesafesi ve arkadan çarpma
 - Bu konudan sınavlık bilgiler
 - İlgili Kaynaklar
 
@@ -298,7 +381,7 @@ Alt başlıklar:
 
 ### Karayolunun Kullanılması
 URL: https://ehliyet.digital/dersler/trafik-ve-cevre/karayolunun-kullanilmasi/
-Kara yolunun kullanılması: şerit seçimi, şerit değiştirme ve geçme kuralları, trafikte yasak davranışlar. Sınavda çıkan soruları bu notla çözersin.
+Kara yolunun kullanılması: şerit seçimi, şerit değiştirme, dönüşlerden önce şeride geçiş mesafesi ve trafikte yasak davranışlar. Çıkmış sorularla.
 
 Bu bölümde kara yolunu araç olarak nasıl kullanacağımızı, hangi şeritten gitmemiz gerektiğini, şerit değiştirme kurallarını ve yasak olan davranışları öğreneceğiz. Sınavda özellikle şerit kullanımıyla ilgili görselli sorular sıkça sorulur.
 
@@ -319,8 +402,8 @@ Kavşaklarda geçiş hakkı, her sınavda kesinlikle en az bir soruyla karşın�
 
 Alt başlıklar:
 - Kısaca
-- Geçiş üstünlüğü ve CİPS kuralı
-- 625 kuralı: trafik işaretlerine uymada öncelik sırası
+- Geçiş üstünlüğü olan araçlar ve sıralaması
+- Trafik işaretlerine uymada öncelik sırası
 - Yol türüne ve manevraya göre öncelik
 - Kontrolsüz eşdeğer kavşaklar
 - Soru çözme tekniği
@@ -377,6 +460,22 @@ Alt başlıklar:
 - Bu konudan sınavlık bilgiler
 - İlgili Kaynaklar
 
+### Sürücü Belgesi ve Ceza Puanı
+URL: https://ehliyet.digital/dersler/trafik-ve-cevre/surucu-belgesi-ve-ceza-puani/
+Sürücü belgesi şartları ve sınıfları, 100 ceza puanında belgenin 2 ay geri alınması, ölümlü kazada 1 yıl, uyuşturucuda 5 yıl ve araç kullanmaktan men.
+
+Sürücü belgesiyle ilgili sorular sınavda doğrudan rakam sorar: kaç ceza puanında, kaç ay, kaç yıl? Bu notta sürücü olmanın şartlarını, belge sınıflarının mantığını, ceza puanı sistemini ve sürücü belgesinin geri alındığı ya da sürücünün araç kullanmaktan men edildiği hâlleri öğreneceksiniz.
+
+Alt başlıklar:
+- Kısaca
+- Sürücü olmanın şartları
+- Sürücü belgesi sınıfları
+- Ceza puanı sistemi
+- Belgenin geri alındığı diğer hâller
+- Sürücünün men edilmesi ile aracın men edilmesi
+- Bu konudan sınavlık bilgiler
+- İlgili Kaynaklar
+
 ### Temel Kavramlar
 URL: https://ehliyet.digital/dersler/trafik-ve-cevre/temel-tanimlar/
 Temel trafik kavramları: sınavda hem doğrudan hem soru içinde çıkan tanımlar ve bunları ezberlemeden mantığıyla kavrama yolu. Konuyu hemen öğren.
@@ -410,11 +509,29 @@ Alt başlıklar:
 - Bu konudan sınavlık bilgiler
 - İlgili Kaynaklar
 
+### Trafik Kazası Anında Yapılacaklar
+URL: https://ehliyet.digital/dersler/trafik-ve-cevre/trafik-kazasi-aninda-yapilacaklar/
+Trafik kazası olunca ne yapılır? Olay yeri güvenliği, 112, maddi hasarlı kazada tutanak, park hâlindeki araca çarpma, asli kusur ve trafik sigortası.
+
+Trafik kazası sorularında sınav iki şeyi ölçer: kaza anında doğru sırayla ne yapacağınızı ve sorumluluğun kime ait olduğunu. Bu notta olay yerinde güvenliği sağlamayı, kazayı bildirmeyi, maddi hasarlı ve yaralanmalı kazalar arasındaki farkı, park hâlindeki araca çarpınca yapılacakları, asli kusur kavramını ve zorunlu trafik sigortasını öğreneceksiniz.
+
+Alt başlıklar:
+- Kısaca
+- Trafik kazası ve kazaların sebepleri
+- Olay yerinde ilk adım: güvenlik
+- Bildirme ve ilk yardım
+- Maddi hasarlı ve yaralanmalı kaza farkı
+- Park hâlindeki araca çarpınca
+- Asli kusur nedir?
+- Zorunlu trafik sigortası
+- Bu konudan sınavlık bilgiler
+- İlgili Kaynaklar
+
 ---
 
 ## Araç Tekniği (Motor) (15 konu)
 
-Ehliyet sınavı araç tekniği ders notları: motor, fren, lastik, aydınlatma ve güvenlik sistemleri dahil 15 konu. Sınava hazırlık için tüm bilgiler.
+Ehliyet sınavı araç tekniği (motor) ders notları: motor, fren, lastik, ikaz lambaları ve diğer 15 konunun özeti tek sayfada. Yazdırılabilir, ücretsiz.
 
 Hub: https://ehliyet.digital/dersler/arac-teknigi/
 
@@ -704,7 +821,7 @@ Alt başlıklar:
 
 ## Trafik Adabı (5 konu)
 
-Ehliyet sınavı trafik adabı ders notları: trafikte iletişim, temel değerler, öfke yönetimi ve sorumluluk dahil 5 konu. Sınava hazırlık için tamamı.
+Ehliyet sınavı trafik adabı ders notları: trafikte iletişim, temel değerler, öfke yönetimi ve sorumluluk; 5 konunun özeti tek sayfada, ücretsiz.
 
 Hub: https://ehliyet.digital/dersler/trafik-adabi/
 
