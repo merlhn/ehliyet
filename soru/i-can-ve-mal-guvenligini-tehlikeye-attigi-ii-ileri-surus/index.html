@@ -58,6 +58,9 @@
   h1{font-size:clamp(22px,4vw,32px);font-weight:600;letter-spacing:-.025em;line-height:1.35;margin:0 0 28px;white-space:pre-line}
 
   .soru-opts{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+  .soru-medya{margin:0 0 24px}
+  .soru-medya img,.soru-medya video{display:block;max-width:100%;height:auto;max-height:520px;border:1px solid var(--line);border-radius:12px;background:#fafafa}
+  .soru-medya figcaption{margin-top:8px;font-size:13.5px;color:var(--muted);line-height:1.5}
   .sopt{font-size:15px;line-height:1.55;color:#444;padding:6px 10px;border-radius:8px;transition:.12s}
   .sopt .sl{font-family:'Geist Mono',monospace;color:var(--muted);margin-right:6px}
   .sopt.correct{background:#effaf3;color:#0a7f3f;font-weight:500}
@@ -246,6 +249,11 @@
     </nav>
 
     <h1>I. Can ve mal güvenliğini tehlikeye attığı<br>II. İleri sürüş tekniklerine sahip olduğu<br>III. Şerit takip kurallarına uyduğu<br>IV. Geçme kurallarına uymadığı<br><br>Motosiklet sürücüsü için numaralanmış ifadelerden hangileri kesinlikle söylenebilir?</h1>
+
+    <figure class="soru-medya">
+      <video src="/assets/img/sinav-1/soru21.mp4" controls playsinline preload="metadata" aria-label="Motosiklet sürücüsünün trafikte geçiş/manevra yaptığı sahne."></video>
+      <figcaption>Videoda: Motosiklet sürücüsünün trafikte geçiş/manevra yaptığı sahne.</figcaption>
+    </figure>
 
     <div class="soru-opts">
             <div class="sopt"><span class="sl">A)</span> I ve II</div>

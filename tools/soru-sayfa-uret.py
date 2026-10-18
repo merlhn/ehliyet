@@ -134,8 +134,13 @@ def extract_questions(js_text):
         # optionImages
         q["has_option_images"] = "optionImages" in block
 
-        # media
+        # media: görsel ya da video; sayfada gösterilir (Arama Konsolu'nda en çok
+        # tıklanan sorular bunlar, Google görseli sonuç sayfasında veremiyor)
         q["has_media"] = "media:" in block or "media :" in block
+        m = re.search(r'media\s*:\s*\{\s*type\s*:\s*"(\w+)"\s*,\s*file\s*:\s*"([^"]+)"', block)
+        q["media"] = {"type": m.group(1), "file": m.group(2)} if m else None
+        m = re.search(r"caption\s*:\s*`((?:[^`\\]|\\.)*)`", block)
+        q["caption"] = m.group(1).strip() if m else ""
 
         questions.append(q)
 
@@ -253,7 +258,8 @@ def generate_page(q, slug, exam_num, prev_slug=None, next_slug=None):
         "about": {
             "@type": "Thing",
             "name": section
-        }
+        },
+        **({"image": DOMAIN + q["media"]["file"]} if q.get("media") and q["media"]["type"] == "image" else {}),
     }, ensure_ascii=False, indent=2)
 
     breadcrumb_ld = json.dumps({
@@ -268,6 +274,22 @@ def generate_page(q, slug, exam_num, prev_slug=None, next_slug=None):
 
     # Stem HTML: preserve line breaks
     stem_html = esc(q["stem"]).replace("\n", "<br>")
+
+    # Soru görseli / videosu
+    medya_html = ""
+    medya = q.get("media")
+    if medya and os.path.exists(os.path.join(ROOT, medya["file"].lstrip("/"))):
+        aciklama = re.sub(r"^\[Video\]\s*", "", q.get("caption", "")).strip()
+        if medya["type"] == "video":
+            medya_html = (f'    <figure class="soru-medya">\n'
+                          f'      <video src="{medya["file"]}" controls playsinline preload="metadata" aria-label="{esc(aciklama or stem_text)}"></video>\n'
+                          + (f'      <figcaption>Videoda: {esc(aciklama)}</figcaption>\n' if aciklama else "")
+                          + '    </figure>\n\n')
+        else:
+            medya_html = (f'    <figure class="soru-medya">\n'
+                          f'      <img src="{medya["file"]}" alt="{esc(aciklama or stem_text)}" decoding="async">\n'
+                          + (f'      <figcaption>Görselde: {esc(aciklama)}</figcaption>\n' if aciklama else "")
+                          + '    </figure>\n\n')
 
     return f'''<!DOCTYPE html>
 <html lang="tr">
@@ -329,6 +351,9 @@ def generate_page(q, slug, exam_num, prev_slug=None, next_slug=None):
   h1{{font-size:clamp(22px,4vw,32px);font-weight:600;letter-spacing:-.025em;line-height:1.35;margin:0 0 28px;white-space:pre-line}}
 
   .soru-opts{{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}}
+  .soru-medya{{margin:0 0 24px}}
+  .soru-medya img,.soru-medya video{{display:block;max-width:100%;height:auto;max-height:520px;border:1px solid var(--line);border-radius:12px;background:#fafafa}}
+  .soru-medya figcaption{{margin-top:8px;font-size:13.5px;color:var(--muted);line-height:1.5}}
   .sopt{{font-size:15px;line-height:1.55;color:#444;padding:6px 10px;border-radius:8px;transition:.12s}}
   .sopt .sl{{font-family:'Geist Mono',monospace;color:var(--muted);margin-right:6px}}
   .sopt.correct{{background:#effaf3;color:#0a7f3f;font-weight:500}}
@@ -407,7 +432,7 @@ def generate_page(q, slug, exam_num, prev_slug=None, next_slug=None):
 
     <h1>{stem_html}</h1>
 
-    <div class="soru-opts">
+{medya_html}    <div class="soru-opts">
 {opts_html}    </div>
 
     <details class="soru-cevap">

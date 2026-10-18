@@ -58,6 +58,9 @@
   h1{font-size:clamp(22px,4vw,32px);font-weight:600;letter-spacing:-.025em;line-height:1.35;margin:0 0 28px;white-space:pre-line}
 
   .soru-opts{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+  .soru-medya{margin:0 0 24px}
+  .soru-medya img,.soru-medya video{display:block;max-width:100%;height:auto;max-height:520px;border:1px solid var(--line);border-radius:12px;background:#fafafa}
+  .soru-medya figcaption{margin-top:8px;font-size:13.5px;color:var(--muted);line-height:1.5}
   .sopt{font-size:15px;line-height:1.55;color:#444;padding:6px 10px;border-radius:8px;transition:.12s}
   .sopt .sl{font-family:'Geist Mono',monospace;color:var(--muted);margin-right:6px}
   .sopt.correct{background:#effaf3;color:#0a7f3f;font-weight:500}
@@ -124,7 +127,8 @@
   "about": {
     "@type": "Thing",
     "name": "Trafik ve Çevre"
-  }
+  },
+  "image": "https://ehliyet.digital/assets/img/sinav-3/soru20.png"
 }
 </script>
 <script type="application/ld+json">
@@ -246,6 +250,11 @@
     </nav>
 
     <h1>Taşıt yolu üzerine çizilen şekildeki çizgilerin anlamı nedir?</h1>
+
+    <figure class="soru-medya">
+      <img src="/assets/img/sinav-3/soru20.png" alt="Taşıt yolu üzerinde, yaya geçidinden önce enine çizilmiş çizgiler." decoding="async">
+      <figcaption>Görselde: Taşıt yolu üzerinde, yaya geçidinden önce enine çizilmiş çizgiler.</figcaption>
+    </figure>
 
     <div class="soru-opts">
             <div class="sopt"><span class="sl">A)</span> Yaya geçidi</div>

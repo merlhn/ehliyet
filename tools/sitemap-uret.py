@@ -85,8 +85,23 @@ def sayfalar():
 
 
 NS = "http://www.sitemaps.org/schemas/sitemap/0.9"
+IMG_NS = "http://www.google.com/schemas/sitemap-image/1.1"
 ET.register_namespace("", NS)
+ET.register_namespace("image", IMG_NS)
 kok = ET.Element(f"{{{NS}}}urlset")
+
+
+def icerik_gorselleri(dosya):
+    """Sayfa içeriğindeki görseller (soru görselleri, trafik işaretleri); logo ve OG hariç.
+    Google Görseller'den gelen trafik için image sitemap'e yazılır."""
+    metin = dosya.read_text(encoding="utf-8")
+    govde = metin.split("<main", 1)[-1].split("</main>", 1)[0]
+    gorulen = []
+    for src in re.findall(r'<img[^>]+src="(/assets/img/[^"]+)"', govde):
+        if src.startswith(("/assets/img/marka/", "/assets/img/og/")) or src in gorulen:
+            continue
+        gorulen.append(src)
+    return gorulen[:1000]
 
 sayac = 0
 for dosya, yol in sayfalar():
@@ -95,6 +110,9 @@ for dosya, yol in sayfalar():
     ET.SubElement(url, f"{{{NS}}}lastmod").text = son_degisiklik(dosya)
     ET.SubElement(url, f"{{{NS}}}changefreq").text = degisim_sikligi(yol)
     ET.SubElement(url, f"{{{NS}}}priority").text = oncelik(yol)
+    for src in icerik_gorselleri(dosya):
+        g = ET.SubElement(url, f"{{{IMG_NS}}}image")
+        ET.SubElement(g, f"{{{IMG_NS}}}loc").text = BASE + src
     sayac += 1
 
 # Statik kesfedilebilirlik dosyalari

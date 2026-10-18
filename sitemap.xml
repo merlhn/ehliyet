@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://ehliyet.digital/deneme-sinavi/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -50,7 +50,7 @@
   </url>
   <url>
     <loc>https://ehliyet.digital/dersler/arac-teknigi/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -116,7 +116,7 @@
   </url>
   <url>
     <loc>https://ehliyet.digital/dersler/ilk-yardim/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -182,13 +182,13 @@
   </url>
   <url>
     <loc>https://ehliyet.digital/dersler/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ehliyet.digital/dersler/trafik-adabi/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -242,13 +242,13 @@
   </url>
   <url>
     <loc>https://ehliyet.digital/dersler/trafik-ve-cevre/hiz-sinirlari/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ehliyet.digital/dersler/trafik-ve-cevre/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -302,7 +302,7 @@
   </url>
   <url>
     <loc>https://ehliyet.digital/ehliyet-fiyatlari/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -314,13 +314,13 @@
   </url>
   <url>
     <loc>https://ehliyet.digital/ehliyet-sinav-konulari/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ehliyet.digital/ehliyet-sinav-sorulari/arac-teknigi/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -332,19 +332,19 @@
   </url>
   <url>
     <loc>https://ehliyet.digital/ehliyet-sinav-sorulari/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ehliyet.digital/ehliyet-sinav-sorulari/trafik-adabi/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ehliyet.digital/ehliyet-sinav-sorulari/trafik-ve-cevre/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -379,12 +379,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://ehliyet.digital/hap-bilgiler/arac-teknigi/ayak-frenine-basildiginda-aracin-dort-tekerlegi-de-durur-el/</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://ehliyet.digital/hap-bilgiler/arac-teknigi/cam-yikama-suyu-ikazi-yandiginda-silecek-suyu-deposuna-su/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -404,7 +398,7 @@
   </url>
   <url>
     <loc>https://ehliyet.digital/hap-bilgiler/arac-teknigi/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -530,7 +524,7 @@
   </url>
   <url>
     <loc>https://ehliyet.digital/hap-bilgiler/ilk-yardim/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -605,6 +599,9 @@
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-2/soru12a.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/hap-bilgiler/ilk-yardim/yetiskinde-kalp-masaji-gogus-kemigi-56-cm-cokecek-sekilde/</loc>
@@ -620,7 +617,7 @@
   </url>
   <url>
     <loc>https://ehliyet.digital/hap-bilgiler/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -656,7 +653,7 @@
   </url>
   <url>
     <loc>https://ehliyet.digital/hap-bilgiler/trafik-adabi/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -668,7 +665,7 @@
   </url>
   <url>
     <loc>https://ehliyet.digital/hap-bilgiler/trafik-adabi/surekli-ve-ani-serit-degistirerek-arac-kullanmak-diger/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -692,7 +689,7 @@
   </url>
   <url>
     <loc>https://ehliyet.digital/hap-bilgiler/trafik-adabi/yardim-araclarina-kolaylik-saglayan-surucu-feragate/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -764,7 +761,7 @@
   </url>
   <url>
     <loc>https://ehliyet.digital/hap-bilgiler/trafik-ve-cevre/emniyet-kemeri-zorunlulugunun-amaci-kaza-aninda-olum-ve/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -806,7 +803,7 @@
   </url>
   <url>
     <loc>https://ehliyet.digital/hap-bilgiler/trafik-ve-cevre/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -878,7 +875,7 @@
   </url>
   <url>
     <loc>https://ehliyet.digital/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -935,6 +932,9 @@
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-3/soru38.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/aracin-hizi-arttikca-fren-mesafesi-azalir-yol-yuzeyinde-su/</loc>
@@ -1136,7 +1136,7 @@
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/asagidakilerden-hangisi-trafik-kazalarinin-en-onemli/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1154,13 +1154,13 @@
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/asagidakilerden-hangisi-yakit-tuketiminin-artmasinda/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/asagidakilerden-hangisinin-trafikte-ofke-duygusuna-kapilan/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1253,114 +1253,171 @@
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-2/soru3.jpeg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/gorselde-iki-yonlu-ve-uc-seritli-kara-yolu-bolumunde/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-1/soru24.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/gorselde-karsiya-gecmeye-calisan-yayanin-hizli-hareket/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-2/soru49.jpeg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/gorseldeki-gibi-bir-karsilasmada-2-numarali-arac-surucusu/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-2/soru25.jpeg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/gorseldeki-gibi-emisyon-degeri-yuksek-egzoz-dumani-cikaran/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-2/soru50.jpeg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/gorseldeki-ikaz-isigi-hangi-durumda-yanmaz/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-2/soru39.jpeg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/gorseldeki-kanama-turunde-yaraliya-ilk-yardim-olarak/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-1/soru5.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/gorseldeki-kavsakta-ilk-gecis-hakki-siralamasi-nasil/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-2/soru24.jpeg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/gorseldeki-kirmizi-renkli-aracin-surucusu-nasil/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-1/soru19.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/gorseldeki-mavi-renkli-aracin-surucusu-nasil-davranmalidir/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-1/soru15.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/gorseldeki-otoyol-bilgi-levhasi-hangisini-bildirir/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-2/soru30.jpeg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/gorseldeki-park-etmis-aracin-surucusuyle-ilgili-hangisi/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-2/soru47.jpeg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/gorseldeki-pozisyon-hangi-durumdaki-yaraliya-uygulanir/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-1/soru8.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/gorseldeki-tespit-yontemi-hangi-kemigin-kirilmasi-durumunda/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-1/soru6.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/gorseldeki-yaraliya-ilk-yardimcinin-hangi-uygulamayi/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-2/soru5.jpeg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/gorseldeki-yolda-numaralanmis-araclardan-hangileri-en-fazla/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-2/soru20.jpeg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/gorsele-gore-adana-istikametine-gitmek-isteyen-otomobil/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-2/soru23.jpeg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/gorsele-gore-hangisinin-yapilmasi-dogru-olur/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-2/soru19.jpeg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/gorsele-gore-numarali-araclardan-hangileri-hatali-gecme/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-2/soru22.jpeg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/hangi-parcanin-duzgun-calismamasi-sarj-ikaz-lambasinin/</loc>
@@ -1469,6 +1526,9 @@
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-2/soru28.jpeg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/i-hosgorulu-olunmasi-ii-bencillikten-uzak-durulmasi-iii/</loc>
@@ -1484,7 +1544,7 @@
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/i-kazazedenin-tedavi-edilmesi-ii-hayati-tehlikenin-ortadan/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1529,6 +1589,9 @@
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-2/soru21.jpeg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/i-trafikteki-butun-kurallarin-nedenini-ogrenir-ii-arac/</loc>
@@ -1565,6 +1628,9 @@
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-2/soru15.jpeg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/i-yuklerin-uzerine-yolcu-bindirilmesi-ii-kasanin-yan-ve/</loc>
@@ -1577,6 +1643,9 @@
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-1/soru17.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/ilk-yardimci-kalca-veya-alt-taraf-kemiklerinde-kirik-olan/</loc>
@@ -1598,7 +1667,7 @@
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/kamyon-kamyonet-ve-romorklarda-yukle-birlikte-yolcu/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1607,6 +1676,9 @@
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-4/soru21.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/kaza-sonrasi-solunum-durmasi-yangin-tehlikesi-patlama-gibi/</loc>
@@ -1634,7 +1706,7 @@
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/kriko-ile-araci-kaldirirken-tekerleklere-takoz-konulmasinin/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1721,78 +1793,117 @@
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-3/soru26.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/sekildeki-aracin-surucusu-donel-kavsaktan-geriye-donus/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-4/soru26.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/sekildeki-aracin-surucusu-kamu-hizmeti-yapan-yolcu-tasiti/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-3/soru28.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/sekildeki-gibi-kontrolsuz-kavsakta-karsilasan-araclarin/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-4/soru27.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/sekildeki-kara-yolu-bolumunde-yan-yana-cizilmis-kesik-ve/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-4/soru25.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/sekildeki-tehlike-uyari-isaretini-goren-surucu/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-4/soru18.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/sekildeki-trafik-gorevlisinin-yapmis-oldugu-isaretin/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-4/soru16.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/sekildeki-trafik-isareti-asagidakilerden-hangisine/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-4/soru17.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/sekildeki-trafik-isareti-asagidakilerden-hangisini-bildirir/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-4/soru20.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/sekildeki-trafik-isaretini-goren-surucu-asagidakilerden/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-3/soru17.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/sekildeki-uyari-isigi-arac-gosterge-panelinde-yandiginda/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-1/soru38.jpeg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/sekildeki-uyari-isiginin-arac-gosterge-panelinde-yanmasi/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-1/soru37.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/sekle-gore-hangi-numarali-aracin-surucusu-hatali/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-3/soru24.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/seyir-halindeki-surucunun-yaptigi-bir-hatadan-dolayi-eliyle/</loc>
@@ -1820,7 +1931,7 @@
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/surucu-trafik-icinde-yapacagi-bir-kural-ihlalinde/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1859,16 +1970,22 @@
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-2/soru7.jpeg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/tasit-yolu-uzerine-cizilen-sekildeki-cizgilerin-anlami-nedir/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-3/soru20.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/ters-yonden-gelen-bir-surucuye-bu-sokak-tek-yonlu-herhalde/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1883,6 +2000,9 @@
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ehliyet.digital/assets/img/sinav-1/soru3.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://ehliyet.digital/soru/trafik-kuralinin-ihlal-edildigi-tarihten-geriye-dogru-bir/</loc>
@@ -1982,7 +2102,7 @@
   </url>
   <url>
     <loc>https://ehliyet.digital/feed.xml</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.1</priority>
   </url>
