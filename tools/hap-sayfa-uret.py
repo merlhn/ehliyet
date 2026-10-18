@@ -206,7 +206,7 @@ def guncelleme_tarihi(slug):
         return datetime.date.today().isoformat()
     # Tarih guncelleme commit'leri ("chore: sitemap ...") sayilmaz: yalniz tarih
     # degistirdikleri icin sayilsalar her calismada tarihleri yeniden ileri iterlerdi.
-    tarih = subprocess.run(["git", "log", "-1", "--invert-grep", "--grep=^chore: sitemap", "--format=%cs", "--", yol], cwd=ROOT,
+    tarih = subprocess.run(["git", "log", "-1", "--invert-grep", "--grep=^chore:", "--format=%cs", "--", yol], cwd=ROOT,
                            capture_output=True, text=True).stdout.strip()
     return max(tarih or YAYIN_TARIHI, YAYIN_TARIHI)
 

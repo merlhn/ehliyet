@@ -81,7 +81,7 @@ def son_degisiklik(yol):
     try:
         # Tarih guncelleme commit'leri ("chore: sitemap ...") sayilmaz: yalniz tarih
         # degistirdikleri icin sayilsalar her calismada tarihleri yeniden ileri iterlerdi.
-        c = subprocess.run(["git", "log", "-1", "--invert-grep", "--grep=^chore: sitemap", "--format=%cI", "--", str(yol)],
+        c = subprocess.run(["git", "log", "-1", "--invert-grep", "--grep=^chore:", "--format=%cI", "--", str(yol)],
                            cwd=ROOT, capture_output=True, text=True, check=True).stdout.strip()
         if c:
             return c

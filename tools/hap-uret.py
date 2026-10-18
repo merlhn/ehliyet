@@ -456,7 +456,21 @@ LANDING_CSS = """
   .cta-inner p{margin:0 auto 30px;font-size:17px;color:var(--muted);max-width:460px;line-height:1.5}
 
   @media(max-width:860px){.cat-grid{grid-template-columns:1fr}.ornekler{grid-template-columns:1fr}}
-  @media(max-width:640px){.hero-ic{padding:56px 20px 44px}.hero .tanitim{font-size:17px}.stats{gap:12px}.ornekler{margin-top:38px}.section{padding:60px 22px}.cta-inner{padding:44px 22px}}"""
+  @media(max-width:640px){.hero-ic{padding:56px 20px 44px}.hero .tanitim{font-size:17px}.stats{gap:12px}.ornekler{margin-top:38px}.section{padding:60px 22px}.cta-inner{padding:44px 22px}}
+
+  /* Tüm hap bilgiler: "ehliyet hap bilgiler" arayan kişi listenin tamamını tek sayfada görür */
+  .tum{max-width:1100px;margin:0 auto;padding:0 28px 40px}
+  .tum h2{font-size:clamp(24px,3vw,32px);font-weight:600;letter-spacing:-.03em;margin:0 0 10px}
+  .tum .tum-giris{color:var(--muted);font-size:15.5px;line-height:1.6;margin:0 0 8px;max-width:720px}
+  .tum h3{font-size:19px;font-weight:600;letter-spacing:-.02em;margin:34px 0 4px}
+  .tum h4{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin:18px 0 8px}
+  .tum ol{margin:0;padding-left:0;list-style:none}
+  .tum li{display:flex;gap:12px;padding:9px 0;border-top:1px solid var(--line);font-size:15px;line-height:1.6}
+  .tum li a.no{font-family:'Geist Mono',monospace;font-size:12px;color:var(--muted);text-decoration:none;flex-shrink:0;padding-top:3px;min-width:22px}
+  .tum li a.no:hover{color:var(--fg)}
+  .yazdir{font:inherit;font-size:13px;padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;cursor:pointer;color:var(--fg)}
+  @media(max-width:640px){.tum{padding:0 20px 28px}}
+  @media print{.ust-banner,header,footer,.site-footer,.hero,.section,.cta,.yazdir{display:none!important}.tum{padding:0}.tum li{break-inside:avoid}}"""
 
 # Koyu hero'da gösterilen örnek bilgiler: sayfanın değeri daha kaydırmadan
 # görünsün diye. Kartlardaki on_izleme'lerden farklı bilgiler seçildi.
@@ -487,6 +501,20 @@ def landing():
           <span class="cat-go">+{kalan} bilgi daha →</span>
         </a>""")
     kartlar_html = "\n\n".join(kartlar)
+
+    tum = []
+    for d in DERSLER:
+        adet = sum(len(f) for _, f in d["gruplar"])
+        tum.append(f'      <h3><a href="/hap-bilgiler/{d["slug"]}/">{d["ad"]} hap bilgiler</a> <small>({adet})</small></h3>')
+        haplar = iter(hap_listesi(d))
+        for grup_ad, bilgiler in d["gruplar"]:
+            tum.append(f"      <h4>{grup_ad}</h4>")
+            tum.append("      <ol>")
+            for _ in bilgiler:
+                sira, _g, b, _duz, slug = next(haplar)
+                tum.append(f'        <li><a class="no" href="/hap-bilgiler/{d["slug"]}/{slug}/" aria-label="Hap bilgi {sira:02d} sayfası">{sira:02d}</a><span>{b}</span></li>')
+            tum.append("      </ol>")
+    tum_liste_html = "\n".join(tum)
 
     govde = f"""
   <main>
@@ -523,6 +551,14 @@ def landing():
 {kartlar_html}
 
       </div>
+    </section>
+
+    <!-- TÜM HAP BİLGİLER -->
+    <section class="tum" aria-labelledby="tum-baslik">
+      <h2 id="tum-baslik">Ehliyet sınavı hap bilgiler: {toplam} bilginin tamamı</h2>
+      <p class="tum-giris">Dört dersin bütün hap bilgileri aşağıda tek listede. Sınavdan önceki son tekrar için yazdırabilir, numaraya tıklayıp bilginin ayrıntısına ve çıktığı sorulara geçebilirsin.</p>
+      <p><button type="button" class="yazdir" onclick="window.print()">Listeyi yazdır</button></p>
+{tum_liste_html}
     </section>
 
     <!-- CTA -->
@@ -572,6 +608,10 @@ DERS_CSS = """
   .cta-inner p{margin:0 auto 28px;font-size:16px;color:var(--muted);max-width:460px;line-height:1.5}
   .cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
+  .yazdir-satir{margin-top:16px!important}
+  .yazdir{font:inherit;font-size:13px;padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;cursor:pointer;color:var(--fg)}
+  @media print{.ust-banner,header,footer,.site-footer,.cta,.yazdir,.hap-detay{display:none!important}.hap{break-inside:avoid;border:0;padding:6px 0}}
+
   @media(max-width:640px){.hero{padding:52px 20px 40px}.icerik{padding:0 20px 28px}.cta{padding:36px 20px 72px}.cta-inner{padding:40px 22px}}"""
 
 def ders_sayfasi(d):
@@ -597,8 +637,9 @@ def ders_sayfasi(d):
   <main>
     <section class="hero">
       <p class="eyebrow">Hap Bilgiler</p>
-      <h1>{d['ad']}</h1>
-      <p>{d['ad']} ile ilgili hap bilgileri öğren, sınavdaki soruları rahatlıkla çöz. Hap bilgilerin tamamı aşağıda!</p>
+      <h1>{d['ad']} Hap Bilgiler</h1>
+      <p>Ehliyet sınavında {d['ad']} dersinden çıkan sorular için {adet} hap bilgi: her biri bir sınav sorusunu çözmeye yeten tek cümle. Sınavdan önceki son tekrar için tamamı aşağıda.</p>
+      <p class="yazdir-satir"><button type="button" class="yazdir" onclick="window.print()">Bu listeyi yazdır</button></p>
     </section>
 
     <div class="icerik">
@@ -619,7 +660,7 @@ def ders_sayfasi(d):
   </main>
 """
     return head(
-        f"{d['ad']} Hap Bilgiler — Ehliyet Sınavı",
+        f"{d['ad']} Hap Bilgiler: {adet} Sınavlık Bilgi (Ehliyet 2026)",
         f"Ehliyet sınavı {d['ad']} hap bilgileri: {d['ozet'].split(': ', 1)[-1].rstrip('.')}. {adet} bilgi tek sayfada.",
         f"/hap-bilgiler/{d['slug']}/",
         DERS_CSS,

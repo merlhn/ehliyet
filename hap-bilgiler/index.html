@@ -140,8 +140,21 @@
 
   @media(max-width:860px){.cat-grid{grid-template-columns:1fr}.ornekler{grid-template-columns:1fr}}
   @media(max-width:640px){.hero-ic{padding:56px 20px 44px}.hero .tanitim{font-size:17px}.stats{gap:12px}.ornekler{margin-top:38px}.section{padding:60px 22px}.cta-inner{padding:44px 22px}}
+
+  /* Tüm hap bilgiler: "ehliyet hap bilgiler" arayan kişi listenin tamamını tek sayfada görür */
+  .tum{max-width:1100px;margin:0 auto;padding:0 28px 40px}
+  .tum h2{font-size:clamp(24px,3vw,32px);font-weight:600;letter-spacing:-.03em;margin:0 0 10px}
+  .tum .tum-giris{color:var(--muted);font-size:15.5px;line-height:1.6;margin:0 0 8px;max-width:720px}
+  .tum h3{font-size:19px;font-weight:600;letter-spacing:-.02em;margin:34px 0 4px}
+  .tum h4{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin:18px 0 8px}
+  .tum ol{margin:0;padding-left:0;list-style:none}
+  .tum li{display:flex;gap:12px;padding:9px 0;border-top:1px solid var(--line);font-size:15px;line-height:1.6}
+  .tum li a.no{font-family:'Geist Mono',monospace;font-size:12px;color:var(--muted);text-decoration:none;flex-shrink:0;padding-top:3px;min-width:22px}
+  .tum li a.no:hover{color:var(--fg)}
+  .yazdir{font:inherit;font-size:13px;padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;cursor:pointer;color:var(--fg)}
+  @media(max-width:640px){.tum{padding:0 20px 28px}}
+  @media print{.ust-banner,header,footer,.site-footer,.hero,.section,.cta,.yazdir{display:none!important}.tum{padding:0}.tum li{break-inside:avoid}}
 </style>
-<link rel="alternate" type="application/rss+xml" title="ehliyet.digital RSS" href="/feed.xml">
 <!-- schema.org — tools/schema-uret.py tarafından üretilir, elle düzenlenmez -->
 <script type="application/ld+json">
 {
@@ -213,6 +226,7 @@
 }
 </script>
 <!-- /schema.org -->
+<link rel="alternate" type="application/rss+xml" title="ehliyet.digital RSS" href="/feed.xml">
 <style id="ust-banner-css">.ust-banner{display:flex;align-items:center;justify-content:center;gap:10px;min-height:40px;padding:8px 16px;background:#08090a;color:#fff;font-size:13.5px;line-height:1.35;text-decoration:none;text-align:center}.ust-banner:hover b{text-decoration:underline}.ust-banner-rozet{background:#16a34a;border-radius:999px;padding:2px 8px;font-size:11.5px;font-weight:600;letter-spacing:.02em;flex-shrink:0}.ust-banner b{font-weight:600;white-space:nowrap}.ust-banner-kisa{display:none}@media(max-width:640px){.ust-banner{font-size:12.5px;gap:8px;padding:8px 12px}.ust-banner-uzun{display:none}.ust-banner-kisa{display:inline}}</style>
 </head>
 <body>
@@ -311,6 +325,157 @@
         </a>
 
       </div>
+    </section>
+
+    <!-- TÜM HAP BİLGİLER -->
+    <section class="tum" aria-labelledby="tum-baslik">
+      <h2 id="tum-baslik">Ehliyet sınavı hap bilgiler: 80 bilginin tamamı</h2>
+      <p class="tum-giris">Dört dersin bütün hap bilgileri aşağıda tek listede. Sınavdan önceki son tekrar için yazdırabilir, numaraya tıklayıp bilginin ayrıntısına ve çıktığı sorulara geçebilirsin.</p>
+      <p><button type="button" class="yazdir" onclick="window.print()">Listeyi yazdır</button></p>
+      <h3><a href="/hap-bilgiler/ilk-yardim/">İlk Yardım hap bilgiler</a> <small>(23)</small></h3>
+      <h4>Temel yaşam desteği</h4>
+      <ol>
+        <li><a class="no" href="/hap-bilgiler/ilk-yardim/hayat-kurtarma-zincirinin-sirasi-112ye-haber-verilir-olay/" aria-label="Hap bilgi 01 sayfası">01</a><span>Hayat kurtarma zincirinin sırası: <b>112’ye haber verilir → olay yerinde temel yaşam desteği yapılır → ambulans ekipleri müdahale eder → hastane acil servisinde tedavi edilir</b>.</span></li>
+        <li><a class="no" href="/hap-bilgiler/ilk-yardim/yetiskinde-temel-yasam-destegi-30-kalp-masaji-2-yapay/" aria-label="Hap bilgi 02 sayfası">02</a><span>Yetişkinde temel yaşam desteği <b>30 kalp masajı + 2 yapay solunum</b> döngüsüyle uygulanır ve uygulamaya <b>kalp masajıyla başlanır</b>.</span></li>
+        <li><a class="no" href="/hap-bilgiler/ilk-yardim/yetiskinde-kalp-masaji-gogus-kemigi-56-cm-cokecek-sekilde/" aria-label="Hap bilgi 03 sayfası">03</a><span>Yetişkinde kalp masajı: göğüs kemiği <b>5–6 cm</b> çökecek şekilde, dakikada <b>100–120</b> bası. (3 cm ya da dakikada 30 bası yanlıştır.)</span></li>
+        <li><a class="no" href="/hap-bilgiler/ilk-yardim/bebekte-kalp-basisi-bir-elin-orta-ve-yuzuk-parmagiyla-iki/" aria-label="Hap bilgi 04 sayfası">04</a><span>Bebekte kalp basısı, bir elin <b>orta ve yüzük parmağıyla</b>, iki meme başını birleştiren hattın <b>hemen altına</b> yapılır.</span></li>
+        <li><a class="no" href="/hap-bilgiler/ilk-yardim/hava-yolunu-acan-pozisyon-bas-gericene-yukari-bir-el-alna/" aria-label="Hap bilgi 05 sayfası">05</a><span>Hava yolunu açan pozisyon <b>baş geri–çene yukarı</b>: bir el alna, diğer elin iki parmağı çene kemiğine konur; alından bastırılıp çeneden kaldırılır.</span></li>
+        <li><a class="no" href="/hap-bilgiler/ilk-yardim/kazazedenin-agzi-ve-cevresinde-yaralanma-varsa-yapay/" aria-label="Hap bilgi 06 sayfası">06</a><span>Kazazedenin <b>ağzı ve çevresinde yaralanma</b> varsa yapay solunum <b>ağızdan buruna</b> yapılır.</span></li>
+        <li><a class="no" href="/hap-bilgiler/ilk-yardim/solunum-yolu-tam-tikanan-bebekte-once-yuzustu-pozisyonda-5/" aria-label="Hap bilgi 07 sayfası">07</a><span>Solunum yolu tam tıkanan bebekte: önce yüzüstü pozisyonda <b>5 sırt darbesi</b>, ardından sırtüstü çevrilip <b>5 göğüs basısı</b> uygulanır.</span></li>
+      </ol>
+      <h4>Bilinç bozuklukları ve pozisyonlar</h4>
+      <ol>
+        <li><a class="no" href="/hap-bilgiler/ilk-yardim/bayilma-kisa-sureli-yuzeysel-ve-gecici-bilinc-kaybidir/" aria-label="Hap bilgi 08 sayfası">08</a><span>Bayılma, <b>kısa süreli, yüzeysel ve geçici bilinç kaybı</b>dır.</span></li>
+        <li><a class="no" href="/hap-bilgiler/ilk-yardim/bilinci-kapali-ama-solunumu-ve-nabzi-olan-kazazedeye-koma/" aria-label="Hap bilgi 09 sayfası">09</a><span>Bilinci kapalı ama <b>solunumu ve nabzı olan</b> kazazedeye <b>koma (yarı yüzükoyun-yan yatış)</b> pozisyonu verilir. Baş-omurga yaralanması yoksa hava yolu açıklığı bu pozisyonla korunur.</span></li>
+        <li><a class="no" href="/hap-bilgiler/ilk-yardim/bayilan-kazazedede-sikan-giysiler-gevsetilir-ve-solunum/" aria-label="Hap bilgi 10 sayfası">10</a><span>Bayılan kazazedede sıkan giysiler <b>gevşetilir</b> ve solunum yolu açıklığı korunur. Ayakları 45 cm kaldırmak ya da yarı oturtmak bayılmada <b>uygulanmaz</b>.</span></li>
+        <li><a class="no" href="/hap-bilgiler/ilk-yardim/sokun-belirtileri-deri-soluk-soguk-ve-nemli-gozler-donuk/" aria-label="Hap bilgi 11 sayfası">11</a><span>Şokun belirtileri: deri <b>soluk, soğuk ve nemli</b>, gözler donuk, bilinç bulanık. Kazazedenin üzeri örtülerek <b>vücut sıcaklığı korunur</b>; ağızdan içecek verilmez.</span></li>
+        <li><a class="no" href="/hap-bilgiler/ilk-yardim/kalp-krizinin-tipik-agrisi-dinlenmekle-gecmez-kravat/" aria-label="Hap bilgi 12 sayfası">12</a><span>Kalp krizinin tipik ağrısı <b>dinlenmekle geçmez</b>; kravat bölgesinde hissedilir, <b>omuzlara, boyuna, çeneye ve sol kola</b> yayılır, ölüm korkusu eşlik eder.</span></li>
+        <li><a class="no" href="/hap-bilgiler/ilk-yardim/omurilik-omurga-kanali-icinde-boyundan-kuyruk-sokumuna/" aria-label="Hap bilgi 13 sayfası">13</a><span><b>Omurilik</b>, omurga kanalı içinde boyundan kuyruk sokumuna uzanır; beyin ile vücut arasındaki bağlantıyı sağlar ve <b>reflekslerin merkezi</b>dir.</span></li>
+        <li><a class="no" href="/hap-bilgiler/ilk-yardim/sok-pozisyonu-kazazede-sirtustu-yatirilir-ayaklari-30-cm/" aria-label="Hap bilgi 14 sayfası">14</a><span><b>Şok pozisyonu</b>: kazazede sırtüstü yatırılır, ayakları <b>30 cm</b> kaldırılır; amaç kalp ve beyne kan göndermektir. <b>Baş yaralanması</b> varsa şok pozisyonu verilmez.</span></li>
+      </ol>
+      <h4>Kanamalar ve yaralanmalar</h4>
+      <ol>
+        <li><a class="no" href="/hap-bilgiler/ilk-yardim/fiskirir-tarzda-kanama-atardamar-kanamasidir-bolge-yukari/" aria-label="Hap bilgi 15 sayfası">15</a><span>Fışkırır tarzda kanama <b>atardamar</b> kanamasıdır: bölge yukarı kaldırılır, temiz bezle baskı yapılır, bez kaldırılmadan üzerinden bandajla sarılır. Elle baskı, kanayan yere <b>en yakın</b> basınç noktasına uygulanır — en uzak noktaya değil.</span></li>
+        <li><a class="no" href="/hap-bilgiler/ilk-yardim/kulaktan-kanama-ve-goz-cevresinde-morluk-kafatasi/" aria-label="Hap bilgi 16 sayfası">16</a><span>Kulaktan kanama ve göz çevresinde morluk, <b>kafatası yaralanması</b> işaretidir: kazazede <b>yarı oturur pozisyona alınmaz</b>; boyun tespiti yapılır, yaşam bulguları (ABC) değerlendirilir.</span></li>
+      </ol>
+      <h4>Kırıklar</h4>
+      <ol>
+        <li><a class="no" href="/hap-bilgiler/ilk-yardim/acik-kirikta-deri-butunlugu-bozulur-kan-kaybi-ve-enfeksiyon/" aria-label="Hap bilgi 17 sayfası">17</a><span><b>Açık kırıkta deri bütünlüğü bozulur</b>; kan kaybı ve enfeksiyon riski yüksektir. Deri bütünlüğünün korunduğu kırık, kapalı kırıktır.</span></li>
+        <li><a class="no" href="/hap-bilgiler/ilk-yardim/koprucuk-kemigi-kiriginda-tespit-her-iki-omuz-uzerinden/" aria-label="Hap bilgi 18 sayfası">18</a><span><b>Köprücük kemiği</b> kırığında tespit, her iki omuz üzerinden geçen <b>çapraz (sekiz) bandajla</b> yapılır.</span></li>
+        <li><a class="no" href="/hap-bilgiler/ilk-yardim/kalca-ve-alt-taraf-kiriklarinin-tespitinde-acik-kirik-varsa/" aria-label="Hap bilgi 19 sayfası">19</a><span>Kalça ve alt taraf kırıklarının tespitinde: açık kırık varsa yara önce <b>temiz bir bezle kapatılır</b>; destek malzemeleri yumuşak olmalı, sargı kırığın üzerine bağlanmamalı, yaralı oturtulmamalıdır.</span></li>
+        <li><a class="no" href="/hap-bilgiler/ilk-yardim/burkulmada-ilk-yardim-cips-kurali-ile-hatirlanir-cilt/" aria-label="Hap bilgi 20 sayfası">20</a><span>Burkulmada ilk yardım <b>CİPS kuralı</b> ile hatırlanır: <b>C</b>ilt soğutma (buz), <b>İ</b>stirahat, <b>P</b>ansuman (baskılı sargı), <b>S</b>eviye yükseltme.</span></li>
+      </ol>
+      <h4>Taşıma teknikleri</h4>
+      <ol>
+        <li><a class="no" href="/hap-bilgiler/ilk-yardim/tasimada-genel-kural-bas-boyun-govde-ekseni-bozulmadan/" aria-label="Hap bilgi 21 sayfası">21</a><span>Taşımada genel kural: <b>baş-boyun-gövde ekseni</b> bozulmadan, kazazede <b>en az 6 destek noktasından</b> kavranır ve mümkün olduğunca az hareket ettirilir. Kaldırırken ağırlık karın değil <b>bacak kaslarına</b> verilir.</span></li>
+        <li><a class="no" href="/hap-bilgiler/ilk-yardim/rentek-manevrasi-solunumu-durmus-ya-da-tehlike-altindaki/" aria-label="Hap bilgi 22 sayfası">22</a><span><b>Rentek manevrası</b>: solunumu durmuş ya da tehlike altındaki kazazedeyi, ayakları pedala sıkışmamışsa araç içinden çıkarma tekniğidir.</span></li>
+        <li><a class="no" href="/hap-bilgiler/ilk-yardim/teskereci-yontemi-kasik-ve-kopru-teknikleri-kazazedeyi/" aria-label="Hap bilgi 23 sayfası">23</a><span><b>Teskereci yöntemi</b> iki ilk yardımcıyla yapılan bir taşıma yöntemidir: biri kazazedeyi arkadan koltuk altlarından, diğeri önden diz altlarından kavrar. <b>Kaşık ve köprü teknikleri</b> ise kazazedeyi <b>sedyeye yerleştirmek</b> için kullanılır.</span></li>
+      </ol>
+      <h3><a href="/hap-bilgiler/trafik-ve-cevre/">Trafik ve Çevre hap bilgiler</a> <small>(28)</small></h3>
+      <h4>Kurumlar ve yetkiler</h4>
+      <ol>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/kara-yollarinda-hiz-sinirlarini-yonetmeliktekinin-ustunde/" aria-label="Hap bilgi 01 sayfası">01</a><span>Kara yollarında hız sınırlarını (yönetmeliktekinin üstünde ya da altında) belirlemek ve işaretlemek, İçişleri Bakanlığının uygun görüşüyle <b>Karayolları Genel Müdürlüğünün</b> yetkisidir.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/sehir-icinde-yol-yapisi-ya-da-isaretleme-yetersizligi/" aria-label="Hap bilgi 02 sayfası">02</a><span>Şehir içinde yol yapısı ya da işaretleme yetersizliği yüzünden kaza olan yerlerde teklif edilen tedbirleri almak <b>belediyenin</b> görevidir.</span></li>
+      </ol>
+      <h4>Işıklar ve levhalar</h4>
+      <ol>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/aralikli-yanip-sonen-kirmizi-isik-dur-levhasiyla-ayni/" aria-label="Hap bilgi 03 sayfası">03</a><span><b>Aralıklı yanıp sönen kırmızı ışık, DUR levhasıyla</b> aynı anlamdadır: durulur, yol uygunsa devam edilir.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/gise-simgeli-otoyol-bilgi-levhasi-ucretli-otoyola/" aria-label="Hap bilgi 04 sayfası">04</a><span>Gişe simgeli otoyol bilgi levhası, <b>ücretli otoyola</b> girileceğini bildirir.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/serit-azalmasi-levhasi-gorulunce-yapilacak-sey-yavaslayip/" aria-label="Hap bilgi 05 sayfası">05</a><span>“Şerit azalması” levhası görülünce yapılacak şey: <b>yavaşlayıp devam eden (sağ) şeride girmek</b> — hızlanıp şeritte ısrar etmek değil.</span></li>
+      </ol>
+      <h4>Şerit ve geçme kuralları</h4>
+      <ol>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/gecme-ve-donme-gibi-mecburi-haller-disinda-serit/" aria-label="Hap bilgi 06 sayfası">06</a><span>Geçme ve dönme gibi <b>mecburi hâller dışında şerit değiştirmek</b> kural ihlalidir. Şerit değiştirmeden önce girilecek şeritteki araçların güvenle geçişi beklenir.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/iki-yonlu-uc-seritli-yolda-orta-serit-yalnizca-gecme/" aria-label="Hap bilgi 07 sayfası">07</a><span>İki yönlü üç şeritli yolda <b>orta şerit yalnızca geçme (sollama)</b> içindir; orta şeridi sürekli işgal etmek hatalı sollamadır.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/onundeki-arac-gecis-halindeyken-karsidan-arac-geliyorsa/" aria-label="Hap bilgi 08 sayfası">08</a><span>Önündeki araç geçiş hâlindeyken karşıdan araç geliyorsa sürücü <b>öndeki aracın geçişini bekler</b>; sol şeride çıkmaz.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/arkadan-carpma-seklindeki-kazalarin-en-onemli-sebebi-takip/" aria-label="Hap bilgi 09 sayfası">09</a><span>Arkadan çarpma şeklindeki kazaların en önemli sebebi <b>takip mesafesi kuralına uyulmamasıdır</b>.</span></li>
+      </ol>
+      <h4>Hız, mesafe ve farlar</h4>
+      <ol>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/durma-mesafesini-etkileyen-etkenler-aracin-hizi-yolun-egimi/" aria-label="Hap bilgi 10 sayfası">10</a><span>Durma mesafesini etkileyen etkenler: aracın hızı, yolun eğimi ve kaplamanın cinsi. <b>Hidrolik direksiyon durma mesafesini etkilemez.</b></span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/ortalama-hiz-tespiti-yapilan-yol-kesiminde-levhadaki-sinir/" aria-label="Hap bilgi 11 sayfası">11</a><span>Ortalama hız tespiti yapılan yol kesiminde levhadaki sınır, iki nokta arasındaki <b>ortalama hız</b> için geçerlidir; araçlar en fazla bu hızla ilerleyebilir.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/uzun-huzmeli-fardan-kisa-fara-gecilir-yeterince/" aria-label="Hap bilgi 12 sayfası">12</a><span>Uzun hüzmeli fardan kısa fara geçilir: <b>yeterince aydınlatılmış yola girince</b> ve <b>geceleyin öndeki aracı geçerken</b>.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/gece-kisa-farla-net-gorus-mesafesi-ortalama-25-metredir-hiz/" aria-label="Hap bilgi 13 sayfası">13</a><span>Gece kısa farla net görüş mesafesi ortalama <b>25 metredir</b>; hız, tehlike anında bu mesafe içinde <b>durulabilecek</b> seviyeye indirilir.</span></li>
+      </ol>
+      <h4>Duraklama ve park</h4>
+      <ol>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/duraklamak-yasaktir-trafik-isaretiyle-yasaklanmis-yerlerde/" aria-label="Hap bilgi 14 sayfası">14</a><span>Duraklamak yasaktır: trafik işaretiyle yasaklanmış yerlerde, <b>yangın musluklarına 5 metre</b> ve yerleşim yeri içinde <b>kavşak ve bağlantı yollarına 5 metre</b> mesafede.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/isaret-levhalarina-yaklasim-yonunde-duraklama-yasagi/" aria-label="Hap bilgi 15 sayfası">15</a><span>İşaret levhalarına yaklaşım yönünde duraklama yasağı: yerleşim birimi <b>içinde 15 metre</b>, <b>dışında 100 metre</b>.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/duraklanan-ya-da-park-edilen-yerden-cikarken-cikis-isareti/" aria-label="Hap bilgi 16 sayfası">16</a><span>Duraklanan ya da park edilen yerden çıkarken: çıkış işareti verilir, araç ve etrafı kontrol edilir, görüş dışı noktalar varsa <b>gözcü bulundurulur</b>. Yoldan geçen araçları durdurmak kurala aykırıdır.</span></li>
+      </ol>
+      <h4>Geçiş üstünlüğü ve öncelik</h4>
+      <ol>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/gecis-ustunlugu-siralamasi-ambulans-ve-yarali-tasiyan/" aria-label="Hap bilgi 17 sayfası">17</a><span>Geçiş üstünlüğü sıralaması: <b>ambulans ve yaralı taşıyan araçlar → organ-doku nakli araçları → itfaiye ve acil müdahale araçları → güvenlik güçleri</b>.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/gecis-ustunlugu-olan-aracin-sireni-duyuldugunda-ilk/" aria-label="Hap bilgi 18 sayfası">18</a><span>Geçiş üstünlüğü olan aracın sireni duyulduğunda ilk yapılacak şey <b>sesin yönünü tayin etmektir</b>.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/dar-kopru-gibi-kesimlerde-karsilasan-araclardan-gecis/" aria-label="Hap bilgi 19 sayfası">19</a><span>Dar köprü gibi kesimlerde karşılaşan araçlardan geçiş önceliği <b>karşıdaki araca bırakılır</b>; hızlanıp köprüye önce girmeye çalışmak yanlıştır.</span></li>
+      </ol>
+      <h4>Belge ve cezalar</h4>
+      <ol>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/bir-yil-icinde-100-ceza-puanini-ilk-kez-asan-surucunun/" aria-label="Hap bilgi 20 sayfası">20</a><span>Bir yıl içinde <b>100 ceza puanını ilk kez aşan</b> sürücünün belgesi <b>2 ay</b> geri alınır.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/olumle-sonuclanan-kazada-asli-kusurlu-surucunun-belgesi/" aria-label="Hap bilgi 21 sayfası">21</a><span><b>Ölümle sonuçlanan kazada asli kusurlu</b> sürücünün belgesi mahkemece <b>1 yıl</b> geri alınır.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/625-kurali-alkollu-arac-kullanmada-surucu-belgesi-1-ihlalde/" aria-label="Hap bilgi 22 sayfası">22</a><span><b>625 kuralı</b>: alkollü araç kullanmada sürücü belgesi <b>1. ihlalde 6 ay</b>, <b>2. ihlalde 2 yıl</b>, <b>3. ihlalde 5 yıl</b> geri alınır. Alkol sınırı hususi araçta 0,50, ticari araçta 0,20 promildir.</span></li>
+      </ol>
+      <h4>Araç, yük ve muayene</h4>
+      <ol>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/kamyon-kamyonet-ve-romorkta-yukle-birlikte-yolcu-tasinirken/" aria-label="Hap bilgi 23 sayfası">23</a><span>Kamyon, kamyonet ve römorkta yükle birlikte yolcu taşınırken: kasanın yan ve arka kapakları <b>kapalı</b>, yük <b>sağlam yerleştirilmiş ve bağlanmış</b> olmalıdır.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/emniyet-kemeri-zorunlulugunun-amaci-kaza-aninda-olum-ve/" aria-label="Hap bilgi 24 sayfası">24</a><span>Emniyet kemeri zorunluluğunun amacı, kaza anında <b>ölüm ve yaralanmaları en aza indirmektir</b>.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/arac-muayenesinde-agir-kusur-sayilir-rot-baslarinin-bosluk/" aria-label="Hap bilgi 25 sayfası">25</a><span>Araç muayenesinde <b>ağır kusur</b> sayılır: rot başlarının boşluk yapması, ön cam sileceklerinin çalışmaması, park lambalarının yanmaması.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/kaza-oranini-etkileyen-etmenler-kural-ihlalleri-arac/" aria-label="Hap bilgi 26 sayfası">26</a><span>Kaza oranını etkileyen etmenler: kural ihlalleri, araç bakımları ve aracın yük durumu. <b>Aracın beygir gücü etkilemez.</b></span></li>
+      </ol>
+      <h4>Çevre</h4>
+      <ol>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/atiklarin-toplanip-islenerek-yeniden-kullanilmasi-cevreye/" aria-label="Hap bilgi 27 sayfası">27</a><span>Atıkların <b>toplanıp işlenerek yeniden kullanılması</b> çevreye zarar değil, faydadır; koku, çirkin görünüm ve hastalık taşıyıcıların üremesi ise zararlarıdır.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-ve-cevre/arac-bakimlarini-ve-egzoz-emisyon-olcumunu-zamaninda/" aria-label="Hap bilgi 28 sayfası">28</a><span>Araç bakımlarını ve egzoz emisyon ölçümünü <b>zamanında yaptırmak</b> çevrenin temiz kalmasına katkı sağlar.</span></li>
+      </ol>
+      <h3><a href="/hap-bilgiler/arac-teknigi/">Araç Tekniği hap bilgiler</a> <small>(18)</small></h3>
+      <h4>Gösterge paneli ikazları</h4>
+      <ol>
+        <li><a class="no" href="/hap-bilgiler/arac-teknigi/abs-uyari-isigi-fren-sisteminde-ariza-oldugunu-bildirir/" aria-label="Hap bilgi 01 sayfası">01</a><span><b>ABS uyarı ışığı</b>, <b>fren sisteminde</b> arıza olduğunu bildirir.</span></li>
+        <li><a class="no" href="/hap-bilgiler/arac-teknigi/motor-yaglama-yapmadiginda-kirmizi-yagdanlik-yag-lambasi/" aria-label="Hap bilgi 02 sayfası">02</a><span>Motor yağlama yapmadığında <b>kırmızı yağdanlık (yağ) lambası</b> yanar.</span></li>
+        <li><a class="no" href="/hap-bilgiler/arac-teknigi/sarj-ve-yag-basinci-lambalari-yanarsa-arac-kurallara-uygun/" aria-label="Hap bilgi 03 sayfası">03</a><span><b>Şarj</b> ve <b>yağ basıncı</b> lambaları yanarsa araç kurallara uygun şekilde <b>derhal durdurulur ve kontak kapatılır</b>. ABS ışığı bu grupta değildir.</span></li>
+        <li><a class="no" href="/hap-bilgiler/arac-teknigi/lastik-basinci-tpms-ikazi-basinc-azaldiginda-lastik/" aria-label="Hap bilgi 04 sayfası">04</a><span>Lastik basıncı (TPMS) ikazı; basınç azaldığında, lastik patladığında ve sensör arızalandığında yanar — <b>lastik ısındığında yanmaz</b>.</span></li>
+        <li><a class="no" href="/hap-bilgiler/arac-teknigi/cam-yikama-suyu-ikazi-yandiginda-silecek-suyu-deposuna-su/" aria-label="Hap bilgi 05 sayfası">05</a><span>Cam yıkama suyu ikazı yandığında <b>silecek suyu deposuna su eklenir</b>.</span></li>
+      </ol>
+      <h4>Motor ve sistemler</h4>
+      <ol>
+        <li><a class="no" href="/hap-bilgiler/arac-teknigi/motor-sogutma-sisteminin-elemanlari-radyator-su-pompasi-ve/" aria-label="Hap bilgi 06 sayfası">06</a><span>Motor soğutma sisteminin elemanları: <b>radyatör, su pompası ve termostat</b>. Balata fren sistemi elemanıdır.</span></li>
+        <li><a class="no" href="/hap-bilgiler/arac-teknigi/motorun-hararet-yapma-sebepleri-termostat-arizasi-devirdaim/" aria-label="Hap bilgi 07 sayfası">07</a><span>Motorun <b>hararet</b> yapma sebepleri: termostat arızası, devirdaim (su) hortumunun yırtılması, vantilatör kayışının gevşemesi. Antifriz seviyesinin düşük olması hararet sebebi sayılmaz.</span></li>
+        <li><a class="no" href="/hap-bilgiler/arac-teknigi/silindir-kapak-contasi-islevini-kaybederse-motorun-icine-su/" aria-label="Hap bilgi 08 sayfası">08</a><span><b>Silindir kapak contası</b> işlevini kaybederse motorun içine <b>su sızar</b>.</span></li>
+        <li><a class="no" href="/hap-bilgiler/arac-teknigi/v-kayisi-duzgun-calismazsa-sarj-ikaz-lambasi-yanar/" aria-label="Hap bilgi 09 sayfası">09</a><span><b>V kayışı</b> düzgün çalışmazsa <b>şarj ikaz lambası</b> yanar.</span></li>
+        <li><a class="no" href="/hap-bilgiler/arac-teknigi/motor-yagi-kontrol-sirasi-duz-zeminde-dur-kaputu-ac-cubugu/" aria-label="Hap bilgi 10 sayfası">10</a><span>Motor yağı kontrol sırası: <b>düz zeminde dur, kaputu aç → çubuğu çekip temizle → tekrar daldırıp çek → seviyenin max–min arasında olduğunu gör</b>.</span></li>
+        <li><a class="no" href="/hap-bilgiler/arac-teknigi/dizel-araca-yanlislikla-benzin-konursa-yakit-deposu/" aria-label="Hap bilgi 11 sayfası">11</a><span>Dizel araca yanlışlıkla benzin konursa <b>yakıt deposu boşaltılır</b>; araç bu yakıtla kullanılmaz.</span></li>
+        <li><a class="no" href="/hap-bilgiler/arac-teknigi/ayak-frenine-basildiginda-aracin-dort-tekerlegi-de-durur-el/" aria-label="Hap bilgi 12 sayfası">12</a><span>Ayak frenine basıldığında aracın <b>dört tekerleği de</b> durur; <b>el freni</b> yalnızca <b>arka tekerlekleri</b> tutar. Ağırlık öne kaydığı için önce ön tekerlekler durur, ön balatalar daha çabuk aşınır.</span></li>
+      </ol>
+      <h4>Bakım ve kullanım</h4>
+      <ol>
+        <li><a class="no" href="/hap-bilgiler/arac-teknigi/muayene-suresi-dolmasa-bile-aracin-ozel-teknik-muayenesi/" aria-label="Hap bilgi 13 sayfası">13</a><span>Muayene süresi dolmasa bile aracın <b>özel teknik muayenesi, trafik zabıtasının gerekli görmesi</b> hâlinde zorunludur.</span></li>
+        <li><a class="no" href="/hap-bilgiler/arac-teknigi/arac-cok-uzun-sure-kullanilmazsa-aku-sarji-azalir-ve-motor/" aria-label="Hap bilgi 14 sayfası">14</a><span>Araç çok uzun süre kullanılmazsa <b>akü şarjı azalır</b> ve <b>motor yağı özelliğini kaybeder</b>. Fren balataları kullanılmayan araçta azalmaz.</span></li>
+        <li><a class="no" href="/hap-bilgiler/arac-teknigi/antifriz-yogunlugu-olcumu-servis-ya-da-tamir-atolyesinin/" aria-label="Hap bilgi 15 sayfası">15</a><span><b>Antifriz yoğunluğu ölçümü</b> servis ya da tamir atölyesinin işidir; silecek, lastik basıncı ve yağ seviyesi kontrolünü sürücü kendisi yapar.</span></li>
+        <li><a class="no" href="/hap-bilgiler/arac-teknigi/suruse-baslamadan-once-koltuk-ve-ayna-ayari-surus-konforu/" aria-label="Hap bilgi 16 sayfası">16</a><span>Sürüşe başlamadan önce <b>koltuk ve ayna ayarı</b>, sürüş konforu ve <b>güvenliği</b> için yapılır.</span></li>
+        <li><a class="no" href="/hap-bilgiler/arac-teknigi/yakit-tuketimini-azaltir-ani-durus-kalkistan-kacinmak/" aria-label="Hap bilgi 17 sayfası">17</a><span>Yakıt tüketimini azaltır: ani duruş-kalkıştan kaçınmak, tavsiye edilen lastikleri kullanmak, bakımları zamanında yaptırmak. Artırır: <b>vitese göre yanlış devirde sürmek</b> ve ilk çalıştırmada motora tam güç vermek.</span></li>
+        <li><a class="no" href="/hap-bilgiler/arac-teknigi/egzozdan-cikan-yogun-duman-motorun-duzensiz-calistiginin/" aria-label="Hap bilgi 18 sayfası">18</a><span>Egzozdan çıkan yoğun duman, <b>motorun düzensiz çalıştığının</b> işaretidir.</span></li>
+      </ol>
+      <h3><a href="/hap-bilgiler/trafik-adabi/">Trafik Adabı hap bilgiler</a> <small>(11)</small></h3>
+      <h4>Değerler</h4>
+      <ol>
+        <li><a class="no" href="/hap-bilgiler/trafik-adabi/digerkamlik-baskasini-da-dusunmek-kendini-gecmekte-olan/" aria-label="Hap bilgi 01 sayfası">01</a><span><b>Diğerkâmlık</b>: başkasını da düşünmek — kendini geçmekte olan araca yavaşlayarak kolaylık sağlamak bu değerin örneğidir.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-adabi/feragat-kendi-hakkindan-baskasi-yararina-vazgecebilmektir/" aria-label="Hap bilgi 02 sayfası">02</a><span><b>Feragat</b>: kendi hakkından başkası yararına vazgeçebilmektir.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-adabi/yardim-araclarina-kolaylik-saglayan-surucu-feragate/" aria-label="Hap bilgi 03 sayfası">03</a><span>Yardım araçlarına kolaylık sağlayan sürücü <b>feragate, diğerkâmlığa ve empatiye</b> önem verir — <b>aceleciliğe değil</b>.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-adabi/toplum-adabina-aykiri-davranis-kaza-deprem-sel-gibi/" aria-label="Hap bilgi 04 sayfası">04</a><span>Toplum adabına aykırı davranış: kaza, deprem, sel gibi felaketlerden <b>çıkar sağlamaya çalışmak</b>.</span></li>
+      </ol>
+      <h4>Davranışlar</h4>
+      <ol>
+        <li><a class="no" href="/hap-bilgiler/trafik-adabi/trafik-adabina-sahip-surucu-kurallarin-nedenini-ogrenir-ve/" aria-label="Hap bilgi 05 sayfası">05</a><span>Trafik adabına sahip sürücü, kuralların <b>nedenini öğrenir</b> ve ihlalin kendisinin ya da sevdiklerinin <b>canını tehlikeye attığının</b> farkındadır. İhlali yalnızca “maddi ceza” sanmak adaba aykırıdır.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-adabi/surekli-ve-ani-serit-degistirerek-arac-kullanmak-diger/" aria-label="Hap bilgi 06 sayfası">06</a><span><b>Sürekli ve ani şerit değiştirerek</b> araç kullanmak, diğer sürücülerin dikkatinin dağılmasına ve paniğe kapılmalarına sebep olur.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-adabi/engellilere-ayrilmis-alana-ya-da-hissedilebilir-yuzeyin/" aria-label="Hap bilgi 07 sayfası">07</a><span>Engellilere ayrılmış alana ya da hissedilebilir yüzeyin üzerine park eden sürücünün <b>sorumluluk bilinci zayıftır</b>.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-adabi/karsiya-gecen-yayayi-el-kol-ve-sozle-acele-ettiren-surucu/" aria-label="Hap bilgi 08 sayfası">08</a><span>Karşıya geçen yayayı el, kol ve sözle acele ettiren sürücü <b>sabırlı davranamamıştır</b>.</span></li>
+      </ol>
+      <h4>İletişim, stres ve hak ihlalleri</h4>
+      <ol>
+        <li><a class="no" href="/hap-bilgiler/trafik-adabi/basarili-iletisim-icin-surucu-insanlarin-degisebilecegine/" aria-label="Hap bilgi 09 sayfası">09</a><span>Başarılı iletişim için sürücü <b>insanların değişebileceğine inanmalıdır</b>; dinlerken yargılamak, iletişime kapanmak ve tek olayla değerlendirmek yanlıştır.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-adabi/trafikte-yasanan-stres-kaygiyi-artirir-kalp-atisini/" aria-label="Hap bilgi 10 sayfası">10</a><span>Trafikte yaşanan stres <b>kaygıyı artırır, kalp atışını hızlandırır</b> ve saldırgan tutuma yol açabilir.</span></li>
+        <li><a class="no" href="/hap-bilgiler/trafik-adabi/emisyonu-yuksek-egzoz-dumaniyla-arac-kullanmak-dogaya-diger/" aria-label="Hap bilgi 11 sayfası">11</a><span>Emisyonu yüksek egzoz dumanıyla araç kullanmak <b>doğaya, diğer canlılara ve bireylere karşı hak ihlalidir</b>.</span></li>
+      </ol>
     </section>
 
     <!-- CTA -->

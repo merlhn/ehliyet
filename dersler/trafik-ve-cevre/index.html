@@ -108,6 +108,19 @@
     .lesson-list{padding:0 20px 60px}
     .ilgili-konular{padding:0 20px 60px}
   }
+  /* Ders özetleri — tools/konu-listesi-uret.py doldurur */
+  .ders-ozetleri{max-width:1100px;margin:0 auto;padding:8px 28px 72px}
+  .ders-ozetleri h2{font-size:24px;font-weight:600;letter-spacing:-.02em;margin:0 0 10px}
+  .ders-ozetleri .ozet-giris{color:var(--muted);font-size:15px;line-height:1.6;margin:0 0 24px}
+  .ders-ozetleri .yazdir{font:inherit;font-size:13px;margin-left:6px;padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;cursor:pointer;color:var(--fg)}
+  .ders-ozetleri .ozet{padding:18px 0;border-top:1px solid var(--line)}
+  .ders-ozetleri h3{font-size:17px;font-weight:600;margin:0 0 6px;letter-spacing:-.01em}
+  .ders-ozetleri h3 a{text-decoration:none}
+  .ders-ozetleri h3 a:hover{text-decoration:underline;text-underline-offset:3px}
+  .ders-ozetleri .ozet-no{font-family:'Geist Mono',monospace;font-size:12px;color:var(--muted);margin-right:4px}
+  .ders-ozetleri .ozet p{margin:0;font-size:15px;line-height:1.65}
+  @media(max-width:640px){.ders-ozetleri{padding:8px 20px 56px}}
+  @media print{.ust-banner,header,footer,.site-footer,.lesson-list,.ilgili-konular,.yazdir,.cat-hero .cat-intro{display:none!important}.ders-ozetleri{padding:0}.ders-ozetleri .ozet{break-inside:avoid}}
 </style>
 <script type="application/ld+json">
 {
@@ -287,7 +300,7 @@
       <span class="eyebrow">Ders Notları</span>
       <h1 class="sec-title">Trafik ve Çevre Ders Notları</h1>
       <p class="cat-intro">Ehliyet sınavının en geniş bölümü olan trafik ve çevre bilgisinde temel kavramlar, trafik işaretleri, hız sınırları ve kavşak kuralları gibi 11 konu bulunur. Bu dersler trafik mevzuatının sınavda en çok sorulan kısımlarını kapsar.</p>
-      <p class="cat-intro">MEB e-sınavında Trafik ve Çevre bölümünden <b>23 soru</b> gelir — dört bölüm arasında en yüksek soru sayısına sahiptir. Bu bölümden en az <b>7 doğru</b> yapman gerekir. Hız sınırları, kavşak geçiş öncelikleri ve trafik işaretleri en kritik konulardır. Ders notlarını okuduktan sonra <a href="/hap-bilgiler/trafik-ve-cevre/" style="color:var(--fg);text-decoration:underline;text-underline-offset:3px;text-decoration-color:#c9ccd1">hap bilgilerle tekrar</a> edip <a href="/ehliyet-sinav-sorulari/" style="color:var(--fg);text-decoration:underline;text-underline-offset:3px;text-decoration-color:#c9ccd1">deneme sınavıyla</a> pratik yapmanı öneriyoruz.</p>
+      <p class="cat-intro">MEB e-sınavında Trafik ve Çevre bölümünden <b>23 soru</b> gelir — dört bölüm arasında en yüksek soru sayısına sahiptir. Ders bazında ayrı baraj yoktur; sınavı geçmek için toplam 50 sorudan en az 35 doğru yeterlidir. Hız sınırları, kavşak geçiş öncelikleri ve trafik işaretleri en kritik konulardır. Ders notlarını okuduktan sonra <a href="/hap-bilgiler/trafik-ve-cevre/" style="color:var(--fg);text-decoration:underline;text-underline-offset:3px;text-decoration-color:#c9ccd1">hap bilgilerle tekrar</a> edip <a href="/ehliyet-sinav-sorulari/" style="color:var(--fg);text-decoration:underline;text-underline-offset:3px;text-decoration-color:#c9ccd1">deneme sınavıyla</a> pratik yapmanı öneriyoruz.</p>
     </div>
 
     <div class="lesson-list">
@@ -347,6 +360,57 @@
         <svg class="lesson-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
       </a>
     </div>
+
+    <!-- ders-ozetleri -->
+    <section class="ders-ozetleri" aria-labelledby="ozet-baslik">
+      <h2 id="ozet-baslik">Trafik ve Çevre Bilgisi ders notları: 11 konunun özeti</h2>
+      <p class="ozet-giris">Sınavdan önce son tekrar için her konunun en çok sorulan bilgisi tek sayfada. Ayrıntı için konu başlığına tıkla. <button type="button" class="yazdir" onclick="window.print()">Bu sayfayı yazdır</button></p>
+      <div class="ozet">
+        <h3><span class="ozet-no">01</span> <a href="/dersler/trafik-ve-cevre/temel-tanimlar/">Temel Kavramlar</a></h3>
+        <p>Trafik; yaya, hayvan ve araçların kara yolu üzerindeki hâl ve hareketleridir. Kara yolu, kamuya açık arazi şeritleri, köprüler ve alanları kapsar. Ticari araç kullanan kişi şoför, ticari amaç gütmeden araç idare eden kişi ise sürücüdür.</p>
+      </div>
+      <div class="ozet">
+        <h3><span class="ozet-no">02</span> <a href="/dersler/trafik-ve-cevre/kurum-ve-kuruluslar/">Kurum ve Kuruluşlar</a></h3>
+        <p>Şehir içi işler belediyeye, şehirler arası ve kara yolu işleri Karayolları Genel Müdürlüğü’ne aittir. Trafik denetimi şehir içinde emniyetin, şehirler arasında jandarmanın işidir ve ikisi de İçişleri Bakanlığı’na bağlıdır.</p>
+      </div>
+      <div class="ozet">
+        <h3><span class="ozet-no">03</span> <a href="/dersler/trafik-ve-cevre/genel-tanimlar/">Genel Tanımlar</a></h3>
+        <p>Tırmanma şeridi eğimli yollarda çıkan araçlar için ihtiyaç hâlinde kullanılır. Tek yönlü yolda araçlar tek yöne gider, iki yönlü yolda gidiş-geliş vardır; bölünmüş yol bir ayırıcı ile ayrılmıştır. Otoyola yaya, bisiklet, at arabası ve traktör giremez; hız 40-130 (özelde 140) arasıdır ve U dönüşü yasaktır.</p>
+      </div>
+      <div class="ozet">
+        <h3><span class="ozet-no">04</span> <a href="/dersler/trafik-ve-cevre/araclarla-ilgili-tanimlar/">Araçlarla İlgili Tanımlar</a></h3>
+        <p>Otomobil sürücüsü dâhil en fazla 9 kişiliktir; 9-17 arası minibüs, 9’dan fazlası otobüstür. Yüklü ağırlığı 3500 kilogramı geçmeyen yük taşıtı kamyonet, geçen ise kamyondur. Çekici yük taşımaz; yalnızca römork ve yarı römorkları çeker, yükü bu römorklar taşır.</p>
+      </div>
+      <div class="ozet">
+        <h3><span class="ozet-no">05</span> <a href="/dersler/trafik-ve-cevre/oncelik-sirasi/">Trafik İşaretlerine Uymada Öncelik Sırası</a></h3>
+        <p>Trafik işaretlerine uymada öncelik sırası; birinci trafik görevlisi, ikinci ışıklı ve sesli işaretler, üçüncü trafik işaret levhaları, dördüncü yer çizgileri şeklindedir. İki işaret çeliştiğinde her zaman üstte olana uyulur; bu yüzden yeşil ışıkta bile görevlinin “dur” işareti bağlayıcıdır. Bu sırayı, işaretin anlık karar verme ve güvenilirlik gücüne göre kurgulandığını hatırlayarak kolayca aklınızda tutabilirsiniz.</p>
+      </div>
+      <div class="ozet">
+        <h3><span class="ozet-no">06</span> <a href="/dersler/trafik-ve-cevre/trafik-isiklari/">Trafik Işıkları</a></h3>
+        <p>Kırmızı ışık dur, yeşil ışık geç, sarı ışık hazırlan anlamındadır ve her sarı “geç” demek değildir. Fasılalı yanıp sönen kırmızı ışık “DUR” levhasıyla, fasılalı yanıp sönen sarı ışık ise “YOL VER” levhasıyla aynı anlamı taşır. Kırmızıyı her gördüğünüzde önce durmanız gerekir; oklu ışıklarda ise her hareketi kendi yönüne ait ışığa göre değerlendirirsiniz.</p>
+      </div>
+      <div class="ozet">
+        <h3><span class="ozet-no">07</span> <a href="/dersler/trafik-ve-cevre/arac-kullanma-sureleri/">Araç Kullanma Süreleri ve Yasakları</a></h3>
+        <p>Belgesiz araç kullanmak ve ehliyet sınıfı dışında araç sürmek yasaktır; uyuşturucu/uyarıcı madde etkisinde araç kullananın belgesi 5 yıl geri alınır. Alkol sınırı hususi araçlarda 0,50, ticari araçlarda 0,20 promildir. Alkollü araç kullanmada 625 kuralı işler: birincisinde 6 ay, ikincisinde 2 yıl, üçüncüsünde 5 yıl.</p>
+      </div>
+      <div class="ozet">
+        <h3><span class="ozet-no">08</span> <a href="/dersler/trafik-ve-cevre/hiz-sinirlari/">Hız Sınırları</a></h3>
+        <p>Otomobiller devlet otoyolunda 130, özel otoyolda 140 km/s ile gider; yerleşim yeri içinde çoğu araç için sınır 50 km/s’dir. Otoyola motorlu bisiklet, traktör ve iş makinesi giremez. Asgari hız şehirler arası yollarda 15, otoyolda 40 km/s’dir.</p>
+      </div>
+      <div class="ozet">
+        <h3><span class="ozet-no">09</span> <a href="/dersler/trafik-ve-cevre/karayolunun-kullanilmasi/">Karayolunun Kullanılması</a></h3>
+        <p>Trafik sağdan akar; araçlar gidiş yönüne göre uygun şeritten gider ve sol şerit yalnızca sollama için kullanılır. İki şeridi birlikte kullanmak (çizgi üzerinde gitmek) ve en sol şeridi sürekli işgal etmek yasaktır. İşaret (sinyal) vermeden şerit değiştirmek, ters yöne girmek ve zorunlu hâller dışında emniyet şeridi ile banketi kullanmak yasaktır.</p>
+      </div>
+      <div class="ozet">
+        <h3><span class="ozet-no">10</span> <a href="/dersler/trafik-ve-cevre/kavsaklarda-gecis-hakki/">Kavşaklarda İlk Geçiş Hakkı</a></h3>
+        <p>İlk geçiş hakkı her zaman geçiş üstünlüğüne sahip araçlarındır; CİPS kuralıyla hatırlayın: Cankurtaran &gt; İtfaiye &gt; Polis &gt; Sivil savunma. Trafik işaretlerine uymada öncelik sırası ise 625 kuralıdır: Trafik görevlisi &gt; Işıklı işaret &gt; İşaret levhası &gt; Yer işaretleri &gt; Genel kurallar.</p>
+      </div>
+      <div class="ozet">
+        <h3><span class="ozet-no">11</span> <a href="/dersler/trafik-ve-cevre/kontrollu-kavsaklar/">Kontrollü Kavşaklar</a></h3>
+        <p>Kontrollü kavşak, levha, ışık veya görevliyle düzenlenen kavşaktır. Altıgen “DUR” levhası kırmızı ışıkla (mutlaka dur), ters üçgen “YOL VER” levhası sarı ışıkla (yavaşla, müsaitse geç) aynı anlama gelir; ikisi de tali yolda bulunur. Ana yolda ve yeşil ışıkta bile kavşağa girerken hız azaltılır.</p>
+      </div>
+    </section>
+    <!-- /ders-ozetleri -->
 
     <div class="ilgili-konular">
       <div class="ilgili-konular-inner">
