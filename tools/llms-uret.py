@@ -79,7 +79,7 @@ satirlar = []
 satirlar.append("# ehliyet.digital — Tam İçerik Dizini")
 satirlar.append("")
 satirlar.append("> Ücretsiz ehliyet deneme sınavı.")
-satirlar.append("> MEB MTSK müfredatına uygun 43 ders notu, 80 hap bilgi ve deneme sınavları.")
+satirlar.append("> MEB MTSK müfredatına uygun 50 ders notu, 80 hap bilgi ve deneme sınavları.")
 satirlar.append("> Dil: Türkçe | Konu: B sınıfı ehliyet teorik sınavı")
 satirlar.append("")
 satirlar.append("Bu dosya AI/LLM sistemlerinin site içeriğini hızlıca kavraması için üretilmiştir.")

@@ -58,7 +58,7 @@ for satir in ("Ehliyet sınavına", "ücretsiz hazırlan"):
 f_alt = yazi(30, "Regular")
 y = 442
 for satir in ("Gerçek MTSK e-sınav formatında 50 soruluk deneme testleri,",
-              "çözümlü cevaplar ve 4 derste 43 konu anlatımı."):
+              "çözümlü cevaplar ve 4 derste 50 konu anlatımı."):
     d.text((PAY, y), satir, font=f_alt, fill=GRI)
     y += 44
 

@@ -2,7 +2,7 @@
 
 **Türkiye ehliyet (sürücü belgesi) sınavına ücretsiz hazırlık platformu.**
 
-MEB MTSK müfredatına uygun 43 ders notu, 80 hap bilgi, 200 çıkmış sınav sorusu ve gerçek formatta deneme sınavları. Reklamsız, açık kaynak.
+MEB MTSK müfredatına uygun 50 ders notu, 80 hap bilgi, 200 çıkmış sınav sorusu ve gerçek formatta deneme sınavları. Reklamsız, açık kaynak.
 
 🌐 **Site:** [ehliyet.digital](https://ehliyet.digital)
 📄 **LLM dizini:** [llms.txt](https://ehliyet.digital/llms.txt) · [llms-full.txt](https://ehliyet.digital/llms-full.txt)
@@ -26,7 +26,7 @@ MEB MTSK müfredatına uygun 43 ders notu, 80 hap bilgi, 200 çıkmış sınav s
 | Kategori | Konu sayısı | Sınav dağılımı |
 |----------|-------------|----------------|
 | İlk Yardım | 12 | 12 soru (%24) |
-| Trafik ve Çevre Bilgisi | 11 | 23 soru (%46) |
+| Trafik ve Çevre Bilgisi | 18 | 23 soru (%46) |
 | Araç Tekniği (Motor) | 15 | 9 soru (%18) |
 | Trafik Adabı | 5 | 6 soru (%12) |
 
@@ -149,7 +149,7 @@ Makine-okunur JSON formatında:
 |-------|--------|
 | [`mcp/data/questions.json`](mcp/data/questions.json) | 200 soru (4 sınav) |
 | [`mcp/data/quick-facts.json`](mcp/data/quick-facts.json) | 80 hap bilgi |
-| [`mcp/data/lesson-summaries.json`](mcp/data/lesson-summaries.json) | 43 ders, ~560 atomik bilgi |
+| [`mcp/data/lesson-summaries.json`](mcp/data/lesson-summaries.json) | 50 ders, ~560 atomik bilgi |
 
 ---
 
@@ -176,7 +176,7 @@ python3 -m http.server 8000
 
 ```
 ├── index.html                  Ana sayfa
-├── dersler/                    43 ders notu (4 kategori)
+├── dersler/                    50 ders notu (4 kategori)
 ├── hap-bilgiler/               80 hap bilgi (4 kategori)
 ├── ehliyet-sinav-sorulari/     20 örnek soru + 186 sorunun dizini; alt dizinler: konu bazlı soru sayfaları
 ├── deneme-sinavi/              Herkese açık deneme sınavı (yalnız Sınav 1, giriş gerekmez)

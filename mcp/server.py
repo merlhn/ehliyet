@@ -397,13 +397,13 @@ app = Server(
     title="ehliyet.digital",
     description=(
         "Türkiye B sınıfı ehliyet sınavına hazırlık: 200 çıkmış soru, 80 hap bilgi, "
-        "43 ders özeti ve gerçek dağılımla deneme sınavı üretimi. Ücretsiz, kimlik doğrulama yok."
+        "50 ders özeti ve gerçek dağılımla deneme sınavı üretimi. Ücretsiz, kimlik doğrulama yok."
     ),
     website_url="https://ehliyet.digital",
     icons=[types.Icon(src="https://ehliyet.digital/icon-512.png", mimeType="image/png", sizes=["512x512"])],
     instructions=(
         "Türkiye B sınıfı sürücü belgesi (ehliyet) sınavına hazırlık MCP sunucusu. "
-        "200 çıkmış soru, 80 hap bilgi ve 43 ders özeti (559 atomik bilgi) içerir. "
+        "200 çıkmış soru, 80 hap bilgi ve 50 ders özeti (559 atomik bilgi) içerir. "
         "Bölümler: ilk_yardim, trafik_ve_cevre, arac_teknigi, trafik_adabi. "
         "Kullanıcı soru çözmek isterse get_practice_questions veya generate_mock_exam; "
         "bir konuyu öğrenmek isterse get_lesson_summary; hızlı tekrar için get_quick_facts; "

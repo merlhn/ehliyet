@@ -1,7 +1,7 @@
 # ehliyet.digital — Tam İçerik Dizini
 
 > Ücretsiz ehliyet deneme sınavı.
-> MEB MTSK müfredatına uygun 43 ders notu, 80 hap bilgi ve deneme sınavları.
+> MEB MTSK müfredatına uygun 50 ders notu, 80 hap bilgi ve deneme sınavları.
 > Dil: Türkçe | Konu: B sınıfı ehliyet teorik sınavı
 
 Bu dosya AI/LLM sistemlerinin site içeriğini hızlıca kavraması için üretilmiştir.

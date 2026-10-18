@@ -325,7 +325,7 @@ BLOKLAR = {
     ],
     "kavsaklarda-gecis-hakki": [
         "Kavşaklarda ilk geçiş hakkı her zaman geçiş üstünlüğüne sahip araçlara verilir.",
-        "Geçiş üstünlüğü sırası: önce cankurtaran, sonra itfaiye, sonra polis, en son sivil savunma.",
+        "Geçiş üstünlüğü sırası: ambulans ve yaralı taşıyan araçlar, organ ve doku nakli yapan araçlar, itfaiye, güvenlik güçlerine ait araçlar.",
         "Siren sesi duyulduğunda yapılması gereken ilk iş sesin geldiği yönü tayin etmektir.",
         "Dönel kavşakta yol hakkı her zaman ada içindeki araca aittir; adaya girmek isteyen bekler.",
         "Dönüş yapan sürücü doğrudan giden araçlara yol vermek zorundadır.",
